@@ -1,0 +1,2001 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.30">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Zero Trust Security Architecture – chen.ist</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../assets/images/favicon.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-155df6177c212d1b2f8ead7da0af1b52.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-8f050130fc632d80deb4c3c60cf36ef2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-155df6177c212d1b2f8ead7da0af1b52.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<meta http-equiv="refresh" content="0;url=/keynotes/zero-trust-security/">
+
+
+<link rel="stylesheet" href="../../../scss/styles.css">
+<meta property="og:title" content="Zero Trust Security Architecture – chen.ist">
+<meta property="og:description" content="Innovative technology &amp; education">
+<meta property="og:image" content="https://chen.ist/assets/images/cyber-security.jpg">
+<meta property="og:site_name" content="chen.ist">
+<meta name="twitter:title" content="Zero Trust Security Architecture – chen.ist">
+<meta name="twitter:description" content="Innovative technology &amp; education">
+<meta name="twitter:image" content="https://chen.ist/assets/images/cyber-security.jpg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../services.html"> 
+<span class="menu-text">Services</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-academy" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Academy</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-academy">    
+        <li>
+    <a class="dropdown-item" href="../../../academy.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../courses.html">
+ <span class="dropdown-text">Courses</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../events.html">
+ <span class="dropdown-text">Event</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../webinars.html">
+ <span class="dropdown-text">Webinars</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../computerclub.html">
+ <span class="dropdown-text">Computer Club</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../blog.html"> 
+<span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../resources/index.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../../../about/index.html">
+ <span class="dropdown-text">About</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../about/csr.html">
+ <span class="dropdown-text">CSR</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../about/community.html">
+ <span class="dropdown-text">Community</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-lang" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Lang</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-lang">    
+        <li>
+    <a class="dropdown-item" href="../../../index.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../ro/index.html">
+ <span class="dropdown-text">Romanian</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../sv/index.html">
+ <span class="dropdown-text">Swedish</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../de/index.html">
+ <span class="dropdown-text">German</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#zero-trust-security-architecture" id="toc-zero-trust-security-architecture" class="nav-link active" data-scroll-target="#zero-trust-security-architecture">Zero Trust Security Architecture</a>
+  <ul class="collapse">
+  <li><a href="#presenter" id="toc-presenter" class="nav-link" data-scroll-target="#presenter">Presenter</a></li>
+  </ul></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#the-end-of-the-perimeter" id="toc-the-end-of-the-perimeter" class="nav-link" data-scroll-target="#the-end-of-the-perimeter">The End of the Perimeter</a></li>
+  <li><a href="#the-fatal-flaw" id="toc-the-fatal-flaw" class="nav-link" data-scroll-target="#the-fatal-flaw">The Fatal Flaw</a></li>
+  </ul></li>
+  <li><a href="#zero-trust-fundamentals" id="toc-zero-trust-fundamentals" class="nav-link" data-scroll-target="#zero-trust-fundamentals">Zero Trust Fundamentals</a>
+  <ul class="collapse">
+  <li><a href="#what-is-zero-trust" id="toc-what-is-zero-trust" class="nav-link" data-scroll-target="#what-is-zero-trust">What is Zero Trust?</a></li>
+  <li><a href="#zero-trust-evolution" id="toc-zero-trust-evolution" class="nav-link" data-scroll-target="#zero-trust-evolution">Zero Trust Evolution</a>
+  <ul class="collapse">
+  <li><a href="#timeline-highlights" id="toc-timeline-highlights" class="nav-link" data-scroll-target="#timeline-highlights">Timeline Highlights</a></li>
+  </ul></li>
+  <li><a href="#the-zero-trust-security-model" id="toc-the-zero-trust-security-model" class="nav-link" data-scroll-target="#the-zero-trust-security-model">The Zero Trust Security Model</a></li>
+  </ul></li>
+  <li><a href="#core-components" id="toc-core-components" class="nav-link" data-scroll-target="#core-components">Core Components</a>
+  <ul class="collapse">
+  <li><a href="#identity-and-access-management" id="toc-identity-and-access-management" class="nav-link" data-scroll-target="#identity-and-access-management">Identity and Access Management</a></li>
+  <li><a href="#device-security" id="toc-device-security" class="nav-link" data-scroll-target="#device-security">Device Security</a></li>
+  <li><a href="#micro-segmentation" id="toc-micro-segmentation" class="nav-link" data-scroll-target="#micro-segmentation">Micro-segmentation</a></li>
+  <li><a href="#data-protection" id="toc-data-protection" class="nav-link" data-scroll-target="#data-protection">Data Protection</a></li>
+  <li><a href="#continuous-monitoring" id="toc-continuous-monitoring" class="nav-link" data-scroll-target="#continuous-monitoring">Continuous Monitoring</a></li>
+  </ul></li>
+  <li><a href="#implementation-strategy" id="toc-implementation-strategy" class="nav-link" data-scroll-target="#implementation-strategy">Implementation Strategy</a>
+  <ul class="collapse">
+  <li><a href="#phased-implementation-approach" id="toc-phased-implementation-approach" class="nav-link" data-scroll-target="#phased-implementation-approach">Phased Implementation Approach</a></li>
+  <li><a href="#implementation-considerations-1" id="toc-implementation-considerations-1" class="nav-link" data-scroll-target="#implementation-considerations-1">Implementation Considerations</a></li>
+  </ul></li>
+  <li><a href="#case-studies" id="toc-case-studies" class="nav-link" data-scroll-target="#case-studies">Case Studies</a>
+  <ul class="collapse">
+  <li><a href="#financial-services-global-bank" id="toc-financial-services-global-bank" class="nav-link" data-scroll-target="#financial-services-global-bank">Financial Services: Global Bank</a></li>
+  <li><a href="#healthcare-regional-provider" id="toc-healthcare-regional-provider" class="nav-link" data-scroll-target="#healthcare-regional-provider">Healthcare: Regional Provider</a></li>
+  </ul></li>
+  <li><a href="#measuring-success" id="toc-measuring-success" class="nav-link" data-scroll-target="#measuring-success">Measuring Success</a>
+  <ul class="collapse">
+  <li><a href="#key-performance-indicators" id="toc-key-performance-indicators" class="nav-link" data-scroll-target="#key-performance-indicators">Key Performance Indicators</a></li>
+  <li><a href="#maturity-assessment-framework" id="toc-maturity-assessment-framework" class="nav-link" data-scroll-target="#maturity-assessment-framework">Maturity Assessment Framework</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a>
+  <ul class="collapse">
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">Key Takeaways</a>
+  <ul class="collapse">
+  <li><a href="#remember" id="toc-remember" class="nav-link" data-scroll-target="#remember">Remember:</a></li>
+  </ul></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a>
+  <ul class="collapse">
+  <li><a href="#additional-reading" id="toc-additional-reading" class="nav-link" data-scroll-target="#additional-reading">Additional Reading</a></li>
+  </ul></li>
+  <li><a href="#qa" id="toc-qa" class="nav-link" data-scroll-target="#qa">Q&amp;A</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Zero Trust Security Architecture</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="alert alert-info">
+<p>
+Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Security Architecture</a>…
+</p>
+</div>
+<p>If you are not redirected automatically, please <a href="../../../keynotes/zero-trust-security/">click here</a>.</p>
+<section id="zero-trust-security-architecture" class="level1 title-slide" data-background-color="#282a36">
+<h1 class="title-slide" data-background-color="#282a36">Zero Trust Security Architecture</h1>
+<section id="presenter" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="presenter">Presenter</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img src="../../../assets/images/cyber-security.jpg" class="border rounded img-fluid" width="250"></p>
+</div><div class="column" style="width:70%;">
+<section id="alex-chen" class="level3">
+<h3 class="anchored" data-anchor-id="alex-chen">Alex Chen</h3>
+<p><strong>Chief Information Security Officer</strong></p>
+<ul>
+<li>15+ years in enterprise security</li>
+<li>Former security architect at major financial institutions</li>
+<li>Implemented Zero Trust in multiple organizations</li>
+<li>CISSP, CISM, AWS Security Specialty certified</li>
+</ul>
+<p><a href="mailto:alex.chen@chen.ist">alex.chen@chen.ist</a></p>
+</section>
+</div>
+</div>
+</section>
+</section>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<section id="the-end-of-the-perimeter" class="level2 center">
+<h2 class="center anchored" data-anchor-id="the-end-of-the-perimeter">The End of the Perimeter</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<section id="traditional-security-model" class="level3">
+<h3 class="anchored" data-anchor-id="traditional-security-model">Traditional Security Model</h3>
+<ul>
+<li>Trusted internal network</li>
+<li>Untrusted external network</li>
+<li>Focus on perimeter defense</li>
+<li>“Castle and moat” approach</li>
+<li>Once inside, minimal controls</li>
+</ul>
+</section>
+</div><div class="column" style="width:50%;">
+<section id="current-reality" class="level3">
+<h3 class="anchored" data-anchor-id="current-reality">Current Reality</h3>
+<ul>
+<li>Cloud adoption</li>
+<li>Remote workforce</li>
+<li>Mobile devices</li>
+<li>Third-party integrations</li>
+<li>Complex supply chains</li>
+</ul>
+</section>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Emphasize how dramatically the landscape has changed</li>
+<li>Traditional security models assumed clear boundaries</li>
+<li>Today’s environment is complex and distributed</li>
+<li>The concept of “inside” vs “outside” is no longer relevant</li>
+</ul>
+</div>
+</section>
+<section id="the-fatal-flaw" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="the-fatal-flaw">The Fatal Flaw</h2>
+<blockquote class="blockquote">
+<p>“The problem with traditional security is that once an attacker gets past the perimeter, they’re often free to move laterally within the network.”</p>
+</blockquote>
+<div class="columns">
+<div class="column" style="width:50%;">
+<section id="attack-chain" class="level3">
+<h3 class="anchored" data-anchor-id="attack-chain">Attack Chain</h3>
+<ol type="1">
+<li>Initial compromise</li>
+<li><strong>Privilege escalation</strong></li>
+<li><strong>Lateral movement</strong></li>
+<li><strong>Data exfiltration</strong></li>
+<li>Persistence</li>
+</ol>
+<p><strong>Bold steps enabled by perimeter-only security</strong></p>
+</section>
+</div><div class="column" style="width:50%;">
+<section id="breach-statistics" class="level3">
+<h3 class="anchored" data-anchor-id="breach-statistics">Breach Statistics</h3>
+<ul>
+<li>280 days: Average time to identify and contain a breach</li>
+<li>75%: Breaches involving lateral movement</li>
+<li>$4.24M: Average cost of a data breach</li>
+<li>80%: Breaches that involve privileged credentials</li>
+</ul>
+<p><em>Source: IBM Cost of a Data Breach Report 2021</em></p>
+</section>
+</div>
+</div>
+</section>
+</section>
+<section id="zero-trust-fundamentals" class="level1">
+<h1>Zero Trust Fundamentals</h1>
+<section id="what-is-zero-trust" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="what-is-zero-trust">What is Zero Trust?</h2>
+<blockquote class="blockquote">
+<p>“Never trust, always verify.”</p>
+</blockquote>
+<div class="columns">
+<div class="column" style="width:50%;">
+<section id="core-principles" class="level3">
+<h3 class="anchored" data-anchor-id="core-principles">Core Principles</h3>
+<ul>
+<li><strong>Never trust, always verify</strong>: No implicit trust based on network location</li>
+<li><strong>Least privilege access</strong>: Minimal access required to perform job</li>
+<li><strong>Assume breach</strong>: Design as if the environment is already compromised</li>
+<li><strong>Verify explicitly</strong>: Authentication and authorization based on all available data points</li>
+<li><strong>Identity-centric</strong>: Identity as the new security perimeter</li>
+</ul>
+</section>
+</div><div class="column" style="width:50%;">
+<section id="key-components" class="level3">
+<h3 class="anchored" data-anchor-id="key-components">Key Components</h3>
+<ul>
+<li>Strong identity verification</li>
+<li>Device health validation</li>
+<li>Micro-segmentation</li>
+<li>Strict access controls</li>
+<li>Continuous monitoring</li>
+<li>Encryption everywhere</li>
+<li>Policy-based automation</li>
+</ul>
+</section>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Zero Trust is a security concept, not a specific technology</li>
+<li>It fundamentally changes our approach to security</li>
+<li>First proposed by John Kindervag at Forrester in 2010</li>
+<li>Popularized by Google’s BeyondCorp implementation</li>
+<li>Now adopted by major organizations and recommended by NIST, NSA, etc.</li>
+</ul>
+</div>
+</section>
+<section id="zero-trust-evolution" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="zero-trust-evolution">Zero Trust Evolution</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<section id="origin-2010" class="level3">
+<h3 class="anchored" data-anchor-id="origin-2010">Origin (2010)</h3>
+<ul>
+<li>Forrester Research (John Kindervag)</li>
+<li>Network-centric approach</li>
+<li>Focus on micro-segmentation</li>
+<li>Early adoption challenges</li>
+</ul>
+</section>
+</div><div class="column" style="width:35%;">
+<section id="middle-era-2014-2018" class="level3">
+<h3 class="anchored" data-anchor-id="middle-era-2014-2018">Middle Era (2014-2018)</h3>
+<ul>
+<li>Google’s BeyondCorp</li>
+<li>Identity-centric approach</li>
+<li>Device trust integration</li>
+<li>Cloud adoption accelerator</li>
+<li>Industry frameworks emerge</li>
+</ul>
+</section>
+</div><div class="column" style="width:35%;">
+<section id="current-2019-present" class="level3">
+<h3 class="anchored" data-anchor-id="current-2019-present">Current (2019-Present)</h3>
+<ul>
+<li>NIST 800-207 standard</li>
+<li>Comprehensive frameworks</li>
+<li>Vendor ecosystem maturity</li>
+<li>COVID-19 accelerated adoption</li>
+<li>Mainstream implementation</li>
+</ul>
+</section>
+</div>
+</div>
+<section id="timeline-highlights" class="level3">
+<h3 class="anchored" data-anchor-id="timeline-highlights">Timeline Highlights</h3>
+<ul>
+<li>2010: Zero Trust concept introduced by Forrester</li>
+<li>2014: Google publishes BeyondCorp research</li>
+<li>2019: Gartner introduces ZTNA market category</li>
+<li>2020: NIST publishes SP 800-207 Zero Trust Architecture</li>
+<li>2021: Executive Order mandating Zero Trust for US federal agencies</li>
+<li>2022-Present: Widespread enterprise adoption</li>
+</ul>
+</section>
+</section>
+<section id="the-zero-trust-security-model" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="the-zero-trust-security-model">The Zero Trust Security Model</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[User/Device Request] --&gt; B{Identity Verification}
+    B --&gt;|Valid| C{Device Health Check}
+    B --&gt;|Invalid| J[Block &amp; Alert]
+    C --&gt;|Healthy| D{Contextual Risk Assessment}
+    C --&gt;|Unhealthy| J
+    D --&gt;|Low Risk| E{Policy Check}
+    D --&gt;|High Risk| J
+    E --&gt;|Compliant| F{Least Privilege Access}
+    E --&gt;|Non-compliant| J
+    F --&gt; G[Encrypted Connection]
+    G --&gt; H[Continuous Monitoring]
+    H --&gt; I{Behavior Normal?}
+    I --&gt;|Yes| K[Maintain Access]
+    I --&gt;|No| J
+    K --&gt; H
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>This diagram illustrates the continuous verification process</li>
+<li>Every access request goes through multiple checkpoints</li>
+<li>The system constantly evaluates risk factors</li>
+<li>Access can be revoked at any time if anomalies are detected</li>
+<li>This creates multiple layers of security</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="core-components" class="level1">
+<h1>Core Components</h1>
+<section id="identity-and-access-management" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="identity-and-access-management">Identity and Access Management</h2>
+<blockquote class="blockquote">
+<p>“Identity is the new perimeter.”</p>
+</blockquote>
+<div class="columns">
+<div class="column" style="width:60%;">
+<section id="essential-elements" class="level3">
+<h3 class="anchored" data-anchor-id="essential-elements">Essential Elements</h3>
+<ul>
+<li><strong>Strong authentication</strong>
+<ul>
+<li>Multi-factor authentication (MFA)</li>
+<li>Passwordless options (FIDO2, biometrics)</li>
+<li>Conditional access policies</li>
+</ul></li>
+<li><strong>Context-aware access</strong>
+<ul>
+<li>Location awareness</li>
+<li>Time of access</li>
+<li>Device posture</li>
+<li>User behavior analytics</li>
+</ul></li>
+<li><strong>Identity governance</strong>
+<ul>
+<li>Lifecycle management</li>
+<li>Entitlement reviews</li>
+<li>Privileged access management</li>
+<li>Just-in-time access</li>
+</ul></li>
+</ul>
+</section>
+</div><div class="column" style="width:40%;">
+<section id="implementation-considerations" class="level3">
+<h3 class="anchored" data-anchor-id="implementation-considerations">Implementation Considerations</h3>
+<ul>
+<li><strong>Identity provider selection</strong>
+<ul>
+<li>Cloud vs.&nbsp;on-premises</li>
+<li>Federation capabilities</li>
+<li>Standards support (SAML, OIDC)</li>
+</ul></li>
+<li><strong>Authentication factors</strong>
+<ul>
+<li>Something you know</li>
+<li>Something you have</li>
+<li>Something you are</li>
+</ul></li>
+<li><strong>Risk-based authentication</strong>
+<ul>
+<li>Adaptive policies</li>
+<li>Step-up authentication</li>
+<li>Continuous authentication</li>
+</ul></li>
+</ul>
+</section>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Identity is foundational to Zero Trust</li>
+<li>Strong authentication is mandatory, not optional</li>
+<li>Context-aware access adds intelligence to authentication decisions</li>
+<li>Identity governance ensures proper lifecycle management</li>
+<li>Discuss common implementation challenges and solutions</li>
+</ul>
+</div>
+</section>
+<section id="device-security" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="device-security">Device Security</h2>
+<blockquote class="blockquote">
+<p>“Trust the user and the device.”</p>
+</blockquote>
+<div class="columns">
+<div class="column" style="width:50%;">
+<section id="device-trust-signals" class="level3">
+<h3 class="anchored" data-anchor-id="device-trust-signals">Device Trust Signals</h3>
+<ul>
+<li><strong>Software state</strong>
+<ul>
+<li>OS version and patch level</li>
+<li>Encryption status</li>
+<li>Security software presence</li>
+<li>Jailbreak/root detection</li>
+</ul></li>
+<li><strong>Hardware trust</strong>
+<ul>
+<li>TPM/Secure Enclave presence</li>
+<li>Hardware attestation</li>
+<li>Secure boot status</li>
+<li>UEFI configuration</li>
+</ul></li>
+</ul>
+</section>
+</div><div class="column" style="width:50%;">
+<section id="management-approaches" class="level3">
+<h3 class="anchored" data-anchor-id="management-approaches">Management Approaches</h3>
+<ul>
+<li><strong>Endpoint management</strong>
+<ul>
+<li>MDM/UEM solutions</li>
+<li>Configuration management</li>
+<li>Application control</li>
+<li>Patch management</li>
+</ul></li>
+<li><strong>Health validation</strong>
+<ul>
+<li>Continuous assessment</li>
+<li>Compliance reporting</li>
+<li>Remediation workflows</li>
+<li>Risk scoring</li>
+</ul></li>
+</ul>
+</section>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Device health is a critical component of access decisions</li>
+<li>Different approaches for corporate vs.&nbsp;BYOD devices</li>
+<li>Integration with existing endpoint management tools</li>
+<li>Device attestation provides cryptographic proof of device state</li>
+<li>Health validation must be continuous, not just at login</li>
+</ul>
+</div>
+</section>
+<section id="micro-segmentation" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="micro-segmentation">Micro-segmentation</h2>
+<blockquote class="blockquote">
+<p>“Limit lateral movement by creating secure zones.”</p>
+</blockquote>
+<div class="columns">
+<div class="column" style="width:60%;">
+<section id="implementation-approaches" class="level3">
+<h3 class="anchored" data-anchor-id="implementation-approaches">Implementation Approaches</h3>
+<ul>
+<li><strong>Network-based segmentation</strong>
+<ul>
+<li>VLANs and subnets</li>
+<li>Next-gen firewalls</li>
+<li>Software-defined networking (SDN)</li>
+</ul></li>
+<li><strong>Workload-based segmentation</strong>
+<ul>
+<li>Host-based firewalls</li>
+<li>Container segmentation</li>
+<li>Application identity</li>
+</ul></li>
+<li><strong>Software-defined perimeter</strong>
+<ul>
+<li>Identity-aware proxies</li>
+<li>Dynamic access control</li>
+<li>“Dark” infrastructure (no inbound connections)</li>
+</ul></li>
+</ul>
+</section>
+</div><div class="column" style="width:40%;">
+<section id="key-principles" class="level3">
+<h3 class="anchored" data-anchor-id="key-principles">Key Principles</h3>
+<ul>
+<li><strong>Default deny stance</strong>
+<ul>
+<li>Everything blocked unless explicitly allowed</li>
+</ul></li>
+<li><strong>Least privilege communication</strong>
+<ul>
+<li>Only required ports and protocols</li>
+</ul></li>
+<li><strong>Application-layer controls</strong>
+<ul>
+<li>Beyond just IP and port rules</li>
+</ul></li>
+<li><strong>Visibility first</strong>
+<ul>
+<li>Understand traffic before enforcing</li>
+</ul></li>
+<li><strong>Dynamic policies</strong>
+<ul>
+<li>Adapt to changing conditions</li>
+</ul></li>
+</ul>
+</section>
+</div>
+</div>
+</section>
+<section id="data-protection" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="data-protection">Data Protection</h2>
+<blockquote class="blockquote">
+<p>“Protect what matters most.”</p>
+</blockquote>
+<div class="columns">
+<div class="column" style="width:50%;">
+<section id="data-security-strategy" class="level3">
+<h3 class="anchored" data-anchor-id="data-security-strategy">Data Security Strategy</h3>
+<ul>
+<li><strong>Classification</strong>
+<ul>
+<li>Automated discovery and tagging</li>
+<li>Sensitivity labeling</li>
+<li>Business impact alignment</li>
+</ul></li>
+<li><strong>Access controls</strong>
+<ul>
+<li>Data-centric permissions</li>
+<li>Just-in-time access</li>
+<li>Purpose-based access</li>
+</ul></li>
+<li><strong>Monitoring</strong>
+<ul>
+<li>Data access logging</li>
+<li>Behavioral analytics</li>
+<li>Anomaly detection</li>
+</ul></li>
+</ul>
+</section>
+</div><div class="column" style="width:50%;">
+<section id="protection-mechanisms" class="level3">
+<h3 class="anchored" data-anchor-id="protection-mechanisms">Protection Mechanisms</h3>
+<ul>
+<li><strong>Encryption</strong>
+<ul>
+<li>At rest: Storage encryption</li>
+<li>In transit: TLS, VPN</li>
+<li>In use: Confidential computing</li>
+</ul></li>
+<li><strong>Data loss prevention</strong>
+<ul>
+<li>Context-aware controls</li>
+<li>Endpoint DLP</li>
+<li>Cloud access security brokers</li>
+</ul></li>
+<li><strong>Rights management</strong>
+<ul>
+<li>Persistent protection</li>
+<li>Policy enforcement</li>
+<li>Revocation capabilities</li>
+</ul></li>
+</ul>
+</section>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Data is what attackers ultimately want</li>
+<li>Data-centric security complements network and identity controls</li>
+<li>Classification is foundational - you can’t protect what you don’t know about</li>
+<li>Encryption is essential throughout the data lifecycle</li>
+<li>Rights management ensures protection follows the data</li>
+</ul>
+</div>
+</section>
+<section id="continuous-monitoring" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="continuous-monitoring">Continuous Monitoring</h2>
+<blockquote class="blockquote">
+<p>“Trust but verify, continuously.”</p>
+</blockquote>
+<div class="columns">
+<div class="column" style="width:50%;">
+<section id="monitoring-components" class="level3">
+<h3 class="anchored" data-anchor-id="monitoring-components">Monitoring Components</h3>
+<ul>
+<li><strong>Security information and event management (SIEM)</strong>
+<ul>
+<li>Log collection and correlation</li>
+<li>Real-time analysis</li>
+<li>Alerting and reporting</li>
+</ul></li>
+<li><strong>User and entity behavior analytics (UEBA)</strong>
+<ul>
+<li>Baselining normal behavior</li>
+<li>Anomaly detection</li>
+<li>Risk scoring</li>
+</ul></li>
+<li><strong>Network detection and response (NDR)</strong>
+<ul>
+<li>Traffic analysis</li>
+<li>Threat hunting</li>
+<li>Network forensics</li>
+</ul></li>
+</ul>
+</section>
+</div><div class="column" style="width:50%;">
+<section id="operational-considerations" class="level3">
+<h3 class="anchored" data-anchor-id="operational-considerations">Operational Considerations</h3>
+<ul>
+<li><strong>Security operations center (SOC)</strong>
+<ul>
+<li>24/7 monitoring</li>
+<li>Incident response capabilities</li>
+<li>Integration with IT service management</li>
+</ul></li>
+<li><strong>Automation and orchestration</strong>
+<ul>
+<li>SOAR platforms</li>
+<li>Playbook automation</li>
+<li>Automatic remediation</li>
+</ul></li>
+<li><strong>Metrics and KPIs</strong>
+<ul>
+<li>Mean time to detect (MTTD)</li>
+<li>Mean time to respond (MTTR)</li>
+<li>Security posture scoring</li>
+</ul></li>
+</ul>
+</section>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Continuous monitoring is essential for Zero Trust</li>
+<li>Traditional periodic assessments are insufficient</li>
+<li>Discuss the integration challenges between tools</li>
+<li>Automation is critical for scaling monitoring</li>
+<li>Human expertise remains important for analysis</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="implementation-strategy" class="level1">
+<h1>Implementation Strategy</h1>
+<section id="phased-implementation-approach" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="phased-implementation-approach">Phased Implementation Approach</h2>
+<blockquote class="blockquote">
+<p>“Zero Trust is a journey, not a destination.”</p>
+</blockquote>
+<div class="columns">
+<div class="column" style="width:33%;">
+<section id="phase-1-foundation" class="level3">
+<h3 class="anchored" data-anchor-id="phase-1-foundation">Phase 1: Foundation</h3>
+<p><em>3-6 months</em></p>
+<ul>
+<li>Security assessment</li>
+<li>Asset inventory</li>
+<li>Identity foundation
+<ul>
+<li>MFA deployment</li>
+<li>SSO implementation</li>
+</ul></li>
+<li>Initial monitoring</li>
+<li>Quick wins identification</li>
+<li>Stakeholder education</li>
+<li>Roadmap development</li>
+</ul>
+</section>
+</div><div class="column" style="width:33%;">
+<section id="phase-2-expansion" class="level3">
+<h3 class="anchored" data-anchor-id="phase-2-expansion">Phase 2: Expansion</h3>
+<p><em>6-12 months</em></p>
+<ul>
+<li>Expanded identity controls</li>
+<li>Device health validation</li>
+<li>Initial segmentation</li>
+<li>Enhanced monitoring</li>
+<li>Privileged access management</li>
+<li>Data classification</li>
+<li>Critical application protection</li>
+<li>Security policy refinement</li>
+</ul>
+</section>
+</div><div class="column" style="width:33%;">
+<section id="phase-3-optimization" class="level3">
+<h3 class="anchored" data-anchor-id="phase-3-optimization">Phase 3: Optimization</h3>
+<p><em>12-24 months</em></p>
+<ul>
+<li>Comprehensive segmentation</li>
+<li>Advanced data protection</li>
+<li>Automated response</li>
+<li>Continuous validation</li>
+<li>Security orchestration</li>
+<li>Metrics and reporting</li>
+<li>Culture integration</li>
+<li>Operational refinement</li>
+</ul>
+</section>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Zero Trust implementation must be phased and prioritized</li>
+<li>Each organization’s journey will be different</li>
+<li>Focus on quick wins early to build momentum</li>
+<li>Balance security improvements with operational impact</li>
+<li>Continuous assessment and adjustment is needed</li>
+</ul>
+</div>
+</section>
+<section id="implementation-considerations-1" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="implementation-considerations-1">Implementation Considerations</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<section id="technical-challenges" class="level3">
+<h3 class="anchored" data-anchor-id="technical-challenges">Technical Challenges</h3>
+<ul>
+<li><strong>Legacy system integration</strong>
+<ul>
+<li>Non-compatible authentication</li>
+<li>Limited monitoring capabilities</li>
+<li>Technical debt</li>
+</ul></li>
+<li><strong>Performance impact</strong>
+<ul>
+<li>Additional security checks</li>
+<li>Network latency</li>
+<li>User experience degradation</li>
+</ul></li>
+<li><strong>Infrastructure complexity</strong>
+<ul>
+<li>Hybrid/multi-cloud environments</li>
+<li>Shadow IT discovery</li>
+<li>Technical skill gaps</li>
+</ul></li>
+</ul>
+</section>
+</div><div class="column" style="width:50%;">
+<section id="organizational-challenges" class="level3">
+<h3 class="anchored" data-anchor-id="organizational-challenges">Organizational Challenges</h3>
+<ul>
+<li><strong>Cultural resistance</strong>
+<ul>
+<li>“Security slows us down” mentality</li>
+<li>Resistance to process changes</li>
+<li>Old security paradigms</li>
+</ul></li>
+<li><strong>Business continuity</strong>
+<ul>
+<li>Avoiding disruption</li>
+<li>Critical system availability</li>
+<li>Balancing security with usability</li>
+</ul></li>
+<li><strong>Resource constraints</strong>
+<ul>
+<li>Budget limitations</li>
+<li>Staffing and expertise</li>
+<li>Competing priorities</li>
+</ul></li>
+</ul>
+</section>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Technical challenges often get the most attention</li>
+<li>Organizational challenges are equally important and often harder</li>
+<li>Change management is critical for success</li>
+<li>Executive sponsorship helps overcome resistance</li>
+<li>Resource planning should be realistic about constraints</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="case-studies" class="level1">
+<h1>Case Studies</h1>
+<section id="financial-services-global-bank" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="financial-services-global-bank">Financial Services: Global Bank</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<section id="implementation-approach" class="level3">
+<h3 class="anchored" data-anchor-id="implementation-approach">Implementation Approach</h3>
+<ul>
+<li><strong>Driver</strong>: Regulatory requirements and breach protection</li>
+<li><strong>Scope</strong>: 50,000 employees, 10,000 applications</li>
+<li><strong>Timeline</strong>: 3-year phased approach</li>
+</ul>
+<p><strong>Phase 1</strong>: * Identity consolidation * MFA for all users * Device inventory and baseline</p>
+<p><strong>Phase 2</strong>: * Network segmentation * PAM implementation * Critical data protection</p>
+<p><strong>Phase 3</strong>: * Zero Trust for all applications * Advanced monitoring * Automated orchestration</p>
+</section>
+</div><div class="column" style="width:40%;">
+<section id="results-lessons" class="level3">
+<h3 class="anchored" data-anchor-id="results-lessons">Results &amp; Lessons</h3>
+<p><strong>Results</strong>: * 85% reduction in lateral movement risk * 60% decrease in security incidents * Improved compliance posture</p>
+<p><strong>Key Lessons</strong>: * Executive sponsorship critical * Legacy system challenges significant * Education reduced resistance * Phased approach prevented disruption * Technical talent investment necessary</p>
+</section>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Financial services often lead Zero Trust adoption due to regulations</li>
+<li>Discuss specific technical approaches used</li>
+<li>Explain how they overcame resistance from traders and executives</li>
+<li>Cost-benefit analysis showed clear ROI</li>
+<li>Business continuity was maintained throughout</li>
+</ul>
+</div>
+</section>
+<section id="healthcare-regional-provider" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="healthcare-regional-provider">Healthcare: Regional Provider</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<section id="implementation-approach-1" class="level3">
+<h3 class="anchored" data-anchor-id="implementation-approach-1">Implementation Approach</h3>
+<ul>
+<li><strong>Driver</strong>: Patient data protection and clinical mobility</li>
+<li><strong>Scope</strong>: 15 facilities, 8,000 employees, BYOD environment</li>
+<li><strong>Timeline</strong>: 24-month implementation</li>
+</ul>
+<p><strong>Focus Areas</strong>: * Clinical workflow analysis * Patient data protection * Mobile device security * Legacy medical device integration * Compliance requirements (HIPAA)</p>
+<p><strong>Technical Components</strong>: * Identity consolidation and SSO * Context-aware access controls * Data-centric security * Network segmentation for medical devices</p>
+</section>
+</div><div class="column" style="width:40%;">
+<section id="results-lessons-1" class="level3">
+<h3 class="anchored" data-anchor-id="results-lessons-1">Results &amp; Lessons</h3>
+<p><strong>Results</strong>: * 90% reduction in unauthorized access attempts * 70% decrease in security incidents * Improved clinical workflow efficiency * Maintained HIPAA compliance</p>
+<p><strong>Key Lessons</strong>: * Clinical workflow understanding critical * Legacy medical devices required special approach * User experience focus increased adoption * Phased implementation by department reduced risk * Strong partnership with clinical leadership</p>
+</section>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Healthcare presents unique Zero Trust challenges</li>
+<li>Legacy medical devices often can’t support modern security</li>
+<li>Clinical workflows are time-sensitive and can’t be disrupted</li>
+<li>Patient safety is paramount</li>
+<li>Regulatory compliance adds another layer of complexity</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="measuring-success" class="level1">
+<h1>Measuring Success</h1>
+<section id="key-performance-indicators" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="key-performance-indicators">Key Performance Indicators</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<section id="security-metrics" class="level3">
+<h3 class="anchored" data-anchor-id="security-metrics">Security Metrics</h3>
+<ul>
+<li><strong>Risk reduction</strong>
+<ul>
+<li>Exposure score improvement</li>
+<li>Reduction in attack surface</li>
+<li>Decreased time to patch</li>
+</ul></li>
+<li><strong>Incident metrics</strong>
+<ul>
+<li>Number of security incidents</li>
+<li>Mean time to detect (MTTD)</li>
+<li>Mean time to respond (MTTR)</li>
+<li>Breach impact reduction</li>
+</ul></li>
+<li><strong>Compliance metrics</strong>
+<ul>
+<li>Compliance coverage</li>
+<li>Policy violation reduction</li>
+<li>Audit findings addressed</li>
+</ul></li>
+</ul>
+</section>
+</div><div class="column" style="width:50%;">
+<section id="operational-metrics" class="level3">
+<h3 class="anchored" data-anchor-id="operational-metrics">Operational Metrics</h3>
+<ul>
+<li><strong>User experience</strong>
+<ul>
+<li>Authentication time</li>
+<li>Application access time</li>
+<li>Support ticket volume</li>
+<li>User satisfaction scores</li>
+</ul></li>
+<li><strong>Operational efficiency</strong>
+<ul>
+<li>Access request processing time</li>
+<li>Automated vs.&nbsp;manual actions</li>
+<li>Resource utilization</li>
+</ul></li>
+<li><strong>Cost metrics</strong>
+<ul>
+<li>Security tool consolidation</li>
+<li>Incident cost reduction</li>
+<li>Operational overhead</li>
+</ul></li>
+</ul>
+</section>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Metrics should balance security improvement with operational impact</li>
+<li>Leading indicators help predict issues before they occur</li>
+<li>Trailing indicators measure actual outcomes</li>
+<li>User experience metrics ensure security doesn’t harm productivity</li>
+<li>Cost metrics help justify continued investment</li>
+</ul>
+</div>
+</section>
+<section id="maturity-assessment-framework" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="maturity-assessment-framework">Maturity Assessment Framework</h2>
+<table class="table table-bordered caption-top" data-quarto-postprocess="true">
+<thead class="table-dark">
+<tr class="header">
+<th data-quarto-table-cell-role="th">Domain</th>
+<th data-quarto-table-cell-role="th">Initial</th>
+<th data-quarto-table-cell-role="th">Developing</th>
+<th data-quarto-table-cell-role="th">Defined</th>
+<th data-quarto-table-cell-role="th">Managed</th>
+<th data-quarto-table-cell-role="th">Optimizing</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Identity</strong></td>
+<td>Password-only</td>
+<td>MFA for privileged</td>
+<td>MFA for all users</td>
+<td>Context-aware access</td>
+<td>Continuous authentication</td>
+</tr>
+<tr class="even">
+<td><strong>Devices</strong></td>
+<td>Minimal controls</td>
+<td>Basic inventory</td>
+<td>Health validation</td>
+<td>Comprehensive posture</td>
+<td>Continuous validation</td>
+</tr>
+<tr class="odd">
+<td><strong>Network</strong></td>
+<td>Perimeter focus</td>
+<td>Basic segmentation</td>
+<td>Micro-segmentation</td>
+<td>Application-layer controls</td>
+<td>Full software-defined perimeter</td>
+</tr>
+<tr class="even">
+<td><strong>Data</strong></td>
+<td>Basic controls</td>
+<td>Manual classification</td>
+<td>Automated classification</td>
+<td>Data-centric policies</td>
+<td>Intelligent rights management</td>
+</tr>
+<tr class="odd">
+<td><strong>Monitoring</strong></td>
+<td>Basic logging</td>
+<td>SIEM implementation</td>
+<td>Behavior analytics</td>
+<td>Automated response</td>
+<td>AI-driven security operations</td>
+</tr>
+</tbody>
+</table>
+<div class="notes">
+<ul>
+<li>This maturity model helps organizations assess their current state</li>
+<li>Progress should be tracked over time across all domains</li>
+<li>Different domains may progress at different rates</li>
+<li>The goal isn’t necessarily to reach “Optimizing” in all areas</li>
+<li>Focus should be on business-appropriate maturity levels</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<section id="key-takeaways" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="key-takeaways">Key Takeaways</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<section id="zero-trust-principles" class="level3">
+<h3 class="anchored" data-anchor-id="zero-trust-principles">Zero Trust Principles</h3>
+<ul>
+<li>Never trust, always verify</li>
+<li>Verify explicitly using multiple signals</li>
+<li>Use least privilege access</li>
+<li>Assume breach in design</li>
+<li>Verify continuously, not just at login</li>
+</ul>
+</section>
+</div><div class="column" style="width:50%;">
+<section id="implementation-advice" class="level3">
+<h3 class="anchored" data-anchor-id="implementation-advice">Implementation Advice</h3>
+<ul>
+<li>Start with high-value assets</li>
+<li>Implement in phases</li>
+<li>Balance security with usability</li>
+<li>Focus on user experience</li>
+<li>Measure and communicate progress</li>
+<li>Adjust approach based on results</li>
+</ul>
+</section>
+</div>
+</div>
+<section id="remember" class="level3">
+<h3 class="anchored" data-anchor-id="remember">Remember:</h3>
+<blockquote class="blockquote">
+<p>“Zero Trust is not a product or technology - it’s a strategy and mindset for approaching security in today’s complex environments.”</p>
+</blockquote>
+<div class="notes">
+<ul>
+<li>Reiterate the core principles of Zero Trust</li>
+<li>Emphasize that technology alone isn’t enough</li>
+<li>Cultural and process change is equally important</li>
+<li>Success requires cross-functional collaboration</li>
+<li>The security landscape will continue to evolve</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="resources" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="resources">Resources</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<section id="standards-frameworks" class="level3">
+<h3 class="anchored" data-anchor-id="standards-frameworks">Standards &amp; Frameworks</h3>
+<ul>
+<li><a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf">NIST Special Publication 800-207: Zero Trust Architecture</a></li>
+<li><a href="https://www.cisa.gov/zero-trust-maturity-model">CISA Zero Trust Maturity Model</a></li>
+<li><a href="https://media.defense.gov/2021/Feb/25/2002588479/-1/-1/0/CSI_EMBRACING_ZT_SECURITY_MODEL_UOO115131-21.PDF">NSA Zero Trust Security Model</a></li>
+<li><a href="https://docs.microsoft.com/en-us/security/zero-trust/">Microsoft Zero Trust Guidance Center</a></li>
+<li><a href="https://research.google/pubs/pub43231/">Google BeyondCorp Research</a></li>
+</ul>
+</section>
+</div><div class="column" style="width:50%;">
+<section id="chen.ist-resources" class="level3">
+<h3 class="anchored" data-anchor-id="chen.ist-resources">chen.ist Resources</h3>
+<ul>
+<li><a href="../../../projects/manuscripts/zero-trust-implementation/">Zero Trust Implementation Guide</a></li>
+<li><a href="../../../resources/tools/zero-trust-assessment/">Zero Trust Assessment Tool</a></li>
+<li><a href="../../../blog/why-zero-trust-architecture.html">Security Blog</a></li>
+<li><a href="../../../resources/guides/security/best-practices.html">Cloud Security Best Practices</a></li>
+<li><a href="../../../contact.html">Contact our security team</a></li>
+</ul>
+</section>
+</div>
+</div>
+<section id="additional-reading" class="level3">
+<h3 class="anchored" data-anchor-id="additional-reading">Additional Reading</h3>
+<ul>
+<li>Gilman, E., &amp; Barth, D. (2017). <em>Zero Trust Networks: Building Secure Systems in Untrusted Networks</em>. O’Reilly Media.</li>
+<li>Kindervag, J. (2010). <em>Build Security Into Your Network’s DNA: The Zero Trust Network Architecture</em>. Forrester Research.</li>
+</ul>
+</section>
+</section>
+<section id="qa" class="level2 r-fit-text" data-background-color="#44475a" style="color: white;">
+<h2 class="r-fit-text anchored" data-background-color="#44475a" style="color: white;" data-anchor-id="qa">Q&amp;A</h2>
+<div style="text-align: center;">
+<p><strong>Thank you for your attention!</strong></p>
+<p>Alex Chen<br>
+<a href="mailto:alex.chen@chen.ist">alex.chen@chen.ist</a><br>
+<a href="https://twitter.com/alexchen"><span class="citation" data-cites="alexchen">@alexchen</span></a></p>
+</div>
+<div class="notes">
+<ul>
+<li>Be prepared for questions on:
+<ul>
+<li>Cost and ROI</li>
+<li>Legacy integration</li>
+<li>Implementation timeline</li>
+<li>Team structure and skills</li>
+<li>Common pitfalls</li>
+<li>Vendor selection</li>
+</ul></li>
+</ul>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/chen\.ist");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+
+</div>   
+    <div class="nav-footer-center">
+
+</div>
+    <div class="nav-footer-right">
+
+</div>
+  </div>
+</footer>
+<footer class="footer mt-5 py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5>About chen.ist</h5>
+                <p class="text-muted">
+                    Innovative technology solutions for the modern world.
+                    Specializing in cybersecurity, cloud architecture, and
+                    digital transformation.
+                </p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="../../../services.html">Services</a></li>
+                    <li><a href="../../../academy.html">Academy</a></li>
+                    <li><a href="../../../blog.html">Blog</a></li>
+                    <li><a href="../../../contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>Connect</h5>
+                <div class="d-flex gap-3 mb-2">
+                    <a href="https://github.com/chenist" aria-label="GitHub"><i class="bi bi-github fs-4"></i></a>
+                    <a href="https://linkedin.com/in/chenistsec" aria-label="LinkedIn"><i class="bi bi-linkedin fs-4"></i></a>
+                    <a href="https://twitter.com/chenistsec" aria-label="Twitter"><i class="bi bi-twitter-x fs-4"></i></a>
+                </div>
+                <p class="text-muted small">
+                    Email: <a href="mailto:office@chen.ist">office@chen.ist</a>
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <p class="small text-muted">
+                    © 2025 chen.ist. All rights reserved.
+                </p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <p class="small text-muted">
+                    <a href="../../../privacy.html">Privacy Policy</a> |
+                    <a href="../../../terms.html">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Function to toggle dark/light mode
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-bs-theme') || 'light';
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-bs-theme', newTheme);
+      localStorage.setItem('quarto-color-scheme', newTheme);
+      
+      // Update icon if needed
+      const themeIcon = document.querySelector('.navbar-nav a[href="#"] i');
+      if (themeIcon) {
+        themeIcon.className = newTheme === 'light' ? 'bi bi-moon' : 'bi bi-sun';
+      }
+    }
+    
+    // Apply saved theme on load
+    const savedTheme = localStorage.getItem('quarto-color-scheme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      
+      // Update icon to match saved theme
+      const themeIcon = document.querySelector('.navbar-nav a[href="#"] i');
+      if (themeIcon && savedTheme === 'dark') {
+        themeIcon.className = 'bi bi-sun';
+      }
+    }
+    
+    // Set up toggle button
+    document.querySelectorAll('a[href="#"]').forEach(function(link) {
+      if (link.textContent.includes('Toggle Theme')) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          toggleTheme();
+        });
+      }
+    });
+    
+    // Enable Bootstrap tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      if (anchor.getAttribute('href') === '#') return;
+      
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 70,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

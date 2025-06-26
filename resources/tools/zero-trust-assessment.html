@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.30">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2025-02-25">
+<meta name="description" content="Evaluate your organization’s Zero Trust security maturity across multiple domains">
+
+<title>Zero Trust Assessment Tool – chen.ist</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/images/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-155df6177c212d1b2f8ead7da0af1b52.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-8f050130fc632d80deb4c3c60cf36ef2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-155df6177c212d1b2f8ead7da0af1b52.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+<link rel="stylesheet" href="../../scss/styles.css">
+<meta property="og:title" content="Zero Trust Assessment Tool – chen.ist">
+<meta property="og:description" content="Evaluate your organization’s Zero Trust security maturity across multiple domains">
+<meta property="og:image" content="https://chen.ist/assets/images/cyber-security.jpg">
+<meta property="og:site_name" content="chen.ist">
+<meta name="twitter:title" content="Zero Trust Assessment Tool – chen.ist">
+<meta name="twitter:description" content="Evaluate your organization’s Zero Trust security maturity across multiple domains">
+<meta name="twitter:image" content="https://chen.ist/assets/images/cyber-security.jpg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../services.html"> 
+<span class="menu-text">Services</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-academy" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Academy</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-academy">    
+        <li>
+    <a class="dropdown-item" href="../../academy.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../courses.html">
+ <span class="dropdown-text">Courses</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../events.html">
+ <span class="dropdown-text">Event</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../webinars.html">
+ <span class="dropdown-text">Webinars</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../computerclub.html">
+ <span class="dropdown-text">Computer Club</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html"> 
+<span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../resources/index.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../../about/index.html">
+ <span class="dropdown-text">About</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../about/csr.html">
+ <span class="dropdown-text">CSR</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../about/community.html">
+ <span class="dropdown-text">Community</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-lang" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Lang</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-lang">    
+        <li>
+    <a class="dropdown-item" href="../../index.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../ro/index.html">
+ <span class="dropdown-text">Romanian</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../sv/index.html">
+ <span class="dropdown-text">Swedish</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../de/index.html">
+ <span class="dropdown-text">German</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#zero-trust-assessment-tool" id="toc-zero-trust-assessment-tool" class="nav-link active" data-scroll-target="#zero-trust-assessment-tool">Zero Trust Assessment Tool</a>
+  <ul class="collapse">
+  <li><a href="#assessment-questionnaire" id="toc-assessment-questionnaire" class="nav-link" data-scroll-target="#assessment-questionnaire">Assessment Questionnaire</a></li>
+  <li><a href="#understanding-zero-trust-maturity" id="toc-understanding-zero-trust-maturity" class="nav-link" data-scroll-target="#understanding-zero-trust-maturity">Understanding Zero Trust Maturity</a>
+  <ul class="collapse">
+  <li><a href="#maturity-model" id="toc-maturity-model" class="nav-link" data-scroll-target="#maturity-model">Maturity Model</a></li>
+  <li><a href="#key-domains" id="toc-key-domains" class="nav-link" data-scroll-target="#key-domains">Key Domains</a></li>
+  </ul></li>
+  <li><a href="#implementation-guide" id="toc-implementation-guide" class="nav-link" data-scroll-target="#implementation-guide">Implementation Guide</a>
+  <ul class="collapse">
+  <li><a href="#phase-1-foundation-0-6-months" id="toc-phase-1-foundation-0-6-months" class="nav-link" data-scroll-target="#phase-1-foundation-0-6-months">Phase 1: Foundation (0-6 months)</a></li>
+  <li><a href="#phase-2-intermediate-6-12-months" id="toc-phase-2-intermediate-6-12-months" class="nav-link" data-scroll-target="#phase-2-intermediate-6-12-months">Phase 2: Intermediate (6-12 months)</a></li>
+  <li><a href="#phase-3-advanced-12-24-months" id="toc-phase-3-advanced-12-24-months" class="nav-link" data-scroll-target="#phase-3-advanced-12-24-months">Phase 3: Advanced (12-24 months)</a></li>
+  </ul></li>
+  <li><a href="#further-resources" id="toc-further-resources" class="nav-link" data-scroll-target="#further-resources">Further Resources</a></li>
+  <li><a href="#about-zero-trust-assessments" id="toc-about-zero-trust-assessments" class="nav-link" data-scroll-target="#about-zero-trust-assessments">About Zero Trust Assessments</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Zero Trust Assessment Tool</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">security</div>
+    <div class="quarto-category">assessment</div>
+    <div class="quarto-category">zero-trust</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Evaluate your organization’s Zero Trust security maturity across multiple domains
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 25, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="zero-trust-assessment-tool" class="level1">
+<h1>Zero Trust Assessment Tool</h1>
+<p>This tool helps you evaluate your organization’s Zero Trust security maturity across multiple domains and provides actionable recommendations for improvement.</p>
+<section id="assessment-questionnaire" class="level2">
+<h2 class="anchored" data-anchor-id="assessment-questionnaire">Assessment Questionnaire</h2>
+<p>Complete the following questionnaire to evaluate your organization’s Zero Trust maturity. The assessment covers seven key domains of Zero Trust security.</p>
+<div class="card mb-4">
+  <div class="card-body">
+    <form id="zero-trust-assessment">
+      <!-- Accordion for assessment questions -->
+      <div class="accordion" id="assessmentAccordion">
+        
+        <!-- Identity and Access Management -->
+        <div class="accordion-item">
+          <h2 class="accordion-header anchored" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              1. Identity and Access Management
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#assessmentAccordion">
+            <div class="accordion-body">
+              <div class="mb-3">
+                <label class="form-label">1.1 What percentage of user accounts use multi-factor authentication (MFA)?</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="mfa_coverage" id="mfa_1" value="1">
+                  <label class="form-check-label" for="mfa_1">Less than 25%</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="mfa_coverage" id="mfa_2" value="2">
+                  <label class="form-check-label" for="mfa_2">25-50%</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="mfa_coverage" id="mfa_3" value="3">
+                  <label class="form-check-label" for="mfa_3">51-75%</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="mfa_coverage" id="mfa_4" value="4">
+                  <label class="form-check-label" for="mfa_4">76-100%</label>
+                </div>
+              </div>
+              
+              <div class="mb-3">
+                <label class="form-label">1.2 How are privileged accounts managed?</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="privileged_accounts" id="priv_1" value="1">
+                  <label class="form-check-label" for="priv_1">No special management for privileged accounts</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="privileged_accounts" id="priv_2" value="2">
+                  <label class="form-check-label" for="priv_2">Basic controls (dedicated accounts, password policies)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="privileged_accounts" id="priv_3" value="3">
+                  <label class="form-check-label" for="priv_3">Privileged Access Management (PAM) system with workflow controls</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="privileged_accounts" id="priv_4" value="4">
+                  <label class="form-check-label" for="priv_4">Just-in-time privileged access with full monitoring and session recording</label>
+                </div>
+              </div>
+              
+              <div class="mb-3">
+                <label class="form-label">1.3 How is identity governance implemented?</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="identity_governance" id="gov_1" value="1">
+                  <label class="form-check-label" for="gov_1">Manual processes for user lifecycle management</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="identity_governance" id="gov_2" value="2">
+                  <label class="form-check-label" for="gov_2">Partial automation of user lifecycle management</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="identity_governance" id="gov_3" value="3">
+                  <label class="form-check-label" for="gov_3">Automated identity lifecycle with regular access reviews</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="identity_governance" id="gov_4" value="4">
+                  <label class="form-check-label" for="gov_4">Comprehensive identity governance with risk-based access controls and continuous certification</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Device Security -->
+        <div class="accordion-item">
+          <h2 class="accordion-header anchored" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              2. Device Security
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#assessmentAccordion">
+            <div class="accordion-body">
+              <div class="mb-3">
+                <label class="form-label">2.1 How do you validate device security posture?</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="device_validation" id="dev_1" value="1">
+                  <label class="form-check-label" for="dev_1">No device validation</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="device_validation" id="dev_2" value="2">
+                  <label class="form-check-label" for="dev_2">Basic managed devices with standard configurations</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="device_validation" id="dev_3" value="3">
+                  <label class="form-check-label" for="dev_3">Device health attestation for managed devices</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="device_validation" id="dev_4" value="4">
+                  <label class="form-check-label" for="dev_4">Comprehensive device health validation for all devices (managed and BYOD)</label>
+                </div>
+              </div>
+              
+              <div class="mb-3">
+                <label class="form-label">2.2 How are software updates and patches managed?</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="patch_management" id="patch_1" value="1">
+                  <label class="form-check-label" for="patch_1">Manual or ad-hoc patching</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="patch_management" id="patch_2" value="2">
+                  <label class="form-check-label" for="patch_2">Centralized patch management for critical systems</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="patch_management" id="patch_3" value="3">
+                  <label class="form-check-label" for="patch_3">Automated patch management for all systems with compliance reporting</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="patch_management" id="patch_4" value="4">
+                  <label class="form-check-label" for="patch_4">Comprehensive patch management with risk-based prioritization and verification</label>
+                </div>
+              </div>
+              
+              <div class="mb-3">
+                <label class="form-label">2.3 How are endpoint protection controls implemented?</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="endpoint_protection" id="endpoint_1" value="1">
+                  <label class="form-check-label" for="endpoint_1">Basic antivirus only</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="endpoint_protection" id="endpoint_2" value="2">
+                  <label class="form-check-label" for="endpoint_2">Endpoint protection platform with centralized management</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="endpoint_protection" id="endpoint_3" value="3">
+                  <label class="form-check-label" for="endpoint_3">Advanced endpoint detection and response (EDR)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="endpoint_protection" id="endpoint_4" value="4">
+                  <label class="form-check-label" for="endpoint_4">Next-gen endpoint security with behavior analysis and automated response</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Network Security -->
+        <div class="accordion-item">
+          <h2 class="accordion-header anchored" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              3. Network Security
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#assessmentAccordion">
+            <div class="accordion-body">
+              <div class="mb-3">
+                <label class="form-label">3.1 How is network segmentation implemented?</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="network_segmentation" id="net_1" value="1">
+                  <label class="form-check-label" for="net_1">Minimal segmentation (basic firewall only)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="network_segmentation" id="net_2" value="2">
+                  <label class="form-check-label" for="net_2">Basic segmentation (separate VLANs for different functions)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="network_segmentation" id="net_3" value="3">
+                  <label class="form-check-label" for="net_3">Micro-segmentation with detailed access controls</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="network_segmentation" id="net_4" value="4">
+                  <label class="form-check-label" for="net_4">Software-defined perimeter with identity-based access controls</label>
+                </div>
+              </div>
+              
+              <div class="mb-3">
+                <label class="form-label">3.2 How is encrypted communication enforced?</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="encryption" id="enc_1" value="1">
+                  <label class="form-check-label" for="enc_1">Basic encryption for select communications (e.g., VPN for remote access)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="encryption" id="enc_2" value="2">
+                  <label class="form-check-label" for="enc_2">Transport encryption for most external communications</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="encryption" id="enc_3" value="3">
+                  <label class="form-check-label" for="enc_3">Encryption for all external and critical internal communications</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="encryption" id="enc_4" value="4">
+                  <label class="form-check-label" for="enc_4">End-to-end encryption for all communications with certificate validation</label>
+                </div>
+              </div>
+              
+              <div class="mb-3">
+                <label class="form-label">3.3 How do you monitor network traffic?</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="network_monitoring" id="netmon_1" value="1">
+                  <label class="form-check-label" for="netmon_1">Basic perimeter monitoring</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="network_monitoring" id="netmon_2" value="2">
+                  <label class="form-check-label" for="netmon_2">Network monitoring with IDS/IPS capabilities</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="network_monitoring" id="netmon_3" value="3">
+                  <label class="form-check-label" for="netmon_3">Advanced network traffic analysis with behavioral analytics</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="network_monitoring" id="netmon_4" value="4">
+                  <label class="form-check-label" for="netmon_4">Comprehensive network detection and response with full visibility</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- More sections would follow for Data Protection, Application Security, etc. -->
+        
+        <!-- For brevity, we'll include just a few more sections as examples -->
+        
+        <!-- Data Protection -->
+        <div class="accordion-item">
+          <h2 class="accordion-header anchored" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              4. Data Protection
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#assessmentAccordion">
+            <div class="accordion-body">
+              <div class="mb-3">
+                <label class="form-label">4.1 How is data classified and protected?</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="data_classification" id="data_1" value="1">
+                  <label class="form-check-label" for="data_1">No formal data classification</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="data_classification" id="data_2" value="2">
+                  <label class="form-check-label" for="data_2">Basic data classification without automated enforcement</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="data_classification" id="data_3" value="3">
+                  <label class="form-check-label" for="data_3">Data classification with automated protection for sensitive data</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="data_classification" id="data_4" value="4">
+                  <label class="form-check-label" for="data_4">Comprehensive data governance with automated classification and protection</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Visibility and Analytics -->
+        <div class="accordion-item">
+          <h2 class="accordion-header anchored" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              5. Visibility and Analytics
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#assessmentAccordion">
+            <div class="accordion-body">
+              <div class="mb-3">
+                <label class="form-label">5.1 How comprehensive is your security monitoring?</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="security_monitoring" id="secmon_1" value="1">
+                  <label class="form-check-label" for="secmon_1">Basic log collection without correlation</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="security_monitoring" id="secmon_2" value="2">
+                  <label class="form-check-label" for="secmon_2">SIEM implementation with basic correlation rules</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="security_monitoring" id="secmon_3" value="3">
+                  <label class="form-check-label" for="secmon_3">Advanced monitoring with behavior analytics and user activity monitoring</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="security_monitoring" id="secmon_4" value="4">
+                  <label class="form-check-label" for="secmon_4">Comprehensive monitoring with AI-driven analytics and automated response</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Assessment Submit Button -->
+      <div class="mt-4 text-center">
+        <button type="button" class="btn btn-primary" id="submit-assessment">Submit Assessment</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Results Section -->
+<div class="card mb-4" id="results-section" style="display: none;">
+  <div class="card-header">
+    <h3 class="card-title mb-0 anchored">Assessment Results</h3>
+  </div>
+  <div class="card-body">
+    <!-- Overall Maturity Score -->
+    <div class="mb-4 text-center">
+      <h4 class="anchored">Overall Zero Trust Maturity Score</h4>
+      <div class="display-4" id="overall-score">65%</div>
+      <div class="progress mt-2" style="height: 30px;">
+        <div class="progress-bar bg-info" role="progressbar" style="width: 65%;" id="overall-progress" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">Intermediate</div>
+      </div>
+    </div>
+    
+    <!-- Domain Scores -->
+    <h4 class="anchored">Domain Maturity Scores</h4>
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <canvas id="radar-chart" width="400" height="300"></canvas>
+      </div>
+      <div class="col-md-6">
+        <div class="table-responsive">
+          
+<table class="table table-bordered caption-top" data-quarto-postprocess="true">
+<thead class="table-light">
+<tr class="header">
+<th data-quarto-table-cell-role="th">Domain</th>
+<th data-quarto-table-cell-role="th">Score</th>
+<th data-quarto-table-cell-role="th">Maturity Level</th>
+</tr>
+</thead>
+<tbody id="domain-scores">
+<tr class="odd">
+<td>Identity &amp; Access</td>
+<td>75%</td>
+<td><span class="badge bg-success">Advanced</span></td>
+</tr>
+<tr class="even">
+<td>Device Security</td>
+<td>50%</td>
+<td><span class="badge bg-info">Intermediate</span></td>
+</tr>
+<tr class="odd">
+<td>Network Security</td>
+<td>67%</td>
+<td><span class="badge bg-info">Intermediate</span></td>
+</tr>
+<tr class="even">
+<td>Data Protection</td>
+<td>25%</td>
+<td><span class="badge bg-warning">Basic</span></td>
+</tr>
+<tr class="odd">
+<td>Visibility &amp; Analytics</td>
+<td>75%</td>
+<td><span class="badge bg-success">Advanced</span></td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+      </div>
+    </div>
+    
+    <!-- Recommendations -->
+    <div class="mb-4">
+      <h4 class="anchored">Key Recommendations</h4>
+      <div class="alert alert-primary">
+        <p><strong>Focus Areas for Improvement:</strong></p>
+        <ul id="recommendations-list">
+          <li><strong>Data Protection:</strong> Implement a formal data classification framework with automated controls for sensitive data.</li>
+          <li><strong>Device Security:</strong> Enhance endpoint protection with advanced EDR capabilities and improve patch management processes.</li>
+          <li><strong>Network Security:</strong> Move toward micro-segmentation to limit lateral movement and enhance network visibility.</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Detailed Recommendations by Domain -->
+    <div class="mb-4">
+      <h4 class="anchored">Detailed Recommendations</h4>
+      <div class="accordion" id="recommendationsAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header anchored" id="headingRecOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRecOne" aria-expanded="false" aria-controls="collapseRecOne">
+              Identity and Access Management
+            </button>
+          </h2>
+          <div id="collapseRecOne" class="accordion-collapse collapse" aria-labelledby="headingRecOne" data-bs-parent="#recommendationsAccordion">
+            <div class="accordion-body" id="identity-recommendations">
+              <ul>
+                <li>Expand MFA to cover all user accounts, not just privileged access.</li>
+                <li>Implement just-in-time privileged access to reduce standing privileges.</li>
+                <li>Enhance identity governance with automated access reviews and certifications.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header anchored" id="headingRecTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRecTwo" aria-expanded="false" aria-controls="collapseRecTwo">
+              Device Security
+            </button>
+          </h2>
+          <div id="collapseRecTwo" class="accordion-collapse collapse" aria-labelledby="headingRecTwo" data-bs-parent="#recommendationsAccordion">
+            <div class="accordion-body" id="device-recommendations">
+              <ul>
+                <li>Implement device health attestation for all managed devices.</li>
+                <li>Enhance patch management with automated compliance reporting.</li>
+                <li>Upgrade endpoint protection to include behavioral analytics and EDR capabilities.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Additional recommendation sections would follow -->
+      </div>
+    </div>
+    
+    <!-- Next Steps -->
+    <div class="mb-4">
+      <h4 class="anchored">Next Steps</h4>
+      <div class="alert alert-success">
+        <ol>
+          <li>Review the detailed recommendations with your security team</li>
+          <li>Prioritize improvements based on risk and current maturity gaps</li>
+          <li>Develop a phased Zero Trust implementation roadmap</li>
+          <li>Implement quick wins while planning for longer-term initiatives</li>
+          <li>Reassess maturity periodically to track progress</li>
+        </ol>
+      </div>
+    </div>
+    
+    <!-- Download Results -->
+    <div class="text-center mt-4">
+      <button class="btn btn-primary" id="download-results">
+        <i class="bi bi-download"></i> Download Assessment Report
+      </button>
+    </div>
+  </div>
+</div>
+</section>
+<section id="understanding-zero-trust-maturity" class="level2">
+<h2 class="anchored" data-anchor-id="understanding-zero-trust-maturity">Understanding Zero Trust Maturity</h2>
+<p>Zero Trust is a security framework based on the principle “never trust, always verify.” It requires verifying every user and device before granting access to resources, regardless of location.</p>
+<section id="maturity-model" class="level3">
+<h3 class="anchored" data-anchor-id="maturity-model">Maturity Model</h3>
+<p>Our Zero Trust Assessment uses a four-level maturity model:</p>
+<ol type="1">
+<li><strong>Initial (0-25%)</strong>: Basic or minimal implementation of Zero Trust principles</li>
+<li><strong>Basic (26-50%)</strong>: Foundational elements in place but limited in scope</li>
+<li><strong>Intermediate (51-75%)</strong>: Comprehensive implementation across most domains</li>
+<li><strong>Advanced (76-100%)</strong>: Sophisticated implementation with continuous validation</li>
+</ol>
+</section>
+<section id="key-domains" class="level3">
+<h3 class="anchored" data-anchor-id="key-domains">Key Domains</h3>
+<p>The assessment covers these critical domains:</p>
+<ol type="1">
+<li><strong>Identity and Access Management</strong>
+<ul>
+<li>Multi-factor authentication</li>
+<li>Privileged access management</li>
+<li>Identity governance</li>
+</ul></li>
+<li><strong>Device Security</strong>
+<ul>
+<li>Device validation</li>
+<li>Patch management</li>
+<li>Endpoint protection</li>
+</ul></li>
+<li><strong>Network Security</strong>
+<ul>
+<li>Micro-segmentation</li>
+<li>Encrypted communications</li>
+<li>Network visibility</li>
+</ul></li>
+<li><strong>Data Protection</strong>
+<ul>
+<li>Data classification</li>
+<li>Encryption</li>
+<li>Data access controls</li>
+</ul></li>
+<li><strong>Application Security</strong>
+<ul>
+<li>Secure development</li>
+<li>API security</li>
+<li>Application access controls</li>
+</ul></li>
+<li><strong>Visibility and Analytics</strong>
+<ul>
+<li>Security monitoring</li>
+<li>Threat detection</li>
+<li>User behavior analytics</li>
+</ul></li>
+<li><strong>Automation and Orchestration</strong>
+<ul>
+<li>Security policy enforcement</li>
+<li>Response automation</li>
+<li>Continuous validation</li>
+</ul></li>
+</ol>
+</section>
+</section>
+<section id="implementation-guide" class="level2">
+<h2 class="anchored" data-anchor-id="implementation-guide">Implementation Guide</h2>
+<section id="phase-1-foundation-0-6-months" class="level3">
+<h3 class="anchored" data-anchor-id="phase-1-foundation-0-6-months">Phase 1: Foundation (0-6 months)</h3>
+<p>Focus on establishing the foundational elements:</p>
+<ul>
+<li><strong>Identity</strong>
+<ul>
+<li>Implement MFA for privileged accounts</li>
+<li>Consolidate identity providers</li>
+<li>Establish baseline access policies</li>
+</ul></li>
+<li><strong>Devices</strong>
+<ul>
+<li>Create device inventory</li>
+<li>Deploy basic endpoint protection</li>
+<li>Implement patch management</li>
+</ul></li>
+<li><strong>Network</strong>
+<ul>
+<li>Establish network visibility</li>
+<li>Document asset dependencies</li>
+<li>Implement basic segmentation</li>
+</ul></li>
+<li><strong>Monitoring</strong>
+<ul>
+<li>Deploy centralized logging</li>
+<li>Establish security baseline</li>
+<li>Implement basic alerts</li>
+</ul></li>
+</ul>
+</section>
+<section id="phase-2-intermediate-6-12-months" class="level3">
+<h3 class="anchored" data-anchor-id="phase-2-intermediate-6-12-months">Phase 2: Intermediate (6-12 months)</h3>
+<p>Expand security controls across domains:</p>
+<ul>
+<li><strong>Identity</strong>
+<ul>
+<li>Extend MFA to all users</li>
+<li>Implement privileged access management</li>
+<li>Establish access certification processes</li>
+</ul></li>
+<li><strong>Devices</strong>
+<ul>
+<li>Deploy advanced endpoint protection</li>
+<li>Implement device health validation</li>
+<li>Enhance patch compliance</li>
+</ul></li>
+<li><strong>Network</strong>
+<ul>
+<li>Implement enhanced segmentation</li>
+<li>Deploy additional monitoring</li>
+<li>Encrypt sensitive traffic</li>
+</ul></li>
+<li><strong>Data</strong>
+<ul>
+<li>Implement data classification</li>
+<li>Deploy basic data protection controls</li>
+<li>Establish data access governance</li>
+</ul></li>
+</ul>
+</section>
+<section id="phase-3-advanced-12-24-months" class="level3">
+<h3 class="anchored" data-anchor-id="phase-3-advanced-12-24-months">Phase 3: Advanced (12-24 months)</h3>
+<p>Enhance capabilities with advanced controls:</p>
+<ul>
+<li><strong>Identity</strong>
+<ul>
+<li>Implement continuous authentication</li>
+<li>Deploy just-in-time access</li>
+<li>Establish risk-based access controls</li>
+</ul></li>
+<li><strong>Devices</strong>
+<ul>
+<li>Implement continuous device validation</li>
+<li>Deploy advanced behavioral analytics</li>
+<li>Establish automated remediation</li>
+</ul></li>
+<li><strong>Network</strong>
+<ul>
+<li>Implement micro-segmentation</li>
+<li>Deploy software-defined perimeter</li>
+<li>Establish encrypted communications everywhere</li>
+</ul></li>
+<li><strong>Automation</strong>
+<ul>
+<li>Implement policy-based automation</li>
+<li>Deploy security orchestration</li>
+<li>Establish continuous validation</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="further-resources" class="level2">
+<h2 class="anchored" data-anchor-id="further-resources">Further Resources</h2>
+<p>To learn more about Zero Trust security:</p>
+<ul>
+<li><a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf">NIST SP 800-207: Zero Trust Architecture</a></li>
+<li><a href="https://www.cisa.gov/zero-trust-maturity-model">Zero Trust Maturity Model (CISA)</a></li>
+<li><a href="../../resources/guides/security/implementation-guide.html">Zero Trust Implementation Guide</a></li>
+<li><a href="../../webinars/pages/zero-trust-security.html">Zero Trust Security Webinar</a></li>
+</ul>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const submitButton = document.getElementById('submit-assessment');
+  const resultsSection = document.getElementById('results-section');
+  const downloadButton = document.getElementById('download-results');
+  
+  // Mock data for the radar chart
+  let radarChart = null;
+  
+  // Submit assessment handler
+  submitButton.addEventListener('click', function() {
+    // In a real implementation, this would calculate scores based on form inputs
+    // For demo purposes, we'll show the pre-populated results
+    resultsSection.style.display = 'block';
+    
+    // Scroll to results
+    resultsSection.scrollIntoView({ behavior: 'smooth' });
+    
+    // Initialize radar chart
+    const ctx = document.getElementById('radar-chart').getContext('2d');
+    
+    // Create radar chart if it doesn't exist
+    if (!radarChart) {
+      radarChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels: [
+            'Identity & Access',
+            'Device Security',
+            'Network Security',
+            'Data Protection',
+            'Visibility & Analytics'
+          ],
+          datasets: [{
+            label: 'Current Maturity',
+            data: [75, 50, 67, 25, 75],
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgb(54, 162, 235)',
+            pointBackgroundColor: 'rgb(54, 162, 235)',
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: 'rgb(54, 162, 235)'
+          }, {
+            label: 'Industry Average',
+            data: [60, 55, 50, 45, 40],
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgb(255, 99, 132)',
+            pointBackgroundColor: 'rgb(255, 99, 132)',
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: 'rgb(255, 99, 132)'
+          }]
+        },
+        options: {
+          elements: {
+            line: {
+              borderWidth: 3
+            }
+          },
+          scales: {
+            r: {
+              angleLines: {
+                display: true
+              },
+              suggestedMin: 0,
+              suggestedMax: 100
+            }
+          }
+        }
+      });
+    }
+  });
+  
+  // Download button handler
+  downloadButton.addEventListener('click', function() {
+    alert('In a production environment, this would generate and download a PDF report with your assessment results and detailed recommendations.');
+  });
+});
+</script>
+</section>
+<section id="about-zero-trust-assessments" class="level2">
+<h2 class="anchored" data-anchor-id="about-zero-trust-assessments">About Zero Trust Assessments</h2>
+<p>Regular assessment of your Zero Trust maturity helps:</p>
+<ol type="1">
+<li><strong>Identify gaps</strong> in your security posture</li>
+<li><strong>Prioritize improvements</strong> based on risk and business impact</li>
+<li><strong>Measure progress</strong> over time</li>
+<li><strong>Benchmark</strong> against industry peers</li>
+<li><strong>Communicate security posture</strong> to leadership and stakeholders</li>
+</ol>
+<p>We recommend conducting this assessment at least annually, as well as after major changes to your IT environment or business operations.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/chen\.ist");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+
+</div>   
+    <div class="nav-footer-center">
+
+</div>
+    <div class="nav-footer-right">
+
+</div>
+  </div>
+</footer>
+<footer class="footer mt-5 py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5>About chen.ist</h5>
+                <p class="text-muted">
+                    Innovative technology solutions for the modern world.
+                    Specializing in cybersecurity, cloud architecture, and
+                    digital transformation.
+                </p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="../../services.html">Services</a></li>
+                    <li><a href="../../academy.html">Academy</a></li>
+                    <li><a href="../../blog.html">Blog</a></li>
+                    <li><a href="../../contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>Connect</h5>
+                <div class="d-flex gap-3 mb-2">
+                    <a href="https://github.com/chenist" aria-label="GitHub"><i class="bi bi-github fs-4"></i></a>
+                    <a href="https://linkedin.com/in/chenistsec" aria-label="LinkedIn"><i class="bi bi-linkedin fs-4"></i></a>
+                    <a href="https://twitter.com/chenistsec" aria-label="Twitter"><i class="bi bi-twitter-x fs-4"></i></a>
+                </div>
+                <p class="text-muted small">
+                    Email: <a href="mailto:office@chen.ist">office@chen.ist</a>
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <p class="small text-muted">
+                    © 2025 chen.ist. All rights reserved.
+                </p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <p class="small text-muted">
+                    <a href="../../privacy.html">Privacy Policy</a> |
+                    <a href="../../terms.html">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Function to toggle dark/light mode
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-bs-theme') || 'light';
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-bs-theme', newTheme);
+      localStorage.setItem('quarto-color-scheme', newTheme);
+      
+      // Update icon if needed
+      const themeIcon = document.querySelector('.navbar-nav a[href="#"] i');
+      if (themeIcon) {
+        themeIcon.className = newTheme === 'light' ? 'bi bi-moon' : 'bi bi-sun';
+      }
+    }
+    
+    // Apply saved theme on load
+    const savedTheme = localStorage.getItem('quarto-color-scheme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      
+      // Update icon to match saved theme
+      const themeIcon = document.querySelector('.navbar-nav a[href="#"] i');
+      if (themeIcon && savedTheme === 'dark') {
+        themeIcon.className = 'bi bi-sun';
+      }
+    }
+    
+    // Set up toggle button
+    document.querySelectorAll('a[href="#"]').forEach(function(link) {
+      if (link.textContent.includes('Toggle Theme')) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          toggleTheme();
+        });
+      }
+    });
+    
+    // Enable Bootstrap tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      if (anchor.getAttribute('href') === '#') return;
+      
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 70,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

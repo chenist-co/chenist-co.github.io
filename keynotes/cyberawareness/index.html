@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<link href="../../assets/images/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-7081dff82644c089f36d293adcfbb6b9.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.30">
+
+  <meta name="author" content="Security Training Team">
+  <meta name="dcterms.date" content="2025-06-25">
+  <title>chen.ist – Cyber Hygiene &amp; Security Course 2025</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-45f27dfc250423d924664a9c725924ca.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+<meta property="og:title" content="Cyber Hygiene &amp; Security Course 2025 – chen.ist">
+<meta property="og:description" content="A comprehensive overview of cyber hygiene practices and security recommendations for individuals and businesses to protect against modern cyber threats.">
+<meta property="og:image" content="https://chen.ist/assets/images/cyber-security.jpg">
+<meta property="og:site_name" content="chen.ist">
+<meta name="twitter:title" content="Cyber Hygiene &amp; Security Course 2025 – chen.ist">
+<meta name="twitter:description" content="A comprehensive overview of cyber hygiene practices and security recommendations for individuals and businesses to protect against modern cyber threats.">
+<meta name="twitter:image" content="https://chen.ist/assets/images/cyber-security.jpg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="quarto-dark">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Cyber Hygiene &amp; Security Course 2025</h1>
+  <p class="subtitle">Essential Practices for Digital Protection</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Security Training Team 
+</div>
+</div>
+</div>
+
+  <p class="date">2025-06-25</p>
+</section>
+<section>
+<section id="cyber-hygiene-security-course-2025" class="title-slide slide level1 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h1>Cyber Hygiene &amp; Security Course 2025</h1>
+
+</section>
+<section id="welcome" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Welcome</h2>
+<h3 id="essential-practices-for-digital-protection">Essential Practices for Digital Protection</h3>
+<div class="fragment fade-in">
+<p><strong>Security Training Team</strong></p>
+</div>
+<div class="fragment fade-in">
+<p>Based on U.S. Secret Service guidance<br>
+Updated for 2025 threat landscape</p>
+</div>
+</section>
+<section id="why-this-matters" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Why This Matters</h2>
+<div class="fragment fade-in">
+<h3 id="of-breaches-caused-by-human-error">95% of breaches caused by human error</h3>
+</div>
+<div class="fragment fade-in">
+<h3 id="m-average-cost-of-data-breach">$4.45M average cost of data breach</h3>
+</div>
+<div class="fragment fade-in">
+<h3 id="days-to-identify-and-contain-breach">280 days to identify and contain breach</h3>
+</div>
+</section>
+<section id="todays-threat-reality" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Today’s Threat Reality</h2>
+<ul>
+<li class="fragment">AI-powered attacks</li>
+<li class="fragment">Remote workforce expansion</li>
+<li class="fragment">Cloud-first environments</li>
+<li class="fragment">IoT device proliferation</li>
+<li class="fragment">Supply chain vulnerabilities</li>
+<li class="fragment">Ransomware evolution</li>
+</ul>
+</section>
+<section id="course-objectives" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Course Objectives</h2>
+<ul>
+<li class="fragment"><strong>Personal computer security</strong> best practices</li>
+<li class="fragment"><strong>Point-of-sale (POS)</strong> system protection</li>
+<li class="fragment"><strong>Current threat landscape</strong> understanding</li>
+<li class="fragment"><strong>Incident response</strong> procedures</li>
+<li class="fragment"><strong>Security culture</strong> development</li>
+</ul>
+</section></section>
+<section>
+<section id="part-1-personal-computer-security" class="title-slide slide level1 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h1>Part 1: Personal Computer Security</h1>
+
+</section>
+<section id="password-management" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Password Management</h2>
+<blockquote>
+<p>“Strong authentication is your first line of defense”</p>
+</blockquote>
+</section>
+<section id="use-a-password-manager" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Use a Password Manager</h2>
+<ul>
+<li class="fragment">Generate unique, complex passwords</li>
+<li class="fragment">Store credentials securely</li>
+<li class="fragment">Sync across devices safely</li>
+<li class="fragment">Never remember passwords again</li>
+</ul>
+</section>
+<section id="enable-multi-factor-authentication" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Enable Multi-Factor Authentication</h2>
+<ul>
+<li class="fragment"><strong>Email accounts</strong> - critical protection</li>
+<li class="fragment"><strong>Banking</strong> - financial security</li>
+<li class="fragment"><strong>Social media</strong> - identity protection</li>
+<li class="fragment"><strong>Work systems</strong> - business protection</li>
+</ul>
+</section>
+<section id="password-best-practices" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Password Best Practices</h2>
+<ul>
+<li class="fragment"><strong>Minimum 12 characters</strong></li>
+<li class="fragment"><strong>Mix of upper, lower, numbers, symbols</strong></li>
+<li class="fragment"><strong>Never reuse across accounts</strong></li>
+<li class="fragment"><strong>Consider passkeys when available</strong></li>
+</ul>
+</section>
+<section id="operating-system-security" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Operating System Security</h2>
+<blockquote>
+<p>“Keep your systems updated”</p>
+</blockquote>
+</section>
+<section id="enable-automatic-updates" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Enable Automatic Updates</h2>
+<ul>
+<li class="fragment">Operating system patches</li>
+<li class="fragment">Security updates get priority</li>
+<li class="fragment">Configure automatic restarts</li>
+<li class="fragment">Don’t delay critical updates</li>
+</ul>
+</section>
+<section id="use-supported-systems" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Use Supported Systems</h2>
+<ul>
+<li class="fragment">Avoid end-of-life operating systems</li>
+<li class="fragment">Plan regular OS upgrades</li>
+<li class="fragment">Verify vendor security support</li>
+<li class="fragment">Legacy systems = security risk</li>
+</ul>
+</section>
+<section id="built-in-security-features" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Built-in Security Features</h2>
+<ul>
+<li class="fragment"><strong>Windows Defender</strong> - enable it</li>
+<li class="fragment"><strong>macOS XProtect</strong> - built-in protection</li>
+<li class="fragment"><strong>Built-in firewalls</strong> - turn them on</li>
+<li class="fragment"><strong>Real-time protection</strong> - keep it active</li>
+</ul>
+</section>
+<section id="remote-access-security" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Remote Access Security</h2>
+<blockquote>
+<p>“Remote access can be exploited by attackers”</p>
+</blockquote>
+</section>
+<section id="disable-rdp-unless-necessary" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Disable RDP Unless Necessary</h2>
+<ul>
+<li class="fragment">Business operations only</li>
+<li class="fragment">Alternative solutions preferred</li>
+<li class="fragment">Regular usage audits</li>
+<li class="fragment">Most home users don’t need it</li>
+</ul>
+</section>
+<section id="secure-remote-access" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Secure Remote Access</h2>
+<ul>
+<li class="fragment"><strong>VPN connections</strong> mandatory</li>
+<li class="fragment"><strong>Strong authentication</strong> required</li>
+<li class="fragment"><strong>Monitor access logs</strong> regularly</li>
+<li class="fragment"><strong>Use dedicated solutions</strong> when possible</li>
+</ul>
+</section>
+<section id="browser-security" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Browser Security</h2>
+<blockquote>
+<p>“Web browsers are common attack vectors”</p>
+</blockquote>
+</section>
+<section id="keep-browsers-updated" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Keep Browsers Updated</h2>
+<ul>
+<li class="fragment">Enable automatic browser updates</li>
+<li class="fragment">Update extensions regularly</li>
+<li class="fragment">Install security patches promptly</li>
+<li class="fragment">Outdated browsers = vulnerable</li>
+</ul>
+</section>
+<section id="manage-active-content" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Manage Active Content</h2>
+<ul>
+<li class="fragment">Disable JavaScript when not needed</li>
+<li class="fragment">Manage Java and ActiveX carefully</li>
+<li class="fragment">Review plugin security regularly</li>
+<li class="fragment">Less active content = less risk</li>
+</ul>
+</section>
+<section id="browser-extensions" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Browser Extensions</h2>
+<ul>
+<li class="fragment"><strong>Regular review and removal</strong></li>
+<li class="fragment"><strong>Trust only reputable sources</strong></li>
+<li class="fragment"><strong>Minimal permissions principle</strong></li>
+<li class="fragment"><strong>Use ad blockers for protection</strong></li>
+</ul>
+</section>
+<section id="email-security" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Email Security</h2>
+<blockquote>
+<p>“Email remains a primary attack vector”</p>
+</blockquote>
+</section>
+<section id="suspicious-attachments" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Suspicious Attachments</h2>
+<ul>
+<li class="fragment"><strong>Never open from unknown senders</strong></li>
+<li class="fragment"><strong>Verify unexpected attachments</strong></li>
+<li class="fragment"><strong>Use alternative communication channels</strong></li>
+<li class="fragment"><strong>When in doubt, don’t open it</strong></li>
+</ul>
+</section>
+<section id="link-verification" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Link Verification</h2>
+<ul>
+<li class="fragment"><strong>Hover to preview URLs</strong></li>
+<li class="fragment"><strong>Check for suspicious domains</strong></li>
+<li class="fragment"><strong>Avoid shortened links</strong></li>
+<li class="fragment"><strong>Look for typos in URLs</strong></li>
+</ul>
+</section>
+<section id="social-engineering-awareness" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Social Engineering Awareness</h2>
+<ul>
+<li class="fragment">Urgent requests for money/credentials</li>
+<li class="fragment">Impersonation attempts</li>
+<li class="fragment">Pressure tactics recognition</li>
+<li class="fragment">Trust your instincts</li>
+</ul>
+</section>
+<section id="wi-fi-security" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Wi-Fi Security</h2>
+<blockquote>
+<p>“Secure your wireless connections”</p>
+</blockquote>
+</section>
+<section id="strong-encryption" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Strong Encryption</h2>
+<ul>
+<li class="fragment"><strong>WPA3 preferred</strong> (WPA2 minimum)</li>
+<li class="fragment"><strong>Strong wireless passwords</strong></li>
+<li class="fragment"><strong>Regular password changes</strong></li>
+<li class="fragment"><strong>Avoid WEP encryption</strong></li>
+</ul>
+</section>
+<section id="router-security" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Router Security</h2>
+<ul>
+<li class="fragment"><strong>Change default credentials</strong></li>
+<li class="fragment"><strong>Update firmware regularly</strong></li>
+<li class="fragment"><strong>Disable WPS functionality</strong></li>
+<li class="fragment"><strong>Use generic network names</strong></li>
+</ul>
+</section>
+<section id="data-backup-strategy" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Data Backup Strategy</h2>
+<blockquote>
+<p>“The 3-2-1 Backup Rule”</p>
+</blockquote>
+</section>
+<section id="the-3-2-1-rule-explained" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>The 3-2-1 Rule Explained</h2>
+<ul>
+<li class="fragment"><strong>3 copies</strong> of important data</li>
+<li class="fragment"><strong>2 different media types</strong></li>
+<li class="fragment"><strong>1 copy stored offsite</strong></li>
+</ul>
+</section>
+<section id="backup-best-practices" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Backup Best Practices</h2>
+<ul>
+<li class="fragment"><strong>Store backups offline</strong> (air-gapped)</li>
+<li class="fragment"><strong>Test restoration procedures</strong> regularly</li>
+<li class="fragment"><strong>Encrypt backup data</strong></li>
+<li class="fragment"><strong>Automate the process</strong></li>
+</ul>
+</section></section>
+<section>
+<section id="part-2-point-of-sale-security" class="title-slide slide level1 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h1>Part 2: Point-of-Sale Security</h1>
+
+</section>
+<section id="pos-access-control" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>POS Access Control</h2>
+<blockquote>
+<p>“Protecting payment data”</p>
+</blockquote>
+</section>
+<section id="change-default-passwords" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Change Default Passwords</h2>
+<ul>
+<li class="fragment"><strong>Immediately after installation</strong></li>
+<li class="fragment"><strong>All vendor-provided credentials</strong></li>
+<li class="fragment"><strong>System-wide password changes</strong></li>
+<li class="fragment"><strong>Document the changes</strong></li>
+</ul>
+</section>
+<section id="strong-password-policies" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Strong Password Policies</h2>
+<ul>
+<li class="fragment"><strong>Minimum 12-character complexity</strong></li>
+<li class="fragment"><strong>Regular password rotation</strong></li>
+<li class="fragment"><strong>Unique passwords per user</strong></li>
+<li class="fragment"><strong>No shared accounts</strong></li>
+</ul>
+</section>
+<section id="multi-factor-authentication" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Multi-Factor Authentication</h2>
+<ul>
+<li class="fragment"><strong>All POS system access</strong></li>
+<li class="fragment"><strong>Administrative functions</strong></li>
+<li class="fragment"><strong>Remote access scenarios</strong></li>
+<li class="fragment"><strong>Third-party vendor access</strong></li>
+</ul>
+</section>
+<section id="pos-network-isolation" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>POS Network Isolation</h2>
+<blockquote>
+<p>“Isolate POS systems from general network”</p>
+</blockquote>
+</section>
+<section id="restrict-internet-access" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Restrict Internet Access</h2>
+<ul>
+<li class="fragment"><strong>No general web browsing</strong></li>
+<li class="fragment"><strong>No email access</strong></li>
+<li class="fragment"><strong>POS-related traffic only</strong></li>
+<li class="fragment"><strong>Business justification required</strong></li>
+</ul>
+</section>
+<section id="network-segmentation" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Network Segmentation</h2>
+<ul>
+<li class="fragment"><strong>Dedicated networks/VLANs</strong></li>
+<li class="fragment"><strong>Firewall protection</strong></li>
+<li class="fragment"><strong>Traffic monitoring</strong></li>
+<li class="fragment"><strong>Access control lists</strong></li>
+</ul>
+</section>
+<section id="pos-physical-security" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>POS Physical Security</h2>
+<blockquote>
+<p>“Daily physical inspections matter”</p>
+</blockquote>
+</section>
+<section id="daily-terminal-inspection" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Daily Terminal Inspection</h2>
+<ul>
+<li class="fragment"><strong>Check for unauthorized hardware</strong></li>
+<li class="fragment"><strong>Look for tampering evidence</strong></li>
+<li class="fragment"><strong>Verify device integrity</strong></li>
+<li class="fragment"><strong>Document any anomalies</strong></li>
+</ul>
+</section>
+<section id="common-physical-threats" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Common Physical Threats</h2>
+<ul>
+<li class="fragment"><strong>Card skimmers</strong></li>
+<li class="fragment"><strong>Hidden cameras</strong></li>
+<li class="fragment"><strong>USB devices</strong></li>
+<li class="fragment"><strong>Network taps</strong></li>
+<li class="fragment"><strong>Overlay devices</strong></li>
+</ul>
+</section>
+<section id="staff-training" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Staff Training</h2>
+<ul>
+<li class="fragment"><strong>Threat recognition</strong></li>
+<li class="fragment"><strong>Reporting procedures</strong></li>
+<li class="fragment"><strong>Security awareness</strong></li>
+<li class="fragment"><strong>Incident response</strong></li>
+</ul>
+</section></section>
+<section>
+<section id="part-3-2025-threat-landscape" class="title-slide slide level1 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h1>Part 3: 2025 Threat Landscape</h1>
+
+</section>
+<section id="ransomware-evolution" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Ransomware Evolution</h2>
+<blockquote>
+<p>“More sophisticated and targeted”</p>
+</blockquote>
+</section>
+<section id="double-extortion-tactics" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Double Extortion Tactics</h2>
+<ul>
+<li class="fragment"><strong>Data theft before encryption</strong></li>
+<li class="fragment"><strong>Public data exposure threats</strong></li>
+<li class="fragment"><strong>Multiple pressure points</strong></li>
+<li class="fragment"><strong>Compliance implications</strong></li>
+</ul>
+</section>
+<section id="advanced-targeting" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Advanced Targeting</h2>
+<ul>
+<li class="fragment"><strong>Backup system attacks</strong></li>
+<li class="fragment"><strong>Critical infrastructure focus</strong></li>
+<li class="fragment"><strong>Supply chain targeting</strong></li>
+<li class="fragment"><strong>High-value data identification</strong></li>
+</ul>
+</section>
+<section id="never-pay-ransoms" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Never Pay Ransoms</h2>
+<div class="fragment fade-in">
+<h3 id="paying-ransoms">Paying ransoms:</h3>
+</div>
+<ul>
+<li class="fragment">Funds criminal operations</li>
+<li class="fragment">Doesn’t guarantee data recovery</li>
+<li class="fragment">Makes you a target for future attacks</li>
+<li class="fragment">May violate sanctions laws</li>
+</ul>
+</section>
+<section id="ai-powered-attacks" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>AI-Powered Attacks</h2>
+<blockquote>
+<p>“Artificial intelligence weaponized”</p>
+</blockquote>
+</section>
+<section id="deepfake-technology" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Deepfake Technology</h2>
+<ul>
+<li class="fragment"><strong>Convincing audio impersonation</strong></li>
+<li class="fragment"><strong>Video manipulation</strong></li>
+<li class="fragment"><strong>Real-time voice cloning</strong></li>
+<li class="fragment"><strong>Executive impersonation</strong></li>
+</ul>
+</section>
+<section id="automated-attack-tools" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Automated Attack Tools</h2>
+<ul>
+<li class="fragment"><strong>Vulnerability scanning</strong></li>
+<li class="fragment"><strong>Exploit generation</strong></li>
+<li class="fragment"><strong>Password cracking</strong></li>
+<li class="fragment"><strong>Network reconnaissance</strong></li>
+</ul>
+</section>
+<section id="defense-adaptations" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Defense Adaptations</h2>
+<ul>
+<li class="fragment"><strong>Zero-trust verification</strong></li>
+<li class="fragment"><strong>Multi-channel confirmation</strong></li>
+<li class="fragment"><strong>Out-of-band verification</strong></li>
+<li class="fragment"><strong>Enhanced training</strong></li>
+</ul>
+</section>
+<section id="business-email-compromise" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Business Email Compromise</h2>
+<blockquote>
+<p>“Enhanced with AI and deeper reconnaissance”</p>
+</blockquote>
+</section>
+<section id="advanced-reconnaissance" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Advanced Reconnaissance</h2>
+<ul>
+<li class="fragment"><strong>Social media analysis</strong></li>
+<li class="fragment"><strong>Company hierarchy research</strong></li>
+<li class="fragment"><strong>Communication pattern analysis</strong></li>
+<li class="fragment"><strong>Vendor relationship mapping</strong></li>
+</ul>
+</section>
+<section id="ai-enhanced-deception" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>AI-Enhanced Deception</h2>
+<ul>
+<li class="fragment"><strong>Voice synthesis technology</strong></li>
+<li class="fragment"><strong>Video manipulation</strong></li>
+<li class="fragment"><strong>Writing style mimicry</strong></li>
+<li class="fragment"><strong>Context-aware messaging</strong></li>
+</ul>
+</section>
+<section id="protection-measures" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Protection Measures</h2>
+<ul>
+<li class="fragment"><strong>Multi-step authentication</strong></li>
+<li class="fragment"><strong>Out-of-band confirmation</strong></li>
+<li class="fragment"><strong>Email authentication (SPF, DKIM, DMARC)</strong></li>
+<li class="fragment"><strong>Employee training</strong></li>
+</ul>
+</section>
+<section id="supply-chain-risks" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Supply Chain Risks</h2>
+<blockquote>
+<p>“New attack surfaces everywhere”</p>
+</blockquote>
+</section>
+<section id="software-supply-chain" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Software Supply Chain</h2>
+<ul>
+<li class="fragment"><strong>Compromised updates</strong></li>
+<li class="fragment"><strong>Malicious dependencies</strong></li>
+<li class="fragment"><strong>Build system compromise</strong></li>
+<li class="fragment"><strong>Distribution channel attacks</strong></li>
+</ul>
+</section>
+<section id="cloud-security-challenges" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Cloud Security Challenges</h2>
+<ul>
+<li class="fragment"><strong>Configuration errors</strong></li>
+<li class="fragment"><strong>Permission misconfigurations</strong></li>
+<li class="fragment"><strong>Shared responsibility confusion</strong></li>
+<li class="fragment"><strong>Access control failures</strong></li>
+</ul>
+</section>
+<section id="iot-device-vulnerabilities" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>IoT Device Vulnerabilities</h2>
+<ul>
+<li class="fragment"><strong>Default credentials</strong></li>
+<li class="fragment"><strong>No update mechanisms</strong></li>
+<li class="fragment"><strong>Poor security design</strong></li>
+<li class="fragment"><strong>Network exposure</strong></li>
+</ul>
+</section></section>
+<section>
+<section id="part-4-incident-response" class="title-slide slide level1 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h1>Part 4: Incident Response</h1>
+
+</section>
+<section id="recognition-response" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Recognition &amp; Response</h2>
+<blockquote>
+<p>“Quick identification minimizes damage”</p>
+</blockquote>
+</section>
+<section id="preparation-phase" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Preparation Phase</h2>
+<ul>
+<li class="fragment"><strong>Response procedures</strong></li>
+<li class="fragment"><strong>Team roles and responsibilities</strong></li>
+<li class="fragment"><strong>Communication plans</strong></li>
+<li class="fragment"><strong>Tool and resource preparation</strong></li>
+</ul>
+</section>
+<section id="detection-and-analysis" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Detection and Analysis</h2>
+<ul>
+<li class="fragment"><strong>Monitoring systems</strong></li>
+<li class="fragment"><strong>Alert triage</strong></li>
+<li class="fragment"><strong>Incident classification</strong></li>
+<li class="fragment"><strong>Impact assessment</strong></li>
+</ul>
+</section>
+<section id="containment-and-recovery" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Containment and Recovery</h2>
+<ul>
+<li class="fragment"><strong>Threat containment</strong></li>
+<li class="fragment"><strong>System isolation</strong></li>
+<li class="fragment"><strong>Evidence preservation</strong></li>
+<li class="fragment"><strong>Recovery procedures</strong></li>
+</ul>
+</section>
+<section id="law-enforcement" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Law Enforcement</h2>
+<blockquote>
+<p>“Proper reporting aids investigation”</p>
+</blockquote>
+</section>
+<section id="when-to-report" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>When to Report</h2>
+<ul>
+<li class="fragment"><strong>Criminal activity suspected</strong></li>
+<li class="fragment"><strong>Significant financial impact</strong></li>
+<li class="fragment"><strong>Personal data compromise</strong></li>
+<li class="fragment"><strong>Critical infrastructure impact</strong></li>
+</ul>
+</section>
+<section id="who-to-contact" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Who to Contact</h2>
+<ul>
+<li class="fragment"><strong>Local FBI field offices</strong></li>
+<li class="fragment"><strong>Secret Service Electronic Crimes Task Forces</strong></li>
+<li class="fragment"><strong>Local law enforcement</strong></li>
+<li class="fragment"><strong>Regulatory authorities</strong></li>
+</ul>
+</section>
+<section id="evidence-preservation" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Evidence Preservation</h2>
+<ul>
+<li class="fragment"><strong>Avoid system changes</strong></li>
+<li class="fragment"><strong>Chain of custody</strong></li>
+<li class="fragment"><strong>Forensic imaging</strong></li>
+<li class="fragment"><strong>Documentation procedures</strong></li>
+</ul>
+</section></section>
+<section>
+<section id="part-5-security-culture" class="title-slide slide level1 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h1>Part 5: Security Culture</h1>
+
+</section>
+<section id="employee-training" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Employee Training</h2>
+<blockquote>
+<p>“Humans remain the weakest link”</p>
+</blockquote>
+</section>
+<section id="training-components" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Training Components</h2>
+<ul>
+<li class="fragment"><strong>Security awareness training</strong></li>
+<li class="fragment"><strong>Attack technique recognition</strong></li>
+<li class="fragment"><strong>Response procedures</strong></li>
+<li class="fragment"><strong>Policy compliance</strong></li>
+</ul>
+</section>
+<section id="simulated-exercises" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Simulated Exercises</h2>
+<ul>
+<li class="fragment"><strong>Phishing simulations</strong></li>
+<li class="fragment"><strong>Social engineering tests</strong></li>
+<li class="fragment"><strong>Incident response drills</strong></li>
+<li class="fragment"><strong>Tabletop exercises</strong></li>
+</ul>
+</section>
+<section id="cultural-development" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Cultural Development</h2>
+<ul>
+<li class="fragment"><strong>Leadership commitment</strong></li>
+<li class="fragment"><strong>Positive reinforcement</strong></li>
+<li class="fragment"><strong>No-blame reporting</strong></li>
+<li class="fragment"><strong>Recognition programs</strong></li>
+</ul>
+</section>
+<section id="continuous-improvement" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Continuous Improvement</h2>
+<blockquote>
+<p>“Cybersecurity is an ongoing process”</p>
+</blockquote>
+</section>
+<section id="regular-assessments" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Regular Assessments</h2>
+<ul>
+<li class="fragment"><strong>Vulnerability testing</strong></li>
+<li class="fragment"><strong>Penetration testing</strong></li>
+<li class="fragment"><strong>Risk assessments</strong></li>
+<li class="fragment"><strong>Compliance audits</strong></li>
+</ul>
+</section>
+<section id="threat-intelligence" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Threat Intelligence</h2>
+<ul>
+<li class="fragment"><strong>Industry reports</strong></li>
+<li class="fragment"><strong>Government advisories</strong></li>
+<li class="fragment"><strong>Vendor notifications</strong></li>
+<li class="fragment"><strong>Peer sharing</strong></li>
+</ul>
+</section>
+<section id="technology-investments" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Technology Investments</h2>
+<ul>
+<li class="fragment"><strong>Risk-appropriate tools</strong></li>
+<li class="fragment"><strong>Capability enhancements</strong></li>
+<li class="fragment"><strong>Integration improvements</strong></li>
+<li class="fragment"><strong>Automation opportunities</strong></li>
+</ul>
+</section></section>
+<section>
+<section id="measuring-success" class="title-slide slide level1 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h1>Measuring Success</h1>
+
+</section>
+<section id="security-metrics" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Security Metrics</h2>
+<ul>
+<li class="fragment"><strong>Vulnerability counts</strong></li>
+<li class="fragment"><strong>Patch compliance rates</strong></li>
+<li class="fragment"><strong>Mean time to detect (MTTD)</strong></li>
+<li class="fragment"><strong>Mean time to respond (MTTR)</strong></li>
+</ul>
+</section>
+<section id="operational-metrics" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Operational Metrics</h2>
+<ul>
+<li class="fragment"><strong>User satisfaction scores</strong></li>
+<li class="fragment"><strong>Training completion rates</strong></li>
+<li class="fragment"><strong>Help desk ticket volume</strong></li>
+<li class="fragment"><strong>Security investment ROI</strong></li>
+</ul>
+</section>
+<section id="key-performance-indicators" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Key Performance Indicators</h2>
+<ul>
+<li class="fragment"><strong>Risk exposure reduction</strong></li>
+<li class="fragment"><strong>Incident frequency decrease</strong></li>
+<li class="fragment"><strong>Compliance improvement</strong></li>
+<li class="fragment"><strong>User experience enhancement</strong></li>
+</ul>
+</section></section>
+<section>
+<section id="resources-contacts" class="title-slide slide level1 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h1>Resources &amp; Contacts</h1>
+
+</section>
+<section id="emergency-contacts" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Emergency Contacts</h2>
+<ul>
+<li class="fragment"><strong>Local FBI Field Office</strong></li>
+<li class="fragment"><strong>Secret Service Electronic Crimes Task Force</strong></li>
+<li class="fragment"><strong>Local Law Enforcement</strong></li>
+<li class="fragment"><strong>CISA Cybersecurity Resources</strong></li>
+</ul>
+</section>
+<section id="additional-resources" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Additional Resources</h2>
+<ul>
+<li class="fragment"><strong>PCI Security Standards Council</strong></li>
+<li class="fragment"><strong>FBI Internet Crime Complaint Center</strong></li>
+<li class="fragment"><strong>Industry best practice guides</strong></li>
+<li class="fragment"><strong>Professional security organizations</strong></li>
+</ul>
+</section>
+<section id="key-takeaways" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Key Takeaways</h2>
+<ul>
+<li class="fragment"><strong>Strong authentication is mandatory</strong></li>
+<li class="fragment"><strong>Keep systems updated regularly</strong></li>
+<li class="fragment"><strong>Verify before trusting any request</strong></li>
+<li class="fragment"><strong>Backup data using 3-2-1 rule</strong></li>
+<li class="fragment"><strong>Monitor continuously for threats</strong></li>
+<li class="fragment"><strong>Train regularly on emerging threats</strong></li>
+</ul>
+</section>
+<section id="remember" class="slide level2 center" data-background-image="../../assets/background1.png" data-background-size="cover">
+<h2>Remember</h2>
+<blockquote>
+<p>“Cybersecurity is an ongoing process, not a one-time setup. Regular reviews and updates of your security practices are essential to maintain protection against evolving threats.”</p>
+</blockquote>
+</section>
+<section id="questions-discussion" class="slide level2 center" data-background-image="../../assets/slide1.png" data-background-size="cover">
+<h2>Questions &amp; Discussion</h2>
+<div style="text-align: center;">
+<p><strong>Thank you for your attention!</strong></p>
+<p>Security Training Team<br>
+<a href="mailto:security@training.com">security@training.com</a></p>
+<p><strong>Stay vigilant, stay secure!</strong></p>
+</div>
+
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="../../assets/images/logo-light.svg" class="slide-logo"></p>
+<div class="footer footer-default">
+<p>© 2025 | Cyber Hygiene &amp; Security Course 2025</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'h.v',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
+            }
+            return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/chen\.ist");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+                // target, if specified
+                link.setAttribute("target", "_blank");
+                if (link.getAttribute("rel") === null) {
+                  link.setAttribute("rel", "noopener");
+                }
+                // default icon
+                link.classList.add("external");
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
