@@ -1,0 +1,45 @@
+website:
+  title: "chen.ist"
+  favicon: ../assets/images/favicon.png
+  site-url: https://chen.ist/sv
+  description: "Innovativa tekniklösningar för den moderna världen"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Hem
+      - href: services.qmd
+        text: Tjänster
+      - href: projects.qmd
+        text: Projekt
+      - href: blogg.qmd
+        text: Blogg
+      - href: resources.qmd
+        text: Resurser
+    right:
+      - text: "Om oss"
+        menu:
+          - href: about/index.qmd
+            text: Om oss
+          - href: about/csr.qmd
+            text: Företagsansvar
+          - href: about/community.qmd
+            text: Samhällsengagemang
+      - href: contact.qmd
+        text: Kontakt
+      - text: "Språk"
+        menu:
+          - href: ../index.qmd
+            text: Engelska
+          - href: ../ro/index.qmd
+            text: Rumänska
+          - href: ../sv/index.qmd
+            text: Svenska
+          - href: ../de/index.qmd
+            text: Tyska
+      - icon: github
+        href: https://github.com/chenist
+      - icon: linkedin
+        href: https://linkedin.com/in/chenist
+      - text: "Växla tema"
+        icon: moon
+        href: "#"

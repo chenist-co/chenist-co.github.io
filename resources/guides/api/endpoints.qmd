@@ -1,0 +1,614 @@
+---
+title: "API Endpoints Guide"
+description: "Comprehensive documentation of our API endpoints, parameters, and response formats"
+date: "2025-01-20"
+categories: [api, documentation, development]
+---
+
+# API Endpoints Guide
+
+## Introduction
+
+This guide provides comprehensive documentation for the chen.ist API endpoints. It includes details about authentication, request parameters, response formats, and example code for integrating with our services.
+
+## API Overview
+
+The chen.ist API is a RESTful service that allows developers to access and integrate our services into their applications. The API provides endpoints for security assessment, cloud resource management, and data analysis.
+
+### Base URL
+
+All API requests should be made to the following base URL:
+
+```
+https://api.chen.ist/v1
+```
+
+### Response Format
+
+All responses are returned in JSON format. Successful responses include a `data` object containing the requested information. Error responses include an `error` object with details about what went wrong.
+
+Example success response:
+```json
+{
+  "status": "success",
+  "data": {
+    "property1": "value1",
+    "property2": "value2"
+  }
+}
+```
+
+Example error response:
+```json
+{
+  "status": "error",
+  "error": {
+    "code": "invalid_request",
+    "message": "Invalid parameter: id",
+    "details": "The id parameter must be a valid UUID"
+  }
+}
+```
+
+### Pagination
+
+For endpoints that return collections of items, the API supports pagination using the `page` and `limit` parameters:
+
+- `page`: The page number (1-based)
+- `limit`: The number of items per page (default: 20, max: 100)
+
+Paginated responses include pagination metadata:
+
+```json
+{
+  "status": "success",
+  "data": [...],
+  "pagination": {
+    "total_items": 243,
+    "total_pages": 13,
+    "current_page": 2,
+    "items_per_page": 20,
+    "next_page": "/v1/resources?page=3&limit=20",
+    "prev_page": "/v1/resources?page=1&limit=20"
+  }
+}
+```
+
+## Authentication
+
+### API Keys
+
+Authentication is performed using API keys. Include your API key in the `Authorization` header of each request:
+
+```
+Authorization: Bearer YOUR_API_KEY
+```
+
+### Obtaining an API Key
+
+To obtain an API key:
+
+1. Log in to your chen.ist account
+2. Navigate to the Developer Dashboard
+3. Select "API Keys"
+4. Click "Generate New Key"
+5. Name your key and select the appropriate permissions
+6. Store your key securely - it will only be displayed once
+
+### Rate Limiting
+
+API requests are rate-limited to ensure fair usage. The following headers are included in each response:
+
+- `X-Rate-Limit-Limit`: The maximum number of requests allowed per hour
+- `X-Rate-Limit-Remaining`: The number of requests remaining in the current window
+- `X-Rate-Limit-Reset`: The time at which the current rate limit window resets (Unix timestamp)
+
+## Security Assessment API
+
+### Get Security Assessment
+
+Retrieves a security assessment for a specified resource.
+
+**Endpoint:** `GET /security/assessments/{id}`
+
+**Parameters:**
+- `id` (path, required): The assessment ID
+
+**Response:**
+```json
+{
+  "status": "success",
+  "data": {
+    "id": "a1b2c3d4-e5f6-7890-abcd-1234567890ab",
+    "resource_id": "server-12345",
+    "resource_type": "virtual_machine",
+    "timestamp": "2025-01-15T14:30:00Z",
+    "score": 85,
+    "findings": [
+      {
+        "id": "finding-123",
+        "severity": "high",
+        "category": "authentication",
+        "description": "Weak password policy detected",
+        "remediation": "Implement stronger password requirements"
+      },
+      {
+        "id": "finding-124",
+        "severity": "medium",
+        "category": "network",
+        "description": "Unnecessary open ports detected",
+        "remediation": "Close unused network ports"
+      }
+    ],
+    "summary": {
+      "high_severity": 1,
+      "medium_severity": 3,
+      "low_severity": 2,
+      "passing_checks": 45
+    }
+  }
+}
+```
+
+### Create Security Assessment
+
+Creates a new security assessment for a resource.
+
+**Endpoint:** `POST /security/assessments`
+
+**Request Body:**
+```json
+{
+  "resource_id": "server-12345",
+  "resource_type": "virtual_machine",
+  "scan_options": {
+    "comprehensive": true,
+    "categories": ["authentication", "network", "encryption"]
+  }
+}
+```
+
+**Response:**
+```json
+{
+  "status": "success",
+  "data": {
+    "id": "a1b2c3d4-e5f6-7890-abcd-1234567890ab",
+    "resource_id": "server-12345",
+    "resource_type": "virtual_machine",
+    "status": "pending",
+    "estimated_completion_time": "2025-01-15T14:35:00Z"
+  }
+}
+```
+
+### List Security Assessments
+
+Retrieves a list of security assessments.
+
+**Endpoint:** `GET /security/assessments`
+
+**Parameters:**
+- `resource_id` (query, optional): Filter by resource ID
+- `resource_type` (query, optional): Filter by resource type
+- `from_date` (query, optional): Filter by start date (ISO 8601 format)
+- `to_date` (query, optional): Filter by end date (ISO 8601 format)
+- `page` (query, optional): Page number
+- `limit` (query, optional): Items per page
+
+**Response:**
+```json
+{
+  "status": "success",
+  "data": [
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-1234567890ab",
+      "resource_id": "server-12345",
+      "resource_type": "virtual_machine",
+      "timestamp": "2025-01-15T14:30:00Z",
+      "score": 85
+    },
+    {
+      "id": "b2c3d4e5-f6a7-8901-bcde-2345678901ab",
+      "resource_id": "server-67890",
+      "resource_type": "virtual_machine",
+      "timestamp": "2025-01-14T10:15:00Z",
+      "score": 92
+    }
+  ],
+  "pagination": {
+    "total_items": 15,
+    "total_pages": 1,
+    "current_page": 1,
+    "items_per_page": 20
+  }
+}
+```
+
+## Cloud Resources API
+
+### List Resources
+
+Retrieves a list of cloud resources.
+
+**Endpoint:** `GET /cloud/resources`
+
+**Parameters:**
+- `type` (query, optional): Filter by resource type
+- `provider` (query, optional): Filter by cloud provider
+- `region` (query, optional): Filter by region
+- `tag` (query, optional): Filter by tag (can be specified multiple times)
+- `page` (query, optional): Page number
+- `limit` (query, optional): Items per page
+
+**Response:**
+```json
+{
+  "status": "success",
+  "data": [
+    {
+      "id": "vm-12345",
+      "name": "web-server-01",
+      "type": "virtual_machine",
+      "provider": "aws",
+      "region": "us-east-1",
+      "status": "running",
+      "created_at": "2024-10-15T08:30:00Z",
+      "tags": [
+        {"key": "environment", "value": "production"},
+        {"key": "application", "value": "web"}
+      ]
+    },
+    {
+      "id": "vm-67890",
+      "name": "app-server-01",
+      "type": "virtual_machine",
+      "provider": "aws",
+      "region": "us-east-1",
+      "status": "running",
+      "created_at": "2024-10-15T09:15:00Z",
+      "tags": [
+        {"key": "environment", "value": "production"},
+        {"key": "application", "value": "app"}
+      ]
+    }
+  ],
+  "pagination": {
+    "total_items": 45,
+    "total_pages": 3,
+    "current_page": 1,
+    "items_per_page": 20
+  }
+}
+```
+
+### Get Resource
+
+Retrieves details about a specific cloud resource.
+
+**Endpoint:** `GET /cloud/resources/{id}`
+
+**Parameters:**
+- `id` (path, required): The resource ID
+
+**Response:**
+```json
+{
+  "status": "success",
+  "data": {
+    "id": "vm-12345",
+    "name": "web-server-01",
+    "type": "virtual_machine",
+    "provider": "aws",
+    "region": "us-east-1",
+    "status": "running",
+    "created_at": "2024-10-15T08:30:00Z",
+    "updated_at": "2025-01-10T14:20:00Z",
+    "tags": [
+      {"key": "environment", "value": "production"},
+      {"key": "application", "value": "web"}
+    ],
+    "details": {
+      "instance_type": "t3.large",
+      "vpc_id": "vpc-12345",
+      "subnet_id": "subnet-67890",
+      "public_ip": "203.0.113.10",
+      "private_ip": "10.0.1.10",
+      "security_groups": [
+        {"id": "sg-12345", "name": "web-servers"}
+      ],
+      "volumes": [
+        {"id": "vol-12345", "size_gb": 100, "type": "gp3"}
+      ]
+    }
+  }
+}
+```
+
+### Update Resource Tags
+
+Updates tags for a specific cloud resource.
+
+**Endpoint:** `PATCH /cloud/resources/{id}/tags`
+
+**Parameters:**
+- `id` (path, required): The resource ID
+
+**Request Body:**
+```json
+{
+  "tags": [
+    {"key": "environment", "value": "staging"},
+    {"key": "application", "value": "web"},
+    {"key": "owner", "value": "platform-team"}
+  ]
+}
+```
+
+**Response:**
+```json
+{
+  "status": "success",
+  "data": {
+    "id": "vm-12345",
+    "tags": [
+      {"key": "environment", "value": "staging"},
+      {"key": "application", "value": "web"},
+      {"key": "owner", "value": "platform-team"}
+    ],
+    "updated_at": "2025-01-20T15:30:00Z"
+  }
+}
+```
+
+## Data Analysis API
+
+### Create Analysis Job
+
+Creates a new data analysis job.
+
+**Endpoint:** `POST /data/analysis/jobs`
+
+**Request Body:**
+```json
+{
+  "name": "Monthly Security Analysis",
+  "description": "Analysis of security events for January 2025",
+  "data_source": {
+    "type": "security_logs",
+    "parameters": {
+      "start_date": "2025-01-01T00:00:00Z",
+      "end_date": "2025-01-31T23:59:59Z",
+      "log_types": ["firewall", "authentication", "system"]
+    }
+  },
+  "analysis_type": "security_event_correlation",
+  "output_format": "json",
+  "notification": {
+    "email": "user@example.com",
+    "webhook_url": "https://example.com/webhook"
+  }
+}
+```
+
+**Response:**
+```json
+{
+  "status": "success",
+  "data": {
+    "id": "job-12345",
+    "name": "Monthly Security Analysis",
+    "status": "queued",
+    "created_at": "2025-01-20T16:00:00Z",
+    "estimated_completion_time": "2025-01-20T16:30:00Z"
+  }
+}
+```
+
+### Get Analysis Job
+
+Retrieves the status and results of a data analysis job.
+
+**Endpoint:** `GET /data/analysis/jobs/{id}`
+
+**Parameters:**
+- `id` (path, required): The job ID
+
+**Response:**
+```json
+{
+  "status": "success",
+  "data": {
+    "id": "job-12345",
+    "name": "Monthly Security Analysis",
+    "description": "Analysis of security events for January 2025",
+    "status": "completed",
+    "created_at": "2025-01-20T16:00:00Z",
+    "started_at": "2025-01-20T16:01:10Z",
+    "completed_at": "2025-01-20T16:25:30Z",
+    "progress": 100,
+    "results_url": "https://api.chen.ist/v1/data/analysis/jobs/job-12345/results",
+    "summary": {
+      "total_events_analyzed": 1250000,
+      "notable_findings": 47,
+      "high_severity_findings": 5,
+      "medium_severity_findings": 15,
+      "low_severity_findings": 27
+    }
+  }
+}
+```
+
+### List Analysis Jobs
+
+Retrieves a list of data analysis jobs.
+
+**Endpoint:** `GET /data/analysis/jobs`
+
+**Parameters:**
+- `status` (query, optional): Filter by job status
+- `created_after` (query, optional): Filter by creation date
+- `type` (query, optional): Filter by analysis type
+- `page` (query, optional): Page number
+- `limit` (query, optional): Items per page
+
+**Response:**
+```json
+{
+  "status": "success",
+  "data": [
+    {
+      "id": "job-12345",
+      "name": "Monthly Security Analysis",
+      "status": "completed",
+      "created_at": "2025-01-20T16:00:00Z",
+      "completed_at": "2025-01-20T16:25:30Z",
+      "analysis_type": "security_event_correlation"
+    },
+    {
+      "id": "job-67890",
+      "name": "Performance Anomaly Detection",
+      "status": "in_progress",
+      "created_at": "2025-01-20T17:00:00Z",
+      "analysis_type": "performance_anomaly_detection",
+      "progress": 45
+    }
+  ],
+  "pagination": {
+    "total_items": 12,
+    "total_pages": 1,
+    "current_page": 1,
+    "items_per_page": 20
+  }
+}
+```
+
+## Error Codes
+
+| Code | Description |
+|------|-------------|
+| `authentication_error` | Invalid or missing API key |
+| `authorization_error` | Insufficient permissions for the requested operation |
+| `invalid_request` | Invalid request parameters |
+| `resource_not_found` | The requested resource does not exist |
+| `rate_limit_exceeded` | Rate limit has been exceeded |
+| `internal_error` | An internal server error occurred |
+| `service_unavailable` | The service is temporarily unavailable |
+
+## Code Examples
+
+### Python Example
+
+```python
+import requests
+import json
+
+API_KEY = "your_api_key"
+BASE_URL = "https://api.chen.ist/v1"
+
+headers = {
+    "Authorization": f"Bearer {API_KEY}",
+    "Content-Type": "application/json"
+}
+
+# Get a list of security assessments
+response = requests.get(
+    f"{BASE_URL}/security/assessments",
+    headers=headers,
+    params={
+        "resource_type": "virtual_machine",
+        "from_date": "2025-01-01T00:00:00Z",
+        "limit": 10
+    }
+)
+
+if response.status_code == 200:
+    assessments = response.json()["data"]
+    print(f"Found {len(assessments)} assessments")
+    for assessment in assessments:
+        print(f"ID: {assessment['id']}, Score: {assessment['score']}")
+else:
+    print(f"Error: {response.status_code}")
+    print(response.json())
+```
+
+### JavaScript Example
+
+```javascript
+const API_KEY = "your_api_key";
+const BASE_URL = "https://api.chen.ist/v1";
+
+// Create a security assessment
+async function createSecurityAssessment() {
+    try {
+        const response = await fetch(`${BASE_URL}/security/assessments`, {
+            method: "POST",
+            headers: {
+                "Authorization": `Bearer ${API_KEY}`,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                "resource_id": "server-12345",
+                "resource_type": "virtual_machine",
+                "scan_options": {
+                    "comprehensive": true,
+                    "categories": ["authentication", "network", "encryption"]
+                }
+            })
+        });
+        
+        const data = await response.json();
+        
+        if (response.ok) {
+            console.log("Assessment created:", data.data.id);
+            return data.data.id;
+        } else {
+            console.error("Error creating assessment:", data.error);
+            return null;
+        }
+    } catch (error) {
+        console.error("API request failed:", error);
+        return null;
+    }
+}
+
+createSecurityAssessment();
+```
+
+### cURL Example
+
+```bash
+# List cloud resources
+curl -X GET "https://api.chen.ist/v1/cloud/resources?type=virtual_machine&provider=aws" \
+  -H "Authorization: Bearer your_api_key" \
+  -H "Content-Type: application/json"
+
+# Create a data analysis job
+curl -X POST "https://api.chen.ist/v1/data/analysis/jobs" \
+  -H "Authorization: Bearer your_api_key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Monthly Security Analysis",
+    "description": "Analysis of security events for January 2025",
+    "data_source": {
+      "type": "security_logs",
+      "parameters": {
+        "start_date": "2025-01-01T00:00:00Z",
+        "end_date": "2025-01-31T23:59:59Z",
+        "log_types": ["firewall", "authentication", "system"]
+      }
+    },
+    "analysis_type": "security_event_correlation",
+    "output_format": "json"
+  }'
+```
+
+## Conclusion
+
+This guide covers the key endpoints of the chen.ist API. For additional help, consult the following resources:
+
+- [API Status Page](https://status.chen.ist/api)
+- [API Change Log](https://chen.ist/resources/api/changelog)
+- [API Support Forum](https://community.chen.ist/api-support)
+
+If you encounter any issues or have questions, please contact our API support team at api-support@chen.ist.

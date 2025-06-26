@@ -1,0 +1,82 @@
+---
+title: {{title}}
+subtitle: {{subtitle}}
+date: {{date}}
+enddate: {{enddate}}
+location: {{location}}
+author: "chen.ist Events Team"
+format: 
+  pdf:
+    documentclass: article
+    geometry:
+      - margin=1in
+    colorlinks: true
+    fontfamily: libertinus
+    linkcolor: blue
+    urlcolor: blue
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    include-in-header: 
+      text: |
+        \usepackage{fancyhdr}
+        \pagestyle{fancy}
+        \fancyhead[L]{chen.ist Events}
+        \fancyhead[R]{{title}}
+        \fancyfoot[C]{\thepage}
+        \usepackage{titlesec}
+        \titleformat{\section}{\Large\bfseries\color{blue}}{\thesection}{1em}{}
+        \usepackage{booktabs}
+        \usepackage{longtable}
+---
+
+::: {.contentheader}
+# {{title}} {.unnumbered}
+
+![]({{image}})
+
+**Date**: {{date}} {{#enddate}}to {{enddate}}{{/enddate}}  
+**Location**: {{location}}  
+**Category**: {{category}}  
+**Registration Opens**: {{registration_date}}
+:::
+
+## Event Overview
+
+{{overview}}
+
+{{#challenge_areas}}
+## Challenge Areas
+
+{{challenge_areas}}
+{{/challenge_areas}}
+
+## Schedule
+
+{{schedule}}
+
+{{#prizes}}
+## Prizes
+
+{{prizes}}
+{{/prizes}}
+
+## Who Should Attend
+
+{{who_should_attend}}
+
+## Registration Information
+
+{{registration_info}}
+
+{{#faq}}
+## Frequently Asked Questions
+
+{{faq}}
+{{/faq}}
+
+---
+
+*For more information and to register, visit [chen.ist/events](https://chen.ist/events)*
+
+Contact: info@chen.ist | +1 555-123-4567

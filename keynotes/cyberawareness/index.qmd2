@@ -1,0 +1,1384 @@
+---
+title: "Cyber Hygiene & Security Course 2025"
+subtitle: "Essential Practices for Digital Protection"
+date: "2025-06-25"
+author: "Security Training Team"
+description: "A comprehensive overview of cyber hygiene practices and security recommendations for individuals and businesses to protect against modern cyber threats."
+categories: [security, cyberhygiene, training]
+image: "/assets/images/cyber-security.jpg"
+format:
+  revealjs:
+    theme: dark
+    logo: "/assets/images/logo-light.svg"
+    footer: "© 2025 | Cyber Hygiene & Security Course 2025"
+    navigation-mode: vertical
+    controls: true
+    progress: true
+    history: true
+    transition: slide
+    background-transition: fade
+    preview-links: auto
+    touch: true
+    slide-number: true
+    show-slide-number: all
+    slide-level: 2
+    scrollable: true
+    menu: true
+    code-copy: true
+    center: true
+    highlight-style: dracula
+    link-external-icon: true
+    link-external-newwindow: true
+    pdf-separate-fragments: false
+    multiplex: false
+---
+
+# Cyber Hygiene & Security Course 2025 {.title-slide background-color="#282a36"}
+
+## Course Overview {.smaller}
+
+:::: {.columns}
+
+::: {.column width="30%"}
+![](/assets/images/cyber-security.jpg){width="250px" .border .rounded}
+:::
+
+::: {.column width="70%"}
+### Security Training Team
+**Essential Practices for Digital Protection**
+
+* Based on U.S. Secret Service guidance
+* Updated for 2025 threat landscape
+* Covers personal and business security
+* Practical, actionable recommendations
+* Interactive training format
+
+[security@training.com](mailto:security@training.com)
+:::
+
+::::
+
+# Introduction
+
+## The Evolving Threat Landscape {.center}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### 2025 Reality
+
+* AI-powered attacks
+* Remote workforce expansion
+* Cloud-first environments
+* IoT device proliferation
+* Supply chain vulnerabilities
+* Ransomware evolution
+:::
+
+::: {.column width="50%"}
+### Why Cyber Hygiene Matters
+
+* 95% of breaches caused by human error
+* $4.45M average cost of data breach
+* 280 days to identify and contain breach
+* 75% involve lateral movement
+* 80% involve compromised credentials
+
+*Sources: IBM, Verizon, Ponemon Institute*
+:::
+
+::::
+
+::: {.notes}
+* Cybersecurity threats continue to evolve and intensify in 2025
+* Human factors remain the weakest link in most security programs
+* Good cyber hygiene practices are fundamental to protection
+* This course provides essential practices for individuals and businesses
+:::
+
+## Course Objectives {.smaller}
+
+> "Building a strong foundation of security practices to protect against modern cyber threats."
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### What You'll Learn
+
+* **Personal computer security** best practices
+* **Point-of-sale (POS)** system protection
+* **Current threat landscape** understanding
+* **Incident response** procedures
+* **Security culture** development
+:::
+
+::: {.column width="50%"}
+### Key Outcomes
+
+* Implement strong authentication
+* Secure your digital environment
+* Recognize and respond to threats
+* Protect sensitive data
+* Build organizational security awareness
+:::
+
+::::
+
+# Part 1: Personal Computer Security
+
+## Password Management {.smaller}
+
+> "Strong authentication is your first line of defense against cyber attacks."
+
+:::: {.columns}
+
+::: {.column width="60%"}
+### Essential Practices
+
+* **Use a reputable password manager**
+  * Generate unique, complex passwords
+  * Store credentials securely
+  * Sync across devices safely
+
+* **Enable multi-factor authentication (MFA)**
+  * Email, banking, social media
+  * SMS, authenticator apps, hardware tokens
+  * Backup codes for recovery
+
+* **Create strong passwords**
+  * Minimum 12 characters
+  * Mix of upper, lower, numbers, symbols
+  * Never reuse across accounts
+:::
+
+::: {.column width="40%"}
+### Advanced Options
+
+* **Passkeys when available**
+  * Stronger than passwords
+  * Phishing resistant
+  * WebAuthn standard
+
+* **Password Policies**
+  * Regular review and updates
+  * Unique credentials per device
+  * Avoid personal information
+  
+* **Recovery Planning**
+  * Backup authentication methods
+  * Secure recovery codes
+  * Contact information updates
+:::
+
+::::
+
+::: {.notes}
+* Password managers eliminate the need to remember multiple complex passwords
+* MFA adds crucial second layer of protection
+* Passkeys represent the future of authentication
+* Recovery planning prevents lockouts during emergencies
+:::
+
+## Operating System Security {.smaller}
+
+> "Keeping your systems updated is critical for protection against known vulnerabilities."
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Update Management
+
+* **Enable automatic updates**
+  * Operating system patches
+  * Security updates priority
+  * Configure automatic restarts
+
+* **Use supported systems**
+  * Avoid end-of-life operating systems
+  * Regular OS upgrade planning
+  * Vendor security support verification
+
+* **Software maintenance**
+  * Uninstall unused applications
+  * Regular software inventory
+  * Reduce attack surface
+:::
+
+::: {.column width="50%"}
+### Built-in Security
+
+* **Enable security features**
+  * Windows Defender
+  * macOS XProtect
+  * Built-in firewalls
+  * Real-time protection
+
+* **Configuration management**
+  * Secure default settings
+  * Privacy controls
+  * User account control
+  * Administrative privileges
+
+* **System monitoring**
+  * Security event logs
+  * Performance monitoring
+  * Unusual activity detection
+:::
+
+::::
+
+::: {.notes}
+* Operating system updates patch known security vulnerabilities
+* Supported systems receive regular security updates
+* Built-in security features provide baseline protection
+* Proper configuration enhances default security posture
+:::
+
+## Remote Access Security {.smaller}
+
+> "Remote access capabilities can be exploited by attackers to gain unauthorized system control."
+
+:::: {.columns}
+
+::: {.column width="60%"}
+### Risk Management
+
+* **Disable RDP unless necessary**
+  * Business operations only
+  * Alternative solutions preferred
+  * Regular usage audits
+
+* **Secure remote access**
+  * VPN connections mandatory
+  * Strong authentication required
+  * Network access controls
+  * Session monitoring
+
+* **Access governance**
+  * Regular permission reviews
+  * Remove unused accounts
+  * Audit remote access logs
+  * Suspicious activity monitoring
+:::
+
+::: {.column width="40%"}
+### Best Practices
+
+* **Dedicated solutions**
+  * Security-focused tools
+  * Beyond basic RDP
+  * Enterprise-grade features
+  
+* **Network controls**
+  * Firewall restrictions
+  * IP whitelisting
+  * Port management
+  * Traffic monitoring
+
+* **User training**
+  * Secure practices
+  * Threat recognition
+  * Incident reporting
+  * Policy compliance
+:::
+
+::::
+
+::: {.notes}
+* RDP is a common attack vector for cybercriminals
+* VPN provides encrypted tunnels for remote access
+* Regular audits help identify unnecessary access
+* Dedicated remote access solutions offer better security
+:::
+
+## Browser Security {.smaller}
+
+> "Web browsers are common attack vectors requiring careful security configuration."
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Browser Hardening
+
+* **Enable automatic updates**
+  * Browser software updates
+  * Extension updates
+  * Security patches
+
+* **Manage active content**
+  * Disable/control JavaScript when not needed
+  * Java and ActiveX management
+  * Plugin security reviews
+
+* **Extension management**
+  * Regular review and removal
+  * Trust only reputable sources
+  * Minimal permissions principle
+:::
+
+::: {.column width="50%"}
+### Enhanced Protection
+
+* **Privacy and security tools**
+  * Ad blockers for malicious content
+  * Privacy extensions
+  * Anti-phishing tools
+
+* **Browser separation**
+  * Work vs. personal browsers
+  * Dedicated banking browser
+  * Isolated browsing environments
+
+* **Security features**
+  * Safe Browsing enabled
+  * Phishing protection active
+  * Download scanning
+  * Certificate validation
+:::
+
+::::
+
+::: {.notes}
+* Browsers are frequent targets due to their internet exposure
+* Active content like JavaScript can be exploited for attacks
+* Browser extensions can introduce security vulnerabilities
+* Separation strategies reduce cross-contamination risks
+:::
+
+## Email Security {.smaller}
+
+> "Email remains a primary attack vector for cybercriminals in 2025."
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Threat Recognition
+
+* **Suspicious attachments**
+  * Never open from unknown senders
+  * Verify unexpected attachments
+  * Use alternative communication channels
+
+* **Link verification**
+  * Hover to preview URLs
+  * Check for suspicious domains
+  * Avoid shortened links
+
+* **Social engineering awareness**
+  * Urgent requests for money/credentials
+  * Impersonation attempts
+  * Pressure tactics recognition
+:::
+
+::: {.column width="50%"}
+### Protection Measures
+
+* **Technical controls**
+  * Email filtering systems
+  * Anti-phishing tools
+  * Spam detection
+
+* **Verification processes**
+  * Multi-channel verification
+  * Out-of-band confirmation
+  * Direct contact verification
+
+* **Incident response**
+  * Report phishing attempts
+  * Alert IT security teams
+  * Share threat intelligence
+  * Learn from incidents
+:::
+
+::::
+
+::: {.notes}
+* Email phishing remains one of the most effective attack methods
+* Social engineering exploits human psychology and trust
+* Technical controls complement human awareness
+* Reporting incidents helps protect the broader organization
+:::
+
+## Wi-Fi & Network Security {.smaller}
+
+> "Wireless networks require proper security to prevent unauthorized access."
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Wireless Security
+
+* **Strong encryption**
+  * WPA3 preferred (WPA2 minimum)
+  * Strong wireless passwords
+  * Regular password changes
+
+* **Router security**
+  * Change default credentials
+  * Update firmware regularly
+  * Disable WPS functionality
+  * Generic network names
+
+* **Network isolation**
+  * Guest networks for visitors
+  * IoT device separation
+  * Network segmentation
+:::
+
+::: {.column width="50%"}
+### Network Protection
+
+* **Firewall configuration**
+  * Enable built-in firewalls
+  * Configure appropriate rules
+  * Monitor network traffic
+  * Block unnecessary connections
+
+* **Network monitoring**
+  * Unusual traffic patterns
+  * Unauthorized devices
+  * Bandwidth anomalies
+  * Security alerts
+
+* **Access controls**
+  * MAC address filtering
+  * Time-based restrictions
+  * User authentication
+  * Connection logging
+:::
+
+::::
+
+::: {.notes}
+* WPA3 provides the strongest wireless security currently available
+* Default router credentials are publicly known and easily exploited
+* Network segmentation limits the impact of compromised devices
+* Monitoring helps detect unauthorized access attempts
+:::
+
+## Data Backup Strategy {.smaller}
+
+> "Regular backups are essential for recovering from ransomware and other data loss incidents."
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### The 3-2-1 Rule
+
+* **3 copies of important data**
+  * Original plus two backups
+  * Multiple backup generations
+  * Different backup schedules
+
+* **2 different media types**
+  * Local and cloud storage
+  * Different technologies
+  * Redundancy protection
+
+* **1 copy stored offsite**
+  * Geographic separation
+  * Network isolation
+  * Disaster recovery capability
+:::
+
+::: {.column width="50%"}
+### Backup Best Practices
+
+* **Offline storage**
+  * Air-gapped backups
+  * Immutable storage
+  * Ransomware protection
+
+* **Regular testing**
+  * Restoration procedures
+  * Data integrity verification
+  * Recovery time objectives
+
+* **Encryption and security**
+  * Backup data encryption
+  * Secure transportation
+  * Access controls
+  * Audit trails
+:::
+
+::::
+
+::: {.notes}
+* The 3-2-1 rule provides comprehensive backup protection
+* Offline backups protect against ransomware encryption
+* Regular testing ensures backups work when needed
+* Encryption protects backup data from unauthorized access
+:::
+
+# Part 2: Point-of-Sale System Security
+
+## POS Access Control {.smaller}
+
+> "POS systems handle sensitive payment data requiring robust access controls."
+
+:::: {.columns}
+
+::: {.column width="60%"}
+### Authentication Requirements
+
+* **Change default passwords immediately**
+  * Installation best practices
+  * Vendor-provided credentials
+  * System-wide password changes
+
+* **Strong password policies**
+  * Minimum 12-character complexity
+  * Regular password rotation
+  * Unique passwords per user
+  * No shared accounts
+
+* **Multi-factor authentication**
+  * All POS system access
+  * Administrative functions
+  * Remote access scenarios
+  * Third-party vendor access
+:::
+
+::: {.column width="40%"}
+### Access Management
+
+* **Role-based permissions**
+  * Unique user accounts
+  * Job function alignment
+  * Least privilege principle
+  * Regular access reviews
+
+* **Account lifecycle**
+  * Onboarding procedures
+  * Offboarding processes
+  * Permission updates
+  * Dormant account cleanup
+
+* **Monitoring and auditing**
+  * Access attempt logging
+  * Privilege usage tracking
+  * Anomaly detection
+  * Compliance reporting
+:::
+
+::::
+
+::: {.notes}
+* Default passwords are publicly available and easily exploited
+* Strong authentication is mandatory for payment card data protection
+* Role-based access ensures users only access necessary functions
+* Regular reviews help maintain proper access controls
+:::
+
+## POS Network Isolation {.smaller}
+
+> "POS systems should be isolated from general network traffic and internet access."
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Network Segregation
+
+* **Restrict internet access**
+  * No general browsing
+  * No email access
+  * POS-related traffic only
+  * Business justification required
+
+* **Network segmentation**
+  * Dedicated networks/VLANs
+  * Firewall protection
+  * Traffic monitoring
+  * Access control lists
+
+* **Communication controls**
+  * Necessary connections only
+  * Defined communication paths
+  * Protocol restrictions
+  * Port management
+:::
+
+::: {.column width="50%"}
+### Monitoring and Protection
+
+* **Traffic analysis**
+  * Network flow monitoring
+  * Anomaly detection
+  * Suspicious activity alerts
+  * Performance monitoring
+
+* **Firewall management**
+  * Strict rule enforcement
+  * Regular rule reviews
+  * Default deny policies
+  * Change management
+
+* **Incident response**
+  * Network isolation procedures
+  * Threat containment
+  * Forensic preservation
+  * Recovery planning
+:::
+
+::::
+
+::: {.notes}
+* Internet access increases POS system attack surface
+* Network segmentation limits lateral movement opportunities
+* Monitoring helps detect compromise attempts
+* Firewall rules should be restrictive and regularly reviewed
+:::
+
+## POS Physical Security {.smaller}
+
+> "Physical access to POS systems can compromise payment data and system integrity."
+
+:::: {.columns}
+
+::: {.column width="60%"}
+### Daily Inspection Procedures
+
+* **Terminal inspection**
+  * Daily physical checks
+  * Unauthorized hardware detection
+  * Tampering evidence
+  * Device integrity verification
+
+* **Common threats**
+  * Card skimmers
+  * Hidden cameras
+  * USB devices
+  * Network taps
+  * Overlay devices
+
+* **Secure installation**
+  * Tamper-evident cases
+  * Locked enclosures
+  * Cable management
+  * Mounting security
+:::
+
+::: {.column width="40%"}
+### Access Controls
+
+* **Physical security**
+  * Restricted area access
+  * Key management
+  * Surveillance systems
+  * Visitor controls
+
+* **Port security**
+  * Disable unused USB ports
+  * Secure connection points
+  * Cable protection
+  * Port monitoring
+
+* **Staff training**
+  * Threat recognition
+  * Reporting procedures
+  * Security awareness
+  * Incident response
+:::
+
+::::
+
+::: {.notes}
+* Physical access can bypass many technical security controls
+* Skimmers and other devices can be very sophisticated and hard to detect
+* Daily inspections help identify tampering attempts quickly
+* Staff training is crucial for identifying suspicious modifications
+:::
+
+## POS Third-Party Security {.smaller}
+
+> "POS vendors and service providers can introduce security risks if not properly managed."
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Vendor Management
+
+* **Security standards compliance**
+  * PCI DSS certification
+  * Security assessments
+  * Compliance documentation
+  * Regular audits
+
+* **Access controls**
+  * Unique vendor passwords
+  * Limited access scope
+  * Time-bound access
+  * Activity monitoring
+
+* **Contract requirements**
+  * Security obligations
+  * Incident response
+  * Liability provisions
+  * Audit rights
+:::
+
+::: {.column width="50%"}
+### Ongoing Management
+
+* **Security updates**
+  * Timely patch management
+  * Change notifications
+  * Testing procedures
+  * Rollback plans
+
+* **Account management**
+  * Regular access reviews
+  * Unused account removal
+  * Permission adjustments
+  * Documentation maintenance
+
+* **Communication**
+  * Contact information updates
+  * Emergency procedures
+  * Escalation paths
+  * Relationship management
+:::
+
+::::
+
+::: {.notes}
+* Third-party vendors can introduce security vulnerabilities
+* PCI DSS compliance is mandatory for payment card data handling
+* Vendor access should be carefully controlled and monitored
+* Strong contracts help define security responsibilities
+:::
+
+# Part 3: Current Threat Landscape (2025)
+
+## Ransomware Evolution {.smaller}
+
+> "Ransomware attacks have become more sophisticated and targeted in 2025."
+
+:::: {.columns}
+
+::: {.column width="60%"}
+### Modern Ransomware Characteristics
+
+* **Double extortion tactics**
+  * Data theft before encryption
+  * Public data exposure threats
+  * Multiple pressure points
+  * Compliance implications
+
+* **Advanced targeting**
+  * Backup system attacks
+  * Critical infrastructure focus
+  * Supply chain targeting
+  * High-value data identification
+
+* **Ransomware-as-a-Service (RaaS)**
+  * Lower barriers to entry
+  * Professional criminal operations
+  * Specialized attack tools
+  * Global distribution networks
+:::
+
+::: {.column width="40%"}
+### Protection Strategies
+
+* **Prevention measures**
+  * Robust backup strategies
+  * Network segmentation
+  * Access controls
+  * Employee training
+
+* **Detection capabilities**
+  * Behavioral monitoring
+  * Anomaly detection
+  * Real-time alerts
+  * Forensic readiness
+
+* **Response planning**
+  * Incident response procedures
+  * Communication plans
+  * Recovery procedures
+  * Legal considerations
+
+**Never pay ransoms** - funds criminal operations
+:::
+
+::::
+
+::: {.notes}
+* Modern ransomware is more sophisticated than early versions
+* Double extortion increases pressure on victims
+* RaaS has democratized ransomware attacks
+* Prevention and preparation are more effective than paying ransoms
+:::
+
+## AI-Powered Attacks {.smaller}
+
+> "Artificial intelligence is being weaponized to create more sophisticated and scalable attacks."
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### AI Attack Capabilities
+
+* **Deepfake technology**
+  * Convincing audio impersonation
+  * Video manipulation
+  * Real-time voice cloning
+  * Executive impersonation
+
+* **Automated attack tools**
+  * Vulnerability scanning
+  * Exploit generation
+  * Password cracking
+  * Network reconnaissance
+
+* **Social engineering enhancement**
+  * Personalized phishing emails
+  * Context-aware attacks
+  * Behavioral analysis
+  * Psychological manipulation
+:::
+
+::: {.column width="50%"}
+### Defense Adaptations
+
+* **Zero-trust verification**
+  * Multi-channel confirmation
+  * Out-of-band verification
+  * Physical presence requirements
+  * Cryptographic proof
+
+* **AI-powered defense**
+  * Behavioral analysis
+  * Anomaly detection
+  * Automated response
+  * Threat intelligence
+
+* **Enhanced training**
+  * AI attack awareness
+  * Verification procedures
+  * Skeptical mindset
+  * Technical validation
+:::
+
+::::
+
+::: {.notes}
+* AI enables attacks that were previously impossible or impractical
+* Deepfakes challenge traditional verification methods
+* Automated tools make sophisticated attacks more accessible
+* Defense must evolve to address AI-enhanced threats
+:::
+
+## Business Email Compromise (BEC) {.smaller}
+
+> "BEC attacks have evolved with AI-powered social engineering and deeper reconnaissance."
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Modern BEC Techniques
+
+* **Advanced reconnaissance**
+  * Social media analysis
+  * Company hierarchy research
+  * Communication pattern analysis
+  * Vendor relationship mapping
+
+* **AI-enhanced deception**
+  * Voice synthesis technology
+  * Video manipulation
+  * Writing style mimicry
+  * Context-aware messaging
+
+* **Cryptocurrency exploitation**
+  * Digital payment methods
+  * Transaction irreversibility
+  * Global money laundering
+  * Law enforcement challenges
+:::
+
+::: {.column width="50%"}
+### Protection Measures
+
+* **Verification procedures**
+  * Multi-step authentication
+  * Out-of-band confirmation
+  * Physical verification
+  * Financial controls
+
+* **Technical controls**
+  * Email authentication (SPF, DKIM, DMARC)
+  * Suspicious email flagging
+  * External email marking
+  * Link analysis
+
+* **Training and awareness**
+  * Social engineering recognition
+  * Verification protocols
+  * Incident reporting
+  * Regular updates
+:::
+
+::::
+
+::: {.notes}
+* BEC attacks exploit human psychology and organizational relationships
+* AI makes impersonation more convincing than ever
+* Financial losses from BEC continue to increase
+* Multi-layered defenses are essential for protection
+:::
+
+## Supply Chain & Cloud Risks {.smaller}
+
+> "The expansion of cloud services and supply chain complexity creates new attack surfaces."
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Supply Chain Threats
+
+* **Software supply chain attacks**
+  * Compromised updates
+  * Malicious dependencies
+  * Build system compromise
+  * Distribution channel attacks
+
+* **Hardware supply chain risks**
+  * Malicious components
+  * Firmware modification
+  * Manufacturing compromise
+  * Counterfeit devices
+
+* **Service provider risks**
+  * Third-party compromises
+  * Shared infrastructure
+  * Cascading failures
+  * Trust relationships
+:::
+
+::: {.column width="50%"}
+### Cloud Security Challenges
+
+* **Configuration errors**
+  * Default settings issues
+  * Permission misconfigurations
+  * Public exposure
+  * Access control failures
+
+* **Shared responsibility confusion**
+  * Cloud provider responsibilities
+  * Customer responsibilities
+  * Security control gaps
+  * Compliance challenges
+
+* **IoT device vulnerabilities**
+  * Default credentials
+  * No update mechanisms
+  * Poor security design
+  * Network exposure
+:::
+
+::::
+
+::: {.notes}
+* Supply chain attacks can affect multiple organizations simultaneously
+* Cloud adoption requires new security approaches
+* IoT devices often have poor security by design
+* Shared responsibility models require clear understanding
+:::
+
+# Part 4: Incident Response
+
+## Recognition & Response {.smaller}
+
+> "Quick identification and response to security incidents can minimize damage."
+
+:::: {.columns}
+
+::: {.column width="60%"}
+### Incident Response Framework
+
+* **Preparation phase**
+  * Response procedures
+  * Team roles and responsibilities
+  * Communication plans
+  * Tool and resource preparation
+
+* **Detection and analysis**
+  * Monitoring systems
+  * Alert triage
+  * Incident classification
+  * Impact assessment
+
+* **Containment and recovery**
+  * Threat containment
+  * System isolation
+  * Evidence preservation
+  * Recovery procedures
+:::
+
+::: {.column width="40%"}
+### Key Components
+
+* **Automated monitoring**
+  * Security information systems
+  * Behavioral analytics
+  * Anomaly detection
+  * Real-time alerting
+
+* **Human expertise**
+  * Security analysts
+  * Incident responders
+  * Forensic specialists
+  * Management coordination
+
+* **Documentation**
+  * Incident logging
+  * Action tracking
+  * Lessons learned
+  * Improvement plans
+:::
+
+::::
+
+::: {.notes}
+* Incident response requires both technical tools and human expertise
+* Preparation is critical for effective response
+* Documentation helps with learning and legal requirements
+* Practice exercises improve response capabilities
+:::
+
+## Law Enforcement Cooperation {.smaller}
+
+> "Proper reporting and cooperation with law enforcement can aid in investigation and recovery."
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Reporting Requirements
+
+* **When to report**
+  * Criminal activity suspected
+  * Significant financial impact
+  * Personal data compromise
+  * Critical infrastructure impact
+
+* **Who to contact**
+  * Local FBI field offices
+  * Secret Service Electronic Crimes Task Forces
+  * Local law enforcement
+  * Regulatory authorities
+
+* **What to preserve**
+  * System logs and evidence
+  * Network traffic captures
+  * Email communications
+  * Financial records
+:::
+
+::: {.column width="50%"}
+### Cooperation Best Practices
+
+* **Evidence preservation**
+  * Avoid system changes
+  * Chain of custody
+  * Forensic imaging
+  * Documentation procedures
+
+* **Information sharing**
+  * Factual reporting
+  * Timeline reconstruction
+  * Impact assessment
+  * Threat intelligence
+
+* **Ongoing coordination**
+  * Regular updates
+  * Investigation support
+  * Recovery coordination
+  * Prevention planning
+:::
+
+::::
+
+::: {.notes}
+* Law enforcement can provide valuable assistance in cybercrime investigations
+* Proper evidence preservation is crucial for prosecution
+* Early reporting often leads to better outcomes
+* Cooperation helps protect other potential victims
+:::
+
+# Part 5: Building Security Culture
+
+## Employee Training & Awareness {.smaller}
+
+> "Human factors remain the weakest link in most cybersecurity programs."
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Training Components
+
+* **Security awareness training**
+  * Current threat landscape
+  * Attack technique recognition
+  * Response procedures
+  * Policy compliance
+
+* **Simulated exercises**
+  * Phishing simulations
+  * Social engineering tests
+  * Incident response drills
+  * Tabletop exercises
+
+* **Ongoing education**
+  * Regular updates
+  * Emerging threat briefings
+  * Success story sharing
+  * Lessons learned sessions
+:::
+
+::: {.column width="50%"}
+### Cultural Development
+
+* **Leadership commitment**
+  * Executive sponsorship
+  * Resource allocation
+  * Policy enforcement
+  * Leading by example
+
+* **Positive reinforcement**
+  * Recognition programs
+  * Success celebrations
+  * Learning opportunities
+  * No-blame reporting
+
+* **Integration practices**
+  * Security in job descriptions
+  * Performance metrics
+  * Hiring practices
+  * Promotion criteria
+:::
+
+::::
+
+::: {.notes}
+* Security culture requires ongoing effort and commitment
+* Training should be relevant, engaging, and practical
+* Positive reinforcement is more effective than punishment
+* Leadership commitment is essential for cultural change
+:::
+
+## Continuous Improvement {.smaller}
+
+> "Cybersecurity requires ongoing attention and regular updates to remain effective."
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Assessment and Monitoring
+
+* **Regular security assessments**
+  * Vulnerability testing
+  * Penetration testing
+  * Risk assessments
+  * Compliance audits
+
+* **Threat intelligence**
+  * Industry reports
+  * Government advisories
+  * Vendor notifications
+  * Peer sharing
+
+* **Performance metrics**
+  * Security KPIs
+  * Incident trends
+  * Training effectiveness
+  * Cost-benefit analysis
+:::
+
+::: {.column width="50%"}
+### Adaptive Strategies
+
+* **Policy updates**
+  * Lessons learned integration
+  * Regulatory changes
+  * Technology evolution
+  * Threat landscape shifts
+
+* **Technology investments**
+  * Risk-appropriate tools
+  * Capability enhancements
+  * Integration improvements
+  * Automation opportunities
+
+* **Community engagement**
+  * Information sharing
+  * Industry participation
+  * Professional development
+  * Collaboration initiatives
+:::
+
+::::
+
+::: {.notes}
+* Cybersecurity is not a "set it and forget it" activity
+* Regular assessments help identify gaps and improvements
+* Threat landscape changes require adaptive responses
+* Community engagement provides valuable insights and support
+:::
+
+# Measuring Success
+
+## Key Performance Indicators {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Security Metrics
+
+* **Risk reduction indicators**
+  * Vulnerability counts
+  * Patch compliance rates
+  * Security control coverage
+  * Risk exposure scores
+
+* **Incident metrics**
+  * Number of security incidents
+  * Mean time to detect (MTTD)
+  * Mean time to respond (MTTR)
+  * Incident severity distribution
+
+* **Compliance metrics**
+  * Policy compliance rates
+  * Audit finding resolution
+  * Regulatory requirements
+  * Certification maintenance
+:::
+
+::: {.column width="50%"}
+### Operational Metrics
+
+* **User experience**
+  * Authentication success rates
+  * Help desk ticket volume
+  * User satisfaction scores
+  * Productivity impact
+
+* **Training effectiveness**
+  * Completion rates
+  * Assessment scores
+  * Behavior change indicators
+  * Phishing simulation results
+
+* **Cost metrics**
+  * Security investment ROI
+  * Incident cost reduction
+  * Operational efficiency
+  * Resource utilization
+:::
+
+::::
+
+::: {.notes}
+* Metrics should balance security improvement with operational impact
+* Leading indicators help predict issues before they occur
+* User experience metrics ensure security doesn't harm productivity
+* Cost metrics help justify continued investment in security
+:::
+
+# Resources & Contacts
+
+## Emergency Contacts {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Law Enforcement
+
+* **Local FBI Field Office**
+  * Cybercrime reporting
+  * Investigation support
+  * Threat intelligence
+
+* **Secret Service Electronic Crimes Task Force**
+  * [secretservice.gov/investigation/#field](http://www.secretservice.gov/investigation/#field)
+  * Financial crimes
+  * Critical infrastructure
+
+* **Local Law Enforcement**
+  * Immediate threats
+  * Physical security
+  * Coordination support
+:::
+
+::: {.column width="50%"}
+### Additional Resources
+
+* **PCI Security Standards Council**
+  * [pcisecuritystandards.org](https://www.pcisecuritystandards.org)
+  * Payment card security
+
+* **CISA Cybersecurity Resources**
+  * [cisa.gov](https://www.cisa.gov)
+  * Government guidance
+
+* **FBI Internet Crime Complaint Center**
+  * [ic3.gov](https://www.ic3.gov)
+  * Online crime reporting
+:::
+
+::::
+
+## Key Takeaways {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Fundamental Principles
+
+* **Strong authentication** is mandatory
+* **Keep systems updated** regularly
+* **Verify before trusting** any request
+* **Backup data** using 3-2-1 rule
+* **Monitor continuously** for threats
+* **Train regularly** on emerging threats
+:::
+
+::: {.column width="50%"}
+### Implementation Advice
+
+* **Start with high-impact measures**
+* **Layer security controls**
+* **Balance security with usability**
+* **Plan for incident response**
+* **Build security culture**
+* **Measure and improve continuously**
+:::
+
+::::
+
+### Remember:
+
+> "Cybersecurity is an ongoing process, not a one-time setup. Regular reviews and updates of your security practices are essential to maintain protection against evolving threats."
+
+## Q&A {.r-fit-text background-color="#44475a" style="color: white;"}
+
+::: {style="text-align: center;"}
+**Thank you for your attention!**
+
+Security Training Team  
+[security@training.com](mailto:security@training.com)  
+
+**Stay vigilant, stay secure!**
+:::
+
+::: {.notes}
+* Be prepared for questions on:
+  * Implementation priorities
+  * Cost and resource requirements
+  * Technology recommendations
+  * Training frequency
+  * Incident response procedures
+  * Compliance requirements
+:::

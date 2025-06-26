@@ -1,0 +1,1 @@
+/home/alin/Stoic/dev/websites/chenist.dev/chen.ist/website/events/render-pdfs.sh

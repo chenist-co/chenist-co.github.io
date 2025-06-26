@@ -1,0 +1,342 @@
+---
+title: "Tools"
+listing:
+  contents: "*.qmd"
+  type: grid
+  sort: "date desc"
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [title, description, date, categories, image]
+  date-format: "MMMM D, YYYY"
+---
+
+```{=html}
+<div class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8 offset-md-2 text-center">
+        <h1>Interactive <span class="text-green">Tools</span></h1>
+        <p>Utilities and calculators to assist with technical tasks</p>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+## Available Tools
+
+Our interactive tools help you perform common tasks, calculations, and assessments related to cybersecurity, cloud computing, and software development.
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-md-4 mb-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <h3 class="card-title mb-0">Password Strength Checker</h3>
+      </div>
+      <div class="card-body">
+        <p>Evaluate the strength of passwords against modern security standards and common attack techniques.</p>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">Security</span>
+          <span class="badge bg-secondary">Authentication</span>
+        </div>
+        <div class="mt-3">
+          <p><strong>Features:</strong></p>
+          <ul>
+            <li>Entropy calculation</li>
+            <li>Dictionary attack detection</li>
+            <li>Common pattern identification</li>
+            <li>Estimated cracking time</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="password-strength-checker.html" class="btn btn-primary">Launch Tool</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4 mb-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <h3 class="card-title mb-0">Cloud Cost Calculator</h3>
+      </div>
+      <div class="card-body">
+        <p>Estimate and compare costs across different cloud providers based on your resource requirements.</p>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">Cloud</span>
+          <span class="badge bg-secondary">Cost Optimization</span>
+        </div>
+        <div class="mt-3">
+          <p><strong>Features:</strong></p>
+          <ul>
+            <li>Multi-cloud comparison</li>
+            <li>Reserved instance analysis</li>
+            <li>Right-sizing recommendations</li>
+            <li>Cost projection</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="cloud-cost-calculator.html" class="btn btn-primary">Launch Tool</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4 mb-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <h3 class="card-title mb-0">Zero Trust Assessment Tool</h3>
+      </div>
+      <div class="card-body">
+        <p>Evaluate your organization's Zero Trust security maturity across multiple domains and get improvement recommendations.</p>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">Security</span>
+          <span class="badge bg-secondary">Assessment</span>
+        </div>
+        <div class="mt-3">
+          <p><strong>Features:</strong></p>
+          <ul>
+            <li>Comprehensive questionnaire</li>
+            <li>Domain-specific scoring</li>
+            <li>Maturity measurement</li>
+            <li>Actionable recommendations</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="zero-trust-assessment.html" class="btn btn-primary">Launch Tool</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4 mb-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <h3 class="card-title mb-0">SSL/TLS Certificate Inspector</h3>
+      </div>
+      <div class="card-body">
+        <p>Analyze SSL/TLS certificates for security issues, expiration dates, and configuration problems.</p>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">Security</span>
+          <span class="badge bg-secondary">Encryption</span>
+        </div>
+        <div class="mt-3">
+          <p><strong>Features:</strong></p>
+          <ul>
+            <li>Certificate validation</li>
+            <li>Cipher suite analysis</li>
+            <li>Protocol version checking</li>
+            <li>Configuration recommendations</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="ssl-certificate-inspector.html" class="btn btn-primary">Launch Tool</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4 mb-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <h3 class="card-title mb-0">API Request Builder</h3>
+      </div>
+      <div class="card-body">
+        <p>Construct, test, and debug API requests with an interactive interface for RESTful and GraphQL APIs.</p>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">Development</span>
+          <span class="badge bg-secondary">API</span>
+        </div>
+        <div class="mt-3">
+          <p><strong>Features:</strong></p>
+          <ul>
+            <li>Request method selection</li>
+            <li>Header and parameter builder</li>
+            <li>Authentication support</li>
+            <li>Response visualization</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="api-request-builder.html" class="btn btn-primary">Launch Tool</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4 mb-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <h3 class="card-title mb-0">Security Headers Analyzer</h3>
+      </div>
+      <div class="card-body">
+        <p>Check and evaluate HTTP security headers for websites and get recommendations for improvement.</p>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">Security</span>
+          <span class="badge bg-secondary">Web</span>
+        </div>
+        <div class="mt-3">
+          <p><strong>Features:</strong></p>
+          <ul>
+            <li>Header detection and validation</li>
+            <li>CSP analysis</li>
+            <li>Security scoring</li>
+            <li>Best practice recommendations</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="security-headers-analyzer.html" class="btn btn-primary">Launch Tool</a>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+## Interactive Calculators
+
+```{=html}
+<div class="row mt-5">
+  <div class="col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <h3 class="card-title mb-0">CIDR Subnet Calculator</h3>
+      </div>
+      <div class="card-body">
+        <p>Calculate IP address ranges, subnet masks, and network information from CIDR notation.</p>
+        <div class="mt-3">
+          <form class="mb-3">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Enter CIDR (e.g., 192.168.1.0/24)" aria-label="CIDR notation">
+              <button class="btn btn-primary" type="button">Calculate</button>
+            </div>
+          </form>
+          <div class="alert alert-secondary">
+            <p><strong>Sample Result:</strong></p>
+            <ul class="mb-0">
+              <li>Network Address: 192.168.1.0</li>
+              <li>Broadcast Address: 192.168.1.255</li>
+              <li>Subnet Mask: 255.255.255.0</li>
+              <li>Total Hosts: 254</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="cidr-calculator.html" class="btn btn-outline-primary">Full Calculator</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <h3 class="card-title mb-0">Data Breach Cost Estimator</h3>
+      </div>
+      <div class="card-body">
+        <p>Estimate the potential financial impact of a data breach based on industry, size, and data types.</p>
+        <div class="mt-3">
+          <form class="mb-3">
+            <div class="mb-2">
+              <select class="form-select" aria-label="Industry selection">
+                <option selected>Select Industry</option>
+                <option value="healthcare">Healthcare</option>
+                <option value="financial">Financial Services</option>
+                <option value="technology">Technology</option>
+                <option value="retail">Retail</option>
+                <option value="manufacturing">Manufacturing</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <input type="number" class="form-control" placeholder="Number of Records" aria-label="Number of records">
+              <button class="btn btn-primary" type="button">Estimate</button>
+            </div>
+          </form>
+          <div class="alert alert-secondary">
+            <p><strong>Sample Result:</strong></p>
+            <p class="mb-0">Estimated cost range: $2.1M - $4.3M</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="breach-cost-estimator.html" class="btn btn-outline-primary">Full Estimator</a>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+## Download Our Command-Line Tools
+
+```{=html}
+<div class="row mt-5">
+  <div class="col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <h3 class="card-title mb-0">CloudScan CLI</h3>
+      </div>
+      <div class="card-body">
+        <p>A command-line tool for scanning cloud environments for security misconfigurations and compliance issues.</p>
+        <div class="mt-3">
+          <p><strong>Features:</strong></p>
+          <ul>
+            <li>Multi-cloud support (AWS, Azure, GCP)</li>
+            <li>Compliance frameworks (CIS, NIST, PCI DSS)</li>
+            <li>JSON/CSV/HTML reports</li>
+            <li>Customizable rule sets</li>
+          </ul>
+          <div class="mt-3">
+            <pre><code>$ cloudscan audit --provider aws --region us-east-1 --framework cis</code></pre>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex gap-2">
+          <a href="https://github.com/chenist/cloudscan" class="btn btn-outline-dark" target="_blank">
+            <i class="bi bi-github"></i> GitHub
+          </a>
+          <a href="downloads/cloudscan-cli-v1.2.0.zip" class="btn btn-primary" download>
+            <i class="bi bi-download"></i> Download (v1.2.0)
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <h3 class="card-title mb-0">SecretScan</h3>
+      </div>
+      <div class="card-body">
+        <p>A command-line tool for detecting and preventing secrets and sensitive information in code repositories.</p>
+        <div class="mt-3">
+          <p><strong>Features:</strong></p>
+          <ul>
+            <li>Pre-commit hook integration</li>
+            <li>CI/CD pipeline support</li>
+            <li>Custom pattern detection</li>
+            <li>False positive management</li>
+          </ul>
+          <div class="mt-3">
+            <pre><code>$ secretscan check --path ./src --exclude node_modules</code></pre>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex gap-2">
+          <a href="https://github.com/chenist/secretscan" class="btn btn-outline-dark" target="_blank">
+            <i class="bi bi-github"></i> GitHub
+          </a>
+          <a href="downloads/secretscan-v0.9.5.zip" class="btn btn-primary" download>
+            <i class="bi bi-download"></i> Download (v0.9.5)
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```

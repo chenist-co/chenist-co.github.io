@@ -1,0 +1,83 @@
+---
+title: {{title}}
+subtitle: {{subtitle}}
+date: {{date}}
+duration: {{duration}}
+presenter: {{presenter}}
+author: "chen.ist Webinars Team"
+format: 
+  pdf:
+    documentclass: article
+    geometry:
+      - margin=1in
+    colorlinks: true
+    fontfamily: libertinus
+    linkcolor: blue
+    urlcolor: blue
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    include-in-header: 
+      text: |
+        \usepackage{fancyhdr}
+        \pagestyle{fancy}
+        \fancyhead[L]{chen.ist Webinars}
+        \fancyhead[R]{{title}}
+        \fancyfoot[C]{\thepage}
+        \usepackage{titlesec}
+        \titleformat{\section}{\Large\bfseries\color{blue}}{\thesection}{1em}{}
+        \usepackage{booktabs}
+        \usepackage{longtable}
+---
+
+::: {.contentheader}
+# {{title}} {.unnumbered}
+
+![]({{image}})
+
+**Date**: {{date}}  
+**Duration**: {{duration}}  
+**Presenter**: {{presenter}}  
+**Category**: {{category}}  
+**Registration Opens**: {{registration_date}}
+:::
+
+## Webinar Overview
+
+{{overview}}
+
+{{#key_topics}}
+## Key Topics
+
+{{key_topics}}
+{{/key_topics}}
+
+{{#agenda}}
+## Agenda
+
+{{agenda}}
+{{/agenda}}
+
+## About the Presenter
+
+{{presenter_info}}
+
+## Who Should Attend
+
+{{who_should_attend}}
+
+## Registration Information
+
+{{registration_info}}
+
+{{#faq}}
+## Frequently Asked Questions
+
+{{faq}}
+{{/faq}}
+
+---
+
+*For more information and to register, visit [chen.ist/webinars](https://chen.ist/webinars)*
+
+Contact: info@chen.ist | +1 555-123-4567

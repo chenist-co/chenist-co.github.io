@@ -1,0 +1,352 @@
+/*-- scss:defaults --*/
+
+// Base document colors
+$body-bg: #FFFFFF;
+$body-color: #323642;
+$link-color: #81BD4A;
+$selection-bg: #81BD4A;
+
+// Navigation
+$navbar-bg: #323642;  // Dark navy
+$navbar-fg: #E5E3DA;  // Off-white
+$navbar-hl: #81BD4A;  // Bright green
+
+// Colors
+$primary: #323642;    // Dark navy
+$success: #81BD4A;    // Bright green
+$info: #CFCDC4;       // Light gray
+$secondary: #E5E3DA;  // Off-white
+$dark: #222222;
+$light: #F8F9FA;
+
+// Typography
+$font-family-sans-serif: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-monospace: 'Source Code Pro', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$headings-font-weight: 600;
+
+// Callouts
+$callout-color-note: #81BD4A;
+$callout-color-warning: #F9AE54;
+$callout-color-important: #CF3E3F;
+
+/*-- scss:rules --*/
+
+// Announcement bar
+.announcement-bar {
+  background-color: #282a36; // Dracula background
+  color: #f8f8f2; // Dracula foreground
+  padding: 1.25rem 0;
+  margin-bottom: 2.5rem; // Increased margin for more space
+  border-bottom: 4px solid #bd93f9; // Dracula purple
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #ff79c6, #bd93f9, #8be9fd); // Dracula pink, purple, cyan gradient
+    opacity: 0.8;
+  }
+  
+  .announcement-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    
+    i.bi-megaphone-fill {
+      margin-right: 1.25rem;
+      font-size: 2rem;
+      color: #ff79c6; // Dracula pink
+      filter: drop-shadow(0 0 4px rgba(255, 121, 198, 0.6));
+    }
+    
+    .announcement-text {
+      flex: 1;
+      
+      .event-highlight {
+        display: block;
+        font-size: 1.4rem;
+        margin-bottom: 0.25rem;
+        letter-spacing: 0.5px;
+        
+        strong {
+          color: #f1fa8c; // Dracula yellow
+          font-weight: 800;
+          text-shadow: 0 0 10px rgba(241, 250, 140, 0.5);
+          letter-spacing: 1px;
+        }
+      }
+      
+      .event-date {
+        display: block;
+        font-size: 1.1rem;
+        color: #8be9fd; // Dracula cyan
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.5px;
+        text-shadow: 0 0 8px rgba(139, 233, 253, 0.5);
+      }
+      
+      .event-actions {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        
+        .action-button {
+          display: inline-flex;
+          align-items: center;
+          color: #50fa7b; // Dracula green
+          text-decoration: none;
+          font-weight: 600;
+          padding: 0.35rem 0.75rem;
+          border-radius: 4px;
+          background-color: rgba(80, 250, 123, 0.15);
+          transition: all 0.2s ease;
+          font-size: 1rem;
+          
+          i {
+            margin-right: 0.4rem;
+          }
+          
+          &:hover {
+            color: #282a36; // Dracula background
+            background-color: #50fa7b; // Dracula green
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(80, 250, 123, 0.3);
+          }
+        }
+        
+        .divider {
+          color: #bd93f9; // Dracula purple
+          font-size: 1.2rem;
+          font-weight: 300;
+        }
+      }
+    }
+    
+    .announcement-close {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 85, 85, 0.2); // Dracula red with transparency
+      border: none;
+      color: #ff5555; // Dracula red
+      font-size: 1.25rem;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+      transition: all 0.2s ease;
+      border-radius: 4px;
+      
+      &:hover {
+        color: white;
+        background-color: #ff5555; // Dracula red
+        transform: translateY(-50%) scale(1.1);
+      }
+    }
+  }
+  
+  // Responsive adjustments
+  @media (max-width: 768px) {
+    padding: 1rem 0.5rem;
+    
+    .announcement-content {
+      flex-direction: column;
+      align-items: flex-start;
+      
+      i.bi-megaphone-fill {
+        margin-bottom: 0.5rem;
+      }
+      
+      .announcement-text {
+        .event-highlight {
+          font-size: 1.2rem;
+        }
+        
+        .event-date {
+          font-size: 1rem;
+        }
+      }
+      
+      .announcement-close {
+        top: 1rem;
+        right: 1rem;
+        transform: none;
+      }
+    }
+  }
+}
+
+// Event page styles
+.event-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $info;
+  
+  .event-dates {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    
+    .badge {
+      font-size: 1rem;
+    }
+    
+    .event-actions {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      
+      @media (min-width: 576px) {
+        margin-top: 0;
+      }
+    }
+  }
+  
+  .event-location {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    
+    @media (min-width: 768px) {
+      margin-top: 0;
+    }
+    
+    i {
+      margin-right: 0.5rem;
+      color: $success;
+    }
+  }
+}
+
+// Event CTA box
+.event-cta {
+  background-color: transparentize($success, 0.9);
+  border-left: 4px solid $success;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 4px;
+  
+  h3 {
+    color: darken($success, 10%);
+    margin-bottom: 0.75rem;
+  }
+  
+  .btn {
+    margin-top: 1rem;
+  }
+}
+
+// Newsletter box styling
+.newsletter-box {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  
+  h3 {
+    color: $primary;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    
+    i {
+      color: $success;
+      margin-right: 0.5rem;
+    }
+  }
+  
+  p {
+    margin-bottom: 1.5rem;
+    color: $body-color;
+  }
+  
+  iframe {
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+}
+
+// Custom button styles
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+  &:hover, &:focus {
+    background-color: darken($primary, 10%);
+    border-color: darken($primary, 10%);
+  }
+}
+
+.btn-success {
+  background-color: $success;
+  border-color: $success;
+  &:hover, &:focus {
+    background-color: darken($success, 10%);
+    border-color: darken($success, 10%);
+  }
+}
+
+// Card styling 
+.card {
+  border-radius: 4px;
+  border: 1px solid $info;
+  box-shadow: 0 4px 6px rgba(50, 54, 66, 0.1);
+}
+
+.card-header {
+  background-color: $primary;
+  color: $secondary;
+}
+
+// Alert styling
+.alert-success {
+  background-color: transparentize($success, 0.8);
+  border-color: $success;
+  color: darken($success, 30%);
+}
+
+.alert-info {
+  background-color: transparentize($info, 0.8);
+  border-color: $info;
+  color: darken($info, 30%);
+}
+
+// Custom classes
+.security-feature {
+  border-left: 4px solid $success;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  background-color: transparentize($success, 0.95);
+}
+
+.cta-section {
+  background-color: $primary;
+  color: $secondary;
+  padding: 3rem 0;
+}
+
+.cta-button {
+  background-color: $success;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  border: none;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background-color: darken($success, 5%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+}

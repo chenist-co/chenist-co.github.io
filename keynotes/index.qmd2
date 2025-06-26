@@ -1,0 +1,89 @@
+---
+title: "Keynotes"
+listing:
+  contents: "*/index.qmd"
+  type: grid
+  sort: "date desc"
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [title, subtitle, date, description, categories, image]
+  date-format: "MMMM D, YYYY"
+---
+
+```{=html}
+<div class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8 offset-md-2 text-center">
+        <h1>Interactive <span class="text-green">Presentations</span></h1>
+        <p>Explore our collection of interactive RevealJS presentations</p>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+## Featured Presentations
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card h-100">
+      <img src="/assets/images/cyber-security.jpg" class="card-img-top" alt="Zero Trust Security">
+      <div class="card-body">
+        <h4 class="card-title">Zero Trust Security Architecture</h4>
+        <p class="card-text">A comprehensive overview of Zero Trust security principles and implementation strategies.</p>
+        <p><strong>Slides:</strong> 45 | <strong>Duration:</strong> 60 minutes</p>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">Security</span>
+          <span class="badge bg-secondary">Architecture</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="/keynotes/zero-trust-security/" class="btn btn-outline-primary">View Presentation</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card h-100">
+      <img src="/assets/images/cyber-security.jpg" class="card-img-top" alt="Cloud Security">
+      <div class="card-body">
+        <h4 class="card-title">Cloud Security Best Practices</h4>
+        <p class="card-text">Key strategies and tools for securing cloud environments across major providers.</p>
+        <p><strong>Slides:</strong> 38 | <strong>Duration:</strong> 45 minutes</p>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">Cloud</span>
+          <span class="badge bg-secondary">Security</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="/keynotes/cloud-security/" class="btn btn-outline-primary">View Presentation</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card h-100">
+      <img src="/assets/images/cyber-security.jpg" class="card-img-top" alt="DevSecOps">
+      <div class="card-body">
+        <h4 class="card-title">DevSecOps Implementation</h4>
+        <p class="card-text">Integrating security into the DevOps pipeline for more secure software delivery.</p>
+        <p><strong>Slides:</strong> 42 | <strong>Duration:</strong> 50 minutes</p>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">DevOps</span>
+          <span class="badge bg-secondary">Security</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="/keynotes/devsecops/" class="btn btn-outline-primary">View Presentation</a>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+## All Presentations
+
+Browse our complete collection of presentations below:

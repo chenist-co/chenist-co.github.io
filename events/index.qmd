@@ -1,0 +1,34 @@
+---
+title: "Events"
+subtitle: "Browse all our events"
+listing:
+  contents: "pages/*.qmd"
+  type: grid
+  sort: "date desc"
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [image, date, title, subtitle, location, category]
+  date-format: "MMMM D, YYYY"
+---
+
+Welcome to our events listing page. Here you can browse all upcoming and past events organized by chen.ist. Use the filters to find events by category, date, or location.
+
+```{=html}
+<div class="alert alert-success mt-4 mb-4" role="alert">
+  <h4 class="alert-heading"><i class="bi bi-megaphone"></i> New Event Added!</h4>
+  <p>Check out our <a href="pages/ai-ethics-hackathon.html" class="alert-link">AI Ethics Hackathon</a> on July 20-21, 2025 - a weekend focusing on ethical AI development and responsible technology.</p>
+</div>
+```
+
+## Event Categories
+
+- **Hackathons**: Intense problem-solving events focused on collaboration and innovation
+- **Workshops**: Hands-on learning sessions with expert guidance
+- **Conferences**: Industry gatherings featuring keynotes, panels, and networking
+- **Summer School**: Intensive multi-week educational programs
+- **Meetups**: Informal community gatherings focused on specific topics
+
+Our events are designed to foster learning, connection, and professional development within the tech community. Each event page provides detailed information about the agenda, speakers, venue, and registration process.
+
+Want to suggest an event or collaborate as a partner? [Contact us](/contact.qmd) with your ideas.

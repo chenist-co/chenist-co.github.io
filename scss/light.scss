@@ -1,0 +1,196 @@
+/*-- scss:defaults --*/
+
+// Brand colors based on branding guidelines
+// Primary colors from branding-guide.md
+$dark-navy: #323642 !default;             // Primary dark color
+$bright-green: #81BD4A !default;          // Primary accent color
+$off-white: #E5E3DA !default;             // Light neutral
+$light-gray: #CFCDC4 !default;            // Secondary neutral
+
+// Extended palette
+$alert-red: #CF3E3F !default;             // Danger/Alert
+$warning-amber: #F9AE54 !default;         // Warning
+$success-green: #5A9C25 !default;         // Success
+$info-blue: #3D6A9C !default;             // Information
+
+// Base document colors
+$body-bg: #FFFFFF !default;
+$body-color: $dark-navy !default;
+$headings-color: $body-color !default;
+$code-block-bg: darken($body-bg, 3%) !default;
+$navbar-bg: $dark-navy !default;
+$navbar-fg: $off-white !default;
+$navbar-hl: $bright-green !default;
+
+// Bootstrap colors
+$primary: $dark-navy !default;
+$success: $bright-green !default;
+$info: $light-gray !default;
+$secondary: $off-white !default;
+$warning: $warning-amber !default;
+$danger: $alert-red !default;
+$dark: #222222 !default;
+$light: #F8F9FA !default;
+
+// Link colors
+$link-color: $bright-green !default;
+$link-shade-percentage: 30% !default;
+$link-hover-color: shift-color($link-color, $link-shade-percentage) !default;
+
+// Code colors
+$code-color: lighten($body-color, 10%) !default;
+$code-bg: darken($body-bg, 10%) !default;
+
+// Card and form colors
+$card-border-color: $info !default;
+$form-select-border-color: $info !default;
+
+// Typography from branding guidelines
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Source+Code+Pro&display=swap');
+
+$font-family-sans-serif: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-monospace: 'Source Code Pro', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$headings-font-family: 'Open Sans', sans-serif !default;
+$headings-font-weight: 600 !default;
+
+/*-- scss:rules --*/
+
+// Card styling
+.card {
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(50, 54, 66, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(50, 54, 66, 0.15);
+  }
+}
+
+.card-footer {
+  color: darken($body-bg, 30%);
+  background-color: darken($body-bg, 2%);
+}
+
+// Navbar brand
+.navbar-brand > img {
+  max-height: 40px;
+}
+
+// Icon colors
+.fa-solid, .bi {
+  color: #81BD4A;
+}
+
+// Theme mode display
+.light-mode { display: block; }
+.dark-mode { display: none; }
+
+// Feature Cards
+.feature-card {
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #CFCDC4;
+  box-shadow: 0 4px 6px rgba(50, 54, 66, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(50, 54, 66, 0.15);
+}
+
+.feature-card h3 {
+  color: #323642;
+  font-size: 1.25rem;
+}
+
+.feature-card-icon {
+  color: #81BD4A;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+// Hero Section
+.hero-section {
+  background-color: #323642;
+  color: #E5E3DA;
+  padding: 5rem 0;
+  margin-bottom: 3rem;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #E5E3DA;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  color: #E5E3DA;
+}
+
+// Fix for regular paragraph in hero section
+.hero-section p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  color: #E5E3DA;
+}
+
+// CTA Button
+.cta-button {
+  background-color: #81BD4A;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  border: none;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background-color: darken(#81BD4A, 5%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: white;
+    text-decoration: none;
+  }
+}
+
+// Security Feature
+.security-feature {
+  border-left: 4px solid #81BD4A;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  background-color: transparentize(#81BD4A, 0.95);
+}
+
+// CTA Section
+.cta-section {
+  background-color: #323642;
+  color: #E5E3DA;
+  padding: 3rem 0;
+  margin-top: 3rem;
+}
+
+// Text colors
+.text-green {
+  color: #81BD4A;
+}
+
+// Utility classes
+.bg-navy {
+  background-color: #323642;
+}
+
+.bg-light-gray {
+  background-color: #CFCDC4;
+}
+
+.border-green {
+  border-color: #81BD4A !important;
+}

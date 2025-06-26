@@ -1,0 +1,45 @@
+website:
+  title: "chen.ist"
+  favicon: ../assets/images/favicon.png
+  site-url: https://chen.ist/ro
+  description: "Soluții tehnologice inovative pentru lumea modernă"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Acasă
+      - href: services.qmd
+        text: Servicii
+      - href: projects.qmd
+        text: Proiecte
+      - href: blog.qmd
+        text: Blog
+      - href: resources.qmd
+        text: Resurse
+    right:
+      - text: "Despre noi"
+        menu:
+          - href: about/index.qmd
+            text: Despre noi
+          - href: about/csr.qmd
+            text: Responsabilitate Socială
+          - href: about/community.qmd
+            text: Implicare în Comunitate
+      - href: contact.qmd
+        text: Contact
+      - text: "Limbă"
+        menu:
+          - href: ../index.qmd
+            text: Engleză
+          - href: ../ro/index.qmd
+            text: Română
+          - href: ../sv/index.qmd
+            text: Suedeză
+          - href: ../de/index.qmd
+            text: Germană
+      - icon: github
+        href: https://github.com/chenist
+      - icon: linkedin
+        href: https://linkedin.com/in/chenist
+      - text: "Schimbă Tema"
+        icon: moon
+        href: "#"

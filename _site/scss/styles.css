@@ -1,0 +1,94 @@
+/* Global custom styles */
+
+.listing-title {
+  font-weight: 600;
+}
+
+.listing-category {
+  color: #81BD4A;
+}
+
+.listing-date {
+  font-style: italic;
+}
+
+.card-file-modified:before {
+  content: "Updated: ";
+}
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Source+Code+Pro&display=swap');
+
+/* Adjust links */
+a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Adjust the card hover transitions for smoother effect */
+.quarto-grid-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quarto-grid-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Better spacing for the navigation */
+.navbar-nav .nav-link {
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease;
+}
+
+/* Style the active nav item */
+.navbar-nav .nav-item .active {
+  font-weight: 600;
+  color: #81BD4A;
+  border-bottom: 2px solid #81BD4A;
+}
+
+/* Better page transitions */
+body {
+  animation: fadein 0.3s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 3rem 0;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-section p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #E5E3DA;
+  }
+  
+  .cta-button {
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+/* Improved code blocks */
+pre {
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,68 @@
+---
+title: "Contact"
+subtitle: "Contactați-ne pentru mai multe informații"
+---
+
+::: {.container .page-section}
+## Contactați-ne {.text-center .mt-5 .mb-4}
+
+Suntem aici pentru a vă ajuta cu întrebări, solicitări de servicii sau orice fel de feedback. Vă rugăm să ne contactați folosind una dintre metodele de mai jos și vom reveni cât mai curând posibil.
+
+::: {.row .mt-5}
+::: {.col-md-6}
+### Informații de contact
+
+**Adresă:**  
+Str. Exemplu 123  
+București, România
+
+**Email:**  
+info@chen.ist
+
+**Telefon:**  
++40 700 123 456
+
+**Program:**  
+Luni - Vineri: 9:00 - 18:00  
+Sâmbătă - Duminică: Închis
+:::
+
+::: {.col-md-6}
+### Formular de contact
+
+```{=html}
+<form class="contact-form">
+  <div class="mb-3">
+    <label for="name" class="form-label">Nume</label>
+    <input type="text" class="form-control" id="name" required>
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" required>
+  </div>
+  <div class="mb-3">
+    <label for="subject" class="form-label">Subiect</label>
+    <input type="text" class="form-control" id="subject">
+  </div>
+  <div class="mb-3">
+    <label for="message" class="form-label">Mesaj</label>
+    <textarea class="form-control" id="message" rows="5" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-success">Trimite mesaj</button>
+</form>
+```
+:::
+:::
+:::
+
+:::: {.map-section}
+::: {.container}
+## Locația noastră {.text-center .mt-5 .mb-4}
+
+```{=html}
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45695.13669665738!2d26.058306615869146!3d44.43554117910151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1f93abf3cad4f%3A0xac0632e37c9ca628!2sBucharest%2C%20Romania!5e0!3m2!1sen!2sus!4v1649597022320!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+```
+:::
+::::

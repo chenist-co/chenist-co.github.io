@@ -1,0 +1,344 @@
+---
+title: "RevealJS Presentation Template"
+description: "A ready-to-use template for creating professional slide decks with Quarto and RevealJS"
+date: "2025-04-05"
+categories: [presentation, template, revealjs]
+image: "/assets/images/cyber-security.jpg"
+---
+
+# RevealJS Presentation Template
+
+This template provides a starting point for creating professional presentations using Quarto and RevealJS. It includes examples of various slide layouts, formatting options, and interactive elements.
+
+## Template Usage
+
+To use this template:
+
+1. Download the template files
+2. Modify the content to suit your needs
+3. Render with Quarto to create your presentation
+
+The template includes examples of common slide layouts and RevealJS features to help you get started quickly.
+
+## Template Structure
+
+The template consists of a main .qmd file with YAML front matter and markdown content for slides. The structure follows a typical professional presentation:
+
+1. Title slide
+2. Agenda/Overview
+3. Introduction
+4. Main content sections
+5. Summary/Conclusion
+6. Q&A or contact information
+
+## YAML Front Matter
+
+The template includes comprehensive YAML front matter with common RevealJS settings:
+
+```yaml
+---
+title: "Presentation Title"
+subtitle: "Optional Subtitle"
+author: "Your Name"
+date: "2025-04-05"
+format:
+  revealjs:
+    theme: dark
+    logo: "/path/to/logo.png"
+    footer: "© 2025 Your Organization"
+    navigation-mode: vertical
+    controls: true
+    progress: true
+    history: true
+    transition: slide
+    background-transition: fade
+    preview-links: auto
+    touch: true
+    slide-number: true
+    show-slide-number: all
+    slide-level: 2
+    scrollable: true
+    menu: true
+    code-copy: true
+    center: true
+    highlight-style: dracula
+    link-external-icon: true
+    link-external-newwindow: true
+---
+```
+
+## Example Slides
+
+The template includes examples of different slide layouts and elements:
+
+### Title Slide
+
+```markdown
+# Presentation Title {.title-slide background-color="#123456"}
+
+## Presenter
+
+:::: {.columns}
+
+::: {.column width="30%"}
+![](/path/to/profile-image.jpg){width="250px"}
+:::
+
+::: {.column width="70%"}
+### Presenter Name
+**Position/Title**
+
+* Credential/Qualification 1
+* Credential/Qualification 2
+* Brief professional background
+
+[email@example.com](mailto:email@example.com)
+:::
+
+::::
+```
+
+### Section Divider
+
+```markdown
+# Section Title {.centered background-color="#123456"}
+```
+
+### Two-Column Layout
+
+```markdown
+## Slide Title
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Left Column
+* Point 1
+* Point 2
+* Point 3
+:::
+
+::: {.column width="50%"}
+### Right Column
+* Point A
+* Point B
+* Point C
+:::
+
+::::
+```
+
+### Image Slide
+
+```markdown
+## Image Example
+
+![Image Caption](/path/to/image.jpg){.border width="80%"}
+```
+
+### Bulleted List with Incremental Reveal
+
+```markdown
+## Key Points
+
+::: {.incremental}
+* First point appears immediately
+* Second point appears on next click
+* Third point appears on next click
+* Fourth point appears on next click
+:::
+```
+
+### Code Block
+
+````markdown
+## Code Example
+
+```python
+def example_function():
+    """Example function with documentation."""
+    result = "Hello World"
+    return result
+    
+# Call the function
+example_function()
+```
+````
+
+### Table
+
+```markdown
+## Data Table
+
+| Category | Value 1 | Value 2 | Value 3 |
+|----------|---------|---------|---------|
+| Group A  | 10.5    | 23.8    | 42.1    |
+| Group B  | 14.2    | 25.0    | 38.9    |
+| Group C  | 12.7    | 22.3    | 41.5    |
+```
+
+### Mermaid Diagram
+
+````markdown
+## Process Diagram
+
+```{mermaid}
+flowchart TD
+    A[Start] --> B{Decision}
+    B -->|Yes| C[Action 1]
+    B -->|No| D[Action 2]
+    C --> E[Result 1]
+    D --> F[Result 2]
+    E --> G[End]
+    F --> G
+```
+````
+
+### Speaker Notes
+
+```markdown
+## Slide with Notes
+
+This content appears on the slide.
+
+::: {.notes}
+These are speaker notes that only appear in presenter view:
+- Remind audience about previous topic
+- Emphasize key point
+- Watch timing - spend only 2 minutes here
+:::
+```
+
+## Styling Options
+
+The template includes examples of various styling options:
+
+```markdown
+## Text Formatting
+
+Regular text, **bold text**, *italic text*, ~~strikethrough~~
+
+## Custom Colors
+
+::: {.text-primary}
+Primary colored text
+:::
+
+::: {.text-danger}
+Danger colored text
+:::
+
+## Text Boxes
+
+::: {.alert .alert-info}
+Information callout box with important details.
+:::
+
+::: {.alert .alert-warning}
+Warning message that needs attention.
+:::
+```
+
+## Interactive Elements
+
+The template includes examples of interactive elements:
+
+```markdown
+## Interactive Elements
+
+::: {.panel-tabset}
+### Tab 1
+Content for first tab
+
+### Tab 2
+Content for second tab
+
+### Tab 3
+Content for third tab
+:::
+```
+
+## Animations and Transitions
+
+Examples of animations and transitions:
+
+```markdown
+## Transition Examples
+
+::: {.fragment .fade-in}
+This content fades in
+:::
+
+::: {.fragment .fade-up}
+This content fades up
+:::
+
+::: {.fragment .highlight-red}
+This content highlights red
+:::
+```
+
+## Slide Backgrounds
+
+Examples of different slide backgrounds:
+
+```markdown
+## Solid Color Background {background-color="#007bff"}
+
+Content on colored background
+
+## Image Background {background-image="/path/to/background.jpg"}
+
+Content on image background
+
+## Gradient Background {background-gradient="linear-gradient(to bottom, #4DA0B0, #D39D38)"}
+
+Content on gradient background
+```
+
+## Download Templates
+
+The full template package includes:
+
+- RevealJS presentation template (.qmd)
+- Example presentation with comprehensive features
+- CSS file with custom styling
+- Sample images and assets
+
+Click the buttons below to download the template in your preferred format:
+
+```{=html}
+<div class="d-flex gap-3 mt-4">
+  <a href="revealjs-template.zip" class="btn btn-primary" download>
+    <i class="bi bi-download"></i> Download Template Package
+  </a>
+  <a href="revealjs-template.qmd" class="btn btn-outline-primary" download>
+    <i class="bi bi-file-earmark-text"></i> Download Template File Only
+  </a>
+  <a href="revealjs-example.html" class="btn btn-outline-primary">
+    <i class="bi bi-eye"></i> View Example Presentation
+  </a>
+</div>
+```
+
+## Customization Tips
+
+Here are some tips for customizing your presentations:
+
+1. **Theme Selection**: Choose from built-in themes or create custom CSS
+2. **Color Schemes**: Define a consistent color palette that matches your brand
+3. **Typography**: Select appropriate fonts for readability and style
+4. **Layouts**: Use consistent layouts throughout your presentation
+5. **Images**: Use high-quality images with appropriate resolution
+6. **Animation**: Use animations purposefully, not just for visual effect
+7. **Branding**: Include your logo and branding elements consistently
+
+## Additional Resources
+
+For more information on creating presentations with Quarto and RevealJS:
+
+- [Quarto Presentations Guide](https://quarto.org/docs/presentations/)
+- [RevealJS Documentation](https://revealjs.com/)
+- [Quarto RevealJS Reference](https://quarto.org/docs/reference/formats/presentations/revealjs.html)
+- [RevealJS Themes Gallery](https://quarto.org/docs/presentations/revealjs/themes.html)
+- [Advanced RevealJS Features](https://quarto.org/docs/presentations/revealjs/advanced.html)

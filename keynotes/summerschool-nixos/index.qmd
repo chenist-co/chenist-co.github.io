@@ -1,0 +1,1107 @@
+---
+title: "NixOS for Cybersecurity 2025"
+subtitle: "Secure, Reproducible Computing Environments"
+date: "2025-06-25"
+author: "Open4Tech Summer School"
+description: "A 4-hour specialized course introducing cybersecurity students to NixOS as a powerful platform for building secure, reproducible computing environments."
+categories: [security, nixos, linux, infrastructure]
+image: "/assets/images/1_744x744.jpg"
+format:
+  revealjs:
+    theme: dark
+    logo: "/assets/images/logo-light.svg"
+    footer: "© 2025 Open4Tech | NixOS for Cybersecurity Course"
+    navigation-mode: vertical
+    controls: true
+    progress: true
+    history: true
+    transition: slide
+    background-transition: fade
+    preview-links: auto
+    touch: true
+    slide-number: true
+    show-slide-number: all
+    slide-level: 2
+    scrollable: true
+    menu: true
+    code-copy: true
+    center: true
+    highlight-style: dracula
+    link-external-icon: true
+    link-external-newwindow: true
+    pdf-separate-fragments: false
+    multiplex: false
+---
+
+# NixOS for Cybersecurity 2025 {.title-slide background-image="/assets/images/1_744x744.jpg" background-size="cover"}
+
+## Welcome to Secure Computing {.center}
+
+### Building Reproducible Security Environments
+
+::: {.fragment .fade-in}
+**Open4Tech Summer School**
+:::
+
+::: {.fragment .fade-in}
+4-hour specialized course  
+2 sessions × 2 hours each
+:::
+
+---
+
+## Why NixOS for Cybersecurity {.center}
+
+::: {.fragment .fade-in}
+### Reproducible builds = consistent security
+:::
+
+::: {.fragment .fade-in}
+### Immutable infrastructure = enhanced protection
+:::
+
+::: {.fragment .fade-in}
+### Declarative configuration = version-controlled security
+:::
+
+---
+
+## Security Challenges NixOS Solves {.center}
+
+::: incremental
+- **Configuration drift** across environments
+- **Inconsistent security** testing setups
+- **Difficult rollbacks** after security updates
+- **Complex dependency** management
+- **Non-reproducible** incident response environments
+:::
+
+---
+
+## Course Objectives {.center}
+
+::: incremental
+- **Understand NixOS** declarative approach
+- **Build secure** system configurations
+- **Implement hardened** profiles
+- **Create reproducible** security environments
+- **Deploy portable** security configurations
+:::
+
+---
+
+## Session 1 Overview {.center}
+
+::: incremental
+- **NixOS fundamentals** and security benefits
+- **Declarative configuration** system
+- **Package management** with Nix
+- **System hardening** basics
+- **Hands-on configuration**
+:::
+
+---
+
+## Session 2 Overview {.center}
+
+::: incremental
+- **Advanced security** configurations
+- **Network isolation** and sandboxing
+- **Security testing** environments
+- **Deployment strategies**
+- **Real-world scenarios**
+:::
+
+# Session 1: NixOS Fundamentals {.center background-image="/assets/images/2_744x744.jpg" background-size="cover"}
+
+---
+
+## What is NixOS? {.center background-image="/assets/images/3_744x744.jpg" background-size="cover"}
+
+> "A Linux distribution built on the Nix package manager"
+
+---
+
+## NixOS Core Principles
+
+**Chapter:** What is NixOS?
+
+::: incremental
+- **Declarative configuration** - describe what you want
+- **Reproducible builds** - same config = same system
+- **Atomic upgrades** - all or nothing changes
+- **Rollback capability** - instant recovery
+:::
+
+---
+
+## Traditional vs NixOS Approach
+
+**Chapter:** What is NixOS?
+
+::: incremental
+- **Traditional**: Imperative commands, mutable state
+- **NixOS**: Declarative files, immutable configurations
+- **Traditional**: Package conflicts, dependency hell
+- **NixOS**: Isolated packages, no conflicts
+:::
+
+---
+
+## Security Benefits Overview
+
+**Chapter:** What is NixOS?
+
+::: incremental
+- **No configuration drift** - systems stay consistent
+- **Easy rollbacks** - instant recovery from issues
+- **Reproducible environments** - identical security labs
+- **Version control** - track all security changes
+:::
+
+---
+
+## The Nix Store Concept
+
+**Chapter:** What is NixOS?
+
+::: incremental
+- **Immutable package store** - packages never change
+- **Cryptographic hashes** - ensure package integrity
+- **Multiple versions** - no version conflicts
+- **Garbage collection** - automatic cleanup
+:::
+
+---
+
+## Declarative Configuration {.center background-image="/assets/images/4_744x744.jpg" background-size="cover"}
+
+> "Infrastructure as Code for operating systems"
+
+---
+
+## Configuration.nix File
+
+**Chapter:** Declarative Configuration
+
+::: incremental
+- **Single source of truth** for system state
+- **Pure functional** configuration language
+- **Version controlled** security policies
+- **Modular design** for reusable components
+:::
+
+---
+
+## Basic Configuration Structure
+
+**Chapter:** Declarative Configuration
+
+```nix
+{ config, pkgs, ... }:
+{
+  # System configuration
+  networking.hostName = "security-lab";
+  
+  # User management
+  users.users.alice = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" ];
+  };
+  
+  # Package installation
+  environment.systemPackages = with pkgs; [
+    wireshark
+    nmap
+  ];
+}
+```
+
+---
+
+## Configuration Modules
+
+**Chapter:** Declarative Configuration
+
+::: incremental
+- **Hardware configuration** - auto-generated
+- **Network configuration** - interfaces, firewall
+- **Service configuration** - daemons, security tools
+- **User configuration** - accounts, permissions
+:::
+
+---
+
+## Security-First Configuration
+
+**Chapter:** Declarative Configuration
+
+```nix
+{
+  # Enable firewall by default
+  networking.firewall.enable = true;
+  
+  # Disable unnecessary services
+  services.printing.enable = false;
+  services.avahi.enable = false;
+  
+  # Enable security tools
+  programs.wireshark.enable = true;
+  security.sudo.wheelNeedsPassword = true;
+}
+```
+
+---
+
+## Package Management with Nix {.center background-image="/assets/images/1_744x744.jpg" background-size="cover"}
+
+> "Purely functional package management"
+
+---
+
+## Nix Package Manager Benefits
+
+**Chapter:** Package Management with Nix
+
+::: incremental
+- **No dependency conflicts** - isolated packages
+- **Atomic transactions** - all or nothing installs
+- **Multiple versions** - side-by-side installation
+- **Reproducible environments** - exact package versions
+:::
+
+---
+
+## Installing Security Tools
+
+**Chapter:** Package Management with Nix
+
+```nix
+environment.systemPackages = with pkgs; [
+  # Network analysis
+  wireshark tcpdump nmap
+  
+  # Penetration testing
+  metasploit hashcat john
+  
+  # Forensics
+  sleuthkit autopsy volatility3
+  
+  # Monitoring
+  htop iotop nethogs
+];
+```
+
+---
+
+## Nix Shell for Testing
+
+**Chapter:** Package Management with Nix
+
+::: incremental
+- **Temporary environments** - test without installing
+- **Project-specific tools** - isolated dependencies
+- **Quick experiments** - no system pollution
+- **Collaborative environments** - shared tool sets
+:::
+
+---
+
+## Shell.nix Example
+
+**Chapter:** Package Management with Nix
+
+```nix
+{ pkgs ? import <nixpkgs> {} }:
+
+pkgs.mkShell {
+  buildInputs = with pkgs; [
+    python3
+    burpsuite
+    sqlmap
+    gobuster
+  ];
+  
+  shellHook = ''
+    echo "Penetration testing environment ready!"
+  '';
+}
+```
+
+---
+
+## System Hardening Basics {.center background-image="/assets/images/2_744x744.jpg" background-size="cover"}
+
+> "Security by default configuration"
+
+---
+
+## Firewall Configuration
+
+**Chapter:** System Hardening Basics
+
+```nix
+networking.firewall = {
+  enable = true;
+  allowedTCPPorts = [ 22 443 ];
+  allowedUDPPorts = [ 53 ];
+  extraCommands = ''
+    iptables -A INPUT -p icmp --icmp-type echo-request -j DROP
+  '';
+};
+```
+
+---
+
+## User Security Settings
+
+**Chapter:** System Hardening Basics
+
+```nix
+security = {
+  sudo.wheelNeedsPassword = true;
+  pam.services.sshd.failDelay = {
+    enable = true;
+    delay = "10000000";  # 10 seconds
+  };
+  
+  # Disable root login
+  security.sudo.configFile = ''
+    root ALL=(ALL:ALL) ALL
+    %wheel ALL=(ALL:ALL) ALL
+  '';
+};
+```
+
+---
+
+## SSH Hardening
+
+**Chapter:** System Hardening Basics
+
+```nix
+services.openssh = {
+  enable = true;
+  settings = {
+    PasswordAuthentication = false;
+    PermitRootLogin = "no";
+    Protocol = 2;
+    X11Forwarding = false;
+  };
+  
+  extraConfig = ''
+    MaxAuthTries 3
+    ClientAliveInterval 300
+    ClientAliveCountMax 2
+  '';
+};
+```
+
+---
+
+## Service Minimization
+
+**Chapter:** System Hardening Basics
+
+::: incremental
+- **Disable unnecessary services** by default
+- **Enable only required** functionality
+- **Regular service audits** in configuration
+- **Documentation** of enabled services
+:::
+
+---
+
+## Hands-On Exercise 1 {.center}
+
+**Chapter:** Session 1 - Practice
+
+### Basic NixOS Configuration
+
+::: incremental
+- **Set up basic** configuration.nix
+- **Install security tools** declaratively
+- **Configure firewall** rules
+- **Create hardened** user accounts
+:::
+
+---
+
+## Exercise 1 Checklist
+
+**Chapter:** Session 1 - Practice
+
+::: incremental
+- ✓ **Hostname configured** for security lab
+- ✓ **Firewall enabled** with minimal ports
+- ✓ **Security tools installed** via configuration
+- ✓ **User accounts hardened** with sudo restrictions
+:::
+
+---
+
+## Session 1 Break {.center}
+
+### 15-minute break
+
+**Coming up in Session 2:**
+- Advanced security configurations
+- Network isolation and sandboxing
+- Security testing environments
+- Deployment strategies
+
+# Session 2: Advanced Security {.center background-image="/assets/images/3_744x744.jpg" background-size="cover"}
+
+---
+
+## Advanced Security Configurations {.center background-image="/assets/images/4_744x744.jpg" background-size="cover"}
+
+> "Enterprise-grade security hardening"
+
+---
+
+## AppArmor Integration
+
+**Chapter:** Advanced Security Configurations
+
+```nix
+security.apparmor = {
+  enable = true;
+  packages = with pkgs; [
+    apparmor-profiles
+    apparmor-utils
+  ];
+};
+
+# Profile for specific application
+security.apparmor.profiles = {
+  "usr.bin.firefox" = ''
+    /usr/bin/firefox {
+      /home/*/.mozilla/** rw,
+      /tmp/** rw,
+      deny /etc/shadow r,
+    }
+  '';
+};
+```
+
+---
+
+## Mandatory Access Control
+
+**Chapter:** Advanced Security Configurations
+
+::: incremental
+- **SELinux support** - comprehensive MAC
+- **AppArmor profiles** - application sandboxing
+- **Capability restrictions** - minimize privileges
+- **Namespace isolation** - process separation
+:::
+
+---
+
+## Kernel Hardening
+
+**Chapter:** Advanced Security Configurations
+
+```nix
+boot.kernel.sysctl = {
+  # Network security
+  "net.ipv4.ip_forward" = 0;
+  "net.ipv4.conf.all.send_redirects" = 0;
+  "net.ipv4.conf.all.accept_redirects" = 0;
+  
+  # Memory protection
+  "kernel.dmesg_restrict" = 1;
+  "kernel.kptr_restrict" = 2;
+  "kernel.unprivileged_bpf_disabled" = 1;
+};
+```
+
+---
+
+## Secure Boot Configuration
+
+**Chapter:** Advanced Security Configurations
+
+```nix
+boot.loader.systemd-boot = {
+  enable = true;
+  editor = false;  # Disable kernel parameter editing
+  configurationLimit = 5;
+};
+
+boot.loader.efi.canTouchEfiVariables = true;
+
+# Enable UEFI Secure Boot
+boot.loader.systemd-boot.secureBoot = true;
+```
+
+---
+
+## Network Isolation & Sandboxing {.center background-image="/assets/images/1_744x744.jpg" background-size="cover"}
+
+> "Zero-trust network architecture"
+
+---
+
+## Container Isolation
+
+**Chapter:** Network Isolation & Sandboxing
+
+```nix
+virtualisation.docker.enable = true;
+
+# Isolated security lab container
+virtualisation.oci-containers.containers.security-lab = {
+  image = "kalilinux/kali-rolling";
+  ports = [ "8080:80" ];
+  volumes = [ "/home/labs:/workspace" ];
+  
+  extraOptions = [
+    "--network=isolated"
+    "--cap-drop=ALL"
+    "--cap-add=NET_ADMIN"
+  ];
+};
+```
+
+---
+
+## Network Namespaces
+
+**Chapter:** Network Isolation & Sandboxing
+
+::: incremental
+- **Process isolation** - separate network stacks
+- **Virtual interfaces** - contained network access
+- **Traffic control** - bandwidth and routing limits
+- **Firewall rules** - per-namespace restrictions
+:::
+
+---
+
+## VPN and Tunnel Management
+
+**Chapter:** Network Isolation & Sandboxing
+
+```nix
+services.openvpn.servers = {
+  security-lab = {
+    config = ''
+      remote vpn.security-lab.com 1194
+      dev tun
+      proto udp
+      auth-user-pass /etc/openvpn/credentials
+    '';
+    autoStart = false;
+  };
+};
+
+# WireGuard for secure tunnels
+networking.wireguard.interfaces.wg0 = {
+  ips = [ "10.100.0.2/24" ];
+  privateKeyFile = "/etc/wireguard/private";
+  peers = [{
+    publicKey = "...";
+    allowedIPs = [ "10.100.0.0/24" ];
+    endpoint = "vpn.example.com:51820";
+  }];
+};
+```
+
+---
+
+## Service Sandboxing
+
+**Chapter:** Network Isolation & Sandboxing
+
+```nix
+systemd.services.custom-security-tool = {
+  serviceConfig = {
+    DynamicUser = true;
+    PrivateTmp = true;
+    ProtectSystem = "strict";
+    ProtectHome = true;
+    NoNewPrivileges = true;
+    
+    # Restrict system calls
+    SystemCallFilter = [ "@system-service" ];
+    SystemCallArchitectures = "native";
+    
+    # Network restrictions
+    RestrictAddressFamilies = [ "AF_INET" "AF_INET6" ];
+  };
+};
+```
+
+---
+
+## Security Testing Environments {.center background-image="/assets/images/2_744x744.jpg" background-size="cover"}
+
+> "Reproducible penetration testing labs"
+
+---
+
+## Vulnerable Application Lab
+
+**Chapter:** Security Testing Environments
+
+```nix
+# DVWA (Damn Vulnerable Web Application)
+services.httpd = {
+  enable = true;
+  virtualHosts."dvwa.local" = {
+    documentRoot = pkgs.dvwa;
+    extraConfig = ''
+      <Directory "${pkgs.dvwa}">
+        AllowOverride All
+        Require all granted
+      </Directory>
+    '';
+  };
+};
+
+services.mysql = {
+  enable = true;
+  package = pkgs.mariadb;
+  initialDatabases = [{ name = "dvwa"; }];
+};
+```
+
+---
+
+## Penetration Testing Suite
+
+**Chapter:** Security Testing Environments
+
+```nix
+environment.systemPackages = with pkgs; [
+  # Web application testing
+  burpsuite nikto dirb gobuster
+  
+  # Network penetration
+  nmap masscan metasploit
+  
+  # Wireless security
+  aircrack-ng kismet
+  
+  # Forensics and analysis
+  wireshark tcpdump volatility3
+  
+  # Exploitation frameworks
+  exploit-db searchsploit
+];
+```
+
+---
+
+## Isolated Testing Networks
+
+**Chapter:** Security Testing Environments
+
+```nix
+# Create isolated network for testing
+networking.bridges.br-isolated = {
+  interfaces = [];
+};
+
+networking.interfaces.br-isolated = {
+  ipv4.addresses = [{
+    address = "192.168.100.1";
+    prefixLength = 24;
+  }];
+};
+
+# DHCP for testing network
+services.dhcpd4 = {
+  enable = true;
+  interfaces = [ "br-isolated" ];
+  extraConfig = ''
+    subnet 192.168.100.0 netmask 255.255.255.0 {
+      range 192.168.100.10 192.168.100.100;
+      option routers 192.168.100.1;
+    }
+  '';
+};
+```
+
+---
+
+## Automated Testing Pipeline
+
+**Chapter:** Security Testing Environments
+
+```nix
+# Automated security scanning
+systemd.services.security-scan = {
+  serviceConfig = {
+    Type = "oneshot";
+    ExecStart = pkgs.writeScript "security-scan" ''
+      #!/bin/sh
+      ${pkgs.nmap}/bin/nmap -sV -O target-network
+      ${pkgs.nikto}/bin/nikto -h target-webapp
+      ${pkgs.openvas}/bin/openvas-scan target-range
+    '';
+  };
+};
+
+systemd.timers.security-scan = {
+  wantedBy = [ "timers.target" ];
+  timerConfig = {
+    OnCalendar = "daily";
+    Persistent = true;
+  };
+};
+```
+
+---
+
+## Deployment Strategies {.center background-image="/assets/images/3_744x744.jpg" background-size="cover"}
+
+> "Scaling secure configurations"
+
+---
+
+## Configuration Management
+
+**Chapter:** Deployment Strategies
+
+::: incremental
+- **Git repository** - version controlled configs
+- **Modular design** - reusable components
+- **Environment separation** - dev/test/prod
+- **Automated deployment** - CI/CD integration
+:::
+
+---
+
+## NixOps for Multi-System
+
+**Chapter:** Deployment Strategies
+
+```nix
+# deployment.nix
+{
+  network.description = "Security lab network";
+  
+  security-gateway = { config, pkgs, ... }: {
+    deployment.targetHost = "10.0.1.1";
+    imports = [ ./modules/gateway.nix ];
+  };
+  
+  penetration-lab = { config, pkgs, ... }: {
+    deployment.targetHost = "10.0.1.10";
+    imports = [ ./modules/pentest-lab.nix ];
+  };
+  
+  vulnerable-targets = { config, pkgs, ... }: {
+    deployment.targetHost = "10.0.1.20";
+    imports = [ ./modules/vulnerable-apps.nix ];
+  };
+}
+```
+
+---
+
+## Docker Integration
+
+**Chapter:** Deployment Strategies
+
+```nix
+# Dockerized security tools
+virtualisation.docker.enable = true;
+
+environment.systemPackages = with pkgs; [
+  docker-compose
+  
+  # Build custom security images
+  (writeShellScriptBin "build-security-image" ''
+    docker build -t security-tools \
+      --build-arg TOOLS="${lib.concatStringsSep " " securityTools}" \
+      /etc/nixos/docker/
+  '')
+];
+```
+
+---
+
+## Cloud Deployment
+
+**Chapter:** Deployment Strategies
+
+```nix
+# AWS EC2 configuration
+imports = [ <nixpkgs/nixos/modules/virtualisation/amazon-image.nix> ];
+
+ec2.hvm = true;
+
+networking.firewall.allowedTCPPorts = [ 22 443 ];
+
+# Automated security updates
+system.autoUpgrade = {
+  enable = true;
+  allowReboot = true;
+  channel = "https://nixos.org/channels/nixos-23.11";
+};
+```
+
+---
+
+## Hands-On Exercise 2 {.center}
+
+**Chapter:** Session 2 - Practice
+
+### Advanced Security Configuration
+
+::: incremental
+- **Configure AppArmor** profiles
+- **Set up isolated** testing network
+- **Deploy vulnerable** applications
+- **Create deployment** automation
+:::
+
+---
+
+## Exercise 2 Checklist
+
+**Chapter:** Session 2 - Practice
+
+::: incremental
+- ✓ **AppArmor enabled** with custom profiles
+- ✓ **Isolated network** configured for testing
+- ✓ **DVWA deployed** for security practice
+- ✓ **Automated deployment** script created
+:::
+
+---
+
+## Real-World Scenarios {.center background-image="/assets/images/4_744x744.jpg" background-size="cover"}
+
+> "Applying NixOS in security operations"
+
+---
+
+## Scenario 1: Incident Response
+
+**Chapter:** Real-World Scenarios
+
+**Rapid forensics environment deployment**
+
+::: incremental
+- **Identical analysis** environments
+- **Pre-configured tools** and scripts
+- **Consistent evidence** handling
+- **Reproducible analysis** results
+:::
+
+---
+
+## Scenario 2: Penetration Testing
+
+**Chapter:** Real-World Scenarios
+
+**Portable testing environments**
+
+::: incremental
+- **Client-specific** tool configurations
+- **Isolated test** networks
+- **Automated reporting** tools
+- **Compliance documentation**
+:::
+
+---
+
+## Scenario 3: Security Research
+
+**Chapter:** Real-World Scenarios
+
+**Reproducible vulnerability research**
+
+::: incremental
+- **Exact environment** recreation
+- **Version-controlled** research setup
+- **Collaborative** configurations
+- **Publication-ready** environments
+:::
+
+---
+
+## Scenario 4: SOC Operations
+
+**Chapter:** Real-World Scenarios
+
+**Standardized analyst workstations**
+
+::: incremental
+- **Consistent tool** deployments
+- **Automated threat** hunting setup
+- **Integrated SIEM** connections
+- **Quick environment** recovery
+:::
+
+---
+
+## Building Security Habits {.center background-image="/assets/images/1_744x744.jpg" background-size="cover"}
+
+> "NixOS best practices for security"
+
+---
+
+## Version Control Everything
+
+**Chapter:** Building Security Habits
+
+::: incremental
+- **Git repository** for all configurations
+- **Commit security** changes atomically
+- **Document configuration** decisions
+- **Review changes** before deployment
+:::
+
+---
+
+## Modular Configuration Design
+
+**Chapter:** Building Security Habits
+
+::: incremental
+- **Separate modules** for different functions
+- **Reusable security** profiles
+- **Environment-specific** overrides
+- **Clear dependency** management
+:::
+
+---
+
+## Regular Security Updates
+
+**Chapter:** Building Security Habits
+
+```nix
+# Automated security updates
+system.autoUpgrade = {
+  enable = true;
+  allowReboot = false;  # Manual reboot for critical systems
+  channel = "https://nixos.org/channels/nixos-23.11";
+  
+  # Only security updates
+  operation = "switch";
+  flags = [ "--option" "substituters" "https://cache.nixos.org/" ];
+};
+```
+
+---
+
+## Configuration Testing
+
+**Chapter:** Building Security Habits
+
+::: incremental
+- **Test configurations** in isolated environments
+- **Validate security** policies automatically
+- **Monitor system** behavior after changes
+- **Document rollback** procedures
+:::
+
+---
+
+## Key Takeaways {.center}
+
+**Chapter:** Course Summary
+
+::: incremental
+- **NixOS provides** reproducible security environments
+- **Declarative configuration** enables version-controlled security
+- **Immutable infrastructure** reduces configuration drift
+- **Modular design** promotes reusable security components
+- **Atomic updates** ensure reliable system changes
+:::
+
+---
+
+## Your NixOS Action Plan
+
+**Chapter:** Course Summary
+
+::: incremental
+- **Start with** basic hardened configuration
+- **Create modular** security profiles
+- **Version control** all configurations
+- **Build testing** environments incrementally
+- **Share configurations** with your team
+:::
+
+---
+
+## Additional Resources {.center}
+
+**Chapter:** Course Summary
+
+::: incremental
+- **NixOS Manual** - comprehensive documentation
+- **Nix Pills** - deep dive tutorials
+- **NixOS Security** - hardening guides
+- **Community Wiki** - shared configurations
+:::
+
+---
+
+## Useful NixOS Tools
+
+**Chapter:** Course Summary
+
+::: incremental
+- **nixos-rebuild** - system configuration management
+- **nix-shell** - temporary environments
+- **nixops** - multi-machine deployment
+- **nix-env** - user package management
+:::
+
+---
+
+## Course Completion {.center background-image="/assets/images/2_744x744.jpg" background-size="cover"}
+
+### Congratulations! 🎓
+
+You now have the skills to:
+- Build secure, reproducible NixOS systems
+- Create isolated security testing environments
+- Deploy portable security configurations
+- Implement enterprise security standards
+
+---
+
+## Stay Connected
+
+**Chapter:** Course Completion
+
+::: incremental
+- **Join NixOS** community forums
+- **Contribute** to security modules
+- **Share configurations** on GitHub
+- **Keep learning** with advanced topics
+:::
+
+---
+
+## Questions & Discussion {.center}
+
+::: {style="text-align: center;"}
+**Thank you for participating!**
+
+Open4Tech Summer School  
+[contact@open4tech.org](mailto:contact@open4tech.org)  
+
+**Build secure, build reproducible!**
+:::
+
+---
+
+## Final Exercise: Configuration Challenge {.center background-image="/assets/images/3_744x744.jpg" background-size="cover"}
+
+### Create your security lab configuration:
+
+*Design a NixOS configuration for your ideal cybersecurity environment, including your preferred tools, hardening settings, and testing capabilities.*
+
+**Share your configuration and learn from others!**

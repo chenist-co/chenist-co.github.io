@@ -1,0 +1,45 @@
+website:
+  title: "chen.ist"
+  favicon: ../assets/images/favicon.png
+  site-url: https://chen.ist/de
+  description: "Innovative Technologielösungen für die moderne Welt"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Startseite
+      - href: services.qmd
+        text: Dienstleistungen
+      - href: projects.qmd
+        text: Projekte
+      - href: blog.qmd
+        text: Blog
+      - href: resources.qmd
+        text: Ressourcen
+    right:
+      - text: "Über uns"
+        menu:
+          - href: about/index.qmd
+            text: Über uns
+          - href: about/csr.qmd
+            text: Corporate Social Responsibility
+          - href: about/community.qmd
+            text: Community-Engagement
+      - href: contact.qmd
+        text: Kontakt
+      - text: "Sprache"
+        menu:
+          - href: ../index.qmd
+            text: Englisch
+          - href: ../ro/index.qmd
+            text: Rumänisch
+          - href: ../sv/index.qmd
+            text: Schwedisch
+          - href: ../de/index.qmd
+            text: Deutsch
+      - icon: github
+        href: https://github.com/chenist
+      - icon: linkedin
+        href: https://linkedin.com/in/chenist
+      - text: "Theme wechseln"
+        icon: moon
+        href: "#"

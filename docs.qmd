@@ -1,0 +1,139 @@
+---
+title: "Documentation"
+from: markdown+raw_html
+---
+
+```{=html}
+<div class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8 offset-md-2 text-center">
+        <h1>Technical <span class="text-green">Documentation</span></h1>
+        <p>Comprehensive guides, references, and resources</p>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+::: {.container .page-section}
+## Technical Resources
+
+Welcome to our documentation hub. Here you'll find comprehensive guides, references, and resources to help you understand and implement our solutions effectively.
+
+### Documentation Formats
+
+Our documentation is available in multiple formats to suit your needs:
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-md-3">
+    <div class="security-feature">
+      <h3>HTML</h3>
+      <p>Interactive web-based documentation.</p>
+      <a href="../docs/_output/html/index.html" class="btn btn-primary btn-sm">View Online</a>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="security-feature">
+      <h3>PDF</h3>
+      <p>Downloadable PDF documents.</p>
+      <a href="#" class="btn btn-primary btn-sm">Download PDF</a>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="security-feature">
+      <h3>Word</h3>
+      <p>Microsoft Word format.</p>
+      <a href="#" class="btn btn-primary btn-sm">Download Word</a>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="security-feature">
+      <h3>Typst</h3>
+      <p>Modern typesetting format.</p>
+      <a href="#" class="btn btn-primary btn-sm">View Typst PDF</a>
+    </div>
+  </div>
+</div>
+```
+
+### Categories
+
+```{=html}
+<div class="row mt-5">
+  <div class="col-md-4">
+    <div class="feature-card">
+      <div class="feature-card-icon">
+        <i class="bi bi-shield-check"></i>
+      </div>
+      <h3>Security Guides</h3>
+      <p>Detailed documentation on implementing and maintaining security solutions.</p>
+      <a href="../docs/_output/html/security/index.html" class="btn btn-outline-primary">View Guides</a>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="feature-card">
+      <div class="feature-card-icon">
+        <i class="bi bi-cloud"></i>
+      </div>
+      <h3>Cloud Infrastructure</h3>
+      <p>Resources for setting up and optimizing cloud environments.</p>
+      <a href="../docs/_output/html/cloud/index.html" class="btn btn-outline-primary">View Guides</a>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="feature-card">
+      <div class="feature-card-icon">
+        <i class="bi bi-code-square"></i>
+      </div>
+      <h3>API Reference</h3>
+      <p>Comprehensive API documentation for developers.</p>
+      <a href="../docs/_output/html/api/index.html" class="btn btn-outline-primary">View Reference</a>
+    </div>
+  </div>
+</div>
+```
+
+## Latest Documentation
+
+```{=html}
+<div class="row mt-5">
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header">
+        <h3 class="card-title mb-0">Security Implementation Guide</h3>
+      </div>
+      <div class="card-body">
+        <p>A comprehensive guide to implementing our security solutions in your environment.</p>
+        <p><strong>Updated:</strong> April 1, 2025</p>
+        <a href="../docs/_output/html/security/implementation-guide.html" class="btn btn-primary">Read Guide</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header">
+        <h3 class="card-title mb-0">Cloud Migration Handbook</h3>
+      </div>
+      <div class="card-body">
+        <p>Step-by-step instructions for migrating your infrastructure to the cloud.</p>
+        <p><strong>Updated:</strong> March 15, 2025</p>
+        <a href="../docs/_output/html/cloud/migration-handbook.html" class="btn btn-primary">Read Guide</a>
+      </div>
+    </div>
+  </div>
+</div>
+```
+:::
+
+```{=html}
+<div class="cta-section">
+  <div class="container text-center">
+    <h2>Need more help?</h2>
+    <p class="mb-4">Our support team is ready to assist you with any questions or challenges.</p>
+    <a href="contact.qmd" class="cta-button">Contact Support</a>
+  </div>
+</div>
+```

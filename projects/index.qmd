@@ -1,0 +1,210 @@
+---
+title: "Projects"
+subtitle: "Featured projects and research initiatives"
+listing:
+  contents: "manuscripts/**/index.qmd"
+  type: grid
+  sort: "date desc"
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [title, subtitle, date, author, categories, image]
+  date-format: "MMMM D, YYYY"
+---
+
+```{=html}
+<div class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8 offset-md-2 text-center">
+        <h1>Our <span class="text-green">Projects</span></h1>
+        <p>Highlighting our research, open-source contributions, and technical initiatives</p>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+## Research Manuscripts
+
+Our team regularly publishes research manuscripts, technical papers, and case studies on various topics in cybersecurity, cloud computing, and software development. These are available in multiple formats to suit your needs.
+
+```{=html}
+<div class="alert alert-info" role="alert">
+  <h4 class="alert-heading"><i class="bi bi-info-circle"></i> About Quarto Manuscripts</h4>
+  <p>Our research papers and technical documents are published as Quarto Manuscripts, providing multiple ways to engage with the content:</p>
+  <ul>
+    <li>Read online with interactive elements and navigation</li>
+    <li>Download as PDF for offline reading and printing</li>
+    <li>Access as MS Word documents for editing and comments</li>
+    <li>View source notebooks to explore the computational aspects</li>
+  </ul>
+  <p>This approach promotes open science and transparency in our research.</p>
+</div>
+```
+
+## Community Projects
+
+We develop and maintain various community-focused projects across different domains:
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <h3 class="card-title mb-0">Cyber Bridge / Caravana Securității Cibernetice</h3>
+      </div>
+      <div class="card-body">
+        <p>A bilingual (Romanian/English) cybersecurity education program designed to bridge the knowledge gap in cybersecurity across communities.</p>
+        <h4>Key Features:</h4>
+        <ul>
+          <li>Comprehensive cybersecurity curriculum</li>
+          <li>Bilingual resources (Romanian/English)</li>
+          <li>Educational presentations and workshops</li>
+          <li>Community outreach and awareness campaigns</li>
+        </ul>
+        <p class="mt-3"><strong>Technologies:</strong> Quarto, Typst, HTML/CSS, JavaScript</p>
+      </div>
+      <div class="card-footer text-end">
+        <a href="https://caravana.chen.ist" class="btn btn-outline-primary" target="_blank">View Project</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <h3 class="card-title mb-0">Cicl.ist România</h3>
+      </div>
+      <div class="card-body">
+        <p>A comprehensive resource for cyclists in Romania featuring interactive maps, routes, and community information.</p>
+        <h4>Key Features:</h4>
+        <ul>
+          <li>Interactive cycling route maps with OpenStreetMap integration</li>
+          <li>Comprehensive route database with difficulty levels</li>
+          <li>Cycling safety tips and infrastructure information</li>
+          <li>Community event listings and resources</li>
+        </ul>
+        <p class="mt-3"><strong>Technologies:</strong> Quarto, Leaflet, OpenStreetMap, GeoJSON, HTML/CSS, JavaScript</p>
+      </div>
+      <div class="card-footer text-end">
+        <a href="https://cicl.ist" class="btn btn-outline-primary" target="_blank">View Project</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <h3 class="card-title mb-0">Riding.Motorcycles</h3>
+      </div>
+      <div class="card-body">
+        <p>An interactive platform for motorcycle enthusiasts featuring routes, community resources, and riding guides.</p>
+        <h4>Key Features:</h4>
+        <ul>
+          <li>Interactive motorcycle route maps across Europe</li>
+          <li>Multilingual support for various European languages</li>
+          <li>Comprehensive motorcycle club and shop database</li>
+          <li>Riding tips and safety information</li>
+        </ul>
+        <p class="mt-3"><strong>Technologies:</strong> Quarto, Leaflet, OpenStreetMap, GeoJSON, HTML/CSS, JavaScript</p>
+      </div>
+      <div class="card-footer text-end">
+        <a href="https://riding.motorcycles" class="btn btn-outline-primary" target="_blank">View Project</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <h3 class="card-title mb-0">Clubul.Computer</h3>
+      </div>
+      <div class="card-body">
+        <p>A technology club and educational initiative focused on building digital literacy and computer skills in the community.</p>
+        <h4>Key Features:</h4>
+        <ul>
+          <li>Programming workshops and classes for all ages</li>
+          <li>Technology meetups and community events</li>
+          <li>Resources for learning computer science</li>
+          <li>Open source projects and contributions</li>
+        </ul>
+        <p class="mt-3"><strong>Technologies:</strong> Quarto, HTML/CSS, JavaScript, Various programming languages</p>
+      </div>
+      <div class="card-footer text-end">
+        <a href="https://clubul.computer" class="btn btn-outline-primary" target="_blank">View Project</a>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+## Open Source Contributions
+
+We actively contribute to the open-source community with tools, libraries, and frameworks for developers and security professionals.
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <h3 class="card-title mb-0">SecurityScan</h3>
+      </div>
+      <div class="card-body">
+        <p>An automated security scanning tool for web applications that helps developers identify vulnerabilities during the development process.</p>
+        <div class="d-flex gap-2 justify-content-between align-items-center mt-3">
+          <div>
+            <span class="badge bg-secondary me-2">Python</span>
+            <span class="badge bg-secondary me-2">Web Security</span>
+          </div>
+          <div>
+            <a href="https://github.com/chenist/securityscan" class="btn btn-sm btn-outline-primary" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+            <a href="/projects/securityscan" class="btn btn-sm btn-primary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer text-muted">
+        <div class="d-flex justify-content-between">
+          <small><i class="bi bi-star-fill"></i> 500+ Stars</small>
+          <small><i class="bi bi-people-fill"></i> 30+ Contributors</small>
+          <small><i class="bi bi-download"></i> 150k+ Downloads</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <h3 class="card-title mb-0">CloudCostMonitor</h3>
+      </div>
+      <div class="card-body">
+        <p>A tool for monitoring and optimizing cloud spending across major cloud providers. Helps organizations identify waste and reduce unnecessary costs.</p>
+        <div class="d-flex gap-2 justify-content-between align-items-center mt-3">
+          <div>
+            <span class="badge bg-secondary me-2">TypeScript</span>
+            <span class="badge bg-secondary me-2">Cloud</span>
+          </div>
+          <div>
+            <a href="https://github.com/chenist/cloudcostmonitor" class="btn btn-sm btn-outline-primary" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+            <a href="/projects/cloudcostmonitor" class="btn btn-sm btn-primary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer text-muted">
+        <div class="d-flex justify-content-between">
+          <small><i class="bi bi-star-fill"></i> Stars</small>
+          <small><i class="bi bi-people-fill"></i> Contributors</small>
+          <small><i class="bi bi-building"></i> Orgs Using</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+## Research Manuscripts Listing
+
+Browse all our research papers, technical guides, and case studies below:

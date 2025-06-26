@@ -1,0 +1,370 @@
+/*-- scss:defaults --*/
+
+// Brand colors based on branding guidelines
+// Primary colors from branding-guide.md
+$dark-navy: #323642 !default;             // Primary dark color
+$bright-green: #81BD4A !default;          // Primary accent color
+$off-white: #E5E3DA !default;             // Light neutral
+$light-gray: #CFCDC4 !default;            // Secondary neutral
+
+// Extended palette
+$alert-red: #CF3E3F !default;             // Danger/Alert
+$warning-amber: #F9AE54 !default;         // Warning
+$success-green: #5A9C25 !default;         // Success
+$info-blue: #3D6A9C !default;             // Information
+
+// Define Dracula theme base colors
+$dracula-background: #282a36;
+$dracula-current: #44475a;
+$dracula-selection: #44475a;
+$dracula-foreground: #f8f8f2;
+$dracula-comment: #6272a4;
+$dracula-cyan: #8be9fd;
+$dracula-green: #50fa7b;
+$dracula-orange: #ffb86c;
+$dracula-pink: #ff79c6;
+$dracula-purple: #bd93f9;
+$dracula-red: #ff5555;
+$dracula-yellow: #f1fa8c;
+$dracula-dark: #21222c;
+$dracula-darker: #191a21;
+
+// Base document colors - combining Dracula theme with our brand colors
+$body-bg: $dracula-darker !default;
+$body-color: $dracula-foreground !default;
+$headings-color: $off-white !default;
+$code-block-bg: $dracula-background !default;
+$navbar-bg: $dark-navy !default;
+$navbar-fg: $off-white !default;
+$navbar-hl: $bright-green !default;
+
+// Bootstrap colors
+$primary: $dark-navy !default;
+$success: $bright-green !default;
+$info: $info-blue !default;
+$secondary: $off-white !default;
+$warning: $warning-amber !default;
+$danger: $alert-red !default;
+$dark: $dracula-dark !default;
+$light: $off-white !default;
+
+// Link colors
+$link-color: $bright-green !default;
+$link-hover-color: lighten($bright-green, 10%) !default;
+
+// Code colors
+$code-color: $dracula-pink !default;
+$code-bg: $dracula-background !default;
+
+// Card and form colors
+$card-border-color: $dracula-comment !default;
+$form-select-border-color: $dracula-comment !default;
+
+// Typography from branding guidelines
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Source+Code+Pro&display=swap');
+
+$font-family-sans-serif: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-monospace: 'Source Code Pro', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$headings-font-family: 'Open Sans', sans-serif !default;
+$headings-font-weight: 600 !default;
+
+/*-- scss:rules --*/
+
+// Card styling
+.card {
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: $dracula-darker;
+  border-color: $dracula-comment;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.card-header {
+  background-color: $dracula-dark;
+  color: $dracula-foreground;
+  border-bottom: 1px solid $dracula-comment;
+}
+
+.card-footer {
+  color: $dracula-comment;
+  background-color: $dracula-darker;
+  border-top: 1px solid $dracula-comment;
+}
+
+// Icon colors
+.fa-solid, .bi {
+  color: $dracula-green;
+}
+
+// Theme mode display
+.dark-mode { display: block; }
+.light-mode { display: none; }
+
+// Feature Cards
+.feature-card {
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: $dracula-darker;
+  border-radius: 4px;
+  border: 1px solid $dracula-comment;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.feature-card h3 {
+  color: $dracula-foreground;
+  font-size: 1.25rem;
+}
+
+.feature-card-icon {
+  color: $dracula-green;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+// Hero Section
+.hero-section {
+  background-color: $dracula-dark;
+  color: $dracula-foreground;
+  padding: 5rem 0;
+  margin-bottom: 3rem;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: $dracula-foreground;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  color: $dracula-foreground;
+}
+
+// Fix for regular paragraph in hero section
+.hero-section p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  color: $dracula-foreground;
+}
+
+// CTA Button
+.cta-button {
+  background-color: $dracula-green;
+  color: $dracula-background;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  border: none;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background-color: darken($dracula-green, 5%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    color: $dracula-background;
+    text-decoration: none;
+  }
+}
+
+// Override btn-success
+.btn-success {
+  background-color: $dracula-green;
+  border-color: $dracula-green;
+  
+  &:hover, &:focus {
+    background-color: darken($dracula-green, 10%);
+    border-color: darken($dracula-green, 10%);
+  }
+}
+
+// Override btn-primary
+.btn-primary {
+  background-color: $dracula-purple;
+  border-color: $dracula-purple;
+  
+  &:hover, &:focus {
+    background-color: darken($dracula-purple, 10%);
+    border-color: darken($dracula-purple, 10%);
+  }
+}
+
+// Override btn-outline-primary
+.btn-outline-primary {
+  color: $dracula-purple;
+  border-color: $dracula-purple;
+  
+  &:hover, &:focus {
+    background-color: $dracula-purple;
+    border-color: $dracula-purple;
+    color: $dracula-background;
+  }
+}
+
+// Security Feature
+.security-feature {
+  border-left: 4px solid $dracula-green;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  background-color: transparentize($dracula-green, 0.9);
+}
+
+// CTA Section
+.cta-section {
+  background-color: $dracula-dark;
+  color: $dracula-foreground;
+  padding: 3rem 0;
+  margin-top: 3rem;
+}
+
+// Text colors
+.text-green {
+  color: $dracula-green;
+}
+
+// Utility classes
+.bg-navy {
+  background-color: $dracula-dark;
+}
+
+.bg-light-gray {
+  background-color: $dracula-comment;
+}
+
+.border-green {
+  border-color: $dracula-green !important;
+}
+
+// Table styling
+table {
+  border-color: $dracula-comment;
+}
+
+.table {
+  color: $dracula-foreground;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba($dracula-current, 0.05);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba($dracula-current, 0.075);
+}
+
+// Code styling
+pre {
+  background-color: $dracula-background;
+  border: 1px solid $dracula-comment;
+}
+
+code {
+  color: $dracula-pink;
+}
+
+// Footer
+.new-footer {
+  background-color: $dracula-dark !important;
+  color: $dracula-foreground !important;
+}
+
+.footer-top {
+  border-bottom: 1px solid $dracula-comment !important;
+}
+
+.footer-nav a:hover, .social-links a:hover {
+  color: $dracula-green !important;
+}
+
+.footer-dropdown .dropdown-menu {
+  background-color: $dracula-darker !important;
+  border: 1px solid $dracula-comment !important;
+}
+
+.footer-dropdown .dropdown-item:hover {
+  background-color: $dracula-selection !important;
+  color: $dracula-green !important;
+}
+
+// Custom badge colors
+.badge-primary {
+  background-color: $dracula-purple;
+}
+
+.badge-success {
+  background-color: $dracula-green;
+}
+
+.badge-info {
+  background-color: $dracula-cyan;
+}
+
+.badge-warning {
+  background-color: $dracula-orange;
+}
+
+.badge-danger {
+  background-color: $dracula-red;
+}
+
+// Navigation
+.navbar {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+  font-weight: 600;
+}
+
+.dropdown-menu {
+  background-color: $dracula-darker;
+  border: 1px solid $dracula-comment;
+}
+
+.dropdown-item {
+  color: $dracula-foreground;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  color: $dracula-green;
+  background-color: $dracula-selection;
+}
+
+// Logo switching for dark mode
+[data-bs-theme="dark"] .navbar-brand img {
+  filter: brightness(0) invert(1);
+}
+
+// Toggle Button Styling in Dark Mode
+[data-bs-theme="dark"] #toggle-theme-icon,
+[data-bs-theme="dark"] #footer-theme-toggle i {
+  color: $dracula-yellow;
+}
+
+// Apply Dracula theme styles to code blocks
+[data-bs-theme="dark"] pre {
+  background-color: darken($dracula-background, 5%);
+  border: 1px solid $dracula-comment;
+}
+
+[data-bs-theme="dark"] code {
+  color: $dracula-pink;
+}
+
+// Dark mode specific overrides
+[data-bs-theme="dark"] .container-fluid {
+  background-color: $body-bg;
+}
