@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.7.30">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -39,14 +39,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-eafa195d53efa0fab264880c76d884d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-eafa195d53efa0fab264880c76d884d9.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-eafa195d53efa0fab264880c76d884d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7d9f9ec930f8e7e087d2757649195a24.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-7e21a911666433d019f02e0912e18a52.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-7d9f9ec930f8e7e087d2757649195a24.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-b5057f3398a202b36a08d66ee4de0ec1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -84,9 +84,10 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      page: 12,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -104,6 +105,49 @@ ul.task-list li input[type="checkbox"] {
   })
   </script>
 <style>html{ scroll-behavior: smooth; }</style>
+<style>
+.navbar-brand-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand .navbar-title {
+  display: inline-block;
+  margin-left: 0;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 767.98px) {
+  .navbar-brand .navbar-title {
+    font-size: 1.1rem;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Find the navbar brand element that contains the logo
+  const navbarBrand = document.querySelector('.navbar-brand');
+  
+  if (navbarBrand) {
+    // Create a span for the CHENIST text
+    const titleSpan = document.createElement('span');
+    titleSpan.className = 'navbar-title';
+    titleSpan.textContent = 'CHENIST';
+    
+    // Append the span after the logo
+    navbarBrand.appendChild(titleSpan);
+  }
+});
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
@@ -154,12 +198,15 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="scss/styles.css">
+<link rel="stylesheet" href="scss/academy.scss">
 <meta property="og:title" content="Academy – chen.ist">
 <meta property="og:description" content="Learn, collaborate, and grow with our educational programs">
+<meta property="og:image" content="https://github/com/chen.ist/assets/images/ai-ethics.jpg">
 <meta property="og:site_name" content="chen.ist">
 <meta name="twitter:title" content="Academy – chen.ist">
 <meta name="twitter:description" content="Learn, collaborate, and grow with our educational programs">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github/com/chen.ist/assets/images/ai-ethics.jpg">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -332,7 +379,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo">
+    <img src="./assets/images/logo-light.svg" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -355,24 +402,28 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-academy">    
         <li>
-    <a class="dropdown-item" href="./academy.html">
+    <a class="dropdown-item" href="./academy/overview.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./courses.html">
+    <a class="dropdown-item" href="./academy/courses.html">
  <span class="dropdown-text">Courses</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./events.html">
- <span class="dropdown-text">Event</span></a>
+    <a class="dropdown-item" href="./academy/events.html">
+ <span class="dropdown-text">Events</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./webinars.html">
+    <a class="dropdown-item" href="./academy/webinars.html">
  <span class="dropdown-text">Webinars</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./computerclub.html">
+    <a class="dropdown-item" href="./academy/computerclub.html">
  <span class="dropdown-text">Computer Club</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./academy/partnerships.html">
+ <span class="dropdown-text">Partnerships</span></a>
   </li>  
     </ul>
   </li>
@@ -446,7 +497,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Y29tbXVuaXR5">community <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29uZmVyZW5jZQ==">conference <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y3liZXJzZWN1cml0eQ==">cybersecurity <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGF0YS1wcml2YWN5">data-privacy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aGFja2F0aG9u">hackathon <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGludXg=">linux <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWVldHVw">meetup <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWVldHVwcw==">meetups <span class="quarto-category-count">(1)</span></div><div class="category" data-category="b3Blbi1zb3VyY2U=">open-source <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvZ3JhbW1pbmc=">programming <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2VjdXJpdHktYXdhcmVuZXNz">security-awareness <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3VtbWVyLXNjaG9vbA==">summer-school <span class="quarto-category-count">(1)</span></div><div class="category" data-category="d29ya3Nob3A=">workshop <span class="quarto-category-count">(1)</span></div><div class="category" data-category="d29ya3Nob3Bz">workshops <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(19)</span></div><div class="category" data-category="YWktbWw=">ai-ml <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YnVzaW5lc3M=">business <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y2xvdWQ=">cloud <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29tbXVuaXR5">community <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29uZmVyZW5jZQ==">conference <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y3liZXJzZWN1cml0eQ==">cybersecurity <span class="quarto-category-count">(2)</span></div><div class="category" data-category="ZGF0YS1wcml2YWN5">data-privacy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGV2ZWxvcG1lbnQ=">development <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aGFja2F0aG9u">hackathon <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGludXg=">linux <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWVldHVw">meetup <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWVldHVwcw==">meetups <span class="quarto-category-count">(1)</span></div><div class="category" data-category="b3Blbi1zb3VyY2U=">open-source <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvZ3JhbW1pbmc=">programming <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2VjdXJpdHktYXdhcmVuZXNz">security-awareness <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3VtbWVyLXNjaG9vbA==">summer-school <span class="quarto-category-count">(1)</span></div><div class="category" data-category="d29ya3Nob3A=">workshop <span class="quarto-category-count">(1)</span></div><div class="category" data-category="d29ya3Nob3Bz">workshops <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -471,180 +522,9 @@ window.Quarto = {
 </header>
 
 
-<div class="hero-section">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-8 offset-md-2 text-center">
-        <h1>chen.ist <span class="text-green">Academy</span></h1>
-        <p>Empowering through knowledge, experience, and innovation</p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="container page-section">
-<section id="welcome-to-our-academy" class="level2">
-<h2 class="anchored" data-anchor-id="welcome-to-our-academy">Welcome to our Academy</h2>
-<p>The chen.ist Academy is a comprehensive educational initiative dedicated to advancing technical knowledge, fostering innovation, and building a community of skilled professionals. Through our diverse range of courses, events, and projects, we aim to provide practical, hands-on learning experiences that prepare participants for the challenges of modern technology environments.</p>
-<div class="row mt-4">
-  <div class="col-md-3">
-    <div class="feature-card">
-      <div class="feature-card-icon text-center">
-        <i class="bi bi-book"></i>
-      </div>
-      <h3 class="text-center anchored">Courses</h3>
-      <p>Expert-led technical courses designed to build practical skills across various domains including cybersecurity, open source development, data privacy, and more.</p>
-      <div class="text-center mt-3">
-        <a href="./courses.html" class="btn btn-outline-primary">Browse Courses</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-3">
-    <div class="feature-card">
-      <div class="feature-card-icon text-center">
-        <i class="bi bi-calendar-event"></i>
-      </div>
-      <h3 class="text-center anchored">Events</h3>
-      <p>Interactive workshops, hackathons, and meetups that provide opportunities to apply skills, collaborate with peers, and explore emerging technologies.</p>
-      <div class="text-center mt-3">
-        <a href="./events.html" class="btn btn-outline-primary">View Events</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-3">
-    <div class="feature-card">
-      <div class="feature-card-icon text-center">
-        <i class="bi bi-gear"></i>
-      </div>
-      <h3 class="text-center anchored">Projects</h3>
-      <p>Hands-on projects that allow participants to apply their knowledge, build portfolios, and contribute to meaningful technical solutions.</p>
-      <div class="text-center mt-3">
-        <a href="./projects.html" class="btn btn-outline-primary">Explore Projects</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-3">
-    <div class="feature-card">
-      <div class="feature-card-icon text-center">
-        <i class="bi bi-people"></i>
-      </div>
-      <h3 class="text-center anchored">Computer Club</h3>
-      <p>A community-driven technology club that offers regular meetups, workshops, and collaborative learning opportunities for all ages and skill levels.</p>
-      <div class="text-center mt-3">
-        <a href="./computerclub.html" class="btn btn-outline-primary">Join the Club</a>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-<section id="learning-paths" class="level2">
-<h2 class="anchored" data-anchor-id="learning-paths">Learning Paths</h2>
-<p>Our academy offers structured learning paths designed to guide your educational journey based on your interests, goals, and current skill level.</p>
-<div class="row mt-5">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Cybersecurity Track</h3>
-      </div>
-      <div class="card-body">
-        <p>A comprehensive learning path for those interested in building careers in cybersecurity, from foundational concepts to specialized areas.</p>
-        <ul>
-          <li><strong>Courses:</strong> Practical Cybersecurity, Human Firewall, Data Protection</li>
-          <li><strong>Events:</strong> Cybersecurity Hackathon, Security Workshops</li>
-          <li><strong>Projects:</strong> Vulnerability Assessment, Security Tool Development</li>
-        </ul>
-        <a href="#" class="btn btn-primary">View Path Details</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Open Source Development Track</h3>
-      </div>
-      <div class="card-body">
-        <p>For developers looking to enhance their skills through contribution to open source projects and collaboration with the community.</p>
-        <ul>
-          <li><strong>Courses:</strong> Open Source Development, Unix/Linux Systems</li>
-          <li><strong>Events:</strong> Computer Club Meetups, Coding Workshops</li>
-          <li><strong>Projects:</strong> Open Source Contributions, Tool Development</li>
-        </ul>
-        <a href="#" class="btn btn-primary">View Path Details</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Innovation &amp; Maker Track</h3>
-      </div>
-      <div class="card-body">
-        <p>Designed for creators and innovators interested in hardware, IoT, and physical computing projects.</p>
-        <ul>
-          <li><strong>Courses:</strong> Hardware Fundamentals, IoT Security</li>
-          <li><strong>Events:</strong> Makers Workshop, Space Hackathon</li>
-          <li><strong>Projects:</strong> IoT Prototyping, Hardware Development</li>
-        </ul>
-        <a href="#" class="btn btn-primary">View Path Details</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Data Privacy &amp; Compliance Track</h3>
-      </div>
-      <div class="card-body">
-        <p>For professionals focused on data protection, privacy regulations, and implementing compliant systems.</p>
-        <ul>
-          <li><strong>Courses:</strong> Data Protection and Privacy, Security Awareness</li>
-          <li><strong>Events:</strong> Privacy Workshops, Compliance Seminars</li>
-          <li><strong>Projects:</strong> Privacy Impact Assessments, GDPR Compliance</li>
-        </ul>
-        <a href="#" class="btn btn-primary">View Path Details</a>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-<section id="filtering-academy-content" class="level2">
-<h2 class="anchored" data-anchor-id="filtering-academy-content">Filtering Academy Content</h2>
-<p>Use the filters below to narrow down content based on your interests:</p>
-</section>
-</div>
-<div class="cta-section">
-  <div class="container text-center">
-    <h2 class="anchored">Ready to begin your learning journey?</h2>
-    <p class="mb-4">Explore our courses, events, projects, and community to find the perfect starting point for your educational goals.</p>
-    <div class="row justify-content-center mt-4">
-      <div class="col-md-3">
-        <a href="./courses.html" class="cta-button">Browse Courses</a>
-      </div>
-      <br>
-      <br>
-      <div class="col-md-3">
-        <a href="./events.html" class="cta-button">View Events</a>
-      </div>
-      <br>
-      <br>
-      <div class="col-md-3">
-        <a href="./projects.html" class="cta-button">Explore Projects</a>
-      </div>
-      <br>
-      <br>
-      <div class="col-md-3">
-        <a href="./computerclub.html" class="cta-button">Join Computer Club</a>
-      </div>
-    </div>
-  </div>
-</div>
+<meta http-equiv="refresh" content="0;url=/academy/">
+<script>window.location.href = "/academy/";</script>
+<p>If you are not redirected automatically, please <a href="./academy/">click here</a> to access the Academy section.</p>
 
 
 
@@ -659,6 +539,12 @@ window.Quarto = {
       <option value="listing-title" data-direction="asc">
         Title
       </option>
+      <option value="listing-date-sort" data-direction="asc">
+        Date - Oldest
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Date - Newest
+      </option>
       <option value="listing-author" data-direction="asc">
         Author
       </option>
@@ -670,8 +556,137 @@ window.Quarto = {
     </div>
 </div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Y29tbXVuaXR5JTJDcHJvZ3JhbW1pbmclMkN3b3Jrc2hvcHMlMkNtZWV0dXBz" data-listing-file-modified-sort="1750921950915" data-listing-reading-time-sort="11" data-listing-word-count-sort="2175">
-<a href="./computerclub.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="0" data-listing-date-sort="1752958800000" data-listing-file-modified-sort="1751352012477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="742">
+<a href="./academy/events/pages/ai-ethics-hackathon.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./assets/images/ai-ethics.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+AI Ethics Hackathon
+</h5>
+<div class="card-text listing-description delink">
+The AI Ethics Hackathon is a weekend-long event focusing on the ethical dimensions of artificial intelligence development. Participants will explore responsible AI design…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Jul 20, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-date-sort="1754341200000" data-listing-file-modified-sort="1751351111464" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="747">
+<a href="./academy/webinars/pages/ai-ethics-developers.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./assets/images/ai-ethics.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+AI Ethics for Developers
+</h5>
+<div class="card-text listing-description delink">
+As AI systems become increasingly integrated into critical domains such as healthcare, finance, hiring, and criminal justice, the ethical implications of these technologies…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Aug 5, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1751351812968" data-listing-reading-time-sort="8" data-listing-word-count-sort="1528">
+<a href="./academy/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="assets/svg/learning.svg" alt="Courses" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Academy
+</h5>
+<div class="card-text listing-description delink">
+Empowering through knowledge, experience, and innovation
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1751371728487" data-listing-reading-time-sort="5" data-listing-word-count-sort="903">
+<a href="./academy/overview.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="assets/svgsmall/know.svg" alt="Studying illustration" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Academy Overview
+</h5>
+<div class="card-text listing-description delink">
+Education designed for the real world
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1751358181360" data-listing-reading-time-sort="11" data-listing-word-count-sort="2133">
+<a href="./academy/partnerships.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="assets/logo/ucv.jpg" alt="University of Craiova Logo" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Academy Partnerships
+</h5>
+<div class="card-text listing-description delink">
+Building a stronger educational ecosystem through collaboration
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="5" data-listing-date-sort="1752526800000" data-listing-file-modified-sort="1751351111464" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="650">
+<a href="./academy/webinars/pages/cloud-cost-optimization.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./assets/images/cloud-cost.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Cloud Cost Optimization
+</h5>
+<div class="card-text listing-description delink">
+As organizations continue to migrate workloads to the cloud, managing and optimizing costs has become a critical challenge. Many businesses find themselves facing unexpected…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Jul 15, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="6" data-categories="Y29tbXVuaXR5JTJDcHJvZ3JhbW1pbmclMkN3b3Jrc2hvcHMlMkNtZWV0dXBz" data-listing-file-modified-sort="1751351252110" data-listing-reading-time-sort="11" data-listing-word-count-sort="2175">
+<a href="./academy/computerclub.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
 <div class="card-body post-contents">
@@ -700,8 +715,8 @@ Building digital literacy and community through technology education
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Y3liZXJzZWN1cml0eSUyQ29wZW4tc291cmNlJTJDbGludXglMkNkYXRhLXByaXZhY3klMkNzZWN1cml0eS1hd2FyZW5lc3M=" data-listing-file-modified-sort="1750877703102" data-listing-reading-time-sort="12" data-listing-word-count-sort="2324">
-<a href="./courses.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="7" data-categories="Y3liZXJzZWN1cml0eSUyQ29wZW4tc291cmNlJTJDbGludXglMkNkYXRhLXByaXZhY3klMkNzZWN1cml0eS1hd2FyZW5lc3M=" data-listing-file-modified-sort="1751351330343" data-listing-reading-time-sort="12" data-listing-word-count-sort="2324">
+<a href="./academy/courses.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
 <div class="card-body post-contents">
@@ -732,8 +747,75 @@ Enhance your skills with our expert-led training programs
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="aGFja2F0aG9uJTJDd29ya3Nob3AlMkNjb25mZXJlbmNlJTJDbWVldHVwJTJDc3VtbWVyLXNjaG9vbA==" data-listing-file-modified-sort="1750923624043" data-listing-reading-time-sort="16" data-listing-word-count-sort="3164">
-<a href="./events.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="8" data-listing-date-sort="1749934800000" data-listing-file-modified-sort="1751351089439" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="651">
+<a href="./academy/events/pages/cybersecurity-hackathon.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./assets/images/cyber-security.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Cybersecurity Hackathon
+</h5>
+<div class="card-text listing-description delink">
+The Cybersecurity Hackathon is a 48-hour challenge where participants work in teams to solve real-world cybersecurity problems. Open to security enthusiasts of all levels…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Jun 15, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="9" data-listing-date-sort="1760043600000" data-listing-file-modified-sort="1751351111464" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="721">
+<a href="./academy/webinars/pages/digital-transformation.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./assets/images/digital-transformation.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Digital Transformation Strategy
+</h5>
+<div class="card-text listing-description delink">
+Digital transformation has moved beyond buzzword status to become an essential business imperative. However, many organizations struggle to develop and implement effective…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Oct 10, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="10" data-listing-file-modified-sort="1751351923009" data-listing-reading-time-sort="1" data-listing-word-count-sort="146">
+<a href="./academy/events/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="assets/images/space-hackathon.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Events
+</h5>
+<div class="card-text listing-description delink">
+Welcome to our events listing page. Here you can browse all upcoming and past events organized by chen.ist. Use the filters to find events by category, date, or location.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="11" data-categories="aGFja2F0aG9uJTJDd29ya3Nob3AlMkNjb25mZXJlbmNlJTJDbWVldHVwJTJDc3VtbWVyLXNjaG9vbA==" data-listing-file-modified-sort="1751351876341" data-listing-reading-time-sort="16" data-listing-word-count-sort="3164">
+<a href="./academy/events.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
 <div class="card-body post-contents">
@@ -764,16 +846,125 @@ Connect, learn, and innovate at our events
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1744391797124" data-listing-reading-time-sort="1" data-listing-word-count-sort="19">
-<a href="./projects.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="12" data-listing-date-sort="1757019600000" data-listing-file-modified-sort="1751351089439" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="714">
+<a href="./academy/events/pages/makers-workshop.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/makers-workshop.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Makers Workshop
+</h5>
+<div class="card-text listing-description delink">
+The Makers Workshop is a full-day, hands-on event for hardware enthusiasts, bringing together makers, DIY experts, and hardware hackers to build projects and share…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Sep 5, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="13" data-listing-date-sort="1758315600000" data-listing-file-modified-sort="1751351111464" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="689">
+<a href="./academy/webinars/pages/modern-web-development.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/web-development.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Modern Web Development
+</h5>
+<div class="card-text listing-description delink">
+The landscape of web development is constantly evolving, with new tools, frameworks, and best practices emerging regularly. Staying current with these changes is essential…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Sep 20, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="14" data-listing-date-sort="1760043600000" data-listing-file-modified-sort="1751351089439" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="773">
+<a href="./academy/events/pages/space-hackathon.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/space-hackathon.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Space Hackathon
+</h5>
+<div class="card-text listing-description delink">
+The Space Hackathon is a three-day event focusing on developing innovative solutions for space exploration, satellite technology, and Earth observation. Participants will…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Oct 10, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="15" data-listing-date-sort="1753995600000" data-listing-file-modified-sort="1751351089439" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="525">
+<a href="./academy/events/pages/summer-school-2025.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/summer-school.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Summer School 2025
+</h5>
+<div class="card-text listing-description delink">
+The Summer School 2025 is an intensive two-week program focused on cutting-edge technologies and practical skills development. Perfect for students and professionals looking…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Aug 1, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="16" data-categories="Y3liZXJzZWN1cml0eSUyQ2Nsb3VkJTJDYWktbWwlMkNkZXZlbG9wbWVudCUyQ2J1c2luZXNz" data-listing-file-modified-sort="1751351912660" data-listing-reading-time-sort="15" data-listing-word-count-sort="2860">
+<a href="./academy/webinars.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-Projects
+Webinars
 </h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y3liZXJzZWN1cml0eQ=='); return false;">cybersecurity</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y2xvdWQ='); return false;">cloud</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YWktbWw='); return false;">ai-ml</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZGV2ZWxvcG1lbnQ='); return false;">development</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YnVzaW5lc3M='); return false;">business</div>
+
+</div>
 <div class="card-text listing-description delink">
-If you are not redirected automatically, follow this link to the projects page.
+Expert knowledge delivered directly to your screen
 </div>
 <div class="card-attribution card-text-small start">
 <div class="listing-author">
@@ -783,8 +974,54 @@ If you are not redirected automatically, follow this link to the projects page.
 </div>
 </div></a>
 </div>
+<div class="g-col-1" data-index="17" data-listing-file-modified-sort="1751351924342" data-listing-reading-time-sort="1" data-listing-word-count-sort="153">
+<a href="./academy/webinars/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img data-src="assets/images/digital-transformation.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Webinars
+</h5>
+<div class="card-text listing-description delink">
+Welcome to our webinars listing page. Here you can browse all upcoming and past webinars hosted by chen.ist. Use the filters to find webinars by category, date, or presenter.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="18" data-listing-date-sort="1749502800000" data-listing-file-modified-sort="1751352022455" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="649">
+<a href="./academy/webinars/pages/zero-trust-security.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/cyber-security.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Zero Trust Security Architecture
+</h5>
+<div class="card-text listing-description delink">
+In this comprehensive webinar, we’ll explore the principles and implementation strategies of Zero Trust security architecture. As traditional perimeter-based security models…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Jun 10, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
+<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -871,7 +1108,7 @@ If you are not redirected automatically, follow this link to the projects page.
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/chen\.ist");
+        var filterRegex = new RegExp("https:\/\/github\/com\/chen\.ist");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1219,54 +1456,516 @@ If you are not redirected automatically, follow this link to the projects page.
 </div>
   </div>
 </footer>
-<footer class="footer mt-5 py-4">
+<footer class="footer mt-5 py-3 cybersecurity-footer">
     <div class="container">
-        <div class="row">
-            <div class="col-md-4 mb-3">
-                <h5>About chen.ist</h5>
-                <p class="text-muted">
-                    Innovative technology solutions for the modern world.
-                    Specializing in cybersecurity, cloud architecture, and
-                    digital transformation.
-                </p>
-            </div>
-            <div class="col-md-4 mb-3">
-                <h5>Quick Links</h5>
-                <ul class="list-unstyled">
-                    <li><a href="./services.html">Services</a></li>
-                    <li><a href="./academy.html">Academy</a></li>
-                    <li><a href="./blog.html">Blog</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4 mb-3">
-                <h5>Connect</h5>
-                <div class="d-flex gap-3 mb-2">
-                    <a href="https://github.com/chenist" aria-label="GitHub"><i class="bi bi-github fs-4"></i></a>
-                    <a href="https://linkedin.com/in/chenistsec" aria-label="LinkedIn"><i class="bi bi-linkedin fs-4"></i></a>
-                    <a href="https://twitter.com/chenistsec" aria-label="Twitter"><i class="bi bi-twitter-x fs-4"></i></a>
+        <div class="row mb-3">
+            <!-- Company Logo and Brief -->
+            <div class="col-md-4 mb-2">
+                <div class="d-flex align-items-center">
+                    <h4 class="footer-logo mb-0 me-2">chen<span class="text-accent">.ist</span></h4>
+                    <div class="secure-badge ms-2">
+                        <i class="bi bi-shield-lock-fill"></i> Secure
+                    </div>
                 </div>
-                <p class="text-muted small">
-                    Email: <a href="mailto:office@chen.ist">office@chen.ist</a>
+                <p class="footer-description small mt-2 mb-0">
+                    Enterprise cybersecurity solutions with zero-trust implementation and continuous monitoring.
                 </p>
+            </div>
+            
+            <!-- Tabs Navigation -->
+            <div class="col-md-8 mb-2">
+                <div class="footer-tabs">
+                    <ul class="nav nav-tabs footer-nav-tabs" id="footerTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="solutions-tab" data-bs-toggle="tab" data-bs-target="#solutions" type="button" role="tab">
+                                <i class="bi bi-shield-fill"></i> Solutions
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="academy-tab" data-bs-toggle="tab" data-bs-target="#academy" type="button" role="tab">
+                                <i class="bi bi-mortarboard-fill"></i> Academy
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab">
+                                <i class="bi bi-envelope-fill"></i> Contact
+                            </button>
+                        </li>
+                    </ul>
+                    
+                    <!-- Tab Content -->
+                    <div class="tab-content pt-2" id="footerTabContent">
+                        <!-- Solutions Tab -->
+                        <div class="tab-pane fade show active" id="solutions" role="tabpanel">
+                            <div class="row">
+                                <div class="col-6 col-md-3">
+                                    <a href="./services.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Security Services
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="./services.html#consulting" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Consulting
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="./services.html#compliance" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Compliance
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="./services.html#incident-response" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Incident Response
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Academy Tab -->
+                        <div class="tab-pane fade" id="academy" role="tabpanel">
+                            <div class="row">
+                                <div class="col-6 col-md-3">
+                                    <a href="./academy/courses.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Courses
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="./academy/events.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Events
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="./academy/webinars.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Webinars
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="./academy/computerclub.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Computer Club
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Contact Tab -->
+                        <div class="tab-pane fade" id="contact" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-1">
+                                        <i class="bi bi-envelope-fill contact-icon"></i>
+                                        <a href="mailto:office@chen.ist" class="footer-link">office@chen.ist</a>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-shield-fill-check contact-icon"></i>
+                                        <span class="small">SOC Available 24/7</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-1">
+                                        <i class="bi bi-geo-alt-fill contact-icon"></i>
+                                        <span class="small">Stockholm | Craiova | Bucharest</span>
+                                    </div>
+                                    <div class="social-icons">
+                                        <a href="https://github.com/chenist" class="social-icon" aria-label="GitHub">
+                                            <i class="bi bi-github"></i>
+                                        </a>
+                                        <a href="https://linkedin.com/in/chenistsec" class="social-icon" aria-label="LinkedIn">
+                                            <i class="bi bi-linkedin"></i>
+                                        </a>
+                                        <a href="https://twitter.com/chenistsec" class="social-icon" aria-label="Twitter">
+                                            <i class="bi bi-twitter-x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <hr>
-        <div class="row">
+        
+        <div class="footer-divider">
+            <div class="cyber-line"></div>
+        </div>
+        
+        <div class="row footer-bottom py-1">
             <div class="col-md-6">
-                <p class="small text-muted">
-                    © 2025 chen.ist. All rights reserved.
-                </p>
+                <div class="d-flex align-items-center">
+                    <div class="security-pulse"></div>
+                    <p class="mb-0 ms-2 copyright">
+                        © 2025 chen.ist <span class="d-none d-md-inline">| Secure. Vigilant. Resilient.</span>
+                    </p>
+                </div>
             </div>
             <div class="col-md-6 text-md-end">
-                <p class="small text-muted">
-                    <a href="./privacy.html">Privacy Policy</a> |
-                    <a href="./terms.html">Terms of Service</a>
-                </p>
+                <div class="footer-bottom-links">
+                    <a href="./privacy.html">Privacy</a>
+                    <span class="separator">|</span>
+                    <a href="./terms.html">Terms</a>
+                    <span class="separator">|</span>
+                    <a href="./contact.html" class="btn-report-incident">
+                        <i class="bi bi-exclamation-triangle-fill"></i> Report Incident
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </footer>
+
+<style>
+.cybersecurity-footer {
+    background-color: #0f1923;
+    color: #e6e6e6;
+    border-top: 3px solid #18bc9c;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+/* Change accent colors for academy section */
+.academy-section .cybersecurity-footer {
+    border-top-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer::before {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #F5A623 20%, 
+        #F5A623 40%, 
+        transparent 50%,
+        transparent 60%,
+        #F5A623 80%,
+        transparent 100%
+    );
+}
+
+.academy-section .cybersecurity-footer .text-accent,
+.academy-section .cybersecurity-footer .contact-icon,
+.academy-section .cybersecurity-footer .footer-heading::after,
+.academy-section .cybersecurity-footer .social-icon:hover,
+.academy-section .cybersecurity-footer .footer-link:hover,
+.academy-section .cybersecurity-footer .contact-item a:hover,
+.academy-section .cybersecurity-footer .footer-bottom-links a:hover,
+.academy-section .cybersecurity-footer .nav-link.active {
+    color: #F5A623 !important;
+}
+
+.academy-section .cybersecurity-footer .secure-badge {
+    background-color: rgba(245, 166, 35, 0.15);
+    color: #F5A623;
+    border-left-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .social-icon:hover {
+    background-color: #F5A623;
+    color: #0f1923 !important;
+}
+
+.academy-section .cybersecurity-footer .cyber-line {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(245, 166, 35, 0.3) 10%, 
+        rgba(245, 166, 35, 0.5) 50%, 
+        rgba(245, 166, 35, 0.3) 90%, 
+        transparent 100%
+    );
+}
+
+.academy-section .cybersecurity-footer .cyber-line::before,
+.academy-section .cybersecurity-footer .cyber-line::after {
+    background-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .security-pulse {
+    background-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .security-pulse::before {
+    background-color: rgba(245, 166, 35, 0.3);
+}
+
+.cybersecurity-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #18bc9c 20%, 
+        #18bc9c 40%, 
+        transparent 50%,
+        transparent 60%,
+        #18bc9c 80%,
+        transparent 100%
+    );
+    opacity: 0.4;
+}
+
+.cybersecurity-footer .footer-brand {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.cybersecurity-footer .footer-logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Source Code Pro', monospace;
+    color: white;
+}
+
+.cybersecurity-footer .text-accent {
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .secure-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(24, 188, 156, 0.15);
+    color: #18bc9c;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-left: 2px solid #18bc9c;
+}
+
+.cybersecurity-footer .footer-description {
+    color: #9ba6b2;
+    line-height: 1.4;
+}
+
+.cybersecurity-footer .footer-tabs {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.cybersecurity-footer .footer-nav-tabs {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cybersecurity-footer .nav-tabs .nav-link {
+    color: #9ba6b2;
+    border: none;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    background-color: transparent;
+}
+
+.cybersecurity-footer .nav-tabs .nav-link:hover {
+    color: #e6e6e6;
+    border: none;
+}
+
+.cybersecurity-footer .nav-tabs .nav-link.active {
+    color: #18bc9c;
+    background-color: rgba(24, 188, 156, 0.1);
+    border: none;
+}
+
+.cybersecurity-footer .tab-content {
+    min-height: 60px;
+}
+
+.cybersecurity-footer .footer-link {
+    color: #9ba6b2;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.cybersecurity-footer .footer-link:hover {
+    color: #18bc9c;
+    transform: translateX(3px);
+}
+
+.cybersecurity-footer .icon-small {
+    font-size: 0.75rem;
+    margin-right: 0.25rem;
+}
+
+.cybersecurity-footer .contact-icon {
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .social-icons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.cybersecurity-footer .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e6e6e6;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.cybersecurity-footer .social-icon:hover {
+    background-color: #18bc9c;
+    color: #0f1923;
+    transform: translateY(-2px);
+}
+
+.cybersecurity-footer .footer-divider {
+    position: relative;
+    height: 12px;
+    margin: 0.5rem 0;
+}
+
+.cybersecurity-footer .cyber-line {
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(24, 188, 156, 0.3) 10%, 
+        rgba(24, 188, 156, 0.5) 50%, 
+        rgba(24, 188, 156, 0.3) 90%, 
+        transparent 100%
+    );
+    position: relative;
+}
+
+.cybersecurity-footer .cyber-line::before,
+.cybersecurity-footer .cyber-line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 8px;
+    height: 1px;
+    background-color: #18bc9c;
+    animation: blink 2s infinite;
+}
+
+.cybersecurity-footer .cyber-line::before {
+    left: 25%;
+}
+
+.cybersecurity-footer .cyber-line::after {
+    right: 25%;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
+
+.cybersecurity-footer .security-pulse {
+    width: 8px;
+    height: 8px;
+    background-color: #18bc9c;
+    border-radius: 50%;
+    position: relative;
+}
+
+.cybersecurity-footer .security-pulse::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 50%;
+    background-color: rgba(24, 188, 156, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    70% { transform: scale(1.5); opacity: 0; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+.cybersecurity-footer .copyright {
+    color: #9ba6b2;
+    font-size: 0.8rem;
+}
+
+.cybersecurity-footer .footer-bottom-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.cybersecurity-footer .footer-bottom-links a {
+    color: #9ba6b2;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.2s ease;
+}
+
+.cybersecurity-footer .footer-bottom-links a:hover {
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .separator {
+    margin: 0 0.5rem;
+    color: #4a5568;
+    font-size: 0.8rem;
+}
+
+.cybersecurity-footer .btn-report-incident {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(220, 53, 69, 0.15);
+    color: #dc3545 !important;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease !important;
+}
+
+.cybersecurity-footer .btn-report-incident:hover {
+    background-color: rgba(220, 53, 69, 0.3);
+}
+
+.cybersecurity-footer .btn-report-incident i {
+    margin-right: 0.3rem;
+}
+
+@media (max-width: 767px) {
+    .cybersecurity-footer .footer-bottom-links {
+        justify-content: flex-start;
+        margin-top: 0.5rem;
+    }
+    
+    .cybersecurity-footer .btn-report-incident {
+        margin-top: 0.5rem;
+        margin-left: 0;
+    }
+    
+    .cybersecurity-footer .separator:nth-of-type(2) {
+        display: none;
+    }
+}
+</style>
+
+<script>
+// Initialize Bootstrap tabs if not already initialized
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof bootstrap !== 'undefined') {
+        var tabElList = [].slice.call(document.querySelectorAll('#footerTabs .nav-link'));
+        tabElList.map(function(tabEl) {
+            return new bootstrap.Tab(tabEl);
+        });
+    }
+});
+</script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     // Function to toggle dark/light mode

@@ -8,12 +8,14 @@ execute:
 # Custom build steps
 pre-render:
   - "cd events && ./render-pdfs.sh"
+  - "cd academy/events && ./render-pdfs.sh"
+  - "cd academy/webinars && ./render-pdfs.sh"
   - "cd projects/manuscripts && quarto render"
 
 website:
   title: "chen.ist"
   favicon: assets/images/favicon.png
-  site-url: https://chen.ist
+  site-url: https://github/com/chen.ist
   description: "Innovative technology & education"
   twitter-card: true
   open-graph: true
@@ -30,16 +32,18 @@ website:
         text: Services
       - text: Academy
         menu:
-          - href: academy.qmd
+          - href: academy/overview.qmd
             text: Overview
-          - href: courses.qmd
+          - href: academy/courses.qmd
             text: Courses
-          - href: events.qmd
-            text: Event
-          - href: webinars.qmd
+          - href: academy/events.qmd
+            text: Events
+          - href: academy/webinars.qmd
             text: Webinars
-          - href: computerclub.qmd
+          - href: academy/computerclub.qmd
             text: Computer Club
+          - href: academy/partnerships.qmd
+            text: Partnerships
       - href: blog.qmd
         text: Blogs
       - href: resources/index.qmd
@@ -70,8 +74,8 @@ website:
         
   page-footer:
     border: false
-    background: "#323642"
-    foreground: "#323642"
+    background: "transparent"
+    foreground: "#e6e6e6"
     left: " "
     center: " "
     right: " "
@@ -81,7 +85,7 @@ format:
     theme:
       light: [flatly, scss/light.scss]
       dark: scss/dark.scss
-    css: scss/styles.css
+    css: [scss/styles.css, scss/academy.scss]
     code-link: true
     link-external-icon: true
     link-external-newwindow: true
@@ -94,11 +98,12 @@ format:
     html-math-method: katex
     from: markdown+raw_html
     include-in-header:
-      text: |
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Source+Code+Pro&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+      - text: |
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Source+Code+Pro&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+      - file: includes/custom-header.html
     include-after-body: 
       - text: |
           <script>

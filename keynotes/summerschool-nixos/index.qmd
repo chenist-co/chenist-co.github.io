@@ -5,7 +5,7 @@ date: "2025-06-25"
 author: "Open4Tech Summer School"
 description: "A 4-hour specialized course introducing cybersecurity students to NixOS as a powerful platform for building secure, reproducible computing environments."
 categories: [security, nixos, linux, infrastructure]
-image: "/assets/images/1_744x744.jpg"
+image: "/assets/svg/operating_system.svg"
 format:
   revealjs:
     theme: dark
@@ -33,7 +33,7 @@ format:
     multiplex: false
 ---
 
-# NixOS for Cybersecurity 2025 {.title-slide background-image="/assets/images/1_744x744.jpg" background-size="cover"}
+# NixOS for Cybersecurity 2025 {.title-slide background-image="/assets/svg/operating_system.svg" background-size="cover"}
 
 ## Welcome to Secure Computing {.center}
 
@@ -112,11 +112,11 @@ format:
 - **Real-world scenarios**
 :::
 
-# Session 1: NixOS Fundamentals {.center background-image="/assets/images/2_744x744.jpg" background-size="cover"}
+# Session 1: NixOS Fundamentals {.center background-image="/assets/svg/secure_data.svg" background-size="cover"}
 
 ---
 
-## What is NixOS? {.center background-image="/assets/images/3_744x744.jpg" background-size="cover"}
+## What is NixOS? {.center background-image="/assets/svg/code_review.svg" background-size="cover"}
 
 > "A Linux distribution built on the Nix package manager"
 
@@ -174,7 +174,7 @@ format:
 
 ---
 
-## Declarative Configuration {.center background-image="/assets/images/4_744x744.jpg" background-size="cover"}
+## Declarative Configuration {.center background-image="/assets/svg/server.svg" background-size="cover"}
 
 > "Infrastructure as Code for operating systems"
 
@@ -253,7 +253,7 @@ format:
 
 ---
 
-## Package Management with Nix {.center background-image="/assets/images/1_744x744.jpg" background-size="cover"}
+## Package Management with Nix {.center background-image="/assets/svg/operating_system.svg" background-size="cover"}
 
 > "Purely functional package management"
 
@@ -330,7 +330,7 @@ pkgs.mkShell {
 
 ---
 
-## System Hardening Basics {.center background-image="/assets/images/2_744x744.jpg" background-size="cover"}
+## System Hardening Basics {.center background-image="/assets/svg/secure_data.svg" background-size="cover"}
 
 > "Security by default configuration"
 
@@ -450,11 +450,11 @@ services.openssh = {
 - Security testing environments
 - Deployment strategies
 
-# Session 2: Advanced Security {.center background-image="/assets/images/3_744x744.jpg" background-size="cover"}
+# Session 2: Advanced Security {.center background-image="/assets/svg/code_review.svg" background-size="cover"}
 
 ---
 
-## Advanced Security Configurations {.center background-image="/assets/images/4_744x744.jpg" background-size="cover"}
+## Advanced Security Configurations {.center background-image="/assets/svg/server.svg" background-size="cover"}
 
 > "Enterprise-grade security hardening"
 
@@ -539,7 +539,7 @@ boot.loader.systemd-boot.secureBoot = true;
 
 ---
 
-## Network Isolation & Sandboxing {.center background-image="/assets/images/1_744x744.jpg" background-size="cover"}
+## Network Isolation & Sandboxing {.center background-image="/assets/svg/operating_system.svg" background-size="cover"}
 
 > "Zero-trust network architecture"
 
@@ -637,7 +637,7 @@ systemd.services.custom-security-tool = {
 
 ---
 
-## Security Testing Environments {.center background-image="/assets/images/2_744x744.jpg" background-size="cover"}
+## Security Testing Environments {.center background-image="/assets/svg/secure_data.svg" background-size="cover"}
 
 > "Reproducible penetration testing labs"
 
@@ -757,7 +757,7 @@ systemd.timers.security-scan = {
 
 ---
 
-## Deployment Strategies {.center background-image="/assets/images/3_744x744.jpg" background-size="cover"}
+## Deployment Strategies {.center background-image="/assets/svg/code_review.svg" background-size="cover"}
 
 > "Scaling secure configurations"
 
@@ -785,17 +785,20 @@ systemd.timers.security-scan = {
 {
   network.description = "Security lab network";
   
-  security-gateway = { config, pkgs, ... }: {
+  security-gateway = { config, pkgs, ... }:
+  {
     deployment.targetHost = "10.0.1.1";
     imports = [ ./modules/gateway.nix ];
   };
   
-  penetration-lab = { config, pkgs, ... }: {
+  penetration-lab = { config, pkgs, ... }:
+  {
     deployment.targetHost = "10.0.1.10";
     imports = [ ./modules/pentest-lab.nix ];
   };
   
-  vulnerable-targets = { config, pkgs, ... }: {
+  vulnerable-targets = { config, pkgs, ... }:
+  {
     deployment.targetHost = "10.0.1.20";
     imports = [ ./modules/vulnerable-apps.nix ];
   };
@@ -876,7 +879,7 @@ system.autoUpgrade = {
 
 ---
 
-## Real-World Scenarios {.center background-image="/assets/images/4_744x744.jpg" background-size="cover"}
+## Real-World Scenarios {.center background-image="/assets/svg/server.svg" background-size="cover"}
 
 > "Applying NixOS in security operations"
 
@@ -942,7 +945,7 @@ system.autoUpgrade = {
 
 ---
 
-## Building Security Habits {.center background-image="/assets/images/1_744x744.jpg" background-size="cover"}
+## Building Security Habits {.center background-image="/assets/svg/operating_system.svg" background-size="cover"}
 
 > "NixOS best practices for security"
 
@@ -1060,7 +1063,7 @@ system.autoUpgrade = {
 
 ---
 
-## Course Completion {.center background-image="/assets/images/2_744x744.jpg" background-size="cover"}
+## Course Completion {.center background-image="/assets/svg/secure_data.svg" background-size="cover"}
 
 ### Congratulations! 🎓
 
@@ -1098,7 +1101,7 @@ Open4Tech Summer School
 
 ---
 
-## Final Exercise: Configuration Challenge {.center background-image="/assets/images/3_744x744.jpg" background-size="cover"}
+## Final Exercise: Configuration Challenge {.center background-image="/assets/svg/code_review.svg" background-size="cover"}
 
 ### Create your security lab configuration:
 

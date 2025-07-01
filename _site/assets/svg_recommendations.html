@@ -1,0 +1,2188 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.30">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>svg_recommendations – chen.ist</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/images/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-b5057f3398a202b36a08d66ee4de0ec1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+.navbar-brand-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand .navbar-title {
+  display: inline-block;
+  margin-left: 0;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 767.98px) {
+  .navbar-brand .navbar-title {
+    font-size: 1.1rem;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Find the navbar brand element that contains the logo
+  const navbarBrand = document.querySelector('.navbar-brand');
+  
+  if (navbarBrand) {
+    // Create a span for the CHENIST text
+    const titleSpan = document.createElement('span');
+    titleSpan.className = 'navbar-title';
+    titleSpan.textContent = 'CHENIST';
+    
+    // Append the span after the logo
+    navbarBrand.appendChild(titleSpan);
+  }
+});
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+<link rel="stylesheet" href="../scss/styles.css">
+<link rel="stylesheet" href="../scss/academy.scss">
+<meta property="og:title" content="chen.ist">
+<meta property="og:description" content="Innovative technology &amp; education">
+<meta property="og:site_name" content="chen.ist">
+<meta name="twitter:title" content="chen.ist">
+<meta name="twitter:description" content="Innovative technology &amp; education">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/images/logo-light.svg" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../services.html"> 
+<span class="menu-text">Services</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-academy" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Academy</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-academy">    
+        <li>
+    <a class="dropdown-item" href="../academy/overview.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/courses.html">
+ <span class="dropdown-text">Courses</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/events.html">
+ <span class="dropdown-text">Events</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/webinars.html">
+ <span class="dropdown-text">Webinars</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/computerclub.html">
+ <span class="dropdown-text">Computer Club</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/partnerships.html">
+ <span class="dropdown-text">Partnerships</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources/index.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../about/index.html">
+ <span class="dropdown-text">About</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/csr.html">
+ <span class="dropdown-text">CSR</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/community.html">
+ <span class="dropdown-text">Community</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-lang" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Lang</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-lang">    
+        <li>
+    <a class="dropdown-item" href="../index.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ro/index.html">
+ <span class="dropdown-text">Romanian</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../sv/index.html">
+ <span class="dropdown-text">Swedish</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../de/index.html">
+ <span class="dropdown-text">German</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#svg-recommendations" id="toc-svg-recommendations" class="nav-link active" data-scroll-target="#svg-recommendations">SVG Recommendations</a>
+  <ul class="collapse">
+  <li><a href="#technology-development" id="toc-technology-development" class="nav-link" data-scroll-target="#technology-development">Technology &amp; Development</a></li>
+  <li><a href="#business-finance" id="toc-business-finance" class="nav-link" data-scroll-target="#business-finance">Business &amp; Finance</a></li>
+  <li><a href="#education-learning" id="toc-education-learning" class="nav-link" data-scroll-target="#education-learning">Education &amp; Learning</a></li>
+  <li><a href="#communication-collaboration" id="toc-communication-collaboration" class="nav-link" data-scroll-target="#communication-collaboration">Communication &amp; Collaboration</a></li>
+  <li><a href="#general-lifestyle" id="toc-general-lifestyle" class="nav-link" data-scroll-target="#general-lifestyle">General &amp; Lifestyle</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+
+<section id="svg-recommendations" class="level1">
+<h1>SVG Recommendations</h1>
+<p>This document provides a categorized list of SVG files from the <code>assets/svg</code> directory to help you choose appropriate illustrations for your website content.</p>
+<section id="technology-development" class="level2">
+<h2 class="anchored" data-anchor-id="technology-development">Technology &amp; Development</h2>
+<p>These SVGs are suitable for topics related to software, hardware, and IT infrastructure. Use them in blog posts, courses, and keynotes about programming, cybersecurity, data science, and more.</p>
+<ul>
+<li><code>3d_modeling.svg</code></li>
+<li><code>add_files.svg</code></li>
+<li><code>adjustments.svg</code></li>
+<li><code>algolia.svg</code></li>
+<li><code>alien_science.svg</code></li>
+<li><code>all_the_data.svg</code></li>
+<li><code>android.svg</code></li>
+<li><code>app_installation.svg</code></li>
+<li><code>artificial_intelligence.svg</code></li>
+<li><code>authentication.svg</code></li>
+<li><code>bitcoin_p2p.svg</code></li>
+<li><code>bitcoin.svg</code></li>
+<li><code>bookmarks.svg</code></li>
+<li><code>browser_stats.svg</code></li>
+<li><code>buffer.svg</code></li>
+<li><code>bug_fixing.svg</code></li>
+<li><code>building_blocks.svg</code></li>
+<li><code>click_here.svg</code></li>
+<li><code>cloud_hosting.svg</code></li>
+<li><code>cloud_sync.svg</code></li>
+<li><code>code_review.svg</code></li>
+<li><code>code_typing.svg</code></li>
+<li><code>coding.svg</code></li>
+<li><code>connected_world.svg</code></li>
+<li><code>connected.svg</code></li>
+<li><code>contrast.svg</code></li>
+<li><code>control_panel.svg</code></li>
+<li><code>creation_process.svg</code></li>
+<li><code>creation.svg</code></li>
+<li><code>creative_experiment.svg</code></li>
+<li><code>crypto_flowers.svg</code></li>
+<li><code>dashboard.svg</code></li>
+<li><code>data_points.svg</code></li>
+<li><code>data.svg</code></li>
+<li><code>deconstructed.svg</code></li>
+<li><code>design_inspiration.svg</code></li>
+<li><code>design_process.svg</code></li>
+<li><code>design_thinking.svg</code></li>
+<li><code>design_tools.svg</code></li>
+<li><code>developer_activity.svg</code></li>
+<li><code>development.svg</code></li>
+<li><code>devices.svg</code></li>
+<li><code>digital_currency.svg</code></li>
+<li><code>domain_names.svg</code></li>
+<li><code>download.svg</code></li>
+<li><code>editable.svg</code></li>
+<li><code>elements.svg</code></li>
+<li><code>ether.svg</code></li>
+<li><code>ethereum.svg</code></li>
+<li><code>everyday_design.svg</code></li>
+<li><code>experience_design.svg</code></li>
+<li><code>fast_loading.svg</code></li>
+<li><code>features_overview.svg</code></li>
+<li><code>file_bundle.svg</code></li>
+<li><code>file_searching.svg</code></li>
+<li><code>file_synchronization.svg</code></li>
+<li><code>filter.svg</code></li>
+<li><code>fingerprint.svg</code></li>
+<li><code>firmware.svg</code></li>
+<li><code>folder.svg</code></li>
+<li><code>follow_me_drone.svg</code></li>
+<li><code>forgot_password.svg</code></li>
+<li><code>gdpr.svg</code></li>
+<li><code>image_folder.svg</code></li>
+<li><code>image_upload.svg</code></li>
+<li><code>images.svg</code></li>
+<li><code>in_sync.svg</code></li>
+<li><code>insert_block.svg</code></li>
+<li><code>interaction_design.svg</code></li>
+<li><code>internet_on_the_go.svg</code></li>
+<li><code>javascript_frameworks.svg</code></li>
+<li><code>landing_page.svg</code></li>
+<li><code>laravel_and_vue.svg</code></li>
+<li><code>load_more.svg</code></li>
+<li><code>loading.svg</code></li>
+<li><code>login.svg</code></li>
+<li><code>maintenance.svg</code></li>
+<li><code>media_player.svg</code></li>
+<li><code>memory_storage.svg</code></li>
+<li><code>mobile_app.svg</code></li>
+<li><code>mobile_apps.svg</code></li>
+<li><code>mobile_browsers.svg</code></li>
+<li><code>mobile_login.svg</code></li>
+<li><code>mobile_testing.svg</code></li>
+<li><code>mobile.svg</code></li>
+<li><code>monitor.svg</code></li>
+<li><code>my_password.svg</code></li>
+<li><code>navigation.svg</code></li>
+<li><code>no_data.svg</code></li>
+<li><code>not_found.svg</code></li>
+<li><code>online_page.svg</code></li>
+<li><code>online_world.svg</code></li>
+<li><code>online.svg</code></li>
+<li><code>open_source.svg</code></li>
+<li><code>operating_system.svg</code></li>
+<li><code>page_not_found.svg</code></li>
+<li><code>pair_programming.svg</code></li>
+<li><code>palette.svg</code></li>
+<li><code>pen_tool.svg</code></li>
+<li><code>personal_data.svg</code></li>
+<li><code>personal_settings.svg</code></li>
+<li><code>personalization.svg</code></li>
+<li><code>preferences.svg</code></li>
+<li><code>processing.svg</code></li>
+<li><code>programmer.svg</code></li>
+<li><code>programming.svg</code></li>
+<li><code>prototyping_process.svg</code></li>
+<li><code>qa_engineers.svg</code></li>
+<li><code>react.svg</code></li>
+<li><code>real-time_sync.svg</code></li>
+<li><code>responsive.svg</code></li>
+<li><code>responsiveness.svg</code></li>
+<li><code>robotics.svg</code></li>
+<li><code>safe.svg</code></li>
+<li><code>search_engines.svg</code></li>
+<li><code>search.svg</code></li>
+<li><code>secure_data.svg</code></li>
+<li><code>secure_server.svg</code></li>
+<li><code>security_on.svg</code></li>
+<li><code>security.svg</code></li>
+<li><code>server_down.svg</code></li>
+<li><code>server_status.svg</code></li>
+<li><code>server.svg</code></li>
+<li><code>settings.svg</code></li>
+<li><code>setup_wizard.svg</code></li>
+<li><code>setup.svg</code></li>
+<li><code>software_engineer.svg</code></li>
+<li><code>specs.svg</code></li>
+<li><code>speech_to_text.svg</code></li>
+<li><code>speed_test.svg</code></li>
+<li><code>static_assets.svg</code></li>
+<li><code>sync.svg</code></li>
+<li><code>synchronize.svg</code></li>
+<li><code>tabs.svg</code></li>
+<li><code>transfer_files.svg</code></li>
+<li><code>typing.svg</code></li>
+<li><code>under_construction.svg</code></li>
+<li><code>update.svg</code></li>
+<li><code>upgrade.svg</code></li>
+<li><code>upload_image.svg</code></li>
+<li><code>upload.svg</code></li>
+<li><code>uploading.svg</code></li>
+<li><code>usability_testing.svg</code></li>
+<li><code>user_flow.svg</code></li>
+<li><code>vault.svg</code></li>
+<li><code>version_control.svg</code></li>
+<li><code>virtual_reality.svg</code></li>
+<li><code>voice_control.svg</code></li>
+<li><code>voice_interface.svg</code></li>
+<li><code>weather_app.svg</code></li>
+<li><code>web_devices.svg</code></li>
+<li><code>website_setup.svg</code></li>
+<li><code>windows.svg</code></li>
+<li><code>wireframing.svg</code></li>
+<li><code>wordpress.svg</code></li>
+</ul>
+</section>
+<section id="business-finance" class="level2">
+<h2 class="anchored" data-anchor-id="business-finance">Business &amp; Finance</h2>
+<p>For content related to business operations, finance, marketing, and project management.</p>
+<ul>
+<li><code>about_us_page.svg</code></li>
+<li><code>accept_terms.svg</code></li>
+<li><code>active_support.svg</code></li>
+<li><code>add_to_cart.svg</code></li>
+<li><code>add_user.svg</code></li>
+<li><code>agreement.svg</code></li>
+<li><code>air_support.svg</code></li>
+<li><code>analysis.svg</code></li>
+<li><code>analytics.svg</code></li>
+<li><code>analyze.svg</code></li>
+<li><code>at_work.svg</code></li>
+<li><code>awards.svg</code></li>
+<li><code>blog_post.svg</code></li>
+<li><code>blogging.svg</code></li>
+<li><code>booking.svg</code></li>
+<li><code>brainstorming.svg</code></li>
+<li><code>business_analytics.svg</code></li>
+<li><code>business_deal.svg</code></li>
+<li><code>business_plan.svg</code></li>
+<li><code>businessman.svg</code></li>
+<li><code>businesswoman.svg</code></li>
+<li><code>calculator.svg</code></li>
+<li><code>candidate.svg</code></li>
+<li><code>career_progress.svg</code></li>
+<li><code>charts.svg</code></li>
+<li><code>co-workers.svg</code></li>
+<li><code>co-working.svg</code></li>
+<li><code>container_ship.svg</code></li>
+<li><code>content_creator.svg</code></li>
+<li><code>content.svg</code></li>
+<li><code>convert.svg</code></li>
+<li><code>creative_team.svg</code></li>
+<li><code>creative_thinking.svg</code></li>
+<li><code>credit_card_payment.svg</code></li>
+<li><code>credit_card_payments.svg</code></li>
+<li><code>credit_card.svg</code></li>
+<li><code>customer_survey.svg</code></li>
+<li><code>dark_analytics.svg</code></li>
+<li><code>data_report.svg</code></li>
+<li><code>data_trends.svg</code></li>
+<li><code>deliveries.svg</code></li>
+<li><code>delivery.svg</code></li>
+<li><code>discount.svg</code></li>
+<li><code>documents.svg</code></li>
+<li><code>drone_delivery.svg</code></li>
+<li><code>email_campaign.svg</code></li>
+<li><code>email_capture.svg</code></li>
+<li><code>experts.svg</code></li>
+<li><code>fashion_blogging.svg</code></li>
+<li><code>filing_system.svg</code></li>
+<li><code>finance.svg</code></li>
+<li><code>financial_data.svg</code></li>
+<li><code>followers.svg</code></li>
+<li><code>following.svg</code></li>
+<li><code>for_sale.svg</code></li>
+<li><code>forming_ideas.svg</code></li>
+<li><code>freelancer.svg</code></li>
+<li><code>gift_card.svg</code></li>
+<li><code>goal.svg</code></li>
+<li><code>going_up.svg</code></li>
+<li><code>good_team.svg</code></li>
+<li><code>growing.svg</code></li>
+<li><code>growth_analytics.svg</code></li>
+<li><code>hire.svg</code></li>
+<li><code>hiring.svg</code></li>
+<li><code>image_post.svg</code></li>
+<li><code>in_progress.svg</code></li>
+<li><code>in_the_office.svg</code></li>
+<li><code>influencer.svg</code></li>
+<li><code>instant_support.svg</code></li>
+<li><code>interview.svg</code></li>
+<li><code>investing.svg</code></li>
+<li><code>job_hunt.svg</code></li>
+<li><code>launching.svg</code></li>
+<li><code>logistics.svg</code></li>
+<li><code>make_it_rain.svg</code></li>
+<li><code>maker_launch.svg</code></li>
+<li><code>marketing.svg</code></li>
+<li><code>meeting.svg</code></li>
+<li><code>metrics.svg</code></li>
+<li><code>mobile_marketing.svg</code></li>
+<li><code>mobile_payments.svg</code></li>
+<li><code>modern_professional.svg</code></li>
+<li><code>multitasking.svg</code></li>
+<li><code>news.svg</code></li>
+<li><code>newsletter.svg</code></li>
+<li><code>on_the_office.svg</code></li>
+<li><code>onboarding.svg</code></li>
+<li><code>online_shopping.svg</code></li>
+<li><code>order_confirmed.svg</code></li>
+<li><code>organize_resume.svg</code></li>
+<li><code>organizing_projects.svg</code></li>
+<li><code>payments.svg</code></li>
+<li><code>percentages.svg</code></li>
+<li><code>photocopy.svg</code></li>
+<li><code>pie_chart.svg</code></li>
+<li><code>pie_graph.svg</code></li>
+<li><code>plain_credit_card.svg</code></li>
+<li><code>podcast_audience.svg</code></li>
+<li><code>podcast.svg</code></li>
+<li><code>portfolio_update.svg</code></li>
+<li><code>portfolio.svg</code></li>
+<li><code>post_online.svg</code></li>
+<li><code>post.svg</code></li>
+<li><code>posting_photo.svg</code></li>
+<li><code>posts.svg</code></li>
+<li><code>predictive_analytics.svg</code></li>
+<li><code>printing_invoices.svg</code></li>
+<li><code>problem_solving.svg</code></li>
+<li><code>process.svg</code></li>
+<li><code>product_hunt.svg</code></li>
+<li><code>product_teardown.svg</code></li>
+<li><code>product_tour.svg</code></li>
+<li><code>projections.svg</code></li>
+<li><code>report.svg</code></li>
+<li><code>result.svg</code></li>
+<li><code>resume_folder.svg</code></li>
+<li><code>resume.svg</code></li>
+<li><code>revenue.svg</code></li>
+<li><code>rising.svg</code></li>
+<li><code>savings.svg</code></li>
+<li><code>schedule.svg</code></li>
+<li><code>scrum_board.svg</code></li>
+<li><code>segment.svg</code></li>
+<li><code>segmentation.svg</code></li>
+<li><code>setup_analytics.svg</code></li>
+<li><code>shopping.svg</code></li>
+<li><code>site_stats.svg</code></li>
+<li><code>social_dashboard.svg</code></li>
+<li><code>social_growth.svg</code></li>
+<li><code>social_ideas.svg</code></li>
+<li><code>social_influencer.svg</code></li>
+<li><code>social_media.svg</code></li>
+<li><code>social_strategy.svg</code></li>
+<li><code>social_thinking.svg</code></li>
+<li><code>social_update.svg</code></li>
+<li><code>spreadsheets.svg</code></li>
+<li><code>startup_life.svg</code></li>
+<li><code>statistics.svg</code></li>
+<li><code>stripe_payments.svg</code></li>
+<li><code>subscriber.svg</code></li>
+<li><code>successful_purchase.svg</code></li>
+<li><code>target.svg</code></li>
+<li><code>task.svg</code></li>
+<li><code>team_page.svg</code></li>
+<li><code>team_spirit.svg</code></li>
+<li><code>team.svg</code></li>
+<li><code>time_management.svg</code></li>
+<li><code>timeline.svg</code></li>
+<li><code>transfer_money.svg</code></li>
+<li><code>travel_booking.svg</code></li>
+<li><code>vehicle_sale.svg</code></li>
+<li><code>visual_data.svg</code></li>
+<li><code>wallet.svg</code></li>
+<li><code>window_shopping.svg</code></li>
+<li><code>wishlist.svg</code></li>
+<li><code>word_of_mouth.svg</code></li>
+<li><code>work_time.svg</code></li>
+<li><code>working_late.svg</code></li>
+<li><code>working_remotely.svg</code></li>
+<li><code>working.svg</code></li>
+</ul>
+</section>
+<section id="education-learning" class="level2">
+<h2 class="anchored" data-anchor-id="education-learning">Education &amp; Learning</h2>
+<p>Perfect for the Academy section, including courses, webinars, and educational blog posts.</p>
+<ul>
+<li><code>add_notes.svg</code></li>
+<li><code>back_to_school.svg</code></li>
+<li><code>bibliophile.svg</code></li>
+<li><code>book_lover.svg</code></li>
+<li><code>conference_speaker.svg</code></li>
+<li><code>exams.svg</code></li>
+<li><code>grades.svg</code></li>
+<li><code>graduation.svg</code></li>
+<li><code>instruction_manual.svg</code></li>
+<li><code>knowledge.svg</code></li>
+<li><code>learning.svg</code></li>
+<li><code>mathematics.svg</code></li>
+<li><code>note_list.svg</code></li>
+<li><code>notebook.svg</code></li>
+<li><code>notes.svg</code></li>
+<li><code>personal_notes.svg</code></li>
+<li><code>presentation.svg</code></li>
+<li><code>professor.svg</code></li>
+<li><code>reading_list.svg</code></li>
+<li><code>reading.svg</code></li>
+<li><code>science.svg</code></li>
+<li><code>studying.svg</code></li>
+<li><code>taking_notes.svg</code></li>
+<li><code>teacher.svg</code></li>
+<li><code>teaching.svg</code></li>
+<li><code>to_do_list.svg</code></li>
+<li><code>to_do.svg</code></li>
+<li><code>youtube_tutorial.svg</code></li>
+</ul>
+</section>
+<section id="communication-collaboration" class="level2">
+<h2 class="anchored" data-anchor-id="communication-collaboration">Communication &amp; Collaboration</h2>
+<p>Use these for contact pages, team pages, and posts about community and teamwork.</p>
+<ul>
+<li><code>accept_request.svg</code></li>
+<li><code>audio_conversation.svg</code></li>
+<li><code>begin_chat.svg</code></li>
+<li><code>broadcast.svg</code></li>
+<li><code>calling.svg</code></li>
+<li><code>chat.svg</code></li>
+<li><code>chatting.svg</code></li>
+<li><code>collab.svg</code></li>
+<li><code>collaboration.svg</code></li>
+<li><code>community.svg</code></li>
+<li><code>conference.svg</code></li>
+<li><code>connecting_teams.svg</code></li>
+<li><code>contact_us.svg</code></li>
+<li><code>conversation.svg</code></li>
+<li><code>design_community.svg</code></li>
+<li><code>emails.svg</code></li>
+<li><code>envelope.svg</code></li>
+<li><code>files_sent.svg</code></li>
+<li><code>group_chat.svg</code></li>
+<li><code>hello.svg</code></li>
+<li><code>inbox_cleanup.svg</code></li>
+<li><code>invite.svg</code></li>
+<li><code>like_dislike.svg</code></li>
+<li><code>live_collaboration.svg</code></li>
+<li><code>mail_sent.svg</code></li>
+<li><code>mail.svg</code></li>
+<li><code>mailbox.svg</code></li>
+<li><code>mention.svg</code></li>
+<li><code>message_sent.svg</code></li>
+<li><code>messages.svg</code></li>
+<li><code>messaging_fun.svg</code></li>
+<li><code>messaging.svg</code></li>
+<li><code>messenger.svg</code></li>
+<li><code>new_message.svg</code></li>
+<li><code>night_calls.svg</code></li>
+<li><code>notify.svg</code></li>
+<li><code>online_discussion.svg</code></li>
+<li><code>online_friends.svg</code></li>
+<li><code>online_wishes.svg</code></li>
+<li><code>people_search.svg</code></li>
+<li><code>personal_text.svg</code></li>
+<li><code>photo_sharing.svg</code></li>
+<li><code>questions.svg</code></li>
+<li><code>social_networking.svg</code></li>
+<li><code>social_share.svg</code></li>
+<li><code>social_tree.svg</code></li>
+<li><code>team_work.svg</code></li>
+<li><code>texting.svg</code></li>
+<li><code>tweetstorm.svg</code></li>
+<li><code>upvote.svg</code></li>
+<li><code>video_call.svg</code></li>
+<li><code>vr_chat.svg</code></li>
+<li><code>wall_post.svg</code></li>
+<li><code>work_chat.svg</code></li>
+</ul>
+</section>
+<section id="general-lifestyle" class="level2">
+<h2 class="anchored" data-anchor-id="general-lifestyle">General &amp; Lifestyle</h2>
+<p>A broad category for various topics, including personal stories, hobbies, and everyday life.</p>
+<ul>
+<li><code>a_day_at_the_park.svg</code></li>
+<li><code>a_whole_year.svg</code></li>
+<li><code>about_me.svg</code></li>
+<li><code>absorbed_in.svg</code></li>
+<li><code>account.svg</code></li>
+<li><code>address.svg</code></li>
+<li><code>adventure.svg</code></li>
+<li><code>aircraft.svg</code></li>
+<li><code>airport.svg</code></li>
+<li><code>alert.svg</code></li>
+<li><code>apartment_rent.svg</code></li>
+<li><code>appreciation.svg</code></li>
+<li><code>around_the_world.svg</code></li>
+<li><code>art_lover.svg</code></li>
+<li><code>art.svg</code></li>
+<li><code>artist.svg</code></li>
+<li><code>astronaut.svg</code></li>
+<li><code>autumn.svg</code></li>
+<li><code>baby.svg</code></li>
+<li><code>back_in_the_day.svg</code></li>
+<li><code>balloons.svg</code></li>
+<li><code>barber.svg</code></li>
+<li><code>basketball.svg</code></li>
+<li><code>be_the_hero.svg</code></li>
+<li><code>beach.svg</code></li>
+<li><code>beer_celebration.svg</code></li>
+<li><code>before_dawn.svg</code></li>
+<li><code>best_place.svg</code></li>
+<li><code>biking.svg</code></li>
+<li><code>birthday_cake.svg</code></li>
+<li><code>blank_canvas.svg</code></li>
+<li><code>blooming.svg</code></li>
+<li><code>breaking_barriers.svg</code></li>
+<li><code>buddies.svg</code></li>
+<li><code>building.svg</code></li>
+<li><code>bus_stop.svg</code></li>
+<li><code>by_my_car.svg</code></li>
+<li><code>calendar.svg</code></li>
+<li><code>camera.svg</code></li>
+<li><code>campfire.svg</code></li>
+<li><code>camping.svg</code></li>
+<li><code>cancel.svg</code></li>
+<li><code>cautious_dog.svg</code></li>
+<li><code>celebration.svg</code></li>
+<li><code>checking_boxes.svg</code></li>
+<li><code>checklist.svg</code></li>
+<li><code>chef.svg</code></li>
+<li><code>children.svg</code></li>
+<li><code>chilling.svg</code></li>
+<li><code>choice.svg</code></li>
+<li><code>choose.svg</code></li>
+<li><code>christmas_stocking.svg</code></li>
+<li><code>christmas_tree.svg</code></li>
+<li><code>circles.svg</code></li>
+<li><code>city_driver.svg</code></li>
+<li><code>city_girl.svg</code></li>
+<li><code>coffee_break.svg</code></li>
+<li><code>collecting.svg</code></li>
+<li><code>collection.svg</code></li>
+<li><code>coming_home.svg</code></li>
+<li><code>completed.svg</code></li>
+<li><code>compose_music.svg</code></li>
+<li><code>confirmation.svg</code></li>
+<li><code>confirmed.svg</code></li>
+<li><code>contemplating.svg</code></li>
+<li><code>cookie_love.svg</code></li>
+<li><code>coolness.svg</code></li>
+<li><code>country_side.svg</code></li>
+<li><code>couple.svg</code></li>
+<li><code>create.svg</code></li>
+<li><code>creative_woman.svg</code></li>
+<li><code>creativity.svg</code></li>
+<li><code>dark_alley.svg</code></li>
+<li><code>decide.svg</code></li>
+<li><code>departing.svg</code></li>
+<li><code>depi.svg</code></li>
+<li><code>designer_girl.svg</code></li>
+<li><code>designer_life.svg</code></li>
+<li><code>designer.svg</code></li>
+<li><code>destination.svg</code></li>
+<li><code>different_love.svg</code></li>
+<li><code>digital_nomad.svg</code></li>
+<li><code>directions.svg</code></li>
+<li><code>doctor.svg</code></li>
+<li><code>doctors.svg</code></li>
+<li><code>dog_walking.svg</code></li>
+<li><code>doll_play.svg</code></li>
+<li><code>done_checking.svg</code></li>
+<li><code>done.svg</code></li>
+<li><code>dreamer.svg</code></li>
+<li><code>drone_race.svg</code></li>
+<li><code>dua_lipa.svg</code></li>
+<li><code>easter_egg_hunt.svg</code></li>
+<li><code>eating_together.svg</code></li>
+<li><code>electric_car.svg</code></li>
+<li><code>empty.svg</code></li>
+<li><code>environment.svg</code></li>
+<li><code>events.svg</code></li>
+<li><code>exploring.svg</code></li>
+<li><code>fall_is_coming.svg</code></li>
+<li><code>fans.svg</code></li>
+<li><code>fast_car.svg</code></li>
+<li><code>fatherhood.svg</code></li>
+<li><code>feeling_blue.svg</code></li>
+<li><code>festivities.svg</code></li>
+<li><code>finish_line.svg</code></li>
+<li><code>fireworks.svg</code></li>
+<li><code>fish_bowl.svg</code></li>
+<li><code>fishing.svg</code></li>
+<li><code>fitness_tracker.svg</code></li>
+<li><code>floating.svg</code></li>
+<li><code>flowers.svg</code></li>
+<li><code>focus.svg</code></li>
+<li><code>forever.svg</code></li>
+<li><code>friendship.svg</code></li>
+<li><code>frozen_figure.svg</code></li>
+<li><code>game_day.svg</code></li>
+<li><code>gaming.svg</code></li>
+<li><code>gardening.svg</code></li>
+<li><code>getting_coffee.svg</code></li>
+<li><code>gift.svg</code></li>
+<li><code>gifts.svg</code></li>
+<li><code>girls_just_wanna_have_fun.svg</code></li>
+<li><code>golden_gate_bridge.svg</code></li>
+<li><code>good_doggy.svg</code></li>
+<li><code>grand_slam.svg</code></li>
+<li><code>grandma.svg</code></li>
+<li><code>group_selfie.svg</code></li>
+<li><code>hamburger.svg</code></li>
+<li><code>hang_out.svg</code></li>
+<li><code>happy_2019.svg</code></li>
+<li><code>happy_birthday.svg</code></li>
+<li><code>happy_feeling.svg</code></li>
+<li><code>happy_news.svg</code></li>
+<li><code>happy_women_day.svg</code></li>
+<li><code>having_fun.svg</code></li>
+<li><code>healthy_habit.svg</code></li>
+<li><code>heartbroken.svg</code></li>
+<li><code>high_five.svg</code></li>
+<li><code>hiking.svg</code></li>
+<li><code>home_run.svg</code></li>
+<li><code>hooked.svg</code></li>
+<li><code>horror_movie.svg</code></li>
+<li><code>house_searching.svg</code></li>
+<li><code>houses.svg</code></li>
+<li><code>i_can_fly.svg</code></li>
+<li><code>in_love.svg</code></li>
+<li><code>in_no_time.svg</code></li>
+<li><code>in_the_pool.svg</code></li>
+<li><code>in_thought.svg</code></li>
+<li><code>intense_feeling.svg</code></li>
+<li><code>into_the_night.svg</code></li>
+<li><code>japan.svg</code></li>
+<li><code>jason_mask.svg</code></li>
+<li><code>jogging.svg</code></li>
+<li><code>journey.svg</code></li>
+<li><code>joyride.svg</code></li>
+<li><code>judge.svg</code></li>
+<li><code>late_at_night.svg</code></li>
+<li><code>lighthouse.svg</code></li>
+<li><code>lost.svg</code></li>
+<li><code>love_is_in_the_air.svg</code></li>
+<li><code>love.svg</code></li>
+<li><code>loving_it.svg</code></li>
+<li><code>makeup_artist.svg</code></li>
+<li><code>making_art.svg</code></li>
+<li><code>map_dark.svg</code></li>
+<li><code>map_light.svg</code></li>
+<li><code>map.svg</code></li>
+<li><code>marilyn.svg</code></li>
+<li><code>may_the_force.svg</code></li>
+<li><code>medicine.svg</code></li>
+<li><code>meditating.svg</code></li>
+<li><code>meditation.svg</code></li>
+<li><code>millennial_girl.svg</code></li>
+<li><code>mindfulness.svg</code></li>
+<li><code>mint_tea.svg</code></li>
+<li><code>missed_chances.svg</code></li>
+<li><code>mission_impossible.svg</code></li>
+<li><code>mobile_life.svg</code></li>
+<li><code>mobile_user.svg</code></li>
+<li><code>modern_life.svg</code></li>
+<li><code>modern_woman.svg</code></li>
+<li><code>moment_to_remember.svg</code></li>
+<li><code>moonlight.svg</code></li>
+<li><code>more_music.svg</code></li>
+<li><code>morning_essentials.svg</code></li>
+<li><code>motherhood.svg</code></li>
+<li><code>movie_night.svg</code></li>
+<li><code>moving_forward.svg</code></li>
+<li><code>music.svg</code></li>
+<li><code>nature_fun.svg</code></li>
+<li><code>nerd.svg</code></li>
+<li><code>ninja.svg</code></li>
+<li><code>off_road.svg</code></li>
+<li><code>old_day.svg</code></li>
+<li><code>on_the_way.svg</code></li>
+<li><code>opened.svg</code></li>
+<li><code>ordinary_day.svg</code></li>
+<li><code>organize_photos.svg</code></li>
+<li><code>outer_space.svg</code></li>
+<li><code>party.svg</code></li>
+<li><code>passing_by.svg</code></li>
+<li><code>pedestrian_crossing.svg</code></li>
+<li><code>personal_site.svg</code></li>
+<li><code>personal_trainer.svg</code></li>
+<li><code>photo_album.svg</code></li>
+<li><code>photo.svg</code></li>
+<li><code>photos.svg</code></li>
+<li><code>pilates.svg</code></li>
+<li><code>pizza_sharing.svg</code></li>
+<li><code>playful_cat.svg</code></li>
+<li><code>powerful.svg</code></li>
+<li><code>press_play.svg</code></li>
+<li><code>profile_data.svg</code></li>
+<li><code>profile_pic.svg</code></li>
+<li><code>profile.svg</code></li>
+<li><code>pure_love.svg</code></li>
+<li><code>queue.svg</code></li>
+<li><code>quitting_time.svg</code></li>
+<li><code>raining.svg</code></li>
+<li><code>recording.svg</code></li>
+<li><code>refreshing.svg</code></li>
+<li><code>relaxation.svg</code></li>
+<li><code>relaxing_at_home.svg</code></li>
+<li><code>reminder.svg</code></li>
+<li><code>reminders.svg</code></li>
+<li><code>ride_a_bicycle.svg</code></li>
+<li><code>road_sign.svg</code></li>
+<li><code>romantic_getaway.svg</code></li>
+<li><code>running_wild.svg</code></li>
+<li><code>santa_claus.svg</code></li>
+<li><code>scooter.svg</code></li>
+<li><code>sculpting.svg</code></li>
+<li><code>select.svg</code></li>
+<li><code>selfie_time.svg</code></li>
+<li><code>selfie.svg</code></li>
+<li><code>skateboarding.svg</code></li>
+<li><code>sleep_analysis.svg</code></li>
+<li><code>smart_home.svg</code></li>
+<li><code>smartwatch.svg</code></li>
+<li><code>smiley_face.svg</code></li>
+<li><code>snowman.svg</code></li>
+<li><code>social_life.svg</code></li>
+<li><code>spread_love.svg</code></li>
+<li><code>stability_ball.svg</code></li>
+<li><code>starman.svg</code></li>
+<li><code>startled.svg</code></li>
+<li><code>status_update.svg</code></li>
+<li><code>staying_in.svg</code></li>
+<li><code>step_to_the_sun.svg</code></li>
+<li><code>street_food.svg</code></li>
+<li><code>subway.svg</code></li>
+<li><code>sunny_day.svg</code></li>
+<li><code>super_thank_you.svg</code></li>
+<li><code>super_woman.svg</code></li>
+<li><code>superhero.svg</code></li>
+<li><code>surfer.svg</code></li>
+<li><code>swipe_profiles.svg</code></li>
+<li><code>taken.svg</code></li>
+<li><code>taking_selfie.svg</code></li>
+<li><code>tasting.svg</code></li>
+<li><code>teddy_bear.svg</code></li>
+<li><code>thoughts.svg</code></li>
+<li><code>through_the_desert.svg</code></li>
+<li><code>throw_down.svg</code></li>
+<li><code>to_the_stars.svg</code></li>
+<li><code>together.svg</code></li>
+<li><code>toy_car.svg</code></li>
+<li><code>track_and_field.svg</code></li>
+<li><code>travelers.svg</code></li>
+<li><code>traveling.svg</code></li>
+<li><code>treasure.svg</code></li>
+<li><code>tree_swing.svg</code></li>
+<li><code>trip.svg</code></li>
+<li><code>true_friends.svg</code></li>
+<li><code>typewriter.svg</code></li>
+<li><code>unboxing.svg</code></li>
+<li><code>unexpected_friends.svg</code></li>
+<li><code>videographer.svg</code></li>
+<li><code>walk_in_the_city.svg</code></li>
+<li><code>walking_around.svg</code></li>
+<li><code>warning.svg</code></li>
+<li><code>weather.svg</code></li>
+<li><code>wedding.svg</code></li>
+<li><code>welcome.svg</code></li>
+<li><code>wind_turbine.svg</code></li>
+<li><code>winners.svg</code></li>
+<li><code>winter_designer.svg</code></li>
+<li><code>winter_olympics.svg</code></li>
+<li><code>wishes.svg</code></li>
+<li><code>witch.svg</code></li>
+<li><code>woman.svg</code></li>
+<li><code>women_day.svg</code></li>
+<li><code>workout.svg</code></li>
+<li><code>world.svg</code></li>
+<li><code>xmas_surprise.svg</code></li>
+<li><code>yacht.svg</code></li>
+<li><code>young_and_happy.svg</code></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/github\/com\/chen\.ist");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+
+</div>   
+    <div class="nav-footer-center">
+
+</div>
+    <div class="nav-footer-right">
+
+</div>
+  </div>
+</footer>
+<footer class="footer mt-5 py-3 cybersecurity-footer">
+    <div class="container">
+        <div class="row mb-3">
+            <!-- Company Logo and Brief -->
+            <div class="col-md-4 mb-2">
+                <div class="d-flex align-items-center">
+                    <h4 class="footer-logo mb-0 me-2">chen<span class="text-accent">.ist</span></h4>
+                    <div class="secure-badge ms-2">
+                        <i class="bi bi-shield-lock-fill"></i> Secure
+                    </div>
+                </div>
+                <p class="footer-description small mt-2 mb-0">
+                    Enterprise cybersecurity solutions with zero-trust implementation and continuous monitoring.
+                </p>
+            </div>
+            
+            <!-- Tabs Navigation -->
+            <div class="col-md-8 mb-2">
+                <div class="footer-tabs">
+                    <ul class="nav nav-tabs footer-nav-tabs" id="footerTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="solutions-tab" data-bs-toggle="tab" data-bs-target="#solutions" type="button" role="tab">
+                                <i class="bi bi-shield-fill"></i> Solutions
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="academy-tab" data-bs-toggle="tab" data-bs-target="#academy" type="button" role="tab">
+                                <i class="bi bi-mortarboard-fill"></i> Academy
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab">
+                                <i class="bi bi-envelope-fill"></i> Contact
+                            </button>
+                        </li>
+                    </ul>
+                    
+                    <!-- Tab Content -->
+                    <div class="tab-content pt-2" id="footerTabContent">
+                        <!-- Solutions Tab -->
+                        <div class="tab-pane fade show active" id="solutions" role="tabpanel">
+                            <div class="row">
+                                <div class="col-6 col-md-3">
+                                    <a href="../services.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Security Services
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../services.html#consulting" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Consulting
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../services.html#compliance" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Compliance
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../services.html#incident-response" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Incident Response
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Academy Tab -->
+                        <div class="tab-pane fade" id="academy" role="tabpanel">
+                            <div class="row">
+                                <div class="col-6 col-md-3">
+                                    <a href="../academy/courses.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Courses
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../academy/events.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Events
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../academy/webinars.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Webinars
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../academy/computerclub.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Computer Club
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Contact Tab -->
+                        <div class="tab-pane fade" id="contact" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-1">
+                                        <i class="bi bi-envelope-fill contact-icon"></i>
+                                        <a href="mailto:office@chen.ist" class="footer-link">office@chen.ist</a>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-shield-fill-check contact-icon"></i>
+                                        <span class="small">SOC Available 24/7</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-1">
+                                        <i class="bi bi-geo-alt-fill contact-icon"></i>
+                                        <span class="small">Stockholm | Craiova | Bucharest</span>
+                                    </div>
+                                    <div class="social-icons">
+                                        <a href="https://github.com/chenist" class="social-icon" aria-label="GitHub">
+                                            <i class="bi bi-github"></i>
+                                        </a>
+                                        <a href="https://linkedin.com/in/chenistsec" class="social-icon" aria-label="LinkedIn">
+                                            <i class="bi bi-linkedin"></i>
+                                        </a>
+                                        <a href="https://twitter.com/chenistsec" class="social-icon" aria-label="Twitter">
+                                            <i class="bi bi-twitter-x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-divider">
+            <div class="cyber-line"></div>
+        </div>
+        
+        <div class="row footer-bottom py-1">
+            <div class="col-md-6">
+                <div class="d-flex align-items-center">
+                    <div class="security-pulse"></div>
+                    <p class="mb-0 ms-2 copyright">
+                        © 2025 chen.ist <span class="d-none d-md-inline">| Secure. Vigilant. Resilient.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <div class="footer-bottom-links">
+                    <a href="../privacy.html">Privacy</a>
+                    <span class="separator">|</span>
+                    <a href="../terms.html">Terms</a>
+                    <span class="separator">|</span>
+                    <a href="../contact.html" class="btn-report-incident">
+                        <i class="bi bi-exclamation-triangle-fill"></i> Report Incident
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+.cybersecurity-footer {
+    background-color: #0f1923;
+    color: #e6e6e6;
+    border-top: 3px solid #18bc9c;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+/* Change accent colors for academy section */
+.academy-section .cybersecurity-footer {
+    border-top-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer::before {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #F5A623 20%, 
+        #F5A623 40%, 
+        transparent 50%,
+        transparent 60%,
+        #F5A623 80%,
+        transparent 100%
+    );
+}
+
+.academy-section .cybersecurity-footer .text-accent,
+.academy-section .cybersecurity-footer .contact-icon,
+.academy-section .cybersecurity-footer .footer-heading::after,
+.academy-section .cybersecurity-footer .social-icon:hover,
+.academy-section .cybersecurity-footer .footer-link:hover,
+.academy-section .cybersecurity-footer .contact-item a:hover,
+.academy-section .cybersecurity-footer .footer-bottom-links a:hover,
+.academy-section .cybersecurity-footer .nav-link.active {
+    color: #F5A623 !important;
+}
+
+.academy-section .cybersecurity-footer .secure-badge {
+    background-color: rgba(245, 166, 35, 0.15);
+    color: #F5A623;
+    border-left-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .social-icon:hover {
+    background-color: #F5A623;
+    color: #0f1923 !important;
+}
+
+.academy-section .cybersecurity-footer .cyber-line {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(245, 166, 35, 0.3) 10%, 
+        rgba(245, 166, 35, 0.5) 50%, 
+        rgba(245, 166, 35, 0.3) 90%, 
+        transparent 100%
+    );
+}
+
+.academy-section .cybersecurity-footer .cyber-line::before,
+.academy-section .cybersecurity-footer .cyber-line::after {
+    background-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .security-pulse {
+    background-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .security-pulse::before {
+    background-color: rgba(245, 166, 35, 0.3);
+}
+
+.cybersecurity-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #18bc9c 20%, 
+        #18bc9c 40%, 
+        transparent 50%,
+        transparent 60%,
+        #18bc9c 80%,
+        transparent 100%
+    );
+    opacity: 0.4;
+}
+
+.cybersecurity-footer .footer-brand {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.cybersecurity-footer .footer-logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Source Code Pro', monospace;
+    color: white;
+}
+
+.cybersecurity-footer .text-accent {
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .secure-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(24, 188, 156, 0.15);
+    color: #18bc9c;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-left: 2px solid #18bc9c;
+}
+
+.cybersecurity-footer .footer-description {
+    color: #9ba6b2;
+    line-height: 1.4;
+}
+
+.cybersecurity-footer .footer-tabs {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.cybersecurity-footer .footer-nav-tabs {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cybersecurity-footer .nav-tabs .nav-link {
+    color: #9ba6b2;
+    border: none;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    background-color: transparent;
+}
+
+.cybersecurity-footer .nav-tabs .nav-link:hover {
+    color: #e6e6e6;
+    border: none;
+}
+
+.cybersecurity-footer .nav-tabs .nav-link.active {
+    color: #18bc9c;
+    background-color: rgba(24, 188, 156, 0.1);
+    border: none;
+}
+
+.cybersecurity-footer .tab-content {
+    min-height: 60px;
+}
+
+.cybersecurity-footer .footer-link {
+    color: #9ba6b2;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.cybersecurity-footer .footer-link:hover {
+    color: #18bc9c;
+    transform: translateX(3px);
+}
+
+.cybersecurity-footer .icon-small {
+    font-size: 0.75rem;
+    margin-right: 0.25rem;
+}
+
+.cybersecurity-footer .contact-icon {
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .social-icons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.cybersecurity-footer .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e6e6e6;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.cybersecurity-footer .social-icon:hover {
+    background-color: #18bc9c;
+    color: #0f1923;
+    transform: translateY(-2px);
+}
+
+.cybersecurity-footer .footer-divider {
+    position: relative;
+    height: 12px;
+    margin: 0.5rem 0;
+}
+
+.cybersecurity-footer .cyber-line {
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(24, 188, 156, 0.3) 10%, 
+        rgba(24, 188, 156, 0.5) 50%, 
+        rgba(24, 188, 156, 0.3) 90%, 
+        transparent 100%
+    );
+    position: relative;
+}
+
+.cybersecurity-footer .cyber-line::before,
+.cybersecurity-footer .cyber-line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 8px;
+    height: 1px;
+    background-color: #18bc9c;
+    animation: blink 2s infinite;
+}
+
+.cybersecurity-footer .cyber-line::before {
+    left: 25%;
+}
+
+.cybersecurity-footer .cyber-line::after {
+    right: 25%;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
+
+.cybersecurity-footer .security-pulse {
+    width: 8px;
+    height: 8px;
+    background-color: #18bc9c;
+    border-radius: 50%;
+    position: relative;
+}
+
+.cybersecurity-footer .security-pulse::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 50%;
+    background-color: rgba(24, 188, 156, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    70% { transform: scale(1.5); opacity: 0; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+.cybersecurity-footer .copyright {
+    color: #9ba6b2;
+    font-size: 0.8rem;
+}
+
+.cybersecurity-footer .footer-bottom-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.cybersecurity-footer .footer-bottom-links a {
+    color: #9ba6b2;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.2s ease;
+}
+
+.cybersecurity-footer .footer-bottom-links a:hover {
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .separator {
+    margin: 0 0.5rem;
+    color: #4a5568;
+    font-size: 0.8rem;
+}
+
+.cybersecurity-footer .btn-report-incident {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(220, 53, 69, 0.15);
+    color: #dc3545 !important;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease !important;
+}
+
+.cybersecurity-footer .btn-report-incident:hover {
+    background-color: rgba(220, 53, 69, 0.3);
+}
+
+.cybersecurity-footer .btn-report-incident i {
+    margin-right: 0.3rem;
+}
+
+@media (max-width: 767px) {
+    .cybersecurity-footer .footer-bottom-links {
+        justify-content: flex-start;
+        margin-top: 0.5rem;
+    }
+    
+    .cybersecurity-footer .btn-report-incident {
+        margin-top: 0.5rem;
+        margin-left: 0;
+    }
+    
+    .cybersecurity-footer .separator:nth-of-type(2) {
+        display: none;
+    }
+}
+</style>
+
+<script>
+// Initialize Bootstrap tabs if not already initialized
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof bootstrap !== 'undefined') {
+        var tabElList = [].slice.call(document.querySelectorAll('#footerTabs .nav-link'));
+        tabElList.map(function(tabEl) {
+            return new bootstrap.Tab(tabEl);
+        });
+    }
+});
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Function to toggle dark/light mode
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-bs-theme') || 'light';
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-bs-theme', newTheme);
+      localStorage.setItem('quarto-color-scheme', newTheme);
+      
+      // Update icon if needed
+      const themeIcon = document.querySelector('.navbar-nav a[href="#"] i');
+      if (themeIcon) {
+        themeIcon.className = newTheme === 'light' ? 'bi bi-moon' : 'bi bi-sun';
+      }
+    }
+    
+    // Apply saved theme on load
+    const savedTheme = localStorage.getItem('quarto-color-scheme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      
+      // Update icon to match saved theme
+      const themeIcon = document.querySelector('.navbar-nav a[href="#"] i');
+      if (themeIcon && savedTheme === 'dark') {
+        themeIcon.className = 'bi bi-sun';
+      }
+    }
+    
+    // Set up toggle button
+    document.querySelectorAll('a[href="#"]').forEach(function(link) {
+      if (link.textContent.includes('Toggle Theme')) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          toggleTheme();
+        });
+      }
+    });
+    
+    // Enable Bootstrap tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      if (anchor.getAttribute('href') === '#') return;
+      
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 70,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

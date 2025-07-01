@@ -1,0 +1,283 @@
+---
+title: "Academy Partnerships"
+subtitle: "Collaborating for better educational outcomes"
+---
+
+```{=html}
+<div class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8 offset-md-2 text-center">
+        <h1 class="hero-title"><span class="academy-text">Academy</span> <span class="text-green">Partnerships</span></h1>
+        <p>Building a stronger educational ecosystem through collaboration</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Light mode (default) styling */
+  .hero-title .academy-text {
+    color: white;
+  }
+  
+  /* Company logo with dark mode support */
+  .partner-logo img.company-logo {
+    max-width: 150px;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  /* Dark mode specific styling */
+  @media (prefers-color-scheme: dark) {
+    .hero-title .academy-text {
+      color: white; /* Already white in dark mode */
+    }
+  }
+</style>
+```
+
+::: {.container .page-section}
+
+## Our Partnership Philosophy
+
+At chen.ist Academy, we believe that meaningful educational experiences emerge from collaborative efforts between industry, academia, and community organizations. Our partnerships are designed to:
+
+- Enhance the quality and relevance of our educational offerings
+- Create pathways for learners to connect with industry opportunities
+- Develop innovative approaches to technology education
+- Support community initiatives and technological advancement
+
+## Types of Partnerships
+
+```{=html}
+<div class="row mt-5">
+  <div class="col-md-6">
+    <div class="card mb-4 h-100">
+      <div class="card-header bg-primary text-white">
+        <h3 class="card-title mb-0">Academic Partnerships</h3>
+      </div>
+      <div class="card-body">
+        <p>Collaborations with universities, colleges, and schools to create pathways between formal education and our practical, industry-focused training.</p>
+        <h4>Benefits:</h4>
+        <ul>
+          <li>Joint certification programs</li>
+          <li>Research collaborations</li>
+          <li>Student project opportunities</li>
+          <li>Specialized technical workshops</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card mb-4 h-100">
+      <div class="card-header bg-primary text-white">
+        <h3 class="card-title mb-0">Industry Partnerships</h3>
+      </div>
+      <div class="card-body">
+        <p>Alliances with technology companies and organizations to ensure our curriculum reflects current industry needs and provides real-world learning experiences.</p>
+        <h4>Benefits:</h4>
+        <ul>
+          <li>Internship and job placement opportunities</li>
+          <li>Industry-sponsored projects</li>
+          <li>Guest lectures from industry experts</li>
+          <li>Technology access and resources</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="card mb-4 h-100">
+      <div class="card-header bg-primary text-white">
+        <h3 class="card-title mb-0">Community Partnerships</h3>
+      </div>
+      <div class="card-body">
+        <p>Collaborations with community organizations to expand access to technology education and create inclusive learning opportunities.</p>
+        <h4>Benefits:</h4>
+        <ul>
+          <li>Scholarships for underrepresented groups</li>
+          <li>Community technology workshops</li>
+          <li>Digital literacy programs</li>
+          <li>Mentorship opportunities</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card mb-4 h-100">
+      <div class="card-header bg-primary text-white">
+        <h3 class="card-title mb-0">Research Partnerships</h3>
+      </div>
+      <div class="card-body">
+        <p>Collaborations with research institutions to advance knowledge in technology fields and incorporate cutting-edge developments into our curriculum.</p>
+        <h4>Benefits:</h4>
+        <ul>
+          <li>Joint research projects</li>
+          <li>Access to advanced technologies</li>
+          <li>Publication opportunities</li>
+          <li>Innovation incubation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+## Featured Partners
+
+```{=html}
+<div class="row mt-5">
+  <div class="col-md-4">
+    <div class="partner-card text-center p-4 mb-4">
+      <div class="partner-logo mb-3">
+        <img src="/assets/logo/ucv.jpg" alt="University of Craiova Logo" style="width: 150px; height: auto; margin: 0 auto;">
+      </div>
+      <h4>Mathematics & Informatics Department of Craiova University</h4>
+      <p>Joint research and curriculum development for Open4tech Summer School.</p>
+    </div>
+  </div>
+  
+  <div class="col-md-4">
+    <div class="partner-card text-center p-4 mb-4">
+      <div class="partner-logo mb-3">
+        <!-- Light/Dark mode switching logo -->
+        <img src="/assets/logo/logo-light.svg" alt="Company Logo" class="company-logo light-mode-logo">
+        <img src="/assets/logo/logo-dark.svg" alt="Company Logo" class="company-logo dark-mode-logo" style="display: none;">
+        
+        <script>
+          // Function to handle theme changes
+          function updateTheme() {
+            const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const lightLogo = document.querySelector('.light-mode-logo');
+            const darkLogo = document.querySelector('.dark-mode-logo');
+            
+            if (isDarkMode) {
+              lightLogo.style.display = 'none';
+              darkLogo.style.display = 'block';
+            } else {
+              lightLogo.style.display = 'block';
+              darkLogo.style.display = 'none';
+            }
+          }
+          
+          // Run on page load
+          updateTheme();
+          
+          // Listen for theme changes
+          window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
+        </script>
+      </div>
+      <h4>TechInnovate Inc.</h4>
+      <p>Industry partner providing mentorship, internships, and practical project opportunities.</p>
+    </div>
+  </div>
+  
+  <div class="col-md-4">
+    <div class="partner-card text-center p-4 mb-4">
+      <div class="partner-logo mb-3">
+        <!-- Partner logo placeholder -->
+        <div style="width: 150px; height: 80px; background-color: #f5f5f5; margin: 0 auto; display: flex; align-items: center; justify-content: center; border-radius: 5px;">
+          <span class="text-muted">Partner Logo</span>
+        </div>
+      </div>
+      <h4>Digital Futures Foundation</h4>
+      <p>Community partnership focused on expanding technology access to underserved communities.</p>
+    </div>
+  </div>
+</div>
+```
+
+## Become a Partner
+
+We're always open to new partnership opportunities that align with our mission of providing high-quality, practical technology education.
+
+### Why Partner With Us?
+
+- Access to a community of motivated, skilled technology learners
+- Opportunity to influence curriculum and educational approaches
+- Visibility among our network of professionals and students
+- Collaborative projects that address real-world challenges
+- Support for corporate social responsibility initiatives
+
+### Partnership Process
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-md-12">
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-3 text-center">
+            <div class="process-step">
+              <div class="process-icon">
+                <i class="bi bi-chat-dots-fill fs-1 text-primary"></i>
+              </div>
+              <h5>Initial Discussion</h5>
+              <p>Contact us to explore potential collaboration areas</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center">
+            <div class="process-step">
+              <div class="process-icon">
+                <i class="bi bi-file-earmark-text-fill fs-1 text-primary"></i>
+              </div>
+              <h5>Proposal Development</h5>
+              <p>Joint creation of partnership goals and structure</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center">
+            <div class="process-step">
+              <div class="process-icon">
+                <i class="bi bi-pen-fill fs-1 text-primary"></i>
+              </div>
+              <h5>Agreement</h5>
+              <p>Formalization of partnership terms and expectations</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3 text-center">
+            <div class="process-step">
+              <div class="process-icon">
+                <i class="bi bi-rocket-takeoff-fill fs-1 text-primary"></i>
+              </div>
+              <h5>Implementation</h5>
+              <p>Launch and ongoing management of partnership activities</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+### Contact Us About Partnerships
+
+Interested in exploring a partnership with chen.ist Academy? We'd love to hear from you!
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-md-12 text-center">
+    <a href="/contact.qmd" class="btn btn-primary btn-lg">Contact Our Partnership Team</a>
+  </div>
+</div>
+```
+
+:::
+
+```{=html}
+<div class="cta-section">
+  <div class="container text-center">
+    <h2>Stronger Together</h2>
+    <p class="mb-4">Join our network of partners who are shaping the future of technology education.</p>
+    <a href="/contact.qmd" class="cta-button">Become a Partner</a>
+  </div>
+</div>
+```

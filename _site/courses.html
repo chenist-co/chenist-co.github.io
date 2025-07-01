@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.7.30">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,14 +37,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-eafa195d53efa0fab264880c76d884d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-eafa195d53efa0fab264880c76d884d9.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-eafa195d53efa0fab264880c76d884d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7d9f9ec930f8e7e087d2757649195a24.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-7e21a911666433d019f02e0912e18a52.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-7d9f9ec930f8e7e087d2757649195a24.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-b5057f3398a202b36a08d66ee4de0ec1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,6 +73,49 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<style>
+.navbar-brand-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand .navbar-title {
+  display: inline-block;
+  margin-left: 0;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 767.98px) {
+  .navbar-brand .navbar-title {
+    font-size: 1.1rem;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Find the navbar brand element that contains the logo
+  const navbarBrand = document.querySelector('.navbar-brand');
+  
+  if (navbarBrand) {
+    // Create a span for the CHENIST text
+    const titleSpan = document.createElement('span');
+    titleSpan.className = 'navbar-title';
+    titleSpan.textContent = 'CHENIST';
+    
+    // Append the span after the logo
+    navbarBrand.appendChild(titleSpan);
+  }
+});
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
@@ -80,11 +123,12 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="scss/styles.css">
+<link rel="stylesheet" href="scss/academy.scss">
 <meta property="og:title" content="Courses – chen.ist">
-<meta property="og:description" content="Comprehensive technical training programs">
+<meta property="og:description" content="Redirecting to Academy/Courses">
 <meta property="og:site_name" content="chen.ist">
 <meta name="twitter:title" content="Courses – chen.ist">
-<meta name="twitter:description" content="Comprehensive technical training programs">
+<meta name="twitter:description" content="Redirecting to Academy/Courses">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -258,7 +302,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo">
+    <img src="./assets/images/logo-light.svg" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -281,24 +325,28 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-academy">    
         <li>
-    <a class="dropdown-item" href="./academy.html">
+    <a class="dropdown-item" href="./academy/overview.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./courses.html">
+    <a class="dropdown-item" href="./academy/courses.html">
  <span class="dropdown-text">Courses</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./events.html">
- <span class="dropdown-text">Event</span></a>
+    <a class="dropdown-item" href="./academy/events.html">
+ <span class="dropdown-text">Events</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./webinars.html">
+    <a class="dropdown-item" href="./academy/webinars.html">
  <span class="dropdown-text">Webinars</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./computerclub.html">
+    <a class="dropdown-item" href="./academy/computerclub.html">
  <span class="dropdown-text">Computer Club</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./academy/partnerships.html">
+ <span class="dropdown-text">Partnerships</span></a>
   </li>  
     </ul>
   </li>
@@ -380,15 +428,8 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Courses</h1>
-<p class="subtitle lead">Comprehensive technical training programs</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">cybersecurity</div>
-    <div class="quarto-category">open-source</div>
-    <div class="quarto-category">linux</div>
-    <div class="quarto-category">data-privacy</div>
-    <div class="quarto-category">security-awareness</div>
-  </div>
-  </div>
+<p class="subtitle lead">Redirecting to Academy/Courses</p>
+</div>
 
 
 
@@ -404,296 +445,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="hero-section">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-8 offset-md-2 text-center">
-        <h1>Academy <span class="text-green">Courses</span></h1>
-        <p>Enhance your skills with our expert-led training programs</p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="container page-section">
-<section id="available-courses" class="level2">
-<h2 class="anchored" data-anchor-id="available-courses">Available Courses</h2>
-<p>Our courses are designed to provide practical, hands-on experience and deep theoretical understanding across a range of technical domains. Each course is taught by industry experts with extensive real-world experience.</p>
-<div class="row mt-5">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Open Source Development</h3>
-        <div class="d-flex justify-content-between">
-          <span class="badge bg-primary">Intermediate</span>
-          <span class="badge bg-secondary">8 Weeks</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <h4 class="anchored">Course Overview</h4>
-        <p>Learn how to effectively contribute to open source projects, understand licensing, community guidelines, version control workflows, and collaborative development practices.</p>
-
-        <h4 class="anchored">Key Topics</h4>
-        <ul>
-          <li>Git workflows and collaboration models</li>
-          <li>Open source licensing and compliance</li>
-          <li>Community interaction best practices</li>
-          <li>Continuous integration and automated testing</li>
-          <li>Documentation and contributing guidelines</li>
-        </ul>
-
-        <h4 class="anchored">What You'll Learn</h4>
-        <p>By the end of this course, you'll be able to navigate complex open source projects, make meaningful contributions, and potentially maintain your own open source initiatives.</p>
-
-        <div class="d-flex justify-content-between align-items-center mt-4">
-          <span><strong>Next Start Date:</strong> November 1st, 2025</span>
-          <a href="#" class="btn btn-success">Details and RSVP - soon</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Practical Cybersecurity</h3>
-        <div class="d-flex justify-content-between">
-          <span class="badge bg-primary">All Levels</span>
-          <span class="badge bg-secondary">12 Weeks</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <h4 class="anchored">Course Overview</h4>
-        <p>A comprehensive introduction to cybersecurity concepts, tools, and practices, with a focus on hands-on exercises and real-world applications.</p>
-
-        <h4 class="anchored">Key Topics</h4>
-        <ul>
-          <li>Network security fundamentals</li>
-          <li>Vulnerability assessment and penetration testing</li>
-          <li>Web application security</li>
-          <li>Cryptography and secure communications</li>
-          <li>Security incident response</li>
-        </ul>
-
-        <h4 class="anchored">What You'll Learn</h4>
-        <p>You'll develop practical skills to identify and mitigate security vulnerabilities, understand attack vectors, and implement effective security measures in various environments.</p>
-
-        <div class="d-flex justify-content-between align-items-center mt-4">
-          <span><strong>Next Start Date:</strong> October 15th, 2025</span>
-          <a href="#" class="btn btn-success">Details and RSVP - soon</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Unix/Linux Systems Administration</h3>
-        <div class="d-flex justify-content-between">
-          <span class="badge bg-primary">Intermediate to Advanced</span>
-          <span class="badge bg-secondary">10 Weeks</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <h4 class="anchored">Course Overview</h4>
-        <p>Master the art of Unix/Linux systems administration, covering everything from basic command-line operations to advanced server configuration and management.</p>
-
-        <h4 class="anchored">Key Topics</h4>
-        <ul>
-          <li>Shell scripting and automation</li>
-          <li>User and permission management</li>
-          <li>Network configuration and troubleshooting</li>
-          <li>Service deployment and management</li>
-          <li>Performance tuning and monitoring</li>
-        </ul>
-
-        <h4 class="anchored">What You'll Learn</h4>
-        <p>You'll gain confidence in managing Unix/Linux systems in production environments, automate routine tasks, and effectively troubleshoot complex system issues.</p>
-
-        <div class="d-flex justify-content-between align-items-center mt-4">
-          <span><strong>Next Start Date:</strong> September 10th, 2025</span>
-          <a href="#" class="btn btn-success">Details and RSVP - soon</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Data Protection and Privacy</h3>
-        <div class="d-flex justify-content-between">
-          <span class="badge bg-primary">All Levels</span>
-          <span class="badge bg-secondary">6 Weeks</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <h4 class="anchored">Course Overview</h4>
-        <p>Explore the technical and legal aspects of data protection, focusing on implementing privacy-by-design principles and compliance with global regulations.</p>
-
-        <h4 class="anchored">Key Topics</h4>
-        <ul>
-          <li>GDPR, CCPA, and other privacy regulations</li>
-          <li>Data minimization and purpose limitation</li>
-          <li>Privacy-enhancing technologies</li>
-          <li>Data breach prevention and response</li>
-          <li>Privacy impact assessments</li>
-        </ul>
-
-        <h4 class="anchored">What You'll Learn</h4>
-        <p>You'll develop the skills to implement effective data protection measures, navigate complex compliance requirements, and build privacy-conscious systems.</p>
-
-        <div class="d-flex justify-content-between align-items-center mt-4">
-          <span><strong>Next Start Date:</strong> November 5th, 2025</span>
-          <a href="#" class="btn btn-success">Details and RSVP - soon</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Human Firewall: Security Awareness</h3>
-        <div class="d-flex justify-content-between">
-          <span class="badge bg-primary">All Levels</span>
-          <span class="badge bg-secondary">4 Weeks</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <h4 class="anchored">Course Overview</h4>
-        <p>A practical course focused on building strong security awareness within organizations, recognizing that people are both the strongest and weakest links in the security chain.</p>
-
-        <h4 class="anchored">Key Topics</h4>
-        <ul>
-          <li>Social engineering recognition and prevention</li>
-          <li>Secure password management and authentication</li>
-          <li>Safe browsing and email practices</li>
-          <li>Mobile device security</li>
-          <li>Building a security-conscious culture</li>
-        </ul>
-
-        <h4 class="anchored">What You'll Learn</h4>
-        <p>You'll gain the knowledge to develop and implement effective security awareness programs, recognize common attack vectors, and foster a security-first mindset.</p>
-
-        <div class="d-flex justify-content-between align-items-center mt-4">
-          <span><strong>Next Start Date:</strong> August 15th, 2025</span>
-          <a href="#" class="btn btn-success">Details and RSVP - soon</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-<section id="course-formats" class="level2">
-<h2 class="anchored" data-anchor-id="course-formats">Course Formats</h2>
-<p>We offer flexible learning options to accommodate different schedules and learning preferences:</p>
-<div class="row mt-4">
-  <div class="col-md-4">
-    <div class="security-feature">
-      <h3 class="anchored">Instructor-Led Online</h3>
-      <p>Live virtual sessions with real-time interaction, guided exercises, and direct access to instructors.</p>
-      <ul>
-        <li>Scheduled live sessions</li>
-        <li>Interactive Q&amp;A</li>
-        <li>Collaborative exercises</li>
-        <li>Recorded sessions for review</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="security-feature">
-      <h3 class="anchored">Self-Paced Online</h3>
-      <p>Flexible learning path with comprehensive materials, practical exercises, and forum support.</p>
-      <ul>
-        <li>Learn at your own pace</li>
-        <li>On-demand video lessons</li>
-        <li>Downloadable resources</li>
-        <li>Forum support</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="security-feature">
-      <h3 class="anchored">In-Person Workshops</h3>
-      <p>Intensive hands-on sessions conducted at our training facilities or at your organization's location.</p>
-      <ul>
-        <li>Immersive learning experience</li>
-        <li>Hands-on lab exercises</li>
-        <li>Networking opportunities</li>
-        <li>Direct mentorship</li>
-      </ul>
-    </div>
-  </div>
-</div>
-</section>
-<section id="why-choose-our-courses" class="level2">
-<h2 class="anchored" data-anchor-id="why-choose-our-courses">Why Choose Our Courses</h2>
-<div class="row mt-5">
-  <div class="col-lg-3 col-md-6">
-    <div class="feature-card text-center">
-      <div class="feature-card-icon">
-        <i class="bi bi-person-check"></i>
-      </div>
-      <h3 class="anchored">Expert Instructors</h3>
-      <p>Learn from industry professionals with extensive real-world experience and proven teaching abilities.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-3 col-md-6">
-    <div class="feature-card text-center">
-      <div class="feature-card-icon">
-        <i class="bi bi-laptop"></i>
-      </div>
-      <h3 class="anchored">Practical Focus</h3>
-      <p>Hands-on exercises and real-world scenarios that prepare you for immediate application in your work.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-3 col-md-6">
-    <div class="feature-card text-center">
-      <div class="feature-card-icon">
-        <i class="bi bi-graph-up"></i>
-      </div>
-      <h3 class="anchored">Continuous Updates</h3>
-      <p>Course content regularly updated to reflect the latest technologies, tools, and industry best practices.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-3 col-md-6">
-    <div class="feature-card text-center">
-      <div class="feature-card-icon">
-        <i class="bi bi-patch-check"></i>
-      </div>
-      <h3 class="anchored">Certification</h3>
-      <p>Earn recognized certifications that validate your skills and enhance your professional credentials.</p>
-    </div>
-  </div>
-</div>
-</section>
-</div>
-<div class="cta-section">
-  <div class="container text-center">
-    <h2 class="anchored">Ready to advance your skills?</h2>
-    <p class="mb-4">Browse our course catalog and find the perfect learning path for your career goals.</p>
-    <div class="row justify-content-center mt-4">
-      <div class="col-md-6">
-        <a href="./academy.html" class="cta-button">Explore Academy Programs</a>
-      </div>
-      <br>
-      <br>
-      <div class="col-md-6">
-        <a href="./contact.html" class="cta-button">Contact Us for Details</a>
-      </div>
-    </div>
-  </div>
-</div>
+<meta http-equiv="refresh" content="0;url=/academy/courses/">
+<script>window.location.href = "/academy/courses/";</script>
+<p>If you are not redirected automatically, please <a href="./academy/courses/">click here</a> to access the Courses section.</p>
 
 
 
@@ -783,7 +537,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/chen\.ist");
+        var filterRegex = new RegExp("https:\/\/github\/com\/chen\.ist");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1131,54 +885,516 @@ ul.task-list li input[type="checkbox"] {
 </div>
   </div>
 </footer>
-<footer class="footer mt-5 py-4">
+<footer class="footer mt-5 py-3 cybersecurity-footer">
     <div class="container">
-        <div class="row">
-            <div class="col-md-4 mb-3">
-                <h5>About chen.ist</h5>
-                <p class="text-muted">
-                    Innovative technology solutions for the modern world.
-                    Specializing in cybersecurity, cloud architecture, and
-                    digital transformation.
-                </p>
-            </div>
-            <div class="col-md-4 mb-3">
-                <h5>Quick Links</h5>
-                <ul class="list-unstyled">
-                    <li><a href="./services.html">Services</a></li>
-                    <li><a href="./academy.html">Academy</a></li>
-                    <li><a href="./blog.html">Blog</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4 mb-3">
-                <h5>Connect</h5>
-                <div class="d-flex gap-3 mb-2">
-                    <a href="https://github.com/chenist" aria-label="GitHub"><i class="bi bi-github fs-4"></i></a>
-                    <a href="https://linkedin.com/in/chenistsec" aria-label="LinkedIn"><i class="bi bi-linkedin fs-4"></i></a>
-                    <a href="https://twitter.com/chenistsec" aria-label="Twitter"><i class="bi bi-twitter-x fs-4"></i></a>
+        <div class="row mb-3">
+            <!-- Company Logo and Brief -->
+            <div class="col-md-4 mb-2">
+                <div class="d-flex align-items-center">
+                    <h4 class="footer-logo mb-0 me-2">chen<span class="text-accent">.ist</span></h4>
+                    <div class="secure-badge ms-2">
+                        <i class="bi bi-shield-lock-fill"></i> Secure
+                    </div>
                 </div>
-                <p class="text-muted small">
-                    Email: <a href="mailto:office@chen.ist">office@chen.ist</a>
+                <p class="footer-description small mt-2 mb-0">
+                    Enterprise cybersecurity solutions with zero-trust implementation and continuous monitoring.
                 </p>
+            </div>
+            
+            <!-- Tabs Navigation -->
+            <div class="col-md-8 mb-2">
+                <div class="footer-tabs">
+                    <ul class="nav nav-tabs footer-nav-tabs" id="footerTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="solutions-tab" data-bs-toggle="tab" data-bs-target="#solutions" type="button" role="tab">
+                                <i class="bi bi-shield-fill"></i> Solutions
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="academy-tab" data-bs-toggle="tab" data-bs-target="#academy" type="button" role="tab">
+                                <i class="bi bi-mortarboard-fill"></i> Academy
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab">
+                                <i class="bi bi-envelope-fill"></i> Contact
+                            </button>
+                        </li>
+                    </ul>
+                    
+                    <!-- Tab Content -->
+                    <div class="tab-content pt-2" id="footerTabContent">
+                        <!-- Solutions Tab -->
+                        <div class="tab-pane fade show active" id="solutions" role="tabpanel">
+                            <div class="row">
+                                <div class="col-6 col-md-3">
+                                    <a href="./services.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Security Services
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="./services.html#consulting" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Consulting
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="./services.html#compliance" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Compliance
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="./services.html#incident-response" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Incident Response
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Academy Tab -->
+                        <div class="tab-pane fade" id="academy" role="tabpanel">
+                            <div class="row">
+                                <div class="col-6 col-md-3">
+                                    <a href="./academy/courses.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Courses
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="./academy/events.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Events
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="./academy/webinars.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Webinars
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="./academy/computerclub.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Computer Club
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Contact Tab -->
+                        <div class="tab-pane fade" id="contact" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-1">
+                                        <i class="bi bi-envelope-fill contact-icon"></i>
+                                        <a href="mailto:office@chen.ist" class="footer-link">office@chen.ist</a>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-shield-fill-check contact-icon"></i>
+                                        <span class="small">SOC Available 24/7</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-1">
+                                        <i class="bi bi-geo-alt-fill contact-icon"></i>
+                                        <span class="small">Stockholm | Craiova | Bucharest</span>
+                                    </div>
+                                    <div class="social-icons">
+                                        <a href="https://github.com/chenist" class="social-icon" aria-label="GitHub">
+                                            <i class="bi bi-github"></i>
+                                        </a>
+                                        <a href="https://linkedin.com/in/chenistsec" class="social-icon" aria-label="LinkedIn">
+                                            <i class="bi bi-linkedin"></i>
+                                        </a>
+                                        <a href="https://twitter.com/chenistsec" class="social-icon" aria-label="Twitter">
+                                            <i class="bi bi-twitter-x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <hr>
-        <div class="row">
+        
+        <div class="footer-divider">
+            <div class="cyber-line"></div>
+        </div>
+        
+        <div class="row footer-bottom py-1">
             <div class="col-md-6">
-                <p class="small text-muted">
-                    © 2025 chen.ist. All rights reserved.
-                </p>
+                <div class="d-flex align-items-center">
+                    <div class="security-pulse"></div>
+                    <p class="mb-0 ms-2 copyright">
+                        © 2025 chen.ist <span class="d-none d-md-inline">| Secure. Vigilant. Resilient.</span>
+                    </p>
+                </div>
             </div>
             <div class="col-md-6 text-md-end">
-                <p class="small text-muted">
-                    <a href="./privacy.html">Privacy Policy</a> |
-                    <a href="./terms.html">Terms of Service</a>
-                </p>
+                <div class="footer-bottom-links">
+                    <a href="./privacy.html">Privacy</a>
+                    <span class="separator">|</span>
+                    <a href="./terms.html">Terms</a>
+                    <span class="separator">|</span>
+                    <a href="./contact.html" class="btn-report-incident">
+                        <i class="bi bi-exclamation-triangle-fill"></i> Report Incident
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </footer>
+
+<style>
+.cybersecurity-footer {
+    background-color: #0f1923;
+    color: #e6e6e6;
+    border-top: 3px solid #18bc9c;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+/* Change accent colors for academy section */
+.academy-section .cybersecurity-footer {
+    border-top-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer::before {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #F5A623 20%, 
+        #F5A623 40%, 
+        transparent 50%,
+        transparent 60%,
+        #F5A623 80%,
+        transparent 100%
+    );
+}
+
+.academy-section .cybersecurity-footer .text-accent,
+.academy-section .cybersecurity-footer .contact-icon,
+.academy-section .cybersecurity-footer .footer-heading::after,
+.academy-section .cybersecurity-footer .social-icon:hover,
+.academy-section .cybersecurity-footer .footer-link:hover,
+.academy-section .cybersecurity-footer .contact-item a:hover,
+.academy-section .cybersecurity-footer .footer-bottom-links a:hover,
+.academy-section .cybersecurity-footer .nav-link.active {
+    color: #F5A623 !important;
+}
+
+.academy-section .cybersecurity-footer .secure-badge {
+    background-color: rgba(245, 166, 35, 0.15);
+    color: #F5A623;
+    border-left-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .social-icon:hover {
+    background-color: #F5A623;
+    color: #0f1923 !important;
+}
+
+.academy-section .cybersecurity-footer .cyber-line {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(245, 166, 35, 0.3) 10%, 
+        rgba(245, 166, 35, 0.5) 50%, 
+        rgba(245, 166, 35, 0.3) 90%, 
+        transparent 100%
+    );
+}
+
+.academy-section .cybersecurity-footer .cyber-line::before,
+.academy-section .cybersecurity-footer .cyber-line::after {
+    background-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .security-pulse {
+    background-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .security-pulse::before {
+    background-color: rgba(245, 166, 35, 0.3);
+}
+
+.cybersecurity-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #18bc9c 20%, 
+        #18bc9c 40%, 
+        transparent 50%,
+        transparent 60%,
+        #18bc9c 80%,
+        transparent 100%
+    );
+    opacity: 0.4;
+}
+
+.cybersecurity-footer .footer-brand {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.cybersecurity-footer .footer-logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Source Code Pro', monospace;
+    color: white;
+}
+
+.cybersecurity-footer .text-accent {
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .secure-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(24, 188, 156, 0.15);
+    color: #18bc9c;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-left: 2px solid #18bc9c;
+}
+
+.cybersecurity-footer .footer-description {
+    color: #9ba6b2;
+    line-height: 1.4;
+}
+
+.cybersecurity-footer .footer-tabs {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.cybersecurity-footer .footer-nav-tabs {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cybersecurity-footer .nav-tabs .nav-link {
+    color: #9ba6b2;
+    border: none;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    background-color: transparent;
+}
+
+.cybersecurity-footer .nav-tabs .nav-link:hover {
+    color: #e6e6e6;
+    border: none;
+}
+
+.cybersecurity-footer .nav-tabs .nav-link.active {
+    color: #18bc9c;
+    background-color: rgba(24, 188, 156, 0.1);
+    border: none;
+}
+
+.cybersecurity-footer .tab-content {
+    min-height: 60px;
+}
+
+.cybersecurity-footer .footer-link {
+    color: #9ba6b2;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.cybersecurity-footer .footer-link:hover {
+    color: #18bc9c;
+    transform: translateX(3px);
+}
+
+.cybersecurity-footer .icon-small {
+    font-size: 0.75rem;
+    margin-right: 0.25rem;
+}
+
+.cybersecurity-footer .contact-icon {
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .social-icons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.cybersecurity-footer .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e6e6e6;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.cybersecurity-footer .social-icon:hover {
+    background-color: #18bc9c;
+    color: #0f1923;
+    transform: translateY(-2px);
+}
+
+.cybersecurity-footer .footer-divider {
+    position: relative;
+    height: 12px;
+    margin: 0.5rem 0;
+}
+
+.cybersecurity-footer .cyber-line {
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(24, 188, 156, 0.3) 10%, 
+        rgba(24, 188, 156, 0.5) 50%, 
+        rgba(24, 188, 156, 0.3) 90%, 
+        transparent 100%
+    );
+    position: relative;
+}
+
+.cybersecurity-footer .cyber-line::before,
+.cybersecurity-footer .cyber-line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 8px;
+    height: 1px;
+    background-color: #18bc9c;
+    animation: blink 2s infinite;
+}
+
+.cybersecurity-footer .cyber-line::before {
+    left: 25%;
+}
+
+.cybersecurity-footer .cyber-line::after {
+    right: 25%;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
+
+.cybersecurity-footer .security-pulse {
+    width: 8px;
+    height: 8px;
+    background-color: #18bc9c;
+    border-radius: 50%;
+    position: relative;
+}
+
+.cybersecurity-footer .security-pulse::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 50%;
+    background-color: rgba(24, 188, 156, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    70% { transform: scale(1.5); opacity: 0; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+.cybersecurity-footer .copyright {
+    color: #9ba6b2;
+    font-size: 0.8rem;
+}
+
+.cybersecurity-footer .footer-bottom-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.cybersecurity-footer .footer-bottom-links a {
+    color: #9ba6b2;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.2s ease;
+}
+
+.cybersecurity-footer .footer-bottom-links a:hover {
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .separator {
+    margin: 0 0.5rem;
+    color: #4a5568;
+    font-size: 0.8rem;
+}
+
+.cybersecurity-footer .btn-report-incident {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(220, 53, 69, 0.15);
+    color: #dc3545 !important;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease !important;
+}
+
+.cybersecurity-footer .btn-report-incident:hover {
+    background-color: rgba(220, 53, 69, 0.3);
+}
+
+.cybersecurity-footer .btn-report-incident i {
+    margin-right: 0.3rem;
+}
+
+@media (max-width: 767px) {
+    .cybersecurity-footer .footer-bottom-links {
+        justify-content: flex-start;
+        margin-top: 0.5rem;
+    }
+    
+    .cybersecurity-footer .btn-report-incident {
+        margin-top: 0.5rem;
+        margin-left: 0;
+    }
+    
+    .cybersecurity-footer .separator:nth-of-type(2) {
+        display: none;
+    }
+}
+</style>
+
+<script>
+// Initialize Bootstrap tabs if not already initialized
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof bootstrap !== 'undefined') {
+        var tabElList = [].slice.call(document.querySelectorAll('#footerTabs .nav-link'));
+        tabElList.map(function(tabEl) {
+            return new bootstrap.Tab(tabEl);
+        });
+    }
+});
+</script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     // Function to toggle dark/light mode

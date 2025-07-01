@@ -54,6 +54,11 @@ a:hover {
   margin-bottom: 1rem;
 }
 
+.feature-card-svg {
+  width: 50%;
+  height: 50%;
+}
+
 /* Footer */
 footer {
   background-color: #323642;
@@ -101,7 +106,7 @@ footer a:hover {
 
 /* Utility classes */
 .text-green {
-  color: #81BD4A;
+  color: #854ABD; /* 81BD4A
 }
 
 .bg-navy {
@@ -133,4 +138,9 @@ pre, code {
   font-weight: 600;
   color: #81BD4A;
   border-bottom: 2px solid #81BD4A;
+}
+
+/* Ensure headings in light sections have proper contrast */
+.page-section h1, .page-section h2 {
+  color: #81BD4A; /* Green color for better visibility */
 }

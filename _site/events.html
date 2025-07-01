@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.7.30">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,14 +37,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-eafa195d53efa0fab264880c76d884d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-eafa195d53efa0fab264880c76d884d9.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-eafa195d53efa0fab264880c76d884d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7d9f9ec930f8e7e087d2757649195a24.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-7e21a911666433d019f02e0912e18a52.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-7d9f9ec930f8e7e087d2757649195a24.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-b5057f3398a202b36a08d66ee4de0ec1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,6 +73,49 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<style>
+.navbar-brand-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand .navbar-title {
+  display: inline-block;
+  margin-left: 0;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 767.98px) {
+  .navbar-brand .navbar-title {
+    font-size: 1.1rem;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Find the navbar brand element that contains the logo
+  const navbarBrand = document.querySelector('.navbar-brand');
+  
+  if (navbarBrand) {
+    // Create a span for the CHENIST text
+    const titleSpan = document.createElement('span');
+    titleSpan.className = 'navbar-title';
+    titleSpan.textContent = 'CHENIST';
+    
+    // Append the span after the logo
+    navbarBrand.appendChild(titleSpan);
+  }
+});
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
@@ -80,11 +123,12 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="scss/styles.css">
+<link rel="stylesheet" href="scss/academy.scss">
 <meta property="og:title" content="Events – chen.ist">
-<meta property="og:description" content="Upcoming and recurring events hosted by chen.ist">
+<meta property="og:description" content="Redirecting to Academy/Events">
 <meta property="og:site_name" content="chen.ist">
 <meta name="twitter:title" content="Events – chen.ist">
-<meta name="twitter:description" content="Upcoming and recurring events hosted by chen.ist">
+<meta name="twitter:description" content="Redirecting to Academy/Events">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -258,7 +302,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo">
+    <img src="./assets/images/logo-light.svg" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -281,24 +325,28 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-academy">    
         <li>
-    <a class="dropdown-item" href="./academy.html">
+    <a class="dropdown-item" href="./academy/overview.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./courses.html">
+    <a class="dropdown-item" href="./academy/courses.html">
  <span class="dropdown-text">Courses</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./events.html">
- <span class="dropdown-text">Event</span></a>
+    <a class="dropdown-item" href="./academy/events.html">
+ <span class="dropdown-text">Events</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./webinars.html">
+    <a class="dropdown-item" href="./academy/webinars.html">
  <span class="dropdown-text">Webinars</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./computerclub.html">
+    <a class="dropdown-item" href="./academy/computerclub.html">
  <span class="dropdown-text">Computer Club</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./academy/partnerships.html">
+ <span class="dropdown-text">Partnerships</span></a>
   </li>  
     </ul>
   </li>
@@ -380,15 +428,8 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Events</h1>
-<p class="subtitle lead">Upcoming and recurring events hosted by chen.ist</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">hackathon</div>
-    <div class="quarto-category">workshop</div>
-    <div class="quarto-category">conference</div>
-    <div class="quarto-category">meetup</div>
-    <div class="quarto-category">summer-school</div>
-  </div>
-  </div>
+<p class="subtitle lead">Redirecting to Academy/Events</p>
+</div>
 
 
 
@@ -404,375 +445,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- Announcement bar for new events -->
-<div class="announcement-bar">
-  <div class="container">
-    <div class="announcement-content">
-      <i class="bi bi-megaphone-fill"></i>
-      <div class="announcement-text">
-        <span class="event-highlight"><strong>NEW EVENT:</strong> AI Ethics Hackathon</span>
-        <span class="event-date">November 20-21, 2025</span>
-        <div class="event-actions">
-          <a href="./events/pages/ai-ethics-hackathon.html" class="action-button"><i class="bi bi-info-circle-fill"></i> Learn more</a>
-          <span class="divider">|</span>
-          <a href="./events/" class="action-button"><i class="bi bi-calendar-event-fill"></i> Event Calendar</a>
-        </div>
-        <button class="announcement-close"><i class="bi bi-x-lg"></i></button>
-      </div>
-
-    </div>
-  </div>
-</div>
-<br>
-
-<div class="hero-section">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-8 offset-md-2 text-center">
-        <h1>Academy <span class="text-green">Events</span></h1>
-        <p>Connect, learn, and innovate at our events</p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="container page-section">
-<section id="upcoming-events" class="level2">
-<h2 class="anchored" data-anchor-id="upcoming-events">Upcoming Events</h2>
-<p>Join us at one of our upcoming events to connect with peers, learn new skills, and stay at the forefront of technology innovation.</p>
-<div class="row mt-4">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Summer School 2025</h3>
-        <span class="badge bg-primary">August 1-15, 2025</span>
-      </div>
-      <div class="card-body">
-        <p>An intensive two-week program focused on cutting-edge technologies and practical skills development. Perfect for students and professionals looking to enhance their technical capabilities.</p>
-        <p><strong>Location:</strong>Craiova</p>
-        <p><strong>Registration:</strong> Opens July 1st, 2025</p>
-        <div class="d-flex flex-wrap gap-2">
-          <a href="./events/pages/summer-school-2025.html" class="btn btn-success">View Details</a>
-          <a href="./events/ical/summer-school-2025.ics" class="btn btn-outline-primary" download="">
-            <i class="bi bi-calendar3"></i> Calendar
-          </a>
-          <a href="./events/pdfs/summer-school-2025.pdf" class="btn btn-outline-secondary" download="">
-            <i class="bi bi-file-pdf"></i> PDF
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Cybersecurity Hackathon</h3>
-        <span class="badge bg-primary">Octomber 15-16, 2025</span>
-      </div>
-      <div class="card-body">
-        <p>A 48-hour challenge where participants work in teams to solve real-world cybersecurity problems. Open to security enthusiasts of all levels, from beginners to experts.</p>
-        <p><strong>Location:</strong> Craiova</p>
-        <p><strong>Registration:</strong> Opens Octomber 5-6th, 2025</p>
-        <div class="d-flex flex-wrap gap-2">
-          <a href="./events/pages/cybersecurity-hackathon.html" class="btn btn-success">Learn More</a>
-          <a href="./events/ical/cybersecurity-hackathon-2025.ics" class="btn btn-outline-primary" download="">
-            <i class="bi bi-calendar3"></i> Calendar
-          </a>
-          <a href="./events/pdfs/cybersecurity-hackathon.pdf" class="btn btn-outline-secondary" download="">
-            <i class="bi bi-file-pdf"></i> PDF
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-6">
-    <div class="card mb-4" id="ai-ethics-hackathon">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">AI Ethics Hackathon</h3>
-        <span class="badge bg-primary">March 5th, 2026</span>
-        <span class="badge bg-warning text-dark">New</span>
-      </div>
-      <div class="card-body">
-        <p>A weekend hackathon focusing on ethical AI development. Explore responsible AI design, bias detection, and creating AI systems that prioritize human values.</p>
-        <p><strong>Location:</strong> Bucharest</p>
-        <p><strong>Registration:</strong> Soon to be announced</p>
-        <div class="d-flex flex-wrap gap-2">
-          <a href="./events/pages/ai-ethics-hackathon.html" class="btn btn-success">Early Registration</a>
-          <a href="./events/ical/ai-ethics-hackathon-2025.ics" class="btn btn-outline-primary" download="">
-            <i class="bi bi-calendar3"></i> Calendar
-          </a>
-          <a href="./events/pdfs/ai-ethics-hackathon.pdf" class="btn btn-outline-secondary" download="">
-            <i class="bi bi-file-pdf"></i> PDF
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">SPACEAPPS Challenge 2025 Craiova - Hackathon</h3>
-        <span class="badge bg-primary">October 4-5th, 2025</span>
-      </div>
-      <div class="card-body">
-        <p>A three-day event focused on developing innovative solutions for space exploration, satellite technology, and Earth observation. Collaborate with industry experts and like-minded innovators.</p>
-        <p><strong>Location:</strong>Craiova</p>
-        <p><strong>Registration:</strong> RSVP opens July 17, 2025</p>
-        <div class="d-flex flex-wrap gap-2">
-          <a href="./events/pages/space-hackathon.html" class="btn btn-success">Register Interest</a>
-          <a href="./events/ical/space-hackathon-2025.ics" class="btn btn-outline-primary" download="">
-            <i class="bi bi-calendar3"></i> Calendar
-          </a>
-          <a href="./events/pdfs/space-hackathon.pdf" class="btn btn-outline-secondary" download="">
-            <i class="bi bi-file-pdf"></i> PDF
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Makers Workshop</h3>
-        <span class="badge bg-primary">September 15th, 2026</span>
-      </div>
-      <div class="card-body">
-        <p>A hands-on workshop for hardware enthusiasts, bringing together makers, DIY experts, and hardware hackers to build projects and share knowledge.</p>
-        <p><strong>Location:</strong> Bucharest</p>
-        <p><strong>Registration:</strong> Opens January 15th, 2026</p>
-        <div class="d-flex flex-wrap gap-2">
-          <a href="./events/pages/makers-workshop.html" class="btn btn-success">Learn More</a>
-          <a href="./events/ical/makers-workshop.ics" class="btn btn-outline-primary" download="">
-            <i class="bi bi-calendar3"></i> Calendar
-          </a>
-          <a href="./events/pdfs/makers-workshop.pdf" class="btn btn-outline-secondary" download="">
-            <i class="bi bi-file-pdf"></i> PDF
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-<section id="recurring-events" class="level2">
-<h2 class="anchored" data-anchor-id="recurring-events">Recurring Events</h2>
-<p>Stay connected with our community through these regular events designed to foster collaboration and continuous learning.</p>
-<div class="row mt-4">
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card">
-      <div class="feature-card-icon text-center">
-        <i class="bi bi-calendar-event"></i>
-      </div>
-      <h3 class="text-center anchored">Computer Club</h3>
-      <p>Monthly meetups focused on open discussion, knowledge sharing, and hands-on exploration of current tech trends.</p>
-      <p><strong>When:</strong> Last Thursday of every month</p>
-      <p><strong>Location:</strong> Various venues (check calendar)</p>
-      <div class="text-center mt-3">
-        <a href="https://clubul.computer/" class="btn btn-outline-primary">View Schedule</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card">
-      <div class="feature-card-icon text-center">
-        <i class="bi bi-people-fill"></i>
-      </div>
-      <h3 class="text-center anchored">Tech Talks</h3>
-      <p>Monthly speaker series featuring industry experts sharing insights on emerging technologies and best practices.</p>
-      <p><strong>When:</strong> First Tuesday of every month</p>
-      <p><strong>Location:</strong> Online and in-person options</p>
-      <div class="text-center mt-3">
-        <a href="https://lu.ma/chenistacademy" class="btn btn-outline-primary">Upcoming Talks</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card">
-      <div class="feature-card-icon text-center">
-        <i class="bi bi-code-slash"></i>
-      </div>
-      <h3 class="text-center anchored">Workshops</h3>
-      <p>Coding sessions where participants can work on personal projects, contribute to open-source initiatives, or collaborate on learning challenges.</p>
-      <p><strong>When:</strong> Check the calendar</p>
-      <p><strong>Location:</strong> Online &amp; In-Person</p>
-      <div class="text-center mt-3">
-        <a href="https://lu.ma/chenistacademy" class="btn btn-outline-primary">Join Session</a>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-<section id="past-events" class="level2">
-<h2 class="anchored" data-anchor-id="past-events">Past Events</h2>
-<p>Explore our previous events to get a sense of what to expect and the type of content we deliver.</p>
-<div class="row mt-4">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header">
-        <h3 class="card-title mb-0 anchored">"Cyber Hygiene for Kids" Conference Craiova</h3>
-        <span class="badge bg-secondary">November 27th 2024</span>
-      </div>
-      <div class="card-body">
-        <p>Psychotherapist Diana Stanculeanu and cybersecurity consultant Alin Mechenici addressed the growing concerns of excessive screen time, social media influence, and online safety for children. Topics covered: managing screen addiction, protecting against cyber threats, establishing healthy digital boundaries, and practical parenting strategies for the digital age. Event organized by: Bebevesel și Rotary Club Probitas Craiova.
-        </p>
-        <a href="https://marca-ro.ca/2024/11/23/conferinta-igiena-digitala-la-copii-are-loc-la-craiova/" class="btn btn-primary">Details</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header">
-        <h3 class="card-title mb-0 anchored"> "Capture the Flag" - Cybersecurity Hackathon</h3>
-        <span class="badge bg-secondary">November 5-6th, 2023</span>
-      </div>
-      <div class="card-body">
-        <p>
-        We successfully organized the 2023 Capture the Flag - Cybersecurity Hackathon, bringing together cybersecurity enthusiasts, students, and professionals for an intensive competition focused on real-world security challenges.
-        Our event featured multiple categories including web exploitation, cryptography, reverse engineering, and digital forensics, providing participants with hands-on experience in identifying vulnerabilities and solving complex security puzzles in a competitive environment.
-        </p>
-        <a href="" class="btn btn-primary">Invitation Only</a>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header">
-        <h3 class="card-title mb-0 anchored">SPACEAPPS Challenge - NASA Hackathon</h3>
-        <span class="badge bg-secondary">Yearly - since 2016</span>
-      </div>
-      <div class="card-body">
-        <p>
-        We are proud to organize 9th editions of NASA's SpaceApps Challenge. Our journey began in 2016 at Mjardevi Science Park in Linköping, Sweden, where we successfully hosted 3 in-person editions, followed by 2 online editions in Gothenburg during the COVID period.
-        Building on this international experience, we expanded our operations to Romania, bringing the prestigious NASA-sponsored hackathon to new communities and continuing our mission to foster innovation in space technology.
-        </p>
-        <a href="https://alinmechenici.substack.com/p/sac" class="btn btn-primary">Read our blog article</a>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-</div>
-<div class="cta-section">
-  <div class="container text-center">
-    <h2 class="anchored">Stay updated on our events</h2>
-    <div class="row justify-content-center mt-4">
-      <div class="col-md-6 offset-md-3">
-        <div class="newsletter-box">
-          <h3 class="anchored"><i class="bi bi-journal-richtext"></i> Subscribe to our Substack newsletter</h3>
-          <p>Get the latest event updates, tech insights, and exclusive content delivered to your inbox.</p>
-          <!-- Substack embed code -->
-          <iframe src="https://alinmechenici.substack.com/embed" width="100%" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Scripts for event functionality -->
-<script>
-  // Handle announcement bar close button
-  document.addEventListener('DOMContentLoaded', function() {
-    const closeButton = document.querySelector('.announcement-close');
-    const announcementBar = document.querySelector('.announcement-bar');
-
-    if (closeButton && announcementBar) {
-      closeButton.addEventListener('click', function() {
-        announcementBar.style.display = 'none';
-        // Save to session storage so it stays closed during the session
-        sessionStorage.setItem('announcementClosed', 'true');
-      });
-
-      // Check if announcement was previously closed
-      if (sessionStorage.getItem('announcementClosed') === 'true') {
-        announcementBar.style.display = 'none';
-      }
-    }
-
-    // Handle calendar downloads
-    const calendarButtons = document.querySelectorAll('a[download][href$=".ics"]');
-
-    calendarButtons.forEach(button => {
-      button.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        // Get event details from the card
-        const card = this.closest('.card');
-        const title = card.querySelector('.card-title').textContent;
-        const dateText = card.querySelector('.badge').textContent;
-        const description = card.querySelector('p').textContent;
-
-        // Find location element without using jQuery-specific selectors
-        const locationElement = Array.from(card.querySelectorAll('p strong')).find(el =>
-          el.textContent.includes('Location:')
-        );
-        const location = locationElement ? locationElement.parentNode.textContent.replace('Location:', '').trim() : '';
-
-        // Parse date (simple implementation, would need better parsing for production)
-        let startDate, endDate;
-        if (dateText.includes('-')) {
-          const dates = dateText.split('-');
-          // This is a very simplified date parser - would need better parsing in production
-          startDate = new Date(dates[0]);
-          endDate = new Date(dates[1]);
-        } else {
-          startDate = new Date(dateText);
-          endDate = new Date(startDate);
-          endDate.setHours(startDate.getHours() + 2); // Default 2-hour event
-        }
-
-        // Generate iCal content
-        const icalContent = generateICalEvent(title, startDate, endDate, description, location);
-
-        // Create and trigger download
-        const blob = new Blob([icalContent], { type: 'text/calendar;charset=utf-8' });
-        const fileName = this.getAttribute('href').split('/').pop();
-
-        // Create download link and trigger it
-        const downloadLink = document.createElement('a');
-        downloadLink.href = URL.createObjectURL(blob);
-        downloadLink.download = fileName;
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        document.body.removeChild(downloadLink);
-      });
-    });
-
-    // Function to generate iCal format
-    function generateICalEvent(title, start, end, description, location) {
-      const formatDate = (date) => {
-        return date.toISOString().replace(/-|:|\.\d+/g, '');
-      };
-
-      return [
-        'BEGIN:VCALENDAR',
-        'VERSION:2.0',
-        'PRODID:-//chen.ist//events//EN',
-        'CALSCALE:GREGORIAN',
-        'BEGIN:VEVENT',
-        `SUMMARY:${title}`,
-        `DTSTART:${formatDate(start)}`,
-        `DTEND:${formatDate(end)}`,
-        `DESCRIPTION:${description.replace(/\n/g, '\\n')}`,
-        `LOCATION:${location}`,
-        'STATUS:CONFIRMED',
-        `DTSTAMP:${formatDate(new Date())}`,
-        `UID:${Math.random().toString(36).substring(2)}@chen.ist`,
-        'END:VEVENT',
-        'END:VCALENDAR'
-      ].join('\r\n');
-    }
-  });
-</script>
+<meta http-equiv="refresh" content="0;url=/academy/events/">
+<script>window.location.href = "/academy/events/";</script>
+<p>If you are not redirected automatically, please <a href="./academy/events/">click here</a> to access the Events section.</p>
 
 
 
@@ -862,7 +537,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/chen\.ist");
+        var filterRegex = new RegExp("https:\/\/github\/com\/chen\.ist");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1210,54 +885,516 @@ ul.task-list li input[type="checkbox"] {
 </div>
   </div>
 </footer>
-<footer class="footer mt-5 py-4">
+<footer class="footer mt-5 py-3 cybersecurity-footer">
     <div class="container">
-        <div class="row">
-            <div class="col-md-4 mb-3">
-                <h5>About chen.ist</h5>
-                <p class="text-muted">
-                    Innovative technology solutions for the modern world.
-                    Specializing in cybersecurity, cloud architecture, and
-                    digital transformation.
-                </p>
-            </div>
-            <div class="col-md-4 mb-3">
-                <h5>Quick Links</h5>
-                <ul class="list-unstyled">
-                    <li><a href="./services.html">Services</a></li>
-                    <li><a href="./academy.html">Academy</a></li>
-                    <li><a href="./blog.html">Blog</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4 mb-3">
-                <h5>Connect</h5>
-                <div class="d-flex gap-3 mb-2">
-                    <a href="https://github.com/chenist" aria-label="GitHub"><i class="bi bi-github fs-4"></i></a>
-                    <a href="https://linkedin.com/in/chenistsec" aria-label="LinkedIn"><i class="bi bi-linkedin fs-4"></i></a>
-                    <a href="https://twitter.com/chenistsec" aria-label="Twitter"><i class="bi bi-twitter-x fs-4"></i></a>
+        <div class="row mb-3">
+            <!-- Company Logo and Brief -->
+            <div class="col-md-4 mb-2">
+                <div class="d-flex align-items-center">
+                    <h4 class="footer-logo mb-0 me-2">chen<span class="text-accent">.ist</span></h4>
+                    <div class="secure-badge ms-2">
+                        <i class="bi bi-shield-lock-fill"></i> Secure
+                    </div>
                 </div>
-                <p class="text-muted small">
-                    Email: <a href="mailto:office@chen.ist">office@chen.ist</a>
+                <p class="footer-description small mt-2 mb-0">
+                    Enterprise cybersecurity solutions with zero-trust implementation and continuous monitoring.
                 </p>
+            </div>
+            
+            <!-- Tabs Navigation -->
+            <div class="col-md-8 mb-2">
+                <div class="footer-tabs">
+                    <ul class="nav nav-tabs footer-nav-tabs" id="footerTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="solutions-tab" data-bs-toggle="tab" data-bs-target="#solutions" type="button" role="tab">
+                                <i class="bi bi-shield-fill"></i> Solutions
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="academy-tab" data-bs-toggle="tab" data-bs-target="#academy" type="button" role="tab">
+                                <i class="bi bi-mortarboard-fill"></i> Academy
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab">
+                                <i class="bi bi-envelope-fill"></i> Contact
+                            </button>
+                        </li>
+                    </ul>
+                    
+                    <!-- Tab Content -->
+                    <div class="tab-content pt-2" id="footerTabContent">
+                        <!-- Solutions Tab -->
+                        <div class="tab-pane fade show active" id="solutions" role="tabpanel">
+                            <div class="row">
+                                <div class="col-6 col-md-3">
+                                    <a href="./services.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Security Services
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="./services.html#consulting" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Consulting
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="./services.html#compliance" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Compliance
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="./services.html#incident-response" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Incident Response
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Academy Tab -->
+                        <div class="tab-pane fade" id="academy" role="tabpanel">
+                            <div class="row">
+                                <div class="col-6 col-md-3">
+                                    <a href="./academy/courses.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Courses
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="./academy/events.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Events
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="./academy/webinars.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Webinars
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="./academy/computerclub.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Computer Club
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Contact Tab -->
+                        <div class="tab-pane fade" id="contact" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-1">
+                                        <i class="bi bi-envelope-fill contact-icon"></i>
+                                        <a href="mailto:office@chen.ist" class="footer-link">office@chen.ist</a>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-shield-fill-check contact-icon"></i>
+                                        <span class="small">SOC Available 24/7</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-1">
+                                        <i class="bi bi-geo-alt-fill contact-icon"></i>
+                                        <span class="small">Stockholm | Craiova | Bucharest</span>
+                                    </div>
+                                    <div class="social-icons">
+                                        <a href="https://github.com/chenist" class="social-icon" aria-label="GitHub">
+                                            <i class="bi bi-github"></i>
+                                        </a>
+                                        <a href="https://linkedin.com/in/chenistsec" class="social-icon" aria-label="LinkedIn">
+                                            <i class="bi bi-linkedin"></i>
+                                        </a>
+                                        <a href="https://twitter.com/chenistsec" class="social-icon" aria-label="Twitter">
+                                            <i class="bi bi-twitter-x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <hr>
-        <div class="row">
+        
+        <div class="footer-divider">
+            <div class="cyber-line"></div>
+        </div>
+        
+        <div class="row footer-bottom py-1">
             <div class="col-md-6">
-                <p class="small text-muted">
-                    © 2025 chen.ist. All rights reserved.
-                </p>
+                <div class="d-flex align-items-center">
+                    <div class="security-pulse"></div>
+                    <p class="mb-0 ms-2 copyright">
+                        © 2025 chen.ist <span class="d-none d-md-inline">| Secure. Vigilant. Resilient.</span>
+                    </p>
+                </div>
             </div>
             <div class="col-md-6 text-md-end">
-                <p class="small text-muted">
-                    <a href="./privacy.html">Privacy Policy</a> |
-                    <a href="./terms.html">Terms of Service</a>
-                </p>
+                <div class="footer-bottom-links">
+                    <a href="./privacy.html">Privacy</a>
+                    <span class="separator">|</span>
+                    <a href="./terms.html">Terms</a>
+                    <span class="separator">|</span>
+                    <a href="./contact.html" class="btn-report-incident">
+                        <i class="bi bi-exclamation-triangle-fill"></i> Report Incident
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </footer>
+
+<style>
+.cybersecurity-footer {
+    background-color: #0f1923;
+    color: #e6e6e6;
+    border-top: 3px solid #18bc9c;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+/* Change accent colors for academy section */
+.academy-section .cybersecurity-footer {
+    border-top-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer::before {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #F5A623 20%, 
+        #F5A623 40%, 
+        transparent 50%,
+        transparent 60%,
+        #F5A623 80%,
+        transparent 100%
+    );
+}
+
+.academy-section .cybersecurity-footer .text-accent,
+.academy-section .cybersecurity-footer .contact-icon,
+.academy-section .cybersecurity-footer .footer-heading::after,
+.academy-section .cybersecurity-footer .social-icon:hover,
+.academy-section .cybersecurity-footer .footer-link:hover,
+.academy-section .cybersecurity-footer .contact-item a:hover,
+.academy-section .cybersecurity-footer .footer-bottom-links a:hover,
+.academy-section .cybersecurity-footer .nav-link.active {
+    color: #F5A623 !important;
+}
+
+.academy-section .cybersecurity-footer .secure-badge {
+    background-color: rgba(245, 166, 35, 0.15);
+    color: #F5A623;
+    border-left-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .social-icon:hover {
+    background-color: #F5A623;
+    color: #0f1923 !important;
+}
+
+.academy-section .cybersecurity-footer .cyber-line {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(245, 166, 35, 0.3) 10%, 
+        rgba(245, 166, 35, 0.5) 50%, 
+        rgba(245, 166, 35, 0.3) 90%, 
+        transparent 100%
+    );
+}
+
+.academy-section .cybersecurity-footer .cyber-line::before,
+.academy-section .cybersecurity-footer .cyber-line::after {
+    background-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .security-pulse {
+    background-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .security-pulse::before {
+    background-color: rgba(245, 166, 35, 0.3);
+}
+
+.cybersecurity-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #18bc9c 20%, 
+        #18bc9c 40%, 
+        transparent 50%,
+        transparent 60%,
+        #18bc9c 80%,
+        transparent 100%
+    );
+    opacity: 0.4;
+}
+
+.cybersecurity-footer .footer-brand {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.cybersecurity-footer .footer-logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Source Code Pro', monospace;
+    color: white;
+}
+
+.cybersecurity-footer .text-accent {
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .secure-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(24, 188, 156, 0.15);
+    color: #18bc9c;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-left: 2px solid #18bc9c;
+}
+
+.cybersecurity-footer .footer-description {
+    color: #9ba6b2;
+    line-height: 1.4;
+}
+
+.cybersecurity-footer .footer-tabs {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.cybersecurity-footer .footer-nav-tabs {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cybersecurity-footer .nav-tabs .nav-link {
+    color: #9ba6b2;
+    border: none;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    background-color: transparent;
+}
+
+.cybersecurity-footer .nav-tabs .nav-link:hover {
+    color: #e6e6e6;
+    border: none;
+}
+
+.cybersecurity-footer .nav-tabs .nav-link.active {
+    color: #18bc9c;
+    background-color: rgba(24, 188, 156, 0.1);
+    border: none;
+}
+
+.cybersecurity-footer .tab-content {
+    min-height: 60px;
+}
+
+.cybersecurity-footer .footer-link {
+    color: #9ba6b2;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.cybersecurity-footer .footer-link:hover {
+    color: #18bc9c;
+    transform: translateX(3px);
+}
+
+.cybersecurity-footer .icon-small {
+    font-size: 0.75rem;
+    margin-right: 0.25rem;
+}
+
+.cybersecurity-footer .contact-icon {
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .social-icons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.cybersecurity-footer .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e6e6e6;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.cybersecurity-footer .social-icon:hover {
+    background-color: #18bc9c;
+    color: #0f1923;
+    transform: translateY(-2px);
+}
+
+.cybersecurity-footer .footer-divider {
+    position: relative;
+    height: 12px;
+    margin: 0.5rem 0;
+}
+
+.cybersecurity-footer .cyber-line {
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(24, 188, 156, 0.3) 10%, 
+        rgba(24, 188, 156, 0.5) 50%, 
+        rgba(24, 188, 156, 0.3) 90%, 
+        transparent 100%
+    );
+    position: relative;
+}
+
+.cybersecurity-footer .cyber-line::before,
+.cybersecurity-footer .cyber-line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 8px;
+    height: 1px;
+    background-color: #18bc9c;
+    animation: blink 2s infinite;
+}
+
+.cybersecurity-footer .cyber-line::before {
+    left: 25%;
+}
+
+.cybersecurity-footer .cyber-line::after {
+    right: 25%;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
+
+.cybersecurity-footer .security-pulse {
+    width: 8px;
+    height: 8px;
+    background-color: #18bc9c;
+    border-radius: 50%;
+    position: relative;
+}
+
+.cybersecurity-footer .security-pulse::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 50%;
+    background-color: rgba(24, 188, 156, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    70% { transform: scale(1.5); opacity: 0; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+.cybersecurity-footer .copyright {
+    color: #9ba6b2;
+    font-size: 0.8rem;
+}
+
+.cybersecurity-footer .footer-bottom-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.cybersecurity-footer .footer-bottom-links a {
+    color: #9ba6b2;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.2s ease;
+}
+
+.cybersecurity-footer .footer-bottom-links a:hover {
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .separator {
+    margin: 0 0.5rem;
+    color: #4a5568;
+    font-size: 0.8rem;
+}
+
+.cybersecurity-footer .btn-report-incident {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(220, 53, 69, 0.15);
+    color: #dc3545 !important;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease !important;
+}
+
+.cybersecurity-footer .btn-report-incident:hover {
+    background-color: rgba(220, 53, 69, 0.3);
+}
+
+.cybersecurity-footer .btn-report-incident i {
+    margin-right: 0.3rem;
+}
+
+@media (max-width: 767px) {
+    .cybersecurity-footer .footer-bottom-links {
+        justify-content: flex-start;
+        margin-top: 0.5rem;
+    }
+    
+    .cybersecurity-footer .btn-report-incident {
+        margin-top: 0.5rem;
+        margin-left: 0;
+    }
+    
+    .cybersecurity-footer .separator:nth-of-type(2) {
+        display: none;
+    }
+}
+</style>
+
+<script>
+// Initialize Bootstrap tabs if not already initialized
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof bootstrap !== 'undefined') {
+        var tabElList = [].slice.call(document.querySelectorAll('#footerTabs .nav-link'));
+        tabElList.map(function(tabEl) {
+            return new bootstrap.Tab(tabEl);
+        });
+    }
+});
+</script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     // Function to toggle dark/light mode

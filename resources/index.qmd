@@ -8,12 +8,26 @@ from: markdown+raw_html
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-8 offset-md-2 text-center">
-        <h1>Helpful <span class="text-green">Resources</span></h1>
+        <h1 class="hero-title"><span class="helpful-text">Helpful</span> <span class="text-green">Resources</span></h1>
         <p>Tools, guides, and reference materials for your success</p>
       </div>
     </div>
   </div>
 </div>
+
+<style>
+  /* Light mode (default) styling */
+  .hero-title .helpful-text {
+    color: white;
+  }
+  
+  /* Dark mode specific styling */
+  @media (prefers-color-scheme: dark) {
+    .hero-title .helpful-text {
+      color: white; /* Already white in dark mode */
+    }
+  }
+</style>
 ```
 
 ::: {.container .page-section}
@@ -179,9 +193,23 @@ Our resources are available in multiple formats to suit your needs:
 ```{=html}
 <div class="cta-section">
   <div class="container text-center">
-    <h2>Looking for specific resources?</h2>
+    <h2 class="cta-title"><span class="cta-white-text">Looking for specific resources?</span></h2>
     <p class="mb-4">Our team can help you find exactly what you need for your project or challenge.</p>
     <a href="/contact.html" class="cta-button">Contact Us</a>
   </div>
 </div>
+
+<style>
+  /* Light mode (default) styling */
+  .cta-title .cta-white-text {
+    color: white;
+  }
+  
+  /* Dark mode specific styling */
+  @media (prefers-color-scheme: dark) {
+    .cta-title .cta-white-text {
+      color: white; /* Already white in dark mode */
+    }
+  }
+</style>
 ```

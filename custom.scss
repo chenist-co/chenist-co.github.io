@@ -31,6 +31,59 @@ $callout-color-important: #CF3E3F;
 
 /*-- scss:rules --*/
 
+// Hero section styling
+.hero-section {
+  background-color: $primary;
+  color: $secondary;
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+  
+  .hero-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    
+    .academy-text,
+    .helpful-text,
+    .corporate-text,
+    .community-text,
+    .our-text {
+      color: white;
+    }
+    
+    .text-green {
+      color: $success;
+    }
+  }
+}
+
+// Partner logo dark mode support
+.partner-logo {
+  .company-logo {
+    max-width: 150px;
+    height: auto;
+  }
+}
+
+html[data-bs-theme="dark"] {
+  .light-mode-logo {
+    display: none !important;
+  }
+  
+  .dark-mode-logo {
+    display: block !important;
+  }
+}
+
+html:not([data-bs-theme="dark"]) {
+  .light-mode-logo {
+    display: block !important;
+  }
+  
+  .dark-mode-logo {
+    display: none !important;
+  }
+}
+
 // Announcement bar
 .announcement-bar {
   background-color: #282a36; // Dracula background
@@ -330,9 +383,143 @@ $callout-color-important: #CF3E3F;
 }
 
 .cta-section {
+  position: relative;
   background-color: $primary;
   color: $secondary;
-  padding: 3rem 0;
+  padding: 4rem 0;
+  overflow: hidden;
+  
+  // Primary background SVG
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--cta-bg-image, url('/assets/svg/cta-bg-pattern.svg'));
+    background-size: var(--cta-bg-size, 400px 400px);
+    background-position: var(--cta-bg-position, center);
+    background-repeat: var(--cta-bg-repeat, repeat);
+    opacity: var(--cta-bg-opacity, 0.8);
+    z-index: 0;
+  }
+  
+  // Secondary background SVG (can be positioned differently)
+  &.with-secondary-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--cta-secondary-bg-image);
+    background-size: var(--cta-secondary-bg-size, contain);
+    background-position: var(--cta-secondary-bg-position, right bottom);
+    background-repeat: var(--cta-secondary-bg-repeat, no-repeat);
+    opacity: var(--cta-secondary-bg-opacity, 0.4);
+    z-index: 1;
+  }
+  
+  // Gradient overlay (when no secondary background is used)
+  &:not(.with-secondary-bg)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, $primary 0%, rgba(50, 54, 66, 0.9) 100%);
+    z-index: 1;
+  }
+  
+  // Content container
+  .container {
+    position: relative;
+    z-index: 3; // Increased z-index to ensure content is on top
+  }
+  
+  .cta-title {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    
+    .cta-white-text {
+      color: white;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: var(--cta-text-color, $secondary);
+  }
+  
+  // Custom accent element
+  .cta-accent {
+    position: absolute;
+    z-index: 2;
+    
+    &.top-left {
+      top: 0;
+      left: 0;
+    }
+    
+    &.top-right {
+      top: 0;
+      right: 0;
+    }
+    
+    &.bottom-left {
+      bottom: 0;
+      left: 0;
+    }
+    
+    &.bottom-right {
+      bottom: 0;
+      right: 0;
+    }
+    
+    img, svg {
+      max-width: var(--cta-accent-size, 150px);
+      opacity: var(--cta-accent-opacity, 0.8);
+    }
+  }
+  
+  .cta-button {
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  // Theme variations
+  &.theme-cyber {
+    --cta-bg-image: url('/assets/svg/security.svg');
+    --cta-bg-size: 200px 200px;
+    --cta-bg-opacity: 0.15;
+    background-color: #1a1d2e;
+    
+    &::after {
+      background: linear-gradient(0deg, rgba(26, 29, 46, 0.9) 0%, rgba(26, 29, 46, 0.7) 100%);
+    }
+  }
+  
+  &.theme-tech {
+    --cta-bg-image: url('/assets/svg/code_typing.svg');
+    --cta-bg-size: 250px 250px;
+    --cta-bg-opacity: 0.2;
+    background-color: #152238;
+    
+    &::after {
+      background: linear-gradient(0deg, rgba(21, 34, 56, 0.95) 0%, rgba(21, 34, 56, 0.75) 100%);
+    }
+  }
 }
 
 .cta-button {

@@ -1,0 +1,38 @@
+---
+title: "Webinars"
+subtitle: "Browse all our webinars"
+format: 
+  html:
+    css: scss/academy.scss
+    classes: [academy-section]
+listing:
+  contents: "pages/*.qmd"
+  type: grid
+  sort: "date desc"
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [image, date, title, subtitle, presenter, category]
+  date-format: "MMMM D, YYYY"
+---
+
+Welcome to our webinars listing page. Here you can browse all upcoming and past webinars hosted by chen.ist. Use the filters to find webinars by category, date, or presenter.
+
+```{=html}
+<div class="alert alert-success mt-4 mb-4" role="alert">
+  <h4 class="alert-heading"><i class="bi bi-megaphone"></i> New Webinar Added!</h4>
+  <p>Check out our <a href="pages/zero-trust-security.html" class="alert-link">Zero Trust Security Architecture</a> webinar on June 10, 2025 - learn essential principles for modern enterprise security.</p>
+</div>
+```
+
+## Webinar Categories
+
+- **Cybersecurity**: Protect your organization with the latest security strategies
+- **Cloud Computing**: Optimize your cloud infrastructure and services
+- **AI & ML**: Explore artificial intelligence and machine learning technologies
+- **Development**: Improve your coding skills and software engineering practices
+- **Business**: Align technology with business objectives and strategies
+
+Our webinars are designed to provide practical knowledge and expert insights in convenient online sessions. Each webinar page provides detailed information about the content, presenters, duration, and registration process.
+
+Want to suggest a webinar topic or present as a guest speaker? [Contact us](/contact.qmd) with your ideas.
