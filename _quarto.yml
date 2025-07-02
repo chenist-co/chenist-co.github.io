@@ -15,7 +15,7 @@ pre-render:
 website:
   title: "chen.ist"
   favicon: assets/images/favicon.png
-  site-url: https://github/com/chen.ist
+  site-url: https://chen.ist
   description: "Innovative technology & education"
   twitter-card: true
   open-graph: true
@@ -36,6 +36,17 @@ website:
             text: Overview
           - href: academy/courses.qmd
             text: Courses
+          - href: academy/trainings.qmd
+            text: Trainings
+          - href: academy/microlearning.qmd
+            text: Microlearning
+          - href: academy/programs/index.qmd
+            text: Programs
+            menu:
+              - href: academy/programs/hackathons/index.qmd
+                text: Hackathons
+              - href: academy/programs/summer-school/index.qmd
+                text: Summer School
           - href: academy/events.qmd
             text: Events
           - href: academy/webinars.qmd
@@ -85,7 +96,7 @@ format:
     theme:
       light: [flatly, scss/light.scss]
       dark: scss/dark.scss
-    css: [scss/styles.css, scss/academy.scss]
+    css: [scss/styles.css, scss/academy.scss, scss/custom-hero.css]
     code-link: true
     link-external-icon: true
     link-external-newwindow: true
