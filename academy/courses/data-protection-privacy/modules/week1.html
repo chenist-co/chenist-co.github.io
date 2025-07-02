@@ -1,0 +1,1967 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.30">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Week 1: Privacy Fundamentals and Legal Frameworks – chen.ist</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<link href="../../../../assets/images/favicon.png" rel="icon" type="image/png">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark-b5057f3398a202b36a08d66ee4de0ec1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+.navbar-brand-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand .navbar-title {
+  display: inline-block;
+  margin-left: 0;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 767.98px) {
+  .navbar-brand .navbar-title {
+    font-size: 1.1rem;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Find the navbar brand element that contains the logo
+  const navbarBrand = document.querySelector('.navbar-brand');
+  
+  if (navbarBrand) {
+    // Create a span for the CHENIST text
+    const titleSpan = document.createElement('span');
+    titleSpan.className = 'navbar-title';
+    titleSpan.textContent = 'CHENIST';
+    
+    // Append the span after the logo
+    navbarBrand.appendChild(titleSpan);
+  }
+});
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+<link rel="stylesheet" href="../../../../scss/styles.css">
+<link rel="stylesheet" href="../../../../scss/academy.scss">
+<link rel="stylesheet" href="../../../../scss/custom-hero.css">
+<meta property="og:title" content="Week 1: Privacy Fundamentals and Legal Frameworks – chen.ist">
+<meta property="og:description" content="Understanding the core concepts and regulations in data protection">
+<meta property="og:site_name" content="chen.ist">
+<meta name="twitter:title" content="Week 1: Privacy Fundamentals and Legal Frameworks – chen.ist">
+<meta name="twitter:description" content="Understanding the core concepts and regulations in data protection">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../../assets/images/logo-light.svg" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../services.html"> 
+<span class="menu-text">Services</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-academy" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Academy</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-academy">    
+        <li>
+    <a class="dropdown-item" href="../../../../academy/overview.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../academy/courses.html">
+ <span class="dropdown-text">Courses</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../academy/trainings.html">
+ <span class="dropdown-text">Trainings</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../academy/microlearning.html">
+ <span class="dropdown-text">Microlearning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../academy/programs/index.html">
+ <span class="dropdown-text">Programs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../academy/events.html">
+ <span class="dropdown-text">Events</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../academy/webinars.html">
+ <span class="dropdown-text">Webinars</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../academy/computerclub.html">
+ <span class="dropdown-text">Computer Club</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../academy/partnerships.html">
+ <span class="dropdown-text">Partnerships</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../blog.html"> 
+<span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../resources/index.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../../../../about/index.html">
+ <span class="dropdown-text">About</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../about/csr.html">
+ <span class="dropdown-text">CSR</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../about/community.html">
+ <span class="dropdown-text">Community</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-lang" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Lang</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-lang">    
+        <li>
+    <a class="dropdown-item" href="../../../../index.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../ro/index.html">
+ <span class="dropdown-text">Romanian</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../sv/index.html">
+ <span class="dropdown-text">Swedish</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../de/index.html">
+ <span class="dropdown-text">German</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#privacy-fundamentals-and-legal-frameworks" id="toc-privacy-fundamentals-and-legal-frameworks" class="nav-link active" data-scroll-target="#privacy-fundamentals-and-legal-frameworks"><span class="header-section-number">1</span> Privacy Fundamentals and Legal Frameworks</a>
+  <ul class="collapse">
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">1.1</span> Learning Objectives</a></li>
+  <li><a href="#the-evolution-of-privacy" id="toc-the-evolution-of-privacy" class="nav-link" data-scroll-target="#the-evolution-of-privacy"><span class="header-section-number">1.2</span> The Evolution of Privacy</a>
+  <ul class="collapse">
+  <li><a href="#historical-context" id="toc-historical-context" class="nav-link" data-scroll-target="#historical-context"><span class="header-section-number">1.2.1</span> Historical Context</a></li>
+  <li><a href="#why-privacy-matters-today" id="toc-why-privacy-matters-today" class="nav-link" data-scroll-target="#why-privacy-matters-today"><span class="header-section-number">1.2.2</span> Why Privacy Matters Today</a></li>
+  </ul></li>
+  <li><a href="#key-global-privacy-regulations" id="toc-key-global-privacy-regulations" class="nav-link" data-scroll-target="#key-global-privacy-regulations"><span class="header-section-number">1.3</span> Key Global Privacy Regulations</a>
+  <ul class="collapse">
+  <li><a href="#general-data-protection-regulation-gdpr" id="toc-general-data-protection-regulation-gdpr" class="nav-link" data-scroll-target="#general-data-protection-regulation-gdpr"><span class="header-section-number">1.3.1</span> General Data Protection Regulation (GDPR)</a></li>
+  <li><a href="#california-consumer-privacy-act-ccpa-and-california-privacy-rights-act-cpra" id="toc-california-consumer-privacy-act-ccpa-and-california-privacy-rights-act-cpra" class="nav-link" data-scroll-target="#california-consumer-privacy-act-ccpa-and-california-privacy-rights-act-cpra"><span class="header-section-number">1.3.2</span> California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA)</a></li>
+  <li><a href="#other-regional-regulations" id="toc-other-regional-regulations" class="nav-link" data-scroll-target="#other-regional-regulations"><span class="header-section-number">1.3.3</span> Other Regional Regulations</a></li>
+  <li><a href="#sectoral-regulations-us" id="toc-sectoral-regulations-us" class="nav-link" data-scroll-target="#sectoral-regulations-us"><span class="header-section-number">1.3.4</span> Sectoral Regulations (US)</a></li>
+  </ul></li>
+  <li><a href="#core-privacy-principles" id="toc-core-privacy-principles" class="nav-link" data-scroll-target="#core-privacy-principles"><span class="header-section-number">1.4</span> Core Privacy Principles</a>
+  <ul class="collapse">
+  <li><a href="#lawfulness-fairness-and-transparency" id="toc-lawfulness-fairness-and-transparency" class="nav-link" data-scroll-target="#lawfulness-fairness-and-transparency"><span class="header-section-number">1.4.1</span> Lawfulness, Fairness, and Transparency</a></li>
+  <li><a href="#purpose-limitation" id="toc-purpose-limitation" class="nav-link" data-scroll-target="#purpose-limitation"><span class="header-section-number">1.4.2</span> Purpose Limitation</a></li>
+  <li><a href="#data-minimization" id="toc-data-minimization" class="nav-link" data-scroll-target="#data-minimization"><span class="header-section-number">1.4.3</span> Data Minimization</a></li>
+  <li><a href="#accuracy" id="toc-accuracy" class="nav-link" data-scroll-target="#accuracy"><span class="header-section-number">1.4.4</span> Accuracy</a></li>
+  <li><a href="#storage-limitation" id="toc-storage-limitation" class="nav-link" data-scroll-target="#storage-limitation"><span class="header-section-number">1.4.5</span> Storage Limitation</a></li>
+  <li><a href="#integrity-and-confidentiality-security" id="toc-integrity-and-confidentiality-security" class="nav-link" data-scroll-target="#integrity-and-confidentiality-security"><span class="header-section-number">1.4.6</span> Integrity and Confidentiality (Security)</a></li>
+  <li><a href="#accountability" id="toc-accountability" class="nav-link" data-scroll-target="#accountability"><span class="header-section-number">1.4.7</span> Accountability</a></li>
+  </ul></li>
+  <li><a href="#rights-of-data-subjects" id="toc-rights-of-data-subjects" class="nav-link" data-scroll-target="#rights-of-data-subjects"><span class="header-section-number">1.5</span> Rights of Data Subjects</a>
+  <ul class="collapse">
+  <li><a href="#right-to-information" id="toc-right-to-information" class="nav-link" data-scroll-target="#right-to-information"><span class="header-section-number">1.5.1</span> Right to Information</a></li>
+  <li><a href="#right-of-access" id="toc-right-of-access" class="nav-link" data-scroll-target="#right-of-access"><span class="header-section-number">1.5.2</span> Right of Access</a></li>
+  <li><a href="#right-to-rectification" id="toc-right-to-rectification" class="nav-link" data-scroll-target="#right-to-rectification"><span class="header-section-number">1.5.3</span> Right to Rectification</a></li>
+  <li><a href="#right-to-erasure-right-to-be-forgotten" id="toc-right-to-erasure-right-to-be-forgotten" class="nav-link" data-scroll-target="#right-to-erasure-right-to-be-forgotten"><span class="header-section-number">1.5.4</span> Right to Erasure (“Right to be Forgotten”)</a></li>
+  <li><a href="#right-to-restriction-of-processing" id="toc-right-to-restriction-of-processing" class="nav-link" data-scroll-target="#right-to-restriction-of-processing"><span class="header-section-number">1.5.5</span> Right to Restriction of Processing</a></li>
+  <li><a href="#right-to-data-portability" id="toc-right-to-data-portability" class="nav-link" data-scroll-target="#right-to-data-portability"><span class="header-section-number">1.5.6</span> Right to Data Portability</a></li>
+  <li><a href="#right-to-object" id="toc-right-to-object" class="nav-link" data-scroll-target="#right-to-object"><span class="header-section-number">1.5.7</span> Right to Object</a></li>
+  <li><a href="#rights-related-to-automated-decision-making" id="toc-rights-related-to-automated-decision-making" class="nav-link" data-scroll-target="#rights-related-to-automated-decision-making"><span class="header-section-number">1.5.8</span> Rights Related to Automated Decision Making</a></li>
+  </ul></li>
+  <li><a href="#organizational-responsibilities" id="toc-organizational-responsibilities" class="nav-link" data-scroll-target="#organizational-responsibilities"><span class="header-section-number">1.6</span> Organizational Responsibilities</a>
+  <ul class="collapse">
+  <li><a href="#governance-and-accountability" id="toc-governance-and-accountability" class="nav-link" data-scroll-target="#governance-and-accountability"><span class="header-section-number">1.6.1</span> Governance and Accountability</a></li>
+  <li><a href="#data-protection-officer-dpo" id="toc-data-protection-officer-dpo" class="nav-link" data-scroll-target="#data-protection-officer-dpo"><span class="header-section-number">1.6.2</span> Data Protection Officer (DPO)</a></li>
+  <li><a href="#data-protection-impact-assessment-dpia" id="toc-data-protection-impact-assessment-dpia" class="nav-link" data-scroll-target="#data-protection-impact-assessment-dpia"><span class="header-section-number">1.6.3</span> Data Protection Impact Assessment (DPIA)</a></li>
+  <li><a href="#breach-notification" id="toc-breach-notification" class="nav-link" data-scroll-target="#breach-notification"><span class="header-section-number">1.6.4</span> Breach Notification</a></li>
+  <li><a href="#vendor-management" id="toc-vendor-management" class="nav-link" data-scroll-target="#vendor-management"><span class="header-section-number">1.6.5</span> Vendor Management</a></li>
+  </ul></li>
+  <li><a href="#jurisdictional-considerations" id="toc-jurisdictional-considerations" class="nav-link" data-scroll-target="#jurisdictional-considerations"><span class="header-section-number">1.7</span> Jurisdictional Considerations</a>
+  <ul class="collapse">
+  <li><a href="#territorial-scope" id="toc-territorial-scope" class="nav-link" data-scroll-target="#territorial-scope"><span class="header-section-number">1.7.1</span> Territorial Scope</a></li>
+  <li><a href="#cross-border-data-transfers" id="toc-cross-border-data-transfers" class="nav-link" data-scroll-target="#cross-border-data-transfers"><span class="header-section-number">1.7.2</span> Cross-Border Data Transfers</a></li>
+  <li><a href="#conflict-of-laws" id="toc-conflict-of-laws" class="nav-link" data-scroll-target="#conflict-of-laws"><span class="header-section-number">1.7.3</span> Conflict of Laws</a></li>
+  </ul></li>
+  <li><a href="#practical-exercise-regulatory-mapping" id="toc-practical-exercise-regulatory-mapping" class="nav-link" data-scroll-target="#practical-exercise-regulatory-mapping"><span class="header-section-number">1.8</span> Practical Exercise: Regulatory Mapping</a>
+  <ul class="collapse">
+  <li><a href="#exercise-1-gdpr-compliance-checklist" id="toc-exercise-1-gdpr-compliance-checklist" class="nav-link" data-scroll-target="#exercise-1-gdpr-compliance-checklist"><span class="header-section-number">1.8.1</span> Exercise 1: GDPR Compliance Checklist</a></li>
+  <li><a href="#exercise-2-jurisdictional-analysis" id="toc-exercise-2-jurisdictional-analysis" class="nav-link" data-scroll-target="#exercise-2-jurisdictional-analysis"><span class="header-section-number">1.8.2</span> Exercise 2: Jurisdictional Analysis</a></li>
+  </ul></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources"><span class="header-section-number">1.9</span> Additional Resources</a></li>
+  <li><a href="#next-week" id="toc-next-week" class="nav-link" data-scroll-target="#next-week"><span class="header-section-number">1.10</span> Next Week</a></li>
+  <li><a href="#discussion-questions" id="toc-discussion-questions" class="nav-link" data-scroll-target="#discussion-questions"><span class="header-section-number">1.11</span> Discussion Questions</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Week 1: Privacy Fundamentals and Legal Frameworks</h1>
+<p class="subtitle lead">Understanding the core concepts and regulations in data protection</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">July 1, 2025</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="privacy-fundamentals-and-legal-frameworks" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Privacy Fundamentals and Legal Frameworks</h1>
+<section id="learning-objectives" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">1.1</span> Learning Objectives</h2>
+<p>By the end of this module, you will be able to:</p>
+<ul>
+<li>Explain the evolution of privacy concepts and their importance in the digital age</li>
+<li>Identify and interpret key global privacy regulations and their requirements</li>
+<li>Apply core privacy principles to organizational data practices</li>
+<li>Recognize the rights of data subjects under major privacy laws</li>
+<li>Analyze the jurisdictional scope of different privacy regulations</li>
+<li>Determine organizational responsibilities under privacy frameworks</li>
+</ul>
+</section>
+<section id="the-evolution-of-privacy" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="the-evolution-of-privacy"><span class="header-section-number">1.2</span> The Evolution of Privacy</h2>
+<section id="historical-context" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="historical-context"><span class="header-section-number">1.2.1</span> Historical Context</h3>
+<p>Privacy as a concept has evolved significantly throughout human history:</p>
+<ul>
+<li><strong>Early Conceptions</strong>: Privacy initially focused on physical spaces and freedom from intrusion</li>
+<li><strong>Legal Recognition</strong>: Warren and Brandeis’s 1890 article “The Right to Privacy” defined it as “the right to be let alone”</li>
+<li><strong>Post-WWII Developments</strong>: Universal Declaration of Human Rights (1948) recognized privacy as a fundamental right</li>
+<li><strong>Information Privacy</strong>: With computerization in the 1960s-70s, focus shifted to information privacy</li>
+<li><strong>Fair Information Practice Principles</strong>: Developed in the 1970s, forming the basis of modern privacy laws</li>
+<li><strong>Digital Age Challenges</strong>: Explosion of data collection, processing power, and AI capabilities</li>
+</ul>
+</section>
+<section id="why-privacy-matters-today" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="why-privacy-matters-today"><span class="header-section-number">1.2.2</span> Why Privacy Matters Today</h3>
+<ul>
+<li><strong>Scale of Data Collection</strong>: Unprecedented volumes of personal data collected</li>
+<li><strong>Ubiquitous Tracking</strong>: Constant monitoring across devices and platforms</li>
+<li><strong>Data Analytics</strong>: Advanced processing reveals insights beyond original collection purpose</li>
+<li><strong>Economic Value</strong>: Personal data as the “new oil” driving business models</li>
+<li><strong>Power Asymmetry</strong>: Imbalance between data subjects and data controllers</li>
+<li><strong>Potential Harms</strong>: Discrimination, manipulation, surveillance, identity theft</li>
+<li><strong>Chilling Effects</strong>: Impact on freedom of expression, association, and autonomy</li>
+</ul>
+</section>
+</section>
+<section id="key-global-privacy-regulations" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="key-global-privacy-regulations"><span class="header-section-number">1.3</span> Key Global Privacy Regulations</h2>
+<section id="general-data-protection-regulation-gdpr" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="general-data-protection-regulation-gdpr"><span class="header-section-number">1.3.1</span> General Data Protection Regulation (GDPR)</h3>
+<p>The GDPR, effective since May 2018, represents the most comprehensive privacy regulation globally.</p>
+<section id="core-elements" class="level4" data-number="1.3.1.1">
+<h4 data-number="1.3.1.1" class="anchored" data-anchor-id="core-elements"><span class="header-section-number">1.3.1.1</span> Core Elements</h4>
+<ul>
+<li><strong>Territorial Scope</strong>: Applies to:
+<ul>
+<li>Organizations established in the EU</li>
+<li>Processing of EU residents’ data</li>
+<li>Offering goods/services to EU residents</li>
+<li>Monitoring behavior of EU residents</li>
+</ul></li>
+<li><strong>Key Definitions</strong>:
+<ul>
+<li>Personal data: Any information relating to an identified or identifiable natural person</li>
+<li>Processing: Any operation performed on personal data</li>
+<li>Controller: Entity determining purposes and means of processing</li>
+<li>Processor: Entity processing data on behalf of controller</li>
+</ul></li>
+<li><strong>Legal Bases for Processing</strong>:
+<ul>
+<li>Consent</li>
+<li>Contract</li>
+<li>Legal obligation</li>
+<li>Vital interests</li>
+<li>Public interest</li>
+<li>Legitimate interests</li>
+</ul></li>
+<li><strong>Individual Rights</strong>:
+<ul>
+<li>Access</li>
+<li>Rectification</li>
+<li>Erasure (“right to be forgotten”)</li>
+<li>Restriction of processing</li>
+<li>Data portability</li>
+<li>Objection</li>
+<li>Rights related to automated decision-making</li>
+</ul></li>
+<li><strong>Organizational Requirements</strong>:
+<ul>
+<li>Data Protection Officer (DPO)</li>
+<li>Records of processing activities</li>
+<li>Data Protection Impact Assessments (DPIAs)</li>
+<li>Data breach notification</li>
+<li>Privacy by Design and Default</li>
+</ul></li>
+<li><strong>Enforcement</strong>:
+<ul>
+<li>Supervisory authorities in each member state</li>
+<li>Fines up to €20 million or 4% of global annual turnover</li>
+<li>Right to compensation for material and non-material damage</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="california-consumer-privacy-act-ccpa-and-california-privacy-rights-act-cpra" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="california-consumer-privacy-act-ccpa-and-california-privacy-rights-act-cpra"><span class="header-section-number">1.3.2</span> California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA)</h3>
+<p>California has established the strongest privacy framework in the United States.</p>
+<section id="core-elements-1" class="level4" data-number="1.3.2.1">
+<h4 data-number="1.3.2.1" class="anchored" data-anchor-id="core-elements-1"><span class="header-section-number">1.3.2.1</span> Core Elements</h4>
+<ul>
+<li><strong>Scope</strong>: Applies to businesses that:
+<ul>
+<li>Have annual gross revenue exceeding $25 million, or</li>
+<li>Buy/sell/receive personal information of 100,000+ consumers/households, or</li>
+<li>Derive 50%+ of revenue from selling/sharing personal information</li>
+</ul></li>
+<li><strong>Key Rights</strong>:
+<ul>
+<li>Right to know</li>
+<li>Right to delete</li>
+<li>Right to opt-out of sale/sharing</li>
+<li>Right to correct (CPRA)</li>
+<li>Right to limit use of sensitive personal information (CPRA)</li>
+</ul></li>
+<li><strong>Enforcement</strong>:
+<ul>
+<li>California Privacy Protection Agency (CPPA)</li>
+<li>Attorney General enforcement</li>
+<li>Limited private right of action for data breaches</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="other-regional-regulations" class="level3" data-number="1.3.3">
+<h3 data-number="1.3.3" class="anchored" data-anchor-id="other-regional-regulations"><span class="header-section-number">1.3.3</span> Other Regional Regulations</h3>
+<ul>
+<li><strong>Brazil’s LGPD</strong>: Similar structure to GDPR, effective 2020</li>
+<li><strong>Canada’s PIPEDA</strong>: Consent-based framework with “meaningful consent”</li>
+<li><strong>Australia’s Privacy Act</strong>: Privacy principles-based approach</li>
+<li><strong>Japan’s APPI</strong>: Requires prior consent for cross-border transfers</li>
+<li><strong>South Africa’s POPIA</strong>: Comprehensive privacy law based on GDPR principles</li>
+<li><strong>India’s Draft Personal Data Protection Bill</strong>: Developing comprehensive framework</li>
+</ul>
+</section>
+<section id="sectoral-regulations-us" class="level3" data-number="1.3.4">
+<h3 data-number="1.3.4" class="anchored" data-anchor-id="sectoral-regulations-us"><span class="header-section-number">1.3.4</span> Sectoral Regulations (US)</h3>
+<ul>
+<li><strong>HIPAA</strong>: Health information privacy and security</li>
+<li><strong>GLBA</strong>: Financial privacy</li>
+<li><strong>FERPA</strong>: Educational records</li>
+<li><strong>COPPA</strong>: Children’s online privacy</li>
+<li><strong>FCRA</strong>: Credit reporting</li>
+</ul>
+</section>
+</section>
+<section id="core-privacy-principles" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="core-privacy-principles"><span class="header-section-number">1.4</span> Core Privacy Principles</h2>
+<section id="lawfulness-fairness-and-transparency" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="lawfulness-fairness-and-transparency"><span class="header-section-number">1.4.1</span> Lawfulness, Fairness, and Transparency</h3>
+<ul>
+<li><strong>Lawfulness</strong>: Processing must be based on a valid legal ground</li>
+<li><strong>Fairness</strong>: Processing must not be deceptive or discriminatory</li>
+<li><strong>Transparency</strong>: Clear, plain language information about processing</li>
+</ul>
+</section>
+<section id="purpose-limitation" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="purpose-limitation"><span class="header-section-number">1.4.2</span> Purpose Limitation</h3>
+<ul>
+<li>Collect data for specified, explicit, legitimate purposes</li>
+<li>Do not process data in ways incompatible with original purposes</li>
+<li>Purpose must be communicated before collection</li>
+</ul>
+</section>
+<section id="data-minimization" class="level3" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="data-minimization"><span class="header-section-number">1.4.3</span> Data Minimization</h3>
+<ul>
+<li>Only collect what is adequate, relevant, and necessary</li>
+<li>Reduce collection scope to what’s needed for the purpose</li>
+<li>Avoid “just in case” data collection</li>
+</ul>
+</section>
+<section id="accuracy" class="level3" data-number="1.4.4">
+<h3 data-number="1.4.4" class="anchored" data-anchor-id="accuracy"><span class="header-section-number">1.4.4</span> Accuracy</h3>
+<ul>
+<li>Ensure personal data is accurate and kept up to date</li>
+<li>Take reasonable steps to rectify inaccurate data</li>
+<li>Implement processes for data quality management</li>
+</ul>
+</section>
+<section id="storage-limitation" class="level3" data-number="1.4.5">
+<h3 data-number="1.4.5" class="anchored" data-anchor-id="storage-limitation"><span class="header-section-number">1.4.5</span> Storage Limitation</h3>
+<ul>
+<li>Keep data in identifiable form only as long as necessary</li>
+<li>Establish and enforce retention periods</li>
+<li>Securely delete or anonymize data when no longer needed</li>
+</ul>
+</section>
+<section id="integrity-and-confidentiality-security" class="level3" data-number="1.4.6">
+<h3 data-number="1.4.6" class="anchored" data-anchor-id="integrity-and-confidentiality-security"><span class="header-section-number">1.4.6</span> Integrity and Confidentiality (Security)</h3>
+<ul>
+<li>Implement appropriate technical and organizational measures</li>
+<li>Protect against unauthorized access, accidental loss, destruction</li>
+<li>Ensure ongoing confidentiality, integrity, availability, and resilience</li>
+</ul>
+</section>
+<section id="accountability" class="level3" data-number="1.4.7">
+<h3 data-number="1.4.7" class="anchored" data-anchor-id="accountability"><span class="header-section-number">1.4.7</span> Accountability</h3>
+<ul>
+<li>Responsible for and able to demonstrate compliance</li>
+<li>Document decisions and practices</li>
+<li>Implement governance structures and policies</li>
+</ul>
+</section>
+</section>
+<section id="rights-of-data-subjects" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="rights-of-data-subjects"><span class="header-section-number">1.5</span> Rights of Data Subjects</h2>
+<section id="right-to-information" class="level3" data-number="1.5.1">
+<h3 data-number="1.5.1" class="anchored" data-anchor-id="right-to-information"><span class="header-section-number">1.5.1</span> Right to Information</h3>
+<ul>
+<li>Provides transparency about collection and use</li>
+<li>Information must be concise, transparent, intelligible, easily accessible</li>
+<li>Typically delivered through privacy notices and policies</li>
+</ul>
+</section>
+<section id="right-of-access" class="level3" data-number="1.5.2">
+<h3 data-number="1.5.2" class="anchored" data-anchor-id="right-of-access"><span class="header-section-number">1.5.2</span> Right of Access</h3>
+<ul>
+<li>Confirm whether personal data is being processed</li>
+<li>Receive copy of personal data</li>
+<li>Information about processing purposes, categories, recipients, etc.</li>
+</ul>
+</section>
+<section id="right-to-rectification" class="level3" data-number="1.5.3">
+<h3 data-number="1.5.3" class="anchored" data-anchor-id="right-to-rectification"><span class="header-section-number">1.5.3</span> Right to Rectification</h3>
+<ul>
+<li>Correct inaccurate personal data</li>
+<li>Complete incomplete personal data</li>
+<li>Notify recipients of corrections</li>
+</ul>
+</section>
+<section id="right-to-erasure-right-to-be-forgotten" class="level3" data-number="1.5.4">
+<h3 data-number="1.5.4" class="anchored" data-anchor-id="right-to-erasure-right-to-be-forgotten"><span class="header-section-number">1.5.4</span> Right to Erasure (“Right to be Forgotten”)</h3>
+<ul>
+<li>Request deletion of personal data under certain circumstances</li>
+<li>Grounds include: no longer necessary, withdrawal of consent, unlawful processing</li>
+<li>Exceptions for legal compliance, public interest, legal claims</li>
+</ul>
+</section>
+<section id="right-to-restriction-of-processing" class="level3" data-number="1.5.5">
+<h3 data-number="1.5.5" class="anchored" data-anchor-id="right-to-restriction-of-processing"><span class="header-section-number">1.5.5</span> Right to Restriction of Processing</h3>
+<ul>
+<li>Temporarily limit processing while addressing certain issues</li>
+<li>Applies during accuracy disputes, while determining legitimate interests, etc.</li>
+<li>Data can be stored but not further processed</li>
+</ul>
+</section>
+<section id="right-to-data-portability" class="level3" data-number="1.5.6">
+<h3 data-number="1.5.6" class="anchored" data-anchor-id="right-to-data-portability"><span class="header-section-number">1.5.6</span> Right to Data Portability</h3>
+<ul>
+<li>Receive personal data in structured, commonly used, machine-readable format</li>
+<li>Transmit data to another controller where technically feasible</li>
+<li>Limited to data provided by data subject and processed by automated means</li>
+</ul>
+</section>
+<section id="right-to-object" class="level3" data-number="1.5.7">
+<h3 data-number="1.5.7" class="anchored" data-anchor-id="right-to-object"><span class="header-section-number">1.5.7</span> Right to Object</h3>
+<ul>
+<li>Object to processing based on legitimate interests, public interest, or direct marketing</li>
+<li>Controller must demonstrate compelling legitimate grounds that override interests</li>
+<li>Absolute right to object to direct marketing</li>
+</ul>
+</section>
+<section id="rights-related-to-automated-decision-making" class="level3" data-number="1.5.8">
+<h3 data-number="1.5.8" class="anchored" data-anchor-id="rights-related-to-automated-decision-making"><span class="header-section-number">1.5.8</span> Rights Related to Automated Decision Making</h3>
+<ul>
+<li>Not be subject to purely automated decisions with legal/significant effects</li>
+<li>Obtain human intervention and contest the decision</li>
+<li>Understand logic involved in automated processing</li>
+</ul>
+</section>
+</section>
+<section id="organizational-responsibilities" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="organizational-responsibilities"><span class="header-section-number">1.6</span> Organizational Responsibilities</h2>
+<section id="governance-and-accountability" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="governance-and-accountability"><span class="header-section-number">1.6.1</span> Governance and Accountability</h3>
+<ul>
+<li>Establish privacy governance structure</li>
+<li>Designate responsible individuals/teams</li>
+<li>Document policies and procedures</li>
+<li>Maintain records of processing activities</li>
+<li>Implement training programs</li>
+</ul>
+</section>
+<section id="data-protection-officer-dpo" class="level3" data-number="1.6.2">
+<h3 data-number="1.6.2" class="anchored" data-anchor-id="data-protection-officer-dpo"><span class="header-section-number">1.6.2</span> Data Protection Officer (DPO)</h3>
+<ul>
+<li>Required when:
+<ul>
+<li>Public authority processes personal data</li>
+<li>Core activities require regular and systematic monitoring on a large scale</li>
+<li>Core activities involve large-scale processing of special categories of data</li>
+</ul></li>
+<li>Must have expert knowledge of data protection law</li>
+<li>Must be independent and report to highest management level</li>
+<li>Responsibilities include monitoring compliance, advising, cooperating with authorities</li>
+</ul>
+</section>
+<section id="data-protection-impact-assessment-dpia" class="level3" data-number="1.6.3">
+<h3 data-number="1.6.3" class="anchored" data-anchor-id="data-protection-impact-assessment-dpia"><span class="header-section-number">1.6.3</span> Data Protection Impact Assessment (DPIA)</h3>
+<ul>
+<li>Required for high-risk processing activities</li>
+<li>Systematic process to identify and minimize privacy risks</li>
+<li>Must be conducted prior to processing</li>
+<li>Must involve DPO where designated</li>
+</ul>
+</section>
+<section id="breach-notification" class="level3" data-number="1.6.4">
+<h3 data-number="1.6.4" class="anchored" data-anchor-id="breach-notification"><span class="header-section-number">1.6.4</span> Breach Notification</h3>
+<ul>
+<li>Notify supervisory authority of personal data breaches within 72 hours (GDPR)</li>
+<li>Notify affected individuals when high risk to rights and freedoms</li>
+<li>Document all breaches, including facts, effects, and remedial action</li>
+</ul>
+</section>
+<section id="vendor-management" class="level3" data-number="1.6.5">
+<h3 data-number="1.6.5" class="anchored" data-anchor-id="vendor-management"><span class="header-section-number">1.6.5</span> Vendor Management</h3>
+<ul>
+<li>Due diligence in selecting processors</li>
+<li>Written contracts with specific requirements</li>
+<li>Ongoing monitoring of compliance</li>
+</ul>
+</section>
+</section>
+<section id="jurisdictional-considerations" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="jurisdictional-considerations"><span class="header-section-number">1.7</span> Jurisdictional Considerations</h2>
+<section id="territorial-scope" class="level3" data-number="1.7.1">
+<h3 data-number="1.7.1" class="anchored" data-anchor-id="territorial-scope"><span class="header-section-number">1.7.1</span> Territorial Scope</h3>
+<ul>
+<li><strong>Establishment</strong>: Where an organization is physically or effectively established</li>
+<li><strong>Targeting Principle</strong>: Directing activities to individuals in a jurisdiction</li>
+<li><strong>Monitoring Principle</strong>: Tracking online behavior of individuals</li>
+</ul>
+</section>
+<section id="cross-border-data-transfers" class="level3" data-number="1.7.2">
+<h3 data-number="1.7.2" class="anchored" data-anchor-id="cross-border-data-transfers"><span class="header-section-number">1.7.2</span> Cross-Border Data Transfers</h3>
+<ul>
+<li><strong>Adequacy Decisions</strong>: Recognition that a country provides adequate protection</li>
+<li><strong>Appropriate Safeguards</strong>: Mechanisms like Standard Contractual Clauses (SCCs)</li>
+<li><strong>Binding Corporate Rules</strong>: For multinational corporate groups</li>
+<li><strong>Derogations</strong>: Limited exceptions for specific situations</li>
+</ul>
+</section>
+<section id="conflict-of-laws" class="level3" data-number="1.7.3">
+<h3 data-number="1.7.3" class="anchored" data-anchor-id="conflict-of-laws"><span class="header-section-number">1.7.3</span> Conflict of Laws</h3>
+<ul>
+<li>Challenge of complying with multiple, sometimes conflicting regulations</li>
+<li>Approaches:
+<ul>
+<li>Comply with highest standard across operations</li>
+<li>Jurisdiction-specific approaches</li>
+<li>Risk-based assessment</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="practical-exercise-regulatory-mapping" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="practical-exercise-regulatory-mapping"><span class="header-section-number">1.8</span> Practical Exercise: Regulatory Mapping</h2>
+<section id="exercise-1-gdpr-compliance-checklist" class="level3" data-number="1.8.1">
+<h3 data-number="1.8.1" class="anchored" data-anchor-id="exercise-1-gdpr-compliance-checklist"><span class="header-section-number">1.8.1</span> Exercise 1: GDPR Compliance Checklist</h3>
+<ol type="1">
+<li>Review the following organizational practices:
+<ul>
+<li>Customer data collection through website forms</li>
+<li>Employee monitoring through work devices</li>
+<li>Marketing email campaigns to prospects and customers</li>
+<li>Cloud storage of client files</li>
+<li>Analytics and profiling for service improvement</li>
+</ul></li>
+<li>For each practice, identify:
+<ul>
+<li>Potential lawful basis under GDPR</li>
+<li>Required transparency information</li>
+<li>Applicable data subject rights</li>
+<li>Documentation requirements</li>
+<li>Security considerations</li>
+</ul></li>
+<li>Develop a gap analysis template for GDPR compliance assessment</li>
+</ol>
+</section>
+<section id="exercise-2-jurisdictional-analysis" class="level3" data-number="1.8.2">
+<h3 data-number="1.8.2" class="anchored" data-anchor-id="exercise-2-jurisdictional-analysis"><span class="header-section-number">1.8.2</span> Exercise 2: Jurisdictional Analysis</h3>
+<p>Review the following scenario:</p>
+<blockquote class="blockquote">
+<p>A US-based e-commerce company sells products globally through its website. It collects customer information for order processing, offers personalized recommendations based on browsing behavior, and sends marketing emails. The company stores data on US-based servers but uses EU-based customer service contractors.</p>
+</blockquote>
+<p>Answer the following questions: 1. Which privacy regulations likely apply to this company? 2. What factors determine the applicable jurisdictions? 3. What challenges might arise from multiple applicable regulations? 4. What approach would you recommend for compliance?</p>
+</section>
+</section>
+<section id="additional-resources" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="additional-resources"><span class="header-section-number">1.9</span> Additional Resources</h2>
+<ul>
+<li><a href="https://www.eugdpr.org/">EU GDPR Portal</a></li>
+<li><a href="https://cppa.ca.gov/regulations/cpra_regulations.html">California Privacy Rights Act Text</a></li>
+<li><a href="https://ico.org.uk/for-organisations/guide-to-data-protection/">ICO Guide to Data Protection</a></li>
+<li><a href="https://www.nist.gov/privacy-framework">NIST Privacy Framework</a></li>
+<li><a href="https://www.oecd.org/digital/ieconomy/privacy-guidelines.htm">OECD Privacy Guidelines</a></li>
+</ul>
+</section>
+<section id="next-week" class="level2" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="next-week"><span class="header-section-number">1.10</span> Next Week</h2>
+<p>Next week, we’ll explore Privacy by Design principles and data governance frameworks, focusing on practical implementation approaches to embed privacy into organizational processes and systems.</p>
+</section>
+<section id="discussion-questions" class="level2" data-number="1.11">
+<h2 data-number="1.11" class="anchored" data-anchor-id="discussion-questions"><span class="header-section-number">1.11</span> Discussion Questions</h2>
+<ol type="1">
+<li>How has the concept of privacy evolved in the digital age, and what new challenges have emerged?</li>
+<li>What are the key similarities and differences between the GDPR and CCPA/CPRA approaches to privacy?</li>
+<li>How might an organization efficiently comply with multiple privacy regulations with overlapping but distinct requirements?</li>
+<li>Which privacy principles do you find most challenging to implement in practice, and why?</li>
+<li>How can organizations balance data utility and innovation with privacy protection?</li>
+</ol>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/github\/com\/chen\.ist");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+
+</div>   
+    <div class="nav-footer-center">
+
+</div>
+    <div class="nav-footer-right">
+
+</div>
+  </div>
+</footer>
+<footer class="footer mt-5 py-3 cybersecurity-footer">
+    <div class="container">
+        <div class="row mb-3">
+            <!-- Company Logo and Brief -->
+            <div class="col-md-4 mb-2">
+                <div class="d-flex align-items-center">
+                    <h4 class="footer-logo mb-0 me-2">chen<span class="text-accent">.ist</span></h4>
+                    <div class="secure-badge ms-2">
+                        <i class="bi bi-shield-lock-fill"></i> Secure
+                    </div>
+                </div>
+                <p class="footer-description small mt-2 mb-0">
+                    Enterprise cybersecurity solutions with zero-trust implementation and continuous monitoring.
+                </p>
+            </div>
+            
+            <!-- Tabs Navigation -->
+            <div class="col-md-8 mb-2">
+                <div class="footer-tabs">
+                    <ul class="nav nav-tabs footer-nav-tabs" id="footerTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="solutions-tab" data-bs-toggle="tab" data-bs-target="#solutions" type="button" role="tab">
+                                <i class="bi bi-shield-fill"></i> Solutions
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="academy-tab" data-bs-toggle="tab" data-bs-target="#academy" type="button" role="tab">
+                                <i class="bi bi-mortarboard-fill"></i> Academy
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab">
+                                <i class="bi bi-envelope-fill"></i> Contact
+                            </button>
+                        </li>
+                    </ul>
+                    
+                    <!-- Tab Content -->
+                    <div class="tab-content pt-2" id="footerTabContent">
+                        <!-- Solutions Tab -->
+                        <div class="tab-pane fade show active" id="solutions" role="tabpanel">
+                            <div class="row">
+                                <div class="col-6 col-md-3">
+                                    <a href="../../../../services.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Security Services
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../../../../services.html#consulting" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Consulting
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../../../../services.html#compliance" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Compliance
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../../../../services.html#incident-response" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Incident Response
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Academy Tab -->
+                        <div class="tab-pane fade" id="academy" role="tabpanel">
+                            <div class="row">
+                                <div class="col-6 col-md-3">
+                                    <a href="../../../../academy/courses.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Courses
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../../../../academy/events.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Events
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../../../../academy/webinars.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Webinars
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../../../../academy/computerclub.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Computer Club
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3 mt-2">
+                                    <a href="../../../../academy/programs" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Explore Academy Programs
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Contact Tab -->
+                        <div class="tab-pane fade" id="contact" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-1">
+                                        <i class="bi bi-envelope-fill contact-icon"></i>
+                                        <a href="mailto:office@chen.ist" class="footer-link">office@chen.ist</a>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-shield-fill-check contact-icon"></i>
+                                        <span class="small">SOC Available 24/7</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-1">
+                                        <i class="bi bi-geo-alt-fill contact-icon"></i>
+                                        <span class="small">Stockholm | Craiova | Bucharest</span>
+                                    </div>
+                                    <div class="social-icons">
+                                        <a href="https://github.com/chenist" class="social-icon" aria-label="GitHub">
+                                            <i class="bi bi-github"></i>
+                                        </a>
+                                        <a href="https://linkedin.com/in/chenistsec" class="social-icon" aria-label="LinkedIn">
+                                            <i class="bi bi-linkedin"></i>
+                                        </a>
+                                        <a href="https://twitter.com/chenistsec" class="social-icon" aria-label="Twitter">
+                                            <i class="bi bi-twitter-x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-divider">
+            <div class="cyber-line"></div>
+        </div>
+        
+        <div class="row footer-bottom py-1">
+            <div class="col-md-6">
+                <div class="d-flex align-items-center">
+                    <div class="security-pulse"></div>
+                    <p class="mb-0 ms-2 copyright">
+                        © 2025 chen.ist <span class="d-none d-md-inline">| Secure. Vigilant. Resilient.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <div class="footer-bottom-links">
+                    <a href="../../../../privacy.html">Privacy</a>
+                    <span class="separator">|</span>
+                    <a href="../../../../terms.html">Terms</a>
+                    <span class="separator">|</span>
+                    <a href="../../../../contact.html" class="btn-report-incident">
+                        <i class="bi bi-exclamation-triangle-fill"></i> Report Incident
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+.cybersecurity-footer {
+    background-color: #0f1923;
+    color: #e6e6e6;
+    border-top: 3px solid #18bc9c;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+/* Change accent colors for academy section */
+.academy-section .cybersecurity-footer {
+    border-top-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer::before {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #F5A623 20%, 
+        #F5A623 40%, 
+        transparent 50%,
+        transparent 60%,
+        #F5A623 80%,
+        transparent 100%
+    );
+}
+
+.academy-section .cybersecurity-footer .text-accent,
+.academy-section .cybersecurity-footer .contact-icon,
+.academy-section .cybersecurity-footer .footer-heading::after,
+.academy-section .cybersecurity-footer .social-icon:hover,
+.academy-section .cybersecurity-footer .footer-link:hover,
+.academy-section .cybersecurity-footer .contact-item a:hover,
+.academy-section .cybersecurity-footer .footer-bottom-links a:hover,
+.academy-section .cybersecurity-footer .nav-link.active {
+    color: #F5A623 !important;
+}
+
+.academy-section .cybersecurity-footer .secure-badge {
+    background-color: rgba(245, 166, 35, 0.15);
+    color: #F5A623;
+    border-left-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .social-icon:hover {
+    background-color: #F5A623;
+    color: #0f1923 !important;
+}
+
+.academy-section .cybersecurity-footer .cyber-line {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(245, 166, 35, 0.3) 10%, 
+        rgba(245, 166, 35, 0.5) 50%, 
+        rgba(245, 166, 35, 0.3) 90%, 
+        transparent 100%
+    );
+}
+
+.academy-section .cybersecurity-footer .cyber-line::before,
+.academy-section .cybersecurity-footer .cyber-line::after {
+    background-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .security-pulse {
+    background-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .security-pulse::before {
+    background-color: rgba(245, 166, 35, 0.3);
+}
+
+.cybersecurity-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #18bc9c 20%, 
+        #18bc9c 40%, 
+        transparent 50%,
+        transparent 60%,
+        #18bc9c 80%,
+        transparent 100%
+    );
+    opacity: 0.4;
+}
+
+.cybersecurity-footer .footer-brand {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.cybersecurity-footer .footer-logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Source Code Pro', monospace;
+    color: white;
+}
+
+.cybersecurity-footer .text-accent {
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .secure-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(24, 188, 156, 0.15);
+    color: #18bc9c;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-left: 2px solid #18bc9c;
+}
+
+.cybersecurity-footer .footer-description {
+    color: #9ba6b2;
+    line-height: 1.4;
+}
+
+.cybersecurity-footer .footer-tabs {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.cybersecurity-footer .footer-nav-tabs {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cybersecurity-footer .nav-tabs .nav-link {
+    color: #9ba6b2;
+    border: none;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    background-color: transparent;
+}
+
+.cybersecurity-footer .nav-tabs .nav-link:hover {
+    color: #e6e6e6;
+    border: none;
+}
+
+.cybersecurity-footer .nav-tabs .nav-link.active {
+    color: #18bc9c;
+    background-color: rgba(24, 188, 156, 0.1);
+    border: none;
+}
+
+.cybersecurity-footer .tab-content {
+    min-height: 60px;
+}
+
+.cybersecurity-footer .footer-link {
+    color: #9ba6b2;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.cybersecurity-footer .footer-link:hover {
+    color: #18bc9c;
+    transform: translateX(3px);
+}
+
+.cybersecurity-footer .icon-small {
+    font-size: 0.75rem;
+    margin-right: 0.25rem;
+}
+
+.cybersecurity-footer .contact-icon {
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .social-icons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.cybersecurity-footer .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e6e6e6;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.cybersecurity-footer .social-icon:hover {
+    background-color: #18bc9c;
+    color: #0f1923;
+    transform: translateY(-2px);
+}
+
+.cybersecurity-footer .footer-divider {
+    position: relative;
+    height: 12px;
+    margin: 0.5rem 0;
+}
+
+.cybersecurity-footer .cyber-line {
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(24, 188, 156, 0.3) 10%, 
+        rgba(24, 188, 156, 0.5) 50%, 
+        rgba(24, 188, 156, 0.3) 90%, 
+        transparent 100%
+    );
+    position: relative;
+}
+
+.cybersecurity-footer .cyber-line::before,
+.cybersecurity-footer .cyber-line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 8px;
+    height: 1px;
+    background-color: #18bc9c;
+    animation: blink 2s infinite;
+}
+
+.cybersecurity-footer .cyber-line::before {
+    left: 25%;
+}
+
+.cybersecurity-footer .cyber-line::after {
+    right: 25%;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
+
+.cybersecurity-footer .security-pulse {
+    width: 8px;
+    height: 8px;
+    background-color: #18bc9c;
+    border-radius: 50%;
+    position: relative;
+}
+
+.cybersecurity-footer .security-pulse::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 50%;
+    background-color: rgba(24, 188, 156, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    70% { transform: scale(1.5); opacity: 0; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+.cybersecurity-footer .copyright {
+    color: #9ba6b2;
+    font-size: 0.8rem;
+}
+
+.cybersecurity-footer .footer-bottom-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.cybersecurity-footer .footer-bottom-links a {
+    color: #9ba6b2;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.2s ease;
+}
+
+.cybersecurity-footer .footer-bottom-links a:hover {
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .separator {
+    margin: 0 0.5rem;
+    color: #4a5568;
+    font-size: 0.8rem;
+}
+
+.cybersecurity-footer .btn-report-incident {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(220, 53, 69, 0.15);
+    color: #dc3545 !important;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease !important;
+}
+
+.cybersecurity-footer .btn-report-incident:hover {
+    background-color: rgba(220, 53, 69, 0.3);
+}
+
+.cybersecurity-footer .btn-report-incident i {
+    margin-right: 0.3rem;
+}
+
+@media (max-width: 767px) {
+    .cybersecurity-footer .footer-bottom-links {
+        justify-content: flex-start;
+        margin-top: 0.5rem;
+    }
+    
+    .cybersecurity-footer .btn-report-incident {
+        margin-top: 0.5rem;
+        margin-left: 0;
+    }
+    
+    .cybersecurity-footer .separator:nth-of-type(2) {
+        display: none;
+    }
+}
+</style>
+
+<script>
+// Initialize Bootstrap tabs if not already initialized
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof bootstrap !== 'undefined') {
+        var tabElList = [].slice.call(document.querySelectorAll('#footerTabs .nav-link'));
+        tabElList.map(function(tabEl) {
+            return new bootstrap.Tab(tabEl);
+        });
+    }
+});
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Function to toggle dark/light mode
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-bs-theme') || 'light';
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-bs-theme', newTheme);
+      localStorage.setItem('quarto-color-scheme', newTheme);
+      
+      // Update icon if needed
+      const themeIcon = document.querySelector('.navbar-nav a[href="#"] i');
+      if (themeIcon) {
+        themeIcon.className = newTheme === 'light' ? 'bi bi-moon' : 'bi bi-sun';
+      }
+    }
+    
+    // Apply saved theme on load
+    const savedTheme = localStorage.getItem('quarto-color-scheme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      
+      // Update icon to match saved theme
+      const themeIcon = document.querySelector('.navbar-nav a[href="#"] i');
+      if (themeIcon && savedTheme === 'dark') {
+        themeIcon.className = 'bi bi-sun';
+      }
+    }
+    
+    // Set up toggle button
+    document.querySelectorAll('a[href="#"]').forEach(function(link) {
+      if (link.textContent.includes('Toggle Theme')) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          toggleTheme();
+        });
+      }
+    });
+    
+    // Enable Bootstrap tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      if (anchor.getAttribute('href') === '#') return;
+      
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 70,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+<script src="../../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

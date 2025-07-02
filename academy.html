@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-155df6177c212d1b2f8ead7da0af1b52.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-8f050130fc632d80deb4c3c60cf36ef2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-155df6177c212d1b2f8ead7da0af1b52.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-b5057f3398a202b36a08d66ee4de0ec1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -84,9 +84,10 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      page: 12,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -104,6 +105,49 @@ ul.task-list li input[type="checkbox"] {
   })
   </script>
 <style>html{ scroll-behavior: smooth; }</style>
+<style>
+.navbar-brand-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand .navbar-title {
+  display: inline-block;
+  margin-left: 0;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 767.98px) {
+  .navbar-brand .navbar-title {
+    font-size: 1.1rem;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Find the navbar brand element that contains the logo
+  const navbarBrand = document.querySelector('.navbar-brand');
+  
+  if (navbarBrand) {
+    // Create a span for the CHENIST text
+    const titleSpan = document.createElement('span');
+    titleSpan.className = 'navbar-title';
+    titleSpan.textContent = 'CHENIST';
+    
+    // Append the span after the logo
+    navbarBrand.appendChild(titleSpan);
+  }
+});
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
@@ -154,12 +198,16 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="scss/styles.css">
+<link rel="stylesheet" href="scss/academy.scss">
+<link rel="stylesheet" href="scss/custom-hero.css">
 <meta property="og:title" content="Academy – chen.ist">
 <meta property="og:description" content="Learn, collaborate, and grow with our educational programs">
+<meta property="og:image" content="https://github/com/chen.ist/assets/images/ai-ethics.jpg">
 <meta property="og:site_name" content="chen.ist">
 <meta name="twitter:title" content="Academy – chen.ist">
 <meta name="twitter:description" content="Learn, collaborate, and grow with our educational programs">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github/com/chen.ist/assets/images/ai-ethics.jpg">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -332,7 +380,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo">
+    <img src="./assets/images/logo-light.svg" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -355,24 +403,40 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-academy">    
         <li>
-    <a class="dropdown-item" href="./academy.html">
+    <a class="dropdown-item" href="./academy/overview.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./courses.html">
+    <a class="dropdown-item" href="./academy/courses.html">
  <span class="dropdown-text">Courses</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./events.html">
- <span class="dropdown-text">Event</span></a>
+    <a class="dropdown-item" href="./academy/trainings.html">
+ <span class="dropdown-text">Trainings</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./webinars.html">
+    <a class="dropdown-item" href="./academy/microlearning.html">
+ <span class="dropdown-text">Microlearning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./academy/programs/index.html">
+ <span class="dropdown-text">Programs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./academy/events.html">
+ <span class="dropdown-text">Events</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./academy/webinars.html">
  <span class="dropdown-text">Webinars</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./computerclub.html">
+    <a class="dropdown-item" href="./academy/computerclub.html">
  <span class="dropdown-text">Computer Club</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./academy/partnerships.html">
+ <span class="dropdown-text">Partnerships</span></a>
   </li>  
     </ul>
   </li>
@@ -446,7 +510,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Y29tbXVuaXR5">community <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29uZmVyZW5jZQ==">conference <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y3liZXJzZWN1cml0eQ==">cybersecurity <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGF0YS1wcml2YWN5">data-privacy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aGFja2F0aG9u">hackathon <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGludXg=">linux <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWVldHVw">meetup <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWVldHVwcw==">meetups <span class="quarto-category-count">(1)</span></div><div class="category" data-category="b3Blbi1zb3VyY2U=">open-source <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvZ3JhbW1pbmc=">programming <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2VjdXJpdHktYXdhcmVuZXNz">security-awareness <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3VtbWVyLXNjaG9vbA==">summer-school <span class="quarto-category-count">(1)</span></div><div class="category" data-category="d29ya3Nob3A=">workshop <span class="quarto-category-count">(1)</span></div><div class="category" data-category="d29ya3Nob3Bz">workshops <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(77)</span></div><div class="category" data-category="YWNhZGVtaWM=">academic <span class="quarto-category-count">(2)</span></div><div class="category" data-category="YWktbWw=">ai-ml <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YXV0b21hdGlvbg==">automation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YnVzaW5lc3M=">business <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y2xvdWQ=">cloud <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29sbGFib3JhdGlvbg==">collaboration <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y29tbWFuZC1saW5l">command-line <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y29tbXVuaXR5">community <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29tcGxpYW5jZQ==">compliance <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y29uZmVyZW5jZQ==">conference <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y3J5cHRvZ3JhcGh5">cryptography <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y3liZXJoeWdpZW5l">cyberhygiene <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y3liZXJzZWN1cml0eQ==">cybersecurity <span class="quarto-category-count">(7)</span></div><div class="category" data-category="ZGF0YS1hbmFseXNpcw==">data-analysis <span class="quarto-category-count">(2)</span></div><div class="category" data-category="ZGF0YS1wcml2YWN5">data-privacy <span class="quarto-category-count">(4)</span></div><div class="category" data-category="ZGF0YS1zZWN1cml0eQ==">data-security <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGVjbGFyYXRpdmUtc3lzdGVtcw==">declarative-systems <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGV2ZWxvcG1lbnQ=">development <span class="quarto-category-count">(2)</span></div><div class="category" data-category="ZGlnaXRhbC1wcml2YWN5">digital-privacy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGlnaXRhbC1zZWN1cml0eQ==">digital-security <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZG9jdW1lbnQtcHJlcGFyYXRpb24=">document-preparation <span class="quarto-category-count">(2)</span></div><div class="category" data-category="ZWR1Y2F0aW9u">education <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZW1hY3M=">emacs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZmlsZS1zeW5jaHJvbml6YXRpb24=">file-synchronization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2Rwcg==">gdpr <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Z2l0">git <span class="quarto-category-count">(2)</span></div><div class="category" data-category="aGFja2F0aG9u">hackathon <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aGFja2F0aG9ucw==">hackathons <span class="quarto-category-count">(2)</span></div><div class="category" data-category="aHVtYW4tZmFjdG9ycw==">human-factors <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW1tdXRhYmxlLWluZnJhc3RydWN0dXJl">immutable-infrastructure <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW5jaWRlbnQtcmVzcG9uc2U=">incident-response <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW5mcmFzdHJ1Y3R1cmU=">infrastructure <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW50ZW5zaXZlLWxlYXJuaW5n">intensive-learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGF0ZXg=">latex <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGludXg=">linux <span class="quarto-category-count">(8)</span></div><div class="category" data-category="bWVldHVw">meetup <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWVldHVwcw==">meetups <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmV0d29yay1zZWN1cml0eQ==">network-security <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmV0d29ya2luZw==">networking <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bml4b3M=">nixos <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bm90ZS10YWtpbmc=">note-taking <span class="quarto-category-count">(1)</span></div><div class="category" data-category="b3Blbi1zb3VyY2U=">open-source <span class="quarto-category-count">(9)</span></div><div class="category" data-category="b3BlcmF0aW5nLXN5c3RlbXM=">operating-systems <span class="quarto-category-count">(3)</span></div><div class="category" data-category="b3JnYW5pemF0aW9u">organization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cGVuZXRyYXRpb24tdGVzdGluZw==">penetration-testing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cGVyc29uYWwtc2VjdXJpdHk=">personal-security <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cGhpc2hpbmc=">phishing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cGhpc2hpbmctcHJldmVudGlvbg==">phishing-prevention <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJpdmFjeQ==">privacy <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cHJpdmFjeS1lbmdpbmVlcmluZw==">privacy-engineering <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvYmxlbS1zb2x2aW5n">problem-solving <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvZHVjdGl2aXR5">productivity <span class="quarto-category-count">(7)</span></div><div class="category" data-category="cHJvZ3JhbW1pbmc=">programming <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cmVndWxhdG9yeS1mcmFtZXdvcmtz">regulatory-frameworks <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmVwcm9kdWNpYmxlLWJ1aWxkcw==">reproducible-builds <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2VjdXJlLWNvbmZpZ3VyYXRpb24=">secure-configuration <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2VjdXJpdHk=">security <span class="quarto-category-count">(3)</span></div><div class="category" data-category="c2VjdXJpdHktYXdhcmVuZXNz">security-awareness <span class="quarto-category-count">(7)</span></div><div class="category" data-category="c2VjdXJpdHktY3VsdHVyZQ==">security-culture <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c2VydmVyLW1hbmFnZW1lbnQ=">server-management <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2hlbGw=">shell <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c29jaWFsLWVuZ2luZWVyaW5n">social-engineering <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c3ByZWFkc2hlZXRz">spreadsheets <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c3VtbWVyLXNjaG9vbA==">summer-school <span class="quarto-category-count">(3)</span></div><div class="category" data-category="c3lzdGVtLWFkbWluaXN0cmF0aW9u">system-administration <span class="quarto-category-count">(5)</span></div><div class="category" data-category="c3lzdGVtLWhhcmRlbmluZw==">system-hardening <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3lzdGVtLXNlY3VyaXR5">system-security <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGVhbS1ldmVudHM=">team-events <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGVjaG5vbG9neS1lZHVjYXRpb24=">technology-education <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGVybWluYWw=">terminal <span class="quarto-category-count">(2)</span></div><div class="category" data-category="dGV4dC1lZGl0b3Jz">text-editors <span class="quarto-category-count">(2)</span></div><div class="category" data-category="dG9vbHM=">tools <span class="quarto-category-count">(2)</span></div><div class="category" data-category="dHlwZXNldHRpbmc=">typesetting <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dW5peA==">unix <span class="quarto-category-count">(4)</span></div><div class="category" data-category="dmlydHVhbGl6YXRpb24=">virtualization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dnVsbmVyYWJpbGl0eS1hc3Nlc3NtZW50">vulnerability-assessment <span class="quarto-category-count">(1)</span></div><div class="category" data-category="d29ya2Zsb3c=">workflow <span class="quarto-category-count">(1)</span></div><div class="category" data-category="d29ya3Nob3A=">workshop <span class="quarto-category-count">(1)</span></div><div class="category" data-category="d29ya3Nob3Bz">workshops <span class="quarto-category-count">(1)</span></div><div class="category" data-category="d3JpdGluZw==">writing <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -471,180 +535,9 @@ window.Quarto = {
 </header>
 
 
-<div class="hero-section">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-8 offset-md-2 text-center">
-        <h1>chen.ist <span class="text-green">Academy</span></h1>
-        <p>Empowering through knowledge, experience, and innovation</p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="container page-section">
-<section id="welcome-to-our-academy" class="level2">
-<h2 class="anchored" data-anchor-id="welcome-to-our-academy">Welcome to our Academy</h2>
-<p>The chen.ist Academy is a comprehensive educational initiative dedicated to advancing technical knowledge, fostering innovation, and building a community of skilled professionals. Through our diverse range of courses, events, and projects, we aim to provide practical, hands-on learning experiences that prepare participants for the challenges of modern technology environments.</p>
-<div class="row mt-4">
-  <div class="col-md-3">
-    <div class="feature-card">
-      <div class="feature-card-icon text-center">
-        <i class="bi bi-book"></i>
-      </div>
-      <h3 class="text-center anchored">Courses</h3>
-      <p>Expert-led technical courses designed to build practical skills across various domains including cybersecurity, open source development, data privacy, and more.</p>
-      <div class="text-center mt-3">
-        <a href="./courses.html" class="btn btn-outline-primary">Browse Courses</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-3">
-    <div class="feature-card">
-      <div class="feature-card-icon text-center">
-        <i class="bi bi-calendar-event"></i>
-      </div>
-      <h3 class="text-center anchored">Events</h3>
-      <p>Interactive workshops, hackathons, and meetups that provide opportunities to apply skills, collaborate with peers, and explore emerging technologies.</p>
-      <div class="text-center mt-3">
-        <a href="./events.html" class="btn btn-outline-primary">View Events</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-3">
-    <div class="feature-card">
-      <div class="feature-card-icon text-center">
-        <i class="bi bi-gear"></i>
-      </div>
-      <h3 class="text-center anchored">Projects</h3>
-      <p>Hands-on projects that allow participants to apply their knowledge, build portfolios, and contribute to meaningful technical solutions.</p>
-      <div class="text-center mt-3">
-        <a href="./projects.html" class="btn btn-outline-primary">Explore Projects</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-3">
-    <div class="feature-card">
-      <div class="feature-card-icon text-center">
-        <i class="bi bi-people"></i>
-      </div>
-      <h3 class="text-center anchored">Computer Club</h3>
-      <p>A community-driven technology club that offers regular meetups, workshops, and collaborative learning opportunities for all ages and skill levels.</p>
-      <div class="text-center mt-3">
-        <a href="./computerclub.html" class="btn btn-outline-primary">Join the Club</a>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-<section id="learning-paths" class="level2">
-<h2 class="anchored" data-anchor-id="learning-paths">Learning Paths</h2>
-<p>Our academy offers structured learning paths designed to guide your educational journey based on your interests, goals, and current skill level.</p>
-<div class="row mt-5">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Cybersecurity Track</h3>
-      </div>
-      <div class="card-body">
-        <p>A comprehensive learning path for those interested in building careers in cybersecurity, from foundational concepts to specialized areas.</p>
-        <ul>
-          <li><strong>Courses:</strong> Practical Cybersecurity, Human Firewall, Data Protection</li>
-          <li><strong>Events:</strong> Cybersecurity Hackathon, Security Workshops</li>
-          <li><strong>Projects:</strong> Vulnerability Assessment, Security Tool Development</li>
-        </ul>
-        <a href="#" class="btn btn-primary">View Path Details</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Open Source Development Track</h3>
-      </div>
-      <div class="card-body">
-        <p>For developers looking to enhance their skills through contribution to open source projects and collaboration with the community.</p>
-        <ul>
-          <li><strong>Courses:</strong> Open Source Development, Unix/Linux Systems</li>
-          <li><strong>Events:</strong> Computer Club Meetups, Coding Workshops</li>
-          <li><strong>Projects:</strong> Open Source Contributions, Tool Development</li>
-        </ul>
-        <a href="#" class="btn btn-primary">View Path Details</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Innovation &amp; Maker Track</h3>
-      </div>
-      <div class="card-body">
-        <p>Designed for creators and innovators interested in hardware, IoT, and physical computing projects.</p>
-        <ul>
-          <li><strong>Courses:</strong> Hardware Fundamentals, IoT Security</li>
-          <li><strong>Events:</strong> Makers Workshop, Space Hackathon</li>
-          <li><strong>Projects:</strong> IoT Prototyping, Hardware Development</li>
-        </ul>
-        <a href="#" class="btn btn-primary">View Path Details</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Data Privacy &amp; Compliance Track</h3>
-      </div>
-      <div class="card-body">
-        <p>For professionals focused on data protection, privacy regulations, and implementing compliant systems.</p>
-        <ul>
-          <li><strong>Courses:</strong> Data Protection and Privacy, Security Awareness</li>
-          <li><strong>Events:</strong> Privacy Workshops, Compliance Seminars</li>
-          <li><strong>Projects:</strong> Privacy Impact Assessments, GDPR Compliance</li>
-        </ul>
-        <a href="#" class="btn btn-primary">View Path Details</a>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-<section id="filtering-academy-content" class="level2">
-<h2 class="anchored" data-anchor-id="filtering-academy-content">Filtering Academy Content</h2>
-<p>Use the filters below to narrow down content based on your interests:</p>
-</section>
-</div>
-<div class="cta-section">
-  <div class="container text-center">
-    <h2 class="anchored">Ready to begin your learning journey?</h2>
-    <p class="mb-4">Explore our courses, events, projects, and community to find the perfect starting point for your educational goals.</p>
-    <div class="row justify-content-center mt-4">
-      <div class="col-md-3">
-        <a href="./courses.html" class="cta-button">Browse Courses</a>
-      </div>
-      <br>
-      <br>
-      <div class="col-md-3">
-        <a href="./events.html" class="cta-button">View Events</a>
-      </div>
-      <br>
-      <br>
-      <div class="col-md-3">
-        <a href="./projects.html" class="cta-button">Explore Projects</a>
-      </div>
-      <br>
-      <br>
-      <div class="col-md-3">
-        <a href="./computerclub.html" class="cta-button">Join Computer Club</a>
-      </div>
-    </div>
-  </div>
-</div>
+<meta http-equiv="refresh" content="0;url=/academy/">
+<script>window.location.href = "/academy/";</script>
+<p>If you are not redirected automatically, please <a href="./academy/">click here</a> to access the Academy section.</p>
 
 
 
@@ -659,6 +552,12 @@ window.Quarto = {
       <option value="listing-title" data-direction="asc">
         Title
       </option>
+      <option value="listing-date-sort" data-direction="asc">
+        Date - Oldest
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Date - Newest
+      </option>
       <option value="listing-author" data-direction="asc">
         Author
       </option>
@@ -670,10 +569,163 @@ window.Quarto = {
     </div>
 </div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Y29tbXVuaXR5JTJDcHJvZ3JhbW1pbmclMkN3b3Jrc2hvcHMlMkNtZWV0dXBz" data-listing-file-modified-sort="1750927334029" data-listing-reading-time-sort="11" data-listing-word-count-sort="2175">
-<a href="./computerclub.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="0" data-listing-date-sort="1752958800000" data-listing-file-modified-sort="1751372133702" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="742">
+<a href="./academy/events/pages/ai-ethics-hackathon.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<p class="card-img-top">
+<img loading="lazy" src="./assets/images/ai-ethics.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+AI Ethics Hackathon
+</h5>
+<div class="card-text listing-description delink">
+The AI Ethics Hackathon is a weekend-long event focusing on the ethical dimensions of artificial intelligence development. Participants will explore responsible AI design…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Jul 20, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-date-sort="1754341200000" data-listing-file-modified-sort="1751439686363" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="792">
+<a href="./academy/webinars/pages/ai-ethics-developers.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./assets/images/ai-ethics.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+AI Ethics for Developers
+</h5>
+<div class="card-text listing-description delink">
+As AI systems become increasingly integrated into critical domains such as healthcare, finance, hiring, and criminal justice, the ethical implications of these technologies…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Aug 5, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-listing-date-sort="1778792400000" data-listing-file-modified-sort="1751456517055" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="741">
+<a href="./academy/programs/hackathons/ai-ethics-hackathon.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./assets/images/ai-ml-hackathon.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+AI with Ethics - Hackathon
+</h5>
+<div class="card-text listing-description delink">
+The AI Ethics Hackathon is a weekend-long event focusing on the ethical dimensions of artificial intelligence development. Participants will explore responsible AI design…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+May 15, 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1751448912534" data-listing-reading-time-sort="11" data-listing-word-count-sort="2025">
+<a href="./academy/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="assets/images/placeholder.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Academy
+</h5>
+<div class="card-text listing-description delink">
+Empowering through knowledge, experience, and innovation
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1751443182241" data-listing-reading-time-sort="5" data-listing-word-count-sort="943">
+<a href="./academy/overview.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="assets/svg/knowledge.svg" alt="Academy Knowledge" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Academy Overview
+</h5>
+<div class="card-text listing-description delink">
+Education designed for the real world
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1751443185448" data-listing-reading-time-sort="11" data-listing-word-count-sort="2173">
+<a href="./academy/partnerships.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="assets/svg/connecting_teams.svg" alt="Academy Partnerships" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Academy Partnerships
+</h5>
+<div class="card-text listing-description delink">
+Building a stronger educational ecosystem through collaboration
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="6" data-listing-date-sort="1752526800000" data-listing-file-modified-sort="1751439673223" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="695">
+<a href="./academy/webinars/pages/cloud-cost-optimization.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./assets/images/cloud-cost.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Cloud Cost Optimization
+</h5>
+<div class="card-text listing-description delink">
+As organizations continue to migrate workloads to the cloud, managing and optimizing costs has become a critical challenge. Many businesses find themselves facing unexpected…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Jul 15, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="7" data-categories="Y29tbXVuaXR5JTJDcHJvZ3JhbW1pbmclMkN3b3Jrc2hvcHMlMkNtZWV0dXBz" data-listing-file-modified-sort="1751443112378" data-listing-reading-time-sort="12" data-listing-word-count-sort="2242">
+<a href="./academy/computerclub.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="assets/svg/community.svg" alt="Computer Club" style="height: 150px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Clubul Computer
@@ -700,10 +752,29 @@ Building digital literacy and community through technology education
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Y3liZXJzZWN1cml0eSUyQ29wZW4tc291cmNlJTJDbGludXglMkNkYXRhLXByaXZhY3klMkNzZWN1cml0eS1hd2FyZW5lc3M=" data-listing-file-modified-sort="1750927334030" data-listing-reading-time-sort="12" data-listing-word-count-sort="2324">
-<a href="./courses.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="8" data-listing-file-modified-sort="1751382286463" data-listing-reading-time-sort="2" data-listing-word-count-sort="356">
+<a href="./academy/courses/open-source-development/resources.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Course Resources
+</h5>
+<div class="card-text listing-description delink">
+This page contains additional resources, references, and tools to support your learning journey in open source development.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="9" data-categories="Y3liZXJzZWN1cml0eSUyQ29wZW4tc291cmNlJTJDbGludXglMkNkYXRhLXByaXZhY3klMkNzZWN1cml0eS1hd2FyZW5lc3M=" data-listing-file-modified-sort="1751461772235" data-listing-reading-time-sort="18" data-listing-word-count-sort="3491">
+<a href="./academy/courses.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="assets/svg/learning.svg" alt="Academy Courses" style="height: 150px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Courses
@@ -732,10 +803,448 @@ Enhance your skills with our expert-led training programs
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="aGFja2F0aG9uJTJDd29ya3Nob3AlMkNjb25mZXJlbmNlJTJDbWVldHVwJTJDc3VtbWVyLXNjaG9vbA==" data-listing-file-modified-sort="1750927334034" data-listing-reading-time-sort="16" data-listing-word-count-sort="3164">
-<a href="./events.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="10" data-listing-date-sort="1758315600000" data-listing-file-modified-sort="1751439646117" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="707">
+<a href="./academy/webinars/pages/cyber-awareness.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./assets/images/cyber-security.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Cyber Awareness
+</h5>
+<div class="card-text listing-description delink">
+In today’s digital landscape, human error remains the leading cause of security breaches. This webinar focuses on building a security culture that reduces human risk through…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Sep 20, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="11" data-categories="Y3liZXJzZWN1cml0eSUyQ2N5YmVyaHlnaWVuZSUyQ2RpZ2l0YWwtc2VjdXJpdHklMkNwcml2YWN5JTJDc2VjdXJpdHktYXdhcmVuZXNz" data-listing-file-modified-sort="1751382729662" data-listing-reading-time-sort="4" data-listing-word-count-sort="671">
+<a href="./academy/courses/cyberhygiene-essentials/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Cyberhygiene Essentials
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y3liZXJzZWN1cml0eQ=='); return false;">cybersecurity</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y3liZXJoeWdpZW5l'); return false;">cyberhygiene</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZGlnaXRhbC1zZWN1cml0eQ=='); return false;">digital-security</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cHJpdmFjeQ=='); return false;">privacy</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c2VjdXJpdHktYXdhcmVuZXNz'); return false;">security-awareness</div>
+
+</div>
+<div class="card-text listing-description delink">
+Develop practical skills for maintaining digital security in your everyday life
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="12" data-listing-file-modified-sort="1751382776831" data-listing-reading-time-sort="6" data-listing-word-count-sort="1072">
+<a href="./academy/courses/cyberhygiene-essentials/syllabus.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Cyberhygiene Essentials Course Syllabus
+</h5>
+<div class="card-text listing-description delink">
+<strong>Course Title:</strong> Cyberhygiene Essentials<br>
+<strong>Duration:</strong> 6 Weeks<br>
+<strong>Level:</strong> All Levels (No technical prerequisites)<br>
+<strong>Next Start Date:</strong> July 20th, 2025<br>
+<strong>Format Options:</strong> Instructor-Led…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="13" data-categories="Y3liZXJoeWdpZW5lJTJDcGVyc29uYWwtc2VjdXJpdHklMkNkaWdpdGFsLXByaXZhY3klMkNzZWN1cml0eS1hd2FyZW5lc3M=" data-listing-file-modified-sort="1751445525867" data-listing-reading-time-sort="8" data-listing-word-count-sort="1553">
+<a href="./academy/trainings/cyberhygiene-intensive/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/cyber-security.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Cyberhygiene Intensive Training
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y3liZXJoeWdpZW5l'); return false;">cyberhygiene</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cGVyc29uYWwtc2VjdXJpdHk='); return false;">personal-security</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZGlnaXRhbC1wcml2YWN5'); return false;">digital-privacy</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c2VjdXJpdHktYXdhcmVuZXNz'); return false;">security-awareness</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Hands-on 1-day workshop where participants implement practical cybersecurity measures directly on their own devices with expert guidance, leaving with configured security…</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="14" data-listing-file-modified-sort="1751383071789" data-listing-reading-time-sort="5" data-listing-word-count-sort="844">
+<a href="./academy/courses/cyberhygiene-essentials/resources.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Cyberhygiene Resources
+</h5>
+<div class="card-text listing-description delink">
+This page contains additional resources, references, and tools to support your learning journey in cyberhygiene and digital security.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="15" data-categories="Y3liZXJzZWN1cml0eSUyQ3NlY3VyaXR5LWF3YXJlbmVzcyUyQ3Z1bG5lcmFiaWxpdHktYXNzZXNzbWVudA==" data-listing-file-modified-sort="1751445513382" data-listing-reading-time-sort="7" data-listing-word-count-sort="1379">
+<a href="./academy/trainings/cybersecurity-essentials/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/cyber-security.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Cybersecurity Essentials Training
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y3liZXJzZWN1cml0eQ=='); return false;">cybersecurity</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c2VjdXJpdHktYXdhcmVuZXNz'); return false;">security-awareness</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('dnVsbmVyYWJpbGl0eS1hc3Nlc3NtZW50'); return false;">vulnerability-assessment</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Intensive 2-day workshop providing practical introduction to essential cybersecurity concepts, tools, and techniques for professionals who need to quickly develop…</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="16" data-listing-date-sort="1749934800000" data-listing-file-modified-sort="1751372133702" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="651">
+<a href="./academy/events/pages/cybersecurity-hackathon.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/cyber-security.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Cybersecurity Hackathon
+</h5>
+<div class="card-text listing-description delink">
+The Cybersecurity Hackathon is a 48-hour challenge where participants work in teams to solve real-world cybersecurity problems. Open to security enthusiasts of all levels…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Jun 15, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="17" data-listing-date-sort="1748725200000" data-listing-file-modified-sort="1751459007926" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="640">
+<a href="./academy/programs/hackathons/cybersecurity-hackathon.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/cyber-security.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Cybersecurity Hackathon
+</h5>
+<div class="card-text listing-description delink">
+The Cybersecurity Hackathon is a 48-hour challenge where participants work in teams to solve real-world cybersecurity problems. Open to security enthusiasts of all levels…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Jun 1, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="18" data-listing-file-modified-sort="1751380336061" data-listing-reading-time-sort="4" data-listing-word-count-sort="762">
+<a href="./academy/courses/practical-cybersecurity/resources.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Cybersecurity Resources
+</h5>
+<div class="card-text listing-description delink">
+This page contains additional resources, references, and tools to support your learning journey in cybersecurity.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="19" data-categories="ZGF0YS1wcml2YWN5JTJDY29tcGxpYW5jZSUyQ2dkcHIlMkNyZWd1bGF0b3J5LWZyYW1ld29ya3M=" data-listing-file-modified-sort="1751445537541" data-listing-reading-time-sort="8" data-listing-word-count-sort="1436">
+<a href="./academy/trainings/data-privacy-compliance/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/placeholder.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Data Privacy Compliance Training
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YS1wcml2YWN5'); return false;">data-privacy</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y29tcGxpYW5jZQ=='); return false;">compliance</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Z2Rwcg=='); return false;">gdpr</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cmVndWxhdG9yeS1mcmFtZXdvcmtz'); return false;">regulatory-frameworks</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Comprehensive 2-day workshop on data privacy regulations, compliance frameworks, and practical implementation strategies for privacy officers, compliance managers, and IT…</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="20" data-categories="ZGF0YS1wcml2YWN5JTJDZ2RwciUyQ2NvbXBsaWFuY2UlMkNwcml2YWN5LWVuZ2luZWVyaW5nJTJDZGF0YS1zZWN1cml0eQ==" data-listing-file-modified-sort="1751382248076" data-listing-reading-time-sort="4" data-listing-word-count-sort="651">
+<a href="./academy/courses/data-protection-privacy/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Data Protection and Privacy
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YS1wcml2YWN5'); return false;">data-privacy</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Z2Rwcg=='); return false;">gdpr</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y29tcGxpYW5jZQ=='); return false;">compliance</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cHJpdmFjeS1lbmdpbmVlcmluZw=='); return false;">privacy-engineering</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YS1zZWN1cml0eQ=='); return false;">data-security</div>
+
+</div>
+<div class="card-text listing-description delink">
+Master the technical and legal frameworks for safeguarding sensitive information
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="21" data-listing-file-modified-sort="1751380721099" data-listing-reading-time-sort="6" data-listing-word-count-sort="1154">
+<a href="./academy/courses/data-protection-privacy/syllabus.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Data Protection and Privacy Course Syllabus
+</h5>
+<div class="card-text listing-description delink">
+<strong>Course Title:</strong> Data Protection and Privacy<br>
+<strong>Duration:</strong> 6 Weeks<br>
+<strong>Level:</strong> All Levels (Beginner to Advanced)<br>
+<strong>Next Start Date:</strong> November 5th, 2025<br>
+<strong>Format Options:</strong> Instructor-Led…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="22" data-listing-file-modified-sort="1751380865437" data-listing-reading-time-sort="5" data-listing-word-count-sort="837">
+<a href="./academy/courses/data-protection-privacy/resources.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Data Protection and Privacy Resources
+</h5>
+<div class="card-text listing-description delink">
+This page contains additional resources, references, and tools to support your learning journey in data protection and privacy.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="23" data-listing-date-sort="1760043600000" data-listing-file-modified-sort="1751439698120" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="765">
+<a href="./academy/webinars/pages/digital-transformation.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/digital-transformation.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Digital Transformation Strategy
+</h5>
+<div class="card-text listing-description delink">
+Digital transformation has moved beyond buzzword status to become an essential business imperative. However, many organizations struggle to develop and implement effective…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Oct 10, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="24" data-categories="ZWR1Y2F0aW9uJTJDaGFja2F0aG9ucyUyQ3N1bW1lci1zY2hvb2w=" data-listing-file-modified-sort="1751448616807" data-listing-reading-time-sort="7" data-listing-word-count-sort="1360">
+<a href="./academy/programs/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/placeholder.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Educational Programs
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZWR1Y2F0aW9u'); return false;">education</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('aGFja2F0aG9ucw=='); return false;">hackathons</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c3VtbWVyLXNjaG9vbA=='); return false;">summer-school</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Explore our educational programs including hackathons, summer schools, and specialized training events designed for hands-on learning and skill development.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="25" data-categories="dGV4dC1lZGl0b3JzJTJDcHJvZHVjdGl2aXR5JTJDcHJvZ3JhbW1pbmclMkNvcGVuLXNvdXJjZQ==" data-listing-file-modified-sort="1751447916982" data-listing-reading-time-sort="9" data-listing-word-count-sort="1737">
+<a href="./academy/microlearning/emacs/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/placeholder.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Emacs Essentials
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('dGV4dC1lZGl0b3Jz'); return false;">text-editors</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cHJvZHVjdGl2aXR5'); return false;">productivity</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cHJvZ3JhbW1pbmc='); return false;">programming</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('b3Blbi1zb3VyY2U='); return false;">open-source</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Learn the fundamentals of Emacs, a powerful and extensible text editor, in this practical hands-on session covering basic editing, customization, and productivity features.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="26" data-listing-file-modified-sort="1751443333595" data-listing-reading-time-sort="1" data-listing-word-count-sort="146">
+<a href="./academy/events/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img data-src="assets/images/space-hackathon.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Events
+</h5>
+<div class="card-text listing-description delink">
+Welcome to our events listing page. Here you can browse all upcoming and past events organized by chen.ist. Use the filters to find events by category, date, or location.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="27" data-categories="aGFja2F0aG9uJTJDd29ya3Nob3AlMkNjb25mZXJlbmNlJTJDbWVldHVwJTJDc3VtbWVyLXNjaG9vbA==" data-listing-file-modified-sort="1751443068513" data-listing-reading-time-sort="17" data-listing-word-count-sort="3230">
+<a href="./academy/events.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img data-src="assets/svg/events.svg" alt="Academy Events" style="height: 150px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Events
@@ -764,16 +1273,29 @@ Connect, learn, and innovate at our events
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1750927334041" data-listing-reading-time-sort="1" data-listing-word-count-sort="19">
-<a href="./projects.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="28" data-categories="b3BlcmF0aW5nLXN5c3RlbXMlMkN1bml4JTJDc3lzdGVtLWFkbWluaXN0cmF0aW9uJTJDbmV0d29ya2luZw==" data-listing-file-modified-sort="1751448168574" data-listing-reading-time-sort="9" data-listing-word-count-sort="1760">
+<a href="./academy/microlearning/freebsd/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/placeholder.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-Projects
+FreeBSD Basics
 </h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('b3BlcmF0aW5nLXN5c3RlbXM='); return false;">operating-systems</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('dW5peA=='); return false;">unix</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c3lzdGVtLWFkbWluaXN0cmF0aW9u'); return false;">system-administration</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bmV0d29ya2luZw=='); return false;">networking</div>
+
+</div>
 <div class="card-text listing-description delink">
-If you are not redirected automatically, follow this link to the projects page.
+<p>Learn the fundamentals of FreeBSD, a reliable, high-performance Unix-like operating system known for its stability, security, and advanced networking capabilities.</p>
 </div>
 <div class="card-attribution card-text-small start">
 <div class="listing-author">
@@ -783,8 +1305,1305 @@ If you are not redirected automatically, follow this link to the projects page.
 </div>
 </div></a>
 </div>
+<div class="g-col-1" data-index="29" data-categories="aGFja2F0aG9ucyUyQ3RlYW0tZXZlbnRzJTJDcHJvYmxlbS1zb2x2aW5n" data-listing-file-modified-sort="1751457582593" data-listing-reading-time-sort="14" data-listing-word-count-sort="2680">
+<a href="./academy/programs/hackathons/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/placeholder.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Hackathons
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('aGFja2F0aG9ucw=='); return false;">hackathons</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('dGVhbS1ldmVudHM='); return false;">team-events</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cHJvYmxlbS1zb2x2aW5n'); return false;">problem-solving</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Participate in our hackathons where you can collaborate with peers, learn from mentors, and develop innovative solutions to real-world problems in cybersecurity, AI ethics…</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="30" data-categories="c2VjdXJpdHktYXdhcmVuZXNzJTJDc29jaWFsLWVuZ2luZWVyaW5nJTJDcGhpc2hpbmclMkNzZWN1cml0eS1jdWx0dXJlJTJDaHVtYW4tZmFjdG9ycw==" data-listing-file-modified-sort="1751382260851" data-listing-reading-time-sort="4" data-listing-word-count-sort="691">
+<a href="./academy/courses/human-firewall-security-awareness/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Human Firewall: Security Awareness
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('c2VjdXJpdHktYXdhcmVuZXNz'); return false;">security-awareness</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c29jaWFsLWVuZ2luZWVyaW5n'); return false;">social-engineering</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cGhpc2hpbmc='); return false;">phishing</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c2VjdXJpdHktY3VsdHVyZQ=='); return false;">security-culture</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('aHVtYW4tZmFjdG9ycw=='); return false;">human-factors</div>
+
+</div>
+<div class="card-text listing-description delink">
+Transform your organization's security posture by building a human-centered defense
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="31" data-listing-file-modified-sort="1751380963340" data-listing-reading-time-sort="7" data-listing-word-count-sort="1252">
+<a href="./academy/courses/human-firewall-security-awareness/syllabus.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Human Firewall: Security Awareness Course Syllabus
+</h5>
+<div class="card-text listing-description delink">
+<strong>Course Title:</strong> Human Firewall: Security Awareness<br>
+<strong>Duration:</strong> 4 Weeks<br>
+<strong>Level:</strong> All Levels (No technical prerequisites)<br>
+<strong>Next Start Date:</strong> August 15th, 2025<br>
+<strong>Format Options:</strong> Instructo…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="32" data-categories="bGF0ZXglMkNhY2FkZW1pYyUyQ3dyaXRpbmclMkNkb2N1bWVudC1wcmVwYXJhdGlvbg==" data-listing-file-modified-sort="1751447821699" data-listing-reading-time-sort="9" data-listing-word-count-sort="1649">
+<a href="./academy/microlearning/latex/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/placeholder.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+LaTeX for Academic Writing
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('bGF0ZXg='); return false;">latex</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YWNhZGVtaWM='); return false;">academic</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('d3JpdGluZw=='); return false;">writing</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZG9jdW1lbnQtcHJlcGFyYXRpb24='); return false;">document-preparation</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>A practical introduction to LaTeX for creating professional academic papers, theses, and presentations with proper formatting and citations.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="33" data-categories="cHJvZHVjdGl2aXR5JTJDc3ByZWFkc2hlZXRzJTJDZGF0YS1hbmFseXNpcyUyQ29wZW4tc291cmNl" data-listing-file-modified-sort="1751447967131" data-listing-reading-time-sort="9" data-listing-word-count-sort="1734">
+<a href="./academy/microlearning/libreoffice-calc/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/placeholder.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+LibreOffice Calc Essentials
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('cHJvZHVjdGl2aXR5'); return false;">productivity</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c3ByZWFkc2hlZXRz'); return false;">spreadsheets</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YS1hbmFseXNpcw=='); return false;">data-analysis</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('b3Blbi1zb3VyY2U='); return false;">open-source</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Learn the essentials of LibreOffice Calc, a powerful and free spreadsheet application that provides a viable alternative to Microsoft Excel, with hands-on practice of key…</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="34" data-categories="bGludXglMkNzeXN0ZW0tYWRtaW5pc3RyYXRpb24lMkNjb21tYW5kLWxpbmU=" data-listing-file-modified-sort="1751445551172" data-listing-reading-time-sort="8" data-listing-word-count-sort="1415">
+<a href="./academy/trainings/linux-admin-fundamentals/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/placeholder.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Linux Administration Fundamentals Training
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('bGludXg='); return false;">linux</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c3lzdGVtLWFkbWluaXN0cmF0aW9u'); return false;">system-administration</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y29tbWFuZC1saW5l'); return false;">command-line</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Intensive 2-day workshop providing a comprehensive introduction to Linux system administration for IT professionals, with hands-on exercises covering command line, system…</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="35" data-listing-date-sort="1757019600000" data-listing-file-modified-sort="1751372133702" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="714">
+<a href="./academy/events/pages/makers-workshop.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/makers-workshop.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Makers Workshop
+</h5>
+<div class="card-text listing-description delink">
+The Makers Workshop is a full-day, hands-on event for hardware enthusiasts, bringing together makers, DIY experts, and hardware hackers to build projects and share…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Sep 5, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="36" data-categories="b3Blbi1zb3VyY2UlMkNsaW51eCUyQ3Rvb2xzJTJDcHJvZHVjdGl2aXR5JTJDdGV4dC1lZGl0b3Jz" data-listing-file-modified-sort="1751461772293" data-listing-reading-time-sort="25" data-listing-word-count-sort="4997">
+<a href="./academy/microlearning.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/placeholder.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Microlearning
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('b3Blbi1zb3VyY2U='); return false;">open-source</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bGludXg='); return false;">linux</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('dG9vbHM='); return false;">tools</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cHJvZHVjdGl2aXR5'); return false;">productivity</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('dGV4dC1lZGl0b3Jz'); return false;">text-editors</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Focused 1-2 hour microlearning sessions for specific tools and technologies. Perfect for busy professionals who want to quickly learn a new skill or tool.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="37" data-categories="bGludXglMkNzeXN0ZW0tYWRtaW5pc3RyYXRpb24lMkNkZWNsYXJhdGl2ZS1zeXN0ZW1zJTJDcmVwcm9kdWNpYmxlLWJ1aWxkcw==" data-listing-file-modified-sort="1751448117189" data-listing-reading-time-sort="9" data-listing-word-count-sort="1711">
+<a href="./academy/microlearning/nixos/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/placeholder.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+NixOS Introduction
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('bGludXg='); return false;">linux</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c3lzdGVtLWFkbWluaXN0cmF0aW9u'); return false;">system-administration</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZGVjbGFyYXRpdmUtc3lzdGVtcw=='); return false;">declarative-systems</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cmVwcm9kdWNpYmxlLWJ1aWxkcw=='); return false;">reproducible-builds</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Learn the basics of NixOS, a unique Linux distribution with a declarative approach to system configuration, package management, and reproducible builds.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="38" data-categories="bml4b3MlMkNzeXN0ZW0tc2VjdXJpdHklMkNzZWN1cmUtY29uZmlndXJhdGlvbiUyQ2ltbXV0YWJsZS1pbmZyYXN0cnVjdHVyZQ==" data-listing-file-modified-sort="1751445563002" data-listing-reading-time-sort="8" data-listing-word-count-sort="1487">
+<a href="./academy/trainings/nixos-security-jumpstart/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/placeholder.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+NixOS Security Jumpstart Training
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('bml4b3M='); return false;">nixos</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c3lzdGVtLXNlY3VyaXR5'); return false;">system-security</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c2VjdXJlLWNvbmZpZ3VyYXRpb24='); return false;">secure-configuration</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('aW1tdXRhYmxlLWluZnJhc3RydWN0dXJl'); return false;">immutable-infrastructure</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Intensive 2-day hands-on workshop for system administrators and security professionals to leverage NixOS for improved security, featuring reproducible configurations…</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="39" data-categories="bml4b3MlMkNsaW51eCUyQ2N5YmVyc2VjdXJpdHklMkNpbmZyYXN0cnVjdHVyZSUyQ3N5c3RlbS1oYXJkZW5pbmc=" data-listing-date-sort="1747256400000" data-listing-file-modified-sort="1751399121429" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3487">
+<a href="./academy/courses/nixos-cybersecurity/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+NixOS for Cybersecurity
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('bml4b3M='); return false;">nixos</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bGludXg='); return false;">linux</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y3liZXJzZWN1cml0eQ=='); return false;">cybersecurity</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('aW5mcmFzdHJ1Y3R1cmU='); return false;">infrastructure</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c3lzdGVtLWhhcmRlbmluZw=='); return false;">system-hardening</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>A comprehensive course on using NixOS to build secure, reproducible environments for cybersecurity operations.</p>
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Alin Mechenici
+</div>
+<div class="listing-date">
+May 15, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="40" data-categories="b3Blbi1zb3VyY2UlMkNnaXQlMkNjb2xsYWJvcmF0aW9u" data-listing-file-modified-sort="1751445575295" data-listing-reading-time-sort="8" data-listing-word-count-sort="1411">
+<a href="./academy/trainings/open-source-contribution/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/placeholder.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Open Source Contribution Workshop
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('b3Blbi1zb3VyY2U='); return false;">open-source</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Z2l0'); return false;">git</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y29sbGFib3JhdGlvbg=='); return false;">collaboration</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Intensive 2-day hands-on workshop for developers to learn practical workflows, tools, and best practices for effective collaboration in open source projects, including Git…</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="41" data-categories="b3Blbi1zb3VyY2UlMkNnaXQlMkNjb2xsYWJvcmF0aW9uJTJDZGV2ZWxvcG1lbnQ=" data-listing-file-modified-sort="1751443346632" data-listing-reading-time-sort="4" data-listing-word-count-sort="675">
+<a href="./academy/courses/open-source-development/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Open Source Development
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('b3Blbi1zb3VyY2U='); return false;">open-source</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Z2l0'); return false;">git</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y29sbGFib3JhdGlvbg=='); return false;">collaboration</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZGV2ZWxvcG1lbnQ='); return false;">development</div>
+
+</div>
+<div class="card-text listing-description delink">
+Master the skills needed to contribute effectively to open source projects
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="42" data-listing-file-modified-sort="1751382276719" data-listing-reading-time-sort="4" data-listing-word-count-sort="795">
+<a href="./academy/courses/open-source-development/syllabus.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Open Source Development Course Syllabus
+</h5>
+<div class="card-text listing-description delink">
+<strong>Course Title:</strong> Open Source Development<br>
+<strong>Duration:</strong> 8 Weeks<br>
+<strong>Level:</strong> Intermediate<br>
+<strong>Next Start Date:</strong> November 1st, 2025<br>
+<strong>Format Options:</strong> Instructor-Led Online, Self-Paced, In-Person…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="43" data-categories="c2VjdXJpdHklMkNvcGVyYXRpbmctc3lzdGVtcyUyQ3VuaXglMkNzeXN0ZW0tYWRtaW5pc3RyYXRpb24=" data-listing-file-modified-sort="1751448219043" data-listing-reading-time-sort="9" data-listing-word-count-sort="1716">
+<a href="./academy/microlearning/openbsd/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/placeholder.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+OpenBSD Security
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('c2VjdXJpdHk='); return false;">security</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('b3BlcmF0aW5nLXN5c3RlbXM='); return false;">operating-systems</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('dW5peA=='); return false;">unix</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c3lzdGVtLWFkbWluaXN0cmF0aW9u'); return false;">system-administration</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Explore OpenBSD, a Unix-like operating system renowned for its security-first approach, proactive security measures, and focus on code correctness and documentation.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="44" data-categories="cHJvZHVjdGl2aXR5JTJDb3JnYW5pemF0aW9uJTJDbm90ZS10YWtpbmclMkNlbWFjcw==" data-listing-file-modified-sort="1751448018370" data-listing-reading-time-sort="9" data-listing-word-count-sort="1767">
+<a href="./academy/microlearning/org-mode/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/placeholder.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Org-mode Fundamentals
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('cHJvZHVjdGl2aXR5'); return false;">productivity</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('b3JnYW5pemF0aW9u'); return false;">organization</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bm90ZS10YWtpbmc='); return false;">note-taking</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZW1hY3M='); return false;">emacs</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Learn the basics of Org-mode, a powerful plain text system for notes, planning, and project management within Emacs, featuring outlines, todo lists, scheduling, and much…</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="45" data-categories="Y3liZXJzZWN1cml0eSUyQ25ldHdvcmstc2VjdXJpdHklMkNwZW5ldHJhdGlvbi10ZXN0aW5nJTJDY3J5cHRvZ3JhcGh5JTJDaW5jaWRlbnQtcmVzcG9uc2U=" data-listing-file-modified-sort="1751382211869" data-listing-reading-time-sort="4" data-listing-word-count-sort="645">
+<a href="./academy/courses/practical-cybersecurity/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Practical Cybersecurity
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y3liZXJzZWN1cml0eQ=='); return false;">cybersecurity</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bmV0d29yay1zZWN1cml0eQ=='); return false;">network-security</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cGVuZXRyYXRpb24tdGVzdGluZw=='); return false;">penetration-testing</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y3J5cHRvZ3JhcGh5'); return false;">cryptography</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('aW5jaWRlbnQtcmVzcG9uc2U='); return false;">incident-response</div>
+
+</div>
+<div class="card-text listing-description delink">
+Develop hands-on skills to protect systems and data in the digital age
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="46" data-listing-file-modified-sort="1751380219132" data-listing-reading-time-sort="5" data-listing-word-count-sort="940">
+<a href="./academy/courses/practical-cybersecurity/syllabus.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Practical Cybersecurity Course Syllabus
+</h5>
+<div class="card-text listing-description delink">
+<strong>Course Title:</strong> Practical Cybersecurity<br>
+<strong>Duration:</strong> 12 Weeks<br>
+<strong>Level:</strong> All Levels (Beginner to Advanced)<br>
+<strong>Next Start Date:</strong> October 15th, 2025<br>
+<strong>Format Options:</strong> Instructor-Led Online…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="47" data-categories="c2VjdXJpdHklMkNvcGVyYXRpbmctc3lzdGVtcyUyQ3ZpcnR1YWxpemF0aW9uJTJDcHJpdmFjeQ==" data-listing-file-modified-sort="1751448271387" data-listing-reading-time-sort="9" data-listing-word-count-sort="1750">
+<a href="./academy/microlearning/qubesos/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/placeholder.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+QubesOS Security Model
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('c2VjdXJpdHk='); return false;">security</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('b3BlcmF0aW5nLXN5c3RlbXM='); return false;">operating-systems</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('dmlydHVhbGl6YXRpb24='); return false;">virtualization</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cHJpdmFjeQ=='); return false;">privacy</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Explore QubesOS, a security-focused operating system that uses virtualization to provide strong isolation between different activities and security domains on your computer.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="48" data-categories="c3ByZWFkc2hlZXRzJTJDdGVybWluYWwlMkNkYXRhLWFuYWx5c2lzJTJDcHJvZHVjdGl2aXR5" data-listing-file-modified-sort="1751446526080" data-listing-reading-time-sort="8" data-listing-word-count-sort="1409">
+<a href="./academy/microlearning/sc-im/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/placeholder.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+SC-IM Spreadsheets in Terminal
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('c3ByZWFkc2hlZXRz'); return false;">spreadsheets</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('dGVybWluYWw='); return false;">terminal</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YS1hbmFseXNpcw=='); return false;">data-analysis</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cHJvZHVjdGl2aXR5'); return false;">productivity</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Learn SC-IM, a powerful spreadsheet program that runs in the terminal, offering a lightweight alternative to traditional spreadsheet applications.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="49" data-listing-file-modified-sort="1751381090937" data-listing-reading-time-sort="5" data-listing-word-count-sort="945">
+<a href="./academy/courses/human-firewall-security-awareness/resources.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Security Awareness Resources
+</h5>
+<div class="card-text listing-description delink">
+This page contains additional resources, references, and tools to support your learning journey in security awareness and program development.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="50" data-categories="c2VjdXJpdHktYXdhcmVuZXNzJTJDc29jaWFsLWVuZ2luZWVyaW5nJTJDc2VjdXJpdHktY3VsdHVyZSUyQ3BoaXNoaW5nLXByZXZlbnRpb24=" data-listing-file-modified-sort="1751445587856" data-listing-reading-time-sort="8" data-listing-word-count-sort="1469">
+<a href="./academy/trainings/security-awareness-teams/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/placeholder.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Security Awareness for Teams Training
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('c2VjdXJpdHktYXdhcmVuZXNz'); return false;">security-awareness</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c29jaWFsLWVuZ2luZWVyaW5n'); return false;">social-engineering</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c2VjdXJpdHktY3VsdHVyZQ=='); return false;">security-culture</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cGhpc2hpbmctcHJldmVudGlvbg=='); return false;">phishing-prevention</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Intensive 1-day workshop that transforms team members into active defenders of your organization’s security, focusing on practical security awareness, threat recognition…</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="51" data-listing-date-sort="1759611600000" data-listing-file-modified-sort="1751442879108" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="629">
+<a href="./academy/events/pages/space-hackathon.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/space-hackathon.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Space Hackathon
+</h5>
+<div class="card-text listing-description delink">
+Join the largest annual global hackathon on October 5-6, 2025.
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Oct 5, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="52" data-listing-date-sort="1760043600000" data-listing-file-modified-sort="1751453037472" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="773">
+<a href="./academy/programs/hackathons/space-hackathon.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/logo/spaceappschallenge.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Space Hackathon
+</h5>
+<div class="card-text listing-description delink">
+The Space Hackathon is a three-day event focusing on developing innovative solutions for space exploration, satellite technology, and Earth observation. Participants will…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Oct 10, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="53" data-listing-file-modified-sort="1751457290383" data-listing-reading-time-sort="6" data-listing-word-count-sort="1171">
+<a href="./academy/programs/hackathons/spaceapps/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/sac.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+SpaceApps Challenge
+</h5>
+<div class="card-text listing-description delink">
+<p>The SpaceApps Challenge is our premier space-focused hackathon where participants develop innovative solutions for space exploration, satellite technology, and Earth…</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="54" data-listing-date-sort="1759525200000" data-listing-file-modified-sort="1751457200691" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1347">
+<a href="./academy/programs/hackathons/spaceapps/challenge-2025.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/sac2025.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+SpaceApps Challenge 2025
+</h5>
+<div class="card-text listing-description delink">
+The world's largest global hackathon, engaging thousands of citizens each year across the globe to use NASA's open data to build innovative solutions to challenges we face…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Oct 4, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="55" data-listing-file-modified-sort="1751453021274" data-listing-reading-time-sort="11" data-listing-word-count-sort="2183">
+<a href="./academy/programs/hackathons/spaceapps/archive.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/logo/spaceappschallenge.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+SpaceApps Challenge Archive
+</h5>
+<div class="card-text listing-description delink">
+<p>A comprehensive archive of SpaceApps Challenge events organized across multiple locations since 2015, including winning projects and key achievements.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="56" data-categories="c3VtbWVyLXNjaG9vbCUyQ2ludGVuc2l2ZS1sZWFybmluZyUyQ3RlY2hub2xvZ3ktZWR1Y2F0aW9u" data-listing-file-modified-sort="1751460346263" data-listing-reading-time-sort="19" data-listing-word-count-sort="3753">
+<a href="./academy/programs/summer-school/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/placeholder.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Summer School
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('c3VtbWVyLXNjaG9vbA=='); return false;">summer-school</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('aW50ZW5zaXZlLWxlYXJuaW5n'); return false;">intensive-learning</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('dGVjaG5vbG9neS1lZHVjYXRpb24='); return false;">technology-education</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Join our intensive summer school programs to gain comprehensive knowledge and hands-on experience in fields like cybersecurity, AI, cloud computing, and more.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="57" data-listing-date-sort="1753995600000" data-listing-file-modified-sort="1751372133702" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="525">
+<a href="./academy/events/pages/summer-school-2025.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/summer-school.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Summer School 2025
+</h5>
+<div class="card-text listing-description delink">
+The Summer School 2025 is an intensive two-week program focused on cutting-edge technologies and practical skills development. Perfect for students and professionals looking…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Aug 1, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="58" data-listing-date-sort="1752958800000" data-listing-file-modified-sort="1751460370937" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="528">
+<a href="./academy/programs/summer-school/summer-school-2025.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/summer-school.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Summer School 2025
+</h5>
+<div class="card-text listing-description delink">
+The Summer School 2025 is an intensive two-week program focused on cutting-edge technologies and practical skills development. Perfect for students and professionals looking…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Jul 20, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="59" data-listing-date-sort="1752958800000" data-listing-file-modified-sort="1751461191356" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2680">
+<a href="./academy/programs/summer-school/summer-school-2025/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/summer-school.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Summer School 2025
+</h5>
+<div class="card-text listing-description delink">
+An intensive month-long program focusing on cybersecurity, cloud computing, and artificial intelligence, with specialized tracks for each area.
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Jul 20, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="60" data-categories="ZmlsZS1zeW5jaHJvbml6YXRpb24lMkNvcGVuLXNvdXJjZSUyQ3NlY3VyaXR5JTJDcHJvZHVjdGl2aXR5" data-listing-file-modified-sort="1751447868670" data-listing-reading-time-sort="9" data-listing-word-count-sort="1688">
+<a href="./academy/microlearning/syncthing/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/placeholder.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Syncthing Essentials
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZmlsZS1zeW5jaHJvbml6YXRpb24='); return false;">file-synchronization</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('b3Blbi1zb3VyY2U='); return false;">open-source</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c2VjdXJpdHk='); return false;">security</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cHJvZHVjdGl2aXR5'); return false;">productivity</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Learn how to set up and use Syncthing, an open-source, secure, and decentralized file synchronization tool to keep your files in sync across all your devices.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="61" data-categories="dGVybWluYWwlMkNwcm9kdWN0aXZpdHklMkN3b3JrZmxvdyUyQ3Rvb2xz" data-listing-file-modified-sort="1751446601617" data-listing-reading-time-sort="8" data-listing-word-count-sort="1440">
+<a href="./academy/microlearning/tmux/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/placeholder.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Tmux Terminal Multiplexer
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('dGVybWluYWw='); return false;">terminal</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cHJvZHVjdGl2aXR5'); return false;">productivity</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('d29ya2Zsb3c='); return false;">workflow</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('dG9vbHM='); return false;">tools</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Learn to use Tmux, a powerful terminal multiplexer that allows you to manage multiple terminal sessions within a single window, enhancing productivity and workflow.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="62" data-categories="Y3liZXJzZWN1cml0eSUyQ29wZW4tc291cmNlJTJDbGludXglMkNkYXRhLXByaXZhY3klMkNzZWN1cml0eS1hd2FyZW5lc3M=" data-listing-file-modified-sort="1751461772276" data-listing-reading-time-sort="18" data-listing-word-count-sort="3408">
+<a href="./academy/trainings.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/placeholder.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Trainings
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y3liZXJzZWN1cml0eQ=='); return false;">cybersecurity</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('b3Blbi1zb3VyY2U='); return false;">open-source</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bGludXg='); return false;">linux</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YS1wcml2YWN5'); return false;">data-privacy</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c2VjdXJpdHktYXdhcmVuZXNz'); return false;">security-awareness</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Fast-track your technical skills with our intensive 1-2 day training workshops designed for busy professionals who need practical, hands-on learning in a condensed timeframe.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="63" data-categories="ZG9jdW1lbnQtcHJlcGFyYXRpb24lMkN0eXBlc2V0dGluZyUyQ2FjYWRlbWljJTJDb3Blbi1zb3VyY2U=" data-listing-file-modified-sort="1751448067850" data-listing-reading-time-sort="9" data-listing-word-count-sort="1749">
+<a href="./academy/microlearning/typst/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/placeholder.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Typst Markup Language
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZG9jdW1lbnQtcHJlcGFyYXRpb24='); return false;">document-preparation</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('dHlwZXNldHRpbmc='); return false;">typesetting</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YWNhZGVtaWM='); return false;">academic</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('b3Blbi1zb3VyY2U='); return false;">open-source</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Learn the basics of Typst, a modern markup-based typesetting system that offers a simpler syntax and faster compilation than LaTeX while producing beautiful documents.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="64" data-categories="dW5peCUyQ2xpbnV4JTJDY29tbWFuZC1saW5lJTJDc2hlbGw=" data-listing-file-modified-sort="1751446452495" data-listing-reading-time-sort="8" data-listing-word-count-sort="1559">
+<a href="./academy/microlearning/cli-intro/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/placeholder.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Unix Command Line Introduction
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('dW5peA=='); return false;">unix</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bGludXg='); return false;">linux</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y29tbWFuZC1saW5l'); return false;">command-line</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c2hlbGw='); return false;">shell</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>A practical introduction to the Unix command line interface for beginners, focused on essential commands and navigation.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="65" data-listing-file-modified-sort="1751380597339" data-listing-reading-time-sort="5" data-listing-word-count-sort="812">
+<a href="./academy/courses/unix-linux-administration/resources.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Unix/Linux Administration Resources
+</h5>
+<div class="card-text listing-description delink">
+This page contains additional resources, references, and tools to support your learning journey in Unix/Linux systems administration.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="66" data-categories="bGludXglMkN1bml4JTJDc3lzdGVtLWFkbWluaXN0cmF0aW9uJTJDc2VydmVyLW1hbmFnZW1lbnQlMkNhdXRvbWF0aW9u" data-listing-file-modified-sort="1751382234299" data-listing-reading-time-sort="4" data-listing-word-count-sort="730">
+<a href="./academy/courses/unix-linux-administration/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Unix/Linux Systems Administration
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('bGludXg='); return false;">linux</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('dW5peA=='); return false;">unix</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c3lzdGVtLWFkbWluaXN0cmF0aW9u'); return false;">system-administration</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c2VydmVyLW1hbmFnZW1lbnQ='); return false;">server-management</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YXV0b21hdGlvbg=='); return false;">automation</div>
+
+</div>
+<div class="card-text listing-description delink">
+Master the essential skills for managing Unix and Linux environments
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="67" data-listing-file-modified-sort="1751380419377" data-listing-reading-time-sort="5" data-listing-word-count-sort="988">
+<a href="./academy/courses/unix-linux-administration/syllabus.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Unix/Linux Systems Administration Course Syllabus
+</h5>
+<div class="card-text listing-description delink">
+<strong>Course Title:</strong> Unix/Linux Systems Administration<br>
+<strong>Duration:</strong> 10 Weeks<br>
+<strong>Level:</strong> Intermediate to Advanced<br>
+<strong>Next Start Date:</strong> September 10th, 2025<br>
+<strong>Format Options:</strong> Instructor-Led…
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="68" data-categories="Y3liZXJzZWN1cml0eSUyQ2Nsb3VkJTJDYWktbWwlMkNkZXZlbG9wbWVudCUyQ2J1c2luZXNz" data-listing-file-modified-sort="1751444128746" data-listing-reading-time-sort="15" data-listing-word-count-sort="2970">
+<a href="./academy/webinars.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img data-src="assets/svg/presentation.svg" alt="Online Webinars" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Webinars
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y3liZXJzZWN1cml0eQ=='); return false;">cybersecurity</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y2xvdWQ='); return false;">cloud</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YWktbWw='); return false;">ai-ml</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZGV2ZWxvcG1lbnQ='); return false;">development</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YnVzaW5lc3M='); return false;">business</div>
+
+</div>
+<div class="card-text listing-description delink">
+Expert knowledge delivered directly to your screen
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="69" data-listing-file-modified-sort="1751443337039" data-listing-reading-time-sort="2" data-listing-word-count-sort="239">
+<a href="./academy/webinars/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img data-src="assets/svg/presentation.svg" alt="Webinars" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Webinars
+</h5>
+<div class="card-text listing-description delink">
+Welcome to our webinars listing page. Here you can browse all upcoming and past webinars hosted by chen.ist. Use the filters to find webinars by category, date, or presenter.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="70" data-listing-file-modified-sort="1751382861708" data-listing-reading-time-sort="11" data-listing-word-count-sort="2009">
+<a href="./academy/courses/cyberhygiene-essentials/modules/week1.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Week 1: Digital Threat Landscape
+</h5>
+<div class="card-text listing-description delink">
+By the end of this module, you will be able to:
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="71" data-listing-file-modified-sort="1751380266629" data-listing-reading-time-sort="6" data-listing-word-count-sort="1157">
+<a href="./academy/courses/practical-cybersecurity/modules/week1.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Week 1: Introduction to Cybersecurity
+</h5>
+<div class="card-text listing-description delink">
+By the end of this module, you will be able to:
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="72" data-listing-file-modified-sort="1751382298284" data-listing-reading-time-sort="5" data-listing-word-count-sort="916">
+<a href="./academy/courses/open-source-development/modules/week1.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Week 1: Introduction to Open Source
+</h5>
+<div class="card-text listing-description delink">
+By the end of this module, you will be able to:
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="73" data-listing-file-modified-sort="1751380790446" data-listing-reading-time-sort="9" data-listing-word-count-sort="1615">
+<a href="./academy/courses/data-protection-privacy/modules/week1.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Week 1: Privacy Fundamentals and Legal Frameworks
+</h5>
+<div class="card-text listing-description delink">
+By the end of this module, you will be able to:
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="74" data-listing-file-modified-sort="1751381026578" data-listing-reading-time-sort="8" data-listing-word-count-sort="1566">
+<a href="./academy/courses/human-firewall-security-awareness/modules/week1.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Week 1: Security Awareness Fundamentals
+</h5>
+<div class="card-text listing-description delink">
+By the end of this module, you will be able to:
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="75" data-listing-file-modified-sort="1751380546912" data-listing-reading-time-sort="8" data-listing-word-count-sort="1558">
+<a href="./academy/courses/unix-linux-administration/modules/week1.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Week 1: Unix/Linux Fundamentals
+</h5>
+<div class="card-text listing-description delink">
+By the end of this module, you will be able to:
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="76" data-listing-date-sort="1749502800000" data-listing-file-modified-sort="1751439660662" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="695">
+<a href="./academy/webinars/pages/zero-trust-security.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./assets/images/cyber-security.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Zero Trust Security Architecture
+</h5>
+<div class="card-text listing-description delink">
+In this comprehensive webinar, we’ll explore the principles and implementation strategies of Zero Trust security architecture. As traditional perimeter-based security models…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Jun 10, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
+<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -871,7 +2690,7 @@ If you are not redirected automatically, follow this link to the projects page.
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/chen\.ist");
+        var filterRegex = new RegExp("https:\/\/github\/com\/chen\.ist");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1219,54 +3038,521 @@ If you are not redirected automatically, follow this link to the projects page.
 </div>
   </div>
 </footer>
-<footer class="footer mt-5 py-4">
+<footer class="footer mt-5 py-3 cybersecurity-footer">
     <div class="container">
-        <div class="row">
-            <div class="col-md-4 mb-3">
-                <h5>About chen.ist</h5>
-                <p class="text-muted">
-                    Innovative technology solutions for the modern world.
-                    Specializing in cybersecurity, cloud architecture, and
-                    digital transformation.
-                </p>
-            </div>
-            <div class="col-md-4 mb-3">
-                <h5>Quick Links</h5>
-                <ul class="list-unstyled">
-                    <li><a href="./services.html">Services</a></li>
-                    <li><a href="./academy.html">Academy</a></li>
-                    <li><a href="./blog.html">Blog</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4 mb-3">
-                <h5>Connect</h5>
-                <div class="d-flex gap-3 mb-2">
-                    <a href="https://github.com/chenist" aria-label="GitHub"><i class="bi bi-github fs-4"></i></a>
-                    <a href="https://linkedin.com/in/chenistsec" aria-label="LinkedIn"><i class="bi bi-linkedin fs-4"></i></a>
-                    <a href="https://twitter.com/chenistsec" aria-label="Twitter"><i class="bi bi-twitter-x fs-4"></i></a>
+        <div class="row mb-3">
+            <!-- Company Logo and Brief -->
+            <div class="col-md-4 mb-2">
+                <div class="d-flex align-items-center">
+                    <h4 class="footer-logo mb-0 me-2">chen<span class="text-accent">.ist</span></h4>
+                    <div class="secure-badge ms-2">
+                        <i class="bi bi-shield-lock-fill"></i> Secure
+                    </div>
                 </div>
-                <p class="text-muted small">
-                    Email: <a href="mailto:office@chen.ist">office@chen.ist</a>
+                <p class="footer-description small mt-2 mb-0">
+                    Enterprise cybersecurity solutions with zero-trust implementation and continuous monitoring.
                 </p>
+            </div>
+            
+            <!-- Tabs Navigation -->
+            <div class="col-md-8 mb-2">
+                <div class="footer-tabs">
+                    <ul class="nav nav-tabs footer-nav-tabs" id="footerTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="solutions-tab" data-bs-toggle="tab" data-bs-target="#solutions" type="button" role="tab">
+                                <i class="bi bi-shield-fill"></i> Solutions
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="academy-tab" data-bs-toggle="tab" data-bs-target="#academy" type="button" role="tab">
+                                <i class="bi bi-mortarboard-fill"></i> Academy
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab">
+                                <i class="bi bi-envelope-fill"></i> Contact
+                            </button>
+                        </li>
+                    </ul>
+                    
+                    <!-- Tab Content -->
+                    <div class="tab-content pt-2" id="footerTabContent">
+                        <!-- Solutions Tab -->
+                        <div class="tab-pane fade show active" id="solutions" role="tabpanel">
+                            <div class="row">
+                                <div class="col-6 col-md-3">
+                                    <a href="./services.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Security Services
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="./services.html#consulting" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Consulting
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="./services.html#compliance" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Compliance
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="./services.html#incident-response" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Incident Response
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Academy Tab -->
+                        <div class="tab-pane fade" id="academy" role="tabpanel">
+                            <div class="row">
+                                <div class="col-6 col-md-3">
+                                    <a href="./academy/courses.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Courses
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="./academy/events.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Events
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="./academy/webinars.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Webinars
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="./academy/computerclub.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Computer Club
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3 mt-2">
+                                    <a href="./academy/programs" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Explore Academy Programs
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Contact Tab -->
+                        <div class="tab-pane fade" id="contact" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-1">
+                                        <i class="bi bi-envelope-fill contact-icon"></i>
+                                        <a href="mailto:office@chen.ist" class="footer-link">office@chen.ist</a>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-shield-fill-check contact-icon"></i>
+                                        <span class="small">SOC Available 24/7</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-1">
+                                        <i class="bi bi-geo-alt-fill contact-icon"></i>
+                                        <span class="small">Stockholm | Craiova | Bucharest</span>
+                                    </div>
+                                    <div class="social-icons">
+                                        <a href="https://github.com/chenist" class="social-icon" aria-label="GitHub">
+                                            <i class="bi bi-github"></i>
+                                        </a>
+                                        <a href="https://linkedin.com/in/chenistsec" class="social-icon" aria-label="LinkedIn">
+                                            <i class="bi bi-linkedin"></i>
+                                        </a>
+                                        <a href="https://twitter.com/chenistsec" class="social-icon" aria-label="Twitter">
+                                            <i class="bi bi-twitter-x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <hr>
-        <div class="row">
+        
+        <div class="footer-divider">
+            <div class="cyber-line"></div>
+        </div>
+        
+        <div class="row footer-bottom py-1">
             <div class="col-md-6">
-                <p class="small text-muted">
-                    © 2025 chen.ist. All rights reserved.
-                </p>
+                <div class="d-flex align-items-center">
+                    <div class="security-pulse"></div>
+                    <p class="mb-0 ms-2 copyright">
+                        © 2025 chen.ist <span class="d-none d-md-inline">| Secure. Vigilant. Resilient.</span>
+                    </p>
+                </div>
             </div>
             <div class="col-md-6 text-md-end">
-                <p class="small text-muted">
-                    <a href="./privacy.html">Privacy Policy</a> |
-                    <a href="./terms.html">Terms of Service</a>
-                </p>
+                <div class="footer-bottom-links">
+                    <a href="./privacy.html">Privacy</a>
+                    <span class="separator">|</span>
+                    <a href="./terms.html">Terms</a>
+                    <span class="separator">|</span>
+                    <a href="./contact.html" class="btn-report-incident">
+                        <i class="bi bi-exclamation-triangle-fill"></i> Report Incident
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </footer>
+
+<style>
+.cybersecurity-footer {
+    background-color: #0f1923;
+    color: #e6e6e6;
+    border-top: 3px solid #18bc9c;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+/* Change accent colors for academy section */
+.academy-section .cybersecurity-footer {
+    border-top-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer::before {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #F5A623 20%, 
+        #F5A623 40%, 
+        transparent 50%,
+        transparent 60%,
+        #F5A623 80%,
+        transparent 100%
+    );
+}
+
+.academy-section .cybersecurity-footer .text-accent,
+.academy-section .cybersecurity-footer .contact-icon,
+.academy-section .cybersecurity-footer .footer-heading::after,
+.academy-section .cybersecurity-footer .social-icon:hover,
+.academy-section .cybersecurity-footer .footer-link:hover,
+.academy-section .cybersecurity-footer .contact-item a:hover,
+.academy-section .cybersecurity-footer .footer-bottom-links a:hover,
+.academy-section .cybersecurity-footer .nav-link.active {
+    color: #F5A623 !important;
+}
+
+.academy-section .cybersecurity-footer .secure-badge {
+    background-color: rgba(245, 166, 35, 0.15);
+    color: #F5A623;
+    border-left-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .social-icon:hover {
+    background-color: #F5A623;
+    color: #0f1923 !important;
+}
+
+.academy-section .cybersecurity-footer .cyber-line {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(245, 166, 35, 0.3) 10%, 
+        rgba(245, 166, 35, 0.5) 50%, 
+        rgba(245, 166, 35, 0.3) 90%, 
+        transparent 100%
+    );
+}
+
+.academy-section .cybersecurity-footer .cyber-line::before,
+.academy-section .cybersecurity-footer .cyber-line::after {
+    background-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .security-pulse {
+    background-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .security-pulse::before {
+    background-color: rgba(245, 166, 35, 0.3);
+}
+
+.cybersecurity-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #18bc9c 20%, 
+        #18bc9c 40%, 
+        transparent 50%,
+        transparent 60%,
+        #18bc9c 80%,
+        transparent 100%
+    );
+    opacity: 0.4;
+}
+
+.cybersecurity-footer .footer-brand {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.cybersecurity-footer .footer-logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Source Code Pro', monospace;
+    color: white;
+}
+
+.cybersecurity-footer .text-accent {
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .secure-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(24, 188, 156, 0.15);
+    color: #18bc9c;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-left: 2px solid #18bc9c;
+}
+
+.cybersecurity-footer .footer-description {
+    color: #9ba6b2;
+    line-height: 1.4;
+}
+
+.cybersecurity-footer .footer-tabs {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.cybersecurity-footer .footer-nav-tabs {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cybersecurity-footer .nav-tabs .nav-link {
+    color: #9ba6b2;
+    border: none;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    background-color: transparent;
+}
+
+.cybersecurity-footer .nav-tabs .nav-link:hover {
+    color: #e6e6e6;
+    border: none;
+}
+
+.cybersecurity-footer .nav-tabs .nav-link.active {
+    color: #18bc9c;
+    background-color: rgba(24, 188, 156, 0.1);
+    border: none;
+}
+
+.cybersecurity-footer .tab-content {
+    min-height: 60px;
+}
+
+.cybersecurity-footer .footer-link {
+    color: #9ba6b2;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.cybersecurity-footer .footer-link:hover {
+    color: #18bc9c;
+    transform: translateX(3px);
+}
+
+.cybersecurity-footer .icon-small {
+    font-size: 0.75rem;
+    margin-right: 0.25rem;
+}
+
+.cybersecurity-footer .contact-icon {
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .social-icons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.cybersecurity-footer .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e6e6e6;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.cybersecurity-footer .social-icon:hover {
+    background-color: #18bc9c;
+    color: #0f1923;
+    transform: translateY(-2px);
+}
+
+.cybersecurity-footer .footer-divider {
+    position: relative;
+    height: 12px;
+    margin: 0.5rem 0;
+}
+
+.cybersecurity-footer .cyber-line {
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(24, 188, 156, 0.3) 10%, 
+        rgba(24, 188, 156, 0.5) 50%, 
+        rgba(24, 188, 156, 0.3) 90%, 
+        transparent 100%
+    );
+    position: relative;
+}
+
+.cybersecurity-footer .cyber-line::before,
+.cybersecurity-footer .cyber-line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 8px;
+    height: 1px;
+    background-color: #18bc9c;
+    animation: blink 2s infinite;
+}
+
+.cybersecurity-footer .cyber-line::before {
+    left: 25%;
+}
+
+.cybersecurity-footer .cyber-line::after {
+    right: 25%;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
+
+.cybersecurity-footer .security-pulse {
+    width: 8px;
+    height: 8px;
+    background-color: #18bc9c;
+    border-radius: 50%;
+    position: relative;
+}
+
+.cybersecurity-footer .security-pulse::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 50%;
+    background-color: rgba(24, 188, 156, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    70% { transform: scale(1.5); opacity: 0; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+.cybersecurity-footer .copyright {
+    color: #9ba6b2;
+    font-size: 0.8rem;
+}
+
+.cybersecurity-footer .footer-bottom-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.cybersecurity-footer .footer-bottom-links a {
+    color: #9ba6b2;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.2s ease;
+}
+
+.cybersecurity-footer .footer-bottom-links a:hover {
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .separator {
+    margin: 0 0.5rem;
+    color: #4a5568;
+    font-size: 0.8rem;
+}
+
+.cybersecurity-footer .btn-report-incident {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(220, 53, 69, 0.15);
+    color: #dc3545 !important;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease !important;
+}
+
+.cybersecurity-footer .btn-report-incident:hover {
+    background-color: rgba(220, 53, 69, 0.3);
+}
+
+.cybersecurity-footer .btn-report-incident i {
+    margin-right: 0.3rem;
+}
+
+@media (max-width: 767px) {
+    .cybersecurity-footer .footer-bottom-links {
+        justify-content: flex-start;
+        margin-top: 0.5rem;
+    }
+    
+    .cybersecurity-footer .btn-report-incident {
+        margin-top: 0.5rem;
+        margin-left: 0;
+    }
+    
+    .cybersecurity-footer .separator:nth-of-type(2) {
+        display: none;
+    }
+}
+</style>
+
+<script>
+// Initialize Bootstrap tabs if not already initialized
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof bootstrap !== 'undefined') {
+        var tabElList = [].slice.call(document.querySelectorAll('#footerTabs .nav-link'));
+        tabElList.map(function(tabEl) {
+            return new bootstrap.Tab(tabEl);
+        });
+    }
+});
+</script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     // Function to toggle dark/light mode
