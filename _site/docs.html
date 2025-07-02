@@ -124,6 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <link rel="stylesheet" href="scss/styles.css">
 <link rel="stylesheet" href="scss/academy.scss">
+<link rel="stylesheet" href="scss/custom-hero.css">
 <meta property="og:title" content="Documentation – chen.ist">
 <meta property="og:site_name" content="chen.ist">
 <meta name="twitter:title" content="Documentation – chen.ist">
@@ -329,6 +330,18 @@ document.addEventListener('DOMContentLoaded', function() {
         <li>
     <a class="dropdown-item" href="./academy/courses.html">
  <span class="dropdown-text">Courses</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./academy/trainings.html">
+ <span class="dropdown-text">Trainings</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./academy/microlearning.html">
+ <span class="dropdown-text">Microlearning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./academy/programs/index.html">
+ <span class="dropdown-text">Programs</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./academy/events.html">
@@ -653,7 +666,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/github\/com\/chen\.ist");
+        var filterRegex = new RegExp("https:\/\/chen\.ist");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1087,6 +1100,11 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <div class="col-6 col-md-3">
                                     <a href="./academy/computerclub.html" class="footer-link">
                                         <i class="bi bi-chevron-right icon-small"></i> Computer Club
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3 mt-2">
+                                    <a href="./academy/programs" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Explore Academy Programs
                                     </a>
                                 </div>
                             </div>

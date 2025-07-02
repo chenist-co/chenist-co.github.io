@@ -1,0 +1,215 @@
+---
+title: "Educational Programs"
+subtitle: "Immersive learning experiences for technology enthusiasts"
+description: "Explore our educational programs including hackathons, summer schools, and specialized training events designed for hands-on learning and skill development."
+image: /assets/images/placeholder.jpg
+from: markdown+raw_html
+categories:
+  - education
+  - hackathons
+  - summer-school
+format: 
+  html:
+    css: /scss/academy.scss
+    classes: [academy-section]
+---
+
+```{=html}
+<div class="container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Programs</li>
+    </ol>
+  </nav>
+</div>
+
+<div class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 text-center">
+        <h1>Educational Programs</h1>
+        <p class="lead">Immersive learning experiences designed to build practical skills through hands-on challenges</p>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+## Intensive Learning Programs
+
+Our educational programs offer immersive, hands-on learning experiences that go beyond traditional courses and trainings. These programs are designed to provide intensive skill development, practical application of knowledge, and collaborative learning opportunities.
+
+### Program Types
+
+```{=html}
+<div class="row mt-5">
+  <div class="col-md-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h3 class="card-title">Hackathons</h3>
+        <p class="card-text">Intensive problem-solving events where participants collaborate to develop innovative solutions to real-world challenges in areas like cybersecurity, space technology, and AI ethics.</p>
+        <ul>
+          <li>Collaborative team environment</li>
+          <li>Expert mentorship throughout the event</li>
+          <li>Practical application of technical skills</li>
+          <li>Networking with industry professionals</li>
+        </ul>
+        <a href="/academy/programs/hackathons/" class="btn btn-primary mt-3">Explore Hackathons</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h3 class="card-title">Summer School</h3>
+        <p class="card-text">Comprehensive multi-week learning programs that combine lectures, workshops, and project work to provide in-depth knowledge in specialized technical domains.</p>
+        <ul>
+          <li>Structured curriculum with progressive learning</li>
+          <li>Blend of theoretical foundations and practical skills</li>
+          <li>Projects that demonstrate mastery of concepts</li>
+          <li>International faculty and diverse student body</li>
+        </ul>
+        <a href="/academy/programs/summer-school/" class="btn btn-primary mt-3">Discover Summer School</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h3 class="card-title">Computer Club</h3>
+        <p class="card-text">A community-driven technology club dedicated to promoting digital literacy, computer science education, and technological innovation for all ages.</p>
+        <ul>
+          <li>Regular meetups and workshops</li>
+          <li>Hands-on learning experiences</li>
+          <li>Special programs for youth and beginners</li>
+          <li>Open source and hardware hacking projects</li>
+        </ul>
+        <a href="/academy/programs/computerclub/" class="btn btn-primary mt-3">Join Computer Club</a>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+## Benefits of Our Programs
+
+```{=html}
+<div class="row mt-5">
+  <div class="col-md-4">
+    <div class="feature-card text-center">
+      <div class="feature-card-icon">
+        <i class="bi bi-people"></i>
+      </div>
+      <h3>Collaborative Learning</h3>
+      <p>Work alongside peers and industry experts to solve complex problems and develop teamwork skills essential for professional success.</p>
+    </div>
+  </div>
+  
+  <div class="col-md-4">
+    <div class="feature-card text-center">
+      <div class="feature-card-icon">
+        <i class="bi bi-lightning"></i>
+      </div>
+      <h3>Accelerated Skill Development</h3>
+      <p>Intensive, focused learning environments that rapidly build practical skills through hands-on application and expert guidance.</p>
+    </div>
+  </div>
+  
+  <div class="col-md-4">
+    <div class="feature-card text-center">
+      <div class="feature-card-icon">
+        <i class="bi bi-graph-up"></i>
+      </div>
+      <h3>Career Advancement</h3>
+      <p>Develop in-demand skills, build your professional network, and enhance your portfolio with real-world projects and achievements.</p>
+    </div>
+  </div>
+</div>
+```
+
+## Upcoming Programs
+
+```{=html}
+<div class="row mt-5">
+  <div class="col-md-12">
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Program</th>
+            <th>Type</th>
+            <th>Dates</th>
+            <th>Location</th>
+            <th>Registration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="/academy/programs/computerclub/">Computer Club Meetup</a></td>
+            <td>Regular Meetup</td>
+            <td>Monthly</td>
+            <td>Craiova & Online</td>
+            <td><span class="badge bg-success">Ongoing</span></td>
+          </tr>
+          <tr>
+            <td><a href="/academy/programs/hackathons/cybersecurity-hackathon/">Cybersecurity Hackathon</a></td>
+            <td>Hackathon</td>
+            <td>March 15-17, 2025</td>
+            <td>Online & On-campus</td>
+            <td><span class="badge bg-success">Open</span></td>
+          </tr>
+          <tr>
+            <td><a href="/academy/programs/hackathons/ai-ethics-hackathon/">AI Ethics Hackathon</a></td>
+            <td>Hackathon</td>
+            <td>May 10-12, 2026</td>
+            <td>Online</td>
+            <td><span class="badge bg-success">Open</span></td>
+          </tr>
+          <tr>
+            <td><a href="/academy/programs/summer-school/2025.html">Technology Summer School</a></td>
+            <td>Summer School</td>
+            <td>July 20 - August 20, 2025</td>
+            <td>Private, Craiova</td>
+            <td><span class="badge bg-warning">Coming Soon</span></td>
+          </tr>
+          <tr>
+            <td><a href="/academy/programs/summer-school/junior.html">Junior Summer School</a></td>
+            <td>Summer School</td>
+            <td>July 7-21, 2025</td>
+            <td>Private, Craiova</td>
+            <td><span class="badge bg-warning">Coming Soon</span></td>
+          </tr>
+          <tr>
+            <td><a href="/academy/programs/hackathons/space-hackathon/">SpaceApps Junior Challenge</a></td>
+            <td>Junior Hackathon</td>
+            <td>October 3-5, 2025</td>
+            <td>Craiova Art Museum</td>
+            <td><span class="badge bg-secondary">Coming Soon</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+```
+
+
+## Join Our Programs
+
+```{=html}
+<div class="row mt-5">
+  <div class="col-md-8 offset-md-2">
+    <div class="card bg-light">
+      <div class="card-body text-center">
+        <h3>Interested in our educational programs?</h3>
+        <p>Sign up to receive announcements about upcoming programs, early registration opportunities, and exclusive content to help you prepare.</p>
+        <a href="/academy/partnerships.html" class="btn btn-primary">Contact Us for More Information</a>
+      </div>
+    </div>
+  </div>
+</div>
+```

@@ -198,6 +198,7 @@ window.Quarto = {
 
 <link rel="stylesheet" href="../../scss/styles.css">
 <link rel="stylesheet" href="../../scss/academy.scss">
+<link rel="stylesheet" href="../../scss/custom-hero.css">
 <meta property="og:title" content="Guides &amp; Documentation – chen.ist">
 <meta property="og:description" content="Innovative technology &amp; education">
 <meta property="og:site_name" content="chen.ist">
@@ -407,6 +408,18 @@ window.Quarto = {
  <span class="dropdown-text">Courses</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="../../academy/trainings.html">
+ <span class="dropdown-text">Trainings</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../academy/microlearning.html">
+ <span class="dropdown-text">Microlearning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../academy/programs/index.html">
+ <span class="dropdown-text">Programs</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../../academy/events.html">
  <span class="dropdown-text">Events</span></a>
   </li>  
@@ -528,6 +541,14 @@ window.Quarto = {
 
 </header>
 
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="../../">Home</a></li>
+    <li class="breadcrumb-item"><a href="../../resources/">Resources</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Guides</li>
+  </ol>
+</nav>
 
 <div class="hero-section">
   <div class="container">
@@ -677,7 +698,7 @@ Reading Time
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-categories="c2VjdXJpdHklMkNpbXBsZW1lbnRhdGlvbiUyQ2Jlc3QtcHJhY3RpY2Vz" data-listing-date-sort="1740780000000" data-listing-file-modified-sort="1750927334042" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1279" data-listing-title-sort="Security Implementation Guide" data-listing-filename-sort="implementation-guide.qmd">
+<tr data-index="0" data-categories="c2VjdXJpdHklMkNpbXBsZW1lbnRhdGlvbiUyQ2Jlc3QtcHJhY3RpY2Vz" data-listing-date-sort="1740780000000" data-listing-file-modified-sort="1751372133587" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1279" data-listing-title-sort="Security Implementation Guide" data-listing-filename-sort="implementation-guide.qmd">
 <td>
 <a href="../../resources/guides/security/implementation-guide.html" class="title listing-title">Security Implementation Guide</a>
 </td>
@@ -696,7 +717,7 @@ Reading Time
 
 </tr>
 
-<tr data-index="1" data-categories="Y2xvdWQlMkNtaWdyYXRpb24lMkNpbmZyYXN0cnVjdHVyZQ==" data-listing-date-sort="1739570400000" data-listing-file-modified-sort="1750927334042" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1399" data-listing-title-sort="Cloud Migration Handbook" data-listing-filename-sort="migration-handbook.qmd">
+<tr data-index="1" data-categories="Y2xvdWQlMkNtaWdyYXRpb24lMkNpbmZyYXN0cnVjdHVyZQ==" data-listing-date-sort="1739570400000" data-listing-file-modified-sort="1751372133587" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1399" data-listing-title-sort="Cloud Migration Handbook" data-listing-filename-sort="migration-handbook.qmd">
 <td>
 <a href="../../resources/guides/cloud/migration-handbook.html" class="title listing-title">Cloud Migration Handbook</a>
 </td>
@@ -715,7 +736,7 @@ Reading Time
 
 </tr>
 
-<tr data-index="2" data-categories="YXBpJTJDZG9jdW1lbnRhdGlvbiUyQ2RldmVsb3BtZW50" data-listing-date-sort="1737324000000" data-listing-file-modified-sort="1750927334042" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2545" data-listing-title-sort="API Endpoints Guide" data-listing-filename-sort="endpoints.qmd">
+<tr data-index="2" data-categories="YXBpJTJDZG9jdW1lbnRhdGlvbiUyQ2RldmVsb3BtZW50" data-listing-date-sort="1737324000000" data-listing-file-modified-sort="1751372133587" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2545" data-listing-title-sort="API Endpoints Guide" data-listing-filename-sort="endpoints.qmd">
 <td>
 <a href="../../resources/guides/api/endpoints.html" class="title listing-title">API Endpoints Guide</a>
 </td>
@@ -823,7 +844,7 @@ Reading Time
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/github\/com\/chen\.ist");
+        var filterRegex = new RegExp("https:\/\/chen\.ist");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1257,6 +1278,11 @@ Reading Time
                                 <div class="col-6 col-md-3">
                                     <a href="../../academy/computerclub.html" class="footer-link">
                                         <i class="bi bi-chevron-right icon-small"></i> Computer Club
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3 mt-2">
+                                    <a href="../../academy/programs" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Explore Academy Programs
                                     </a>
                                 </div>
                             </div>

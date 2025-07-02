@@ -124,12 +124,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <link rel="stylesheet" href="../scss/styles.css">
 <link rel="stylesheet" href="../scss/academy.scss">
+<link rel="stylesheet" href="../scss/custom-hero.css">
 <meta property="og:title" content="Resources – chen.ist">
-<meta property="og:image" content="https://github/com/chen.ist/assets/images/cyber-security.jpg">
+<meta property="og:image" content="https://chen.ist/assets/images/cyber-security.jpg">
 <meta property="og:site_name" content="chen.ist">
 <meta property="og:image:alt" content="Zero Trust Security">
 <meta name="twitter:title" content="Resources – chen.ist">
-<meta name="twitter:image" content="https://github/com/chen.ist/assets/images/cyber-security.jpg">
+<meta name="twitter:image" content="https://chen.ist/assets/images/cyber-security.jpg">
 <meta name="twitter:image:alt" content="Zero Trust Security">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -335,6 +336,18 @@ document.addEventListener('DOMContentLoaded', function() {
  <span class="dropdown-text">Courses</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="../academy/trainings.html">
+ <span class="dropdown-text">Trainings</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/microlearning.html">
+ <span class="dropdown-text">Microlearning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/programs/index.html">
+ <span class="dropdown-text">Programs</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../academy/events.html">
  <span class="dropdown-text">Events</span></a>
   </li>  
@@ -445,6 +458,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </header>
 
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="../">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Resources</li>
+  </ol>
+</nav>
 
 <div class="hero-section">
   <div class="container">
@@ -623,7 +643,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 <div class="cta-section">
   <div class="container text-center">
-    <h2 class="cta-title anchored"><span class="cta-white-text">Looking for specific resources?</span></h2>
+    <h2 class="cta-title anchored"><span class="text-dark">Looking for specific resources?</span></h2>
     <p class="mb-4">Our team can help you find exactly what you need for your project or challenge.</p>
     <a href="../contact.html" class="cta-button">Contact Us</a>
   </div>
@@ -731,7 +751,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/github\/com\/chen\.ist");
+        var filterRegex = new RegExp("https:\/\/chen\.ist");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1165,6 +1185,11 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <div class="col-6 col-md-3">
                                     <a href="../academy/computerclub.html" class="footer-link">
                                         <i class="bi bi-chevron-right icon-small"></i> Computer Club
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3 mt-2">
+                                    <a href="../academy/programs" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Explore Academy Programs
                                     </a>
                                 </div>
                             </div>

@@ -1,0 +1,247 @@
+---
+title: "Unix/Linux Systems Administration Course Syllabus"
+subtitle: "10-Week Comprehensive Program"
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+date-modified: last-modified
+---
+
+# Course Syllabus: Unix/Linux Systems Administration
+
+## Course Information
+
+**Course Title:** Unix/Linux Systems Administration  
+**Duration:** 10 Weeks  
+**Level:** Intermediate to Advanced  
+**Next Start Date:** September 10th, 2025  
+**Format Options:** Instructor-Led Online, Self-Paced, In-Person Workshops
+
+## Course Description
+
+This comprehensive course provides participants with the knowledge and skills needed to effectively administer Unix and Linux systems across various environments. From fundamental command-line operations to advanced server configuration, performance tuning, and automation, students will gain practical experience in all aspects of Linux system administration. Through a combination of theoretical learning and extensive hands-on lab work, this course prepares participants to confidently manage production Linux environments.
+
+## Prerequisites
+
+- Basic familiarity with command-line interfaces
+- Fundamental understanding of operating systems concepts
+- Basic networking knowledge
+- Problem-solving aptitude and logical thinking
+- Computer with internet access and ability to run virtual machines
+
+## Learning Outcomes
+
+By the end of this course, students will be able to:
+
+1. Configure and manage Unix/Linux systems with confidence
+2. Implement effective user management and permission schemes
+3. Write and maintain shell scripts for automation
+4. Manage file systems, storage, and backups efficiently
+5. Configure and troubleshoot network services
+6. Implement system security measures and harden systems
+7. Monitor and optimize system performance
+8. Troubleshoot complex system issues
+9. Deploy and manage production-ready Linux environments
+
+## Course Structure
+
+### Week 1: Unix/Linux Fundamentals
+
+- History and philosophy of Unix and Linux
+- Major distributions and their characteristics (RHEL/CentOS, Debian/Ubuntu, SUSE)
+- System architecture overview
+- File system hierarchy standard
+- Essential command-line navigation and file operations
+- Text editors (vim, nano)
+- Manual pages and documentation
+- Lab: Setting up a Linux environment and basic system exploration
+
+### Week 2: User and Permission Management
+
+- User account management (creating, modifying, deleting)
+- Group management and membership
+- Password policies and management
+- Standard file permissions (read, write, execute)
+- Special permissions (setuid, setgid, sticky bit)
+- Access Control Lists (ACLs)
+- Sudo configuration and best practices
+- Lab: Implementing a comprehensive user and permission scheme
+
+### Week 3: Shell Scripting and Automation
+
+- Bash scripting fundamentals
+- Variables, environment, and scope
+- Control structures (if, case, loops)
+- Functions and modularity
+- Regular expressions and text processing tools (grep, sed, awk)
+- Script debugging techniques
+- Scheduling with cron and systemd timers
+- Lab: Creating automation scripts for system administration tasks
+
+### Week 4: File System Management
+
+- Linux file system types (ext4, XFS, Btrfs)
+- Partitioning tools and techniques
+- Logical Volume Management (LVM)
+- Mounting and managing file systems
+- File system maintenance and checks
+- Disk quotas implementation
+- RAID configuration
+- Lab: Setting up and managing complex storage configurations
+
+### Week 5: Process and Service Management
+
+- Understanding Linux processes and the process lifecycle
+- Process monitoring and control
+- Job control and background processes
+- Systemd architecture and unit files
+- Service management (starting, stopping, enabling)
+- SysV init system (historical context)
+- Resource limits and control
+- Lab: Configuring and managing system services
+
+### Week 6: Network Configuration Basics
+
+- TCP/IP networking fundamentals
+- Network interface configuration
+- IP addressing and subnetting
+- Routing and gateway configuration
+- Network troubleshooting tools
+- Name resolution and /etc/hosts
+- SSH configuration and secure access
+- Lab: Setting up and testing network configurations
+
+### Week 7: Network Services and Security
+
+- DHCP server configuration
+- DNS server basics (BIND, dnsmasq)
+- Web server fundamentals (Apache, Nginx)
+- File sharing services (NFS, Samba)
+- Firewall management (iptables, nftables, firewalld)
+- Network security best practices
+- Lab: Implementing and securing network services
+
+### Week 8: System Security
+
+- Security principles and defense in depth
+- System hardening techniques
+- User authentication mechanisms
+- PAM configuration and modules
+- Security auditing and compliance
+- SELinux/AppArmor fundamentals
+- Intrusion detection basics
+- Lab: Implementing a comprehensive security policy
+
+### Week 9: Performance Tuning and Monitoring
+
+- System performance metrics
+- Monitoring tools (top, htop, sar, vmstat)
+- Performance monitoring systems (Prometheus, Grafana)
+- Resource utilization analysis
+- Identifying system bottlenecks
+- Kernel tuning parameters
+- Log management and analysis
+- Lab: Monitoring, analyzing, and optimizing system performance
+
+### Week 10: Advanced Topics and Capstone Project
+
+- Containerization with Docker basics
+- Configuration management introduction
+- Backup strategies and tools
+- Disaster recovery planning
+- Cloud integration concepts
+- Capstone project: Design, implement, and document a complete Linux environment
+- Final assessment and review
+
+## Instructional Methods
+
+- Interactive lectures with demonstrations
+- Extensive hands-on lab exercises
+- Real-world scenario simulations
+- Troubleshooting challenges
+- Group discussions and knowledge sharing
+- Command-line workshops
+- Individual and group projects
+
+## Assessment and Grading
+
+### Assessment Components
+
+1. **Weekly Labs and Exercises (40%)**
+   - Hands-on technical tasks
+   - Command-line proficiency demonstrations
+   - Configuration assignments
+
+2. **Shell Scripting Project (15%)**
+   - Development of administration automation scripts
+   - Documentation and presentation
+
+3. **System Administration Project (15%)**
+   - Design and implementation of specified system components
+   - Performance and security evaluation
+
+4. **Capstone Project (25%)**
+   - Comprehensive Linux environment implementation
+   - Documentation and presentation
+
+5. **Participation and Engagement (5%)**
+   - Contribution to discussions
+   - Collaboration in group exercises
+
+### Grading Scale
+
+- A: 90-100%
+- B: 80-89%
+- C: 70-79%
+- D: 60-69%
+- F: Below 60%
+
+## Required Materials
+
+- Personal computer capable of running virtualization software
+- Virtualization platform (VirtualBox, VMware)
+- Access to the course learning management system
+- Linux virtual machines (provided during the course)
+- SSH client for remote access
+- Recommended readings (provided throughout the course)
+
+## Course Policies
+
+### Attendance and Participation
+
+- Instructor-led format: Attendance at live sessions is strongly encouraged
+- Self-paced format: Regular progress through course materials is expected
+- Active participation in hands-on exercises is essential for skill development
+
+### Lab Environment Usage
+
+- Lab environments are provided for educational purposes
+- Students are responsible for maintaining their virtual environments
+- Regular backups of work are strongly encouraged
+
+### Academic Integrity
+
+- All work must be original or properly attributed
+- Collaboration is encouraged, but individual assignments must reflect individual work
+- Sharing access credentials to systems is prohibited
+
+## Support and Resources
+
+- Instructor office hours (schedule provided at course start)
+- Technical support for lab environments
+- Community forum for peer assistance
+- Curated list of external resources and readings
+- Recorded lectures and demonstrations
+
+## Accessibility
+
+We are committed to providing an inclusive learning environment. Students with disabilities or special needs are encouraged to contact the instructor at the beginning of the course to discuss accommodations.
+
+## Course Schedule
+
+A detailed week-by-week schedule with specific topics, readings, lab exercises, and assignment due dates will be provided at the start of the course.
+
+---
+
+*This syllabus is subject to change at the instructor's discretion. All changes will be communicated to students in advance.*

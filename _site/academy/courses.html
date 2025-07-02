@@ -124,12 +124,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <link rel="stylesheet" href="../scss/styles.css">
 <link rel="stylesheet" href="../scss/academy.scss">
+<link rel="stylesheet" href="../scss/custom-hero.css">
+<link rel="stylesheet" href="../scss/academy.scss">
 <meta property="og:title" content="Courses – chen.ist">
 <meta property="og:description" content="Comprehensive technical training programs">
+<meta property="og:image" content="https://chen.ist/assets/svg/learning.svg">
 <meta property="og:site_name" content="chen.ist">
+<meta property="og:image:alt" content="Academy Courses">
 <meta name="twitter:title" content="Courses – chen.ist">
 <meta name="twitter:description" content="Comprehensive technical training programs">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://chen.ist/assets/svg/learning.svg">
+<meta name="twitter:image:alt" content="Academy Courses">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -333,6 +339,18 @@ document.addEventListener('DOMContentLoaded', function() {
  <span class="dropdown-text">Courses</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="../academy/trainings.html">
+ <span class="dropdown-text">Trainings</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/microlearning.html">
+ <span class="dropdown-text">Microlearning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/programs/index.html">
+ <span class="dropdown-text">Programs</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../academy/events.html">
  <span class="dropdown-text">Events</span></a>
   </li>  
@@ -452,17 +470,96 @@ document.addEventListener('DOMContentLoaded', function() {
 </header>
 
 
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="../">Home</a></li>
+    <li class="breadcrumb-item"><a href="../academy.html">Academy</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Courses</li>
+  </ol>
+</nav>
+
 <div class="hero-section">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-8 offset-md-2 text-center">
-        <h1>Academy <span class="text-green">Courses</span></h1>
+        <img src="../assets/svg/learning.svg" alt="Academy Courses" style="max-width: 150px; margin-bottom: 20px;">
+        <h1><span class="academy-text">Academy</span> <span class="text-green">Courses</span></h1>
         <p>Enhance your skills with our expert-led training programs</p>
       </div>
     </div>
   </div>
 </div>
+
+<style>
+  /* Ensure the text is white in both light and dark modes */
+  .academy-text {
+    color: white !important;
+  }
+</style>
 <div class="container page-section">
+<section id="learning-options" class="level2">
+<h2 class="anchored" data-anchor-id="learning-options">Learning Options</h2>
+<div class="row mb-5">
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header bg-success text-white">
+        <h3 class="mb-0 anchored">Courses</h3>
+        <span class="badge bg-light text-dark">8-12 Weeks</span>
+      </div>
+      <div class="card-body">
+        <p>Comprehensive learning experiences with in-depth coverage of topics and hands-on projects.</p>
+        <p><strong>Perfect for:</strong> Deep skill development and career advancement</p>
+        <p class="text-success fw-bold">You are here</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header bg-primary text-white">
+        <h3 id="Trainings" class="mb-0 text-white anchored">Trainings</h3>
+        <span class="badge bg-light text-dark">1-2 Days</span>
+      </div>
+      <div class="card-body">
+        <p>Intensive workshops focused on practical skills you can apply immediately in your work.</p>
+        <p><strong>Perfect for:</strong> Professionals with limited time who need specific skills</p>
+        <a href="../academy/trainings.html" class="btn btn-primary text-white">Browse Trainings</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header bg-info text-white">
+        <h3 class="mb-0 anchored">Microlearning</h3>
+        <span class="badge bg-light text-dark">1-2 Hours</span>
+      </div>
+      <div class="card-body">
+        <p>Bite-sized sessions on specific tools and technologies for quick skill acquisition.</p>
+        <p><strong>Perfect for:</strong> Busy professionals who want to learn a specific tool</p>
+        <a href="../academy/microlearning.html" class="btn btn-info text-white">Browse Microlearning</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-5">
+  <div class="card-header bg-secondary text-white">
+    <h3 class="mb-0 anchored">For Organizations</h3>
+  </div>
+  <div class="card-body">
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <p class="mb-0">We offer custom training programs for organizations looking to upskill their teams. Our tailored solutions can be delivered on-site or virtually, and can be customized to address your specific challenges and objectives.</p>
+      </div>
+      <div class="col-md-4 text-end">
+        <a href="../academy/partnerships.html" class="btn btn-secondary">Learn About Partnerships</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
 <section id="available-courses" class="level2">
 <h2 class="anchored" data-anchor-id="available-courses">Available Courses</h2>
 <p>Our courses are designed to provide practical, hands-on experience and deep theoretical understanding across a range of technical domains. Each course is taught by industry experts with extensive real-world experience.</p>
@@ -494,7 +591,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <div class="d-flex justify-content-between align-items-center mt-4">
           <span><strong>Next Start Date:</strong> November 1st, 2025</span>
-          <a href="#" class="btn btn-success">Details and RSVP - soon</a>
+          <a href="../academy/courses/open-source-development/" class="btn btn-success">Course Details</a>
         </div>
       </div>
     </div>
@@ -527,7 +624,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <div class="d-flex justify-content-between align-items-center mt-4">
           <span><strong>Next Start Date:</strong> October 15th, 2025</span>
-          <a href="#" class="btn btn-success">Details and RSVP - soon</a>
+          <a href="../academy/courses/practical-cybersecurity/" class="btn btn-success">Course Details</a>
         </div>
       </div>
     </div>
@@ -562,7 +659,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <div class="d-flex justify-content-between align-items-center mt-4">
           <span><strong>Next Start Date:</strong> September 10th, 2025</span>
-          <a href="#" class="btn btn-success">Details and RSVP - soon</a>
+          <a href="../academy/courses/unix-linux-administration/" class="btn btn-success">Course Details</a>
         </div>
       </div>
     </div>
@@ -595,7 +692,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <div class="d-flex justify-content-between align-items-center mt-4">
           <span><strong>Next Start Date:</strong> November 5th, 2025</span>
-          <a href="#" class="btn btn-success">Details and RSVP - soon</a>
+          <a href="../academy/courses/data-protection-privacy/" class="btn btn-success">Course Details</a>
         </div>
       </div>
     </div>
@@ -630,7 +727,75 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <div class="d-flex justify-content-between align-items-center mt-4">
           <span><strong>Next Start Date:</strong> August 15th, 2025</span>
-          <a href="#" class="btn btn-success">Details and RSVP - soon</a>
+          <a href="../academy/courses/human-firewall-security-awareness/" class="btn btn-success">Course Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0 anchored">Cyberhygiene Essentials</h3>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">All Levels</span>
+          <span class="badge bg-secondary">6 Weeks</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4 class="anchored">Course Overview</h4>
+        <p>A comprehensive introduction to essential cyberhygiene practices for both personal and professional contexts, providing practical skills for maintaining digital security.</p>
+
+        <h4 class="anchored">Key Topics</h4>
+        <ul>
+          <li>Digital threat landscape awareness</li>
+          <li>Password security and management</li>
+          <li>Device protection strategies</li>
+          <li>Safe browsing and social media practices</li>
+          <li>Data protection and privacy techniques</li>
+        </ul>
+
+        <h4 class="anchored">What You'll Learn</h4>
+        <p>You'll develop practical skills to identify and mitigate common security threats, implement strong protection measures, and build sustainable security habits for long-term digital safety.</p>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <span><strong>Next Start Date:</strong> July 20th, 2025</span>
+          <a href="../academy/courses/cyberhygiene-essentials/" class="btn btn-success">Course Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0 anchored">NixOS for Cybersecurity</h3>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">Intermediate</span>
+          <span class="badge bg-secondary">4 Weeks</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4 class="anchored">Course Overview</h4>
+        <p>Master the art of building secure, reproducible computing environments with NixOS. This course focuses on implementing cybersecurity principles through declarative system configuration.</p>
+
+        <h4 class="anchored">Key Topics</h4>
+        <ul>
+          <li>Declarative system configuration for security</li>
+          <li>Reproducible security environments</li>
+          <li>System hardening with NixOS</li>
+          <li>Network isolation and sandboxing</li>
+          <li>Security testing environments</li>
+        </ul>
+
+        <h4 class="anchored">What You'll Learn</h4>
+        <p>You'll develop the skills to create consistent, secure computing environments, implement advanced security controls, and build reproducible security testing labs using NixOS's unique approach to system configuration.</p>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <span><strong>Next Start Date:</strong> September 5th, 2025</span>
+          <a href="../academy/courses/nixos-cybersecurity/" class="btn btn-success">Course Details</a>
         </div>
       </div>
     </div>
@@ -728,11 +893,11 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 <div class="cta-section">
   <div class="container text-center">
-    <h2 class="anchored">Ready to advance your skills?</h2>
+    <h2 class="anchored"><span class="text-dark">Ready to advance your skills?</span></h2>
     <p class="mb-4">Browse our course catalog and find the perfect learning path for your career goals.</p>
     <div class="row justify-content-center mt-4">
       <div class="col-md-6">
-        <a href="../academy/" class="cta-button">Explore Academy Programs</a>
+        <a href="../academy/programs" class="cta-button">Explore Academy Programs</a>
       </div>
       <br>
       <br>
@@ -742,6 +907,13 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   </div>
 </div>
+
+<style>
+  /* Ensure the text is white in both light and dark modes */
+  .cta-white-text {
+    color: white !important;
+  }
+</style>
 
 
 
@@ -831,7 +1003,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/github\/com\/chen\.ist");
+        var filterRegex = new RegExp("https:\/\/chen\.ist");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1265,6 +1437,11 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <div class="col-6 col-md-3">
                                     <a href="../academy/computerclub.html" class="footer-link">
                                         <i class="bi bi-chevron-right icon-small"></i> Computer Club
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3 mt-2">
+                                    <a href="../academy/programs" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Explore Academy Programs
                                     </a>
                                 </div>
                             </div>

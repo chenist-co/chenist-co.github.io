@@ -1,0 +1,1772 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.30">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Learn how to set up and use Syncthing, an open-source, secure, and decentralized file synchronization tool to keep your files in sync across all your devices.">
+
+<title>Syncthing Essentials – chen.ist</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../assets/images/favicon.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-b5057f3398a202b36a08d66ee4de0ec1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+.navbar-brand-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand .navbar-title {
+  display: inline-block;
+  margin-left: 0;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 767.98px) {
+  .navbar-brand .navbar-title {
+    font-size: 1.1rem;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Find the navbar brand element that contains the logo
+  const navbarBrand = document.querySelector('.navbar-brand');
+  
+  if (navbarBrand) {
+    // Create a span for the CHENIST text
+    const titleSpan = document.createElement('span');
+    titleSpan.className = 'navbar-title';
+    titleSpan.textContent = 'CHENIST';
+    
+    // Append the span after the logo
+    navbarBrand.appendChild(titleSpan);
+  }
+});
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+<link rel="stylesheet" href="../../../scss/styles.css">
+<link rel="stylesheet" href="../../../scss/academy.scss">
+<link rel="stylesheet" href="../../../scss/custom-hero.css">
+<link rel="stylesheet" href="../../../scss/academy.scss">
+<meta property="og:title" content="Syncthing Essentials – chen.ist">
+<meta property="og:description" content="Learn how to set up and use Syncthing, an open-source, secure, and decentralized file synchronization tool to keep your files in sync across all your devices.">
+<meta property="og:image" content="https://chen.ist/assets/images/placeholder.jpg">
+<meta property="og:site_name" content="chen.ist">
+<meta name="twitter:title" content="Syncthing Essentials – chen.ist">
+<meta name="twitter:description" content="Learn how to set up and use Syncthing, an open-source, secure, and decentralized file synchronization tool to keep your files in sync across all your devices.">
+<meta name="twitter:image" content="https://chen.ist/assets/images/placeholder.jpg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../assets/images/logo-light.svg" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../services.html"> 
+<span class="menu-text">Services</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-academy" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Academy</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-academy">    
+        <li>
+    <a class="dropdown-item" href="../../../academy/overview.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../academy/courses.html">
+ <span class="dropdown-text">Courses</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../academy/trainings.html">
+ <span class="dropdown-text">Trainings</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../academy/microlearning.html">
+ <span class="dropdown-text">Microlearning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../academy/programs/index.html">
+ <span class="dropdown-text">Programs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../academy/events.html">
+ <span class="dropdown-text">Events</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../academy/webinars.html">
+ <span class="dropdown-text">Webinars</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../academy/computerclub.html">
+ <span class="dropdown-text">Computer Club</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../academy/partnerships.html">
+ <span class="dropdown-text">Partnerships</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../blog.html"> 
+<span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../resources/index.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../../../about/index.html">
+ <span class="dropdown-text">About</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../about/csr.html">
+ <span class="dropdown-text">CSR</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../about/community.html">
+ <span class="dropdown-text">Community</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-lang" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Lang</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-lang">    
+        <li>
+    <a class="dropdown-item" href="../../../index.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../ro/index.html">
+ <span class="dropdown-text">Romanian</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../sv/index.html">
+ <span class="dropdown-text">Swedish</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../de/index.html">
+ <span class="dropdown-text">German</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#session-overview" id="toc-session-overview" class="nav-link active" data-scroll-target="#session-overview"><span class="header-section-number">1</span> Session Overview</a>
+  <ul class="collapse">
+  <li><a href="#what-youll-learn" id="toc-what-youll-learn" class="nav-link" data-scroll-target="#what-youll-learn"><span class="header-section-number">1.1</span> What You’ll Learn</a></li>
+  </ul></li>
+  <li><a href="#session-curriculum" id="toc-session-curriculum" class="nav-link" data-scroll-target="#session-curriculum"><span class="header-section-number">2</span> Session Curriculum</a>
+  <ul class="collapse">
+  <li><a href="#part-1-introduction-to-syncthing-30-minutes" id="toc-part-1-introduction-to-syncthing-30-minutes" class="nav-link" data-scroll-target="#part-1-introduction-to-syncthing-30-minutes"><span class="header-section-number">2.1</span> Part 1: Introduction to Syncthing (30 minutes)</a></li>
+  <li><a href="#part-2-basic-configuration-40-minutes" id="toc-part-2-basic-configuration-40-minutes" class="nav-link" data-scroll-target="#part-2-basic-configuration-40-minutes"><span class="header-section-number">2.2</span> Part 2: Basic Configuration (40 minutes)</a></li>
+  <li><a href="#part-3-advanced-features-40-minutes" id="toc-part-3-advanced-features-40-minutes" class="nav-link" data-scroll-target="#part-3-advanced-features-40-minutes"><span class="header-section-number">2.3</span> Part 3: Advanced Features (40 minutes)</a></li>
+  <li><a href="#part-4-best-practices-and-troubleshooting-10-minutes" id="toc-part-4-best-practices-and-troubleshooting-10-minutes" class="nav-link" data-scroll-target="#part-4-best-practices-and-troubleshooting-10-minutes"><span class="header-section-number">2.4</span> Part 4: Best Practices and Troubleshooting (10 minutes)</a></li>
+  </ul></li>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link" data-scroll-target="#learning-outcomes"><span class="header-section-number">3</span> Learning Outcomes</a></li>
+  <li><a href="#teaching-methods" id="toc-teaching-methods" class="nav-link" data-scroll-target="#teaching-methods"><span class="header-section-number">4</span> Teaching Methods</a></li>
+  <li><a href="#target-audience" id="toc-target-audience" class="nav-link" data-scroll-target="#target-audience"><span class="header-section-number">5</span> Target Audience</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites"><span class="header-section-number">6</span> Prerequisites</a></li>
+  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials"><span class="header-section-number">7</span> Materials</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Syncthing Essentials</h1>
+<p class="subtitle lead">Secure file synchronization across your devices in just 2 hours</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">file-synchronization</div>
+    <div class="quarto-category">open-source</div>
+    <div class="quarto-category">security</div>
+    <div class="quarto-category">productivity</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Learn how to set up and use Syncthing, an open-source, secure, and decentralized file synchronization tool to keep your files in sync across all your devices.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">July 2, 2025</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="../../../">Home</a></li>
+      <li class="breadcrumb-item"><a href="../../../academy/">Academy</a></li>
+      <li class="breadcrumb-item"><a href="../../../academy/microlearning.html">Microlearning</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Syncthing Essentials</li>
+    </ol>
+  </nav>
+</div>
+
+<div class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <h1>Syncthing Essentials</h1>
+        <p class="lead">Master secure file synchronization across all your devices with this 2-hour hands-on session</p>
+        <div class="mt-4">
+          <span class="badge bg-primary me-2">2 Hours</span>
+          <span class="badge bg-secondary me-2">Beginner to Intermediate</span>
+          <span class="badge bg-success">Hands-on</span>
+        </div>
+      </div>
+      <div class="col-lg-4 text-center">
+        <img src="../../../assets/images/placeholder.jpg" alt="Syncthing Workshop" class="img-fluid rounded shadow-lg" style="max-height: 300px;">
+      </div>
+    </div>
+  </div>
+</div>
+<section id="session-overview" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Session Overview</h1>
+<p>This 2-hour microlearning session introduces Syncthing, a free, open-source, and secure file synchronization tool. Unlike cloud-based services, Syncthing directly synchronizes files between your devices without storing them on third-party servers, giving you complete control over your data. In this session, you’ll learn how to install, configure, and use Syncthing effectively to keep your files in sync across multiple devices.</p>
+<section id="what-youll-learn" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="what-youll-learn"><span class="header-section-number">1.1</span> What You’ll Learn</h2>
+<ul>
+<li>Install and set up Syncthing on various platforms (Windows, macOS, Linux, Android)</li>
+<li>Create and manage synchronization folders</li>
+<li>Connect multiple devices securely</li>
+<li>Configure synchronization options and ignore patterns</li>
+<li>Monitor synchronization status and resolve conflicts</li>
+<li>Implement best practices for secure and efficient file synchronization</li>
+</ul>
+</section>
+</section>
+<section id="session-curriculum" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Session Curriculum</h1>
+<section id="part-1-introduction-to-syncthing-30-minutes" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="part-1-introduction-to-syncthing-30-minutes"><span class="header-section-number">2.1</span> Part 1: Introduction to Syncthing (30 minutes)</h2>
+<ul>
+<li>Understanding decentralized file synchronization</li>
+<li>Advantages over cloud-based services (privacy, security, control)</li>
+<li>Syncthing architecture and how it works</li>
+<li>Installing Syncthing on your primary device</li>
+<li>Navigating the web interface</li>
+</ul>
+</section>
+<section id="part-2-basic-configuration-40-minutes" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="part-2-basic-configuration-40-minutes"><span class="header-section-number">2.2</span> Part 2: Basic Configuration (40 minutes)</h2>
+<ul>
+<li>Creating your first sync folder</li>
+<li>Setting up device connections</li>
+<li>Understanding device IDs and authentication</li>
+<li>Managing folder sharing permissions</li>
+<li>Handling initial synchronization</li>
+<li>Using the Syncthing mobile app</li>
+</ul>
+</section>
+<section id="part-3-advanced-features-40-minutes" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="part-3-advanced-features-40-minutes"><span class="header-section-number">2.3</span> Part 3: Advanced Features (40 minutes)</h2>
+<ul>
+<li>Optimizing synchronization settings for different use cases</li>
+<li>Creating ignore patterns for specific files or folders</li>
+<li>Managing conflicts and file versions</li>
+<li>Setting up relay servers for difficult network situations</li>
+<li>Automating Syncthing with scripts and services</li>
+<li>Implementing folder versioning and trash can features</li>
+</ul>
+</section>
+<section id="part-4-best-practices-and-troubleshooting-10-minutes" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="part-4-best-practices-and-troubleshooting-10-minutes"><span class="header-section-number">2.4</span> Part 4: Best Practices and Troubleshooting (10 minutes)</h2>
+<ul>
+<li>Security considerations and best practices</li>
+<li>Performance optimization techniques</li>
+<li>Common synchronization issues and how to resolve them</li>
+<li>Monitoring and logging options</li>
+<li>Resources for continued learning</li>
+</ul>
+</section>
+</section>
+<section id="learning-outcomes" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Learning Outcomes</h1>
+<p>By the end of this microlearning session, you will be able to:</p>
+<ul>
+<li>Install and configure Syncthing on multiple devices</li>
+<li>Create and manage synchronization relationships between devices</li>
+<li>Implement appropriate security settings for your sync network</li>
+<li>Configure advanced synchronization options for different use cases</li>
+<li>Troubleshoot common synchronization issues</li>
+<li>Apply best practices for efficient and secure file synchronization</li>
+</ul>
+</section>
+<section id="teaching-methods" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Teaching Methods</h1>
+<p>This session combines:</p>
+<ul>
+<li>Live demonstrations</li>
+<li>Hands-on setup and configuration</li>
+<li>Real-world synchronization scenarios</li>
+<li>Problem-solving exercises</li>
+<li>Discussion of use cases and applications</li>
+</ul>
+</section>
+<section id="target-audience" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Target Audience</h1>
+<p>This microlearning session is ideal for:</p>
+<ul>
+<li>Privacy-conscious individuals</li>
+<li>IT professionals</li>
+<li>Remote workers</li>
+<li>Anyone who needs to sync files across multiple devices</li>
+<li>Those looking for alternatives to cloud storage services</li>
+</ul>
+</section>
+<section id="prerequisites" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Prerequisites</h1>
+<ul>
+<li>Basic computer skills</li>
+<li>At least two devices for synchronization (can be any combination of laptop, desktop, phone)</li>
+<li>Admin/installation rights on your devices</li>
+<li>Bring your laptop and mobile device (if available)</li>
+</ul>
+</section>
+<section id="materials" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Materials</h1>
+<p>All participants will receive:</p>
+<ul>
+<li>Step-by-step installation guide for all major platforms</li>
+<li>Configuration templates for common synchronization scenarios</li>
+<li>Security best practices checklist</li>
+<li>Troubleshooting guide</li>
+<li>List of useful Syncthing resources and community links</li>
+</ul>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h3 class="anchored">Your Instructor</h3>
+          <div class="d-flex align-items-center mb-3">
+            <img src="../../../assets/images/placeholder.jpg" alt="Instructor" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;">
+            <div>
+              <h5 class="mb-0 anchored">Maria Novak</h5>
+              <p class="text-muted mb-0">Systems Administrator &amp; Privacy Advocate</p>
+            </div>
+          </div>
+          <p>Maria has been using Syncthing in professional environments for over 5 years and has helped implement secure file synchronization solutions for teams and individuals focused on privacy and data ownership.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h3 class="anchored">Register Now</h3>
+          <p>Next session: <strong>July 18, 2023, 2:00 PM - 4:00 PM CEST</strong></p>
+          <p>Fee: <strong>€45</strong> (Group discounts available)</p>
+          <p>Location: <strong>Online via Zoom</strong></p>
+          <a href="../../../contact.html" class="btn btn-primary">Register for This Session</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4 mb-5">
+  <h2 class="text-center mb-4 anchored" data-anchor-id="materials">What Participants Say</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <p class="fst-italic">"I've been looking for a secure alternative to cloud services, and this session gave me everything I needed to set up Syncthing across all my devices. Great investment of 2 hours!"</p>
+          <div class="d-flex align-items-center">
+            <div>
+              <h5 class="mb-0 anchored">Mark T.</h5>
+              <p class="text-muted mb-0">Software Developer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <p class="fst-italic">"The hands-on approach was perfect. I had Syncthing running on my laptop and phone by the end of the session, with all my important files automatically syncing."</p>
+          <div class="d-flex align-items-center">
+            <div>
+              <h5 class="mb-0 anchored">Lena K.</h5>
+              <p class="text-muted mb-0">Freelance Designer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <p class="fst-italic">"The instructor's knowledge of advanced configurations saved me hours of research. I particularly appreciated the section on security best practices."</p>
+          <div class="d-flex align-items-center">
+            <div>
+              <h5 class="mb-0 anchored">David R.</h5>
+              <p class="text-muted mb-0">IT Manager</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5 mb-5">
+  <h2 class="text-center mb-4 anchored">Related Offerings</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h4 class="anchored">Data Privacy Workshop</h4>
+          <p>A comprehensive full-day workshop on personal data privacy tools and techniques for digital security.</p>
+          <a href="../../../academy/trainings.html" class="btn btn-outline-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h4 class="anchored">Linux for Privacy Course</h4>
+          <p>A 6-week course covering Linux-based privacy solutions for everyday computing.</p>
+          <a href="../../../academy/courses.html" class="btn btn-outline-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h4 class="anchored">Command Line Introduction</h4>
+          <p>Learn the basics of command line interaction to enhance your productivity with text-based tools.</p>
+          <a href="../../../academy/microlearning/cli-intro/" class="btn btn-outline-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/chen\.ist");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+
+</div>   
+    <div class="nav-footer-center">
+
+</div>
+    <div class="nav-footer-right">
+
+</div>
+  </div>
+</footer>
+<footer class="footer mt-5 py-3 cybersecurity-footer">
+    <div class="container">
+        <div class="row mb-3">
+            <!-- Company Logo and Brief -->
+            <div class="col-md-4 mb-2">
+                <div class="d-flex align-items-center">
+                    <h4 class="footer-logo mb-0 me-2">chen<span class="text-accent">.ist</span></h4>
+                    <div class="secure-badge ms-2">
+                        <i class="bi bi-shield-lock-fill"></i> Secure
+                    </div>
+                </div>
+                <p class="footer-description small mt-2 mb-0">
+                    Enterprise cybersecurity solutions with zero-trust implementation and continuous monitoring.
+                </p>
+            </div>
+            
+            <!-- Tabs Navigation -->
+            <div class="col-md-8 mb-2">
+                <div class="footer-tabs">
+                    <ul class="nav nav-tabs footer-nav-tabs" id="footerTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="solutions-tab" data-bs-toggle="tab" data-bs-target="#solutions" type="button" role="tab">
+                                <i class="bi bi-shield-fill"></i> Solutions
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="academy-tab" data-bs-toggle="tab" data-bs-target="#academy" type="button" role="tab">
+                                <i class="bi bi-mortarboard-fill"></i> Academy
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab">
+                                <i class="bi bi-envelope-fill"></i> Contact
+                            </button>
+                        </li>
+                    </ul>
+                    
+                    <!-- Tab Content -->
+                    <div class="tab-content pt-2" id="footerTabContent">
+                        <!-- Solutions Tab -->
+                        <div class="tab-pane fade show active" id="solutions" role="tabpanel">
+                            <div class="row">
+                                <div class="col-6 col-md-3">
+                                    <a href="../../../services.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Security Services
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../../../services.html#consulting" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Consulting
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../../../services.html#compliance" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Compliance
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../../../services.html#incident-response" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Incident Response
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Academy Tab -->
+                        <div class="tab-pane fade" id="academy" role="tabpanel">
+                            <div class="row">
+                                <div class="col-6 col-md-3">
+                                    <a href="../../../academy/courses.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Courses
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../../../academy/events.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Events
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../../../academy/webinars.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Webinars
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../../../academy/computerclub.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Computer Club
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3 mt-2">
+                                    <a href="../../../academy/programs" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Explore Academy Programs
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Contact Tab -->
+                        <div class="tab-pane fade" id="contact" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-1">
+                                        <i class="bi bi-envelope-fill contact-icon"></i>
+                                        <a href="mailto:office@chen.ist" class="footer-link">office@chen.ist</a>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-shield-fill-check contact-icon"></i>
+                                        <span class="small">SOC Available 24/7</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-1">
+                                        <i class="bi bi-geo-alt-fill contact-icon"></i>
+                                        <span class="small">Stockholm | Craiova | Bucharest</span>
+                                    </div>
+                                    <div class="social-icons">
+                                        <a href="https://github.com/chenist" class="social-icon" aria-label="GitHub">
+                                            <i class="bi bi-github"></i>
+                                        </a>
+                                        <a href="https://linkedin.com/in/chenistsec" class="social-icon" aria-label="LinkedIn">
+                                            <i class="bi bi-linkedin"></i>
+                                        </a>
+                                        <a href="https://twitter.com/chenistsec" class="social-icon" aria-label="Twitter">
+                                            <i class="bi bi-twitter-x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-divider">
+            <div class="cyber-line"></div>
+        </div>
+        
+        <div class="row footer-bottom py-1">
+            <div class="col-md-6">
+                <div class="d-flex align-items-center">
+                    <div class="security-pulse"></div>
+                    <p class="mb-0 ms-2 copyright">
+                        © 2025 chen.ist <span class="d-none d-md-inline">| Secure. Vigilant. Resilient.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <div class="footer-bottom-links">
+                    <a href="../../../privacy.html">Privacy</a>
+                    <span class="separator">|</span>
+                    <a href="../../../terms.html">Terms</a>
+                    <span class="separator">|</span>
+                    <a href="../../../contact.html" class="btn-report-incident">
+                        <i class="bi bi-exclamation-triangle-fill"></i> Report Incident
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+.cybersecurity-footer {
+    background-color: #0f1923;
+    color: #e6e6e6;
+    border-top: 3px solid #18bc9c;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+/* Change accent colors for academy section */
+.academy-section .cybersecurity-footer {
+    border-top-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer::before {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #F5A623 20%, 
+        #F5A623 40%, 
+        transparent 50%,
+        transparent 60%,
+        #F5A623 80%,
+        transparent 100%
+    );
+}
+
+.academy-section .cybersecurity-footer .text-accent,
+.academy-section .cybersecurity-footer .contact-icon,
+.academy-section .cybersecurity-footer .footer-heading::after,
+.academy-section .cybersecurity-footer .social-icon:hover,
+.academy-section .cybersecurity-footer .footer-link:hover,
+.academy-section .cybersecurity-footer .contact-item a:hover,
+.academy-section .cybersecurity-footer .footer-bottom-links a:hover,
+.academy-section .cybersecurity-footer .nav-link.active {
+    color: #F5A623 !important;
+}
+
+.academy-section .cybersecurity-footer .secure-badge {
+    background-color: rgba(245, 166, 35, 0.15);
+    color: #F5A623;
+    border-left-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .social-icon:hover {
+    background-color: #F5A623;
+    color: #0f1923 !important;
+}
+
+.academy-section .cybersecurity-footer .cyber-line {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(245, 166, 35, 0.3) 10%, 
+        rgba(245, 166, 35, 0.5) 50%, 
+        rgba(245, 166, 35, 0.3) 90%, 
+        transparent 100%
+    );
+}
+
+.academy-section .cybersecurity-footer .cyber-line::before,
+.academy-section .cybersecurity-footer .cyber-line::after {
+    background-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .security-pulse {
+    background-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .security-pulse::before {
+    background-color: rgba(245, 166, 35, 0.3);
+}
+
+.cybersecurity-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #18bc9c 20%, 
+        #18bc9c 40%, 
+        transparent 50%,
+        transparent 60%,
+        #18bc9c 80%,
+        transparent 100%
+    );
+    opacity: 0.4;
+}
+
+.cybersecurity-footer .footer-brand {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.cybersecurity-footer .footer-logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Source Code Pro', monospace;
+    color: white;
+}
+
+.cybersecurity-footer .text-accent {
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .secure-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(24, 188, 156, 0.15);
+    color: #18bc9c;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-left: 2px solid #18bc9c;
+}
+
+.cybersecurity-footer .footer-description {
+    color: #9ba6b2;
+    line-height: 1.4;
+}
+
+.cybersecurity-footer .footer-tabs {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.cybersecurity-footer .footer-nav-tabs {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cybersecurity-footer .nav-tabs .nav-link {
+    color: #9ba6b2;
+    border: none;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    background-color: transparent;
+}
+
+.cybersecurity-footer .nav-tabs .nav-link:hover {
+    color: #e6e6e6;
+    border: none;
+}
+
+.cybersecurity-footer .nav-tabs .nav-link.active {
+    color: #18bc9c;
+    background-color: rgba(24, 188, 156, 0.1);
+    border: none;
+}
+
+.cybersecurity-footer .tab-content {
+    min-height: 60px;
+}
+
+.cybersecurity-footer .footer-link {
+    color: #9ba6b2;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.cybersecurity-footer .footer-link:hover {
+    color: #18bc9c;
+    transform: translateX(3px);
+}
+
+.cybersecurity-footer .icon-small {
+    font-size: 0.75rem;
+    margin-right: 0.25rem;
+}
+
+.cybersecurity-footer .contact-icon {
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .social-icons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.cybersecurity-footer .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e6e6e6;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.cybersecurity-footer .social-icon:hover {
+    background-color: #18bc9c;
+    color: #0f1923;
+    transform: translateY(-2px);
+}
+
+.cybersecurity-footer .footer-divider {
+    position: relative;
+    height: 12px;
+    margin: 0.5rem 0;
+}
+
+.cybersecurity-footer .cyber-line {
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(24, 188, 156, 0.3) 10%, 
+        rgba(24, 188, 156, 0.5) 50%, 
+        rgba(24, 188, 156, 0.3) 90%, 
+        transparent 100%
+    );
+    position: relative;
+}
+
+.cybersecurity-footer .cyber-line::before,
+.cybersecurity-footer .cyber-line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 8px;
+    height: 1px;
+    background-color: #18bc9c;
+    animation: blink 2s infinite;
+}
+
+.cybersecurity-footer .cyber-line::before {
+    left: 25%;
+}
+
+.cybersecurity-footer .cyber-line::after {
+    right: 25%;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
+
+.cybersecurity-footer .security-pulse {
+    width: 8px;
+    height: 8px;
+    background-color: #18bc9c;
+    border-radius: 50%;
+    position: relative;
+}
+
+.cybersecurity-footer .security-pulse::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 50%;
+    background-color: rgba(24, 188, 156, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    70% { transform: scale(1.5); opacity: 0; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+.cybersecurity-footer .copyright {
+    color: #9ba6b2;
+    font-size: 0.8rem;
+}
+
+.cybersecurity-footer .footer-bottom-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.cybersecurity-footer .footer-bottom-links a {
+    color: #9ba6b2;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.2s ease;
+}
+
+.cybersecurity-footer .footer-bottom-links a:hover {
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .separator {
+    margin: 0 0.5rem;
+    color: #4a5568;
+    font-size: 0.8rem;
+}
+
+.cybersecurity-footer .btn-report-incident {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(220, 53, 69, 0.15);
+    color: #dc3545 !important;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease !important;
+}
+
+.cybersecurity-footer .btn-report-incident:hover {
+    background-color: rgba(220, 53, 69, 0.3);
+}
+
+.cybersecurity-footer .btn-report-incident i {
+    margin-right: 0.3rem;
+}
+
+@media (max-width: 767px) {
+    .cybersecurity-footer .footer-bottom-links {
+        justify-content: flex-start;
+        margin-top: 0.5rem;
+    }
+    
+    .cybersecurity-footer .btn-report-incident {
+        margin-top: 0.5rem;
+        margin-left: 0;
+    }
+    
+    .cybersecurity-footer .separator:nth-of-type(2) {
+        display: none;
+    }
+}
+</style>
+
+<script>
+// Initialize Bootstrap tabs if not already initialized
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof bootstrap !== 'undefined') {
+        var tabElList = [].slice.call(document.querySelectorAll('#footerTabs .nav-link'));
+        tabElList.map(function(tabEl) {
+            return new bootstrap.Tab(tabEl);
+        });
+    }
+});
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Function to toggle dark/light mode
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-bs-theme') || 'light';
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-bs-theme', newTheme);
+      localStorage.setItem('quarto-color-scheme', newTheme);
+      
+      // Update icon if needed
+      const themeIcon = document.querySelector('.navbar-nav a[href="#"] i');
+      if (themeIcon) {
+        themeIcon.className = newTheme === 'light' ? 'bi bi-moon' : 'bi bi-sun';
+      }
+    }
+    
+    // Apply saved theme on load
+    const savedTheme = localStorage.getItem('quarto-color-scheme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      
+      // Update icon to match saved theme
+      const themeIcon = document.querySelector('.navbar-nav a[href="#"] i');
+      if (themeIcon && savedTheme === 'dark') {
+        themeIcon.className = 'bi bi-sun';
+      }
+    }
+    
+    // Set up toggle button
+    document.querySelectorAll('a[href="#"]').forEach(function(link) {
+      if (link.textContent.includes('Toggle Theme')) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          toggleTheme();
+        });
+      }
+    });
+    
+    // Enable Bootstrap tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      if (anchor.getAttribute('href') === '#') return;
+      
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 70,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

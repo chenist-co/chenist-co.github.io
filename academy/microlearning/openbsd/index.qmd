@@ -1,0 +1,268 @@
+---
+title: "OpenBSD Security"
+subtitle: "Learn the basics of this security-focused operating system in just 2 hours"
+description: "Explore OpenBSD, a Unix-like operating system renowned for its security-first approach, proactive security measures, and focus on code correctness and documentation."
+image: /assets/images/placeholder.jpg
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    css: /scss/academy.scss
+    classes: [academy-section]
+date-modified: last-modified
+categories:
+  - security
+  - operating-systems
+  - unix
+  - system-administration
+---
+
+```{=html}
+<div class="container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
+      <li class="breadcrumb-item"><a href="/academy/microlearning.html">Microlearning</a></li>
+      <li class="breadcrumb-item active" aria-current="page">OpenBSD Security</li>
+    </ol>
+  </nav>
+</div>
+
+<div class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <h1>OpenBSD Security</h1>
+        <p class="lead">Master the fundamentals of this security-focused operating system in just 2 hours</p>
+        <div class="mt-4">
+          <span class="badge bg-primary me-2">2 Hours</span>
+          <span class="badge bg-secondary me-2">Beginner to Intermediate</span>
+          <span class="badge bg-success">Hands-on</span>
+        </div>
+      </div>
+      <div class="col-lg-4 text-center">
+        <img src="/assets/images/placeholder.jpg" alt="OpenBSD Workshop" class="img-fluid rounded shadow-lg" style="max-height: 300px;">
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+# Session Overview
+
+This 2-hour microlearning session introduces OpenBSD, a Unix-like operating system renowned for its uncompromising focus on security, code correctness, and comprehensive documentation. Unlike many other operating systems that add security features after the fact, OpenBSD is built from the ground up with security as a primary design goal. In this session, you'll learn the fundamentals of OpenBSD, its security features, and how to leverage its strengths for secure computing environments.
+
+## What You'll Learn
+
+- Understand OpenBSD's security philosophy and design principles
+- Navigate the OpenBSD environment and command line
+- Install and configure a basic OpenBSD system
+- Implement key security features and best practices
+- Manage software installation and updates
+- Configure network services securely
+- Understand OpenBSD's security technologies (PF firewall, pledge, unveil, etc.)
+
+# Session Curriculum
+
+## Part 1: Introduction to OpenBSD (30 minutes)
+
+- OpenBSD history and philosophy
+- The "secure by default" approach
+- OpenBSD project organization and release cycle
+- Key security innovations from OpenBSD (OpenSSH, PF, etc.)
+- Installation overview (demonstration in virtual machine)
+- First steps after installation
+- Navigating the OpenBSD file system and documentation
+
+## Part 2: Essential System Administration (40 minutes)
+
+- User management and privileges
+- Software management with packages and ports
+- System configuration basics
+- Updating and patching OpenBSD
+- Filesystem security features
+- Basic system hardening steps
+- Running services securely
+- Monitoring and logging
+
+## Part 3: OpenBSD Security Features (40 minutes)
+
+- PF (Packet Filter) firewall basics
+- Memory protection technologies
+- W^X (Write XOR Execute) enforcement
+- Privilege separation
+- Pledge and unveil mechanisms
+- Address space randomization
+- Secure defaults in configuration
+- Common security use cases for OpenBSD
+
+## Part 4: Applications and Resources (10 minutes)
+
+- OpenBSD as a firewall/router
+- OpenBSD for secure servers
+- Desktop usage considerations
+- Troubleshooting common issues
+- Community resources and documentation
+- Continued learning path recommendations
+
+# Learning Outcomes
+
+By the end of this microlearning session, you will be able to:
+
+- Understand OpenBSD's security-focused design philosophy
+- Install and perform basic configuration of an OpenBSD system
+- Navigate the OpenBSD environment confidently
+- Implement essential security practices specific to OpenBSD
+- Configure basic network security with PF
+- Manage software installation and updates
+- Know where to find help and resources for continued learning
+
+# Teaching Methods
+
+This session combines:
+
+- Live demonstrations
+- Hands-on exercises (in virtual machines)
+- Security concept explanations
+- Real-world use cases
+- Command examples and walkthroughs
+
+# Target Audience
+
+This microlearning session is ideal for:
+
+- Security professionals and enthusiasts
+- System administrators seeking secure server solutions
+- Network administrators interested in secure routing/firewall options
+- IT professionals concerned with security best practices
+- Anyone interested in security-focused operating systems
+
+# Prerequisites
+
+- Basic understanding of Unix-like operating systems
+- Familiarity with command line interfaces
+- Basic networking knowledge
+- Bring your laptop with VirtualBox or another virtualization solution installed (for hands-on exercises)
+
+# Materials
+
+All participants will receive:
+
+- OpenBSD virtual machine image for practice
+- Security configuration checklists
+- PF firewall configuration examples
+- Command reference for common OpenBSD tasks
+- Curated list of OpenBSD security resources
+
+```{=html}
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h3>Your Instructor</h3>
+          <div class="d-flex align-items-center mb-3">
+            <img src="/assets/images/placeholder.jpg" alt="Instructor" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;">
+            <div>
+              <h5 class="mb-0">Sarah Chen</h5>
+              <p class="text-muted mb-0">Security Engineer & BSD Expert</p>
+            </div>
+          </div>
+          <p>Sarah has been working with OpenBSD for over 10 years, specializing in secure infrastructure and network security. She has implemented OpenBSD solutions for financial institutions and government agencies requiring high-security environments.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h3>Register Now</h3>
+          <p>Next session: <strong>August 15, 2023, 4:00 PM - 6:00 PM CEST</strong></p>
+          <p>Fee: <strong>€49</strong> (Group discounts available)</p>
+          <p>Location: <strong>Online via Zoom</strong></p>
+          <a href="/contact.html" class="btn btn-primary">Register for This Session</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4 mb-5">
+  <h2 class="text-center mb-4">What Participants Say</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <p class="fst-italic">"The security-first approach of OpenBSD is fascinating. This session provided a clear introduction to concepts I had heard about but never fully understood, like pledge and unveil."</p>
+          <div class="d-flex align-items-center">
+            <div>
+              <h5 class="mb-0">Marcus W.</h5>
+              <p class="text-muted mb-0">IT Security Specialist</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <p class="fst-italic">"The PF firewall section alone was worth attending. I now understand why so many security professionals prefer OpenBSD for firewalls and VPN gateways."</p>
+          <div class="d-flex align-items-center">
+            <div>
+              <h5 class="mb-0">Lisa J.</h5>
+              <p class="text-muted mb-0">Network Administrator</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <p class="fst-italic">"As someone coming from Linux, I appreciated the clear explanations of OpenBSD's different approach to system design. The hands-on VM exercises made the concepts concrete."</p>
+          <div class="d-flex align-items-center">
+            <div>
+              <h5 class="mb-0">Raj P.</h5>
+              <p class="text-muted mb-0">System Administrator</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5 mb-5">
+  <h2 class="text-center mb-4">Related Offerings</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h4>Advanced Packet Filter (PF) Course</h4>
+          <p>A comprehensive course on PF firewall configuration, optimization, and advanced usage patterns.</p>
+          <a href="/academy/courses.html" class="btn btn-outline-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h4>FreeBSD Basics</h4>
+          <p>Explore FreeBSD, another member of the BSD family focused on performance and versatility.</p>
+          <a href="/academy/microlearning/freebsd/" class="btn btn-outline-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h4>Secure Server Hardening Workshop</h4>
+          <p>A full-day practical workshop on hardening server installations against various security threats and vulnerabilities.</p>
+          <a href="/academy/trainings.html" class="btn btn-outline-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```

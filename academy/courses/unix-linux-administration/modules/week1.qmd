@@ -1,0 +1,371 @@
+---
+title: "Week 1: Unix/Linux Fundamentals"
+subtitle: "Introduction to the foundations of Unix and Linux systems"
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+date-modified: last-modified
+---
+
+# Unix/Linux Fundamentals
+
+## Learning Objectives
+
+By the end of this module, you will be able to:
+
+- Explain the history and philosophy of Unix and Linux
+- Differentiate between major Linux distributions
+- Navigate the Linux file system hierarchy
+- Use essential command-line tools and utilities
+- Find help and documentation effectively
+- Perform basic system tasks from the command line
+
+## The Unix/Linux Heritage
+
+### Unix Origins and Philosophy
+
+Unix was developed in the late 1960s and early 1970s at Bell Labs by Ken Thompson, Dennis Ritchie, and others. It embodied several key principles that continue to influence operating system design today:
+
+- **Write programs that do one thing and do it well**
+- **Write programs to work together**
+- **Write programs to handle text streams**
+
+These principles led to the creation of a modular system where small, focused tools could be combined in powerful ways.
+
+### From Unix to Linux
+
+Linux was created in 1991 by Linus Torvalds as a free and open-source alternative to Unix. Some key milestones:
+
+- 1983: Richard Stallman announces the GNU Project to create a free Unix-like OS
+- 1991: Linus Torvalds releases the Linux kernel
+- 1992-1993: Early Linux distributions combine the kernel with GNU tools
+- 1994-1995: Commercial Linux distributions begin to appear
+- 2000s: Linux gains enterprise adoption
+- 2010s: Linux dominates cloud computing and container technologies
+
+### Unix/Linux Today
+
+Today, Unix and Linux systems power:
+
+- Most of the world's web servers
+- The majority of cloud infrastructure
+- Android devices (Linux kernel)
+- Supercomputers and research systems
+- Embedded devices and IoT
+- Financial systems and critical infrastructure
+
+## Major Linux Distributions
+
+### Distribution Families
+
+Linux distributions ("distros") can be grouped into several major families:
+
+#### Debian-based
+- **Debian**: Community-developed, highly stable
+- **Ubuntu**: User-friendly, popular for desktops and servers
+- **Linux Mint**: Designed for ease of use
+- **Kali Linux**: Security and penetration testing
+
+#### Red Hat-based
+- **Red Hat Enterprise Linux (RHEL)**: Commercial, enterprise-focused
+- **CentOS/Rocky Linux/AlmaLinux**: Free RHEL-compatible distributions
+- **Fedora**: Cutting-edge features, sponsored by Red Hat
+
+#### SUSE-based
+- **SUSE Linux Enterprise**: Commercial enterprise distribution
+- **openSUSE**: Community version with Leap (stable) and Tumbleweed (rolling) variants
+
+#### Arch-based
+- **Arch Linux**: Rolling release, minimalist philosophy
+- **Manjaro**: User-friendly version of Arch
+- **EndeavourOS**: Arch-based with simplified installation
+
+#### Independent
+- **Gentoo**: Source-based, highly customizable
+- **Slackware**: One of the oldest distributions, minimalist
+- **Alpine**: Security-focused, lightweight
+
+### Choosing a Distribution
+
+Factors to consider when selecting a distribution:
+
+- **Stability vs. cutting-edge features**
+- **Release cycle** (fixed vs. rolling releases)
+- **Package management system**
+- **Community and commercial support**
+- **Default desktop environment**
+- **Specialized purpose** (server, desktop, security, etc.)
+
+## System Architecture Overview
+
+### Linux Kernel
+
+The kernel is the core of the operating system that:
+
+- Manages hardware resources
+- Provides process scheduling
+- Implements memory management
+- Handles file systems
+- Provides device drivers
+- Offers security and access control
+
+### User Space Components
+
+- **Shell**: Command interpreter (bash, zsh, etc.)
+- **Core utilities**: Basic commands and tools
+- **System services**: Background processes providing functionality
+- **Package management**: Installing and updating software
+- **Desktop environment** (if applicable): GUI and associated applications
+
+### Boot Process
+
+1. **BIOS/UEFI**: Initial hardware initialization
+2. **Bootloader** (GRUB, systemd-boot): Loads the kernel
+3. **Kernel initialization**: Hardware detection and setup
+4. **Init system** (systemd, SysV init): Starts system services
+5. **Login manager** or **shell prompt**: User interaction begins
+
+## File System Hierarchy
+
+### The Filesystem Hierarchy Standard (FHS)
+
+Linux follows a standardized directory structure:
+
+- **/bin**: Essential command binaries
+- **/boot**: Boot loader files and kernel
+- **/dev**: Device files
+- **/etc**: System configuration files
+- **/home**: User home directories
+- **/lib**: Essential shared libraries
+- **/media**: Mount points for removable media
+- **/mnt**: Temporary mount points
+- **/opt**: Optional application software
+- **/proc**: Virtual filesystem for process information
+- **/root**: Home directory for the root user
+- **/run**: Runtime variable data
+- **/sbin**: System binaries
+- **/srv**: Data for services provided by the system
+- **/sys**: Virtual filesystem for system information
+- **/tmp**: Temporary files
+- **/usr**: Secondary hierarchy (user programs, documentation)
+- **/var**: Variable data (logs, spool files, caches)
+
+### File Types in Linux
+
+- **Regular files**: Normal data files
+- **Directories**: Containers for other files
+- **Symbolic links**: Pointers to other files
+- **Device files**: Hardware device interfaces
+- **Named pipes**: FIFO (first-in, first-out) for inter-process communication
+- **Sockets**: Inter-process communication endpoints
+
+## Essential Command-Line Tools
+
+### Shell Basics
+
+- **Terminal emulators**: Programs that provide terminal functionality
+- **Shell prompt**: Where you type commands
+- **Command structure**: `command [options] [arguments]`
+- **Command history**: Access previous commands with up/down arrows
+- **Tab completion**: Press Tab to autocomplete commands and paths
+
+### File Navigation
+
+```bash
+# Print working directory
+pwd
+
+# List files and directories
+ls
+ls -l    # Long format with details
+ls -a    # Show hidden files
+ls -lh   # Human-readable file sizes
+
+# Change directory
+cd /path/to/directory
+cd ~     # Go to home directory
+cd ..    # Go up one level
+cd -     # Go to previous directory
+```
+
+### File Operations
+
+```bash
+# Create directories
+mkdir directory_name
+mkdir -p parent/child/grandchild   # Create parent directories as needed
+
+# Create empty files
+touch filename
+
+# Copy files and directories
+cp source destination
+cp -r source_dir destination_dir   # Recursive copy for directories
+
+# Move/rename files and directories
+mv source destination
+
+# Remove files and directories
+rm filename
+rm -r directory   # Recursive deletion
+rm -i filename    # Interactive mode (asks for confirmation)
+rm -f filename    # Force deletion without confirmation
+
+# Be very careful with rm, especially rm -rf!
+```
+
+### File Viewing
+
+```bash
+# View file contents
+cat filename       # Display entire file
+less filename      # Paginated viewing
+head filename      # First 10 lines
+head -n 20 filename  # First 20 lines
+tail filename      # Last 10 lines
+tail -f filename   # Follow file updates in real-time
+
+# File information
+file filename      # Determine file type
+stat filename      # Detailed file information
+```
+
+### Text Processing
+
+```bash
+# Search within files
+grep pattern filename
+grep -i pattern filename     # Case-insensitive
+grep -r pattern directory    # Recursive search
+
+# Stream editing
+sed 's/old/new/g' filename   # Replace text
+
+# Text manipulation
+cut -d ',' -f 1,3 filename   # Extract columns from CSV
+sort filename                # Sort lines
+uniq filename                # Remove duplicate lines
+wc filename                  # Count lines, words, characters
+```
+
+### System Information
+
+```bash
+# User information
+whoami         # Current username
+id             # User and group IDs
+who            # Who is logged in
+w              # Who is logged in and what they're doing
+
+# System information
+uname -a       # Kernel and system information
+hostname       # System hostname
+uptime         # How long the system has been running
+date           # Current date and time
+
+# Resource usage
+free -h        # Memory usage
+df -h          # Disk usage
+du -sh directory  # Directory size
+top            # Process information (interactive)
+ps aux         # Process listing
+```
+
+## Getting Help and Documentation
+
+### Manual Pages
+
+The `man` command provides detailed documentation for most commands:
+
+```bash
+man command_name
+man 5 passwd     # Section 5 (file formats) entry for passwd
+man -k keyword   # Search manual pages for keyword
+```
+
+Navigation in man pages:
+- Space/Page Down: Next page
+- b/Page Up: Previous page
+- /pattern: Search forward
+- n: Next search match
+- q: Quit
+
+### Info Pages
+
+The GNU project's documentation system:
+
+```bash
+info command_name
+```
+
+### Command Help Options
+
+Most commands offer built-in help:
+
+```bash
+command --help
+command -h
+```
+
+### Online Resources
+
+- Distribution documentation
+- The Linux Documentation Project (TLDP)
+- Stack Exchange sites
+- Command cheat sheets
+
+## Practical Exercise: Linux Exploration
+
+### Exercise 1: System Information Gathering
+
+Create a script or series of commands to gather the following information about your Linux system:
+
+1. Kernel version
+2. Distribution name and version
+3. Hostname
+4. CPU information
+5. Memory information
+6. Disk usage
+7. Currently logged-in users
+8. Running processes
+9. Network interfaces
+10. Listening network ports
+
+### Exercise 2: File System Navigation Challenge
+
+1. Starting from your home directory, create a directory structure that mimics the first three levels of the Linux file system hierarchy
+2. Create empty files representing some of the key configuration files
+3. Practice navigating through this structure using both absolute and relative paths
+4. Create symbolic links between related "configuration files"
+
+### Exercise 3: Command Line Problem Solving
+
+Solve the following tasks using command-line tools:
+
+1. Find all files in your home directory modified in the last 24 hours
+2. Count the number of lines containing the word "error" in a log file
+3. Find the largest 5 files in a directory tree
+4. Create a simple backup script that copies important configuration files to a backup directory with a timestamp
+5. Extract a specific column from a CSV file
+
+## Additional Resources
+
+- [The Linux Documentation Project](https://tldp.org/)
+- [Linux Journey](https://linuxjourney.com/)
+- [Explainshell](https://explainshell.com/) - Explains shell commands
+- [Linux Command Library](https://linuxcommandlibrary.com/)
+- [Unix/Linux Command Cheat Sheet](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)
+
+## Next Week
+
+Next week, we'll dive deeper into user and permission management, covering user accounts, groups, file permissions, access control lists, and security best practices.
+
+## Discussion Questions
+
+1. How does the Unix philosophy influence modern software design beyond operating systems?
+2. What factors would influence your choice of Linux distribution for different use cases?
+3. How does the Linux file system hierarchy enhance organization and security?
+4. What command-line tools do you find most useful, and why?
+5. How might the skills learned in this module apply to cloud computing environments?

@@ -124,13 +124,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <link rel="stylesheet" href="scss/styles.css">
 <link rel="stylesheet" href="scss/academy.scss">
+<link rel="stylesheet" href="scss/custom-hero.css">
 <meta property="og:title" content="chen.ist">
 <meta property="og:description" content="Innovative technology solutions for the modern world">
-<meta property="og:image" content="https://github/com/chen.ist/assets/svg/security_on.svg">
+<meta property="og:image" content="https://chen.ist/assets/svg/security_on.svg">
 <meta property="og:site_name" content="chen.ist">
 <meta name="twitter:title" content="chen.ist">
 <meta name="twitter:description" content="Innovative technology solutions for the modern world">
-<meta name="twitter:image" content="https://github/com/chen.ist/assets/svg/security_on.svg">
+<meta name="twitter:image" content="https://chen.ist/assets/svg/security_on.svg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -335,6 +336,18 @@ document.addEventListener('DOMContentLoaded', function() {
  <span class="dropdown-text">Courses</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./academy/trainings.html">
+ <span class="dropdown-text">Trainings</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./academy/microlearning.html">
+ <span class="dropdown-text">Microlearning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./academy/programs/index.html">
+ <span class="dropdown-text">Programs</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./academy/events.html">
  <span class="dropdown-text">Events</span></a>
   </li>  
@@ -425,7 +438,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome-to-chen.ist" id="toc-welcome-to-chen.ist" class="nav-link active" data-scroll-target="#welcome-to-chen.ist"><span class="text-white">Welcome to</span> <span class="text-green">chen.ist</span></a></li>
+  <li><a href="#welcome-to-chen.ist" id="toc-welcome-to-chen.ist" class="nav-link active" data-scroll-target="#welcome-to-chen.ist"><span class="text-dark">Welcome to</span> <span class="text-green">chen.ist</span></a></li>
   <li><a href="#our-services" id="toc-our-services" class="nav-link" data-scroll-target="#our-services">Our Services</a></li>
   <li><a href="#why-choose-us" id="toc-why-choose-us" class="nav-link" data-scroll-target="#why-choose-us">Why Choose Us</a></li>
   <li><a href="#latest-from-our-blog" id="toc-latest-from-our-blog" class="nav-link" data-scroll-target="#latest-from-our-blog">Latest from Our Blog</a></li>
@@ -460,7 +473,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="container">
 <div class="row align-items-center">
 <section id="welcome-to-chen.ist" class="level1 col-md-8 offset-md-2 text-center">
-<h1><span class="text-white">Welcome to</span> <span class="text-green">chen.ist</span></h1>
+<h1><span class="text-dark">Welcome to</span> <span class="text-green">chen.ist</span></h1>
 <p>Innovative technology solutions for the modern world</p>
 <p><a href="./contact.html" class="btn btn-success btn-lg cta-button">Get Started</a></p>
 </section>
@@ -546,7 +559,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <section id="latest-from-our-blog" class="level2 text-center mt-5 mb-4 container page-section">
 <h2 class="text-center mt-5 mb-4 anchored" data-anchor-id="latest-from-our-blog">Latest from Our Blog</h2>
 <div class="row">
-<div class="col-md-4">
+<div class="col-md-12">
 <div class="card h-100">
 <section id="cybersecurity-best-practices" class="level3 card-body">
 <h3 class="anchored" data-anchor-id="cybersecurity-best-practices"><a href="./blog/cyber-security-best-practices.html">Cybersecurity Best Practices</a></h3>
@@ -557,34 +570,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 <div class="card-footer">
 <p><i class="bi bi-calendar me-1"></i> April 1, 2025</p>
-</div>
-</div>
-</div>
-<div class="col-md-4">
-<div class="card h-100">
-<section id="data-privacy-as-business-advantage" class="level3 card-body">
-<h3 class="anchored" data-anchor-id="data-privacy-as-business-advantage">Data Privacy as Business Advantage</h3>
-<p>Why data privacy practices create competitive advantages, build customer trust, and enable distinctive business models.</p>
-<div class="text-end mt-4">
-<p><a href="./blog/drafts/why-data-privacy-business-advantage.html" class="btn btn-sm btn-outline-primary">Read More</a></p>
-</div>
-</section>
-<div class="card-footer">
-<p><i class="bi bi-calendar me-1"></i> June 8, 2025</p>
-</div>
-</div>
-</div>
-<div class="col-md-4">
-<div class="card h-100">
-<section id="zero-trust-architecture" class="level3 card-body">
-<h3 class="anchored" data-anchor-id="zero-trust-architecture">Zero Trust Architecture</h3>
-<p>Why modern businesses are embracing Zero Trust Architecture for enhanced security and protection against sophisticated threats.</p>
-<div class="text-end mt-4">
-<p><a href="./blog/drafts/why-zero-trust-architecture.html" class="btn btn-sm btn-outline-primary">Read More</a></p>
-</div>
-</section>
-<div class="card-footer">
-<p><i class="bi bi-calendar me-1"></i> March 22, 2025</p>
 </div>
 </div>
 </div>
@@ -692,7 +677,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/github\/com\/chen\.ist");
+        var filterRegex = new RegExp("https:\/\/chen\.ist");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1126,6 +1111,11 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <div class="col-6 col-md-3">
                                     <a href="./academy/computerclub.html" class="footer-link">
                                         <i class="bi bi-chevron-right icon-small"></i> Computer Club
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3 mt-2">
+                                    <a href="./academy/programs" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Explore Academy Programs
                                     </a>
                                 </div>
                             </div>

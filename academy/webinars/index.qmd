@@ -3,7 +3,7 @@ title: "Webinars"
 subtitle: "Browse all our webinars"
 format: 
   html:
-    css: scss/academy.scss
+    css: /scss/academy.scss
     classes: [academy-section]
 listing:
   contents: "pages/*.qmd"
@@ -16,12 +16,34 @@ listing:
   date-format: "MMMM D, YYYY"
 ---
 
+```{=html}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Webinars</li>
+  </ol>
+</nav>
+```
+
+```{=html}
+<img src="/assets/svg/presentation.svg" alt="Webinars" style="max-width: 150px; margin-bottom: 20px;">
+```
+
 Welcome to our webinars listing page. Here you can browse all upcoming and past webinars hosted by chen.ist. Use the filters to find webinars by category, date, or presenter.
+
+## Cyber Awareness (September 20, 2025)
+
+Learn how to strengthen your organization's human layer of defense with new-school security awareness and compliance training. This webinar focuses on building a security culture that reduces human risk.
+
+**Hosts:** Alin Mechenici, CEO @ Chenist Cybersecurity & Aneta Kozakiewicz, Channel Account Manager @ KnowBe4
+
+[Learn more about this webinar →](/academy/webinars/pages/cyber-awareness.html)
 
 ```{=html}
 <div class="alert alert-success mt-4 mb-4" role="alert">
   <h4 class="alert-heading"><i class="bi bi-megaphone"></i> New Webinar Added!</h4>
-  <p>Check out our <a href="pages/zero-trust-security.html" class="alert-link">Zero Trust Security Architecture</a> webinar on June 10, 2025 - learn essential principles for modern enterprise security.</p>
+  <p>Check out our <a href="pages/cyber-awareness.html" class="alert-link">Cyber Awareness</a> webinar on September 20, 2025 - learn how to strengthen your organization's human layer of defense with new-school security awareness training.</p>
 </div>
 ```
 

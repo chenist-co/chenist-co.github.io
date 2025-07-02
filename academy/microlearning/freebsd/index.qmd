@@ -1,0 +1,267 @@
+---
+title: "FreeBSD Basics"
+subtitle: "Get started with this powerful Unix-like operating system in just 2 hours"
+description: "Learn the fundamentals of FreeBSD, a reliable, high-performance Unix-like operating system known for its stability, security, and advanced networking capabilities."
+image: /assets/images/placeholder.jpg
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    css: /scss/academy.scss
+    classes: [academy-section]
+date-modified: last-modified
+categories:
+  - operating-systems
+  - unix
+  - system-administration
+  - networking
+---
+
+```{=html}
+<div class="container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
+      <li class="breadcrumb-item"><a href="/academy/microlearning.html">Microlearning</a></li>
+      <li class="breadcrumb-item active" aria-current="page">FreeBSD Basics</li>
+    </ol>
+  </nav>
+</div>
+
+<div class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <h1>FreeBSD Basics</h1>
+        <p class="lead">Learn the essentials of this powerful, stable Unix-like operating system in just 2 hours</p>
+        <div class="mt-4">
+          <span class="badge bg-primary me-2">2 Hours</span>
+          <span class="badge bg-secondary me-2">Beginner to Intermediate</span>
+          <span class="badge bg-success">Hands-on</span>
+        </div>
+      </div>
+      <div class="col-lg-4 text-center">
+        <img src="/assets/images/placeholder.jpg" alt="FreeBSD Workshop" class="img-fluid rounded shadow-lg" style="max-height: 300px;">
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+# Session Overview
+
+This 2-hour microlearning session introduces FreeBSD, a powerful, stable, and secure Unix-like operating system with a long history of reliability in server environments. Unlike Linux distributions, FreeBSD is developed as a complete operating system with a coherent design philosophy. In this session, you'll learn the fundamentals of FreeBSD, its unique features, and how to perform essential system administration tasks in a FreeBSD environment.
+
+## What You'll Learn
+
+- Understand FreeBSD's history, design philosophy, and architecture
+- Navigate the FreeBSD file system and shell environment
+- Install and manage software with the ports system and binary packages
+- Configure basic system settings and services
+- Manage users, permissions, and security features
+- Understand FreeBSD's networking capabilities
+- Perform basic troubleshooting and system maintenance
+
+# Session Curriculum
+
+## Part 1: Introduction to FreeBSD (30 minutes)
+
+- FreeBSD history and the BSD family
+- FreeBSD vs. Linux: key differences and similarities
+- The FreeBSD design philosophy and development model
+- FreeBSD architecture and components
+- Installation options (demonstration in virtual machine)
+- Navigating the FreeBSD file system
+- The base system vs. third-party software
+
+## Part 2: Essential System Administration (40 minutes)
+
+- User and group management
+- File permissions and security
+- Software management with pkg and ports
+- System configuration with /etc/rc.conf
+- Service management
+- FreeBSD boot process
+- File systems and disk management
+- Basic networking configuration
+
+## Part 3: Advanced Features and Capabilities (40 minutes)
+
+- FreeBSD jails for containerization
+- ZFS file system integration
+- Network performance tuning
+- Security features and hardening
+- Kernel configuration and tuning
+- Updating and upgrading FreeBSD
+- FreeBSD in production environments
+- Common use cases and deployment scenarios
+
+## Part 4: Resources and Next Steps (10 minutes)
+
+- FreeBSD documentation and community resources
+- Troubleshooting common issues
+- Performance monitoring and optimization
+- Recommended learning path for advanced topics
+- Real-world FreeBSD deployment examples
+
+# Learning Outcomes
+
+By the end of this microlearning session, you will be able to:
+
+- Understand the core concepts and benefits of FreeBSD
+- Navigate and use the FreeBSD command line interface
+- Install and manage software packages
+- Configure basic system settings and services
+- Perform essential system administration tasks
+- Understand FreeBSD's approach to security and networking
+- Know where to find help and resources for continued learning
+
+# Teaching Methods
+
+This session combines:
+
+- Live demonstrations
+- Hands-on exercises (in virtual machines)
+- Command examples and explanations
+- Real-world use cases
+- Problem-solving scenarios
+
+# Target Audience
+
+This microlearning session is ideal for:
+
+- System administrators looking to expand their knowledge
+- DevOps professionals exploring alternative operating systems
+- IT professionals interested in server technologies
+- Computer science students studying operating systems
+- Anyone interested in Unix-like operating systems beyond Linux
+
+# Prerequisites
+
+- Basic understanding of command line interfaces
+- Familiarity with general operating system concepts
+- Some experience with Linux or Unix-like systems is helpful but not required
+- Bring your laptop with VirtualBox or another virtualization solution installed (for hands-on exercises)
+
+# Materials
+
+All participants will receive:
+
+- FreeBSD virtual machine image for practice
+- Command reference sheet for common FreeBSD tasks
+- Configuration file templates for typical setups
+- Troubleshooting guide for common issues
+- List of recommended FreeBSD resources and books
+
+```{=html}
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h3>Your Instructor</h3>
+          <div class="d-flex align-items-center mb-3">
+            <img src="/assets/images/placeholder.jpg" alt="Instructor" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;">
+            <div>
+              <h5 class="mb-0">Michael Torres</h5>
+              <p class="text-muted mb-0">Systems Engineer & BSD Specialist</p>
+            </div>
+          </div>
+          <p>Michael has over 12 years of experience working with FreeBSD in production environments, from high-traffic web servers to specialized networking appliances. He has contributed to FreeBSD documentation and regularly speaks at BSD conferences.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h3>Register Now</h3>
+          <p>Next session: <strong>August 10, 2023, 3:00 PM - 5:00 PM CEST</strong></p>
+          <p>Fee: <strong>€49</strong> (Group discounts available)</p>
+          <p>Location: <strong>Online via Zoom</strong></p>
+          <a href="/contact.html" class="btn btn-primary">Register for This Session</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4 mb-5">
+  <h2 class="text-center mb-4">What Participants Say</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <p class="fst-italic">"The coherent design of FreeBSD makes so much more sense now. This session gave me the confidence to start using FreeBSD for some of our infrastructure needs."</p>
+          <div class="d-flex align-items-center">
+            <div>
+              <h5 class="mb-0">Richard T.</h5>
+              <p class="text-muted mb-0">Network Administrator</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <p class="fst-italic">"I've been curious about FreeBSD for years but was intimidated by the learning curve. This session broke it down into manageable pieces and the virtual machine exercises were extremely helpful."</p>
+          <div class="d-flex align-items-center">
+            <div>
+              <h5 class="mb-0">Anita K.</h5>
+              <p class="text-muted mb-0">Linux System Administrator</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <p class="fst-italic">"The section on ZFS and jails was eye-opening. I can see why many hosting providers rely on FreeBSD for their infrastructure. The instructor's real-world examples were particularly valuable."</p>
+          <div class="d-flex align-items-center">
+            <div>
+              <h5 class="mb-0">Paul M.</h5>
+              <p class="text-muted mb-0">DevOps Engineer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5 mb-5">
+  <h2 class="text-center mb-4">Related Offerings</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h4>Advanced FreeBSD Administration</h4>
+          <p>A comprehensive course covering advanced FreeBSD topics including performance tuning, security hardening, and enterprise deployment.</p>
+          <a href="/academy/courses.html" class="btn btn-outline-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h4>OpenBSD Security</h4>
+          <p>Explore OpenBSD, another member of the BSD family known for its emphasis on security and code correctness.</p>
+          <a href="/academy/microlearning/openbsd/" class="btn btn-outline-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h4>ZFS Administration Workshop</h4>
+          <p>A full-day deep dive into the advanced features and administration of the ZFS file system on FreeBSD and other platforms.</p>
+          <a href="/academy/trainings.html" class="btn btn-outline-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```

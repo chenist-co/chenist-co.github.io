@@ -1,0 +1,218 @@
+---
+title: "Week 1: Introduction to Cybersecurity"
+subtitle: "Understanding the fundamentals of cybersecurity concepts and threats"
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+date-modified: last-modified
+---
+
+# Introduction to Cybersecurity
+
+## Learning Objectives
+
+By the end of this module, you will be able to:
+
+- Define key cybersecurity concepts and terminology
+- Identify the main categories of cyber threats and attack vectors
+- Explain the motivations and methods of different threat actors
+- Apply core security principles including the CIA triad
+- Analyze basic security incidents using a structured approach
+- Begin building your cybersecurity mindset
+
+## Understanding Cybersecurity
+
+### What is Cybersecurity?
+
+Cybersecurity is the practice of protecting systems, networks, programs, devices, and data from digital attacks, damage, or unauthorized access. It encompasses technologies, processes, and practices designed to safeguard all components of cyberspace from threats.
+
+### Why Cybersecurity Matters
+
+- **Digital Transformation**: As organizations and society become increasingly digitized, attack surfaces expand
+- **Financial Impact**: The average cost of a data breach in 2024 exceeds $4.5 million
+- **Regulatory Requirements**: Growing legal and compliance mandates around data protection
+- **Reputation**: Security incidents can cause lasting damage to organizational trust
+- **Critical Infrastructure**: Cyber attacks can impact essential services and public safety
+- **Personal Impact**: Individual privacy and financial security are at stake
+
+### Key Concepts and Terminology
+
+- **Asset**: Anything of value that needs protection (data, systems, etc.)
+- **Vulnerability**: A weakness that can be exploited by threats
+- **Threat**: A potential danger to assets
+- **Risk**: The potential for loss or damage when a threat exploits a vulnerability
+- **Control**: A safeguard or countermeasure to mitigate risk
+- **Exploit**: A method of leveraging a vulnerability
+- **Attack Vector**: The path or means by which an attacker gains access
+- **Attack Surface**: The sum of all points where an attacker could attempt to enter
+- **Security Posture**: The overall security status of an organization
+
+## The Threat Landscape
+
+### Categories of Cyber Threats
+
+#### Malware
+- **Viruses**: Self-replicating programs that attach to legitimate files
+- **Worms**: Self-propagating malware that spreads across networks
+- **Trojans**: Malware disguised as legitimate software
+- **Ransomware**: Encrypts data and demands payment for decryption
+- **Spyware**: Covertly gathers information about users
+- **Rootkits**: Provide privileged access while hiding their presence
+- **Fileless Malware**: Operates in memory, leaving minimal traces on disk
+
+#### Social Engineering
+- **Phishing**: Deceptive communications to steal credentials or information
+- **Spear Phishing**: Targeted phishing attacks against specific individuals
+- **Pretexting**: Creating a fabricated scenario to obtain information
+- **Baiting**: Offering something enticing to entrap the victim
+- **Quid Pro Quo**: Offering a service or benefit in exchange for information
+- **Tailgating**: Unauthorized access to physical locations by following legitimate users
+
+#### Network-Based Attacks
+- **Man-in-the-Middle**: Intercepting and potentially altering communications
+- **Denial of Service**: Overwhelming systems to make them unavailable
+- **DNS Attacks**: Manipulating domain name resolution
+- **ARP Spoofing**: Linking attacker's MAC address to legitimate IP addresses
+- **Session Hijacking**: Taking over valid user sessions
+
+#### Web Application Attacks
+- **SQL Injection**: Inserting malicious SQL code into database queries
+- **Cross-Site Scripting (XSS)**: Injecting malicious scripts into web pages
+- **Cross-Site Request Forgery (CSRF)**: Tricking users into performing unwanted actions
+- **Server-Side Request Forgery (SSRF)**: Inducing servers to make unintended requests
+- **Insecure Deserialization**: Exploiting flawed deserialization processes
+
+### Threat Actors
+
+#### Motivation-Based Categories
+- **Cybercriminals**: Financially motivated attackers
+- **Nation-State Actors**: Government-sponsored groups conducting espionage or sabotage
+- **Hacktivists**: Ideologically motivated attackers
+- **Insider Threats**: Employees or contractors who misuse their access
+- **Script Kiddies**: Inexperienced attackers using pre-written tools
+- **Advanced Persistent Threats (APTs)**: Sophisticated, targeted campaigns
+
+#### Capability Levels
+- **Low Skill**: Using publicly available tools with minimal customization
+- **Moderate Skill**: Combining and modifying existing tools and techniques
+- **High Skill**: Developing custom exploits and evasion techniques
+- **Elite**: Creating novel attack methods and zero-day exploits
+
+### Attack Lifecycle
+
+The Cyber Kill Chain model developed by Lockheed Martin describes the stages of a cyber attack:
+
+1. **Reconnaissance**: Gathering information about the target
+2. **Weaponization**: Preparing malware or attack vectors
+3. **Delivery**: Transmitting the weapon to the target
+4. **Exploitation**: Triggering the malicious code
+5. **Installation**: Installing malware on the target system
+6. **Command & Control**: Establishing persistent remote access
+7. **Actions on Objectives**: Achieving the ultimate goal (data theft, destruction, etc.)
+
+## Core Security Principles
+
+### The CIA Triad
+
+The CIA Triad forms the foundation of information security:
+
+- **Confidentiality**: Ensuring that information is accessible only to those authorized to have access
+- **Integrity**: Maintaining and assuring the accuracy and completeness of data
+- **Availability**: Ensuring that authorized users have access to information when needed
+
+### Additional Security Principles
+
+- **Defense in Depth**: Multiple layers of security controls
+- **Least Privilege**: Providing minimal access rights needed for functions
+- **Separation of Duties**: Dividing critical functions among different individuals
+- **Need to Know**: Restricting access to the minimum necessary information
+- **Zero Trust**: "Never trust, always verify" approach to security
+- **Fail Secure**: Systems should default to secure state when failures occur
+
+## Risk Management Basics
+
+### The Risk Equation
+
+Risk = Threat × Vulnerability × Impact
+
+### Risk Management Process
+
+1. **Risk Identification**: Determining what risks exist
+2. **Risk Assessment**: Evaluating the significance of risks
+3. **Risk Treatment**: Deciding how to handle identified risks
+   - Accept: Acknowledge the risk without action
+   - Mitigate: Implement controls to reduce risk
+   - Transfer: Shift risk to another party (e.g., insurance)
+   - Avoid: Eliminate the activity causing the risk
+
+### Security Controls Categories
+
+- **Preventive**: Stop attacks before they occur
+- **Detective**: Identify attacks in progress
+- **Corrective**: Minimize impact after an incident
+- **Deterrent**: Discourage attackers from targeting
+- **Recovery**: Restore operations after an incident
+
+## Developing a Security Mindset
+
+### Characteristics of Security Thinking
+
+- **Adversarial Thinking**: Considering how systems might be attacked
+- **Holistic Perspective**: Looking at the big picture of security
+- **Questioning Assumptions**: Challenging "secure by default" claims
+- **Proactive Approach**: Anticipating problems before they arise
+- **Continuous Learning**: Keeping up with evolving threats
+
+### Building Your Security Awareness
+
+- **Stay Informed**: Follow security news and advisories
+- **Practice Skepticism**: Question unexpected communications
+- **Apply Updates**: Keep systems and applications patched
+- **Use Strong Authentication**: Implement multi-factor authentication
+- **Segment Information**: Avoid sharing sensitive data unnecessarily
+
+## Practical Exercise: Security Analysis
+
+### Exercise 1: Threat Identification
+
+1. Consider a common system (e.g., email, cloud storage, smartphone)
+2. Identify at least five potential threats to that system
+3. For each threat:
+   - Describe the potential attack vector
+   - Identify the security principle(s) that would be violated
+   - Suggest a control that could mitigate the threat
+
+### Exercise 2: Security Incident Analysis
+
+Review the following scenario:
+
+> A company employee received an email appearing to be from the IT department requesting they update their password by clicking a link. After following the link and entering their current credentials, they began experiencing unusual behavior on their computer, and colleagues reported receiving strange emails from their account.
+
+Answer the following questions:
+1. What type of attack likely occurred?
+2. What were the attack vectors?
+3. What security principles were violated?
+4. What could have prevented this attack?
+5. What immediate steps should be taken to respond?
+
+## Additional Resources
+
+- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
+- [SANS Internet Storm Center](https://isc.sans.edu/)
+- [OWASP Top Ten](https://owasp.org/www-project-top-ten/)
+- [US-CERT Advisories](https://www.cisa.gov/uscert/)
+- [Krebs on Security Blog](https://krebsonsecurity.com/)
+
+## Next Week
+
+Next week, we'll explore regulatory frameworks and compliance requirements in cybersecurity, and set up our security lab environment for hands-on practice throughout the course.
+
+## Discussion Questions
+
+1. How has your understanding of cybersecurity changed after this introduction?
+2. Which type of cyber threat do you think poses the greatest risk to organizations today, and why?
+3. How do you currently apply security principles in your personal digital life?
+4. What aspects of cybersecurity are you most interested in exploring further?
+5. How might the cybersecurity landscape evolve in the next 5-10 years?

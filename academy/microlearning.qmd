@@ -1,0 +1,661 @@
+---
+title: "Microlearning"
+subtitle: "Bite-sized 1-2 hour skill sessions"
+description: "Focused 1-2 hour microlearning sessions for specific tools and technologies. Perfect for busy professionals who want to quickly learn a new skill or tool."
+image: /assets/images/placeholder.jpg
+from: markdown+raw_html
+categories:
+  - open-source
+  - linux
+  - tools
+  - productivity
+  - text-editors
+format: 
+  html:
+    css: /scss/academy.scss
+    classes: [academy-section]
+---
+
+```{=html}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/academy.qmd">Academy</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Microlearning</li>
+  </ol>
+</nav>
+
+<div class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8 offset-md-2 text-center">
+        <img src="/assets/svg/learning.svg" alt="Microlearning" style="max-width: 150px; margin-bottom: 20px;">
+        <h1><span class="academy-text">Micro</span><span class="text-green">learning</span></h1>
+        <p>Master new tools and skills in just 1-2 hours</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Ensure the text is white in both light and dark modes */
+  .academy-text {
+    color: white !important;
+  }
+</style>
+```
+
+::: {.container .page-section}
+## Learning Options
+
+```{=html}
+<div class="row mb-5">
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header bg-success text-white">
+        <h3 class="mb-0">Courses</h3>
+        <span class="badge bg-light text-dark">8-12 Weeks</span>
+      </div>
+      <div class="card-body">
+        <p>Comprehensive learning experiences with in-depth coverage of topics and hands-on projects.</p>
+        <p><strong>Perfect for:</strong> Deep skill development and career advancement</p>
+        <a href="/academy/courses.html" class="btn btn-success">Browse Courses</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header bg-primary text-white">
+        <h3 id="Trainings" class="mb-0 text-white">Trainings</h3>
+        <span class="badge bg-light text-dark">1-2 Days</span>
+      </div>
+      <div class="card-body">
+        <p>Intensive workshops focused on practical skills you can apply immediately in your work.</p>
+        <p><strong>Perfect for:</strong> Professionals with limited time who need specific skills</p>
+        <a href="/academy/trainings.html" class="btn btn-primary text-white">Browse Trainings</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header bg-info text-white">
+        <h3 class="mb-0">Microlearning</h3>
+        <span class="badge bg-light text-dark">1-2 Hours</span>
+      </div>
+      <div class="card-body">
+        <p>Bite-sized sessions on specific tools and technologies for quick skill acquisition.</p>
+        <p><strong>Perfect for:</strong> Busy professionals who want to learn a specific tool</p>
+        <p class="text-info fw-bold">You are here</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-5">
+  <div class="card-header bg-secondary text-white">
+    <h3 class="mb-0">For Organizations</h3>
+  </div>
+  <div class="card-body">
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <p class="mb-0">We offer custom microlearning packages for organizations looking to provide focused skill development for their teams. These can be delivered as lunch-and-learn sessions, team building activities, or as part of a broader training program.</p>
+      </div>
+      <div class="col-md-4 text-end">
+        <a href="/academy/partnerships.html" class="btn btn-secondary">Learn About Partnerships</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+```
+
+## Available Microlearning Sessions
+
+Our microlearning sessions are designed for busy professionals who want to quickly learn a specific tool or technology. Each session is just 1-2 hours long, focused on practical skills you can immediately apply.
+
+```{=html}
+<div class="row mt-5">
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">Unix Command Line Introduction</h3>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">Beginner</span>
+          <span class="badge bg-secondary">2 Hours</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4>Session Overview</h4>
+        <p>A quick introduction to the Unix command line interface for beginners, focused on essential commands and navigation.</p>
+
+        <h4>Key Topics</h4>
+        <ul>
+          <li>Basic file and directory operations</li>
+          <li>Navigation and file exploration</li>
+          <li>Text manipulation with command line tools</li>
+          <li>Simple shell scripting concepts</li>
+          <li>Using command line help and documentation</li>
+        </ul>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <span><strong>Next Session:</strong> June 10, 2025</span>
+          <a href="/academy/microlearning/cli-intro/" class="btn btn-success">Session Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">SC-IM Spreadsheets</h3>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">Intermediate</span>
+          <span class="badge bg-secondary">1 Hour</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4>Session Overview</h4>
+        <p>Learn SC-IM, a powerful spreadsheet program that runs in the terminal, offering a lightweight alternative to traditional spreadsheet applications.</p>
+
+        <h4>Key Topics</h4>
+        <ul>
+          <li>Basic navigation and data entry</li>
+          <li>Formulas and calculations</li>
+          <li>Data formatting and visualization</li>
+          <li>Keyboard shortcuts for efficiency</li>
+          <li>Importing and exporting data</li>
+        </ul>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <span><strong>Next Session:</strong> June 15, 2025</span>
+          <a href="/academy/microlearning/sc-im/" class="btn btn-success">Session Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">Tmux Terminal Multiplexer</h3>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">Beginner</span>
+          <span class="badge bg-secondary">1 Hour</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4>Session Overview</h4>
+        <p>Master Tmux, a terminal multiplexer that allows you to manage multiple terminal sessions within a single window.</p>
+
+        <h4>Key Topics</h4>
+        <ul>
+          <li>Session management</li>
+          <li>Window and pane operations</li>
+          <li>Navigation shortcuts</li>
+          <li>Configuration basics</li>
+          <li>Useful plugins and customizations</li>
+        </ul>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <span><strong>Next Session:</strong> June 22, 2025</span>
+          <a href="/academy/microlearning/tmux/" class="btn btn-success">Session Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">Syncthing</h3>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">All Levels</span>
+          <span class="badge bg-secondary">2 Hours</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4>Session Overview</h4>
+        <p>Set up and configure Syncthing, a free, open-source peer-to-peer file synchronization tool that respects your privacy.</p>
+
+        <h4>Key Topics</h4>
+        <ul>
+          <li>Installation and initial setup</li>
+          <li>Creating and managing shared folders</li>
+          <li>Device connections and permissions</li>
+          <li>Conflict resolution</li>
+          <li>Security and privacy features</li>
+        </ul>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <span><strong>Next Session:</strong> July 5, 2025</span>
+          <a href="/academy/microlearning/syncthing/" class="btn btn-success">Session Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">Emacs Essentials</h3>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">Beginner</span>
+          <span class="badge bg-secondary">2 Hours</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4>Session Overview</h4>
+        <p>An introduction to Emacs, a powerful, extensible text editor with a rich ecosystem and a wide range of capabilities.</p>
+
+        <h4>Key Topics</h4>
+        <ul>
+          <li>Basic navigation and editing</li>
+          <li>Essential keyboard shortcuts</li>
+          <li>Buffers, windows, and frames</li>
+          <li>Simple customizations</li>
+          <li>Introduction to Emacs packages</li>
+        </ul>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <span><strong>Next Session:</strong> July 12, 2025</span>
+          <a href="/academy/microlearning/emacs/" class="btn btn-success">Session Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">LibreOffice Calc</h3>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">All Levels</span>
+          <span class="badge bg-secondary">2 Hours</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4>Session Overview</h4>
+        <p>Learn to use LibreOffice Calc, a powerful open-source spreadsheet application that offers a full-featured alternative to Microsoft Excel.</p>
+
+        <h4>Key Topics</h4>
+        <ul>
+          <li>Interface navigation and customization</li>
+          <li>Advanced formulas and functions</li>
+          <li>Data analysis tools</li>
+          <li>Charts and data visualization</li>
+          <li>Macros and automation</li>
+        </ul>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <span><strong>Next Session:</strong> July 18, 2025</span>
+          <a href="/academy/microlearning/libreoffice-calc/" class="btn btn-success">Session Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">Quarto Publishing</h3>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">Intermediate</span>
+          <span class="badge bg-secondary">2 Hours</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4>Session Overview</h4>
+        <p>Get started with Quarto, an open-source scientific and technical publishing system built on Pandoc.</p>
+
+        <h4>Key Topics</h4>
+        <ul>
+          <li>Document structure and YAML frontmatter</li>
+          <li>Markdown syntax and extensions</li>
+          <li>Code chunks and execution</li>
+          <li>Output formats (HTML, PDF, presentations)</li>
+          <li>Publishing and sharing documents</li>
+        </ul>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <span><strong>Next Session:</strong> August 5, 2025</span>
+          <a href="/academy/microlearning/quarto/" class="btn btn-success">Session Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">Org-mode Fundamentals</h3>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">Intermediate</span>
+          <span class="badge bg-secondary">2 Hours</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4>Session Overview</h4>
+        <p>Learn the basics of Org-mode, a powerful plain text system for note-taking, task management, and document authoring in Emacs.</p>
+
+        <h4>Key Topics</h4>
+        <ul>
+          <li>Document structure and organization</li>
+          <li>Task and project management</li>
+          <li>Agenda views and scheduling</li>
+          <li>Export and publishing options</li>
+          <li>Literate programming with Org Babel</li>
+        </ul>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <span><strong>Next Session:</strong> August 15, 2025</span>
+          <a href="/academy/microlearning/org-mode/" class="btn btn-success">Session Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">LaTeX for Academic Writing</h3>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">Beginner</span>
+          <span class="badge bg-secondary">2 Hours</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4>Session Overview</h4>
+        <p>An introduction to LaTeX, a document preparation system widely used for academic and scientific publishing.</p>
+
+        <h4>Key Topics</h4>
+        <ul>
+          <li>Document structure and basic syntax</li>
+          <li>Mathematical equations and notation</li>
+          <li>Bibliographies with BibTeX</li>
+          <li>Tables and figures</li>
+          <li>Common document classes and packages</li>
+        </ul>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <span><strong>Next Session:</strong> August 22, 2025</span>
+          <a href="/academy/microlearning/latex/" class="btn btn-success">Session Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">Typst Markup Language</h3>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">Beginner</span>
+          <span class="badge bg-secondary">1 Hour</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4>Session Overview</h4>
+        <p>Discover Typst, a modern markup-based typesetting system that offers a simpler alternative to LaTeX.</p>
+
+        <h4>Key Topics</h4>
+        <ul>
+          <li>Syntax and document structure</li>
+          <li>Text formatting and styling</li>
+          <li>Mathematical notation</li>
+          <li>Figures, tables, and references</li>
+          <li>Custom functions and templates</li>
+        </ul>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <span><strong>Next Session:</strong> September 5, 2025</span>
+          <a href="/academy/microlearning/typst/" class="btn btn-success">Session Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">NixOS Introduction</h3>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">Intermediate</span>
+          <span class="badge bg-secondary">2 Hours</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4>Session Overview</h4>
+        <p>A quick introduction to NixOS, a Linux distribution built on the unique Nix package manager with declarative configuration.</p>
+
+        <h4>Key Topics</h4>
+        <ul>
+          <li>Nix package manager basics</li>
+          <li>Declarative system configuration</li>
+          <li>NixOS configuration.nix</li>
+          <li>Managing services and users</li>
+          <li>Rollbacks and system generations</li>
+        </ul>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <span><strong>Next Session:</strong> September 12, 2025</span>
+          <a href="/academy/microlearning/nixos/" class="btn btn-success">Session Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">FreeBSD Basics</h3>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">Intermediate</span>
+          <span class="badge bg-secondary">2 Hours</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4>Session Overview</h4>
+        <p>An introduction to FreeBSD, a powerful, flexible, and secure operating system known for its reliability and performance.</p>
+
+        <h4>Key Topics</h4>
+        <ul>
+          <li>FreeBSD installation overview</li>
+          <li>System architecture and design</li>
+          <li>Package management with pkg</li>
+          <li>Ports collection basics</li>
+          <li>System configuration and rc.conf</li>
+        </ul>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <span><strong>Next Session:</strong> September 20, 2025</span>
+          <a href="/academy/microlearning/freebsd/" class="btn btn-success">Session Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">OpenBSD Security</h3>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">Intermediate</span>
+          <span class="badge bg-secondary">2 Hours</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4>Session Overview</h4>
+        <p>Learn about OpenBSD, an operating system known for its focus on security, correctness, and proactive security features.</p>
+
+        <h4>Key Topics</h4>
+        <ul>
+          <li>Security philosophy and approach</li>
+          <li>Installation and basic setup</li>
+          <li>Privilege separation and pledge</li>
+          <li>PF firewall basics</li>
+          <li>Security mitigations and features</li>
+        </ul>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <span><strong>Next Session:</strong> October 5, 2025</span>
+          <a href="/academy/microlearning/openbsd/" class="btn btn-success">Session Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">QubesOS Security Model</h3>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">Advanced</span>
+          <span class="badge bg-secondary">2 Hours</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4>Session Overview</h4>
+        <p>Explore QubesOS, a security-focused operating system that uses virtualization to provide strong security through isolation.</p>
+
+        <h4>Key Topics</h4>
+        <ul>
+          <li>Security by compartmentalization</li>
+          <li>Qubes domains and virtual machines</li>
+          <li>Template-based system design</li>
+          <li>Security workflows and practices</li>
+          <li>Inter-VM communication and data transfer</li>
+        </ul>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <span><strong>Next Session:</strong> October 15, 2025</span>
+          <a href="/academy/microlearning/qubesos/" class="btn btn-success">Session Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+## Microlearning Format
+
+Our microlearning sessions are designed for maximum efficiency and immediate application:
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-md-4">
+    <div class="security-feature">
+      <h3>Focused Content</h3>
+      <p>Each session targets a specific tool or technology with no wasted time.</p>
+      <ul>
+        <li>Concentrated on essential skills</li>
+        <li>Practical, hands-on approach</li>
+        <li>Immediate application focus</li>
+        <li>Tool-specific best practices</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="security-feature">
+      <h3>Flexible Scheduling</h3>
+      <p>Fit learning into your busy schedule with our short, focused sessions.</p>
+      <ul>
+        <li>Lunchtime learning options</li>
+        <li>Early morning sessions</li>
+        <li>Evening availability</li>
+        <li>On-demand recordings</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="security-feature">
+      <h3>Practical Resources</h3>
+      <p>Take away resources you can use immediately after the session.</p>
+      <ul>
+        <li>Quick reference guides</li>
+        <li>Configuration templates</li>
+        <li>Command cheat sheets</li>
+        <li>Recommended practice exercises</li>
+      </ul>
+    </div>
+  </div>
+</div>
+```
+
+## Why Choose Our Microlearning
+
+```{=html}
+<div class="row mt-5">
+  <div class="col-lg-3 col-md-6">
+    <div class="feature-card text-center">
+      <div class="feature-card-icon">
+        <i class="bi bi-clock"></i>
+      </div>
+      <h3>Time-Efficient</h3>
+      <p>Just 1-2 hours of focused learning gets you productive with new tools quickly.</p>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6">
+    <div class="feature-card text-center">
+      <div class="feature-card-icon">
+        <i class="bi bi-tools"></i>
+      </div>
+      <h3>Tool-Focused</h3>
+      <p>Practical skills for specific tools rather than broad theoretical concepts.</p>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6">
+    <div class="feature-card text-center">
+      <div class="feature-card-icon">
+        <i class="bi bi-lightning-charge"></i>
+      </div>
+      <h3>Immediate Application</h3>
+      <p>Start using what you learn immediately after the session concludes.</p>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6">
+    <div class="feature-card text-center">
+      <div class="feature-card-icon">
+        <i class="bi bi-puzzle"></i>
+      </div>
+      <h3>Building Blocks</h3>
+      <p>Stack multiple microlearning sessions to build comprehensive skillsets.</p>
+    </div>
+  </div>
+</div>
+```
+:::
+
+```{=html}
+<div class="cta-section">
+  <div class="container text-center">
+    <h2><span class="text-dark">Ready to learn something new?</span></h2>
+    <p class="mb-4">Browse our microlearning catalog and find the perfect short session to expand your skillset.</p>
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-6">
+        <a href="/academy/programs" class="cta-button">Explore Academy Programs</a>
+      </div>
+      <br>
+      <br>
+      <div class="col-md-6">
+        <a href="/contact.qmd" class="cta-button">Schedule a Session</a>
+      </div>
+    </div>
+  </div>
+</div>
+```

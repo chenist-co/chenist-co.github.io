@@ -1,0 +1,267 @@
+---
+title: "NixOS Security Jumpstart Training"
+subtitle: "A 2-day intensive workshop on secure system configuration with NixOS"
+description: "Intensive 2-day hands-on workshop for system administrators and security professionals to leverage NixOS for improved security, featuring reproducible configurations, immutable deployments, and security best practices."
+image: /assets/images/placeholder.jpg
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    css: /scss/academy.scss
+    classes: [academy-section]
+date-modified: last-modified
+categories:
+  - nixos
+  - system-security
+  - secure-configuration
+  - immutable-infrastructure
+---
+
+```{=html}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
+    <li class="breadcrumb-item"><a href="/academy/trainings.qmd">Trainings</a></li>
+    <li class="breadcrumb-item active" aria-current="page">NixOS Security Jumpstart</li>
+  </ol>
+</nav>
+
+<div class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8 offset-md-2 text-center">
+        <h1>NixOS Security <span class="text-green">Jumpstart</span></h1>
+        <p>Master secure system configuration with NixOS's declarative approach</p>
+        <div class="d-flex justify-content-center">
+          <span class="badge bg-primary me-2">Intermediate</span>
+          <span class="badge bg-secondary">2 Days</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+::: {.container .page-section}
+
+## Training Overview
+
+This intensive 2-day workshop provides practical, hands-on training for system administrators and security professionals who want to leverage NixOS for improved security posture. The training focuses on NixOS's unique advantages for security, including reproducible system configurations, declarative management, secure package handling, and immutable deployments. Participants will learn how to implement, harden, and maintain NixOS systems with security best practices at the forefront.
+
+### Next Session
+
+- **Dates:** August 15-16, 2025
+- **Times:** 9:00 AM - 5:00 PM each day
+- **Format:** Available in-person or live virtual
+- **Prerequisites:** Basic Linux administration knowledge
+- **Price:** $1,195 per participant (includes materials, lunch for in-person attendees, and 30-day follow-up support)
+
+## Training Curriculum
+
+### Day 1: NixOS Foundations and Secure Configuration
+
+**Morning Session: NixOS Security Fundamentals**
+- Introduction to NixOS and its security philosophy
+- Understanding the Nix expression language for secure configurations
+- The security advantages of declarative system management
+- Setting up a reproducible NixOS environment
+- Hands-on exercise: Building your first secure NixOS configuration
+
+**Afternoon Session: System Hardening with NixOS**
+- Implementing baseline security controls in NixOS
+- Secure user and service management
+- Network security configuration in NixOS
+- Filesystem security and encryption
+- Hands-on exercise: Hardening a NixOS system
+
+### Day 2: Advanced Security and Deployment
+
+**Morning Session: Advanced NixOS Security Features**
+- Package verification and trusted binary sources
+- Immutable system state and security implications
+- Rollbacks and system recovery from security perspective
+- Configuration testing and validation
+- Hands-on exercise: Implementing and testing advanced security controls
+
+**Afternoon Session: Secure Deployments and Management**
+- NixOS deployment strategies for security-critical environments
+- Managing secrets in NixOS configurations
+- Monitoring and logging for security events
+- Automated security testing and compliance
+- Hands-on exercise: Deploying and managing a secure multi-component system
+
+## Learning Outcomes
+
+By completing this training, participants will be able to:
+
+- Build reproducible and secure NixOS system configurations
+- Implement security hardening measures specific to NixOS
+- Use declarative configuration to enforce security policies
+- Manage secure package deployments with Nix
+- Leverage NixOS's rollback capabilities for security incident recovery
+- Create and manage immutable infrastructure
+- Apply NixOS security principles to production environments
+- Automate security testing and validation of configurations
+
+## Training Methods
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-primary text-white">
+        <h3 class="card-title mb-0">Hands-On Learning</h3>
+      </div>
+      <div class="card-body">
+        <p>This training emphasizes practical application with over 70% of course time dedicated to hands-on exercises:</p>
+        <ul>
+          <li>Live NixOS environment for each participant</li>
+          <li>Real-world security scenario configurations</li>
+          <li>Progressive system hardening exercises</li>
+          <li>Practical deployment workflows</li>
+          <li>Collaborative security implementation challenges</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-primary text-white">
+        <h3 class="card-title mb-0">Expert Instruction</h3>
+      </div>
+      <div class="card-body">
+        <p>Our instructors bring specialized NixOS and security expertise:</p>
+        <ul>
+          <li>Experienced NixOS system administrators</li>
+          <li>Security specialists with hands-on NixOS experience</li>
+          <li>Contributors to NixOS security modules</li>
+          <li>Industry veterans from security-critical environments</li>
+          <li>Direct experience implementing NixOS in regulated industries</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+## Who Should Attend
+
+This training is ideal for:
+
+- System administrators seeking more secure infrastructure approaches
+- Security professionals interested in immutable infrastructure
+- DevOps engineers working in security-sensitive environments
+- IT architects evaluating secure infrastructure options
+- Security analysts looking to understand NixOS security advantages
+- Organizations implementing zero-trust architecture
+
+Participants should have basic Linux administration knowledge and familiarity with command-line interfaces. Prior experience with NixOS is helpful but not required.
+
+## Materials and Resources
+
+Participants will receive:
+
+- Comprehensive digital training manual
+- NixOS security configuration templates
+- Ready-to-use hardened NixOS modules
+- Security testing scripts for NixOS
+- Reference architectures for secure deployments
+- Certificate of completion
+- 30 days of post-training email support
+- Access to NixOS security community resources
+
+## Lead Instructor
+
+```{=html}
+<div class="row mt-4 mb-5">
+  <div class="col-md-3">
+    <img src="/assets/images/placeholder.jpg" alt="Instructor Photo" class="img-fluid rounded">
+  </div>
+  <div class="col-md-9">
+    <h3>Alex Chen</h3>
+    <p><strong>Chief Security Officer, chen.ist</strong></p>
+    <p>Alex has been working with NixOS in security-critical environments for over 5 years, implementing secure system configurations for financial and healthcare organizations. He combines practical security expertise with deep knowledge of NixOS's unique features for security hardening and immutable infrastructure.</p>
+    <p>As a contributor to several NixOS security modules, Alex brings real-world experience in leveraging declarative configuration management for enhanced security posture and compliance requirements.</p>
+  </div>
+</div>
+```
+
+## Registration
+
+```{=html}
+<div class="event-cta">
+  <div class="row">
+    <div class="col-md-8">
+      <h3><i class="bi bi-calendar-check"></i> Upcoming Training Sessions</h3>
+      <p>Secure your spot in one of our upcoming NixOS Security Jumpstart training sessions:</p>
+      <ul>
+        <li><strong>August 15-16, 2025:</strong> In-person (Bucharest) and Virtual</li>
+        <li><strong>November 7-8, 2025:</strong> In-person (Cluj-Napoca) and Virtual</li>
+        <li><strong>February 12-13, 2026:</strong> Virtual Only</li>
+      </ul>
+      <p>Group discounts are available for organizations sending 3 or more participants.</p>
+    </div>
+    <div class="col-md-4 text-center">
+      <a href="/contact.qmd" class="btn btn-success btn-lg mt-3">Register Now</a>
+      <p class="mt-2">or</p>
+      <a href="/contact.qmd" class="btn btn-outline-primary">Contact Us for Group Rates</a>
+    </div>
+  </div>
+</div>
+```
+
+## Testimonials
+
+```{=html}
+<div class="row mt-5">
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-body">
+        <p class="font-italic">"This training completely transformed how we approach system security. The immutable infrastructure approach with NixOS has significantly reduced our attack surface and simplified our security compliance efforts. The hands-on exercises were invaluable for understanding the practical implementation."</p>
+        <p class="text-end mb-0"><strong>— Stefan M., Senior System Administrator</strong></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-body">
+        <p class="font-italic">"As a security professional, I've been looking for ways to improve our infrastructure security posture. This training provided exactly what we needed - a practical approach to implementing truly reproducible and verifiable system configurations. The NixOS approach has been a game-changer for our security architecture."</p>
+        <p class="text-end mb-0"><strong>— Elena T., Information Security Architect</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+## Related Offerings
+
+If you're interested in this training, you might also consider:
+
+- [NixOS Cybersecurity Course](/academy/courses/nixos-cybersecurity/) - Our comprehensive 12-week course for in-depth learning
+- [Linux Administration Fundamentals Training](/academy/trainings/linux-admin-fundamentals/) - For those needing more Linux background
+- [Cybersecurity Essentials Training](/academy/trainings/cybersecurity-essentials/) - For a broader overview of security concepts
+
+:::
+
+```{=html}
+<div class="cta-section">
+  <div class="container text-center">
+    <h2><span class="text-dark">Ready to enhance your security with NixOS?</span></h2>
+    <p class="mb-4">Join our next NixOS Security Jumpstart training and master declarative security configurations.</p>
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-6">
+        <a href="/contact.qmd" class="cta-button">Register for Training</a>
+      </div>
+      <br>
+      <br>
+      <div class="col-md-6">
+        <a href="/academy/trainings.qmd" class="cta-button">Explore Other Trainings</a>
+      </div>
+    </div>
+  </div>
+</div>
+```

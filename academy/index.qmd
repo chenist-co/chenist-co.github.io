@@ -4,12 +4,15 @@ subtitle: "Learn, collaborate, and grow with our educational programs"
 from: markdown+raw_html
 format: 
   html:
-    css: scss/academy.scss
+    css: /scss/academy.scss
     classes: [academy-section]
 listing:
   contents:
     - overview.qmd
     - courses.qmd
+    - trainings.qmd
+    - microlearning.qmd
+    - programs/index.qmd
     - events.qmd
     - webinars.qmd
     - computerclub.qmd
@@ -26,12 +29,19 @@ listing:
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-8 offset-md-2 text-center">
-        <h1>chen.ist <span class="text-green">Academy</span></h1>
+        <h1><span class="chenist-text">chen.ist</span> <span class="text-green">Academy</span></h1>
         <p>Empowering through knowledge, experience, and innovation</p>
       </div>
     </div>
   </div>
 </div>
+
+<style>
+  /* Ensure the text is white in both light and dark modes */
+  .chenist-text {
+    color: white !important;
+  }
+</style>
 ```
 
 ::: {.container .page-section}
@@ -44,10 +54,10 @@ The chen.ist Academy is a comprehensive educational initiative dedicated to adva
   <div class="col-md-4">
     <div class="feature-card">
       <div class="feature-card-icon text-center">
-        <img src="/assets/svg/learning.svg" alt="Courses" class="feature-card-svg">
+        <!-- <img src="/assets/svg/learning.svg" alt="Courses" class="feature-card-svg"> -->
       </div>
       <h3 class="text-center">Courses</h3>
-      <p>Expert-led technical courses designed to build practical skills across various domains including cybersecurity, open source development, data privacy, and more.</p>
+      <p>Comprehensive technical courses designed to build deep expertise through multiple weeks of structured learning.</p>
       <div class="text-center mt-3">
         <a href="/academy/courses.qmd" class="btn btn-outline-primary">Browse Courses</a>
       </div>
@@ -57,12 +67,12 @@ The chen.ist Academy is a comprehensive educational initiative dedicated to adva
   <div class="col-md-4">
     <div class="feature-card">
       <div class="feature-card-icon text-center">
-        <img src="/assets/svg/events.svg" alt="Events" class="feature-card-svg">
+        <!-- <img src="/assets/svg/teaching.svg" alt="Trainings" class="feature-card-svg"> -->
       </div>
-      <h3 class="text-center">Events</h3>
-      <p>Interactive workshops, hackathons, and meetups that provide opportunities to apply skills, collaborate with peers, and explore emerging technologies.</p>
+      <h3 class="text-center">Trainings</h3>
+      <p>Intensive 1-2 day workshops for professionals who need to quickly develop specific technical skills.</p>
       <div class="text-center mt-3">
-        <a href="/academy/events.qmd" class="btn btn-outline-primary">View Events</a>
+        <a href="/academy/trainings.qmd" class="btn btn-outline-primary">Browse Trainings</a>
       </div>
     </div>
   </div>
@@ -70,12 +80,12 @@ The chen.ist Academy is a comprehensive educational initiative dedicated to adva
   <div class="col-md-4">
     <div class="feature-card">
       <div class="feature-card-icon text-center">
-        <img src="/assets/svg/webinars.svg" alt="Webinars" class="feature-card-svg">
+        <!-- <img src="/assets/svg/learning.svg" alt="Microlearning" class="feature-card-svg"> -->
       </div>
-      <h3 class="text-center">Webinars</h3>
-      <p>Online educational sessions led by industry experts covering a wide range of technology topics, trends, and best practices.</p>
+      <h3 class="text-center">Microlearning</h3>
+      <p>Bite-sized 1-2 hour sessions focused on specific tools and technologies for quick skill acquisition.</p>
       <div class="text-center mt-3">
-        <a href="/academy/webinars.qmd" class="btn btn-outline-primary">Attend Webinars</a>
+        <a href="/academy/microlearning.qmd" class="btn btn-outline-primary">Browse Microlearning</a>
       </div>
     </div>
   </div>
@@ -85,38 +95,66 @@ The chen.ist Academy is a comprehensive educational initiative dedicated to adva
   <div class="col-md-4">
     <div class="feature-card">
       <div class="feature-card-icon text-center">
-        <img src="/assets/svg/community.svg" alt="Computer Club" class="feature-card-svg">
+        <!-- <img src="/assets/svg/programs.svg" alt="Programs" class="feature-card-svg"> -->
+      </div>
+      <h3 class="text-center">Programs</h3>
+      <p>Immersive learning experiences including hackathons and summer schools that provide intensive skill development.</p>
+      <div class="text-center mt-3">
+        <a href="/academy/programs/index.qmd" class="btn btn-outline-primary">Explore Programs</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="feature-card">
+      <div class="feature-card-icon text-center">
+        <!-- <img src="/assets/svg/events.svg" alt="Events" class="feature-card-svg"> -->
+      </div>
+      <h3 class="text-center">Events</h3>
+      <p>Interactive workshops and meetups that provide opportunities to apply skills and collaborate with others.</p>
+      <div class="text-center mt-3">
+        <a href="/academy/events.qmd" class="btn btn-outline-primary">View Events</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="feature-card">
+      <div class="feature-card-icon text-center">
+        <!-- <img src="/assets/svg/webinars.svg" alt="Webinars" class="feature-card-svg"> -->
+      </div>
+      <h3 class="text-center">Webinars</h3>
+      <p>Online educational sessions led by industry experts covering various technology topics and trends.</p>
+      <div class="text-center mt-3">
+        <a href="/academy/webinars.qmd" class="btn btn-outline-primary">Attend Webinars</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <div class="feature-card">
+      <div class="feature-card-icon text-center">
+        <!-- <img src="/assets/svg/community.svg" alt="Computer Club" class="feature-card-svg"> -->
       </div>
       <h3 class="text-center">Computer Club</h3>
-      <p>A community-driven technology club that offers regular meetups, workshops, and collaborative learning opportunities for all ages and skill levels.</p>
+      <p>A community-driven technology club that offers regular meetups, workshops, and collaborative learning opportunities.</p>
       <div class="text-center mt-3">
         <a href="/academy/computerclub.qmd" class="btn btn-outline-primary">Join the Club</a>
       </div>
     </div>
   </div>
 
-  <div class="col-md-4">
+  <div class="col-md-6">
     <div class="feature-card">
       <div class="feature-card-icon text-center">
-        <img src="/assets/svg/partnership.svg" alt="Partnerships" class="feature-card-svg">
+        <!-- <img src="/assets/svg/partnership.svg" alt="Partnerships" class="feature-card-svg"> -->
       </div>
       <h3 class="text-center">Partnerships</h3>
-      <p>Strategic collaborations with educational institutions, industry leaders, and technology organizations to enhance our learning ecosystem.</p>
+      <p>Strategic collaborations with educational institutions, industry leaders, and technology organizations.</p>
       <div class="text-center mt-3">
         <a href="/academy/partnerships.qmd" class="btn btn-outline-primary">Explore Partnerships</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="feature-card">
-      <div class="feature-card-icon text-center">
-        <img src="/assets/svg/about_me.svg" alt="Overview" class="feature-card-svg">
-      </div>
-      <h3 class="text-center">Overview</h3>
-      <p>Learn more about our Academy's mission, vision, teaching philosophy, and the comprehensive learning approach we offer.</p>
-      <div class="text-center mt-3">
-        <a href="/academy/overview.qmd" class="btn btn-outline-primary">Academy Overview</a>
       </div>
     </div>
   </div>
@@ -138,6 +176,8 @@ Our academy offers structured learning paths designed to guide your educational 
         <p>A comprehensive learning path for those interested in building careers in cybersecurity, from foundational concepts to specialized areas.</p>
         <ul>
           <li><strong>Courses:</strong> Practical Cybersecurity, Human Firewall, Data Protection</li>
+          <li><strong>Trainings:</strong> Cybersecurity Essentials, Security Awareness for Teams</li>
+          <li><strong>Microlearning:</strong> QubesOS, OpenBSD Security</li>
           <li><strong>Events:</strong> Cybersecurity Hackathon, Security Workshops</li>
           <li><strong>Projects:</strong> Vulnerability Assessment, Security Tool Development</li>
         </ul>
@@ -155,6 +195,8 @@ Our academy offers structured learning paths designed to guide your educational 
         <p>For developers looking to enhance their skills through contribution to open source projects and collaboration with the community.</p>
         <ul>
           <li><strong>Courses:</strong> Open Source Development, Unix/Linux Systems</li>
+          <li><strong>Trainings:</strong> Open Source Contribution Workshop, Linux Admin Fundamentals</li>
+          <li><strong>Microlearning:</strong> CLI Intro, Tmux, NixOS</li>
           <li><strong>Events:</strong> Computer Club Meetups, Coding Workshops</li>
           <li><strong>Projects:</strong> Open Source Contributions, Tool Development</li>
         </ul>
@@ -174,6 +216,7 @@ Our academy offers structured learning paths designed to guide your educational 
         <p>Designed for creators and innovators interested in hardware, IoT, and physical computing projects.</p>
         <ul>
           <li><strong>Courses:</strong> Hardware Fundamentals, IoT Security</li>
+          <li><strong>Microlearning:</strong> Syncthing, Quarto</li>
           <li><strong>Events:</strong> Makers Workshop, Space Hackathon</li>
           <li><strong>Projects:</strong> IoT Prototyping, Hardware Development</li>
         </ul>
@@ -191,6 +234,8 @@ Our academy offers structured learning paths designed to guide your educational 
         <p>For professionals focused on data protection, privacy regulations, and implementing compliant systems.</p>
         <ul>
           <li><strong>Courses:</strong> Data Protection and Privacy, Security Awareness</li>
+          <li><strong>Trainings:</strong> Data Privacy Compliance Workshop</li>
+          <li><strong>Microlearning:</strong> LaTeX, Org-mode</li>
           <li><strong>Events:</strong> Privacy Workshops, Compliance Seminars</li>
           <li><strong>Projects:</strong> Privacy Impact Assessments, GDPR Compliance</li>
         </ul>
@@ -210,30 +255,64 @@ Use the filters below to narrow down content based on your interests:
 ```{=html}
 <div class="cta-section">
   <div class="container text-center">
-    <h2>Ready to begin your learning journey?</h2>
-    <p class="mb-4">Explore our courses, events, projects, and community to find the perfect starting point for your educational goals.</p>
+    <h2><span class="text-dark">Ready to begin your learning journey?</span></h2>
+    <p class="mb-4">Explore our courses, trainings, and more to find the perfect starting point for your educational goals.</p>
     <div class="row justify-content-center mt-4">
-      <div class="col-md-4">
-        <a href="/academy/courses.qmd" class="cta-button">Browse Courses</a>
+      <div class="col-md-2">
+        <a href="/academy/courses.qmd" class="cta-button">Courses</a>
+        <br><br>
       </div>
-      <div class="col-md-4">
-        <a href="/academy/events.qmd" class="cta-button">View Events</a>
+      <div class="col-md-2">
+        <a href="/academy/trainings.qmd" class="cta-button">Trainings</a>
+        <br><br>
       </div>
-      <div class="col-md-4">
-        <a href="/academy/webinars.qmd" class="cta-button">Attend Webinars</a>
+      <div class="col-md-2">
+        <a href="/academy/microlearning.qmd" class="cta-button">Microlearning</a>
+        <br><br>
       </div>
-    </div>
-    <div class="row justify-content-center mt-4">
-      <div class="col-md-4">
-        <a href="/academy/computerclub.qmd" class="cta-button">Join Computer Club</a>
+      <div class="col-md-2">
+        <a href="/academy/programs/index.qmd" class="cta-button">Programs</a>
+        <br><br>
       </div>
-      <div class="col-md-4">
-        <a href="/academy/partnerships.qmd" class="cta-button">Explore Partnerships</a>
+      <div class="col-md-2">
+        <a href="/academy/events.qmd" class="cta-button">Events</a>
+        <br><br>
       </div>
-      <div class="col-md-4">
-        <a href="/academy/overview.qmd" class="cta-button">Academy Overview</a>
+      <div class="col-md-2">
+        <a href="/academy/webinars.qmd" class="cta-button">Webinars</a>
+        <br><br>
       </div>
     </div>
   </div>
 </div>
+
+<div style="height: 30px;"></div>
+
+<div class="cta-section" style="background-color: #1a4971;">
+  <div class="container text-center">
+    <h2><span class="text-dark">Looking for more ways to engage?</span></h2>
+    <p class="mb-4">Discover our community initiatives, partnerships, and get a deeper understanding of our academy's mission.</p>
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-4">
+        <a href="/academy/computerclub.qmd" class="cta-button">Join Computer Club</a>
+        <br><br>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/partnerships.qmd" class="cta-button">Explore Partnerships</a>
+        <br><br>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/overview.qmd" class="cta-button">Academy Overview</a>
+        <br><br>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Ensure the text is white in both light and dark modes */
+  .cta-white-text {
+    color: white !important;
+  }
+</style>
 ```

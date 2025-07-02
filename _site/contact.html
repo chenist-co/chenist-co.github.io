@@ -149,6 +149,7 @@ input, textarea, .form-control {
 
 <link rel="stylesheet" href="scss/styles.css">
 <link rel="stylesheet" href="scss/academy.scss">
+<link rel="stylesheet" href="scss/custom-hero.css">
 <meta property="og:title" content="Contact Us – chen.ist">
 <meta property="og:description" content="Innovative technology &amp; education">
 <meta property="og:site_name" content="chen.ist">
@@ -358,6 +359,18 @@ input, textarea, .form-control {
  <span class="dropdown-text">Courses</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./academy/trainings.html">
+ <span class="dropdown-text">Trainings</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./academy/microlearning.html">
+ <span class="dropdown-text">Microlearning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./academy/programs/index.html">
+ <span class="dropdown-text">Programs</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./academy/events.html">
  <span class="dropdown-text">Events</span></a>
   </li>  
@@ -481,6 +494,12 @@ input, textarea, .form-control {
 </header>
 
 
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="./">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Contact</li>
+  </ol>
+</nav>
 <section id="get-in-touch" class="level2">
 <h2 class="anchored" data-anchor-id="get-in-touch">Get in Touch</h2>
 <p>We’d love to hear from you! Whether you have a question about our services, need a quote, or want to discuss a potential project, our team is ready to assist you.</p>
@@ -663,7 +682,7 @@ input, textarea, .form-control {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/github\/com\/chen\.ist");
+        var filterRegex = new RegExp("https:\/\/chen\.ist");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1097,6 +1116,11 @@ input, textarea, .form-control {
                                 <div class="col-6 col-md-3">
                                     <a href="./academy/computerclub.html" class="footer-link">
                                         <i class="bi bi-chevron-right icon-small"></i> Computer Club
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3 mt-2">
+                                    <a href="./academy/programs" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Explore Academy Programs
                                     </a>
                                 </div>
                             </div>

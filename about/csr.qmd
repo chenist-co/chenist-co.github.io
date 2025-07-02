@@ -4,6 +4,14 @@ subtitle: "Making a positive impact in our communities"
 ---
 
 ```{=html}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/about/">About</a></li>
+    <li class="breadcrumb-item active" aria-current="page">CSR</li>
+  </ol>
+</nav>
+
 <div class="hero-section">
   <div class="container">
     <div class="row align-items-center">
@@ -253,11 +261,18 @@ We welcome partnerships with organizations that share our commitment to using te
 ```{=html}
 <div class="cta-section">
   <div class="container text-center">
-    <h2 class="cta-title"><span class="cta-white-text">Interested in collaborating on CSR initiatives?</span></h2>
+    <h2 class="cta-title"><span class="text-dark">Interested in collaborating on CSR initiatives?</span></h2>
     <p class="mb-4">Contact our CSR team to explore partnership opportunities.</p>
     <a href="/contact.html" class="cta-button">Get in Touch</a>
   </div>
 </div>
+
+<style>
+  /* Ensure the text is white in both light and dark modes */
+  .cta-title .cta-white-text {
+    color: white !important;
+  }
+</style>
 ```
 
 ## CSR Reports

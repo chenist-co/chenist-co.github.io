@@ -1,0 +1,174 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{fontawesome}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+% Define colors
+\definecolor{primary}{RGB}{0, 123, 255}
+\definecolor{secondary}{RGB}{108, 117, 125}
+\definecolor{success}{RGB}{40, 167, 69}
+\definecolor{dark}{RGB}{50, 54, 66}
+
+% Set up hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primary,
+    urlcolor=primary,
+}
+
+% Set up headers and footers
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\thepage}
+\fancyhead[L]{\textcolor{primary}{Cybersecurity Hackathon}}
+\fancyhead[R]{\textcolor{primary}{Fall 2025}}
+
+% Custom commands
+\newcommand{\sectiontitle}[1]{
+    \vspace{0.3cm}
+    \noindent\textcolor{primary}{\Large\textbf{#1}}
+    \vspace{0.2cm}
+}
+
+\newcommand{\eventitem}[2]{
+    \noindent\textbf{#1} \hfill #2\\
+}
+
+\begin{document}
+
+\begin{center}
+    \vspace*{-1cm}
+    \textcolor{primary}{\Huge\textbf{CYBERSECURITY HACKATHON}}\\
+    \vspace{0.5cm}
+    \textcolor{primary}{\Large\textbf{48-HOUR CHALLENGE FOR SECURITY ENTHUSIASTS}}\\
+    \vspace{0.3cm}
+    \textcolor{secondary}{\large Fall 2025 • Craiova / Bucharest}\\
+    \vspace{0.5cm}
+    {\normalsize June 1, 2025}\\
+    \vspace{0.8cm}
+\end{center}
+
+% Image temporarily removed due to format issues
+
+\begin{tcolorbox}[colback=primary!10, colframe=primary, title=\textbf{Event Overview}]
+The Cybersecurity Hackathon is a 48-hour challenge where participants work in teams to solve real-world cybersecurity problems. Open to security enthusiasts of all levels, from beginners to experts, this event provides a platform to develop and showcase your skills while networking with industry professionals.
+
+\textit{Note: Details, dates, and themes are subject to change.}
+\end{tcolorbox}
+
+\sectiontitle{Challenge Format}
+
+Teams of 2-4 participants will tackle a series of increasingly difficult cybersecurity challenges across multiple domains. The event combines elements of Capture The Flag (CTF) competitions with practical security implementation scenarios that mirror real-world situations.
+
+\sectiontitle{Challenge Categories}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Web Application Security}: Identify and exploit vulnerabilities in web applications
+    \item \textbf{Network Security}: Analyze and secure network infrastructure
+    \item \textbf{Cryptography}: Break and implement cryptographic systems
+    \item \textbf{Reverse Engineering}: Analyze compiled applications to understand their functionality
+    \item \textbf{Forensics}: Investigate digital evidence to reconstruct security incidents
+    \item \textbf{Social Engineering}: Develop strategies to counter social engineering attacks
+\end{itemize}
+
+\sectiontitle{Schedule}
+
+\textbf{Day 1:}
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+\textbf{Time} & \textbf{Activity} \\
+\midrule
+08:00 - 09:00 & Registration and Check-in \\
+09:00 - 10:00 & Opening Ceremony and Challenge Briefing \\
+10:00 - 12:00 & Team Formation and Strategy Session \\
+12:00 - 13:00 & Lunch \\
+13:00 - 18:00 & Hacking Session \\
+18:00 - 19:00 & Dinner \\
+19:00 - 22:00 & Evening Workshop: "Advanced Exploitation Techniques" \\
+22:00 - 08:00 & Overnight Hacking (Optional) \\
+\bottomrule
+\end{tabularx}
+
+\vspace{0.5cm}
+
+\textbf{Day 2:}
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+\textbf{Time} & \textbf{Activity} \\
+\midrule
+08:00 - 09:00 & Breakfast \\
+09:00 - 12:00 & Continued Hacking Session \\
+12:00 - 13:00 & Lunch \\
+13:00 - 15:00 & Final Hacking Sprint \\
+15:00 - 16:00 & Solution Submission Deadline \\
+16:00 - 17:30 & Team Presentations \\
+17:30 - 18:30 & Judging and Deliberation \\
+18:30 - 20:00 & Awards Ceremony and Closing \\
+\bottomrule
+\end{tabularx}
+
+\sectiontitle{Prizes and Recognition}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{First Place}: Mentorship opportunities with leading cybersecurity firms
+    \item \textbf{Second Place}: Premium security tools licenses
+    \item \textbf{Third Place}: Security conference tickets
+    \item \textbf{Category Winners}: Special recognition in each challenge category
+    \item \textbf{Most Innovative Solution}: Special award for the most creative approach
+\end{itemize}
+
+\sectiontitle{Who Should Participate}
+
+\begin{itemize}[leftmargin=*]
+    \item Security professionals looking to sharpen their skills
+    \item Computer science students interested in cybersecurity careers
+    \item Software developers wanting to improve their security knowledge
+    \item IT professionals seeking to enhance their security capabilities
+    \item Security researchers and enthusiasts of all levels
+\end{itemize}
+
+\sectiontitle{Registration Information}
+
+Registration opens soon. Early registration is encouraged as participation is limited to 100 participants (25-30 teams) to ensure quality mentoring and support.
+
+\begin{tcolorbox}[colback=success!10, colframe=success, title=\textbf{Ready to Learn More?}]
+Join us for an intense 48-hour hackathon that will challenge your abilities and connect you with the cybersecurity community.
+
+Visit our website to browse cybersecurity courses: \href{https://chen.ist/academy/courses.html}{chen.ist/academy/courses.html}
+\end{tcolorbox}
+
+\sectiontitle{Frequently Asked Questions}
+
+\textbf{Do I need to be a cybersecurity expert to participate?}\\
+No, we welcome participants of all skill levels. Teams are encouraged to include members with diverse experience levels, and mentors will be available to assist throughout the event.
+
+\textbf{What should I bring?}\\
+Participants should bring their own laptops, chargers, and any preferred peripherals. We'll provide power, high-speed internet, and a comfortable workspace.
+
+\textbf{Is there a participation fee?}\\
+Details soon. All meals and materials during the event are covered by our sponsors.
+
+\textbf{Will accommodation be provided?}\\
+Accommodation is not included, but we have arranged special rates with nearby hotels. Details will be provided to registered participants.
+
+\textbf{Can I participate remotely?}\\
+This hackathon is designed as an in-person event to maximize collaboration and mentorship opportunities. Remote participation is not available.
+
+\vspace{1cm}
+\begin{center}
+    \textbf{For more information and updates:}\\
+    \vspace{0.3cm}
+    Visit \href{https://chen.ist/academy/programs/hackathons/cybersecurity-hackathon}{chen.ist/academy/programs/hackathons/cybersecurity-hackathon}\\
+    \vspace{0.3cm}
+    Contact: \texttt{contact@chen.ist}
+\end{center}
+
+\end{document}

@@ -1,0 +1,395 @@
+---
+title: "Week 1: Digital Threat Landscape"
+subtitle: "Understanding the current cybersecurity environment"
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+date-modified: last-modified
+---
+
+```{=html}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
+    <li class="breadcrumb-item"><a href="/academy/courses.qmd">Courses</a></li>
+    <li class="breadcrumb-item"><a href="/academy/courses/cyberhygiene-essentials/">Cyberhygiene Essentials</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Week 1</li>
+  </ol>
+</nav>
+```
+
+# Digital Threat Landscape
+
+## Learning Objectives
+
+By the end of this module, you will be able to:
+
+- Identify the major types of cybersecurity threats relevant to your digital life
+- Understand how and why threat actors target individuals
+- Recognize your personal digital risk profile
+- Describe the psychological factors that affect security decisions
+- Begin developing a security-focused mindset
+- Conduct a basic personal security inventory
+
+## Understanding Today's Threats
+
+### The Evolving Cybersecurity Landscape
+
+The digital threat landscape has transformed dramatically in recent years. Where attacks were once primarily technical and targeted at institutions, today's threats:
+
+- **Target individuals** as much as organizations
+- **Exploit human psychology** rather than just technical vulnerabilities
+- **Scale across millions** of potential victims
+- **Automate sophisticated attacks** using AI and other technologies
+- **Blend technical and social** engineering approaches
+
+According to recent data, over 80% of successful breaches involve a human element - whether through phishing, credential misuse, or simple error. This makes understanding the threat landscape essential for everyone, not just IT professionals.
+
+### Why You Are a Target
+
+Many people mistakenly believe they wouldn't be targeted because they're "not important enough" or "don't have anything worth stealing." This misconception creates vulnerability. In reality:
+
+- **Your identity is valuable**: Identity theft creates opportunities for fraud, account takeovers, and other crimes
+- **Your computing resources** can be hijacked for botnets, cryptocurrency mining, or launching attacks
+- **Your data and accounts** provide access to personal information, contacts, financial details, and more
+- **Your connections** to others (work, family, friends) create pathways to additional targets
+- **Your attention and trust** can be monetized through scams, fraud, and manipulation
+
+Attackers operate at scale, often launching campaigns against thousands or millions of potential victims simultaneously. They don't need to target you specifically to cause harm - they just need you to be vulnerable when their automated attacks reach you.
+
+### Common Attack Vectors
+
+#### Phishing and Social Engineering
+
+**Phishing** involves deceptive communications designed to trick you into revealing sensitive information or performing harmful actions. Common types include:
+
+- **Email phishing**: Fraudulent messages appearing to come from legitimate sources
+- **Spear phishing**: Targeted attacks using personalized information
+- **Smishing**: Phishing via SMS/text messages
+- **Vishing**: Voice phishing over phone calls
+- **Business Email Compromise (BEC)**: Targeting business communications for financial fraud
+
+Social engineering tactics often employed include:
+
+- **Authority**: Impersonating officials or executives
+- **Urgency**: Creating time pressure to force quick decisions
+- **Fear**: Threatening negative consequences
+- **Curiosity**: Baiting with intriguing content
+- **Familiarity**: Pretending to be someone you know or trust
+- **Helpfulness**: Appealing to your desire to assist others
+
+#### Malware and Ransomware
+
+**Malware** (malicious software) includes:
+
+- **Viruses**: Code that attaches to legitimate programs
+- **Worms**: Self-replicating programs that spread across networks
+- **Trojans**: Malware disguised as legitimate software
+- **Spyware**: Covertly gathers information about users
+- **Keyloggers**: Record keystrokes to capture passwords and sensitive data
+
+**Ransomware** has become increasingly prevalent, encrypting victims' files and demanding payment for decryption. Notable trends include:
+
+- Targeting individuals, not just businesses
+- "Double extortion" that steals data before encrypting it
+- Ransom demands tailored to what attackers believe victims can pay
+- Sophisticated operations with "customer service" to help victims pay
+
+#### Data Breaches and Identity Theft
+
+Data breaches occur when unauthorized parties access sensitive information. For individuals, this can lead to:
+
+- **Identity theft**: Using your personal information to impersonate you
+- **Account takeovers**: Unauthorized access to your accounts
+- **Financial fraud**: Unauthorized transactions or new account creation
+- **Tax fraud**: Filing fraudulent returns in your name
+- **Medical identity theft**: Using your insurance or medical information
+
+The impact of data breaches often occurs months or years after the initial breach, as stolen data is sold and used for various criminal purposes.
+
+#### Scams and Fraud
+
+Common scams targeting individuals include:
+
+- **Tech support scams**: Fake alerts about computer problems
+- **Romance scams**: Building relationships to extract money or information
+- **Investment scams**: Promises of high returns with little risk
+- **Government impersonation**: Pretending to be tax authorities, law enforcement, etc.
+- **Fake job offers**: Collecting personal information or payment
+- **Shopping scams**: Counterfeit products or non-delivery after payment
+
+### Threat Actors and Motivations
+
+Understanding who is behind attacks helps predict and prevent them:
+
+#### Cybercriminals
+
+- **Motivation**: Financial gain
+- **Tactics**: Ransomware, banking trojans, credential theft, fraud
+- **Targets**: Anyone with valuable data, money, or resources
+- **Organization**: Range from lone actors to sophisticated criminal enterprises
+
+#### Nation-State Actors
+
+- **Motivation**: Espionage, sabotage, political influence
+- **Tactics**: Advanced persistent threats, sophisticated malware, targeted attacks
+- **Targets**: Usually organizations, but may target individuals connected to interests
+- **Organization**: Well-funded, highly skilled government-backed teams
+
+#### Hacktivists
+
+- **Motivation**: Ideological or political causes
+- **Tactics**: Website defacement, DDoS attacks, data leaks
+- **Targets**: Organizations or individuals representing opposing viewpoints
+- **Organization**: Loosely affiliated groups or individuals
+
+#### Insider Threats
+
+- **Motivation**: Revenge, financial gain, or unintentional
+- **Tactics**: Abuse of legitimate access, data exfiltration
+- **Targets**: Organizations where they have access
+- **Organization**: Individuals within trusted positions
+
+#### Opportunistic Attackers
+
+- **Motivation**: Experimentation, challenge, or minor gains
+- **Tactics**: Scanning for vulnerabilities, basic exploits
+- **Targets**: Anyone with easily exploitable vulnerabilities
+- **Organization**: Often individuals with limited technical skills using pre-made tools
+
+## Personal Risk Assessment
+
+### Identifying Your Digital Assets
+
+The first step in understanding your personal security risk is identifying what you have that needs protection:
+
+#### Digital Identities
+
+- **Email accounts**: Often the recovery method for other accounts
+- **Social media profiles**: Represent your online persona and reputation
+- **Professional accounts**: LinkedIn, work email, industry platforms
+- **Government accounts**: Tax services, benefits, identity documents
+
+#### Financial Assets
+
+- **Banking accounts**: Checking, savings, investment
+- **Credit cards and payment services**: PayPal, Venmo, etc.
+- **Cryptocurrency wallets**: Bitcoin, Ethereum, etc.
+- **Credit profile**: Your credit score and history
+
+#### Personal Data
+
+- **Identity information**: SSN/national ID, birth certificate, passport
+- **Health records**: Medical history, insurance information
+- **Personal communications**: Email, messages, private photos
+- **Intellectual property**: Creative works, business ideas, research
+
+#### Digital Devices
+
+- **Computers and laptops**: Personal and work devices
+- **Mobile devices**: Phones, tablets
+- **Smart home devices**: Security systems, voice assistants, thermostats
+- **Wearables**: Fitness trackers, smartwatches
+
+#### Digital Access
+
+- **Home network**: Your internet connection and Wi-Fi
+- **Cloud storage**: Google Drive, Dropbox, iCloud
+- **Subscription services**: Streaming, gaming, productivity tools
+- **Website logins**: The many accounts you create across the web
+
+### Assessing Value and Vulnerability
+
+For each digital asset, consider:
+
+1. **Value**: What would the impact be if it was compromised?
+   - Financial loss
+   - Privacy violation
+   - Reputation damage
+   - Emotional distress
+   - Time and effort to recover
+
+2. **Vulnerability**: How easily could it be compromised?
+   - Current protection measures
+   - Update and patch status
+   - Password strength and uniqueness
+   - Multi-factor authentication status
+   - Connected to other compromised services
+
+3. **Attack surface**: How many ways could attackers reach it?
+   - Direct access methods
+   - Connected accounts
+   - Devices used to access it
+   - People who have access
+
+### Understanding Psychological Factors
+
+Our security decisions are influenced by various psychological factors:
+
+#### Cognitive Biases Affecting Security
+
+- **Optimism bias**: "It won't happen to me"
+- **Present bias**: Immediate convenience outweighs future security
+- **Confirmation bias**: Seeking information that confirms existing beliefs
+- **Availability heuristic**: Overestimating likelihood of events easy to recall
+- **Status quo bias**: Preference for the current state of affairs
+- **Bandwagon effect**: Following what others do regardless of risks
+- **Authority bias**: Excessive trust in directions from authority figures
+
+#### Risk Perception Factors
+
+Several factors influence how we perceive security risks:
+
+- **Controllability**: Risks perceived as under personal control seem less threatening
+- **Familiarity**: Familiar activities seem less risky than unfamiliar ones
+- **Catastrophic potential**: Risks with severe consequences seem more threatening
+- **Immediacy**: Delayed consequences are taken less seriously
+- **Voluntariness**: Voluntarily assumed risks are more acceptable than imposed ones
+- **Benefit perception**: Risks with clear benefits seem more acceptable
+- **Understanding**: Complex risks may be underestimated or overestimated
+
+## Developing a Security Mindset
+
+### Principles of a Security Mindset
+
+A security mindset involves thinking differently about digital interactions:
+
+1. **Question the default**: Don't assume default settings or common practices are secure
+2. **Verify before trusting**: Confirm identities and information through independent channels
+3. **Consider attack vectors**: Think about how systems or interactions could be exploited
+4. **Value defense in depth**: Use multiple layers of protection rather than single solutions
+5. **Prepare for failure**: Assume breaches will happen and have recovery plans
+6. **Balance security and usability**: Find reasonable security that you'll actually maintain
+7. **Stay informed**: Keep learning about evolving threats and protections
+
+### Practical Mindset Shifts
+
+Specific changes in thinking that help improve security:
+
+- **From "I have nothing to hide" to "I have everything to protect"**
+- **From "That looks legitimate" to "How can I verify this?"**
+- **From "This is inconvenient" to "This is worth the effort"**
+- **From "It won't happen to me" to "I should be prepared"**
+- **From "Security is technical" to "Security is behavioral"**
+
+## Practical Exercise: Personal Security Inventory
+
+### Exercise 1: Digital Asset Inventory
+
+Create a comprehensive inventory of your digital assets:
+
+1. **List all your online accounts**
+   - Email accounts
+   - Social media
+   - Financial services
+   - Shopping sites
+   - Entertainment services
+   - Work-related accounts
+   - Government services
+
+2. **Document your devices**
+   - Computers/laptops
+   - Mobile devices
+   - Smart home devices
+   - Wearables
+   - Other internet-connected devices
+
+3. **Map your data storage locations**
+   - Local storage (computers, external drives)
+   - Cloud storage services
+   - Email attachments
+   - Physical documents containing sensitive information
+
+4. **Rate each item's importance**
+   - Critical: Essential to protect, high impact if compromised
+   - Important: Significant impact if compromised
+   - Moderate: Some impact if compromised
+   - Low: Minimal impact if compromised
+
+### Exercise 2: Threat Assessment
+
+For each category of digital assets, identify potential threats:
+
+1. **What could go wrong?**
+   - Account compromise
+   - Data theft
+   - Identity theft
+   - Financial loss
+   - Reputation damage
+   - Device infection/control
+
+2. **What would be the impact?**
+   - Financial consequences
+   - Time to recover
+   - Emotional impact
+   - Impact on others
+
+3. **How likely is this threat?**
+   - Consider your specific situation
+   - Past experiences
+   - Known vulnerabilities
+
+### Exercise 3: Current Security Assessment
+
+Evaluate your current security practices:
+
+1. **Password management**
+   - How many unique passwords do you use?
+   - How do you create and store passwords?
+   - Which accounts have multi-factor authentication?
+
+2. **Device security**
+   - Are your devices up to date?
+   - What security software do you use?
+   - How do you control physical access?
+
+3. **Behavioral security**
+   - How do you verify suspicious communications?
+   - What information do you share online?
+   - How do you approach unknown links or attachments?
+
+4. **Recovery preparation**
+   - Do you have backups of important data?
+   - Do you know how to recover compromised accounts?
+   - Have you documented important information securely?
+
+## Key Takeaways
+
+- You are a target for cyberattacks, regardless of who you are
+- Most successful attacks exploit human psychology, not just technical vulnerabilities
+- Understanding your digital assets is the first step in protecting them
+- Security decisions are influenced by cognitive biases and risk perception factors
+- Developing a security mindset helps you make better security decisions
+- Regular security inventories help you focus protection on what matters most
+
+## Additional Resources
+
+### Security News and Updates
+- [Krebs on Security](https://krebsonsecurity.com/) - In-depth security news
+- [The Hacker News](https://thehackernews.com/) - Cybersecurity news and analysis
+- [CISA Alerts](https://www.cisa.gov/news-events/cybersecurity-advisories) - Government security advisories
+
+### Risk Assessment Tools
+- [SANS Personal Security Checklist](https://www.sans.org/security-awareness-training/resources/personal-security-checklist)
+- [Consumer Reports Security Planner](https://securityplanner.consumerreports.org/)
+- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
+
+### Educational Resources
+- [Cybersecurity and Infrastructure Security Agency Resources](https://www.cisa.gov/cybersecurity)
+- [National Cybersecurity Alliance](https://staysafeonline.org/)
+- [Harvard University's Berkman Klein Center Resources](https://cyber.harvard.edu/topics/cybersecurity)
+
+## Next Week
+
+Next week, we'll dive into password security and authentication, covering how to create and manage strong passwords, implement password managers, and set up multi-factor authentication across your digital accounts.
+
+## Discussion Questions
+
+1. What digital assets do you consider most valuable to protect, and why?
+2. Have you ever experienced a security incident? How did it affect your approach to security?
+3. Which psychological factors do you think most influence your own security decisions?
+4. What challenges do you face in maintaining good cybersecurity practices?
+5. How has your perception of digital threats changed after completing this module?

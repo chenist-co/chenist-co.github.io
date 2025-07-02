@@ -198,13 +198,14 @@ window.Quarto = {
 
 <link rel="stylesheet" href="../../scss/styles.css">
 <link rel="stylesheet" href="../../scss/academy.scss">
+<link rel="stylesheet" href="../../scss/custom-hero.css">
 <meta property="og:title" content="Tools – chen.ist">
 <meta property="og:description" content="Innovative technology &amp; education">
-<meta property="og:image" content="https://github/com/chen.ist/assets/images/cyber-security.jpg">
+<meta property="og:image" content="https://chen.ist/assets/images/cyber-security.jpg">
 <meta property="og:site_name" content="chen.ist">
 <meta name="twitter:title" content="Tools – chen.ist">
 <meta name="twitter:description" content="Innovative technology &amp; education">
-<meta name="twitter:image" content="https://github/com/chen.ist/assets/images/cyber-security.jpg">
+<meta name="twitter:image" content="https://chen.ist/assets/images/cyber-security.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -409,6 +410,18 @@ window.Quarto = {
  <span class="dropdown-text">Courses</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="../../academy/trainings.html">
+ <span class="dropdown-text">Trainings</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../academy/microlearning.html">
+ <span class="dropdown-text">Microlearning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../academy/programs/index.html">
+ <span class="dropdown-text">Programs</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../../academy/events.html">
  <span class="dropdown-text">Events</span></a>
   </li>  
@@ -528,16 +541,31 @@ window.Quarto = {
 </header>
 
 
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="../../">Home</a></li>
+    <li class="breadcrumb-item"><a href="../../resources/">Resources</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Tools</li>
+  </ol>
+</nav>
+
 <div class="hero-section">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-8 offset-md-2 text-center">
-        <h1>Interactive <span class="text-green">Tools</span></h1>
+        <h1><span class="interactive-text">Interactive</span> <span class="text-green">Tools</span></h1>
         <p>Utilities and calculators to assist with technical tasks</p>
       </div>
     </div>
   </div>
 </div>
+
+<style>
+  /* Ensure the text is white in both light and dark modes */
+  .interactive-text {
+    color: white !important;
+  }
+</style>
 <section id="available-tools" class="level2">
 <h2 class="anchored" data-anchor-id="available-tools">Available Tools</h2>
 <p>Our interactive tools help you perform common tasks, calculations, and assessments related to cybersecurity, cloud computing, and software development.</p>
@@ -876,7 +904,7 @@ window.Quarto = {
     </div>
 </div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="c2VjdXJpdHklMkNhdXRoZW50aWNhdGlvbiUyQ3Rvb2xz" data-listing-date-sort="1741557600000" data-listing-file-modified-sort="1750927334043" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2711">
+<div class="g-col-1" data-index="0" data-categories="c2VjdXJpdHklMkNhdXRoZW50aWNhdGlvbiUyQ3Rvb2xz" data-listing-date-sort="1741557600000" data-listing-file-modified-sort="1751372133587" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2711">
 <a href="../../resources/tools/password-strength-checker.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -906,7 +934,7 @@ March 10, 2025
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="c2VjdXJpdHklMkNhc3Nlc3NtZW50JTJDemVyby10cnVzdA==" data-listing-date-sort="1740434400000" data-listing-file-modified-sort="1750927334043" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="41" data-listing-word-count-sort="8091">
+<div class="g-col-1" data-index="1" data-categories="c2VjdXJpdHklMkNhc3Nlc3NtZW50JTJDemVyby10cnVzdA==" data-listing-date-sort="1740434400000" data-listing-file-modified-sort="1751372133587" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="41" data-listing-word-count-sort="8091">
 <a href="../../resources/tools/zero-trust-assessment.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1024,7 +1052,7 @@ February 25, 2025
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/github\/com\/chen\.ist");
+        var filterRegex = new RegExp("https:\/\/chen\.ist");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1458,6 +1486,11 @@ February 25, 2025
                                 <div class="col-6 col-md-3">
                                     <a href="../../academy/computerclub.html" class="footer-link">
                                         <i class="bi bi-chevron-right icon-small"></i> Computer Club
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3 mt-2">
+                                    <a href="../../academy/programs" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Explore Academy Programs
                                     </a>
                                 </div>
                             </div>

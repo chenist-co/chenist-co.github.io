@@ -1,0 +1,1958 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.30">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Week 1: Security Awareness Fundamentals – chen.ist</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<link href="../../../../assets/images/favicon.png" rel="icon" type="image/png">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark-b5057f3398a202b36a08d66ee4de0ec1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+.navbar-brand-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand .navbar-title {
+  display: inline-block;
+  margin-left: 0;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 767.98px) {
+  .navbar-brand .navbar-title {
+    font-size: 1.1rem;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Find the navbar brand element that contains the logo
+  const navbarBrand = document.querySelector('.navbar-brand');
+  
+  if (navbarBrand) {
+    // Create a span for the CHENIST text
+    const titleSpan = document.createElement('span');
+    titleSpan.className = 'navbar-title';
+    titleSpan.textContent = 'CHENIST';
+    
+    // Append the span after the logo
+    navbarBrand.appendChild(titleSpan);
+  }
+});
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+<link rel="stylesheet" href="../../../../scss/styles.css">
+<link rel="stylesheet" href="../../../../scss/academy.scss">
+<link rel="stylesheet" href="../../../../scss/custom-hero.css">
+<meta property="og:title" content="Week 1: Security Awareness Fundamentals – chen.ist">
+<meta property="og:description" content="Understanding the human element in cybersecurity">
+<meta property="og:site_name" content="chen.ist">
+<meta name="twitter:title" content="Week 1: Security Awareness Fundamentals – chen.ist">
+<meta name="twitter:description" content="Understanding the human element in cybersecurity">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../../assets/images/logo-light.svg" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../services.html"> 
+<span class="menu-text">Services</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-academy" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Academy</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-academy">    
+        <li>
+    <a class="dropdown-item" href="../../../../academy/overview.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../academy/courses.html">
+ <span class="dropdown-text">Courses</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../academy/trainings.html">
+ <span class="dropdown-text">Trainings</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../academy/microlearning.html">
+ <span class="dropdown-text">Microlearning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../academy/programs/index.html">
+ <span class="dropdown-text">Programs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../academy/events.html">
+ <span class="dropdown-text">Events</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../academy/webinars.html">
+ <span class="dropdown-text">Webinars</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../academy/computerclub.html">
+ <span class="dropdown-text">Computer Club</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../academy/partnerships.html">
+ <span class="dropdown-text">Partnerships</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../blog.html"> 
+<span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../resources/index.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../../../../about/index.html">
+ <span class="dropdown-text">About</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../about/csr.html">
+ <span class="dropdown-text">CSR</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../about/community.html">
+ <span class="dropdown-text">Community</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-lang" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Lang</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-lang">    
+        <li>
+    <a class="dropdown-item" href="../../../../index.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../ro/index.html">
+ <span class="dropdown-text">Romanian</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../sv/index.html">
+ <span class="dropdown-text">Swedish</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../de/index.html">
+ <span class="dropdown-text">German</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#security-awareness-fundamentals" id="toc-security-awareness-fundamentals" class="nav-link active" data-scroll-target="#security-awareness-fundamentals"><span class="header-section-number">1</span> Security Awareness Fundamentals</a>
+  <ul class="collapse">
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">1.1</span> Learning Objectives</a></li>
+  <li><a href="#the-human-element-in-security" id="toc-the-human-element-in-security" class="nav-link" data-scroll-target="#the-human-element-in-security"><span class="header-section-number">1.2</span> The Human Element in Security</a>
+  <ul class="collapse">
+  <li><a href="#the-dual-role-of-people-in-security" id="toc-the-dual-role-of-people-in-security" class="nav-link" data-scroll-target="#the-dual-role-of-people-in-security"><span class="header-section-number">1.2.1</span> The Dual Role of People in Security</a></li>
+  <li><a href="#psychology-of-security-decisions" id="toc-psychology-of-security-decisions" class="nav-link" data-scroll-target="#psychology-of-security-decisions"><span class="header-section-number">1.2.2</span> Psychology of Security Decisions</a></li>
+  </ul></li>
+  <li><a href="#current-threat-landscape" id="toc-current-threat-landscape" class="nav-link" data-scroll-target="#current-threat-landscape"><span class="header-section-number">1.3</span> Current Threat Landscape</a>
+  <ul class="collapse">
+  <li><a href="#human-targeted-attack-trends" id="toc-human-targeted-attack-trends" class="nav-link" data-scroll-target="#human-targeted-attack-trends"><span class="header-section-number">1.3.1</span> Human-Targeted Attack Trends</a></li>
+  </ul></li>
+  <li><a href="#security-awareness-vs.-security-culture" id="toc-security-awareness-vs.-security-culture" class="nav-link" data-scroll-target="#security-awareness-vs.-security-culture"><span class="header-section-number">1.4</span> Security Awareness vs.&nbsp;Security Culture</a>
+  <ul class="collapse">
+  <li><a href="#defining-the-difference" id="toc-defining-the-difference" class="nav-link" data-scroll-target="#defining-the-difference"><span class="header-section-number">1.4.1</span> Defining the Difference</a></li>
+  <li><a href="#building-blocks-of-security-culture" id="toc-building-blocks-of-security-culture" class="nav-link" data-scroll-target="#building-blocks-of-security-culture"><span class="header-section-number">1.4.2</span> Building Blocks of Security Culture</a></li>
+  <li><a href="#maturity-model-for-security-culture" id="toc-maturity-model-for-security-culture" class="nav-link" data-scroll-target="#maturity-model-for-security-culture"><span class="header-section-number">1.4.3</span> Maturity Model for Security Culture</a></li>
+  </ul></li>
+  <li><a href="#security-awareness-program-components" id="toc-security-awareness-program-components" class="nav-link" data-scroll-target="#security-awareness-program-components"><span class="header-section-number">1.5</span> Security Awareness Program Components</a>
+  <ul class="collapse">
+  <li><a href="#core-elements-of-effective-programs" id="toc-core-elements-of-effective-programs" class="nav-link" data-scroll-target="#core-elements-of-effective-programs"><span class="header-section-number">1.5.1</span> Core Elements of Effective Programs</a></li>
+  </ul></li>
+  <li><a href="#metrics-and-measurement" id="toc-metrics-and-measurement" class="nav-link" data-scroll-target="#metrics-and-measurement"><span class="header-section-number">1.6</span> Metrics and Measurement</a>
+  <ul class="collapse">
+  <li><a href="#evaluating-program-effectiveness" id="toc-evaluating-program-effectiveness" class="nav-link" data-scroll-target="#evaluating-program-effectiveness"><span class="header-section-number">1.6.1</span> Evaluating Program Effectiveness</a></li>
+  <li><a href="#kirkpatrick-model-applied-to-security-awareness" id="toc-kirkpatrick-model-applied-to-security-awareness" class="nav-link" data-scroll-target="#kirkpatrick-model-applied-to-security-awareness"><span class="header-section-number">1.6.2</span> Kirkpatrick Model Applied to Security Awareness</a></li>
+  </ul></li>
+  <li><a href="#practical-exercise-analyzing-the-human-factor" id="toc-practical-exercise-analyzing-the-human-factor" class="nav-link" data-scroll-target="#practical-exercise-analyzing-the-human-factor"><span class="header-section-number">1.7</span> Practical Exercise: Analyzing the Human Factor</a>
+  <ul class="collapse">
+  <li><a href="#exercise-1-security-decision-analysis" id="toc-exercise-1-security-decision-analysis" class="nav-link" data-scroll-target="#exercise-1-security-decision-analysis"><span class="header-section-number">1.7.1</span> Exercise 1: Security Decision Analysis</a></li>
+  <li><a href="#exercise-2-security-culture-assessment" id="toc-exercise-2-security-culture-assessment" class="nav-link" data-scroll-target="#exercise-2-security-culture-assessment"><span class="header-section-number">1.7.2</span> Exercise 2: Security Culture Assessment</a></li>
+  </ul></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources"><span class="header-section-number">1.8</span> Additional Resources</a></li>
+  <li><a href="#next-class" id="toc-next-class" class="nav-link" data-scroll-target="#next-class"><span class="header-section-number">1.9</span> Next Class</a></li>
+  <li><a href="#discussion-questions" id="toc-discussion-questions" class="nav-link" data-scroll-target="#discussion-questions"><span class="header-section-number">1.10</span> Discussion Questions</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Week 1: Security Awareness Fundamentals</h1>
+<p class="subtitle lead">Understanding the human element in cybersecurity</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">July 1, 2025</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="security-awareness-fundamentals" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Security Awareness Fundamentals</h1>
+<section id="learning-objectives" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">1.1</span> Learning Objectives</h2>
+<p>By the end of this module, you will be able to:</p>
+<ul>
+<li>Explain the dual role of humans as both vulnerabilities and assets in security</li>
+<li>Identify cognitive biases and psychological factors that influence security decisions</li>
+<li>Describe the current threat landscape focusing on human-targeted attacks</li>
+<li>Differentiate between security awareness and security culture</li>
+<li>Apply behavioral science principles to security awareness approaches</li>
+<li>Evaluate the effectiveness of different security awareness tactics</li>
+</ul>
+</section>
+<section id="the-human-element-in-security" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="the-human-element-in-security"><span class="header-section-number">1.2</span> The Human Element in Security</h2>
+<section id="the-dual-role-of-people-in-security" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="the-dual-role-of-people-in-security"><span class="header-section-number">1.2.1</span> The Dual Role of People in Security</h3>
+<p>In cybersecurity, people simultaneously represent:</p>
+<section id="the-human-vulnerability" class="level4" data-number="1.2.1.1">
+<h4 data-number="1.2.1.1" class="anchored" data-anchor-id="the-human-vulnerability"><span class="header-section-number">1.2.1.1</span> The Human Vulnerability</h4>
+<p>Humans often become the weak link in security for several reasons:</p>
+<ul>
+<li><strong>Limited Attention</strong>: Can’t maintain constant vigilance</li>
+<li><strong>Competing Priorities</strong>: Security vs.&nbsp;productivity tradeoffs</li>
+<li><strong>Inconsistent Risk Perception</strong>: Poor at evaluating certain risks</li>
+<li><strong>Social Nature</strong>: Desire to be helpful can be exploited</li>
+<li><strong>Trust Bias</strong>: Tendency to trust by default</li>
+<li><strong>Curiosity</strong>: Natural interest can lead to dangerous actions</li>
+<li><strong>Habit Formation</strong>: Difficulty changing established behaviors</li>
+</ul>
+<p>According to the 2024 Verizon Data Breach Investigations Report, over 74% of breaches involve the human element, including social engineering, errors, or misuse.</p>
+</section>
+<section id="the-human-firewall" class="level4" data-number="1.2.1.2">
+<h4 data-number="1.2.1.2" class="anchored" data-anchor-id="the-human-firewall"><span class="header-section-number">1.2.1.2</span> The Human Firewall</h4>
+<p>Conversely, alert and security-conscious people can be the strongest defense:</p>
+<ul>
+<li><strong>Pattern Recognition</strong>: Humans excel at spotting anomalies once trained</li>
+<li><strong>Adaptability</strong>: Can respond to novel threats faster than automated systems</li>
+<li><strong>Contextual Understanding</strong>: Comprehend situations that may confuse algorithms</li>
+<li><strong>Collective Intelligence</strong>: Many eyes across an organization</li>
+<li><strong>Motivation</strong>: Can be driven by protecting shared values</li>
+<li><strong>Creativity</strong>: Can develop innovative solutions to security challenges</li>
+<li><strong>Intuition</strong>: “Gut feeling” that something isn’t right</li>
+</ul>
+<p>The challenge lies in transforming people from security vulnerabilities into security assets.</p>
+</section>
+</section>
+<section id="psychology-of-security-decisions" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="psychology-of-security-decisions"><span class="header-section-number">1.2.2</span> Psychology of Security Decisions</h3>
+<p>Understanding why people make certain security decisions is crucial for effective awareness programs.</p>
+<section id="cognitive-biases-affecting-security" class="level4" data-number="1.2.2.1">
+<h4 data-number="1.2.2.1" class="anchored" data-anchor-id="cognitive-biases-affecting-security"><span class="header-section-number">1.2.2.1</span> Cognitive Biases Affecting Security</h4>
+<ul>
+<li><strong>Optimism Bias</strong>: “It won’t happen to me”</li>
+<li><strong>Present Bias</strong>: Immediate convenience outweighs future security</li>
+<li><strong>Confirmation Bias</strong>: Seeking information that confirms existing beliefs</li>
+<li><strong>Availability Heuristic</strong>: Overestimating the likelihood of events easy to recall</li>
+<li><strong>Status Quo Bias</strong>: Preference for the current state of affairs</li>
+<li><strong>Bandwagon Effect</strong>: Following what others do regardless of risks</li>
+<li><strong>Authority Bias</strong>: Excessive trust in directions from authority figures</li>
+</ul>
+</section>
+<section id="risk-perception-factors" class="level4" data-number="1.2.2.2">
+<h4 data-number="1.2.2.2" class="anchored" data-anchor-id="risk-perception-factors"><span class="header-section-number">1.2.2.2</span> Risk Perception Factors</h4>
+<p>Several factors influence how people perceive security risks:</p>
+<ul>
+<li><strong>Controllability</strong>: Risks perceived as under personal control seem less threatening</li>
+<li><strong>Familiarity</strong>: Familiar activities seem less risky than unfamiliar ones</li>
+<li><strong>Catastrophic Potential</strong>: Risks with severe consequences seem more threatening</li>
+<li><strong>Immediacy</strong>: Delayed consequences are taken less seriously</li>
+<li><strong>Voluntariness</strong>: Voluntarily assumed risks are more acceptable than imposed ones</li>
+<li><strong>Benefit Perception</strong>: Risks with clear benefits seem more acceptable</li>
+<li><strong>Understanding</strong>: Complex risks may be underestimated or overestimated</li>
+</ul>
+</section>
+<section id="behavior-change-models-in-security" class="level4" data-number="1.2.2.3">
+<h4 data-number="1.2.2.3" class="anchored" data-anchor-id="behavior-change-models-in-security"><span class="header-section-number">1.2.2.3</span> Behavior Change Models in Security</h4>
+<p>Several models help explain security behavior change:</p>
+<ul>
+<li><strong>Protection Motivation Theory</strong>: People evaluate:
+<ul>
+<li>Threat severity</li>
+<li>Vulnerability to the threat</li>
+<li>Efficacy of the recommended behavior</li>
+<li>Self-efficacy (ability to perform the behavior)</li>
+</ul></li>
+<li><strong>Security Behavior Intentions Scale (SeBIS)</strong>: Measures attitudes toward:
+<ul>
+<li>Device securement</li>
+<li>Password generation</li>
+<li>Proactive awareness</li>
+<li>Updating</li>
+</ul></li>
+<li><strong>MINDSPACE Framework</strong>: Influences on behavior:
+<ul>
+<li>Messenger: Who communicates information</li>
+<li>Incentives: Rewards and penalties</li>
+<li>Norms: What others do</li>
+<li>Defaults: Pre-set options</li>
+<li>Salience: What draws attention</li>
+<li>Priming: Subconscious cues</li>
+<li>Affect: Emotional associations</li>
+<li>Commitments: Public promises</li>
+<li>Ego: Actions that make us feel good about ourselves</li>
+</ul></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="current-threat-landscape" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="current-threat-landscape"><span class="header-section-number">1.3</span> Current Threat Landscape</h2>
+<section id="human-targeted-attack-trends" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="human-targeted-attack-trends"><span class="header-section-number">1.3.1</span> Human-Targeted Attack Trends</h3>
+<p>The current threat landscape focuses heavily on exploiting human vulnerabilities:</p>
+<section id="social-engineering-evolution" class="level4" data-number="1.3.1.1">
+<h4 data-number="1.3.1.1" class="anchored" data-anchor-id="social-engineering-evolution"><span class="header-section-number">1.3.1.1</span> Social Engineering Evolution</h4>
+<ul>
+<li>Increased targeting and sophistication</li>
+<li>AI-generated content making attacks more convincing</li>
+<li>Multifaceted attacks combining multiple channels</li>
+<li>Exploitation of current events and crises</li>
+<li>Targeting of personal vs.&nbsp;business contexts</li>
+</ul>
+</section>
+<section id="phishing-trends" class="level4" data-number="1.3.1.2">
+<h4 data-number="1.3.1.2" class="anchored" data-anchor-id="phishing-trends"><span class="header-section-number">1.3.1.2</span> Phishing Trends</h4>
+<ul>
+<li>Spear phishing vs.&nbsp;mass phishing</li>
+<li>Business Email Compromise (BEC) focuses on financial fraud</li>
+<li>Supply chain compromise to reach multiple targets</li>
+<li>Cloud service credential phishing</li>
+<li>Mobile-focused phishing (smishing)</li>
+<li>Collaboration tool exploitation (Teams/Slack)</li>
+</ul>
+</section>
+<section id="other-attack-vectors" class="level4" data-number="1.3.1.3">
+<h4 data-number="1.3.1.3" class="anchored" data-anchor-id="other-attack-vectors"><span class="header-section-number">1.3.1.3</span> Other Attack Vectors</h4>
+<ul>
+<li>Vishing (voice phishing) attacks targeting remote workers</li>
+<li>QR code phishing (quishing)</li>
+<li>Deepfake social engineering</li>
+<li>Physical social engineering (tailgating, impersonation)</li>
+<li>Watering hole attacks targeting specific groups</li>
+<li>Malvertising campaigns</li>
+</ul>
+</section>
+<section id="attack-statistics" class="level4" data-number="1.3.1.4">
+<h4 data-number="1.3.1.4" class="anchored" data-anchor-id="attack-statistics"><span class="header-section-number">1.3.1.4</span> Attack Statistics</h4>
+<ul>
+<li>3.4 billion phishing emails sent daily (Cisco)</li>
+<li>90% of data breaches involve phishing (Deloitte)</li>
+<li>65% increase in BEC attacks (FBI IC3)</li>
+<li>Average BEC loss: $80,000 per incident</li>
+<li>47% increase in smishing attacks (Proofpoint)</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="security-awareness-vs.-security-culture" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="security-awareness-vs.-security-culture"><span class="header-section-number">1.4</span> Security Awareness vs.&nbsp;Security Culture</h2>
+<section id="defining-the-difference" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="defining-the-difference"><span class="header-section-number">1.4.1</span> Defining the Difference</h3>
+<p>While related, security awareness and security culture represent different levels of organizational security maturity:</p>
+<section id="security-awareness" class="level4" data-number="1.4.1.1">
+<h4 data-number="1.4.1.1" class="anchored" data-anchor-id="security-awareness"><span class="header-section-number">1.4.1.1</span> Security Awareness</h4>
+<ul>
+<li><strong>Definition</strong>: Knowledge of security threats and best practices</li>
+<li><strong>Focus</strong>: Individual knowledge and skills</li>
+<li><strong>Approach</strong>: Training, communications, reminders</li>
+<li><strong>Measurement</strong>: Completion rates, knowledge retention</li>
+<li><strong>Timeframe</strong>: Short-term, often compliance-driven</li>
+<li><strong>Direction</strong>: Top-down instruction</li>
+<li><strong>Goal</strong>: Employees know what to do</li>
+</ul>
+</section>
+<section id="security-culture" class="level4" data-number="1.4.1.2">
+<h4 data-number="1.4.1.2" class="anchored" data-anchor-id="security-culture"><span class="header-section-number">1.4.1.2</span> Security Culture</h4>
+<ul>
+<li><strong>Definition</strong>: Shared values, beliefs, and norms around security</li>
+<li><strong>Focus</strong>: Collective behaviors and attitudes</li>
+<li><strong>Approach</strong>: Leadership, incentives, integration into processes</li>
+<li><strong>Measurement</strong>: Behavioral indicators, incident reporting</li>
+<li><strong>Timeframe</strong>: Long-term, continuous evolution</li>
+<li><strong>Direction</strong>: Distributed, peer-influenced</li>
+<li><strong>Goal</strong>: Security becomes “how we do things here”</li>
+</ul>
+</section>
+</section>
+<section id="building-blocks-of-security-culture" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="building-blocks-of-security-culture"><span class="header-section-number">1.4.2</span> Building Blocks of Security Culture</h3>
+<p>A strong security culture consists of several interdependent elements:</p>
+<ol type="1">
+<li><strong>Attitudes</strong>: Positive perspectives toward security practices</li>
+<li><strong>Behaviors</strong>: Regular demonstration of secure actions</li>
+<li><strong>Cognition</strong>: Understanding of threats and protections</li>
+<li><strong>Communication</strong>: Open dialogue about security</li>
+<li><strong>Compliance</strong>: Adherence to policies and standards</li>
+<li><strong>Norms</strong>: Unwritten rules about acceptable behaviors</li>
+<li><strong>Responsibilities</strong>: Clear roles in security processes</li>
+</ol>
+</section>
+<section id="maturity-model-for-security-culture" class="level3" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="maturity-model-for-security-culture"><span class="header-section-number">1.4.3</span> Maturity Model for Security Culture</h3>
+<p>Organizations typically evolve through stages of security culture maturity:</p>
+<ol type="1">
+<li><strong>Non-existent</strong>: Security is not considered important</li>
+<li><strong>Compliance-focused</strong>: Doing minimum required by regulations</li>
+<li><strong>Awareness</strong>: Basic knowledge but limited behavior change</li>
+<li><strong>Proactive</strong>: Security actively considered in decisions</li>
+<li><strong>Ingrained</strong>: Security naturally integrated into all activities</li>
+</ol>
+</section>
+</section>
+<section id="security-awareness-program-components" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="security-awareness-program-components"><span class="header-section-number">1.5</span> Security Awareness Program Components</h2>
+<section id="core-elements-of-effective-programs" class="level3" data-number="1.5.1">
+<h3 data-number="1.5.1" class="anchored" data-anchor-id="core-elements-of-effective-programs"><span class="header-section-number">1.5.1</span> Core Elements of Effective Programs</h3>
+<p>Successful security awareness initiatives contain several key components:</p>
+<section id="governance-and-leadership" class="level4" data-number="1.5.1.1">
+<h4 data-number="1.5.1.1" class="anchored" data-anchor-id="governance-and-leadership"><span class="header-section-number">1.5.1.1</span> Governance and Leadership</h4>
+<ul>
+<li>Executive sponsorship and visible support</li>
+<li>Clear roles and responsibilities</li>
+<li>Integration with broader security program</li>
+<li>Adequate resources and budget</li>
+<li>Policy foundation</li>
+</ul>
+</section>
+<section id="audience-analysis" class="level4" data-number="1.5.1.2">
+<h4 data-number="1.5.1.2" class="anchored" data-anchor-id="audience-analysis"><span class="header-section-number">1.5.1.2</span> Audience Analysis</h4>
+<ul>
+<li>Segmentation by role, department, risk level</li>
+<li>Needs assessment for different groups</li>
+<li>Understanding of existing knowledge levels</li>
+<li>Cultural and regional considerations</li>
+<li>Learning preferences and accessibility needs</li>
+</ul>
+</section>
+<section id="content-development" class="level4" data-number="1.5.1.3">
+<h4 data-number="1.5.1.3" class="anchored" data-anchor-id="content-development"><span class="header-section-number">1.5.1.3</span> Content Development</h4>
+<ul>
+<li>Relevant, timely topics addressing real risks</li>
+<li>Engaging, clear, and actionable information</li>
+<li>Multi-format approach (visual, audio, text, interactive)</li>
+<li>Consistent branding and messaging</li>
+<li>Localization and customization</li>
+</ul>
+</section>
+<section id="delivery-methods" class="level4" data-number="1.5.1.4">
+<h4 data-number="1.5.1.4" class="anchored" data-anchor-id="delivery-methods"><span class="header-section-number">1.5.1.4</span> Delivery Methods</h4>
+<ul>
+<li>Formal training (in-person, online)</li>
+<li>Awareness campaigns and events</li>
+<li>Regular communications (newsletters, intranet)</li>
+<li>Just-in-time education (teachable moments)</li>
+<li>Environmental reminders (posters, screensavers)</li>
+<li>Simulations and exercises (phishing tests)</li>
+</ul>
+</section>
+<section id="reinforcement" class="level4" data-number="1.5.1.5">
+<h4 data-number="1.5.1.5" class="anchored" data-anchor-id="reinforcement"><span class="header-section-number">1.5.1.5</span> Reinforcement</h4>
+<ul>
+<li>Microlearning and refresher content</li>
+<li>Gamification and competitions</li>
+<li>Recognition and rewards</li>
+<li>Security champions program</li>
+<li>Management reinforcement</li>
+</ul>
+</section>
+<section id="measurement-and-improvement" class="level4" data-number="1.5.1.6">
+<h4 data-number="1.5.1.6" class="anchored" data-anchor-id="measurement-and-improvement"><span class="header-section-number">1.5.1.6</span> Measurement and Improvement</h4>
+<ul>
+<li>Knowledge assessments</li>
+<li>Behavioral metrics</li>
+<li>Simulation performance</li>
+<li>Incident tracking</li>
+<li>Program adjustment based on results</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="metrics-and-measurement" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="metrics-and-measurement"><span class="header-section-number">1.6</span> Metrics and Measurement</h2>
+<section id="evaluating-program-effectiveness" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="evaluating-program-effectiveness"><span class="header-section-number">1.6.1</span> Evaluating Program Effectiveness</h3>
+<p>Measuring security awareness impact requires multiple metrics across different dimensions:</p>
+<section id="activity-metrics" class="level4" data-number="1.6.1.1">
+<h4 data-number="1.6.1.1" class="anchored" data-anchor-id="activity-metrics"><span class="header-section-number">1.6.1.1</span> Activity Metrics</h4>
+<ul>
+<li>Training completion rates</li>
+<li>Materials distributed</li>
+<li>Communications sent</li>
+<li>Events conducted</li>
+<li>Reach and engagement statistics</li>
+</ul>
+</section>
+<section id="knowledge-metrics" class="level4" data-number="1.6.1.2">
+<h4 data-number="1.6.1.2" class="anchored" data-anchor-id="knowledge-metrics"><span class="header-section-number">1.6.1.2</span> Knowledge Metrics</h4>
+<ul>
+<li>Pre/post assessment scores</li>
+<li>Knowledge retention over time</li>
+<li>Comprehension of specific topics</li>
+<li>Self-reported confidence levels</li>
+</ul>
+</section>
+<section id="attitudinal-metrics" class="level4" data-number="1.6.1.3">
+<h4 data-number="1.6.1.3" class="anchored" data-anchor-id="attitudinal-metrics"><span class="header-section-number">1.6.1.3</span> Attitudinal Metrics</h4>
+<ul>
+<li>Security culture survey results</li>
+<li>Perception of security importance</li>
+<li>Willingness to report incidents</li>
+<li>Sense of personal responsibility</li>
+</ul>
+</section>
+<section id="behavioral-metrics" class="level4" data-number="1.6.1.4">
+<h4 data-number="1.6.1.4" class="anchored" data-anchor-id="behavioral-metrics"><span class="header-section-number">1.6.1.4</span> Behavioral Metrics</h4>
+<ul>
+<li>Phishing simulation click rates</li>
+<li>Password strength indicators</li>
+<li>Policy compliance rates</li>
+<li>Security tool adoption</li>
+<li>Secure behavior observations</li>
+</ul>
+</section>
+<section id="outcome-metrics" class="level4" data-number="1.6.1.5">
+<h4 data-number="1.6.1.5" class="anchored" data-anchor-id="outcome-metrics"><span class="header-section-number">1.6.1.5</span> Outcome Metrics</h4>
+<ul>
+<li>Security incident frequency</li>
+<li>Human-caused incident reduction</li>
+<li>Reporting of suspicious activities</li>
+<li>Time to report incidents</li>
+<li>Reduced dwell time for attacks</li>
+</ul>
+</section>
+</section>
+<section id="kirkpatrick-model-applied-to-security-awareness" class="level3" data-number="1.6.2">
+<h3 data-number="1.6.2" class="anchored" data-anchor-id="kirkpatrick-model-applied-to-security-awareness"><span class="header-section-number">1.6.2</span> Kirkpatrick Model Applied to Security Awareness</h3>
+<p>The Kirkpatrick Model provides a framework for evaluating training effectiveness:</p>
+<ol type="1">
+<li><strong>Reaction</strong>: How participants feel about the training
+<ul>
+<li>Satisfaction surveys</li>
+<li>Engagement metrics</li>
+<li>Feedback forms</li>
+</ul></li>
+<li><strong>Learning</strong>: Increase in knowledge or skills
+<ul>
+<li>Knowledge assessments</li>
+<li>Scenario-based questions</li>
+<li>Self-efficacy measures</li>
+</ul></li>
+<li><strong>Behavior</strong>: Application of learning to job
+<ul>
+<li>Simulation exercises</li>
+<li>Observed behaviors</li>
+<li>Self-reported actions</li>
+</ul></li>
+<li><strong>Results</strong>: Organizational impact
+<ul>
+<li>Incident reduction</li>
+<li>Faster detection</li>
+<li>Cost avoidance</li>
+</ul></li>
+</ol>
+</section>
+</section>
+<section id="practical-exercise-analyzing-the-human-factor" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="practical-exercise-analyzing-the-human-factor"><span class="header-section-number">1.7</span> Practical Exercise: Analyzing the Human Factor</h2>
+<section id="exercise-1-security-decision-analysis" class="level3" data-number="1.7.1">
+<h3 data-number="1.7.1" class="anchored" data-anchor-id="exercise-1-security-decision-analysis"><span class="header-section-number">1.7.1</span> Exercise 1: Security Decision Analysis</h3>
+<p>Consider the following scenarios and analyze the psychological factors at play:</p>
+<ol type="1">
+<li>An employee receives an urgent email from their “CEO” asking them to purchase gift cards immediately. Despite security training, they comply.
+<ul>
+<li>What cognitive biases might influence this decision?</li>
+<li>How could security awareness counter these biases?</li>
+</ul></li>
+<li>A developer uses a weak password because the strong password requirements are “annoying” and slow down their work.
+<ul>
+<li>What risk perception factors are involved?</li>
+<li>How could security awareness address the underlying motivations?</li>
+</ul></li>
+<li>An organization implements a new security tool, but adoption remains low despite mandatory training.
+<ul>
+<li>Using behavior change models, what might be missing?</li>
+<li>Design an awareness approach to increase adoption.</li>
+</ul></li>
+</ol>
+</section>
+<section id="exercise-2-security-culture-assessment" class="level3" data-number="1.7.2">
+<h3 data-number="1.7.2" class="anchored" data-anchor-id="exercise-2-security-culture-assessment"><span class="header-section-number">1.7.2</span> Exercise 2: Security Culture Assessment</h3>
+<p>For your organization (or a hypothetical one):</p>
+<ol type="1">
+<li><p>Identify current indicators of security culture maturity using the following categories:</p>
+<ul>
+<li>Leadership messaging and actions</li>
+<li>Employee behaviors and attitudes</li>
+<li>Security incident handling</li>
+<li>Policy compliance</li>
+<li>Reporting and communication</li>
+</ul></li>
+<li><p>Place the organization on the security culture maturity model (Non-existent to Ingrained)</p></li>
+<li><p>Recommend three specific initiatives to move the culture to the next level</p></li>
+</ol>
+</section>
+</section>
+<section id="additional-resources" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="additional-resources"><span class="header-section-number">1.8</span> Additional Resources</h2>
+<ul>
+<li><a href="https://www.sans.org/security-awareness-training/resources/reports/">SANS Security Awareness Report</a></li>
+<li><a href="https://www.ncsc.gov.uk/collection/you-shape-security">National Cyber Security Centre (UK) - People: The Strongest Link</a></li>
+<li><a href="https://csrc.nist.gov/publications/detail/sp/800-50/final">NIST Special Publication 800-50: Building an Information Technology Security Awareness Program</a></li>
+<li><a href="https://www.verizon.com/business/resources/reports/dbir/">Verizon Data Breach Investigations Report (DBIR)</a></li>
+<li><a href="https://www.proofpoint.com/us/resources/threat-reports/state-of-phish">Proofpoint State of the Phish Report</a></li>
+</ul>
+</section>
+<section id="next-class" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="next-class"><span class="header-section-number">1.9</span> Next Class</h2>
+<p>In our next session, we’ll dive deeper into social engineering attacks, focusing on recognition and response strategies for various types of manipulation techniques.</p>
+</section>
+<section id="discussion-questions" class="level2" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="discussion-questions"><span class="header-section-number">1.10</span> Discussion Questions</h2>
+<ol type="1">
+<li>How has your perception of the human factor in security changed after this session?</li>
+<li>What cognitive biases have you observed affecting security decisions in your organization?</li>
+<li>What current human-targeted threats do you believe pose the greatest risk to organizations today?</li>
+<li>How would you describe the security culture in your organization, and what factors have shaped it?</li>
+<li>What metrics would be most valuable for demonstrating the impact of security awareness in your environment?</li>
+</ol>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/chen\.ist");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+
+</div>   
+    <div class="nav-footer-center">
+
+</div>
+    <div class="nav-footer-right">
+
+</div>
+  </div>
+</footer>
+<footer class="footer mt-5 py-3 cybersecurity-footer">
+    <div class="container">
+        <div class="row mb-3">
+            <!-- Company Logo and Brief -->
+            <div class="col-md-4 mb-2">
+                <div class="d-flex align-items-center">
+                    <h4 class="footer-logo mb-0 me-2">chen<span class="text-accent">.ist</span></h4>
+                    <div class="secure-badge ms-2">
+                        <i class="bi bi-shield-lock-fill"></i> Secure
+                    </div>
+                </div>
+                <p class="footer-description small mt-2 mb-0">
+                    Enterprise cybersecurity solutions with zero-trust implementation and continuous monitoring.
+                </p>
+            </div>
+            
+            <!-- Tabs Navigation -->
+            <div class="col-md-8 mb-2">
+                <div class="footer-tabs">
+                    <ul class="nav nav-tabs footer-nav-tabs" id="footerTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="solutions-tab" data-bs-toggle="tab" data-bs-target="#solutions" type="button" role="tab">
+                                <i class="bi bi-shield-fill"></i> Solutions
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="academy-tab" data-bs-toggle="tab" data-bs-target="#academy" type="button" role="tab">
+                                <i class="bi bi-mortarboard-fill"></i> Academy
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab">
+                                <i class="bi bi-envelope-fill"></i> Contact
+                            </button>
+                        </li>
+                    </ul>
+                    
+                    <!-- Tab Content -->
+                    <div class="tab-content pt-2" id="footerTabContent">
+                        <!-- Solutions Tab -->
+                        <div class="tab-pane fade show active" id="solutions" role="tabpanel">
+                            <div class="row">
+                                <div class="col-6 col-md-3">
+                                    <a href="../../../../services.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Security Services
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../../../../services.html#consulting" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Consulting
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../../../../services.html#compliance" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Compliance
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../../../../services.html#incident-response" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Incident Response
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Academy Tab -->
+                        <div class="tab-pane fade" id="academy" role="tabpanel">
+                            <div class="row">
+                                <div class="col-6 col-md-3">
+                                    <a href="../../../../academy/courses.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Courses
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../../../../academy/events.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Events
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../../../../academy/webinars.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Webinars
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../../../../academy/computerclub.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Computer Club
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3 mt-2">
+                                    <a href="../../../../academy/programs" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Explore Academy Programs
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Contact Tab -->
+                        <div class="tab-pane fade" id="contact" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-1">
+                                        <i class="bi bi-envelope-fill contact-icon"></i>
+                                        <a href="mailto:office@chen.ist" class="footer-link">office@chen.ist</a>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-shield-fill-check contact-icon"></i>
+                                        <span class="small">SOC Available 24/7</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-1">
+                                        <i class="bi bi-geo-alt-fill contact-icon"></i>
+                                        <span class="small">Stockholm | Craiova | Bucharest</span>
+                                    </div>
+                                    <div class="social-icons">
+                                        <a href="https://github.com/chenist" class="social-icon" aria-label="GitHub">
+                                            <i class="bi bi-github"></i>
+                                        </a>
+                                        <a href="https://linkedin.com/in/chenistsec" class="social-icon" aria-label="LinkedIn">
+                                            <i class="bi bi-linkedin"></i>
+                                        </a>
+                                        <a href="https://twitter.com/chenistsec" class="social-icon" aria-label="Twitter">
+                                            <i class="bi bi-twitter-x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-divider">
+            <div class="cyber-line"></div>
+        </div>
+        
+        <div class="row footer-bottom py-1">
+            <div class="col-md-6">
+                <div class="d-flex align-items-center">
+                    <div class="security-pulse"></div>
+                    <p class="mb-0 ms-2 copyright">
+                        © 2025 chen.ist <span class="d-none d-md-inline">| Secure. Vigilant. Resilient.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <div class="footer-bottom-links">
+                    <a href="../../../../privacy.html">Privacy</a>
+                    <span class="separator">|</span>
+                    <a href="../../../../terms.html">Terms</a>
+                    <span class="separator">|</span>
+                    <a href="../../../../contact.html" class="btn-report-incident">
+                        <i class="bi bi-exclamation-triangle-fill"></i> Report Incident
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+.cybersecurity-footer {
+    background-color: #0f1923;
+    color: #e6e6e6;
+    border-top: 3px solid #18bc9c;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+/* Change accent colors for academy section */
+.academy-section .cybersecurity-footer {
+    border-top-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer::before {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #F5A623 20%, 
+        #F5A623 40%, 
+        transparent 50%,
+        transparent 60%,
+        #F5A623 80%,
+        transparent 100%
+    );
+}
+
+.academy-section .cybersecurity-footer .text-accent,
+.academy-section .cybersecurity-footer .contact-icon,
+.academy-section .cybersecurity-footer .footer-heading::after,
+.academy-section .cybersecurity-footer .social-icon:hover,
+.academy-section .cybersecurity-footer .footer-link:hover,
+.academy-section .cybersecurity-footer .contact-item a:hover,
+.academy-section .cybersecurity-footer .footer-bottom-links a:hover,
+.academy-section .cybersecurity-footer .nav-link.active {
+    color: #F5A623 !important;
+}
+
+.academy-section .cybersecurity-footer .secure-badge {
+    background-color: rgba(245, 166, 35, 0.15);
+    color: #F5A623;
+    border-left-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .social-icon:hover {
+    background-color: #F5A623;
+    color: #0f1923 !important;
+}
+
+.academy-section .cybersecurity-footer .cyber-line {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(245, 166, 35, 0.3) 10%, 
+        rgba(245, 166, 35, 0.5) 50%, 
+        rgba(245, 166, 35, 0.3) 90%, 
+        transparent 100%
+    );
+}
+
+.academy-section .cybersecurity-footer .cyber-line::before,
+.academy-section .cybersecurity-footer .cyber-line::after {
+    background-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .security-pulse {
+    background-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .security-pulse::before {
+    background-color: rgba(245, 166, 35, 0.3);
+}
+
+.cybersecurity-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #18bc9c 20%, 
+        #18bc9c 40%, 
+        transparent 50%,
+        transparent 60%,
+        #18bc9c 80%,
+        transparent 100%
+    );
+    opacity: 0.4;
+}
+
+.cybersecurity-footer .footer-brand {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.cybersecurity-footer .footer-logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Source Code Pro', monospace;
+    color: white;
+}
+
+.cybersecurity-footer .text-accent {
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .secure-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(24, 188, 156, 0.15);
+    color: #18bc9c;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-left: 2px solid #18bc9c;
+}
+
+.cybersecurity-footer .footer-description {
+    color: #9ba6b2;
+    line-height: 1.4;
+}
+
+.cybersecurity-footer .footer-tabs {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.cybersecurity-footer .footer-nav-tabs {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cybersecurity-footer .nav-tabs .nav-link {
+    color: #9ba6b2;
+    border: none;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    background-color: transparent;
+}
+
+.cybersecurity-footer .nav-tabs .nav-link:hover {
+    color: #e6e6e6;
+    border: none;
+}
+
+.cybersecurity-footer .nav-tabs .nav-link.active {
+    color: #18bc9c;
+    background-color: rgba(24, 188, 156, 0.1);
+    border: none;
+}
+
+.cybersecurity-footer .tab-content {
+    min-height: 60px;
+}
+
+.cybersecurity-footer .footer-link {
+    color: #9ba6b2;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.cybersecurity-footer .footer-link:hover {
+    color: #18bc9c;
+    transform: translateX(3px);
+}
+
+.cybersecurity-footer .icon-small {
+    font-size: 0.75rem;
+    margin-right: 0.25rem;
+}
+
+.cybersecurity-footer .contact-icon {
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .social-icons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.cybersecurity-footer .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e6e6e6;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.cybersecurity-footer .social-icon:hover {
+    background-color: #18bc9c;
+    color: #0f1923;
+    transform: translateY(-2px);
+}
+
+.cybersecurity-footer .footer-divider {
+    position: relative;
+    height: 12px;
+    margin: 0.5rem 0;
+}
+
+.cybersecurity-footer .cyber-line {
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(24, 188, 156, 0.3) 10%, 
+        rgba(24, 188, 156, 0.5) 50%, 
+        rgba(24, 188, 156, 0.3) 90%, 
+        transparent 100%
+    );
+    position: relative;
+}
+
+.cybersecurity-footer .cyber-line::before,
+.cybersecurity-footer .cyber-line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 8px;
+    height: 1px;
+    background-color: #18bc9c;
+    animation: blink 2s infinite;
+}
+
+.cybersecurity-footer .cyber-line::before {
+    left: 25%;
+}
+
+.cybersecurity-footer .cyber-line::after {
+    right: 25%;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
+
+.cybersecurity-footer .security-pulse {
+    width: 8px;
+    height: 8px;
+    background-color: #18bc9c;
+    border-radius: 50%;
+    position: relative;
+}
+
+.cybersecurity-footer .security-pulse::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 50%;
+    background-color: rgba(24, 188, 156, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    70% { transform: scale(1.5); opacity: 0; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+.cybersecurity-footer .copyright {
+    color: #9ba6b2;
+    font-size: 0.8rem;
+}
+
+.cybersecurity-footer .footer-bottom-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.cybersecurity-footer .footer-bottom-links a {
+    color: #9ba6b2;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.2s ease;
+}
+
+.cybersecurity-footer .footer-bottom-links a:hover {
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .separator {
+    margin: 0 0.5rem;
+    color: #4a5568;
+    font-size: 0.8rem;
+}
+
+.cybersecurity-footer .btn-report-incident {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(220, 53, 69, 0.15);
+    color: #dc3545 !important;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease !important;
+}
+
+.cybersecurity-footer .btn-report-incident:hover {
+    background-color: rgba(220, 53, 69, 0.3);
+}
+
+.cybersecurity-footer .btn-report-incident i {
+    margin-right: 0.3rem;
+}
+
+@media (max-width: 767px) {
+    .cybersecurity-footer .footer-bottom-links {
+        justify-content: flex-start;
+        margin-top: 0.5rem;
+    }
+    
+    .cybersecurity-footer .btn-report-incident {
+        margin-top: 0.5rem;
+        margin-left: 0;
+    }
+    
+    .cybersecurity-footer .separator:nth-of-type(2) {
+        display: none;
+    }
+}
+</style>
+
+<script>
+// Initialize Bootstrap tabs if not already initialized
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof bootstrap !== 'undefined') {
+        var tabElList = [].slice.call(document.querySelectorAll('#footerTabs .nav-link'));
+        tabElList.map(function(tabEl) {
+            return new bootstrap.Tab(tabEl);
+        });
+    }
+});
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Function to toggle dark/light mode
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-bs-theme') || 'light';
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-bs-theme', newTheme);
+      localStorage.setItem('quarto-color-scheme', newTheme);
+      
+      // Update icon if needed
+      const themeIcon = document.querySelector('.navbar-nav a[href="#"] i');
+      if (themeIcon) {
+        themeIcon.className = newTheme === 'light' ? 'bi bi-moon' : 'bi bi-sun';
+      }
+    }
+    
+    // Apply saved theme on load
+    const savedTheme = localStorage.getItem('quarto-color-scheme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      
+      // Update icon to match saved theme
+      const themeIcon = document.querySelector('.navbar-nav a[href="#"] i');
+      if (themeIcon && savedTheme === 'dark') {
+        themeIcon.className = 'bi bi-sun';
+      }
+    }
+    
+    // Set up toggle button
+    document.querySelectorAll('a[href="#"]').forEach(function(link) {
+      if (link.textContent.includes('Toggle Theme')) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          toggleTheme();
+        });
+      }
+    });
+    
+    // Enable Bootstrap tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      if (anchor.getAttribute('href') === '#') return;
+      
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 70,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+<script src="../../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -124,6 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <link rel="stylesheet" href="../scss/styles.css">
 <link rel="stylesheet" href="../scss/academy.scss">
+<link rel="stylesheet" href="../scss/custom-hero.css">
 <meta property="og:title" content="About chen.ist – chen.ist">
 <meta property="og:description" content="Innovative technology &amp; education">
 <meta property="og:site_name" content="chen.ist">
@@ -333,6 +334,18 @@ document.addEventListener('DOMContentLoaded', function() {
  <span class="dropdown-text">Courses</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="../academy/trainings.html">
+ <span class="dropdown-text">Trainings</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/microlearning.html">
+ <span class="dropdown-text">Microlearning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/programs/index.html">
+ <span class="dropdown-text">Programs</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../academy/events.html">
  <span class="dropdown-text">Events</span></a>
   </li>  
@@ -428,7 +441,6 @@ document.addEventListener('DOMContentLoaded', function() {
   <li><a href="#our-mission" id="toc-our-mission" class="nav-link" data-scroll-target="#our-mission">Our Mission</a></li>
   <li><a href="#our-vision" id="toc-our-vision" class="nav-link" data-scroll-target="#our-vision">Our Vision</a></li>
   </ul></li>
-  <li><a href="#our-team" id="toc-our-team" class="nav-link" data-scroll-target="#our-team">Our Team</a></li>
   <li><a href="#our-values" id="toc-our-values" class="nav-link" data-scroll-target="#our-values">Our Values</a></li>
   <li><a href="#our-approach" id="toc-our-approach" class="nav-link" data-scroll-target="#our-approach">Our Approach</a></li>
   <li><a href="#learn-more-about-us" id="toc-learn-more-about-us" class="nav-link" data-scroll-target="#learn-more-about-us">Learn More About Us</a></li>
@@ -458,6 +470,12 @@ document.addEventListener('DOMContentLoaded', function() {
 </header>
 
 
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="../">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">About</li>
+  </ol>
+</nav>
 <section id="who-we-are" class="level2">
 <h2 class="anchored" data-anchor-id="who-we-are">Who We Are</h2>
 <p>chen.ist is a technology consulting firm specializing in cybersecurity, software development, and cloud infrastructure. We are passionate about leveraging cutting-edge technologies to solve complex challenges and drive innovation for our clients.</p>
@@ -469,47 +487,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <h3 class="anchored" data-anchor-id="our-vision">Our Vision</h3>
 <p>We strive to be a leading technology partner known for excellence, innovation, and security, helping shape the future of digital transformation.</p>
 </section>
-</section>
-<section id="our-team" class="level2">
-<h2 class="anchored" data-anchor-id="our-team">Our Team</h2>
-<p>Our diverse team brings together expertise from various technology domains, united by a shared commitment to excellence and innovation.</p>
-<div class="row mt-5">
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <div class="card-header">
-        <h3 class="card-title mb-0 anchored">Alex Chen</h3>
-      </div>
-      <div class="card-body">
-        <h5 class="anchored">Founder &amp; CEO</h5>
-        <p>With over 15 years of experience in cybersecurity and software development, Alex leads our team with a focus on innovation and excellence.</p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <div class="card-header">
-        <h3 class="card-title mb-0 anchored">Maria Rodriguez</h3>
-      </div>
-      <div class="card-body">
-        <h5 class="anchored">Chief Technology Officer</h5>
-        <p>Maria oversees our technical operations, ensuring we stay at the forefront of emerging technologies and best practices.</p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <div class="card-header">
-        <h3 class="card-title mb-0 anchored">David Kim</h3>
-      </div>
-      <div class="card-body">
-        <h5 class="anchored">Head of Security</h5>
-        <p>David leads our security practice, bringing a wealth of experience in protecting critical infrastructure and sensitive data.</p>
-      </div>
-    </div>
-  </div>
-</div>
 </section>
 <section id="our-values" class="level2">
 <h2 class="anchored" data-anchor-id="our-values">Our Values</h2>
@@ -576,11 +553,18 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 <div class="cta-section">
   <div class="container text-center">
-    <h2 class="cta-title anchored"><span class="cta-white-text">Ready to work with us?</span></h2>
+    <h2 class="cta-title anchored"><span class="text-dark">Ready to work with us?</span></h2>
     <p class="mb-4">Let's discuss how we can help you achieve your technology goals.</p>
     <a href="../contact.html" class="cta-button">Contact Us</a>
   </div>
 </div>
+
+<style>
+  /* Ensure the text is white in both light and dark modes */
+  .cta-title .cta-white-text {
+    color: white !important;
+  }
+</style>
 
 
 </section>
@@ -671,7 +655,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/github\/com\/chen\.ist");
+        var filterRegex = new RegExp("https:\/\/chen\.ist");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1105,6 +1089,11 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <div class="col-6 col-md-3">
                                     <a href="../academy/computerclub.html" class="footer-link">
                                         <i class="bi bi-chevron-right icon-small"></i> Computer Club
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3 mt-2">
+                                    <a href="../academy/programs" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Explore Academy Programs
                                     </a>
                                 </div>
                             </div>

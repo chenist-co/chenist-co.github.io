@@ -1,0 +1,470 @@
+---
+title: "Trainings"
+subtitle: "Intensive 1-2 day technical workshops"
+description: "Fast-track your technical skills with our intensive 1-2 day training workshops designed for busy professionals who need practical, hands-on learning in a condensed timeframe."
+image: /assets/images/placeholder.jpg
+from: markdown+raw_html
+categories:
+  - cybersecurity
+  - open-source
+  - linux
+  - data-privacy
+  - security-awareness
+format: 
+  html:
+    css: /scss/academy.scss
+    classes: [academy-section]
+---
+
+```{=html}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/academy.qmd">Academy</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Trainings</li>
+  </ol>
+</nav>
+
+<div class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8 offset-md-2 text-center">
+        <img src="/assets/svg/teaching.svg" alt="Academy Trainings" style="max-width: 150px; margin-bottom: 20px;">
+        <h1><span class="academy-text">Intensive</span> <span class="text-green">Trainings</span></h1>
+        <p>Accelerate your skills with our condensed, high-impact training workshops</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Ensure the text is white in both light and dark modes */
+  .academy-text {
+    color: white !important;
+  }
+</style>
+```
+
+::: {.container .page-section}
+## Learning Options
+
+```{=html}
+<div class="row mb-5">
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header bg-success text-white">
+        <h3 class="mb-0">Courses</h3>
+        <span class="badge bg-light text-dark">8-12 Weeks</span>
+      </div>
+      <div class="card-body">
+        <p>Comprehensive learning experiences with in-depth coverage of topics and hands-on projects.</p>
+        <p><strong>Perfect for:</strong> Deep skill development and career advancement</p>
+        <a href="/academy/courses.html" class="btn btn-success text-white">Browse Courses</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header bg-primary text-white">
+        <h3 id="Trainings" class="mb-0 text-white">Trainings</h3>
+        <span class="badge bg-light text-dark">1-2 Days</span>
+      </div>
+      <div class="card-body">
+        <p>Intensive workshops focused on practical skills you can apply immediately in your work.</p>
+        <p><strong>Perfect for:</strong> Professionals with limited time who need specific skills</p>
+        <p class="text-primary fw-bold">You are here</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header bg-info text-white">
+        <h3 class="mb-0">Microlearning</h3>
+        <span class="badge bg-light text-dark">1-2 Hours</span>
+      </div>
+      <div class="card-body">
+        <p>Bite-sized sessions on specific tools and technologies for quick skill acquisition.</p>
+        <p><strong>Perfect for:</strong> Busy professionals who want to learn a specific tool</p>
+        <a href="/academy/microlearning.html" class="btn btn-info text-white">Browse Microlearning</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-5">
+  <div class="card-header bg-secondary text-white">
+    <h3 class="mb-0">For Organizations</h3>
+  </div>
+  <div class="card-body">
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <p class="mb-0">We offer custom training programs for organizations looking to upskill their teams. Our trainings can be delivered on-site or virtually, and can be tailored to address your specific challenges and objectives.</p>
+      </div>
+      <div class="col-md-4 text-end">
+        <a href="/academy/partnerships.html" class="btn btn-secondary">Learn About Partnerships</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+```
+
+## Available Trainings
+
+Our intensive trainings are designed for professionals who need to acquire specific skills quickly. Each training condenses the essential content from our comprehensive courses into 1-2 day intensive workshops led by industry experts.
+
+```{=html}
+<div class="row mt-5">
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">Open Source Contribution Workshop</h3>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">Intermediate</span>
+          <span class="badge bg-secondary">2 Days</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4>Training Overview</h4>
+        <p>A hands-on workshop to quickly get you up to speed with contributing to open source projects, focusing on practical workflows and best practices.</p>
+
+        <h4>Key Topics</h4>
+        <ul>
+          <li>Git workflow essentials for open source</li>
+          <li>Understanding open source licensing basics</li>
+          <li>Making your first meaningful contribution</li>
+          <li>Navigating project documentation and guidelines</li>
+          <li>Effective communication with project maintainers</li>
+        </ul>
+
+        <h4>What You'll Learn</h4>
+        <p>By the end of this intensive training, you'll have the practical skills to make your first contributions to open source projects and understand the community dynamics.</p>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <span><strong>Next Date:</strong> June 15-16, 2025</span>
+          <a href="/academy/trainings/open-source-contribution/" class="btn btn-success">Training Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">Cybersecurity Essentials</h3>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">All Levels</span>
+          <span class="badge bg-secondary">2 Days</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4>Training Overview</h4>
+        <p>An intensive introduction to critical cybersecurity concepts and practices, focusing on immediate application to protect your organization.</p>
+
+        <h4>Key Topics</h4>
+        <ul>
+          <li>Threat landscape overview</li>
+          <li>Essential security controls</li>
+          <li>Basic vulnerability assessment</li>
+          <li>Security incident identification</li>
+          <li>Implementing quick security wins</li>
+        </ul>
+
+        <h4>What You'll Learn</h4>
+        <p>You'll gain practical knowledge to immediately improve your security posture and identify the most critical vulnerabilities in your environment.</p>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <span><strong>Next Date:</strong> July 10-11, 2025</span>
+          <a href="/academy/trainings/cybersecurity-essentials/" class="btn btn-success">Training Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">Linux Administration Fundamentals</h3>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">Beginner to Intermediate</span>
+          <span class="badge bg-secondary">2 Days</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4>Training Overview</h4>
+        <p>A fast-paced introduction to essential Linux administration tasks, focusing on practical skills you can immediately apply.</p>
+
+        <h4>Key Topics</h4>
+        <ul>
+          <li>Command line essentials</li>
+          <li>User and permission management</li>
+          <li>Package management fundamentals</li>
+          <li>Basic system monitoring</li>
+          <li>Essential security configurations</li>
+        </ul>
+
+        <h4>What You'll Learn</h4>
+        <p>You'll develop the core Linux skills needed to perform essential administration tasks and establish a foundation for more advanced learning.</p>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <span><strong>Next Date:</strong> August 5-6, 2025</span>
+          <a href="/academy/trainings/linux-admin-fundamentals/" class="btn btn-success">Training Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">Data Privacy Compliance Workshop</h3>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">All Levels</span>
+          <span class="badge bg-secondary">2 Days</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4>Training Overview</h4>
+        <p>A concentrated workshop on essential data privacy requirements and implementation strategies for busy professionals.</p>
+
+        <h4>Key Topics</h4>
+        <ul>
+          <li>GDPR and CCPA key requirements</li>
+          <li>Data mapping and classification</li>
+          <li>Essential privacy controls</li>
+          <li>Consent management fundamentals</li>
+          <li>Breach response planning</li>
+        </ul>
+
+        <h4>What You'll Learn</h4>
+        <p>You'll understand the critical requirements of major privacy regulations and be able to implement essential compliance measures in your organization.</p>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <span><strong>Next Date:</strong> September 15, 2025</span>
+          <a href="/academy/trainings/data-privacy-compliance/" class="btn btn-success">Training Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">Security Awareness for Teams</h3>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">All Levels</span>
+          <span class="badge bg-secondary">1 Day</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4>Training Overview</h4>
+        <p>An engaging one-day workshop designed to quickly elevate your team's security awareness and establish a security-first mindset.</p>
+
+        <h4>Key Topics</h4>
+        <ul>
+          <li>Social engineering defense tactics</li>
+          <li>Secure password practices</li>
+          <li>Email security essentials</li>
+          <li>Safe remote work habits</li>
+          <li>Incident reporting procedures</li>
+        </ul>
+
+        <h4>What You'll Learn</h4>
+        <p>Your team will develop practical skills to identify and respond to common security threats, significantly reducing your human security risk.</p>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <span><strong>Next Date:</strong> October 20, 2025</span>
+          <a href="/academy/trainings/security-awareness-teams/" class="btn btn-success">Training Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">Cyberhygiene Intensive</h3>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">All Levels</span>
+          <span class="badge bg-secondary">1 Day</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4>Training Overview</h4>
+        <p>A fast-paced, practical workshop on essential cyberhygiene practices that can be immediately implemented to improve security posture.</p>
+
+        <h4>Key Topics</h4>
+        <ul>
+          <li>Personal device security</li>
+          <li>Secure authentication practices</li>
+          <li>Safe online behavior</li>
+          <li>Data protection essentials</li>
+          <li>Mobile security fundamentals</li>
+        </ul>
+
+        <h4>What You'll Learn</h4>
+        <p>You'll develop practical cyberhygiene habits that significantly reduce your risk profile and protect your personal and professional digital life.</p>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <span><strong>Next Date:</strong> November 10, 2025</span>
+          <a href="/academy/trainings/cyberhygiene-intensive/" class="btn btn-success">Training Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">NixOS Security Jumpstart</h3>
+        <div class="d-flex justify-content-between">
+          <span class="badge bg-primary">Intermediate</span>
+          <span class="badge bg-secondary">2 Days</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4>Training Overview</h4>
+        <p>A focused, hands-on workshop to quickly get you started with security-focused NixOS configurations and reproducible environments.</p>
+
+        <h4>Key Topics</h4>
+        <ul>
+          <li>NixOS installation and basic configuration</li>
+          <li>Declarative system security</li>
+          <li>Building secure environment templates</li>
+          <li>Basic hardening techniques</li>
+          <li>Creating isolated development environments</li>
+        </ul>
+
+        <h4>What You'll Learn</h4>
+        <p>You'll be able to set up and configure NixOS with security best practices and understand how to leverage its reproducibility for consistent secure environments.</p>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <span><strong>Next Date:</strong> December 5-6, 2025</span>
+          <a href="/academy/trainings/nixos-security-jumpstart/" class="btn btn-success">Training Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+## Training Format
+
+Our intensive trainings are designed to maximize learning in a condensed timeframe:
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-md-4">
+    <div class="security-feature">
+      <h3>Immersive Learning</h3>
+      <p>Our intensive format focuses on practical, hands-on exercises with minimal lecture time to maximize skill development.</p>
+      <ul>
+        <li>80% hands-on activities</li>
+        <li>Real-world scenarios</li>
+        <li>Collaborative problem-solving</li>
+        <li>Immediate application</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="security-feature">
+      <h3>Flexible Delivery</h3>
+      <p>Choose the training format that works best for you and your team's needs.</p>
+      <ul>
+        <li>In-person at our facilities</li>
+        <li>On-site at your location</li>
+        <li>Live virtual sessions</li>
+        <li>Hybrid options available</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="security-feature">
+      <h3>Ongoing Support</h3>
+      <p>Your learning doesn't end when the training does.</p>
+      <ul>
+        <li>30-day post-training support</li>
+        <li>Comprehensive reference materials</li>
+        <li>Community forum access</li>
+        <li>Follow-up Q&A sessions</li>
+      </ul>
+    </div>
+  </div>
+</div>
+```
+
+## Why Choose Our Trainings
+
+```{=html}
+<div class="row mt-5">
+  <div class="col-lg-3 col-md-6">
+    <div class="feature-card text-center">
+      <div class="feature-card-icon">
+        <i class="bi bi-lightning-charge"></i>
+      </div>
+      <h3>Time-Efficient</h3>
+      <p>Accelerated learning that respects your busy schedule while delivering maximum value.</p>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6">
+    <div class="feature-card text-center">
+      <div class="feature-card-icon">
+        <i class="bi bi-person-check"></i>
+      </div>
+      <h3>Expert Trainers</h3>
+      <p>Learn from industry practitioners who bring real-world experience and insights to every training.</p>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6">
+    <div class="feature-card text-center">
+      <div class="feature-card-icon">
+        <i class="bi bi-tools"></i>
+      </div>
+      <h3>Practical Focus</h3>
+      <p>Immediately applicable skills and techniques you can implement right after the training.</p>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6">
+    <div class="feature-card text-center">
+      <div class="feature-card-icon">
+        <i class="bi bi-building"></i>
+      </div>
+      <h3>Team Options</h3>
+      <p>Custom training options for teams with organization-specific scenarios and challenges.</p>
+    </div>
+  </div>
+</div>
+```
+:::
+
+```{=html}
+<div class="cta-section">
+  <div class="container text-center">
+    <h2><span class="text-dark">Ready for accelerated learning?</span></h2>
+    <p class="mb-4">Browse our training catalog and find the perfect intensive workshop for your professional development.</p>
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-6">
+        <a href="/academy/programs" class="cta-button">Explore Academy Programs</a>
+      </div>
+      <br>
+      <br>
+      <div class="col-md-6">
+        <a href="/contact.qmd" class="cta-button">Schedule a Training</a>
+      </div>
+    </div>
+  </div>
+</div>
+```

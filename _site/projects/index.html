@@ -124,6 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <link rel="stylesheet" href="../scss/styles.css">
 <link rel="stylesheet" href="../scss/academy.scss">
+<link rel="stylesheet" href="../scss/custom-hero.css">
 <meta property="og:title" content="Projects – chen.ist">
 <meta property="og:description" content="Featured projects and research initiatives">
 <meta property="og:site_name" content="chen.ist">
@@ -333,6 +334,18 @@ document.addEventListener('DOMContentLoaded', function() {
  <span class="dropdown-text">Courses</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="../academy/trainings.html">
+ <span class="dropdown-text">Trainings</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/microlearning.html">
+ <span class="dropdown-text">Microlearning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/programs/index.html">
+ <span class="dropdown-text">Programs</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../academy/events.html">
  <span class="dropdown-text">Events</span></a>
   </li>  
@@ -426,6 +439,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <li><a href="#research-manuscripts" id="toc-research-manuscripts" class="nav-link active" data-scroll-target="#research-manuscripts">Research Manuscripts</a></li>
   <li><a href="#community-projects" id="toc-community-projects" class="nav-link" data-scroll-target="#community-projects">Community Projects</a></li>
   <li><a href="#open-source-contributions" id="toc-open-source-contributions" class="nav-link" data-scroll-target="#open-source-contributions">Open Source Contributions</a></li>
+  <li><a href="#upcoming-programs" id="toc-upcoming-programs" class="nav-link" data-scroll-target="#upcoming-programs">Upcoming Programs</a></li>
   <li><a href="#research-manuscripts-listing" id="toc-research-manuscripts-listing" class="nav-link" data-scroll-target="#research-manuscripts-listing">Research Manuscripts Listing</a></li>
   </ul>
 </nav>
@@ -635,6 +649,73 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 </section>
+<section id="upcoming-programs" class="level2">
+<h2 class="anchored" data-anchor-id="upcoming-programs">Upcoming Programs</h2>
+<p>Join us in our upcoming programs and events:</p>
+<div class="row mt-4">
+  <div class="col-md-12">
+    <div class="table-responsive">
+      
+<table class="table table-hover caption-top" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">Program</th>
+<th data-quarto-table-cell-role="th">Type</th>
+<th data-quarto-table-cell-role="th">Dates</th>
+<th data-quarto-table-cell-role="th">Location</th>
+<th data-quarto-table-cell-role="th">Registration</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="../academy/programs/hackathons/cybersecurity-hackathon.html">Cybersecurity Hackathon</a></td>
+<td>Hackathon</td>
+<td>March 15-17, 2025</td>
+<td>Online &amp; On-campus</td>
+<td><span class="badge bg-success">Open</span></td>
+</tr>
+<tr class="even">
+<td><a href="../academy/programs/hackathons/ai-ethics-hackathon.html">AI Ethics Hackathon</a></td>
+<td>Hackathon</td>
+<td>May 10-12, 2026</td>
+<td>Online</td>
+<td><span class="badge bg-success">Open</span></td>
+</tr>
+<tr class="odd">
+<td><a href="../academy/programs/summer-school/2025.html">Technology Summer School</a></td>
+<td>Summer School</td>
+<td>July 20 - August 20, 2025</td>
+<td>Private, Craiova</td>
+<td><span class="badge bg-warning">Coming Soon</span></td>
+</tr>
+<tr class="even">
+<td><a href="../academy/programs/summer-school/junior.html">Junior Summer School</a></td>
+<td>Summer School</td>
+<td>July 7-21, 2025</td>
+<td>Private, Craiova</td>
+<td><span class="badge bg-warning">Coming Soon</span></td>
+</tr>
+<tr class="odd">
+<td><a href="../academy/programs/hackathons/spaceapps/challenge-2025.html">SpaceApps Hackathon</a></td>
+<td>Hackathon</td>
+<td>October 3-5, 2025</td>
+<td>Craiova Art Museum</td>
+<td><span class="badge bg-secondary">Coming Soon</span></td>
+</tr>
+<tr class="even">
+<td><a href="../academy/programs/hackathons/spaceapps-junior.html">SpaceApps Junior</a></td>
+<td>Junior Hackathon</td>
+<td>October 3-5, 2025</td>
+<td>Craiova Art Museum</td>
+<td><span class="badge bg-secondary">Coming Soon</span></td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+  </div>
+</div>
+</section>
 <section id="research-manuscripts-listing" class="level2">
 <h2 class="anchored" data-anchor-id="research-manuscripts-listing">Research Manuscripts Listing</h2>
 <p>Browse all our research papers, technical guides, and case studies below:</p>
@@ -728,7 +809,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/github\/com\/chen\.ist");
+        var filterRegex = new RegExp("https:\/\/chen\.ist");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1162,6 +1243,11 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <div class="col-6 col-md-3">
                                     <a href="../academy/computerclub.html" class="footer-link">
                                         <i class="bi bi-chevron-right icon-small"></i> Computer Club
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3 mt-2">
+                                    <a href="../academy/programs" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Explore Academy Programs
                                     </a>
                                 </div>
                             </div>

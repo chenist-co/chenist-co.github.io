@@ -1,0 +1,265 @@
+---
+title: "NixOS Introduction"
+subtitle: "Get started with this declarative Linux distribution in just 2 hours"
+description: "Learn the basics of NixOS, a unique Linux distribution with a declarative approach to system configuration, package management, and reproducible builds."
+image: /assets/images/placeholder.jpg
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    css: /scss/academy.scss
+    classes: [academy-section]
+date-modified: last-modified
+categories:
+  - linux
+  - system-administration
+  - declarative-systems
+  - reproducible-builds
+---
+
+```{=html}
+<div class="container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
+      <li class="breadcrumb-item"><a href="/academy/microlearning.html">Microlearning</a></li>
+      <li class="breadcrumb-item active" aria-current="page">NixOS Introduction</li>
+    </ol>
+  </nav>
+</div>
+
+<div class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <h1>NixOS Introduction</h1>
+        <p class="lead">Learn the fundamentals of this unique, declarative Linux distribution in just 2 hours</p>
+        <div class="mt-4">
+          <span class="badge bg-primary me-2">2 Hours</span>
+          <span class="badge bg-secondary me-2">Beginner to Intermediate</span>
+          <span class="badge bg-success">Hands-on</span>
+        </div>
+      </div>
+      <div class="col-lg-4 text-center">
+        <img src="/assets/images/placeholder.jpg" alt="NixOS Workshop" class="img-fluid rounded shadow-lg" style="max-height: 300px;">
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+# Session Overview
+
+This 2-hour microlearning session introduces NixOS, a unique Linux distribution built around the Nix package manager and a declarative approach to system configuration. Unlike traditional Linux distributions, NixOS describes the entire system configuration in declarative files, enabling reproducible builds, reliable system updates, and the ability to roll back to previous configurations. This session will give you the essential concepts and practical skills to start using NixOS effectively.
+
+## What You'll Learn
+
+- Understand the core concepts of NixOS and the Nix package manager
+- Navigate the NixOS configuration system
+- Install and manage packages
+- Configure system services
+- Create and modify your system configuration
+- Understand NixOS's approach to system updates and rollbacks
+- Build reproducible development environments
+
+# Session Curriculum
+
+## Part 1: NixOS Fundamentals (30 minutes)
+
+- Introduction to NixOS and its philosophy
+- Key concepts: declarative configuration, immutability, reproducibility
+- The Nix expression language basics
+- Understanding the NixOS system architecture
+- Differences from traditional Linux distributions
+- Virtual machine installation demonstration
+- Navigating the NixOS file system structure
+
+## Part 2: System Configuration (40 minutes)
+
+- Understanding configuration.nix
+- Basic system configuration (networking, users, bootloader)
+- Installing and configuring software packages
+- Managing system services
+- User environment configuration
+- Applying system changes with nixos-rebuild
+- Rolling back changes when things go wrong
+
+## Part 3: Advanced Features and Use Cases (40 minutes)
+
+- Creating development environments with nix-shell
+- Managing user packages with home-manager
+- Working with overlays and custom packages
+- NixOS modules and abstractions
+- System generations and garbage collection
+- Reproducible system configurations
+- Multi-user setups and remote builds
+
+## Part 4: Best Practices and Resources (10 minutes)
+
+- Common pitfalls and how to avoid them
+- Performance considerations
+- NixOS community and resources
+- Keeping up with NixOS updates
+- Advanced learning path recommendations
+
+# Learning Outcomes
+
+By the end of this microlearning session, you will be able to:
+
+- Understand the core concepts and benefits of NixOS
+- Navigate and modify your system configuration
+- Install and manage software packages
+- Configure system services
+- Apply system changes and roll back when needed
+- Create basic development environments
+- Know where to find help and resources for continued learning
+
+# Teaching Methods
+
+This session combines:
+
+- Live demonstrations
+- Hands-on exercises (in virtual machines)
+- Configuration examples
+- Problem-solving challenges
+- Real-world use cases
+
+# Target Audience
+
+This microlearning session is ideal for:
+
+- Linux enthusiasts looking to explore alternative distributions
+- System administrators interested in reproducible deployments
+- Developers seeking consistent development environments
+- DevOps professionals
+- Anyone interested in declarative system configuration
+
+# Prerequisites
+
+- Basic familiarity with Linux concepts
+- Basic command line experience
+- Understanding of system administration concepts
+- Bring your laptop with VirtualBox or another virtualization solution installed (for hands-on exercises)
+
+# Materials
+
+All participants will receive:
+
+- NixOS virtual machine image for practice
+- Sample configuration files for common setups
+- Nix expression language cheat sheet
+- Troubleshooting guide for common issues
+- Curated list of NixOS learning resources
+
+```{=html}
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h3>Your Instructor</h3>
+          <div class="d-flex align-items-center mb-3">
+            <img src="/assets/images/placeholder.jpg" alt="Instructor" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;">
+            <div>
+              <h5 class="mb-0">Daniel Eriksson</h5>
+              <p class="text-muted mb-0">DevOps Engineer & Nix Specialist</p>
+            </div>
+          </div>
+          <p>Daniel has been using NixOS in production environments for over 5 years and has contributed to several Nix packages and modules. He specializes in helping teams transition to declarative infrastructure and reproducible builds.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h3>Register Now</h3>
+          <p>Next session: <strong>August 5, 2023, 10:00 AM - 12:00 PM CEST</strong></p>
+          <p>Fee: <strong>€49</strong> (Group discounts available)</p>
+          <p>Location: <strong>Online via Zoom</strong></p>
+          <a href="/contact.html" class="btn btn-primary">Register for This Session</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4 mb-5">
+  <h2 class="text-center mb-4">What Participants Say</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <p class="fst-italic">"The declarative approach to system configuration completely changed how I think about managing servers. This session gave me a clear roadmap for exploring NixOS further."</p>
+          <div class="d-flex align-items-center">
+            <div>
+              <h5 class="mb-0">Thomas L.</h5>
+              <p class="text-muted mb-0">System Administrator</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <p class="fst-italic">"As a developer, the reproducible environments aspect of NixOS is a game-changer. The instructor explained complex concepts clearly and made the learning curve feel manageable."</p>
+          <div class="d-flex align-items-center">
+            <div>
+              <h5 class="mb-0">Mira J.</h5>
+              <p class="text-muted mb-0">Software Engineer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <p class="fst-italic">"I was skeptical about learning yet another Linux distribution, but the unique advantages of NixOS are compelling. The hands-on VM exercises were particularly helpful for understanding the practical aspects."</p>
+          <div class="d-flex align-items-center">
+            <div>
+              <h5 class="mb-0">Kevin M.</h5>
+              <p class="text-muted mb-0">DevOps Engineer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5 mb-5">
+  <h2 class="text-center mb-4">Related Offerings</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h4>Advanced NixOS Course</h4>
+          <p>A comprehensive 6-week course diving deep into NixOS, the Nix language, and declarative infrastructure principles.</p>
+          <a href="/academy/courses.html" class="btn btn-outline-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h4>Linux System Administration</h4>
+          <p>A foundational course covering essential Linux system administration skills applicable to any distribution.</p>
+          <a href="/academy/courses.html" class="btn btn-outline-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h4>DevOps with NixOS Workshop</h4>
+          <p>A full-day workshop focused on using NixOS in DevOps workflows, CI/CD pipelines, and infrastructure as code.</p>
+          <a href="/academy/trainings.html" class="btn btn-outline-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```

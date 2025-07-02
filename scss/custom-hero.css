@@ -1,0 +1,86 @@
+/* Custom hero section styling */
+
+/* Light mode hero section */
+.hero-section {
+  background-color: #CDC9BD !important;
+  color: #323642 !important;
+  padding: 5rem 0;
+  margin-bottom: 3rem;
+}
+
+.hero-section h1, 
+.hero-section h2, 
+.hero-section h3 {
+  color: #323642 !important;
+}
+
+.hero-section p,
+.hero-section .hero-subtitle {
+  color: #323642 !important;
+  opacity: 0.9;
+}
+
+.hero-section .text-green {
+  color: #81BD4A !important;
+}
+
+.hero-section .chenist-text {
+  color: #323642 !important;
+}
+
+/* Dark mode hero section */
+[data-bs-theme="dark"] .hero-section {
+  background-color: #CDC9BD !important;
+  color: #323642 !important;
+}
+
+[data-bs-theme="dark"] .hero-section h1,
+[data-bs-theme="dark"] .hero-section h2,
+[data-bs-theme="dark"] .hero-section h3 {
+  color: #323642 !important;
+}
+
+[data-bs-theme="dark"] .hero-section p,
+[data-bs-theme="dark"] .hero-section .hero-subtitle {
+  color: #323642 !important;
+}
+
+[data-bs-theme="dark"] .hero-section .text-green {
+  color: #81BD4A !important;
+}
+
+[data-bs-theme="dark"] .hero-section .chenist-text {
+  color: #323642 !important;
+}
+
+/* Academy-specific hero section */
+.academy-section .hero-section {
+  background-color: #CDC9BD !important;
+  border-bottom: 4px solid #F5A623;
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+}
+
+.academy-section .hero-section h1,
+.academy-section .hero-section h2,
+.academy-section .hero-section h3 {
+  color: #323642 !important;
+}
+
+.academy-section .hero-section p {
+  color: #323642 !important;
+}
+
+.academy-section .hero-section .text-green {
+  color: #F5A623 !important;
+}
+
+/* Add these styles to ensure text is visible in all scenarios */
+.hero-section .badge {
+  color: white !important;
+}
+
+/* Make sure the .academy-text in academy pages has the right color */
+.hero-section .academy-text {
+  color: #323642 !important;
+}

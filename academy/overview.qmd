@@ -1,13 +1,26 @@
 ---
 title: "Academy Overview"
 subtitle: "Our educational philosophy and approach"
+format: 
+  html:
+    css: /scss/academy.scss
+    classes: [academy-section]
 ---
 
 ```{=html}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/academy.qmd">Academy</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Overview</li>
+  </ol>
+</nav>
+
 <div class="hero-section">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-8 offset-md-2 text-center">
+        <img src="/assets/svg/knowledge.svg" alt="Academy Knowledge" style="max-width: 150px; margin-bottom: 20px;">
         <h1 class="hero-title"><span class="academy-text">Academy</span> <span class="text-green">Overview</span></h1>
         <p>Education designed for the real world</p>
       </div>

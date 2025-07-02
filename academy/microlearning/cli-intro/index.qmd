@@ -1,0 +1,293 @@
+---
+title: "Unix Command Line Introduction"
+subtitle: "Master the essentials of the command line in just 2 hours"
+description: "A practical introduction to the Unix command line interface for beginners, focused on essential commands and navigation."
+image: /assets/images/placeholder.jpg
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    css: /scss/academy.scss
+    classes: [academy-section]
+date-modified: last-modified
+categories:
+  - unix
+  - linux
+  - command-line
+  - shell
+---
+
+```{=html}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
+    <li class="breadcrumb-item"><a href="/academy/microlearning.qmd">Microlearning</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Unix Command Line Introduction</li>
+  </ol>
+</nav>
+
+<div class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8 offset-md-2 text-center">
+        <h1>Unix <span class="text-green">Command Line</span></h1>
+        <p>Master essential command line skills in just 2 hours</p>
+        <div class="d-flex justify-content-center">
+          <span class="badge bg-primary me-2">Beginner</span>
+          <span class="badge bg-secondary">2 Hours</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+::: {.container .page-section}
+
+## Session Overview
+
+This focused 2-hour session provides a practical introduction to the Unix command line interface for beginners. You'll learn essential commands, navigation techniques, and fundamental concepts that will make you productive in the terminal environment. This hands-on session is designed to build confidence and competence with the command line through practical exercises and real-world examples.
+
+### Next Session
+
+- **Date:** June 10, 2025
+- **Time:** 10:00 AM - 12:00 PM
+- **Format:** Available in-person or live virtual
+- **Prerequisites:** None - designed for beginners
+- **Price:** $49 per participant (includes digital reference materials and command cheat sheet)
+
+## Session Curriculum
+
+### Part 1: Getting Started (30 minutes)
+
+**Command Line Basics**
+- Understanding the terminal interface
+- Command syntax and structure
+- Getting help with commands using `man` and `--help`
+- Command history and basic keyboard shortcuts
+- Hands-on exercise: Exploring your first commands
+
+**Navigation and File System**
+- Understanding the Unix file system structure
+- Navigating directories with `cd`, `pwd`
+- Listing directory contents with `ls`
+- Understanding file paths (absolute vs. relative)
+- Hands-on exercise: Navigate through the file system
+
+### Part 2: File Operations (30 minutes)
+
+**Working with Files and Directories**
+- Creating directories with `mkdir`
+- Creating and viewing files with `touch` and `cat`
+- Copying, moving, and renaming with `cp` and `mv`
+- Removing files and directories with `rm` and `rmdir`
+- Hands-on exercise: Managing files and directories
+
+**File Permissions and Ownership**
+- Understanding file permissions
+- Changing permissions with `chmod`
+- File ownership with `chown`
+- Hands-on exercise: Setting appropriate permissions
+
+### Part 3: Text Processing and Pipelines (30 minutes)
+
+**Basic Text Processing**
+- Viewing file contents with `cat`, `less`, and `more`
+- Searching content with `grep`
+- Basic text manipulation with `head`, `tail`, and `wc`
+- Hands-on exercise: Finding information in text files
+
+**Command Pipelines and Redirection**
+- Redirecting output with `>` and `>>`
+- Piping commands with `|`
+- Standard input, output, and error
+- Hands-on exercise: Building simple command pipelines
+
+### Part 4: Practical Applications (30 minutes)
+
+**Practical Command Line Tasks**
+- Installing software (package managers overview)
+- Process management with `ps` and `kill`
+- Environment variables and the PATH
+- Basic shell scripting concepts
+- Hands-on exercise: Solving real-world problems
+
+**Next Steps and Resources**
+- Command line productivity tips
+- Recommended tools and aliases
+- Resources for further learning
+- Q&A session
+- Exercise: Creating your own command line cheat sheet
+
+## Learning Outcomes
+
+By completing this microlearning session, you will be able to:
+
+- Navigate confidently through the Unix file system
+- Perform essential file and directory operations
+- Understand and modify file permissions
+- Process and search text files efficiently
+- Combine commands using pipes and redirection
+- Install software and manage basic processes
+- Use the command line for everyday tasks
+- Find help and documentation for commands
+
+## Teaching Methods
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-primary text-white">
+        <h3 class="card-title mb-0">Hands-On Learning</h3>
+      </div>
+      <div class="card-body">
+        <p>This session emphasizes practical application with over 70% of time dedicated to hands-on exercises:</p>
+        <ul>
+          <li>Interactive terminal exercises</li>
+          <li>Real-world task simulations</li>
+          <li>Guided practice with immediate feedback</li>
+          <li>Problem-solving challenges</li>
+          <li>Personalized command experimentation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-primary text-white">
+        <h3 class="card-title mb-0">Expert Guidance</h3>
+      </div>
+      <div class="card-body">
+        <p>Our instructor provides clear explanations and personalized support:</p>
+        <ul>
+          <li>Clear, concise command explanations</li>
+          <li>Common pitfall warnings</li>
+          <li>Best practice recommendations</li>
+          <li>Real-time troubleshooting</li>
+          <li>Contextual learning that connects concepts</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+## Who Should Attend
+
+This microlearning session is ideal for:
+
+- Complete beginners with no command line experience
+- Computer users who have avoided the terminal until now
+- Students beginning technical education
+- Professionals transitioning to technical roles
+- Anyone who wants to become more efficient with their computer
+
+No prior command line experience is necessary - just bring your curiosity and willingness to learn.
+
+## Materials and Resources
+
+Participants will receive:
+
+- Comprehensive command line cheat sheet
+- Digital reference guide with all commands covered
+- Command examples for common tasks
+- Recommended terminal customizations
+- Practice exercises for continued learning
+- 30 days of email support for command line questions
+
+## Instructor
+
+```{=html}
+<div class="row mt-4 mb-5">
+  <div class="col-md-3">
+    <img src="/assets/images/placeholder.jpg" alt="Instructor Photo" class="img-fluid rounded">
+  </div>
+  <div class="col-md-9">
+    <h3>David Williams</h3>
+    <p><strong>Senior DevOps Engineer, chen.ist</strong></p>
+    <p>David has been using Unix-based systems for over 15 years and specializes in helping beginners overcome their fear of the command line. He has trained hundreds of students and professionals to become confident terminal users.</p>
+    <p>Known for his clear explanations and patient teaching style, David excels at breaking down complex concepts into approachable steps that build confidence and competence.</p>
+  </div>
+</div>
+```
+
+## Registration
+
+```{=html}
+<div class="event-cta">
+  <div class="row">
+    <div class="col-md-8">
+      <h3><i class="bi bi-calendar-check"></i> Upcoming Sessions</h3>
+      <p>Secure your spot in one of our upcoming Unix Command Line Introduction sessions:</p>
+      <ul>
+        <li><strong>June 10, 2025:</strong> 10:00 AM - 12:00 PM (In-person and Virtual)</li>
+        <li><strong>July 15, 2025:</strong> 2:00 PM - 4:00 PM (In-person and Virtual)</li>
+        <li><strong>August 20, 2025:</strong> 6:00 PM - 8:00 PM (Virtual Only)</li>
+      </ul>
+      <p>Group discounts available for teams of 3 or more. Virtual attendees will need access to a Unix-based system (Linux, macOS) or WSL on Windows.</p>
+    </div>
+    <div class="col-md-4 text-center">
+      <a href="/contact.qmd" class="btn btn-success btn-lg mt-3">Register Now</a>
+      <p class="mt-2">or</p>
+      <a href="/contact.qmd" class="btn btn-outline-primary">Contact Us for Group Rates</a>
+    </div>
+  </div>
+</div>
+```
+
+## Testimonials
+
+```{=html}
+<div class="row mt-5">
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-body">
+        <p class="font-italic">"I've always been intimidated by the command line, but this session made it approachable and even enjoyable. In just two hours, I went from complete novice to being able to navigate and perform basic tasks confidently."</p>
+        <p class="text-end mb-0"><strong>— Sarah K., Marketing Professional</strong></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-body">
+        <p class="font-italic">"As a computer science student, I knew I needed to learn the command line but kept putting it off. This session was the perfect introduction - practical, hands-on, and focused on the commands I'll actually use daily. Highly recommend!"</p>
+        <p class="text-end mb-0"><strong>— Alex T., CS Student</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+## Related Offerings
+
+If you're interested in this microlearning session, you might also consider:
+
+- [Tmux Terminal Multiplexer](/academy/microlearning/tmux/) - Learn to manage multiple terminal sessions efficiently
+- [Linux Administration Fundamentals Training](/academy/trainings/linux-admin-fundamentals/) - A 2-day workshop for more in-depth Linux skills
+- [Unix/Linux Systems Course](/academy/courses/unix-linux-administration/) - Our comprehensive course for system administrators
+
+:::
+
+```{=html}
+<div class="cta-section">
+  <div class="container text-center">
+    <h2><span class="text-dark">Ready to master the command line?</span></h2>
+    <p class="mb-4">Join our Unix Command Line Introduction session and gain essential terminal skills in just 2 hours.</p>
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-6">
+        <a href="/contact.qmd" class="cta-button">Register for Session</a>
+      </div>
+      <br>
+      <br>
+      <div class="col-md-6">
+        <a href="/academy/microlearning.qmd" class="cta-button">Explore Other Microlearning</a>
+      </div>
+    </div>
+  </div>
+</div>
+```

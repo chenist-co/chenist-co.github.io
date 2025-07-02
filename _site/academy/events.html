@@ -124,13 +124,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <link rel="stylesheet" href="../scss/styles.css">
 <link rel="stylesheet" href="../scss/academy.scss">
-<link rel="stylesheet" href="scss/academy.scss">
+<link rel="stylesheet" href="../scss/custom-hero.css">
+<link rel="stylesheet" href="../scss/academy.scss">
 <meta property="og:title" content="Events – chen.ist">
 <meta property="og:description" content="Upcoming and recurring events hosted by chen.ist">
+<meta property="og:image" content="https://chen.ist/assets/svg/events.svg">
 <meta property="og:site_name" content="chen.ist">
+<meta property="og:image:alt" content="Academy Events">
 <meta name="twitter:title" content="Events – chen.ist">
 <meta name="twitter:description" content="Upcoming and recurring events hosted by chen.ist">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://chen.ist/assets/svg/events.svg">
+<meta name="twitter:image:alt" content="Academy Events">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -334,6 +339,18 @@ document.addEventListener('DOMContentLoaded', function() {
  <span class="dropdown-text">Courses</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="../academy/trainings.html">
+ <span class="dropdown-text">Trainings</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/microlearning.html">
+ <span class="dropdown-text">Microlearning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/programs/index.html">
+ <span class="dropdown-text">Programs</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../academy/events.html">
  <span class="dropdown-text">Events</span></a>
   </li>  
@@ -453,6 +470,14 @@ document.addEventListener('DOMContentLoaded', function() {
 </header>
 
 
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="../">Home</a></li>
+    <li class="breadcrumb-item"><a href="../academy.html">Academy</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Events</li>
+  </ol>
+</nav>
+
 <!-- Announcement bar for new events -->
 <div class="announcement-bar">
   <div class="container">
@@ -478,12 +503,20 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-8 offset-md-2 text-center">
-        <h1>Academy <span class="text-green">Events</span></h1>
+        <img src="../assets/svg/events.svg" alt="Academy Events" style="max-width: 150px; margin-bottom: 20px;">
+        <h1><span class="academy-text">Academy</span> <span class="text-green">Events</span></h1>
         <p>Connect, learn, and innovate at our events</p>
       </div>
     </div>
   </div>
 </div>
+
+<style>
+  /* Ensure the text is white in both light and dark modes */
+  .academy-text {
+    color: white !important;
+  }
+</style>
 <div class="container page-section">
 <section id="upcoming-events" class="level2">
 <h2 class="anchored" data-anchor-id="upcoming-events">Upcoming Events</h2>
@@ -911,7 +944,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/github\/com\/chen\.ist");
+        var filterRegex = new RegExp("https:\/\/chen\.ist");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1345,6 +1378,11 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <div class="col-6 col-md-3">
                                     <a href="../academy/computerclub.html" class="footer-link">
                                         <i class="bi bi-chevron-right icon-small"></i> Computer Club
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3 mt-2">
+                                    <a href="../academy/programs" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Explore Academy Programs
                                     </a>
                                 </div>
                             </div>

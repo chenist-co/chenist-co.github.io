@@ -1,0 +1,324 @@
+---
+title: "Clubul Computer"
+subtitle: "A community-driven technology club for all ages"
+from: markdown+raw_html
+format: 
+  html:
+    css: /scss/academy.scss
+    classes: [academy-section]
+categories:
+  - community
+  - programming
+  - workshops
+  - meetups
+---
+
+```{=html}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
+    <li class="breadcrumb-item"><a href="/academy/programs/">Programs</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Computer Club</li>
+  </ol>
+</nav>
+
+<div class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8 offset-md-2 text-center">
+        <img src="/assets/svg/community.svg" alt="Computer Club" style="max-width: 150px; margin-bottom: 20px;">
+        <h1><span class="academy-text">Academy</span> <span class="text-green">Clubul Computer</span></h1>
+        <p>Building digital literacy and community through technology education</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Ensure the text is white in both light and dark modes */
+  .academy-text {
+    color: white !important;
+  }
+</style>
+```
+
+::: {.container .page-section}
+## About Clubul Computer
+
+Clubul Computer is a community-driven technology club dedicated to promoting digital literacy, computer science education, and technological innovation for all ages. Through regular meetups, workshops, and collaborative projects, we create an environment where members can learn, experiment, and grow their technical skills while building meaningful connections.
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">Our Mission</h3>
+      </div>
+      <div class="card-body">
+        <p>To make technology accessible, understandable, and enjoyable for everyone, regardless of age or background, by creating inclusive learning environments and supportive communities.</p>
+        <h4>Core Values:</h4>
+        <ul>
+          <li><strong>Inclusivity:</strong> Creating a welcoming space for people of all backgrounds</li>
+          <li><strong>Collaboration:</strong> Encouraging knowledge sharing and teamwork</li>
+          <li><strong>Hands-on Learning:</strong> Emphasizing practical experience and experimentation</li>
+          <li><strong>Community Impact:</strong> Using technology to address local challenges</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">What We Offer</h3>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li><strong>Regular Meetups:</strong> Monthly gatherings to discuss technology trends, share projects, and solve problems together</li>
+          <li><strong>Workshops:</strong> Hands-on learning sessions for various technologies and skills</li>
+          <li><strong>Youth Programs:</strong> Age-appropriate tech education for children and teens</li>
+          <li><strong>Mentorship:</strong> Connecting beginners with experienced practitioners</li>
+          <li><strong>Project Collaboration:</strong> Opportunities to work on real-world projects with others</li>
+          <li><strong>Resources Library:</strong> Access to learning materials, tools, and equipment</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+## Our Programs
+
+Clubul Computer offers a range of programs designed to engage members at different skill levels and interests.
+
+```{=html}
+<div class="row mt-5">
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="feature-card">
+      <div class="feature-card-icon text-center">
+        <i class="bi bi-laptop"></i>
+      </div>
+      <h3 class="text-center">Workshops</h3>
+      <p>Structured learning sessions covering various programming languages and frameworks, from beginner to advanced levels.</p>
+      <p><strong>Upcoming:</strong> Python for Beginners, Web Development Fundamentals, Advanced JavaScript</p>
+      <div class="text-center mt-3">
+        <a href="https://www.clubul.computer/t/workshops" class="btn btn-outline-primary">View Schedule</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="feature-card">
+      <div class="feature-card-icon text-center">
+        <i class="bi bi-people"></i>
+      </div>
+      <h3 class="text-center">Tech Talks</h3>
+      <p>Speaker series featuring industry professionals and community members sharing insights, experiences, and knowledge.</p>
+      <p><strong>Recent Topics:</strong> Open Source Contribution, AI Ethics, Cybersecurity Basics</p>
+      <div class="text-center mt-3">
+        <a href="https://www.clubul.computer/t/talks" class="btn btn-outline-primary">Browse Talks</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="feature-card">
+      <div class="feature-card-icon text-center">
+        <i class="bi bi-controller"></i>
+      </div>
+      <h3 class="text-center">Junior Club</h3>
+      <p>Fun, engaging programming activities designed specifically for children aged 8-14, introducing them to computational thinking.</p>
+      <p><strong>Activities:</strong> Game Development, Robot Programming, Digital Storytelling, Cyber Hygiene</p>
+      <div class="text-center mt-3">
+        <a href="https://www.clubul.computer/t/junior" class="btn btn-outline-primary">Learn More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="feature-card">
+      <div class="feature-card-icon text-center">
+        <i class="bi bi-gear"></i>
+      </div>
+      <h3 class="text-center">Hardware Hacking</h3>
+      <p>Hands-on sessions exploring electronics, microcontrollers, and physical computing projects for makers and tinkerers.</p>
+      <p><strong>Projects:</strong> Laptops, Arduino Basics, Raspberry Pi, IoT Devices, 3D Printing</p>
+      <div class="text-center mt-3">
+        <a href="https://www.clubul.computer/t/hacking" class="btn btn-outline-primary">View Projects</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="feature-card">
+      <div class="feature-card-icon text-center">
+        <i class="bi bi-code-slash"></i>
+      </div>
+      <h3 class="text-center">Open Source</h3>
+      <p>Regular sessions dedicated to contributing to open source projects, helping members engage with the broader tech community.</p>
+      <p><strong>Focus:</strong> Finding projects, understanding codebases, making meaningful contributions</p>
+      <div class="text-center mt-3">
+        <a href="https://www.clubul.computer/t/open-source" class="btn btn-outline-primary">Join Next Session</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="feature-card">
+      <div class="feature-card-icon text-center">
+        <i class="bi bi-rocket"></i>
+      </div>
+      <h3 class="text-center">Project Incubator</h3>
+      <p>Support for members developing their own tech projects, from idea to implementation, with mentorship and resources.</p>
+      <p><strong>Support:</strong> Idea validation, technical guidance, collaboration opportunities</p>
+      <div class="text-center mt-3">
+        <a href="https://www.clubul.computer/t/incubator" class="btn btn-outline-primary">Submit Your Idea</a>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+## Community Showcase
+
+See what our members have been creating and learning through their participation in Clubul Computer.
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header">
+        <h3 class="card-title mb-0">Open Source Educational Tools</h3>
+        <span class="badge bg-primary">Community Project</span>
+      </div>
+      <div class="card-body">
+        <p>A collaborative effort to develop accessible, open-source educational tools for teaching programming concepts in Romanian schools.</p>
+        <p><strong>Technologies:</strong> Python, JavaScript, HTML/CSS, Educational design</p>
+        <p><strong>Impact:</strong> Used in 150+ schools, reaching over 5000+ students</p>
+        <a href="https://www.clubul.computer/t/open-source" class="btn btn-primary">View Project</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header">
+        <h3 class="card-title mb-0">Community Air Quality Monitor</h3>
+        <span class="badge bg-primary">Hardware Project</span>
+      </div>
+      <div class="card-body">
+        <p>A network of low-cost air quality sensors developed by club members to provide real-time environmental data for local communities.</p>
+        <p><strong>Technologies:</strong> Arduino, ESP32, IoT, LoRaWAN, Data visualization</p>
+        <p><strong>Impact:</strong> 25 sensors deployed across the city, open data available to all citizens</p>
+        <a href="https://www.clubul.computer/t/open-source" class="btn btn-primary">View Project</a>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+## Membership & Participation
+
+Clubul Computer welcomes participants of all backgrounds and skill levels, from complete beginners to experienced professionals.
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-md-6">
+    <div class="security-feature">
+      <h3>How to Join</h3>
+      <p>Becoming a part of Clubul Computer is simple and open to all interested in technology:</p>
+      <ul>
+        <li>Attend any of our open events or monthly meetups</li>
+        <li>Register on our community platform for updates and discussions</li>
+        <li>Volunteer to help organize events or lead workshops</li>
+        <li>Propose a project or initiative aligned with our mission</li>
+      </ul>
+      <p>There are no formal membership requirements or fees, though some specialized workshops/trainings may have material costs.</p>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="security-feature">
+      <h3>Upcoming Opportunities</h3>
+      <p>Get involved with these upcoming activities:</p>
+      <ul>
+        <li><strong>Monthly Meetup:</strong> Check the calendar</li>
+        <li><strong>Clubul Computer Junior</strong> Contact us</li>
+        <li><strong>Workshops:</strong> Check the calendar and ask for a specific workshop</li>
+        <li><strong>Open Source Contribution Day:</strong> Ongoing</li>
+        <li><strong>Summer Tech Camp:</strong> July 15-September 15, 2025</li>
+      </ul>
+      <p>All events are held at our location unless otherwise specified.</p>
+    </div>
+  </div>
+</div>
+```
+
+## Location & Contact
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header">
+        <h3 class="card-title mb-0">Find Us</h3>
+      </div>
+      <div class="card-body">
+        <p><strong>Main Location:</strong><br>Craiova, Dolj, Romania</p>
+        <p><strong>Alternative Venues:</strong></p>
+        <ul>
+          <li>Where we are invited - satellite meetups</li>
+          <li>Bucharest - Quarterly workshops</li>
+          <li>Online - Virtual events and learning sessions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header">
+        <h3 class="card-title mb-0">Connect With Us</h3>
+      </div>
+      <div class="card-body">
+        <p><strong>Email:</strong> social@clubul.computer</p>
+        <p><strong>Bsky.app (decentralized social network):</strong> @social@clubul.computer</p>
+        <p><strong>Social networks (soon):</strong></p>
+        <p>
+        <!--  <a href="#" class="btn btn-sm btn-outline-primary me-2"><i class="bi bi-github"></i> GitHub</a>
+          <a href="#" class="btn btn-sm btn-outline-primary me-2"><i class="bi bi-discord"></i> Discord</a>
+          <a href="#" class="btn btn-sm btn-outline-primary me-2"><i class="bi bi-linkedin"></i> LinkedIn</a>
+          <a href="#" class="btn btn-sm btn-outline-primary"><i class="bi bi-telegram"></i> Telegram</a>
+        -->
+        </p>
+        <p class="mt-3">Subscribe to our newsletter for monthly updates on events, projects, and opportunities.</p>
+        <a href="#" class="btn btn-success">Subscribe</a>
+      </div>
+    </div>
+  </div>
+</div>
+```
+:::
+
+```{=html}
+<div class="cta-section">
+  <div class="container text-center">
+    <h2>Ready to join our tech community?</h2>
+    <p class="mb-4">Connect with like-minded individuals, learn new skills, and participate in exciting projects.</p>
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-4">
+        <a href="/academy/" class="cta-button">Explore Academy Programs</a>
+      </div>
+      <br>
+      <div class="col-md-4">
+        <a href="https://clubul.computer" target="_blank" class="cta-button">Visit Main Website</a>
+      </div>
+      <br>
+      <div class="col-md-4">
+        <a href="/contact.qmd" class="cta-button">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</div>
+```

@@ -2,6 +2,15 @@
 title: "About chen.ist"
 ---
 
+```{=html}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">About</li>
+  </ol>
+</nav>
+```
+
 ## Who We Are
 
 chen.ist is a technology consulting firm specializing in cybersecurity, software development, and cloud infrastructure. We are passionate about leveraging cutting-edge technologies to solve complex challenges and drive innovation for our clients.
@@ -14,49 +23,6 @@ Our mission is to provide high-quality, secure, and efficient technology solutio
 
 We strive to be a leading technology partner known for excellence, innovation, and security, helping shape the future of digital transformation.
 
-## Our Team
-
-Our diverse team brings together expertise from various technology domains, united by a shared commitment to excellence and innovation.
-
-```{=html}
-<div class="row mt-5">
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <div class="card-header">
-        <h3 class="card-title mb-0">Alex Chen</h3>
-      </div>
-      <div class="card-body">
-        <h5>Founder & CEO</h5>
-        <p>With over 15 years of experience in cybersecurity and software development, Alex leads our team with a focus on innovation and excellence.</p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <div class="card-header">
-        <h3 class="card-title mb-0">Maria Rodriguez</h3>
-      </div>
-      <div class="card-body">
-        <h5>Chief Technology Officer</h5>
-        <p>Maria oversees our technical operations, ensuring we stay at the forefront of emerging technologies and best practices.</p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-md-4 mb-4">
-    <div class="card">
-      <div class="card-header">
-        <h3 class="card-title mb-0">David Kim</h3>
-      </div>
-      <div class="card-body">
-        <h5>Head of Security</h5>
-        <p>David leads our security practice, bringing a wealth of experience in protecting critical infrastructure and sensitive data.</p>
-      </div>
-    </div>
-  </div>
-</div>
-```
 
 ## Our Values
 
@@ -128,9 +94,16 @@ We take a collaborative and holistic approach to every project:
 ```{=html}
 <div class="cta-section">
   <div class="container text-center">
-    <h2 class="cta-title"><span class="cta-white-text">Ready to work with us?</span></h2>
+    <h2 class="cta-title"><span class="text-dark">Ready to work with us?</span></h2>
     <p class="mb-4">Let's discuss how we can help you achieve your technology goals.</p>
     <a href="/contact.html" class="cta-button">Contact Us</a>
   </div>
 </div>
+
+<style>
+  /* Ensure the text is white in both light and dark modes */
+  .cta-title .cta-white-text {
+    color: white !important;
+  }
+</style>
 ```

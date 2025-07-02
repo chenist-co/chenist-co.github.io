@@ -1,13 +1,26 @@
 ---
 title: "Academy Partnerships"
 subtitle: "Collaborating for better educational outcomes"
+format: 
+  html:
+    css: /scss/academy.scss
+    classes: [academy-section]
 ---
 
 ```{=html}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/academy.qmd">Academy</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Partnerships</li>
+  </ol>
+</nav>
+
 <div class="hero-section">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-8 offset-md-2 text-center">
+        <img src="/assets/svg/connecting_teams.svg" alt="Academy Partnerships" style="max-width: 150px; margin-bottom: 20px;">
         <h1 class="hero-title"><span class="academy-text">Academy</span> <span class="text-green">Partnerships</span></h1>
         <p>Building a stronger educational ecosystem through collaboration</p>
       </div>
