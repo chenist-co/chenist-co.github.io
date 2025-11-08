@@ -4,24 +4,26 @@ This guide explains how to configure chen.ist and www.chen.ist with Cloudflare D
 
 ## Prerequisites: Verify Domain with GitHub
 
-Before configuring DNS, you must verify domain ownership with GitHub:
+**IMPORTANT:** Since the repository is owned by the `chenist-co` **organization**, you must verify the domain at the organization level, not your personal account.
 
-### Get Verification Code from GitHub
+### Get Verification Code from GitHub Organization
 
-1. Go to your GitHub account settings (not repository settings):
-   - Click your profile picture (top-right) → **Settings**
-   - Scroll to **Code, planning, and automation** section
-   - Click **Pages** (left sidebar)
+1. Go to your **organization settings** (not personal account settings):
+   - Visit: https://github.com/organizations/chenist-co/settings/pages
+   - Or: Click your profile → **Your organizations** → **chenist-co** → **Settings** → **Pages**
 
-2. Under **Verified domains**, click **Add a domain**
+2. Scroll down to **Verified domains**
 
-3. Enter `chen.ist` and click **Add domain**
+3. Click **Add a domain**
 
-4. GitHub will show you a TXT record like:
+4. Enter `chen.ist` and click **Add domain**
+
+5. GitHub will show you a TXT record like:
    ```
-   _github-pages-challenge-chenist-co.chen.ist
+   Name: _github-pages-challenge-chenist-co
+   Value: 01e35f3149aaf97c2579a155192536
    ```
-   **Copy this entire code** - you'll need it for Cloudflare
+   **Copy both the name and value** - you'll need them for Cloudflare
 
 ### Add Verification TXT Record to Cloudflare
 
