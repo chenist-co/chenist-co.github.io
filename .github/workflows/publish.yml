@@ -23,13 +23,10 @@ jobs:
         with:
           version: 1.7.30
 
-      - name: Install LaTeX (for PDF generation)
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-fonts-recommended
-
       - name: Render Quarto Project
         run: quarto render
+        env:
+          QUARTO_PRINT_STACK: true
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
