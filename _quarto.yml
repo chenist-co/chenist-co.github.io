@@ -10,7 +10,6 @@ pre-render:
   - "cd events && ./render-pdfs.sh"
   - "cd academy/events && ./render-pdfs.sh"
   - "cd academy/webinars && ./render-pdfs.sh"
-  - "cd projects/manuscripts && quarto render"
 
 website:
   title: "chen.ist"
