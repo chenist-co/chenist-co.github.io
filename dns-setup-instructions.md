@@ -2,6 +2,46 @@
 
 This guide explains how to configure chen.ist and www.chen.ist with Cloudflare DNS for your GitHub Pages site.
 
+## Prerequisites: Verify Domain with GitHub
+
+Before configuring DNS, you must verify domain ownership with GitHub:
+
+### Get Verification Code from GitHub
+
+1. Go to your GitHub account settings (not repository settings):
+   - Click your profile picture (top-right) → **Settings**
+   - Scroll to **Code, planning, and automation** section
+   - Click **Pages** (left sidebar)
+
+2. Under **Verified domains**, click **Add a domain**
+
+3. Enter `chen.ist` and click **Add domain**
+
+4. GitHub will show you a TXT record like:
+   ```
+   _github-pages-challenge-chenist-co.chen.ist
+   ```
+   **Copy this entire code** - you'll need it for Cloudflare
+
+### Add Verification TXT Record to Cloudflare
+
+5. Log in to Cloudflare → Select chen.ist → Go to **DNS** > **Records**
+
+6. Click **Add record** and enter:
+   - **Type:** TXT
+   - **Name:** `_github-pages-challenge-chenist-co` (or the exact subdomain GitHub provided)
+   - **Content:** (paste the verification code from GitHub)
+   - **Proxy status:** DNS only (gray cloud)
+   - **TTL:** Auto
+
+7. Click **Save**
+
+8. Go back to GitHub and click **Verify** (may take a few minutes for DNS to propagate)
+
+9. Once verified, you'll see a green checkmark ✓
+
+**Note:** Keep the TXT record in Cloudflare - don't delete it after verification.
+
 ## Cloudflare DNS Configuration
 
 **IMPORTANT:** For GitHub Pages to work properly with Cloudflare, you must disable proxying (use "DNS only" mode - gray cloud icon).
@@ -42,11 +82,16 @@ The repository is already configured with:
 - CNAME file containing "chen.ist" ✓
 - Quarto config with site-url: https://chen.ist ✓
 
-If you need to verify GitHub Pages settings:
+### Enable Custom Domain in GitHub Pages
+
+**IMPORTANT:** Only do this AFTER domain verification is complete (green checkmark in account settings).
+
 1. Go to https://github.com/chenist-co/chenist-co.github.io
 2. Navigate to **Settings** > **Pages**
-3. Ensure "Custom domain" shows "chen.ist"
-4. **Check "Enforce HTTPS"** after DNS propagation (may take up to 24 hours)
+3. Under **Custom domain**, enter: `chen.ist`
+4. Click **Save**
+5. GitHub will check DNS and show "DNS check successful" when ready
+6. Wait 24 hours, then enable **Enforce HTTPS** (once certificate is provisioned)
 
 ## Domain Behavior
 
