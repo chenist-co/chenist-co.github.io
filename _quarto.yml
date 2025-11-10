@@ -6,10 +6,11 @@ execute:
   freeze: auto
 
 # Custom build steps
-pre-render:
-  - "cd events && ./render-pdfs.sh"
-  - "cd academy/events && ./render-pdfs.sh"
-  - "cd academy/webinars && ./render-pdfs.sh"
+# Temporarily disabled pre-render scripts to allow deployment
+# pre-render:
+#   - "cd events && ./render-pdfs.sh"
+#   - "cd academy/events && ./render-pdfs.sh"
+#   - "cd academy/webinars && ./render-pdfs.sh"
 
 website:
   title: "chen.ist"
@@ -27,8 +28,18 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: services.qmd
-        text: Services
+      - text: Services
+        menu:
+          - href: services/index.qmd
+            text: Overview
+          - href: services/nis2/index.qmd
+            text: NIS2 Compliance
+          - href: services/cybersecurity/index.qmd
+            text: Cybersecurity
+          - href: services/cloud/index.qmd
+            text: Cloud Services
+          - href: services/digital-resilience/index.qmd
+            text: Digital Resilience
       - text: Academy
         menu:
           - href: academy/overview.qmd
