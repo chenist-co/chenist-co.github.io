@@ -28,8 +28,18 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: services.qmd
-        text: Services
+      - text: Services
+        menu:
+          - href: services/index.qmd
+            text: Overview
+          - href: services/nis2/index.qmd
+            text: NIS2 Compliance
+          - href: services/cybersecurity/index.qmd
+            text: Cybersecurity
+          - href: services/cloud/index.qmd
+            text: Cloud Services
+          - href: services/digital-resilience/index.qmd
+            text: Digital Resilience
       - text: Academy
         menu:
           - href: academy/overview.qmd
