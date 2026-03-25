@@ -79,9 +79,13 @@ format:
         .hp-center p { color: rgba(255,255,255,0.55); margin: 0 auto 2rem; }
         .hp-center .hp-sec-links { justify-content: center; }
 
-        /* Pattern section — no image, SVG pattern */
-        .hp-pattern { background: #f5f5f7; color: #1d1d1f; background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2381BD4A' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); min-height: auto; padding: 5rem 0; }
-        .hp-pattern p { color: #86868b; }
+        /* SVG pattern backgrounds */
+        .hp-squares { background: #161617 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Crect fill='%23161617' width='200' height='200'/%3E%3Cg fill='%231e1e21' fill-opacity='1'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='%2381BD4A' fill-opacity='0.06' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='%2381BD4A' fill-opacity='0.04' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E"); color: #fff; }
+        .hp-squares p { color: rgba(255,255,255,0.55); }
+        .hp-triangles { background: #111 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='540' height='450' viewBox='0 0 1080 900'%3E%3Crect fill='%23111' width='1080' height='900'/%3E%3Cg fill-opacity='0.07'%3E%3Cpolygon fill='%2381BD4A' points='90 150 0 300 180 300'/%3E%3Cpolygon fill='%231a1a1d' points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%2381BD4A' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%231a1a1d' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%2381BD4A' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%231a1a1d' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%2381BD4A' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%231a1a1d' points='90 450 0 600 180 600'/%3E%3Cpolygon fill='%2381BD4A' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%231a1a1d' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%2381BD4A' points='630 450 720 300 540 300'/%3E%3Cpolygon fill='%231a1a1d' points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%2381BD4A' points='990 450 1080 300 900 300'/%3E%3C/g%3E%3C/svg%3E"); color: #fff; }
+        .hp-triangles p { color: rgba(255,255,255,0.55); }
+        .hp-constellation { background: #0a0a0a url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='692' height='692' viewBox='0 0 800 800'%3E%3Crect fill='none' width='800' height='800'/%3E%3Cg fill='none' stroke='%2381BD4A' stroke-width='1' stroke-opacity='0.1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3C/g%3E%3Cg fill='%2381BD4A' fill-opacity='0.06'%3E%3Ccircle cx='769' cy='229' r='4'/%3E%3Ccircle cx='539' cy='269' r='4'/%3E%3Ccircle cx='603' cy='493' r='4'/%3E%3Ccircle cx='731' cy='737' r='4'/%3E%3Ccircle cx='295' cy='764' r='4'/%3E%3Ccircle cx='102' cy='382' r='4'/%3E%3Ccircle cx='370' cy='105' r='4'/%3E%3Ccircle cx='390' cy='382' r='4'/%3E%3C/g%3E%3C/svg%3E"); color: #fff; }
+        .hp-constellation p { color: rgba(255,255,255,0.55); }
 
         /* Stats */
         .hp-stats { display: flex; justify-content: center; gap: clamp(2rem, 5vw, 5rem); flex-wrap: wrap; padding: 5rem 1.5rem; background: #000; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='692' height='692' viewBox='0 0 800 800'%3E%3Crect fill='none' width='800' height='800'/%3E%3Cg fill='none' stroke='%2381BD4A' stroke-width='1' stroke-opacity='0.12'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%2381BD4A' fill-opacity='0.08'%3E%3Ccircle cx='769' cy='229' r='4'/%3E%3Ccircle cx='539' cy='269' r='4'/%3E%3Ccircle cx='603' cy='493' r='4'/%3E%3Ccircle cx='731' cy='737' r='4'/%3E%3Ccircle cx='520' cy='660' r='4'/%3E%3Ccircle cx='309' cy='538' r='4'/%3E%3Ccircle cx='295' cy='764' r='4'/%3E%3Ccircle cx='40' cy='599' r='4'/%3E%3Ccircle cx='102' cy='382' r='4'/%3E%3Ccircle cx='127' cy='80' r='4'/%3E%3Ccircle cx='370' cy='105' r='4'/%3E%3Ccircle cx='578' cy='42' r='4'/%3E%3Ccircle cx='237' cy='261' r='4'/%3E%3Ccircle cx='390' cy='382' r='4'/%3E%3C/g%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2381BD4A' fill-opacity='0.07' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3Ccircle cx='13' cy='13' r='1'/%3E%3C/g%3E%3C/svg%3E"); }
@@ -131,13 +135,11 @@ format:
   </div>
 </div>
 
-<!-- DIGITAL INFRASTRUCTURE — text left, image right -->
-<div class="hp-sec hp-left" id="s1">
-  <div class="hp-sec-img" style="background-image:url('/assets/images/stock/hackathon-team.webp');"></div>
-  <div class="hp-sec-over"></div>
+<!-- DIGITAL INFRASTRUCTURE — protruding squares pattern -->
+<div class="hp-sec hp-left hp-squares" id="s1">
   <div class="hp-sec-content">
     <h2>Digital<br>Infrastructure</h2>
-    <p style="background: rgba(0,0,0,0.5); display:inline-block; padding: 0.75rem 1.5rem; border-radius: 12px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);">Open-source, UNIX, and Apple platforms. Deployed and managed for your business. No vendor lock-in, no hidden costs.</p>
+    <p>Open-source, UNIX, and Apple platforms. Deployed and managed for your business. No vendor lock-in, no hidden costs.</p>
     <div class="hp-sec-links">
       <a href="/digital/" class="pr">Learn more</a>
       <a href="https://cal.com/chenist" target="_blank" class="se">Get started</a>
@@ -145,13 +147,11 @@ format:
   </div>
 </div>
 
-<!-- SECURITY — text right, image left -->
-<div class="hp-sec hp-right">
-  <div class="hp-sec-img" style="background-image:url('/assets/images/stock/hacker-screens.webp');"></div>
-  <div class="hp-sec-over"></div>
+<!-- SECURITY — large triangles pattern -->
+<div class="hp-sec hp-right hp-triangles">
   <div class="hp-sec-content">
     <h2>Proactive<br>Security</h2>
-    <p style="background: rgba(0,0,0,0.5); display:inline-block; padding: 0.75rem 1.5rem; border-radius: 12px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);">24/7 SOC monitoring. Threat hunting. NIS2 compliance. CISO as a Service. For organizations that can't afford to be the next headline.</p>
+    <p>24/7 SOC monitoring. Threat hunting. NIS2 compliance. CISO as a Service. For organizations that can't afford to be the next headline.</p>
     <div class="hp-sec-links">
       <a href="/security/" class="pr">Learn more</a>
       <a href="https://cal.com/chenist" target="_blank" class="se">Free assessment</a>
@@ -159,26 +159,22 @@ format:
   </div>
 </div>
 
-<!-- CLOUD — centered over dark image -->
-<div class="hp-sec hp-center">
-  <div class="hp-sec-img" style="background-image:url('/assets/images/stock/datacenter-blue.webp');"></div>
-  <div class="hp-sec-over"></div>
+<!-- CLOUD — constellation pattern -->
+<div class="hp-sec hp-center hp-constellation">
   <div class="hp-sec-content">
     <h2>Cloud Services</h2>
-    <p style="background: rgba(0,0,0,0.5); display:inline-block; padding: 0.75rem 1.5rem; border-radius: 12px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);">Migration, infrastructure, DevOps, and multi-cloud security. AWS, Azure, Google Cloud.</p>
+    <p>Migration, infrastructure, DevOps, and multi-cloud security. AWS, Azure, Google Cloud.</p>
     <div class="hp-sec-links" style="display:flex; gap:2rem; justify-content:center;">
       <a href="/services/cloud/" class="pr">Learn more</a>
     </div>
   </div>
 </div>
 
-<!-- ACADEMY — text left on code image -->
-<div class="hp-sec hp-left">
-  <div class="hp-sec-img" style="background-image:url('/assets/images/stock/terminal-green.webp');"></div>
-  <div class="hp-sec-over"></div>
+<!-- ACADEMY — squares pattern -->
+<div class="hp-sec hp-left hp-squares">
   <div class="hp-sec-content">
     <h2>Academy</h2>
-    <p style="background: rgba(0,0,0,0.5); display:inline-block; padding: 0.75rem 1.5rem; border-radius: 12px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);">Courses, hackathons, and intensive trainings. Skills that stick — not certificates that collect dust.</p>
+    <p>Courses, hackathons, and intensive trainings. Skills that stick — not certificates that collect dust.</p>
     <div class="hp-sec-links">
       <a href="/academy/" class="pr">Explore</a>
       <a href="/academy/events.html" class="se">Events</a>
@@ -186,13 +182,11 @@ format:
   </div>
 </div>
 
-<!-- RESILIENCE — centered over sky image -->
-<div class="hp-sec hp-center">
-  <div class="hp-sec-img" style="background-image:url('/assets/images/stock/cloud-sky.webp');"></div>
-  <div class="hp-sec-over" style="background: rgba(0,0,0,0.35);"></div>
+<!-- RESILIENCE — triangles pattern -->
+<div class="hp-sec hp-center hp-triangles">
   <div class="hp-sec-content">
     <h2>Digital Resilience</h2>
-    <p style="background: rgba(0,0,0,0.5); display:inline-block; padding: 0.75rem 1.5rem; border-radius: 12px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);">Business continuity, disaster recovery, and architecture frameworks. When everything else fails, you stay operational.</p>
+    <p>Business continuity, disaster recovery, and architecture frameworks. When everything else fails, you stay operational.</p>
     <div class="hp-sec-links" style="display:flex; gap:2rem; justify-content:center;">
       <a href="/services/digital-resilience/" class="pr">Learn more</a>
     </div>
