@@ -531,7 +531,7 @@ input, textarea, .form-control {
   <li><a href="#contact-information" id="toc-contact-information" class="nav-link" data-scroll-target="#contact-information">Contact Information</a></li>
   <li><a href="#office-locations" id="toc-office-locations" class="nav-link" data-scroll-target="#office-locations">Office Locations</a></li>
   </ul></li>
-  <li><a href="#book-a-meeting-1" id="toc-book-a-meeting-1" class="nav-link" data-scroll-target="#book-a-meeting-1">Book a Meeting</a></li>
+  <li><a href="#contact-us-book-a-meeting" id="toc-contact-us-book-a-meeting" class="nav-link" data-scroll-target="#contact-us-book-a-meeting">Contact Us / Book a Meeting</a></li>
   <li><a href="#connect-with-us" id="toc-connect-with-us" class="nav-link" data-scroll-target="#connect-with-us">Connect With Us</a></li>
   </ul>
 </nav>
@@ -619,16 +619,103 @@ input, textarea, .form-control {
 </div>
 </div>
 </section>
-<section id="book-a-meeting-1" class="level2">
-<h2 class="anchored" data-anchor-id="book-a-meeting-1">Book a Meeting</h2>
-<p>Schedule a consultation directly using the calendar below.</p>
-<div class="mt-4 mb-5" style="width:100%;min-height:600px;" id="cal-inline-embed"></div>
+<section id="contact-us-book-a-meeting" class="level2">
+<h2 class="anchored" data-anchor-id="contact-us-book-a-meeting">Contact Us / Book a Meeting</h2>
+<div class="mt-4 mb-5">
+  <ul class="nav nav-tabs" id="contactTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#formContact" type="button" role="tab">
+        <i class="bi bi-file-earmark-text me-2"></i>Send a Message (Romania)
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" data-bs-toggle="tab" data-bs-target="#calContact" type="button" role="tab">
+        <i class="bi bi-calendar-check me-2"></i>Book a Call (EU / International)
+      </button>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="formContact" role="tabpanel">
+      <div class="p-4 border border-top-0 rounded-bottom">
+        <p class="text-muted"><i class="bi bi-geo-alt me-1"></i>For clients in Romania. Complete the form and we'll respond within 24 hours.</p>
+        <form action="https://formspree.io/f/mpwkaqev" method="POST">
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label">Full Name *</label>
+              <input type="text" class="form-control" name="name" required="" placeholder="Numele complet">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email *</label>
+              <input type="email" class="form-control" name="email" required="" placeholder="email@exemplu.ro">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label">Phone</label>
+              <input type="tel" class="form-control" name="phone" placeholder="+40 7XX XXX XXX">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Company</label>
+              <input type="text" class="form-control" name="company" placeholder="Companie (optional)">
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Interest *</label>
+            <select class="form-select" name="interest" required="">
+              <option value="">Select...</option>
+              <optgroup label="Services">
+                <option value="digital-infrastructure">Digital Infrastructure</option>
+                <option value="cybersecurity">Cybersecurity</option>
+                <option value="nis2">NIS2 Compliance</option>
+                <option value="cloud">Cloud Services</option>
+              </optgroup>
+              <optgroup label="Academy">
+                <option value="course">Course Enrollment</option>
+                <option value="training">Training Registration</option>
+                <option value="event">Event / Hackathon</option>
+                <option value="webinar">Webinar</option>
+                <option value="summer-school">Summer School</option>
+              </optgroup>
+              <option value="general">General Inquiry</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Message *</label>
+            <textarea class="form-control" name="message" rows="4" required="" placeholder="How can we help you?"></textarea>
+          </div>
+          <input type="hidden" name="_subject" value="New Contact from chen.ist">
+          <input type="hidden" name="_source" value="contact-page">
+          <input type="text" name="_gotcha" style="display:none">
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" required="">
+            <label class="form-check-label">I agree to the <a href="./privacy.html" target="_blank">privacy policy</a> *</label>
+          </div>
+          <button type="submit" class="btn btn-success btn-lg w-100"><i class="bi bi-send me-2"></i>Send Message</button>
+        </form>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="calContact" role="tabpanel">
+      <div class="p-4 border border-top-0 rounded-bottom">
+        <p class="text-muted"><i class="bi bi-globe me-1"></i>For EU and international clients. Book directly in our calendar.</p>
+        <div id="cal-inline-embed" style="width:100%;min-height:500px;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    if (typeof Cal !== 'undefined') {
-      Cal("inline", {elementOrSelector: "#cal-inline-embed", calLink: "chenist", layout: "month_view"});
-    }
-  });
+document.addEventListener('DOMContentLoaded', function() {
+  var calLoaded = false;
+  var calTab = document.querySelector('[data-bs-target="#calContact"]');
+  if (calTab) {
+    calTab.addEventListener('shown.bs.tab', function() {
+      if (!calLoaded && typeof Cal !== 'undefined') {
+        Cal("inline", {elementOrSelector: "#cal-inline-embed", calLink: "chenist", layout: "month_view"});
+        calLoaded = true;
+      }
+    });
+  }
+});
 </script>
 </section>
 <section id="connect-with-us" class="level2">

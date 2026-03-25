@@ -785,6 +785,81 @@ Our digital infrastructure solutions are designed for **any activity domain**. W
 
 :::
 
+## Get Started
+
+```{=html}
+<div class="card mt-4 mb-5">
+<div class="card-body">
+<h3 class="mb-3"><i class="bi bi-pencil-square me-2"></i>Request a Consultation</h3>
+<ul class="nav nav-tabs" id="regTabs-digital" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#formReg-digital" type="button" role="tab">
+      <i class="bi bi-file-earmark-text me-2"></i>Register (Romania)
+    </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#calReg-digital" type="button" role="tab">
+      <i class="bi bi-calendar-check me-2"></i>Book a Call (EU / International)
+    </button>
+  </li>
+</ul>
+<div class="tab-content pt-3">
+  <div class="tab-pane fade show active" id="formReg-digital" role="tabpanel">
+    <p class="text-muted"><i class="bi bi-geo-alt me-1"></i>For clients in Romania. We'll contact you within 24 hours.</p>
+    <form action="https://formspree.io/f/mpwkaqev" method="POST">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Full Name *</label>
+          <input type="text" class="form-control" name="name" required placeholder="Numele complet">
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Email *</label>
+          <input type="email" class="form-control" name="email" required placeholder="email@exemplu.ro">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Phone</label>
+          <input type="tel" class="form-control" name="phone" placeholder="+40 7XX XXX XXX">
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Company</label>
+          <input type="text" class="form-control" name="company" placeholder="Companie">
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Package Interest</label>
+        <select class="form-select" name="interest">
+          <option value="">Select a package...</option>
+          <option value="starter">Starter (1-10 employees)</option>
+          <option value="growth">Growth (11-50 employees)</option>
+          <option value="enterprise">Enterprise (50+ employees)</option>
+          <option value="custom">Custom / Not sure yet</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Tell us about your infrastructure needs</label>
+        <textarea class="form-control" name="message" rows="3" placeholder="Current setup, number of devices, specific needs (Linux, BSD, Apple, open-source tools)..."></textarea>
+      </div>
+      <input type="hidden" name="_subject" value="Digital Infrastructure Inquiry from chen.ist">
+      <input type="hidden" name="_source" value="digital-infrastructure">
+      <input type="text" name="_gotcha" style="display:none">
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" required>
+        <label class="form-check-label">I agree to the <a href="/privacy.html" target="_blank">privacy policy</a> *</label>
+      </div>
+      <button type="submit" class="btn btn-success btn-lg w-100"><i class="bi bi-send me-2"></i>Request Consultation</button>
+    </form>
+  </div>
+  <div class="tab-pane fade" id="calReg-digital" role="tabpanel">
+    <p class="text-muted"><i class="bi bi-globe me-1"></i>For EU and international clients. Book directly in our calendar.</p>
+    <a href="https://cal.com/chenist" target="_blank" class="btn btn-outline-primary btn-lg w-100"><i class="bi bi-calendar-check me-2"></i>Book via Cal.com</a>
+  </div>
+</div>
+</div>
+</div>
+```
+
 :::: {.cta-section}
 ::: {.container .text-center}
 ## <span class="text-white">Ready to build your digital infrastructure?</span>

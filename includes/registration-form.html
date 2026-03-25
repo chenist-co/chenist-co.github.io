@@ -1,0 +1,196 @@
+<!-- Dual Registration: Formspree (RO) + Cal.com (EU/International) -->
+<style>
+.registration-section {
+  margin-top: 2rem;
+}
+.registration-tabs .nav-tabs {
+  border-bottom: 2px solid var(--bs-border-color);
+}
+.registration-tabs .nav-link {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  color: var(--bs-body-color);
+}
+.registration-tabs .nav-link.active {
+  color: #81BD4A;
+  border-bottom: 3px solid #81BD4A;
+  background: transparent;
+}
+.registration-tabs .nav-link:hover {
+  color: #81BD4A;
+}
+.reg-form {
+  padding: 1.5rem;
+  border: 1px solid var(--bs-border-color);
+  border-top: none;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.reg-form .form-control,
+.reg-form .form-select {
+  margin-bottom: 0.5rem;
+}
+.reg-form label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.reg-success {
+  display: none;
+  padding: 1rem;
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 0.375rem;
+  color: #155724;
+  margin-top: 1rem;
+}
+.cal-embed-section {
+  min-height: 500px;
+  padding: 1.5rem;
+  border: 1px solid var(--bs-border-color);
+  border-top: none;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.geo-hint {
+  font-size: 0.85rem;
+  color: var(--bs-secondary-color);
+  margin-top: 0.25rem;
+}
+</style>
+
+<div class="registration-section">
+  <div class="registration-tabs">
+    <ul class="nav nav-tabs" id="regTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="form-tab" data-bs-toggle="tab" data-bs-target="#formRegistration" type="button" role="tab">
+          <i class="bi bi-file-earmark-text me-2"></i>Register (Romania)
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="cal-tab" data-bs-toggle="tab" data-bs-target="#calBooking" type="button" role="tab">
+          <i class="bi bi-calendar-check me-2"></i>Book a Call (EU / International)
+        </button>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <!-- Romanian Registration Form (Formspree) -->
+      <div class="tab-pane fade show active" id="formRegistration" role="tabpanel">
+        <div class="reg-form">
+          <p class="geo-hint"><i class="bi bi-geo-alt me-1"></i>For clients in Romania. Complete the form below and we'll contact you within 24 hours.</p>
+
+          <form action="https://formspree.io/f/mpwkaqev" method="POST">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="reg-name" class="form-label">Full Name *</label>
+                <input type="text" class="form-control" id="reg-name" name="name" required placeholder="Numele complet">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="reg-email" class="form-label">Email *</label>
+                <input type="email" class="form-control" id="reg-email" name="email" required placeholder="email@exemplu.ro">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="reg-company" class="form-label">Company / Organization</label>
+                <input type="text" class="form-control" id="reg-company" name="company" placeholder="Numele companiei">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="reg-phone" class="form-label">Phone</label>
+                <input type="tel" class="form-control" id="reg-phone" name="phone" placeholder="+40 7XX XXX XXX">
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="reg-interest" class="form-label">Interest *</label>
+              <select class="form-select" id="reg-interest" name="interest" required>
+                <option value="">Select...</option>
+                <optgroup label="Services">
+                  <option value="digital-infrastructure">Digital Infrastructure</option>
+                  <option value="cybersecurity">Cybersecurity</option>
+                  <option value="nis2">NIS2 Compliance</option>
+                  <option value="cloud">Cloud Services</option>
+                  <option value="digital-resilience">Digital Resilience</option>
+                </optgroup>
+                <optgroup label="Academy">
+                  <option value="course">Course Enrollment</option>
+                  <option value="training">Training Registration</option>
+                  <option value="microlearning">Microlearning Session</option>
+                  <option value="webinar">Webinar Registration</option>
+                  <option value="hackathon">Hackathon Registration</option>
+                  <option value="summer-school">Summer School</option>
+                  <option value="computer-club">Computer Club</option>
+                </optgroup>
+                <optgroup label="Other">
+                  <option value="partnership">Partnership Inquiry</option>
+                  <option value="general">General Inquiry</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="reg-message" class="form-label">Additional Details</label>
+              <textarea class="form-control" id="reg-message" name="message" rows="3" placeholder="Specify which course, training, or event you're interested in..."></textarea>
+            </div>
+
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="reg-privacy" name="privacy-consent" required>
+              <label class="form-check-label" for="reg-privacy">
+                I agree to the <a href="/privacy.html" target="_blank">privacy policy</a> *
+              </label>
+            </div>
+
+            <input type="hidden" name="_subject" value="New Registration from chen.ist">
+            <input type="text" name="_gotcha" style="display:none">
+
+            <button type="submit" class="btn btn-success btn-lg w-100">
+              <i class="bi bi-send me-2"></i>Submit Registration
+            </button>
+
+            <div class="reg-success mt-3">
+              <i class="bi bi-check-circle me-2"></i>Thank you! We'll contact you within 24 hours.
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Cal.com Booking (EU / International) -->
+      <div class="tab-pane fade" id="calBooking" role="tabpanel">
+        <div class="cal-embed-section">
+          <p class="geo-hint"><i class="bi bi-globe me-1"></i>For EU and international clients. Book a call directly in our calendar.</p>
+          <div id="cal-registration-embed" style="width:100%;min-height:450px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize registration tabs
+  if (typeof bootstrap !== 'undefined') {
+    var tabElList = [].slice.call(document.querySelectorAll('#regTabs .nav-link'));
+    tabElList.map(function(tabEl) {
+      return new bootstrap.Tab(tabEl);
+    });
+  }
+
+  // Load Cal.com embed when booking tab is first activated
+  var calLoaded = false;
+  var calTab = document.getElementById('cal-tab');
+  if (calTab) {
+    calTab.addEventListener('shown.bs.tab', function() {
+      if (!calLoaded && typeof Cal !== 'undefined') {
+        Cal("inline", {
+          elementOrSelector: "#cal-registration-embed",
+          calLink: "chenist",
+          layout: "month_view"
+        });
+        calLoaded = true;
+      }
+    });
+  }
+});
+</script>
