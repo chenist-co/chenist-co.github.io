@@ -1,5 +1,6 @@
 ---
 title: "Contact Us"
+description: "Get in touch with chen.ist. Book a consultation, send us an email, or visit our offices in Craiova and Bucharest, Romania."
 from: markdown+raw_html
 format:
   html:
@@ -63,11 +64,11 @@ For support: [support@chen.ist](mailto:support@chen.ist)
 ::: {.col-md-6}
 ::: {.card .mb-4}
 ::: {.card-body}
-### <i class="bi bi-telephone text-green me-2"></i> Phone
+### <i class="bi bi-calendar-check text-green me-2"></i> Book a Meeting
 
-Main Office: [+4 (234) 567-890](tel:+1234567890)
+Schedule a consultation directly:
 
-Support Line: [+1 (234) 567-891](tel:+1234567891)
+[Book a Call](https://cal.com/chenist){.btn .btn-success target="_blank"}
 :::
 :::
 :::
@@ -102,45 +103,20 @@ For support: [bucharest@chen.ist](mailto:bucharest@chen.ist)
 :::
 :::
 
-## Send Us a Message
+## Book a Meeting
 
-::: {.card .mt-5}
-::: {.card-body}
+Schedule a consultation directly using the calendar below.
 
 ```{=html}
-<form>
-  <div class="row mb-3">
-    <div class="col-md-6">
-      <label for="name" class="form-label">Name</label>
-      <input type="text" class="form-control" id="name" placeholder="Your name">
-    </div>
-    <div class="col-md-6">
-      <label for="email" class="form-label">Email</label>
-      <input type="email" class="form-control" id="email" placeholder="your.email@example.com">
-    </div>
-  </div>
-
-  <div class="mb-3">
-    <label for="subject" class="form-label">Subject</label>
-    <input type="text" class="form-control" id="subject" placeholder="What is this regarding?">
-  </div>
-
-  <div class="mb-3">
-    <label for="message" class="form-label">Message</label>
-    <textarea class="form-control" id="message" rows="5" placeholder="Your message"></textarea>
-  </div>
-
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="privacy">
-    <label class="form-check-label" for="privacy">I agree to the <a href="privacy.qmd">privacy policy</a></label>
-  </div>
-
-  <button type="submit" class="btn btn-success">Send Message</button>
-</form>
+<div class="mt-4 mb-5" style="width:100%;min-height:600px;" id="cal-inline-embed"></div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof Cal !== 'undefined') {
+      Cal("inline", {elementOrSelector: "#cal-inline-embed", calLink: "chenist", layout: "month_view"});
+    }
+  });
+</script>
 ```
-
-:::
-:::
 
 ## Connect With Us
 

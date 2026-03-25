@@ -1,0 +1,2264 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Production-grade open-source, Linux, BSD, and Apple Business infrastructure for SMBs. NixOS, OpenBSD, FreeBSD, Nextcloud, and zero-touch Apple device deployment.">
+
+<title>Digital Infrastructure – chen.ist</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/images/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-80dfc45d529253e437201112265bec58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-4a78832a495b0bfd9a529c032fe3f37b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-80dfc45d529253e437201112265bec58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+.navbar-brand-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand .navbar-title {
+  display: inline-block;
+  margin-left: 0;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 767.98px) {
+  .navbar-brand .navbar-title {
+    font-size: 1.1rem;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Find the navbar brand element that contains the logo
+  const navbarBrand = document.querySelector('.navbar-brand');
+  
+  if (navbarBrand) {
+    // Create a span for the CHENIST text
+    const titleSpan = document.createElement('span');
+    titleSpan.className = 'navbar-title';
+    titleSpan.textContent = 'CHENIST';
+    
+    // Append the span after the logo
+    navbarBrand.appendChild(titleSpan);
+  }
+});
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<style>
+.platform-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0.15rem;
+}
+.badge-linux { background: rgba(255, 193, 7, 0.15); color: #FFC107; }
+.badge-bsd { background: rgba(220, 53, 69, 0.15); color: #DC3545; }
+.badge-apple { background: rgba(108, 117, 125, 0.15); color: #6C757D; }
+.badge-opensource { background: rgba(129, 189, 74, 0.15); color: #81BD4A; }
+.badge-free { background: rgba(25, 135, 84, 0.15); color: #198754; font-weight: 700; }
+.pricing-card { border: 2px solid transparent; transition: all 0.3s ease; }
+.pricing-card:hover { border-color: #81BD4A; transform: translateY(-4px); }
+.pricing-card .card-header { font-size: 1.1rem; }
+.pricing-featured { border-color: #81BD4A; }
+.pricing-featured .card-header { background-color: #81BD4A !important; }
+.apple-business-highlight {
+  background: linear-gradient(135deg, rgba(108,117,125,0.08) 0%, rgba(129,189,74,0.08) 100%);
+  border-left: 4px solid #6C757D;
+  padding: 1.5rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin: 1rem 0;
+}
+</style>
+
+
+<link rel="stylesheet" href="../assets/css/styles.css">
+<link rel="stylesheet" href="../assets/css/academy.scss">
+<link rel="stylesheet" href="../assets/css/custom-hero.css">
+<meta property="og:title" content="Digital Infrastructure – chen.ist">
+<meta property="og:description" content="Production-grade open-source, Linux, BSD, and Apple Business infrastructure for SMBs. NixOS, OpenBSD, FreeBSD, Nextcloud, and zero-touch Apple device deployment.">
+<meta property="og:site_name" content="chen.ist">
+<meta name="twitter:title" content="Digital Infrastructure – chen.ist">
+<meta name="twitter:description" content="Production-grade open-source, Linux, BSD, and Apple Business infrastructure for SMBs. NixOS, OpenBSD, FreeBSD, Nextcloud, and zero-touch Apple device deployment.">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-services" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Services</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-services">    
+        <li>
+    <a class="dropdown-item" href="../services/index.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../digital/index.html">
+ <span class="dropdown-text">Digital Infrastructure</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../services/nis2/index.html">
+ <span class="dropdown-text">NIS2 Compliance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../services/cybersecurity/index.html">
+ <span class="dropdown-text">Cybersecurity</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../services/cloud/index.html">
+ <span class="dropdown-text">Cloud Services</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../services/digital-resilience/index.html">
+ <span class="dropdown-text">Digital Resilience</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-academy" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Academy</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-academy">    
+        <li>
+    <a class="dropdown-item" href="../academy/overview.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/courses.html">
+ <span class="dropdown-text">Courses</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/trainings.html">
+ <span class="dropdown-text">Trainings</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/microlearning.html">
+ <span class="dropdown-text">Microlearning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/programs/index.html">
+ <span class="dropdown-text">Programs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/events.html">
+ <span class="dropdown-text">Events</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/webinars.html">
+ <span class="dropdown-text">Webinars</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/computerclub.html">
+ <span class="dropdown-text">Computer Club</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/partnerships.html">
+ <span class="dropdown-text">Partnerships</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources/index.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../about/index.html">
+ <span class="dropdown-text">About</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/csr.html">
+ <span class="dropdown-text">CSR</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/community.html">
+ <span class="dropdown-text">Community</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-lang" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Lang</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-lang">    
+        <li>
+    <a class="dropdown-item" href="../index.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ro/index.html">
+ <span class="dropdown-text">Romanian</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../sv/index.html">
+ <span class="dropdown-text">Swedish</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../de/index.html">
+ <span class="dropdown-text">German</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#ready-to-build-your-digital-infrastructure" id="toc-ready-to-build-your-digital-infrastructure" class="nav-link active" data-scroll-target="#ready-to-build-your-digital-infrastructure"><span class="text-white">Ready to build your digital infrastructure?</span></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Digital Infrastructure</h1>
+<p class="subtitle lead">Open-Source, UNIX &amp; Apple infrastructure for businesses of all sizes</p>
+</div>
+
+<div>
+  <div class="description">
+    Production-grade open-source, Linux, BSD, and Apple Business infrastructure for SMBs. NixOS, OpenBSD, FreeBSD, Nextcloud, and zero-touch Apple device deployment.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="../">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Digital Infrastructure</li>
+  </ol>
+</nav>
+
+<div class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8 offset-md-2 text-center">
+        <h1><span class="text-white">Digital</span> <span class="text-green">Infrastructure</span></h1>
+        <p>Open-Source, UNIX &amp; Apple platforms tailored for SMBs across every industry</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .text-white { color: white !important; }
+</style>
+<div class="container page-section">
+<section id="infrastructure-that-works-for-your-business" class="level2">
+<h2 class="anchored" data-anchor-id="infrastructure-that-works-for-your-business">Infrastructure That Works for Your Business</h2>
+<p>We design, deploy, and manage production-grade digital infrastructure built on open-source software, UNIX operating systems, and Apple platforms. Our solutions are tailored for small and medium businesses in any activity domain – from legal offices and clinics to manufacturing, retail, logistics, and creative studios.</p>
+<div class="row mt-4">
+<div class="col-md-4">
+<div class="card mb-4 h-100">
+<section id="open-source-stack" class="level3 card-body">
+<h3 class="anchored" data-anchor-id="open-source-stack"><i class="bi bi-code-square text-success"></i> Open-Source Stack</h3>
+<p>Production-ready open-source tools that replace expensive proprietary software without sacrificing functionality.</p>
+<p><span class="platform-badge badge-opensource">Self-Hosted</span> <span class="platform-badge badge-opensource">No Vendor Lock-in</span></p>
+<section id="includes" class="level4">
+<h4 class="anchored" data-anchor-id="includes">Includes:</h4>
+<ul>
+<li>Productivity &amp; collaboration suites</li>
+<li>Communication &amp; messaging platforms</li>
+<li>Identity &amp; access management</li>
+<li>Monitoring &amp; observability</li>
+<li>DevOps &amp; version control</li>
+</ul>
+<p><a href="#open-source" class="btn btn-outline-primary mt-2">Learn More</a></p>
+</section>
+</section>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card mb-4 h-100">
+<section id="unix-systems" class="level3 card-body">
+<h3 class="anchored" data-anchor-id="unix-systems"><i class="bi bi-terminal text-warning"></i> UNIX Systems</h3>
+<p>Enterprise-grade BSD and Linux infrastructure for servers, firewalls, storage, and networking.</p>
+<p><span class="platform-badge badge-linux">Linux</span> <span class="platform-badge badge-bsd">BSD</span> <span class="platform-badge badge-linux">NixOS</span></p>
+<section id="includes-1" class="level4">
+<h4 class="anchored" data-anchor-id="includes-1">Includes:</h4>
+<ul>
+<li>Server deployment &amp; hardening</li>
+<li>Firewall &amp; network security</li>
+<li>Storage &amp; backup systems</li>
+<li>Declarative infrastructure</li>
+<li>Hybrid environment bridging</li>
+</ul>
+<p><a href="#unix" class="btn btn-outline-primary mt-2">Learn More</a></p>
+</section>
+</section>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card mb-4 h-100">
+<section id="apple-infrastructure" class="level3 card-body">
+<h3 class="anchored" data-anchor-id="apple-infrastructure"><i class="bi bi-apple text-secondary"></i> Apple Infrastructure</h3>
+<p>Complete Apple ecosystem management with the new Apple Business platform and macOS fleet deployment.</p>
+<p><span class="platform-badge badge-apple">macOS</span> <span class="platform-badge badge-apple">iOS/iPadOS</span> <span class="platform-badge badge-free">Free MDM</span></p>
+<section id="includes-2" class="level4">
+<h4 class="anchored" data-anchor-id="includes-2">Includes:</h4>
+<ul>
+<li>Apple Business setup &amp; management</li>
+<li>Zero-touch device deployment</li>
+<li>Business email, calendar &amp; directory</li>
+<li>Brand management on Apple Maps</li>
+<li>AppleCare+ for Business</li>
+</ul>
+<p><a href="#apple" class="btn btn-outline-primary mt-2">Learn More</a></p>
+</section>
+</section>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="open-source" class="level2">
+<h2 class="anchored" data-anchor-id="open-source">Open-Source Stack for Business</h2>
+<p>Replace expensive proprietary licenses with battle-tested open-source alternatives. We handle the deployment, configuration, security hardening, and ongoing maintenance so your team can focus on their work.</p>
+<div class="row mt-4">
+  <div class="col-lg-4 col-md-6">
+    <div class="feature-card text-center mb-4">
+      <div class="feature-card-icon">
+        <i class="bi bi-file-earmark-richtext"></i>
+      </div>
+      <h3 class="anchored">Productivity &amp; Collaboration</h3>
+      <p>Full office suite, cloud storage, and real-time document collaboration for your entire team.</p>
+      <small class="text-muted">LibreOffice | Nextcloud | Collabora Online | CryptPad | OnlyOffice</small>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="feature-card text-center mb-4">
+      <div class="feature-card-icon">
+        <i class="bi bi-chat-dots"></i>
+      </div>
+      <h3 class="anchored">Communication</h3>
+      <p>Secure messaging, video conferencing, and team channels with full data sovereignty.</p>
+      <small class="text-muted">Matrix/Element | Mattermost | Jitsi Meet | Rocket.Chat</small>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="feature-card text-center mb-4">
+      <div class="feature-card-icon">
+        <i class="bi bi-person-badge"></i>
+      </div>
+      <h3 class="anchored">Identity &amp; Access</h3>
+      <p>Single sign-on, directory services, and multi-factor authentication across all your systems.</p>
+      <small class="text-muted">Keycloak | OpenLDAP | FreeIPA | Authelia</small>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="feature-card text-center mb-4">
+      <div class="feature-card-icon">
+        <i class="bi bi-graph-up"></i>
+      </div>
+      <h3 class="anchored">Monitoring &amp; Observability</h3>
+      <p>Real-time dashboards, alerting, and uptime monitoring for your entire infrastructure.</p>
+      <small class="text-muted">Prometheus | Grafana | Uptime Kuma | Zabbix | Loki</small>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="feature-card text-center mb-4">
+      <div class="feature-card-icon">
+        <i class="bi bi-git"></i>
+      </div>
+      <h3 class="anchored">DevOps &amp; Version Control</h3>
+      <p>Self-hosted code repositories, CI/CD pipelines, and container orchestration.</p>
+      <small class="text-muted">Gitea/Forgejo | Woodpecker CI | Docker | Podman</small>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="feature-card text-center mb-4">
+      <div class="feature-card-icon">
+        <i class="bi bi-database"></i>
+      </div>
+      <h3 class="anchored">Databases &amp; Storage</h3>
+      <p>Reliable data storage, automated backups, and high-availability database clusters.</p>
+      <small class="text-muted">PostgreSQL | MariaDB | Redis | MinIO | Restic</small>
+    </div>
+  </div>
+</div>
+<hr>
+</section>
+<section id="unix" class="level2">
+<h2 class="anchored" data-anchor-id="unix">UNIX Infrastructure</h2>
+<p>We build and manage servers, firewalls, and network appliances on proven UNIX operating systems. Whether you need a hardened OpenBSD firewall, a NixOS declarative fleet, or a traditional Linux server stack, we deliver infrastructure that is secure, reproducible, and maintainable.</p>
+<section id="linux-distributions" class="level3">
+<h3 class="anchored" data-anchor-id="linux-distributions">Linux Distributions</h3>
+<div class="row mt-4">
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-warning text-dark">
+        <h4 class="mb-0 anchored"><i class="bi bi-snow me-2"></i>NixOS</h4>
+      </div>
+      <div class="card-body">
+        <p>Declarative, reproducible infrastructure. Define your entire system as code and deploy identical configurations across any number of machines.</p>
+        <ul class="mb-0">
+          <li>Immutable system configuration</li>
+          <li>Atomic upgrades and rollbacks</li>
+          <li>Reproducible builds across environments</li>
+          <li>Flake-based multi-machine deployments</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-warning text-dark">
+        <h4 class="mb-0 anchored"><i class="bi bi-ubuntu me-2"></i>Debian/Ubuntu</h4>
+      </div>
+      <div class="card-body">
+        <p>The most widely supported Linux family. Ideal for application servers, web hosting, and workloads with broad software compatibility.</p>
+        <ul class="mb-0">
+          <li>LTS releases with 5+ years of support</li>
+          <li>Massive package ecosystem</li>
+          <li>Unattended security updates</li>
+          <li>Proven in production at any scale</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-warning text-dark">
+        <h4 class="mb-0 anchored"><i class="bi bi-building me-2"></i>RHEL/AlmaLinux</h4>
+      </div>
+      <div class="card-body">
+        <p>Enterprise-grade stability for workloads that require vendor certification, compliance mandates, or long lifecycle support.</p>
+        <ul class="mb-0">
+          <li>10-year lifecycle support</li>
+          <li>SELinux mandatory access control</li>
+          <li>FIPS and Common Criteria certified</li>
+          <li>Vendor-certified application stacks</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section id="bsd-systems" class="level3">
+<h3 class="anchored" data-anchor-id="bsd-systems">BSD Systems</h3>
+<div class="row mt-4">
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-danger text-white">
+        <h4 class="mb-0 anchored"><i class="bi bi-shield-lock me-2"></i>OpenBSD</h4>
+      </div>
+      <div class="card-body">
+        <p>The most secure general-purpose operating system. Ideal for firewalls, VPN gateways, and security-critical network appliances.</p>
+        <ul class="mb-0">
+          <li>pf packet filter (industry-standard firewall)</li>
+          <li>Secure by default philosophy</li>
+          <li>Built-in VPN (WireGuard, IKEv2)</li>
+          <li>Minimal attack surface</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-danger text-white">
+        <h4 class="mb-0 anchored"><i class="bi bi-hdd-stack me-2"></i>FreeBSD</h4>
+      </div>
+      <div class="card-body">
+        <p>High-performance storage and networking. The foundation of Netflix CDN, WhatsApp, and Sony PlayStation Network.</p>
+        <ul class="mb-0">
+          <li>ZFS enterprise filesystem</li>
+          <li>Jails containerization</li>
+          <li>bhyve hypervisor</li>
+          <li>Advanced networking (VNET, CARP)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-danger text-white">
+        <h4 class="mb-0 anchored"><i class="bi bi-cpu me-2"></i>NetBSD</h4>
+      </div>
+      <div class="card-body">
+        <p>Runs on virtually any hardware. Perfect for embedded systems, IoT gateways, and legacy hardware repurposing.</p>
+        <ul class="mb-0">
+          <li>Supports 60+ hardware platforms</li>
+          <li>Lightweight and efficient</li>
+          <li>pkgsrc cross-platform packages</li>
+          <li>Ideal for edge and IoT deployments</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section id="hybrid-environment-integration" class="level3">
+<h3 class="anchored" data-anchor-id="hybrid-environment-integration">Hybrid Environment Integration</h3>
+<div class="row mt-4">
+  <div class="col-md-12">
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-3 text-center">
+            <div class="process-step">
+              <div class="process-icon">
+                <i class="bi bi-people fs-1 text-primary"></i>
+              </div>
+              <h5 class="anchored">Directory Bridging</h5>
+              <p>Samba/AD integration connecting UNIX systems with existing Windows environments</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 text-center">
+            <div class="process-step">
+              <div class="process-icon">
+                <i class="bi bi-key fs-1 text-primary"></i>
+              </div>
+              <h5 class="anchored">Cross-Platform SSO</h5>
+              <p>Single identity across Linux, BSD, macOS, and Windows systems</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 text-center">
+            <div class="process-step">
+              <div class="process-icon">
+                <i class="bi bi-share fs-1 text-primary"></i>
+              </div>
+              <h5 class="anchored">File Sharing</h5>
+              <p>Unified file access across all platforms via NFS, SMB, and WebDAV</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 text-center">
+            <div class="process-step">
+              <div class="process-icon">
+                <i class="bi bi-printer fs-1 text-primary"></i>
+              </div>
+              <h5 class="anchored">Print &amp; Peripherals</h5>
+              <p>CUPS-based print management and peripheral sharing across mixed environments</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+</section>
+</section>
+<section id="apple" class="level2">
+<h2 class="anchored" data-anchor-id="apple">Apple Infrastructure</h2>
+<p>We are early adopters and deployment partners for the new <strong>Apple Business</strong> platform, launching April 14, 2026. Apple Business replaces Apple Business Manager, Apple Business Essentials, and Apple Business Connect into a single, unified platform – and the base service is <strong>free</strong>.</p>
+<div class="apple-business-highlight">
+  <div class="row align-items-center">
+    <div class="col-md-8">
+      <h3 class="mb-2 anchored"><i class="bi bi-apple me-2"></i>Apple Business <span class="platform-badge badge-free">Free Platform</span></h3>
+      <p class="mb-1">A new all-in-one platform for businesses of all sizes. Manage people and devices, reach customers, equip your team with essential tools, and get support from Apple experts.</p>
+      <p class="mb-0 text-muted"><small>Available April 14, 2026 in 200+ countries and regions</small></p>
+    </div>
+    <div class="col-md-4 text-center">
+      <a href="https://business.apple.com/preview" target="_blank" class="btn btn-outline-secondary btn-lg">
+        <i class="bi bi-box-arrow-up-right me-2"></i>Apple Business Preview
+      </a>
+    </div>
+  </div>
+</div>
+<section id="device-management-deployment" class="level3">
+<h3 class="anchored" data-anchor-id="device-management-deployment">Device Management &amp; Deployment</h3>
+<div class="row mt-4">
+  <div class="col-lg-4 col-md-6">
+    <div class="feature-card text-center mb-4">
+      <div class="feature-card-icon">
+        <i class="bi bi-phone"></i>
+      </div>
+      <h3 class="anchored">Built-in MDM</h3>
+      <p>Comprehensive mobile device management with full organizational visibility. No third-party MDM license required.</p>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="feature-card text-center mb-4">
+      <div class="feature-card-icon">
+        <i class="bi bi-layers"></i>
+      </div>
+      <h3 class="anchored">Blueprints</h3>
+      <p>Preconfigured device settings for zero-touch deployment. Employees unbox and start working immediately.</p>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="feature-card text-center mb-4">
+      <div class="feature-card-icon">
+        <i class="bi bi-shield-lock"></i>
+      </div>
+      <h3 class="anchored">Managed Apple Accounts</h3>
+      <p>Cryptographic separation between work and personal data. Full privacy for employees, full control for IT.</p>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="feature-card text-center mb-4">
+      <div class="feature-card-icon">
+        <i class="bi bi-people"></i>
+      </div>
+      <h3 class="anchored">Team Management</h3>
+      <p>Group employees by function or team. Assign apps, roles, and permissions at scale.</p>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="feature-card text-center mb-4">
+      <div class="feature-card-icon">
+        <i class="bi bi-bag-check"></i>
+      </div>
+      <h3 class="anchored">App Distribution</h3>
+      <p>Deploy business apps from the App Store to any number of devices -- from 10 to 10,000.</p>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="feature-card text-center mb-4">
+      <div class="feature-card-icon">
+        <i class="bi bi-code-slash"></i>
+      </div>
+      <h3 class="anchored">Admin API</h3>
+      <p>Programmatic device management for large-scale deployments and custom automation workflows.</p>
+    </div>
+  </div>
+</div>
+</section>
+<section id="communication-collaboration-tools" class="level3">
+<h3 class="anchored" data-anchor-id="communication-collaboration-tools">Communication &amp; Collaboration Tools</h3>
+<div class="row mt-4">
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-secondary text-white">
+        <h4 class="mb-0 anchored">Business Email &amp; Calendar</h4>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li><strong>Custom Domain Email:</strong> Professional email on your own domain (bring existing or purchase new)</li>
+          <li><strong>Calendar Delegation:</strong> Shared calendars and scheduling tools for teams</li>
+          <li><strong>Company Directory:</strong> Built-in directory with personalized contact cards for every employee</li>
+          <li><strong>iCloud Storage:</strong> Automatic backup and file synchronization (from $0.99/user/month)</li>
+        </ul>
+        <p class="text-muted mb-0"><small>Requires iOS 26, iPadOS 26, or macOS 26</small></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-secondary text-white">
+        <h4 class="mb-0 anchored">Brand &amp; Customer Discovery</h4>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li><strong>Brand Profiles:</strong> Manage your brand across Apple Maps, Wallet, and Mail</li>
+          <li><strong>Rich Place Cards:</strong> Photos, business hours, location details on Apple Maps</li>
+          <li><strong>Location Insights:</strong> Analytics on how customers discover your business</li>
+          <li><strong>Custom Actions:</strong> Order, reserve, or book directly from Apple Maps to your website</li>
+          <li><strong>Tap to Pay:</strong> Accept payments on iPhone with branded payment screens</li>
+          <li><strong>Ads on Apple Maps:</strong> Promoted placement in search results and Suggested Places (U.S./Canada, summer 2026)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section id="apple-business-pricing" class="level3">
+<h3 class="anchored">Apple Business Pricing</h3>
+<div class="row mt-4">
+  <div class="col-md-4">
+    <div class="card mb-4 text-center">
+      <div class="card-header bg-success text-white">
+        <h4 class="mb-0 anchored">Base Platform</h4>
+      </div>
+      <div class="card-body">
+        <h2 class="text-success anchored" data-anchor-id="apple-business-pricing">Free</h2>
+        <p>MDM, Blueprints, Managed Accounts, Brand Management, App Distribution, Admin API</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card mb-4 text-center">
+      <div class="card-header bg-primary text-white">
+        <h4 class="mb-0 anchored">iCloud Storage</h4>
+      </div>
+      <div class="card-body">
+        <h2 class="text-primary anchored">$0.99+</h2>
+        <p>Per user/month. Up to 2TB per user for backup, file sync, and collaboration.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card mb-4 text-center">
+      <div class="card-header bg-warning text-dark">
+        <h4 class="mb-0 anchored">AppleCare+ for Business</h4>
+      </div>
+      <div class="card-body">
+        <h2 class="text-warning anchored">$6.99-$13.99</h2>
+        <p>Per device/month. Expert technical support and hardware repair coverage.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section id="migration-from-legacy-apple-services" class="level3">
+<h3 class="anchored" data-anchor-id="migration-from-legacy-apple-services">Migration from Legacy Apple Services</h3>
+<p>If your business currently uses Apple Business Manager, Apple Business Essentials, or Apple Business Connect, all three are being discontinued on April 14, 2026. We handle the complete migration:</p>
+<div class="row mt-4">
+  <div class="col-md-12">
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-marker bg-success"></div>
+        <div class="timeline-content">
+          <h3 class="anchored">Audit Existing Setup</h3>
+          <p>Review your current Apple Business Manager/Essentials configuration, enrolled devices, and managed Apple IDs.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker bg-success"></div>
+        <div class="timeline-content">
+          <h3 class="anchored">Plan Migration</h3>
+          <p>Map existing device groups, app assignments, and policies to Apple Business Blueprints and team structures.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker bg-success"></div>
+        <div class="timeline-content">
+          <h3 class="anchored">Execute Transition</h3>
+          <p>Migrate to the unified Apple Business platform. Business Connect data migrates automatically; device management requires re-enrollment planning.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker bg-success"></div>
+        <div class="timeline-content">
+          <h3 class="anchored">Verify &amp; Optimize</h3>
+          <p>Confirm all devices, accounts, and brand profiles are operational. Optimize Blueprints and configure new features (email, calendar, directory).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+</section>
+</section>
+<section id="packages" class="level2">
+<h2 class="anchored" data-anchor-id="packages">SMB Packages</h2>
+<p>We offer tailored packages that combine Open-Source, UNIX, and Apple infrastructure to match your business size and needs. Every package is customizable to your specific industry requirements.</p>
+<div class="row mt-5">
+  <div class="col-md-4">
+    <div class="card pricing-card mb-4 h-100">
+      <div class="card-header bg-primary text-white text-center">
+        <h3 class="mb-0 anchored">Starter</h3>
+        <small>1-10 employees</small>
+      </div>
+      <div class="card-body">
+        <h4 class="text-center mb-4 anchored">For small teams getting started</h4>
+        <ul>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Apple Business setup &amp; Blueprints</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>1 Linux server (Debian/Ubuntu)</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Nextcloud (files, contacts, calendar)</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Business email on custom domain</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Basic firewall (OpenBSD pf or UFW)</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Automated backups (Restic)</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Uptime monitoring</li>
+        </ul>
+        <div class="text-center mt-auto">
+          <a href="https://cal.com/chenist" target="_blank" class="btn btn-outline-primary w-100">Book Consultation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card pricing-card pricing-featured mb-4 h-100">
+      <div class="card-header text-white text-center">
+        <h3 class="mb-0 anchored">Growth</h3>
+        <small>11-50 employees</small>
+      </div>
+      <div class="card-body">
+        <h4 class="text-center mb-4 anchored">For scaling businesses</h4>
+        <ul>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Everything in Starter, plus:</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Full Apple MDM with team grouping</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>OpenBSD dedicated firewall/VPN</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Keycloak SSO across all systems</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Matrix/Element team messaging</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Collabora Online (document editing)</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Prometheus + Grafana monitoring</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Samba/AD bridging (if needed)</li>
+        </ul>
+        <div class="text-center mt-auto">
+          <a href="https://cal.com/chenist" target="_blank" class="btn btn-success w-100">Book Consultation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card pricing-card mb-4 h-100">
+      <div class="card-header bg-warning text-dark text-center">
+        <h3 class="mb-0 anchored">Enterprise</h3>
+        <small>50+ employees</small>
+      </div>
+      <div class="card-body">
+        <h4 class="text-center mb-4 anchored">For complex multi-site operations</h4>
+        <ul>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Everything in Growth, plus:</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Apple Business Admin API integration</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>NixOS declarative multi-server fleet</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>FreeBSD ZFS storage cluster</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>High-availability configurations</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Multi-site VPN mesh</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Compliance baselines (NIS2, GDPR)</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>24/7 monitoring &amp; incident response</li>
+        </ul>
+        <div class="text-center mt-auto">
+          <a href="https://cal.com/chenist" target="_blank" class="btn btn-outline-warning w-100">Book Consultation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section id="industries-we-serve" class="level2">
+<h2 class="anchored" data-anchor-id="industries-we-serve">Industries We Serve</h2>
+<p>Our digital infrastructure solutions are designed for <strong>any activity domain</strong>. We have experience across:</p>
+<div class="row mt-4">
+  <div class="col-md-3 col-6">
+    <div class="text-center mb-4">
+      <i class="bi bi-building fs-1 text-primary"></i>
+      <h5 class="mt-2 anchored">Legal &amp; Consulting</h5>
+    </div>
+  </div>
+  <div class="col-md-3 col-6">
+    <div class="text-center mb-4">
+      <i class="bi bi-heart-pulse fs-1 text-primary"></i>
+      <h5 class="mt-2 anchored">Healthcare &amp; Clinics</h5>
+    </div>
+  </div>
+  <div class="col-md-3 col-6">
+    <div class="text-center mb-4">
+      <i class="bi bi-gear fs-1 text-primary"></i>
+      <h5 class="mt-2 anchored">Manufacturing</h5>
+    </div>
+  </div>
+  <div class="col-md-3 col-6">
+    <div class="text-center mb-4">
+      <i class="bi bi-shop fs-1 text-primary"></i>
+      <h5 class="mt-2 anchored">Retail &amp; Hospitality</h5>
+    </div>
+  </div>
+  <div class="col-md-3 col-6">
+    <div class="text-center mb-4">
+      <i class="bi bi-truck fs-1 text-primary"></i>
+      <h5 class="mt-2 anchored">Logistics &amp; Transport</h5>
+    </div>
+  </div>
+  <div class="col-md-3 col-6">
+    <div class="text-center mb-4">
+      <i class="bi bi-palette fs-1 text-primary"></i>
+      <h5 class="mt-2 anchored">Creative &amp; Media</h5>
+    </div>
+  </div>
+  <div class="col-md-3 col-6">
+    <div class="text-center mb-4">
+      <i class="bi bi-mortarboard fs-1 text-primary"></i>
+      <h5 class="mt-2 anchored">Education</h5>
+    </div>
+  </div>
+  <div class="col-md-3 col-6">
+    <div class="text-center mb-4">
+      <i class="bi bi-bank fs-1 text-primary"></i>
+      <h5 class="mt-2 anchored">Finance &amp; Insurance</h5>
+    </div>
+  </div>
+</div>
+</section>
+<section id="why-choose-chen.ist-for-digital-infrastructure" class="level2">
+<h2 class="anchored" data-anchor-id="why-choose-chen.ist-for-digital-infrastructure">Why Choose chen.ist for Digital Infrastructure</h2>
+<div class="row mt-4">
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0 anchored">Our Expertise</h3>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li><strong>UNIX Veterans:</strong> Deep expertise in BSD, Linux, and macOS administration spanning decades</li>
+          <li><strong>Open-Source Contributors:</strong> We contribute to the tools we deploy -- not just consume them</li>
+          <li><strong>Apple Business Early Adopters:</strong> Ready to deploy from day one (April 14, 2026)</li>
+          <li><strong>Security-First Mindset:</strong> Every deployment is hardened by default, not as an afterthought</li>
+          <li><strong>Cross-Platform Fluency:</strong> Seamless integration across UNIX, Apple, and Windows environments</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0 anchored">Our Approach</h3>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li><strong>No Vendor Lock-in:</strong> Open-source and standard protocols ensure you always own your data and can switch providers</li>
+          <li><strong>Right-Sized Solutions:</strong> We match infrastructure complexity to your actual business needs -- no over-engineering</li>
+          <li><strong>Transparent Pricing:</strong> You pay for our expertise, not for software licenses</li>
+          <li><strong>Knowledge Transfer:</strong> We document everything and train your team to be self-sufficient</li>
+          <li><strong>Long-Term Partnership:</strong> Ongoing support, monitoring, and evolution as your business grows</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+</div>
+<div class="cta-section">
+<section id="ready-to-build-your-digital-infrastructure" class="level2 container text-center">
+<h2 class="anchored" data-anchor-id="ready-to-build-your-digital-infrastructure"><span class="text-white">Ready to build your digital infrastructure?</span></h2>
+<p class="mb-4">Book a free consultation to discuss your business needs and get a tailored infrastructure proposal.</p>
+<p><a href="https://cal.com/chenist" class="cta-button" target="_blank">Book a Consultation</a></p>
+</section>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/chen\.ist");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+
+</div>   
+    <div class="nav-footer-center">
+
+</div>
+    <div class="nav-footer-right">
+
+</div>
+  </div>
+</footer>
+<footer class="footer mt-5 py-3 cybersecurity-footer">
+    <div class="container">
+        <div class="row mb-3">
+            <!-- Company Logo and Brief -->
+            <div class="col-md-4 mb-2">
+                <div class="d-flex align-items-center">
+                    <h4 class="footer-logo mb-0 me-2">chen<span class="text-accent">.ist</span></h4>
+                    <div class="secure-badge ms-2">
+                        <i class="bi bi-shield-lock-fill"></i> Secure
+                    </div>
+                </div>
+                <p class="footer-description small mt-2 mb-0">
+                    Enterprise cybersecurity solutions with zero-trust implementation and continuous monitoring.
+                </p>
+            </div>
+            
+            <!-- Tabs Navigation -->
+            <div class="col-md-8 mb-2">
+                <div class="footer-tabs">
+                    <ul class="nav nav-tabs footer-nav-tabs" id="footerTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="solutions-tab" data-bs-toggle="tab" data-bs-target="#solutions" type="button" role="tab">
+                                <i class="bi bi-shield-fill"></i> Solutions
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="academy-tab" data-bs-toggle="tab" data-bs-target="#academy" type="button" role="tab">
+                                <i class="bi bi-mortarboard-fill"></i> Academy
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab">
+                                <i class="bi bi-envelope-fill"></i> Contact
+                            </button>
+                        </li>
+                    </ul>
+                    
+                    <!-- Tab Content -->
+                    <div class="tab-content pt-2" id="footerTabContent">
+                        <!-- Solutions Tab -->
+                        <div class="tab-pane fade show active" id="solutions" role="tabpanel">
+                            <div class="row">
+                                <div class="col-6 col-md-3">
+                                    <a href="../digital/" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Digital Infrastructure
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../services/cybersecurity/" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Cybersecurity
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../services/nis2/" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> NIS2 Compliance
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../services/cloud/" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Cloud Services
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Academy Tab -->
+                        <div class="tab-pane fade" id="academy" role="tabpanel">
+                            <div class="row">
+                                <div class="col-6 col-md-3">
+                                    <a href="../academy/courses.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Courses
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../academy/events.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Events
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../academy/webinars.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Webinars
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <a href="../academy/computerclub.html" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Computer Club
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-3 mt-2">
+                                    <a href="../academy/programs" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Explore Academy Programs
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Contact Tab -->
+                        <div class="tab-pane fade" id="contact" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-1">
+                                        <i class="bi bi-envelope-fill contact-icon"></i>
+                                        <a href="mailto:office@chen.ist" class="footer-link">office@chen.ist</a>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-shield-fill-check contact-icon"></i>
+                                        <span class="small">SOC Available 24/7</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-1">
+                                        <i class="bi bi-geo-alt-fill contact-icon"></i>
+                                        <span class="small">Stockholm | Craiova | Bucharest</span>
+                                    </div>
+                                    <div class="social-icons">
+                                        <a href="https://github.com/chenist" class="social-icon" aria-label="GitHub">
+                                            <i class="bi bi-github"></i>
+                                        </a>
+                                        <a href="https://linkedin.com/in/chenistsec" class="social-icon" aria-label="LinkedIn">
+                                            <i class="bi bi-linkedin"></i>
+                                        </a>
+                                        <a href="https://twitter.com/chenistsec" class="social-icon" aria-label="Twitter">
+                                            <i class="bi bi-twitter-x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-divider">
+            <div class="cyber-line"></div>
+        </div>
+        
+        <div class="row footer-bottom py-1">
+            <div class="col-md-6">
+                <div class="d-flex align-items-center">
+                    <div class="security-pulse"></div>
+                    <p class="mb-0 ms-2 copyright">
+                        © 2026 chen.ist <span class="d-none d-md-inline">| Secure. Vigilant. Resilient.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <div class="footer-bottom-links">
+                    <a href="../privacy.html">Privacy</a>
+                    <span class="separator">|</span>
+                    <a href="../terms.html">Terms</a>
+                    <span class="separator">|</span>
+                    <a href="../contact.html" class="btn-report-incident">
+                        <i class="bi bi-exclamation-triangle-fill"></i> Report Incident
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+.cybersecurity-footer {
+    background-color: #0f1923;
+    color: #e6e6e6;
+    border-top: 3px solid #18bc9c;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+/* Change accent colors for academy section */
+.academy-section .cybersecurity-footer {
+    border-top-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer::before {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #F5A623 20%, 
+        #F5A623 40%, 
+        transparent 50%,
+        transparent 60%,
+        #F5A623 80%,
+        transparent 100%
+    );
+}
+
+.academy-section .cybersecurity-footer .text-accent,
+.academy-section .cybersecurity-footer .contact-icon,
+.academy-section .cybersecurity-footer .footer-heading::after,
+.academy-section .cybersecurity-footer .social-icon:hover,
+.academy-section .cybersecurity-footer .footer-link:hover,
+.academy-section .cybersecurity-footer .contact-item a:hover,
+.academy-section .cybersecurity-footer .footer-bottom-links a:hover,
+.academy-section .cybersecurity-footer .nav-link.active {
+    color: #F5A623 !important;
+}
+
+.academy-section .cybersecurity-footer .secure-badge {
+    background-color: rgba(245, 166, 35, 0.15);
+    color: #F5A623;
+    border-left-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .social-icon:hover {
+    background-color: #F5A623;
+    color: #0f1923 !important;
+}
+
+.academy-section .cybersecurity-footer .cyber-line {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(245, 166, 35, 0.3) 10%, 
+        rgba(245, 166, 35, 0.5) 50%, 
+        rgba(245, 166, 35, 0.3) 90%, 
+        transparent 100%
+    );
+}
+
+.academy-section .cybersecurity-footer .cyber-line::before,
+.academy-section .cybersecurity-footer .cyber-line::after {
+    background-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .security-pulse {
+    background-color: #F5A623;
+}
+
+.academy-section .cybersecurity-footer .security-pulse::before {
+    background-color: rgba(245, 166, 35, 0.3);
+}
+
+.cybersecurity-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #18bc9c 20%, 
+        #18bc9c 40%, 
+        transparent 50%,
+        transparent 60%,
+        #18bc9c 80%,
+        transparent 100%
+    );
+    opacity: 0.4;
+}
+
+.cybersecurity-footer .footer-brand {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.cybersecurity-footer .footer-logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Source Code Pro', monospace;
+    color: white;
+}
+
+.cybersecurity-footer .text-accent {
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .secure-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(24, 188, 156, 0.15);
+    color: #18bc9c;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-left: 2px solid #18bc9c;
+}
+
+.cybersecurity-footer .footer-description {
+    color: #9ba6b2;
+    line-height: 1.4;
+}
+
+.cybersecurity-footer .footer-tabs {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.cybersecurity-footer .footer-nav-tabs {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cybersecurity-footer .nav-tabs .nav-link {
+    color: #9ba6b2;
+    border: none;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    background-color: transparent;
+}
+
+.cybersecurity-footer .nav-tabs .nav-link:hover {
+    color: #e6e6e6;
+    border: none;
+}
+
+.cybersecurity-footer .nav-tabs .nav-link.active {
+    color: #18bc9c;
+    background-color: rgba(24, 188, 156, 0.1);
+    border: none;
+}
+
+.cybersecurity-footer .tab-content {
+    min-height: 60px;
+}
+
+.cybersecurity-footer .footer-link {
+    color: #9ba6b2;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.cybersecurity-footer .footer-link:hover {
+    color: #18bc9c;
+    transform: translateX(3px);
+}
+
+.cybersecurity-footer .icon-small {
+    font-size: 0.75rem;
+    margin-right: 0.25rem;
+}
+
+.cybersecurity-footer .contact-icon {
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .social-icons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.cybersecurity-footer .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e6e6e6;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.cybersecurity-footer .social-icon:hover {
+    background-color: #18bc9c;
+    color: #0f1923;
+    transform: translateY(-2px);
+}
+
+.cybersecurity-footer .footer-divider {
+    position: relative;
+    height: 12px;
+    margin: 0.5rem 0;
+}
+
+.cybersecurity-footer .cyber-line {
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(24, 188, 156, 0.3) 10%, 
+        rgba(24, 188, 156, 0.5) 50%, 
+        rgba(24, 188, 156, 0.3) 90%, 
+        transparent 100%
+    );
+    position: relative;
+}
+
+.cybersecurity-footer .cyber-line::before,
+.cybersecurity-footer .cyber-line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 8px;
+    height: 1px;
+    background-color: #18bc9c;
+    animation: blink 2s infinite;
+}
+
+.cybersecurity-footer .cyber-line::before {
+    left: 25%;
+}
+
+.cybersecurity-footer .cyber-line::after {
+    right: 25%;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
+
+.cybersecurity-footer .security-pulse {
+    width: 8px;
+    height: 8px;
+    background-color: #18bc9c;
+    border-radius: 50%;
+    position: relative;
+}
+
+.cybersecurity-footer .security-pulse::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 50%;
+    background-color: rgba(24, 188, 156, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    70% { transform: scale(1.5); opacity: 0; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+.cybersecurity-footer .copyright {
+    color: #9ba6b2;
+    font-size: 0.8rem;
+}
+
+.cybersecurity-footer .footer-bottom-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.cybersecurity-footer .footer-bottom-links a {
+    color: #9ba6b2;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.2s ease;
+}
+
+.cybersecurity-footer .footer-bottom-links a:hover {
+    color: #18bc9c;
+}
+
+.cybersecurity-footer .separator {
+    margin: 0 0.5rem;
+    color: #4a5568;
+    font-size: 0.8rem;
+}
+
+.cybersecurity-footer .btn-report-incident {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(220, 53, 69, 0.15);
+    color: #dc3545 !important;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease !important;
+}
+
+.cybersecurity-footer .btn-report-incident:hover {
+    background-color: rgba(220, 53, 69, 0.3);
+}
+
+.cybersecurity-footer .btn-report-incident i {
+    margin-right: 0.3rem;
+}
+
+@media (max-width: 767px) {
+    .cybersecurity-footer .footer-bottom-links {
+        justify-content: flex-start;
+        margin-top: 0.5rem;
+    }
+    
+    .cybersecurity-footer .btn-report-incident {
+        margin-top: 0.5rem;
+        margin-left: 0;
+    }
+    
+    .cybersecurity-footer .separator:nth-of-type(2) {
+        display: none;
+    }
+}
+</style>
+
+<script>
+// Initialize Bootstrap tabs if not already initialized
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof bootstrap !== 'undefined') {
+        var tabElList = [].slice.call(document.querySelectorAll('#footerTabs .nav-link'));
+        tabElList.map(function(tabEl) {
+            return new bootstrap.Tab(tabEl);
+        });
+    }
+});
+</script>
+<!-- Cal.com floating button -->
+<script>
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", {origin:"https://cal.com"});
+  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Function to toggle dark/light mode
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-bs-theme') || 'light';
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-bs-theme', newTheme);
+      localStorage.setItem('quarto-color-scheme', newTheme);
+      
+      // Update icon if needed
+      const themeIcon = document.querySelector('.navbar-nav a[href="#"] i');
+      if (themeIcon) {
+        themeIcon.className = newTheme === 'light' ? 'bi bi-moon' : 'bi bi-sun';
+      }
+    }
+    
+    // Apply saved theme on load
+    const savedTheme = localStorage.getItem('quarto-color-scheme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      
+      // Update icon to match saved theme
+      const themeIcon = document.querySelector('.navbar-nav a[href="#"] i');
+      if (themeIcon && savedTheme === 'dark') {
+        themeIcon.className = 'bi bi-sun';
+      }
+    }
+    
+    // Set up toggle button
+    document.querySelectorAll('a[href="#"]').forEach(function(link) {
+      if (link.textContent.includes('Toggle Theme')) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          toggleTheme();
+        });
+      }
+    });
+    
+    // Enable Bootstrap tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      if (anchor.getAttribute('href') === '#') return;
+      
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 70,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

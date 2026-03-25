@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -33,18 +68,19 @@ ul.task-list li input[type="checkbox"] {
 <link href="./assets/images/favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-b5057f3398a202b36a08d66ee4de0ec1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-80dfc45d529253e437201112265bec58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-4a78832a495b0bfd9a529c032fe3f37b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-80dfc45d529253e437201112265bec58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -122,9 +158,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 
-<link rel="stylesheet" href="scss/styles.css">
-<link rel="stylesheet" href="scss/academy.scss">
-<link rel="stylesheet" href="scss/custom-hero.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/academy.scss">
+<link rel="stylesheet" href="assets/css/custom-hero.css">
 <meta property="og:title" content="chen.ist">
 <meta property="og:description" content="Innovative technology &amp; education">
 <meta property="og:site_name" content="chen.ist">
@@ -303,7 +339,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./assets/images/logo-light.svg" alt="" class="navbar-logo">
+    <img src="./assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
+    <img src="./assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -316,10 +353,37 @@ document.addEventListener('DOMContentLoaded', function() {
     <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./services.html"> 
-<span class="menu-text">Services</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-services" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Services</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-services">    
+        <li>
+    <a class="dropdown-item" href="./services/index.html">
+ <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./digital/index.html">
+ <span class="dropdown-text">Digital Infrastructure</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./services/nis2/index.html">
+ <span class="dropdown-text">NIS2 Compliance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./services/cybersecurity/index.html">
+ <span class="dropdown-text">Cybersecurity</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./services/cloud/index.html">
+ <span class="dropdown-text">Cloud Services</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./services/digital-resilience/index.html">
+ <span class="dropdown-text">Digital Resilience</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-academy" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Academy</span>
@@ -436,14 +500,32 @@ document.addEventListener('DOMContentLoaded', function() {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#setting-up-custom-domain-for-github-pages" id="toc-setting-up-custom-domain-for-github-pages" class="nav-link active" data-scroll-target="#setting-up-custom-domain-for-github-pages">Setting up Custom Domain for GitHub Pages</a>
+  <li><a href="#setting-up-custom-domain-for-github-pages-with-cloudflare" id="toc-setting-up-custom-domain-for-github-pages-with-cloudflare" class="nav-link active" data-scroll-target="#setting-up-custom-domain-for-github-pages-with-cloudflare">Setting up Custom Domain for GitHub Pages with Cloudflare</a>
   <ul class="collapse">
-  <li><a href="#option-1-apex-domain-setup-chen.ist" id="toc-option-1-apex-domain-setup-chen.ist" class="nav-link" data-scroll-target="#option-1-apex-domain-setup-chen.ist">Option 1: Apex Domain Setup (chen.ist)</a></li>
-  <li><a href="#option-2-www-subdomain-setup-www.chen.ist" id="toc-option-2-www-subdomain-setup-www.chen.ist" class="nav-link" data-scroll-target="#option-2-www-subdomain-setup-www.chen.ist">Option 2: www Subdomain Setup (www.chen.ist)</a></li>
-  <li><a href="#optional-set-up-both-apex-domain-and-www-subdomain" id="toc-optional-set-up-both-apex-domain-and-www-subdomain" class="nav-link" data-scroll-target="#optional-set-up-both-apex-domain-and-www-subdomain">Optional: Set up both apex domain and www subdomain</a></li>
+  <li><a href="#prerequisites-verify-domain-with-github" id="toc-prerequisites-verify-domain-with-github" class="nav-link" data-scroll-target="#prerequisites-verify-domain-with-github">Prerequisites: Verify Domain with GitHub</a>
+  <ul class="collapse">
+  <li><a href="#get-verification-code-from-github-organization" id="toc-get-verification-code-from-github-organization" class="nav-link" data-scroll-target="#get-verification-code-from-github-organization">Get Verification Code from GitHub Organization</a></li>
+  <li><a href="#add-verification-txt-record-to-cloudflare" id="toc-add-verification-txt-record-to-cloudflare" class="nav-link" data-scroll-target="#add-verification-txt-record-to-cloudflare">Add Verification TXT Record to Cloudflare</a></li>
+  </ul></li>
+  <li><a href="#cloudflare-dns-configuration" id="toc-cloudflare-dns-configuration" class="nav-link" data-scroll-target="#cloudflare-dns-configuration">Cloudflare DNS Configuration</a>
+  <ul class="collapse">
+  <li><a href="#step-1-configure-apex-domain-chen.ist" id="toc-step-1-configure-apex-domain-chen.ist" class="nav-link" data-scroll-target="#step-1-configure-apex-domain-chen.ist">Step 1: Configure Apex Domain (chen.ist)</a></li>
+  <li><a href="#step-2-configure-www-subdomain-www.chen.ist" id="toc-step-2-configure-www-subdomain-www.chen.ist" class="nav-link" data-scroll-target="#step-2-configure-www-subdomain-www.chen.ist">Step 2: Configure www Subdomain (www.chen.ist)</a></li>
+  </ul></li>
+  <li><a href="#how-to-configure-in-cloudflare" id="toc-how-to-configure-in-cloudflare" class="nav-link" data-scroll-target="#how-to-configure-in-cloudflare">How to Configure in Cloudflare</a></li>
+  <li><a href="#github-repository-configuration" id="toc-github-repository-configuration" class="nav-link" data-scroll-target="#github-repository-configuration">GitHub Repository Configuration</a>
+  <ul class="collapse">
+  <li><a href="#enable-custom-domain-in-github-pages" id="toc-enable-custom-domain-in-github-pages" class="nav-link" data-scroll-target="#enable-custom-domain-in-github-pages">Enable Custom Domain in GitHub Pages</a></li>
+  </ul></li>
+  <li><a href="#domain-behavior" id="toc-domain-behavior" class="nav-link" data-scroll-target="#domain-behavior">Domain Behavior</a></li>
   <li><a href="#verify-setup" id="toc-verify-setup" class="nav-link" data-scroll-target="#verify-setup">Verify Setup</a></li>
-  <li><a href="#github-repository-settings" id="toc-github-repository-settings" class="nav-link" data-scroll-target="#github-repository-settings">GitHub Repository Settings</a></li>
-  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
+  <li><a href="#timeline" id="toc-timeline" class="nav-link" data-scroll-target="#timeline">Timeline</a></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a>
+  <ul class="collapse">
+  <li><a href="#site-not-loading-after-dns-configuration" id="toc-site-not-loading-after-dns-configuration" class="nav-link" data-scroll-target="#site-not-loading-after-dns-configuration">Site not loading after DNS configuration</a></li>
+  <li><a href="#cloudflare-specific-issues" id="toc-cloudflare-specific-issues" class="nav-link" data-scroll-target="#cloudflare-specific-issues">Cloudflare-specific issues</a></li>
+  </ul></li>
+  <li><a href="#why-dns-only-mode" id="toc-why-dns-only-mode" class="nav-link" data-scroll-target="#why-dns-only-mode">Why DNS Only Mode?</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -455,47 +537,218 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-<section id="setting-up-custom-domain-for-github-pages" class="level1">
-<h1>Setting up Custom Domain for GitHub Pages</h1>
-<p>To set up your custom domain (chen.ist) with GitHub Pages, you need to configure the following DNS records with your domain registrar:</p>
-<section id="option-1-apex-domain-setup-chen.ist" class="level2">
-<h2 class="anchored" data-anchor-id="option-1-apex-domain-setup-chen.ist">Option 1: Apex Domain Setup (chen.ist)</h2>
-<p>Add these A records pointing to GitHub’s IP addresses:</p>
-<pre><code>A   @   185.199.108.153
-A   @   185.199.109.153
-A   @   185.199.110.153
-A   @   185.199.111.153</code></pre>
+<section id="setting-up-custom-domain-for-github-pages-with-cloudflare" class="level1">
+<h1>Setting up Custom Domain for GitHub Pages with Cloudflare</h1>
+<p>This guide explains how to configure chen.ist and www.chen.ist with Cloudflare DNS for your GitHub Pages site.</p>
+<section id="prerequisites-verify-domain-with-github" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites-verify-domain-with-github">Prerequisites: Verify Domain with GitHub</h2>
+<p><strong>IMPORTANT:</strong> Since the repository is owned by the <code>chenist-co</code> <strong>organization</strong>, you must verify the domain at the organization level, not your personal account.</p>
+<section id="get-verification-code-from-github-organization" class="level3">
+<h3 class="anchored" data-anchor-id="get-verification-code-from-github-organization">Get Verification Code from GitHub Organization</h3>
+<ol type="1">
+<li><p>Go to your <strong>organization settings</strong> (not personal account settings):</p>
+<ul>
+<li>Visit: https://github.com/organizations/chenist-co/settings/pages</li>
+<li>Or: Click your profile → <strong>Your organizations</strong> → <strong>chenist-co</strong> → <strong>Settings</strong> → <strong>Pages</strong></li>
+</ul></li>
+<li><p>Scroll down to <strong>Verified domains</strong></p></li>
+<li><p>Click <strong>Add a domain</strong></p></li>
+<li><p>Enter <code>chen.ist</code> and click <strong>Add domain</strong></p></li>
+<li><p>GitHub will show you a TXT record like:</p>
+<pre><code>Name: _github-pages-challenge-chenist-co
+Value: 01e35f3149aaf97c2579a155192536</code></pre>
+<p><strong>Copy both the name and value</strong> - you’ll need them for Cloudflare</p></li>
+</ol>
 </section>
-<section id="option-2-www-subdomain-setup-www.chen.ist" class="level2">
-<h2 class="anchored" data-anchor-id="option-2-www-subdomain-setup-www.chen.ist">Option 2: www Subdomain Setup (www.chen.ist)</h2>
-<p>Add a CNAME record:</p>
-<pre><code>CNAME   www   chenist-co.github.io.</code></pre>
+<section id="add-verification-txt-record-to-cloudflare" class="level3">
+<h3 class="anchored" data-anchor-id="add-verification-txt-record-to-cloudflare">Add Verification TXT Record to Cloudflare</h3>
+<ol start="5" type="1">
+<li><p>Log in to Cloudflare → Select chen.ist → Go to <strong>DNS</strong> &gt; <strong>Records</strong></p></li>
+<li><p>Click <strong>Add record</strong> and enter:</p>
+<ul>
+<li><strong>Type:</strong> TXT</li>
+<li><strong>Name:</strong> <code>_github-pages-challenge-chenist-co</code> (or the exact subdomain GitHub provided)</li>
+<li><strong>Content:</strong> (paste the verification code from GitHub)</li>
+<li><strong>Proxy status:</strong> DNS only (gray cloud)</li>
+<li><strong>TTL:</strong> Auto</li>
+</ul></li>
+<li><p>Click <strong>Save</strong></p></li>
+<li><p>Go back to GitHub and click <strong>Verify</strong> (may take a few minutes for DNS to propagate)</p></li>
+<li><p>Once verified, you’ll see a green checkmark ✓</p></li>
+</ol>
+<p><strong>Note:</strong> Keep the TXT record in Cloudflare - don’t delete it after verification.</p>
 </section>
-<section id="optional-set-up-both-apex-domain-and-www-subdomain" class="level2">
-<h2 class="anchored" data-anchor-id="optional-set-up-both-apex-domain-and-www-subdomain">Optional: Set up both apex domain and www subdomain</h2>
-<p>If you want both chen.ist and www.chen.ist to work: 1. Configure the A records for the apex domain as shown in Option 1 2. Add the www CNAME record as shown in Option 2 3. In GitHub repository settings, set your custom domain to your preferred version (either chen.ist or www.chen.ist)</p>
+</section>
+<section id="cloudflare-dns-configuration" class="level2">
+<h2 class="anchored" data-anchor-id="cloudflare-dns-configuration">Cloudflare DNS Configuration</h2>
+<p><strong>IMPORTANT:</strong> For GitHub Pages to work properly with Cloudflare, you must disable proxying (use “DNS only” mode - gray cloud icon).</p>
+<section id="step-1-configure-apex-domain-chen.ist" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-configure-apex-domain-chen.ist">Step 1: Configure Apex Domain (chen.ist)</h3>
+<p>Add these A records in your Cloudflare DNS settings:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Name</th>
+<th>Content</th>
+<th>Proxy Status</th>
+<th>TTL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>@</td>
+<td>185.199.108.153</td>
+<td>DNS only (gray)</td>
+<td>Auto</td>
+</tr>
+<tr class="even">
+<td>A</td>
+<td>@</td>
+<td>185.199.109.153</td>
+<td>DNS only (gray)</td>
+<td>Auto</td>
+</tr>
+<tr class="odd">
+<td>A</td>
+<td>@</td>
+<td>185.199.110.153</td>
+<td>DNS only (gray)</td>
+<td>Auto</td>
+</tr>
+<tr class="even">
+<td>A</td>
+<td>@</td>
+<td>185.199.111.153</td>
+<td>DNS only (gray)</td>
+<td>Auto</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="step-2-configure-www-subdomain-www.chen.ist" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-configure-www-subdomain-www.chen.ist">Step 2: Configure www Subdomain (www.chen.ist)</h3>
+<p>Add this CNAME record:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Name</th>
+<th>Content</th>
+<th>Proxy Status</th>
+<th>TTL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CNAME</td>
+<td>www</td>
+<td>chenist-co.github.io</td>
+<td>DNS only (gray)</td>
+<td>Auto</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> The content should be <code>chenist-co.github.io</code> (without trailing dot in Cloudflare)</p>
+</section>
+</section>
+<section id="how-to-configure-in-cloudflare" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-configure-in-cloudflare">How to Configure in Cloudflare</h2>
+<ol type="1">
+<li>Log in to your Cloudflare dashboard</li>
+<li>Select your domain (chen.ist)</li>
+<li>Go to <strong>DNS</strong> &gt; <strong>Records</strong></li>
+<li>Click <strong>Add record</strong> for each entry above</li>
+<li><strong>CRITICAL:</strong> Click the orange cloud icon to make it gray (DNS only) for each record</li>
+<li>Save your changes</li>
+</ol>
+</section>
+<section id="github-repository-configuration" class="level2">
+<h2 class="anchored" data-anchor-id="github-repository-configuration">GitHub Repository Configuration</h2>
+<p>The repository is already configured with: - CNAME file containing “chen.ist” ✓ - Quarto config with site-url: https://chen.ist ✓</p>
+<section id="enable-custom-domain-in-github-pages" class="level3">
+<h3 class="anchored" data-anchor-id="enable-custom-domain-in-github-pages">Enable Custom Domain in GitHub Pages</h3>
+<p><strong>IMPORTANT:</strong> Only do this AFTER domain verification is complete (green checkmark in account settings).</p>
+<ol type="1">
+<li>Go to https://github.com/chenist-co/chenist-co.github.io</li>
+<li>Navigate to <strong>Settings</strong> &gt; <strong>Pages</strong></li>
+<li>Under <strong>Custom domain</strong>, enter: <code>chen.ist</code></li>
+<li>Click <strong>Save</strong></li>
+<li>GitHub will check DNS and show “DNS check successful” when ready</li>
+<li>Wait 24 hours, then enable <strong>Enforce HTTPS</strong> (once certificate is provisioned)</li>
+</ol>
+</section>
+</section>
+<section id="domain-behavior" class="level2">
+<h2 class="anchored" data-anchor-id="domain-behavior">Domain Behavior</h2>
+<p>With this configuration: - <strong>chen.ist</strong> → Your main site (apex domain) - <strong>www.chen.ist</strong> → Automatically redirects to chen.ist - Both domains will work and point to your GitHub Pages site</p>
 </section>
 <section id="verify-setup" class="level2">
 <h2 class="anchored" data-anchor-id="verify-setup">Verify Setup</h2>
-<ol type="1">
-<li><p>After configuring DNS, it may take up to 24 hours for changes to propagate</p></li>
-<li><p>You can verify your DNS configuration using:</p>
-<pre><code>dig chen.ist +noall +answer
-dig www.chen.ist +noall +answer</code></pre></li>
-</ol>
+<p>After configuring DNS in Cloudflare, verify using these commands:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check apex domain A records</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">dig</span> chen.ist +noall +answer</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check www subdomain CNAME</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">dig</span> www.chen.ist +noall +answer</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify both domains resolve</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-I</span> https://chen.ist</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-I</span> https://www.chen.ist</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Expected results: - chen.ist should show the 4 A records (185.199.108-111.153) - www.chen.ist should show CNAME to chenist-co.github.io</p>
 </section>
-<section id="github-repository-settings" class="level2">
-<h2 class="anchored" data-anchor-id="github-repository-settings">GitHub Repository Settings</h2>
-<ol type="1">
-<li>Go to your repository on GitHub</li>
-<li>Navigate to Settings &gt; Pages</li>
-<li>Under “Custom domain”, enter your domain (chen.ist)</li>
-<li>Check “Enforce HTTPS” after DNS propagation is complete (may take up to 24 hours)</li>
-</ol>
+<section id="timeline" class="level2">
+<h2 class="anchored" data-anchor-id="timeline">Timeline</h2>
+<ul>
+<li><strong>DNS propagation:</strong> 5 minutes to 48 hours (typically under 1 hour with Cloudflare)</li>
+<li><strong>HTTPS certificate:</strong> Available 24 hours after DNS propagation</li>
+<li><strong>Initial setup:</strong> Check back in 1 hour to verify the site is accessible</li>
+</ul>
 </section>
 <section id="troubleshooting" class="level2">
 <h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
-<p>If your site doesn’t work after DNS propagation: 1. Verify your DNS settings are correct 2. Make sure the CNAME file in your repository contains only “chen.ist” 3. Check that your custom domain is correctly set in GitHub Pages settings 4. Ensure your site is being published from the correct branch (gh-pages)</p>
+<section id="site-not-loading-after-dns-configuration" class="level3">
+<h3 class="anchored" data-anchor-id="site-not-loading-after-dns-configuration">Site not loading after DNS configuration</h3>
+<ol type="1">
+<li><p><strong>Verify DNS in Cloudflare:</strong></p>
+<ul>
+<li>Confirm all 4 A records are present for @ (apex)</li>
+<li>Confirm CNAME record exists for www</li>
+<li><strong>Ensure Proxy Status is “DNS only” (gray cloud)</strong> - this is critical!</li>
+</ul></li>
+<li><p><strong>Check GitHub Pages:</strong></p>
+<ul>
+<li>Go to repository Settings &gt; Pages</li>
+<li>Verify custom domain shows “chen.ist”</li>
+<li>Check for any warning messages</li>
+<li>Re-save the custom domain if needed</li>
+</ul></li>
+<li><p><strong>Clear DNS cache:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># On your local machine</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> dnsmasq <span class="at">--clear-cache</span>  <span class="co"># macOS/Linux</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">ipconfig</span> /flushdns          <span class="co"># Windows</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p><strong>HTTPS issues:</strong></p>
+<ul>
+<li>Don’t enable “Enforce HTTPS” until the certificate is provisioned</li>
+<li>Can take up to 24 hours after DNS is working</li>
+<li>You’ll see a checkmark in GitHub Pages settings when ready</li>
+</ul></li>
+</ol>
+</section>
+<section id="cloudflare-specific-issues" class="level3">
+<h3 class="anchored" data-anchor-id="cloudflare-specific-issues">Cloudflare-specific issues</h3>
+<ul>
+<li><strong>ERR_TOO_MANY_REDIRECTS:</strong> Proxy status is enabled (orange cloud) - change to DNS only (gray cloud)</li>
+<li><strong>SSL/TLS mode:</strong> Set to “Full” or “Flexible” in Cloudflare SSL/TLS settings</li>
+<li><strong>Always Use HTTPS:</strong> Can be enabled in Cloudflare SSL/TLS &gt; Edge Certificates after GitHub HTTPS is working</li>
+</ul>
+</section>
+</section>
+<section id="why-dns-only-mode" class="level2">
+<h2 class="anchored" data-anchor-id="why-dns-only-mode">Why DNS Only Mode?</h2>
+<p>GitHub Pages serves content directly and handles HTTPS certificates via Let’s Encrypt. When Cloudflare proxy is enabled: - Cloudflare can’t verify domain ownership for GitHub - Creates redirect loops - Prevents HTTPS certificate issuance</p>
+<p>By using “DNS only” mode, Cloudflare only manages DNS resolution, allowing GitHub Pages to work properly.</p>
 
 
 </section>
@@ -566,13 +819,14 @@ dig www.chen.ist +noall +answer</code></pre></li>
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -978,23 +1232,23 @@ dig www.chen.ist +noall +answer</code></pre></li>
                         <div class="tab-pane fade show active" id="solutions" role="tabpanel">
                             <div class="row">
                                 <div class="col-6 col-md-3">
-                                    <a href="./services.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Security Services
+                                    <a href="./digital/" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Digital Infrastructure
                                     </a>
                                 </div>
                                 <div class="col-6 col-md-3">
-                                    <a href="./services.html#consulting" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Consulting
+                                    <a href="./services/cybersecurity/" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Cybersecurity
                                     </a>
                                 </div>
                                 <div class="col-6 col-md-3">
-                                    <a href="./services.html#compliance" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Compliance
+                                    <a href="./services/nis2/" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> NIS2 Compliance
                                     </a>
                                 </div>
                                 <div class="col-6 col-md-3">
-                                    <a href="./services.html#incident-response" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Incident Response
+                                    <a href="./services/cloud/" class="footer-link">
+                                        <i class="bi bi-chevron-right icon-small"></i> Cloud Services
                                     </a>
                                 </div>
                             </div>
@@ -1077,7 +1331,7 @@ dig www.chen.ist +noall +answer</code></pre></li>
                 <div class="d-flex align-items-center">
                     <div class="security-pulse"></div>
                     <p class="mb-0 ms-2 copyright">
-                        © 2025 chen.ist <span class="d-none d-md-inline">| Secure. Vigilant. Resilient.</span>
+                        © 2026 chen.ist <span class="d-none d-md-inline">| Secure. Vigilant. Resilient.</span>
                     </p>
                 </div>
             </div>
@@ -1449,6 +1703,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+</script>
+<!-- Cal.com floating button -->
+<script>
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", {origin:"https://cal.com"});
+  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
