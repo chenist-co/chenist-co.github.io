@@ -11,7 +11,7 @@
 
 .m-s { padding: 7rem 0; }
 .m-bg { padding: 7rem 0; background: #f5f5f7; }
-[data-bs-theme="dark"] .m-bg { background: #161617; }
+[data-bs-theme="dark"] .m-bg { background-color: #161617 !important; }
 
 .m h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.035em; text-align: center; line-height: 1.1; margin-bottom: 0.5rem; }
 .m .sub { text-align: center; font-size: 1.1rem; color: var(--g); max-width: 480px; margin: 0 auto 5rem; }
@@ -166,14 +166,23 @@
 /* Prevent horizontal scroll on all pages */
 html, body { overflow-x: hidden; }
 
-/* Dark mode backgrounds — eliminate white areas */
-[data-bs-theme="dark"] .m { background: #111; }
-[data-bs-theme="dark"] .m-hero { background: #111; }
-[data-bs-theme="dark"] .m-s { background: #111; }
-[data-bs-theme="dark"] .m-cta { background: #111; }
-[data-bs-theme="dark"] .m-listing-hero { background: #111; }
-[data-bs-theme="dark"] .m-listing-intro { background: #111; }
-[data-bs-theme="dark"] main, [data-bs-theme="dark"] #quarto-content { background: #111; }
+/* Dark mode — eliminate ALL white backgrounds globally */
+[data-bs-theme="dark"] body,
+[data-bs-theme="dark"] main,
+[data-bs-theme="dark"] #quarto-content,
+[data-bs-theme="dark"] .quarto-container,
+[data-bs-theme="dark"] .page-columns,
+[data-bs-theme="dark"] .m,
+[data-bs-theme="dark"] .m-hero,
+[data-bs-theme="dark"] .m-s,
+[data-bs-theme="dark"] .m-cta,
+[data-bs-theme="dark"] .m-listing-hero,
+[data-bs-theme="dark"] .m-listing-intro,
+[data-bs-theme="dark"] .container,
+[data-bs-theme="dark"] .page-section,
+[data-bs-theme="dark"] .content {
+  background-color: #111 !important;
+}
 
 /* Responsive — Tablet */
 @media (max-width: 991px) {
