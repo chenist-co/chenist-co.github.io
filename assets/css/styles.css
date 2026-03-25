@@ -47,6 +47,15 @@ body.quarto-dark .cta-section {
 body.quarto-dark .m-bg {
   background-color: #1a1a1d !important;
 }
+
+/* Nuclear: force EVERY element to dark bg in dark mode */
+body.quarto-dark *:not(nav):not(nav *):not(footer):not(footer *):not(.m-bg):not(.gr):not(.m-lk):not(.m-b):not(.m-bo):not(.m-d):not(.m-badge):not(.hp-mq):not(.hp-mq *):not(.ev-btn):not(.ev-hero-tag):not(img):not(svg):not(a):not(i):not(span):not(code):not(pre):not(button):not(.dropdown-menu):not(.dropdown-menu *) {
+  background-color: #111 !important;
+}
+body.quarto-dark .m-bg,
+body.quarto-dark .m-bg * :not(a):not(i):not(span):not(img):not(code):not(pre) {
+  background-color: #1a1a1d !important;
+}
 html[data-bs-theme="dark"] main,
 html[data-bs-theme="dark"] main.content,
 html[data-bs-theme="dark"] #quarto-content,
