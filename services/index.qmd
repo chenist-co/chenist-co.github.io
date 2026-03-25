@@ -1,188 +1,134 @@
 ---
 title: "Our Services"
 description: "Comprehensive technology services: digital infrastructure, NIS2 compliance, cybersecurity, cloud, and digital resilience for modern organizations."
+page-layout: full
 from: markdown+raw_html
+format:
+  html:
+    toc: false
+    include-in-header:
+      text: |
+        <style>
+        .ap { --c: #81BD4A; --g: #86868b; font-family: 'Open Sans', -apple-system, system-ui, sans-serif; }
+        .ap-hero { padding: 12rem 0 8rem; text-align: center; }
+        .ap-hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 700; letter-spacing: -0.045em; line-height: 1.06; }
+        .ap-hero .gr { color: var(--c); }
+        .ap-hero p { font-size: 1.35rem; color: var(--g); max-width: 500px; margin: 1.5rem auto 0; line-height: 1.45; }
+        .ap-s { padding: 7rem 0; }
+        .ap-bg { padding: 7rem 0; background: #f5f5f7; }
+        [data-bs-theme="dark"] .ap-bg { background: #161617; }
+        .ap h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.035em; text-align: center; line-height: 1.1; margin-bottom: 0.5rem; }
+        .ap .sub { text-align: center; font-size: 1.1rem; color: var(--g); max-width: 480px; margin: 0 auto 5rem; }
+        .ap-t { text-align: center; padding: 0 0.75rem; }
+        .ap-t i { font-size: 1.75rem; color: var(--c); display: block; margin-bottom: 0.75rem; opacity: 0.85; }
+        .ap-t h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.35rem; letter-spacing: -0.01em; }
+        .ap-t p { font-size: 0.88rem; color: var(--g); line-height: 1.5; }
+        .ap-lk { color: var(--c); font-size: 1rem; text-decoration: none; }
+        .ap-lk:hover { text-decoration: underline; }
+        .ap-lk::after { content: " \203A"; font-weight: 300; }
+        .ap-r { display: flex; align-items: center; gap: 6rem; }
+        .ap-r.rv { flex-direction: row-reverse; }
+        .ap-ri { flex: 0 0 50%; }
+        .ap-ri img { width: 100%; border-radius: 28px; }
+        .ap-rt h2 { text-align: left; font-size: clamp(1.75rem, 3.5vw, 2.75rem); margin-bottom: 1rem; }
+        .ap-rt p { font-size: 1.05rem; color: var(--g); line-height: 1.65; }
+        .ap-rt .lk { margin-top: 1.75rem; }
+        .ap-n { display: flex; justify-content: center; gap: 6rem; flex-wrap: wrap; }
+        .ap-nn { font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 700; color: var(--c); line-height: 1; text-align: center; }
+        .ap-nl { font-size: 0.75rem; color: var(--g); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.35rem; text-align: center; }
+        .ap-cta { padding: 10rem 0; text-align: center; }
+        .ap-cta h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; }
+        .ap-cta p { font-size: 1.1rem; color: var(--g); max-width: 420px; margin: 0 auto 2.5rem; line-height: 1.5; }
+        .ap-b { display: inline-block; padding: 0.85rem 2.25rem; background: var(--c); color: #fff; border-radius: 980px; font-weight: 500; font-size: 1rem; text-decoration: none; transition: background 0.15s; }
+        .ap-b:hover { background: #6BA33A; color: #fff; text-decoration: none; }
+        .ap-sm { font-size: 0.82rem; color: var(--g); margin-top: 1.75rem; }
+        .ap-sm i { color: var(--c); }
+        .ap-d { width: 36px; height: 3px; background: var(--c); margin: 0 auto 3.5rem; border-radius: 2px; opacity: 0.6; }
+        @media (max-width: 767px) {
+          .ap-hero { padding: 7rem 0 5rem; }
+          .ap-r, .ap-r.rv { flex-direction: column; gap: 3rem; }
+          .ap-ri { flex: none; }
+          .ap-rt h2 { text-align: center; }
+          .ap-n { gap: 3rem; }
+          .ap-cta { padding: 6rem 0; }
+        }
+        </style>
 ---
 
 ```{=html}
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Services</li>
-  </ol>
-</nav>
+<div class="ap">
 
-<div class="hero-section">
+<div class="ap-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-8 offset-md-2 text-center">
-        <h1><span class="our-text">Our</span> <span class="text-green">Services</span></h1>
-        <p>Comprehensive technology solutions for modern organizations</p>
+    <h1>Our <span class="gr">Services</span></h1>
+    <p>Comprehensive technology solutions for organizations that value security, transparency, and open-source.</p>
+  </div>
+</div>
+
+<div class="ap-bg">
+  <div class="container">
+    <h2>Everything you need</h2>
+    <p class="sub">Five practices working together to keep your business running and secure.</p>
+    <div class="row g-5">
+      <div class="col-6 col-lg"><div class="ap-t"><i class="bi bi-terminal"></i><h3>Digital Infrastructure</h3><p>Open-source UNIX and Apple platforms built for modern businesses.</p><a href="/digital/" class="ap-lk">Learn more</a></div></div>
+      <div class="col-6 col-lg"><div class="ap-t"><i class="bi bi-shield-check"></i><h3>Security</h3><p>24/7 SOC monitoring, threat hunting, and incident response.</p><a href="/security/" class="ap-lk">Learn more</a></div></div>
+      <div class="col-6 col-lg"><div class="ap-t"><i class="bi bi-clipboard-check"></i><h3>NIS2 Compliance</h3><p>Gap analysis and compliance roadmaps for the EU directive.</p><a href="/services/nis2/" class="ap-lk">Learn more</a></div></div>
+      <div class="col-6 col-lg"><div class="ap-t"><i class="bi bi-cloud"></i><h3>Cloud</h3><p>Migration, DevOps, and multi-cloud infrastructure.</p><a href="/services/cloud/" class="ap-lk">Learn more</a></div></div>
+      <div class="col-6 col-lg"><div class="ap-t"><i class="bi bi-code-square"></i><h3>Digital Resilience</h3><p>Business continuity and disaster recovery frameworks.</p><a href="/services/digital-resilience/" class="ap-lk">Learn more</a></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="ap-s">
+  <div class="container">
+    <div class="ap-r">
+      <div class="ap-ri"><img src="/assets/images/stock/code-screen.jpg" alt="Code on screen"></div>
+      <div class="ap-rt">
+        <h2>Built on open-source.<br>Secured by default.</h2>
+        <p>Every tool we deploy can be audited. Every system is hardened from day one. We use battle-tested open-source software so you get full transparency without sacrificing security.</p>
+        <div class="lk"><a href="/security/" class="ap-lk">See our security approach</a></div>
       </div>
     </div>
   </div>
 </div>
 
-<style>
-  /* Ensure the text is white in both light and dark modes */
-  .our-text {
-    color: #323642 !important;
-  }
-</style>
-```
-
-::: {.container .page-section}
-
-## Comprehensive Technology Solutions
-
-At chen.ist, we offer a wide range of technology services designed to meet the needs of modern organizations. Our solutions are tailored to your specific requirements, ensuring you get exactly what you need to succeed.
-
-::: {.row .mt-5}
-::: {.col-md-4}
-::: {.feature-card .text-center}
-::: {.feature-card-icon}
-<i class="bi bi-terminal"></i>
-:::
-
-### [Digital Infrastructure](/digital/)
-
-Open-Source, UNIX (BSD, Linux) & Apple infrastructure setup for SMBs across every industry.
-
-<a href="/digital/" class="btn btn-outline-primary mt-2">Learn More</a>
-:::
-:::
-
-::: {.col-md-4}
-::: {.feature-card .text-center}
-::: {.feature-card-icon}
-<i class="bi bi-clipboard-check"></i>
-:::
-
-### [NIS2 Compliance](/services/nis2/)
-
-Expert NIS2 Directive compliance, CHENIST Team as a Service, and gap assessments for essential and important entities.
-
-<a href="/services/nis2/" class="btn btn-outline-primary mt-2">Learn More</a>
-:::
-:::
-
-::: {.col-md-4}
-::: {.feature-card .text-center}
-::: {.feature-card-icon}
-<i class="bi bi-shield-check"></i>
-:::
-
-### [Proactive Cybersecurity - Blue Team](/services/cybersecurity/)
-
-Defensive security operations that continuously monitor, identify, and mitigate threats before they impact your business.
-
-<a href="/services/cybersecurity/" class="btn btn-outline-primary mt-2">Learn More</a>
-:::
-:::
-
-::: {.col-md-4}
-::: {.feature-card .text-center}
-::: {.feature-card-icon}
-<i class="bi bi-cloud"></i>
-:::
-
-### [Cloud Services](/services/cloud/)
-
-Leverage the power of cloud computing for flexibility and scalability.
-
-<a href="/services/cloud/" class="btn btn-outline-primary mt-2">Learn More</a>
-:::
-:::
-
-::: {.col-md-4}
-::: {.feature-card .text-center}
-::: {.feature-card-icon}
-<i class="bi bi-code-square"></i>
-:::
-
-### [Digital Resilience](/services/digital-resilience/)
-
-Adaptive technological frameworks that ensure operational continuity in an evolving threat landscape.
-
-<a href="/services/digital-resilience/" class="btn btn-outline-primary mt-2">Learn More</a>
-:::
-:::
-:::
-
-## Our Approach
-
-We follow a structured approach to ensure the success of every project:
-
-1. **Discovery**: We work closely with you to understand your unique requirements and challenges.
-2. **Planning**: We develop a comprehensive plan that outlines the scope, timeline, and deliverables.
-3. **Execution**: Our expert team implements the solution using industry best practices.
-4. **Testing**: We thoroughly test all aspects of the solution to ensure quality and security.
-5. **Deployment**: We carefully deploy the solution to minimize disruption to your operations.
-6. **Support**: We provide ongoing support and maintenance to ensure continued success.
-
-## Why Choose Us
-
-```{=html}
-<div class="row mt-4">
-  <div class="col-lg-3 col-md-6">
-    <div class="feature-card text-center">
-      <div class="feature-card-icon">
-        <i class="bi bi-person-check"></i>
+<div class="ap-bg">
+  <div class="container">
+    <div class="ap-r rv">
+      <div class="ap-ri"><img src="/assets/images/stock/team-meeting.jpg" alt="Team meeting"></div>
+      <div class="ap-rt">
+        <h2>From discovery to<br>continuous support.</h2>
+        <p>We start by understanding your requirements, then plan, build, test, and deploy. After launch, we provide ongoing monitoring and maintenance — so nothing falls through the cracks.</p>
+        <div class="lk"><a href="https://cal.com/chenist" target="_blank" class="ap-lk">Talk to our team</a></div>
       </div>
-      <h3>Expert Team</h3>
-      <p>Our professionals bring years of industry experience and specialized expertise to every project.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-3 col-md-6">
-    <div class="feature-card text-center">
-      <div class="feature-card-icon">
-        <i class="bi bi-gear"></i>
-      </div>
-      <h3>Tailored Solutions</h3>
-      <p>We customize our services to address your specific business needs and technical requirements.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-3 col-md-6">
-    <div class="feature-card text-center">
-      <div class="feature-card-icon">
-        <i class="bi bi-graph-up"></i>
-      </div>
-      <h3>Measurable Results</h3>
-      <p>Our solutions deliver tangible outcomes with clear metrics to track success.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-3 col-md-6">
-    <div class="feature-card text-center">
-      <div class="feature-card-icon">
-        <i class="bi bi-headset"></i>
-      </div>
-      <h3>Ongoing Support</h3>
-      <p>We provide continuous assistance and maintenance to ensure your technology performs optimally.</p>
     </div>
   </div>
 </div>
+
+<div class="ap-s">
+  <div class="container">
+    <div class="ap-n">
+      <div><div class="ap-nn">15+</div><div class="ap-nl">Years experience</div></div>
+      <div><div class="ap-nn">100%</div><div class="ap-nl">Open-source stack</div></div>
+      <div><div class="ap-nn">EU</div><div class="ap-nl">Data residency</div></div>
+      <div><div class="ap-nn">24/7</div><div class="ap-nl">Monitoring</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="ap-cta">
+  <div class="container">
+    <div class="ap-d"></div>
+    <h2>Ready to get started?</h2>
+    <p>30 minutes. No pitch. Just an honest look at what you need.</p>
+    <a href="https://cal.com/chenist" target="_blank" class="ap-b">Book a free consultation</a>
+    <div class="ap-sm">
+      <i class="bi bi-check-circle-fill"></i> Free &nbsp;
+      <i class="bi bi-check-circle-fill"></i> 30 min &nbsp;
+      <i class="bi bi-check-circle-fill"></i> No commitment
+    </div>
+  </div>
+</div>
+
+</div>
 ```
-
-:::
-
-:::: {.cta-section}
-::: {.container .text-center}
-## <span class="text-white">Ready to get started?</span>
-
-```{=html}
-<p class="mb-4">Contact us today to discuss your project and how we can help.</p>
-
-<style>
-  /* Ensure the text is white in both light and dark modes */
-  .cta-white-text {
-    color: #323642 !important;
-  }
-</style>
-```
-
-[Book a Consultation](https://cal.com/chenist){.cta-button target="_blank"}
-:::
-::::

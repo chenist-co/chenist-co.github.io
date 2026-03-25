@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-b984f3b3cb6b71a8ea84b04fabc41f2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-36e5f5eb5e62ac17850c20678128155a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-b984f3b3cb6b71a8ea84b04fabc41f2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-a592c5a32ddb2bbfd9fa55d2db6a7c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-6b071a7e68b6cff4b621bc773a21853a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-a592c5a32ddb2bbfd9fa55d2db6a7c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,11 +79,11 @@ ul.task-list li input[type="checkbox"] {
 <meta property="og:description" content="Cloud migration, infrastructure, DevOps, and security services across AWS, Azure, and Google Cloud for scalable, secure business operations.">
 <meta property="og:image" content="https://chen.ist/assets/images/stock/server-racks.jpg">
 <meta property="og:site_name" content="chen.ist">
-<meta property="og:image:alt" content="Cloud Infrastructure">
+<meta property="og:image:alt" content="Multi-cloud infrastructure">
 <meta name="twitter:title" content="Cloud Services – chen.ist">
 <meta name="twitter:description" content="Cloud migration, infrastructure, DevOps, and security services across AWS, Azure, and Google Cloud for scalable, secure business operations.">
 <meta name="twitter:image" content="https://chen.ist/assets/images/stock/server-racks.jpg">
-<meta name="twitter:image:alt" content="Cloud Infrastructure">
+<meta name="twitter:image:alt" content="Multi-cloud infrastructure">
 <meta name="twitter:card" content="summary_large_image">
 </head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
@@ -330,11 +330,57 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 }
 </script>
+<style>
+.ap { --c: #81BD4A; --g: #86868b; font-family: 'Open Sans', -apple-system, system-ui, sans-serif; }
+.ap-hero { padding: 12rem 0 8rem; text-align: center; }
+.ap-hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 700; letter-spacing: -0.045em; line-height: 1.06; }
+.ap-hero .gr { color: var(--c); }
+.ap-hero p { font-size: 1.35rem; color: var(--g); max-width: 500px; margin: 1.5rem auto 0; line-height: 1.45; }
+.ap-s { padding: 7rem 0; }
+.ap-bg { padding: 7rem 0; background: #f5f5f7; }
+[data-bs-theme="dark"] .ap-bg { background: #161617; }
+.ap h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.035em; text-align: center; line-height: 1.1; margin-bottom: 0.5rem; }
+.ap .sub { text-align: center; font-size: 1.1rem; color: var(--g); max-width: 480px; margin: 0 auto 5rem; }
+.ap-t { text-align: center; padding: 0 0.75rem; }
+.ap-t i { font-size: 1.75rem; color: var(--c); display: block; margin-bottom: 0.75rem; opacity: 0.85; }
+.ap-t h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.35rem; letter-spacing: -0.01em; }
+.ap-t p { font-size: 0.88rem; color: var(--g); line-height: 1.5; }
+.ap-lk { color: var(--c); font-size: 1rem; text-decoration: none; }
+.ap-lk:hover { text-decoration: underline; }
+.ap-lk::after { content: " ›"; font-weight: 300; }
+.ap-r { display: flex; align-items: center; gap: 6rem; }
+.ap-r.rv { flex-direction: row-reverse; }
+.ap-ri { flex: 0 0 50%; }
+.ap-ri img { width: 100%; border-radius: 28px; }
+.ap-rt h2 { text-align: left; font-size: clamp(1.75rem, 3.5vw, 2.75rem); margin-bottom: 1rem; }
+.ap-rt p { font-size: 1.05rem; color: var(--g); line-height: 1.65; }
+.ap-rt .lk { margin-top: 1.75rem; }
+.ap-n { display: flex; justify-content: center; gap: 6rem; flex-wrap: wrap; }
+.ap-nn { font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 700; color: var(--c); line-height: 1; text-align: center; }
+.ap-nl { font-size: 0.75rem; color: var(--g); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.35rem; text-align: center; }
+.ap-cta { padding: 10rem 0; text-align: center; }
+.ap-cta h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; }
+.ap-cta p { font-size: 1.1rem; color: var(--g); max-width: 420px; margin: 0 auto 2.5rem; line-height: 1.5; }
+.ap-b { display: inline-block; padding: 0.85rem 2.25rem; background: var(--c); color: #fff; border-radius: 980px; font-weight: 500; font-size: 1rem; text-decoration: none; transition: background 0.15s; }
+.ap-b:hover { background: #6BA33A; color: #fff; text-decoration: none; }
+.ap-sm { font-size: 0.82rem; color: var(--g); margin-top: 1.75rem; }
+.ap-sm i { color: var(--c); }
+.ap-d { width: 36px; height: 3px; background: var(--c); margin: 0 auto 3.5rem; border-radius: 2px; opacity: 0.6; }
+@media (max-width: 767px) {
+  .ap-hero { padding: 7rem 0 5rem; }
+  .ap-r, .ap-r.rv { flex-direction: column; gap: 3rem; }
+  .ap-ri { flex: none; }
+  .ap-rt h2 { text-align: center; }
+  .ap-n { gap: 3rem; }
+  .ap-cta { padding: 6rem 0; }
+}
+</style>
 
 
 <link rel="stylesheet" href="../../assets/css/styles.css">
 <link rel="stylesheet" href="../../assets/css/academy.scss">
 <link rel="stylesheet" href="../../assets/css/custom-hero.css">
+<link rel="stylesheet" href="../../assets/css/landing-pages.css">
 
 
 
@@ -367,6 +413,10 @@ document.addEventListener('DOMContentLoaded', function() {
         <li>
     <a class="dropdown-item" href="../../services/index.html">
  <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../security/index.html">
+ <span class="dropdown-text">Security</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../digital/index.html">
@@ -498,20 +548,12 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#ready-to-accelerate-your-cloud-journey" id="toc-ready-to-accelerate-your-cloud-journey" class="nav-link active" data-scroll-target="#ready-to-accelerate-your-cloud-journey"><span class="text-dark">Ready to accelerate your cloud journey?</span></a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -527,7 +569,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -539,405 +581,78 @@ document.addEventListener('DOMContentLoaded', function() {
 </header>
 
 
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="../../">Home</a></li>
-    <li class="breadcrumb-item"><a href="../../services/">Services</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Cloud Services</li>
-  </ol>
-</nav>
+<div class="ap">
 
-<div class="hero-section">
+<div class="ap-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-8 offset-md-2 text-center">
-        <h1><span class="text-dark">Cloud</span> <span class="text-green">Services</span></h1>
-        <p>Scalable, secure, and efficient cloud solutions for modern businesses</p>
+    <h1>Cloud <span class="gr">Services</span></h1>
+    <p>Scalable, secure, and efficient cloud solutions for modern businesses.</p>
+  </div>
+</div>
+
+<div class="ap-bg">
+  <div class="container">
+    <h2 class="anchored">Cloud, simplified</h2>
+    <p class="sub">Four disciplines working together to power your business.</p>
+    <div class="row g-5">
+      <div class="col-6 col-lg-3"><div class="ap-t"><i class="bi bi-cloud-arrow-up"></i><h3 class="anchored">Migration</h3><p>Seamless transition to the cloud with minimal disruption.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="ap-t"><i class="bi bi-hdd-network"></i><h3 class="anchored">Infrastructure</h3><p>Robust, cost-optimized environments built for scale.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="ap-t"><i class="bi bi-arrow-repeat"></i><h3 class="anchored">DevOps</h3><p>Automated pipelines for faster, reliable delivery.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="ap-t"><i class="bi bi-shield-lock"></i><h3 class="anchored">Security</h3><p>Cloud-native protection, compliance, and IAM.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="ap-s">
+  <div class="container">
+    <div class="ap-r">
+      <div class="ap-ri"><img src="../../assets/images/stock/server-racks.jpg" alt="Multi-cloud infrastructure"></div>
+      <div class="ap-rt">
+        <h2 class="anchored">Multi-cloud &amp;<br>hybrid solutions.</h2>
+        <p>AWS, Azure, Google Cloud — or all three. We design infrastructure that fits your workload, not the other way around. From lift-and-shift to cloud-native refactoring, every architecture decision is driven by your business goals.</p>
+        <div class="lk"><a href="https://cal.com/chenist" target="_blank" class="ap-lk">Plan your migration</a></div>
       </div>
     </div>
   </div>
 </div>
 
-<style>
-  .text-white {
-    color: white !important;
-  }
-</style>
-<div class="container page-section">
-<div class="text-center mb-4">
-  <img src="../../assets/images/stock/server-racks.jpg" alt="Cloud Infrastructure" class="img-fluid rounded shadow" style="max-height: 400px; width: 100%; object-fit: cover;">
-</div>
-<section id="comprehensive-cloud-solutions" class="level2">
-<h2 class="anchored" data-anchor-id="comprehensive-cloud-solutions">Comprehensive Cloud Solutions</h2>
-<p>Our cloud services help you leverage the full potential of cloud computing for improved efficiency, scalability, and cost savings. Whether you’re looking to migrate existing applications, build new cloud-native solutions, or optimize your current cloud environment, our team of experts will guide you through every step of the process.</p>
-<div class="row mt-4">
-<div class="col-md-6">
-<section id="cloud-migration" class="level3 security-feature">
-<h3 class="anchored" data-anchor-id="cloud-migration">Cloud Migration</h3>
-<p>Seamless transition of your applications and data to the cloud with minimal disruption to your business operations.</p>
-<section id="key-benefits" class="level4">
-<h4 class="anchored" data-anchor-id="key-benefits">Key Benefits:</h4>
-<ul>
-<li>Reduced infrastructure costs</li>
-<li>Improved scalability and flexibility</li>
-<li>Enhanced disaster recovery capabilities</li>
-<li>Access to advanced cloud services</li>
-</ul>
-<p><a href="#migration" class="btn btn-outline-primary mt-2">Learn More</a></p>
-</section>
-</section>
-</div>
-<div class="col-md-6">
-<section id="cloud-infrastructure" class="level3 security-feature">
-<h3 class="anchored" data-anchor-id="cloud-infrastructure">Cloud Infrastructure</h3>
-<p>Design and implementation of robust cloud environments tailored to your specific business needs and technical requirements.</p>
-<section id="key-benefits-1" class="level4">
-<h4 class="anchored" data-anchor-id="key-benefits-1">Key Benefits:</h4>
-<ul>
-<li>Optimized for performance and cost</li>
-<li>Secure by design architecture</li>
-<li>Scalable to meet changing demands</li>
-<li>Multi-cloud and hybrid solutions</li>
-</ul>
-<p><a href="#infrastructure" class="btn btn-outline-primary mt-2">Learn More</a></p>
-</section>
-</section>
-</div>
-<div class="col-md-6">
-<section id="devops" class="level3 security-feature">
-<h3 class="anchored" data-anchor-id="devops">DevOps</h3>
-<p>Streamline your development and operations processes for faster, more reliable delivery of applications and services.</p>
-<section id="key-benefits-2" class="level4">
-<h4 class="anchored" data-anchor-id="key-benefits-2">Key Benefits:</h4>
-<ul>
-<li>Accelerated development cycles</li>
-<li>Improved collaboration between teams</li>
-<li>Automated testing and deployment</li>
-<li>Continuous integration and delivery</li>
-</ul>
-<p><a href="#devops-services" class="btn btn-outline-primary mt-2">Learn More</a></p>
-</section>
-</section>
-</div>
-<div class="col-md-6">
-<section id="cloud-security" class="level3 security-feature">
-<h3 class="anchored" data-anchor-id="cloud-security">Cloud Security</h3>
-<p>Ensure your cloud environment is protected against threats and vulnerabilities with comprehensive security measures.</p>
-<section id="key-benefits-3" class="level4">
-<h4 class="anchored" data-anchor-id="key-benefits-3">Key Benefits:</h4>
-<ul>
-<li>Protection for cloud workloads</li>
-<li>Compliance with industry regulations</li>
-<li>Identity and access management</li>
-<li>Security monitoring and incident response</li>
-</ul>
-<p><a href="#security" class="btn btn-outline-primary mt-2">Learn More</a></p>
-</section>
-</section>
-</div>
-</div>
-</section>
-<section id="migration" class="level2">
-<h2 class="anchored" data-anchor-id="migration">Cloud Migration Services</h2>
-<p>Our cloud migration services provide a structured approach to moving your applications, data, and infrastructure to the cloud, ensuring a smooth transition with minimal disruption to your business.</p>
-<div class="row mt-4">
-  <div class="col-md-12">
-    <div class="card mb-4">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-md-3 text-center">
-            <div class="process-step">
-              <div class="process-icon">
-                <i class="bi bi-clipboard-check fs-1 text-primary"></i>
-              </div>
-              <h5 class="anchored">Assessment</h5>
-              <p>Comprehensive evaluation of your current environment and migration readiness</p>
-            </div>
-          </div>
-          
-          <div class="col-md-3 text-center">
-            <div class="process-step">
-              <div class="process-icon">
-                <i class="bi bi-diagram-3 fs-1 text-primary"></i>
-              </div>
-              <h5 class="anchored">Planning</h5>
-              <p>Detailed migration strategy and roadmap development</p>
-            </div>
-          </div>
-          
-          <div class="col-md-3 text-center">
-            <div class="process-step">
-              <div class="process-icon">
-                <i class="bi bi-arrow-repeat fs-1 text-primary"></i>
-              </div>
-              <h5 class="anchored">Migration</h5>
-              <p>Execution of the migration with careful testing and validation</p>
-            </div>
-          </div>
-          
-          <div class="col-md-3 text-center">
-            <div class="process-step">
-              <div class="process-icon">
-                <i class="bi bi-check-circle fs-1 text-primary"></i>
-              </div>
-              <h5 class="anchored">Optimization</h5>
-              <p>Continuous improvement of cloud resources for performance and cost</p>
-            </div>
-          </div>
-        </div>
+<div class="ap-bg">
+  <div class="container">
+    <div class="ap-r rv">
+      <div class="ap-ri"><img src="../../assets/images/stock/code-screen.jpg" alt="DevOps automation"></div>
+      <div class="ap-rt">
+        <h2 class="anchored">DevOps &amp;<br>automation.</h2>
+        <p>CI/CD pipelines, Infrastructure as Code, container orchestration with Kubernetes — we automate the path from commit to production. Ship faster with confidence and full observability at every stage.</p>
+        <div class="lk"><a href="https://cal.com/chenist" target="_blank" class="ap-lk">Accelerate delivery</a></div>
       </div>
     </div>
   </div>
 </div>
-<section id="migration-approaches" class="level3">
-<h3 class="anchored" data-anchor-id="migration-approaches">Migration Approaches</h3>
-<p>We offer multiple migration approaches to suit your specific needs and goals:</p>
-<div class="row mt-4">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-primary text-white">
-        <h3 class="card-title mb-0 anchored">Rehost (Lift &amp; Shift)</h3>
-      </div>
-      <div class="card-body">
-        <p>Moving applications to the cloud with minimal changes, maintaining the same architecture and functionality while leveraging cloud infrastructure.</p>
-        <p><strong>Best for:</strong> Legacy applications with minimal cloud dependencies, rapid migration requirements, or when immediate cloud benefits are needed.</p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-primary text-white">
-        <h3 class="card-title mb-0 anchored">Refactor/Re-architect</h3>
-      </div>
-      <div class="card-body">
-        <p>Modifying applications to better leverage cloud-native features and services, improving performance, scalability, and management.</p>
-        <p><strong>Best for:</strong> Applications that need to scale or perform better in the cloud, or when you want to add features that are difficult to implement in the current environment.</p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-primary text-white">
-        <h3 class="card-title mb-0 anchored">Rebuild</h3>
-      </div>
-      <div class="card-body">
-        <p>Recreating an application from scratch in the cloud, using cloud-native architectures and services to maximize cloud benefits.</p>
-        <p><strong>Best for:</strong> Applications that need significant updates or when existing solutions cannot meet business needs, allowing for complete modernization.</p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-primary text-white">
-        <h3 class="card-title mb-0 anchored">Replace</h3>
-      </div>
-      <div class="card-body">
-        <p>Moving to a SaaS solution instead of migrating an existing application, eliminating the need for application management altogether.</p>
-        <p><strong>Best for:</strong> Standardized processes like CRM, email, or content management where existing SaaS solutions can provide the necessary functionality.</p>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-</section>
-<section id="infrastructure" class="level2">
-<h2 class="anchored" data-anchor-id="infrastructure">Cloud Infrastructure Services</h2>
-<p>We design, implement, and manage cloud infrastructure that provides the foundation for your applications and services, ensuring reliability, security, and performance.</p>
-<div class="row mt-4">
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center">
-      <div class="feature-card-icon">
-        <i class="bi bi-hdd-network"></i>
-      </div>
-      <h3 class="anchored">Infrastructure as Code</h3>
-      <p>Automated infrastructure provisioning and management using code, ensuring consistency and repeatability.</p>
-    </div>
-  </div>
 
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center">
-      <div class="feature-card-icon">
-        <i class="bi bi-diagram-2"></i>
-      </div>
-      <h3 class="anchored">Multi-Cloud Solutions</h3>
-      <p>Strategic use of multiple cloud providers to optimize for cost, performance, and specific service capabilities.</p>
+<div class="ap-s">
+  <div class="container">
+    <div class="ap-n">
+      <div><div class="ap-nn">3</div><div class="ap-nl">Cloud platforms</div></div>
+      <div><div class="ap-nn">99.9%</div><div class="ap-nl">Uptime SLA</div></div>
+      <div><div class="ap-nn">40%</div><div class="ap-nl">Avg cost reduction</div></div>
     </div>
   </div>
+</div>
 
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center">
-      <div class="feature-card-icon">
-        <i class="bi bi-server"></i>
-      </div>
-      <h3 class="anchored">Hybrid Cloud</h3>
-      <p>Integrated on-premises and cloud environments providing flexibility while maintaining control of sensitive data.</p>
+<div class="ap-cta">
+  <div class="container">
+    <div class="ap-d"></div>
+    <h2 class="anchored">Ready to move<br>to the cloud?</h2>
+    <p>30 minutes. No pitch. Just an honest look at your infrastructure.</p>
+    <a href="https://cal.com/chenist" target="_blank" class="ap-b">Book a consultation</a>
+    <div class="ap-sm">
+      <i class="bi bi-check-circle-fill"></i> Free &nbsp;
+      <i class="bi bi-check-circle-fill"></i> 30 min &nbsp;
+      <i class="bi bi-check-circle-fill"></i> Actionable roadmap
     </div>
   </div>
 </div>
-<section id="cloud-platforms-we-support" class="level3">
-<h3 class="anchored" data-anchor-id="cloud-platforms-we-support">Cloud Platforms We Support</h3>
-<div class="row mt-4">
-  <div class="col-md-4">
-    <div class="card mb-4 text-center">
-      <div class="card-body">
-        <h3 class="anchored">Amazon Web Services (AWS)</h3>
-        <p>Comprehensive services including compute, storage, databases, analytics, networking, and more.</p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-md-4">
-    <div class="card mb-4 text-center">
-      <div class="card-body">
-        <h3 class="anchored">Microsoft Azure</h3>
-        <p>Integrated cloud services with strong enterprise integration and hybrid capabilities.</p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-md-4">
-    <div class="card mb-4 text-center">
-      <div class="card-body">
-        <h3 class="anchored">Google Cloud Platform</h3>
-        <p>Advanced data analytics, machine learning, and container orchestration capabilities.</p>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-</section>
-<section id="devops-services" class="level2">
-<h2 class="anchored" data-anchor-id="devops-services">DevOps Services</h2>
-<p>Our DevOps services help you streamline software development and IT operations, enabling faster delivery of high-quality applications and services.</p>
-<div class="row mt-4">
-  <div class="col-md-12">
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-marker bg-success"></div>
-        <div class="timeline-content">
-          <h3 class="anchored">CI/CD Pipeline Implementation</h3>
-          <p>Automated continuous integration and continuous delivery pipelines that accelerate software development and deployment.</p>
-        </div>
-      </div>
-      
-      <div class="timeline-item">
-        <div class="timeline-marker bg-success"></div>
-        <div class="timeline-content">
-          <h3 class="anchored">Container Orchestration</h3>
-          <p>Kubernetes and Docker implementation for scalable, portable, and consistent application deployment.</p>
-        </div>
-      </div>
-      
-      <div class="timeline-item">
-        <div class="timeline-marker bg-success"></div>
-        <div class="timeline-content">
-          <h3 class="anchored">Infrastructure Automation</h3>
-          <p>Terraform, CloudFormation, and other IaC tools for consistent, version-controlled infrastructure management.</p>
-        </div>
-      </div>
-      
-      <div class="timeline-item">
-        <div class="timeline-marker bg-success"></div>
-        <div class="timeline-content">
-          <h3 class="anchored">Monitoring &amp; Observability</h3>
-          <p>Comprehensive monitoring solutions for infrastructure, applications, and user experience.</p>
-        </div>
-      </div>
-      
-      <div class="timeline-item">
-        <div class="timeline-marker bg-success"></div>
-        <div class="timeline-content">
-          <h3 class="anchored">DevSecOps Integration</h3>
-          <p>Security embedded throughout the development lifecycle, ensuring applications are secure by design.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-<section id="security" class="level2">
-<h2 class="anchored" data-anchor-id="security">Cloud Security Services</h2>
-<p>Our cloud security services ensure your cloud environment is protected against threats while maintaining compliance with relevant regulations and standards.</p>
-<div class="row mt-4">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Security Assessment</h3>
-      </div>
-      <div class="card-body">
-        <ul>
-          <li><strong>Cloud Configuration Review:</strong> Evaluation of cloud settings against best practices</li>
-          <li><strong>Vulnerability Assessment:</strong> Identification of security weaknesses in cloud resources</li>
-          <li><strong>Compliance Validation:</strong> Verification of compliance with relevant standards (GDPR, HIPAA, etc.)</li>
-          <li><strong>Security Architecture Review:</strong> Analysis of overall cloud security design</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Security Implementation</h3>
-      </div>
-      <div class="card-body">
-        <ul>
-          <li><strong>Identity &amp; Access Management:</strong> Secure user and service authentication and authorization</li>
-          <li><strong>Data Protection:</strong> Encryption, key management, and data loss prevention</li>
-          <li><strong>Network Security:</strong> Firewalls, security groups, and network segmentation</li>
-          <li><strong>Security Monitoring:</strong> Threat detection and incident response capabilities</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-<section id="why-choose-our-cloud-services" class="level2">
-<h2 class="anchored" data-anchor-id="why-choose-our-cloud-services">Why Choose Our Cloud Services</h2>
-<div class="row mt-4">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-primary text-white">
-        <h3 class="card-title mb-0 anchored">Our Expertise</h3>
-      </div>
-      <div class="card-body">
-        <ul>
-          <li><strong>Certified Cloud Professionals:</strong> Our team includes AWS, Azure, and GCP certified experts</li>
-          <li><strong>Proven Track Record:</strong> Successful cloud implementations across various industries</li>
-          <li><strong>End-to-End Capabilities:</strong> Services spanning from strategy to implementation and ongoing management</li>
-          <li><strong>Technology Partners:</strong> Strong relationships with leading cloud providers</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-primary text-white">
-        <h3 class="card-title mb-0 anchored">Our Approach</h3>
-      </div>
-      <div class="card-body">
-        <ul>
-          <li><strong>Business-First Mindset:</strong> Solutions aligned with your specific business objectives</li>
-          <li><strong>Cost Optimization:</strong> Focus on efficiency and optimal resource utilization</li>
-          <li><strong>Security By Design:</strong> Security integrated into every aspect of cloud solutions</li>
-          <li><strong>Continuous Improvement:</strong> Ongoing optimization and evolution of cloud environments</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-</div>
-<div class="cta-section">
-<section id="ready-to-accelerate-your-cloud-journey" class="level2 container text-center">
-<h2 class="anchored" data-anchor-id="ready-to-accelerate-your-cloud-journey"><span class="text-dark">Ready to accelerate your cloud journey?</span></h2>
-<p class="mb-4">Contact us today to discuss how our cloud services can transform your business.</p>
-<p><a href="https://cal.com/chenist" class="cta-button" target="_blank">Book a Consultation</a></p>
-</section>
+
 </div>
 
 
@@ -1364,19 +1079,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-
-</div>   
-    <div class="nav-footer-center">
-
-</div>
-    <div class="nav-footer-right">
-
-</div>
-  </div>
-</footer>
 <footer class="footer mt-5 py-3 cybersecurity-footer">
     <div class="container">
         <div class="row mb-3">
