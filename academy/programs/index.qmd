@@ -3,212 +3,220 @@ title: "Educational Programs"
 subtitle: "Immersive learning experiences for technology enthusiasts"
 description: "Explore our educational programs including hackathons, summer schools, and specialized training events designed for hands-on learning and skill development."
 from: markdown+raw_html
-categories:
-  - education
-  - hackathons
-  - summer-school
-format: 
+page-layout: full
+format:
   html:
-    css: /assets/css/academy.scss
-    classes: [academy-section]
+    toc: false
+    include-in-header:
+      text: |
+        <style>
+        .ap { --c: #F5A623; --g: #86868b; font-family: 'Open Sans', -apple-system, system-ui, sans-serif; }
+        .ap-hero { padding: 12rem 0 8rem; text-align: center; }
+        .ap-hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 700; letter-spacing: -0.045em; line-height: 1.06; }
+        .ap-hero .gr { color: var(--c); }
+        .ap-hero p { font-size: 1.35rem; color: var(--g); max-width: 520px; margin: 1.5rem auto 0; line-height: 1.45; }
+        .ap-s { padding: 7rem 0; }
+        .ap-bg { padding: 7rem 0; background: #f5f5f7; }
+        [data-bs-theme="dark"] .ap-bg { background: #161617; }
+        .ap h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.035em; text-align: center; line-height: 1.1; margin-bottom: 0.5rem; }
+        .ap .sub { text-align: center; font-size: 1.1rem; color: var(--g); max-width: 480px; margin: 0 auto 5rem; }
+        .ap-t { text-align: center; padding: 0 0.75rem; }
+        .ap-t i { font-size: 1.75rem; color: var(--c); display: block; margin-bottom: 0.75rem; opacity: 0.85; }
+        .ap-t h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.35rem; }
+        .ap-t p { font-size: 0.88rem; color: var(--g); line-height: 1.5; }
+        .ap-lk { color: var(--c); font-size: 1rem; text-decoration: none; }
+        .ap-lk:hover { text-decoration: underline; }
+        .ap-lk::after { content: " ›"; font-weight: 300; }
+        .ap-r { display: flex; align-items: center; gap: 6rem; }
+        .ap-r.rv { flex-direction: row-reverse; }
+        .ap-ri { flex: 0 0 50%; }
+        .ap-ri img { width: 100%; border-radius: 28px; }
+        .ap-rt h2 { text-align: left; font-size: clamp(1.75rem, 3.5vw, 2.75rem); margin-bottom: 1rem; }
+        .ap-rt p { font-size: 1.05rem; color: var(--g); line-height: 1.65; }
+        .ap-rt .lk { margin-top: 1.75rem; }
+        .ap-cta { padding: 10rem 0; text-align: center; }
+        .ap-cta h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; }
+        .ap-cta p { font-size: 1.1rem; color: var(--g); max-width: 420px; margin: 0 auto 2.5rem; line-height: 1.5; }
+        .ap-b { display: inline-block; padding: 0.85rem 2.25rem; background: var(--c); color: #fff; border-radius: 980px; font-weight: 500; font-size: 1rem; text-decoration: none; transition: background 0.15s; }
+        .ap-b:hover { background: #d9901e; color: #fff; text-decoration: none; }
+        .ap-bo { display: inline-block; padding: 0.85rem 2.25rem; border: 1.5px solid var(--c); color: var(--c); border-radius: 980px; font-weight: 500; font-size: 1rem; text-decoration: none; transition: all 0.15s; }
+        .ap-bo:hover { background: var(--c); color: #fff; text-decoration: none; }
+        .ap-d { width: 36px; height: 3px; background: var(--c); margin: 0 auto 3.5rem; border-radius: 2px; opacity: 0.6; }
+        .pg-card { border-radius: 24px; overflow: hidden; background: #000; position: relative; transition: transform 0.3s; height: 100%; margin-bottom: 1.5rem; }
+        .pg-card:hover { transform: scale(1.02); }
+        .pg-card img { width: 100%; height: 300px; object-fit: cover; opacity: 0.55; transition: opacity 0.3s; }
+        .pg-card:hover img { opacity: 0.75; }
+        .pg-card-body { position: absolute; bottom: 0; left: 0; right: 0; padding: 2.5rem; color: #fff; background: linear-gradient(transparent, rgba(0,0,0,0.85)); }
+        .pg-card-body h3 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
+        .pg-card-body p { font-size: 0.92rem; color: rgba(255,255,255,0.7); line-height: 1.5; margin-bottom: 1rem; }
+        .pg-card-body .ap-lk { color: var(--c); }
+        .pg-card-body .ap-lk::after { content: " ›"; }
+        .up-item { padding: 2rem 0; border-bottom: 1px solid rgba(0,0,0,0.06); display: flex; gap: 2rem; align-items: center; }
+        [data-bs-theme="dark"] .up-item { border-color: rgba(255,255,255,0.06); }
+        .up-item:last-child { border-bottom: none; }
+        .up-item h4 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.15rem; }
+        .up-item h4 a { color: inherit; text-decoration: none; }
+        .up-item h4 a:hover { color: var(--c); }
+        .up-meta { font-size: 0.85rem; color: var(--g); }
+        .up-meta i { color: var(--c); margin-right: 0.2rem; }
+        .up-badge { display: inline-block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.2rem 0.6rem; border-radius: 980px; }
+        .up-badge-open { background: var(--c); color: #fff; }
+        .up-badge-soon { background: rgba(0,0,0,0.08); color: var(--g); }
+        [data-bs-theme="dark"] .up-badge-soon { background: rgba(255,255,255,0.1); }
+        @media (max-width: 767px) {
+          .ap-hero { padding: 7rem 0 5rem; }
+          .ap-r, .ap-r.rv { flex-direction: column; gap: 3rem; }
+          .ap-ri { flex: none; }
+          .ap-rt h2 { text-align: center; }
+          .ap-cta { padding: 6rem 0; }
+          .up-item { flex-direction: column; gap: 0.75rem; align-items: flex-start; }
+        }
+        </style>
 ---
 
 ```{=html}
-<div class="container">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/">Home</a></li>
-      <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Programs</li>
-    </ol>
-  </nav>
-</div>
+<div class="ap">
 
-<div class="hero-section">
+<div class="ap-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-12 text-center">
-        <h1>Educational Programs</h1>
-        <p class="lead">Immersive learning experiences designed to build practical skills through hands-on challenges</p>
+    <h1>Educational <span class="gr">Programs</span></h1>
+    <p>Hackathons, summer schools, and community meetups. Learn by building.</p>
+  </div>
+</div>
+
+<!-- PROGRAM CARDS — dark image style like Events page -->
+<div class="ap-bg">
+  <div class="container">
+    <h2>Our programs</h2>
+    <p class="sub">Immersive experiences that go beyond traditional learning.</p>
+    <div class="row g-5">
+      <div class="col-md-4">
+        <a href="/academy/programs/hackathons/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img src="/assets/images/stock/cybersecurity-monitor.jpg" alt="Hackathons">
+            <div class="pg-card-body">
+              <h3>Hackathons</h3>
+              <p>48-hour challenges in cybersecurity, AI ethics, and space tech. Real problems, real teams.</p>
+              <span class="ap-lk">Explore hackathons</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/programs/summer-school/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img src="/assets/images/stock/team-meeting.jpg" alt="Summer School">
+            <div class="pg-card-body">
+              <h3>Summer School</h3>
+              <p>Multi-week intensive programs combining lectures, workshops, and project work.</p>
+              <span class="ap-lk">Discover summer school</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/programs/computerclub/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img src="/assets/images/stock/code-screen.jpg" alt="Computer Club">
+            <div class="pg-card-body">
+              <h3>Computer Club</h3>
+              <p>Monthly meetups for coding, hacking, and building together. All levels welcome.</p>
+              <span class="ap-lk">Join the club</span>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
   </div>
 </div>
-```
 
-## Intensive Learning Programs
-
-Our educational programs offer immersive, hands-on learning experiences that go beyond traditional courses and trainings. These programs are designed to provide intensive skill development, practical application of knowledge, and collaborative learning opportunities.
-
-### Program Types
-
-```{=html}
-<div class="row mt-5">
-  <div class="col-md-4">
-    <div class="card h-100">
-      <div class="card-body">
-        <h3 class="card-title">Hackathons</h3>
-        <p class="card-text">Intensive problem-solving events where participants collaborate to develop innovative solutions to real-world challenges in areas like cybersecurity, space technology, and AI ethics.</p>
-        <ul>
-          <li>Collaborative team environment</li>
-          <li>Expert mentorship throughout the event</li>
-          <li>Practical application of technical skills</li>
-          <li>Networking with industry professionals</li>
-        </ul>
-        <a href="/academy/programs/hackathons/" class="btn btn-primary mt-3">Explore Hackathons</a>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-md-4">
-    <div class="card h-100">
-      <div class="card-body">
-        <h3 class="card-title">Summer School</h3>
-        <p class="card-text">Comprehensive multi-week learning programs that combine lectures, workshops, and project work to provide in-depth knowledge in specialized technical domains.</p>
-        <ul>
-          <li>Structured curriculum with progressive learning</li>
-          <li>Blend of theoretical foundations and practical skills</li>
-          <li>Projects that demonstrate mastery of concepts</li>
-          <li>International faculty and diverse student body</li>
-        </ul>
-        <a href="/academy/programs/summer-school/" class="btn btn-primary mt-3">Discover Summer School</a>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-md-4">
-    <div class="card h-100">
-      <div class="card-body">
-        <h3 class="card-title">Computer Club</h3>
-        <p class="card-text">A community-driven technology club dedicated to promoting digital literacy, computer science education, and technological innovation for all ages.</p>
-        <ul>
-          <li>Regular meetups and workshops</li>
-          <li>Hands-on learning experiences</li>
-          <li>Special programs for youth and beginners</li>
-          <li>Open source and hardware hacking projects</li>
-        </ul>
-        <a href="/academy/programs/computerclub/" class="btn btn-primary mt-3">Join Computer Club</a>
+<!-- FEATURE ROW -->
+<div class="ap-s">
+  <div class="container">
+    <div class="ap-r">
+      <div class="ap-ri"><img src="/assets/images/stock/team-meeting.jpg" alt="Collaborative learning"></div>
+      <div class="ap-rt">
+        <h2>Learn faster<br>by building together.</h2>
+        <p>Our programs put you in teams with peers and mentors, working on real challenges under real deadlines. It's the fastest way to build skills that stick — and a network that lasts.</p>
+        <div class="lk"><a href="/academy/events.html" class="ap-lk">See upcoming events</a></div>
       </div>
     </div>
   </div>
 </div>
-```
 
-## Benefits of Our Programs
+<!-- UPCOMING PROGRAMS — clean list -->
+<div class="ap-bg">
+  <div class="container" style="max-width: 750px;">
+    <h2>Upcoming</h2>
+    <p class="sub">Register early — spots fill fast.</p>
 
-```{=html}
-<div class="row mt-5">
-  <div class="col-md-4">
-    <div class="feature-card text-center">
-      <div class="feature-card-icon">
-        <i class="bi bi-people"></i>
+    <div class="up-item">
+      <div style="flex-grow:1;">
+        <h4><a href="/academy/programs/computerclub/">Computer Club</a></h4>
+        <div class="up-meta"><i class="bi bi-calendar3"></i> Monthly &nbsp; <i class="bi bi-geo-alt"></i> Craiova & Online</div>
       </div>
-      <h3>Collaborative Learning</h3>
-      <p>Work alongside peers and industry experts to solve complex problems and develop teamwork skills essential for professional success.</p>
+      <div class="up-badge up-badge-open">Ongoing</div>
     </div>
-  </div>
-  
-  <div class="col-md-4">
-    <div class="feature-card text-center">
-      <div class="feature-card-icon">
-        <i class="bi bi-lightning"></i>
+
+    <div class="up-item">
+      <div style="flex-grow:1;">
+        <h4><a href="/academy/programs/hackathons/ai-ethics-hackathon.html">AI Ethics Hackathon</a></h4>
+        <div class="up-meta"><i class="bi bi-calendar3"></i> March 5, 2026 &nbsp; <i class="bi bi-geo-alt"></i> Bucharest</div>
       </div>
-      <h3>Accelerated Skill Development</h3>
-      <p>Intensive, focused learning environments that rapidly build practical skills through hands-on application and expert guidance.</p>
+      <div class="up-badge up-badge-open">Open</div>
     </div>
-  </div>
-  
-  <div class="col-md-4">
-    <div class="feature-card text-center">
-      <div class="feature-card-icon">
-        <i class="bi bi-graph-up"></i>
+
+    <div class="up-item">
+      <div style="flex-grow:1;">
+        <h4><a href="/academy/programs/summer-school/2025.html">Summer School 2026</a></h4>
+        <div class="up-meta"><i class="bi bi-calendar3"></i> Aug 1–15, 2026 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
       </div>
-      <h3>Career Advancement</h3>
-      <p>Develop in-demand skills, build your professional network, and enhance your portfolio with real-world projects and achievements.</p>
+      <div class="up-badge up-badge-soon">Coming soon</div>
+    </div>
+
+    <div class="up-item">
+      <div style="flex-grow:1;">
+        <h4><a href="/academy/programs/hackathons/spaceapps/challenge-2025.html">SpaceApps Challenge 2026</a></h4>
+        <div class="up-meta"><i class="bi bi-calendar3"></i> October 2026 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
+      </div>
+      <div class="up-badge up-badge-soon">Coming soon</div>
+    </div>
+
+    <div class="up-item">
+      <div style="flex-grow:1;">
+        <h4><a href="/academy/programs/summer-school/junior.html">Junior Summer School</a></h4>
+        <div class="up-meta"><i class="bi bi-calendar3"></i> July 2026 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
+      </div>
+      <div class="up-badge up-badge-soon">Coming soon</div>
     </div>
   </div>
 </div>
-```
 
-## Upcoming Programs
-
-```{=html}
-<div class="row mt-5">
-  <div class="col-md-12">
-    <div class="table-responsive">
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th>Program</th>
-            <th>Type</th>
-            <th>Dates</th>
-            <th>Location</th>
-            <th>Registration</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><a href="/academy/programs/computerclub/">Computer Club Meetup</a></td>
-            <td>Regular Meetup</td>
-            <td>Monthly</td>
-            <td>Craiova & Online</td>
-            <td><span class="badge bg-success">Ongoing</span></td>
-          </tr>
-          <tr>
-            <td><a href="/academy/programs/hackathons/cybersecurity-hackathon/">Cybersecurity Hackathon</a></td>
-            <td>Hackathon</td>
-            <td>March 15-17, 2025</td>
-            <td>Online & On-campus</td>
-            <td><span class="badge bg-success">Open</span></td>
-          </tr>
-          <tr>
-            <td><a href="/academy/programs/hackathons/ai-ethics-hackathon/">AI Ethics Hackathon</a></td>
-            <td>Hackathon</td>
-            <td>May 10-12, 2026</td>
-            <td>Online</td>
-            <td><span class="badge bg-success">Open</span></td>
-          </tr>
-          <tr>
-            <td><a href="/academy/programs/summer-school/2025.html">Technology Summer School</a></td>
-            <td>Summer School</td>
-            <td>July 20 - August 20, 2025</td>
-            <td>Private, Craiova</td>
-            <td><span class="badge bg-warning">Coming Soon</span></td>
-          </tr>
-          <tr>
-            <td><a href="/academy/programs/summer-school/junior.html">Junior Summer School</a></td>
-            <td>Summer School</td>
-            <td>July 7-21, 2025</td>
-            <td>Private, Craiova</td>
-            <td><span class="badge bg-warning">Coming Soon</span></td>
-          </tr>
-          <tr>
-            <td><a href="/academy/programs/hackathons/space-hackathon/">SpaceApps Junior Challenge</a></td>
-            <td>Junior Hackathon</td>
-            <td>October 3-5, 2025</td>
-            <td>Craiova Art Museum</td>
-            <td><span class="badge bg-secondary">Coming Soon</span></td>
-          </tr>
-        </tbody>
-      </table>
+<!-- BENEFITS — clean tiles -->
+<div class="ap-s">
+  <div class="container">
+    <h2>Why join a program</h2>
+    <p class="sub"></p>
+    <div class="row g-5">
+      <div class="col-md-4"><div class="ap-t"><i class="bi bi-people"></i><h3>Collaborative</h3><p>Work alongside peers and experts to solve real problems together.</p></div></div>
+      <div class="col-md-4"><div class="ap-t"><i class="bi bi-lightning"></i><h3>Accelerated</h3><p>Intensive formats that build practical skills in days, not months.</p></div></div>
+      <div class="col-md-4"><div class="ap-t"><i class="bi bi-graph-up"></i><h3>Career-building</h3><p>Real projects for your portfolio and a network that opens doors.</p></div></div>
     </div>
   </div>
 </div>
-```
 
-
-## Join Our Programs
-
-```{=html}
-<div class="row mt-5">
-  <div class="col-md-8 offset-md-2">
-    <div class="card bg-light">
-      <div class="card-body text-center">
-        <h3>Interested in our educational programs?</h3>
-        <p>Sign up to receive announcements about upcoming programs, early registration opportunities, and exclusive content to help you prepare.</p>
-        <a href="/academy/partnerships.html" class="btn btn-primary">Contact Us for More Information</a>
-      </div>
+<!-- CTA -->
+<div class="ap-cta">
+  <div class="container">
+    <div class="ap-d"></div>
+    <h2>Ready to join?</h2>
+    <p>Browse programs or book a call to discuss custom events for your team.</p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <a href="/academy/events.html" class="ap-b">See all events</a>
+      <a href="https://cal.com/chenist" target="_blank" class="ap-bo">Book a consultation</a>
     </div>
   </div>
+</div>
+
 </div>
 ```
