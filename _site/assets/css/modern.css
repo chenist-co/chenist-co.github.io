@@ -9,8 +9,9 @@
 .m-hero a { color: var(--c); text-decoration: none; }
 .m-hero a:hover { text-decoration: underline; }
 
-.m-s { padding: 7rem 0; }
-.m-bg { padding: 7rem 0; background: #f5f5f7; }
+.m-s { padding: 7rem 0; background-color: #fff; }
+[data-bs-theme="dark"] .m-s { background-color: #111 !important; }
+.m-bg { padding: 7rem 0; background-color: #f5f5f7; }
 [data-bs-theme="dark"] .m-bg { background-color: #161617 !important; }
 
 .m h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.035em; text-align: center; line-height: 1.1; margin-bottom: 0.5rem; }
@@ -167,21 +168,34 @@
 html, body { overflow-x: hidden; }
 
 /* Dark mode — eliminate ALL white backgrounds globally */
-[data-bs-theme="dark"] body,
-[data-bs-theme="dark"] main,
-[data-bs-theme="dark"] #quarto-content,
-[data-bs-theme="dark"] .quarto-container,
-[data-bs-theme="dark"] .page-columns,
-[data-bs-theme="dark"] .m,
-[data-bs-theme="dark"] .m-hero,
-[data-bs-theme="dark"] .m-s,
-[data-bs-theme="dark"] .m-cta,
-[data-bs-theme="dark"] .m-listing-hero,
-[data-bs-theme="dark"] .m-listing-intro,
-[data-bs-theme="dark"] .container,
-[data-bs-theme="dark"] .page-section,
-[data-bs-theme="dark"] .content {
+html[data-bs-theme="dark"],
+html[data-bs-theme="dark"] body,
+html[data-bs-theme="dark"] main,
+html[data-bs-theme="dark"] main.content,
+html[data-bs-theme="dark"] #quarto-content,
+html[data-bs-theme="dark"] .quarto-container,
+html[data-bs-theme="dark"] .page-columns,
+html[data-bs-theme="dark"] .page-rows-contents,
+html[data-bs-theme="dark"] .m,
+html[data-bs-theme="dark"] .m-hero,
+html[data-bs-theme="dark"] .m-s,
+html[data-bs-theme="dark"] .m-cta,
+html[data-bs-theme="dark"] .m-listing-hero,
+html[data-bs-theme="dark"] .m-listing-intro,
+html[data-bs-theme="dark"] .container-fluid,
+html[data-bs-theme="dark"] .page-section,
+html[data-bs-theme="dark"] .content,
+html[data-bs-theme="dark"] .card,
+html[data-bs-theme="dark"] .card-body,
+html[data-bs-theme="dark"] .card-header,
+html[data-bs-theme="dark"] .card-footer,
+html[data-bs-theme="dark"] .feature-card,
+html[data-bs-theme="dark"] .security-feature,
+html[data-bs-theme="dark"] .quarto-grid-item {
   background-color: #111 !important;
+}
+html[data-bs-theme="dark"] .m-bg {
+  background-color: #161617 !important;
 }
 
 /* Responsive — Tablet */
