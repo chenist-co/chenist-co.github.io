@@ -114,3 +114,33 @@ html[data-bs-theme="dark"] .blog-cta, body.quarto-dark .blog-cta { background: #
   padding-left: 1.5rem;
   font-size: 0.75rem;
 }
+
+/* === AUDIT FIXES === */
+
+/* Fix 1: Missing .m-b-ghost button */
+.m-b-ghost{display:inline-block;padding:0.85rem 2.25rem;border:1.5px solid rgba(255,255,255,0.3);color:#fff;border-radius:980px;font-weight:500;font-size:1rem;text-decoration:none;transition:all 0.15s;}
+.m-b-ghost:hover{border-color:#fff;color:#fff;text-decoration:none;}
+
+/* Fix 2: Headings readable in dark mode */
+html[data-bs-theme="dark"] h1,html[data-bs-theme="dark"] h2,html[data-bs-theme="dark"] h3,html[data-bs-theme="dark"] h4,html[data-bs-theme="dark"] h5,html[data-bs-theme="dark"] h6,body.quarto-dark h1,body.quarto-dark h2,body.quarto-dark h3,body.quarto-dark h4,body.quarto-dark h5,body.quarto-dark h6{color:#f5f5f7 !important;}
+
+/* Fix 4: Blog max-width wins over !important */
+.page-layout-article main.content{max-width:760px !important;padding:2rem 1.5rem 4rem !important;}
+
+/* Fix 5: Dark mode SVG pattern on .m-bg (low opacity) */
+html[data-bs-theme="dark"] .m-bg{background-color:#161617 !important;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 200 200'%3E%3Crect fill='none' width='200' height='200'/%3E%3Cg fill='none' stroke='%2381BD4A' stroke-width='1' stroke-opacity='0.04'%3E%3Crect x='-40' y='40' width='75' height='75'/%3E%3Crect x='40' width='75' height='75'/%3E%3Crect x='80' y='80' width='75' height='75'/%3E%3Crect x='120' y='-40' width='75' height='75'/%3E%3Crect y='120' width='75' height='75'/%3E%3Crect x='160' y='40' width='75' height='75'/%3E%3C/g%3E%3C/svg%3E") !important;background-size:200px 200px !important;}
+
+/* Fix 7: Better gray contrast (WCAG AA) */
+.m{--g:#6e6e73;}
+
+/* Fix 13: Blog card visible in dark mode */
+.page-layout-article .card{background:#f5f5f7;border:1px solid rgba(0,0,0,0.06);border-radius:16px;}
+html[data-bs-theme="dark"] .page-layout-article .card{background:#1a1a1d !important;border-color:rgba(255,255,255,0.06);}
+
+/* Fix 16: Focus visible on green buttons (white outline) */
+.m-b:focus-visible,.m-bo:focus-visible,.ev-btn:focus-visible,.hp-hero-btn:focus-visible,.m-b-ghost:focus-visible{outline:2px solid #fff;outline-offset:3px;}
+
+/* Fix 17: Reduced motion + no-JS fallback */
+@media (prefers-reduced-motion:reduce){
+.m-s,.m-bg,.m-cta,.m-r,.m-n,.hp-sec,.hp-stats,.ev-card,.ev-past,.m-t{opacity:1 !important;transform:none !important;transition:none !important;}
+}
