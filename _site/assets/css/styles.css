@@ -14,6 +14,26 @@ html[data-bs-theme="dark"] .container-fluid,
 html[data-bs-theme="dark"] .quarto-title-block,
 html[data-bs-theme="dark"] #title-block-header { background-color: #111 !important; }
 
+/* Override any light gray/white backgrounds in dark mode */
+html[data-bs-theme="dark"] [style*="f5f5f7"],
+html[data-bs-theme="dark"] .bg-light,
+html[data-bs-theme="dark"] .bg-white,
+html[data-bs-theme="dark"] .hero-section,
+html[data-bs-theme="dark"] .cta-section,
+html[data-bs-theme="dark"] .page-section,
+html[data-bs-theme="dark"] .security-feature,
+html[data-bs-theme="dark"] .feature-card,
+html[data-bs-theme="dark"] .card,
+html[data-bs-theme="dark"] .card-body,
+html[data-bs-theme="dark"] .card-header,
+html[data-bs-theme="dark"] .table,
+html[data-bs-theme="dark"] .table-hover,
+html[data-bs-theme="dark"] .nav-tabs,
+html[data-bs-theme="dark"] .tab-content,
+html[data-bs-theme="dark"] .breadcrumb {
+  background-color: #111 !important;
+}
+
 /* Design tokens */
 :root {
   --brand-navy: #323642;
