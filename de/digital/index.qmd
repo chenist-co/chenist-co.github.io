@@ -1,23 +1,20 @@
 ---
 title: "Digitale Infrastruktur"
-page-layout: custom
 title-block-style: none
 subtitle: "Open-Source, UNIX & Apple-Infrastruktur für Unternehmen jeder Größe"
 description: "Produktionsreife Open-Source-, Linux-, BSD- und Apple Business-Infrastruktur für KMU. NixOS, OpenBSD, FreeBSD, Nextcloud und Zero-Touch Apple-Gerätebereitstellung."
 from: markdown+raw_html
+page-layout: custom
 format:
   html:
+    toc: false
     include-in-header:
       text: |
         <style>
-        .platform-badge {
-          display: inline-block;
-          padding: 0.25rem 0.75rem;
-          border-radius: 2rem;
-          font-size: 0.8rem;
-          font-weight: 600;
-          margin: 0.15rem;
-        }
+        .quarto-title-block, #title-block-header { display: none !important; }
+        #quarto-content > * { margin-top: 0 !important; padding-top: 0 !important; }
+        main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
+        .platform-badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 2rem; font-size: 0.8rem; font-weight: 600; margin: 0.15rem; }
         .badge-linux { background: rgba(255, 193, 7, 0.15); color: #FFC107; }
         .badge-bsd { background: rgba(220, 53, 69, 0.15); color: #DC3545; }
         .badge-apple { background: rgba(108, 117, 125, 0.15); color: #6C757D; }
@@ -28,767 +25,236 @@ format:
         .pricing-card .card-header { font-size: 1.1rem; }
         .pricing-featured { border-color: #81BD4A; }
         .pricing-featured .card-header { background-color: #81BD4A !important; }
-        .m-highlight {
-          background: linear-gradient(135deg, rgba(108,117,125,0.08) 0%, rgba(129,189,74,0.08) 100%);
-          border-left: 4px solid #6C757D;
-          padding: 1.5rem;
-          border-radius: 0 0.5rem 0.5rem 0;
-          margin: 1rem 0;
-        }
+        .m-highlight { background: linear-gradient(135deg, rgba(108,117,125,0.08) 0%, rgba(129,189,74,0.08) 100%); border-left: 4px solid #6C757D; padding: 1.5rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1rem 0; }
         </style>
 ---
 
 ```{=html}
+<div class="m">
 
 <div class="m-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-8 offset-md-2 text-center">
-        <h1><span class="text-white">Digitale</span> <span class="text-green">Infrastruktur</span></h1>
-        <p>Open-Source, UNIX & Apple-Plattformen maßgeschneidert für KMU in jeder Branche</p>
-      </div>
+    <h1>Digitale <span class="gr">Infrastruktur</span></h1>
+    <p>Open-Source, UNIX & Apple-Plattformen maßgeschneidert für KMU in jeder Branche</p>
+  </div>
+</div>
+
+<div class="m-bg">
+  <div class="container">
+    <h2>Infrastruktur, die für Ihr Unternehmen funktioniert</h2>
+    <p class="sub">Wir entwerfen, implementieren und verwalten produktionsreife digitale Infrastruktur auf Basis von Open-Source-Software, UNIX-Betriebssystemen und Apple-Plattformen.</p>
+    <div class="row g-5">
+      <div class="col-md-4"><div class="m-t">
+        <i class="bi bi-code-square"></i>
+        <h3>Open-Source-Stack</h3>
+        <p>Produktionsreife Open-Source-Tools, die teure proprietäre Software ersetzen, ohne Funktionalität einzubüßen.</p>
+        <span class="platform-badge badge-opensource">Self-Hosted</span>
+        <span class="platform-badge badge-opensource">Kein Vendor Lock-in</span>
+        <a href="#open-source" class="m-lk" style="display:block;margin-top:0.5rem;">Mehr erfahren</a>
+      </div></div>
+      <div class="col-md-4"><div class="m-t">
+        <i class="bi bi-terminal"></i>
+        <h3>UNIX-Systeme</h3>
+        <p>BSD- und Linux-Infrastruktur in Enterprise-Qualität für Server, Firewalls, Speicher und Netzwerke.</p>
+        <span class="platform-badge badge-linux">Linux</span>
+        <span class="platform-badge badge-bsd">BSD</span>
+        <span class="platform-badge badge-linux">NixOS</span>
+        <a href="#unix" class="m-lk" style="display:block;margin-top:0.5rem;">Mehr erfahren</a>
+      </div></div>
+      <div class="col-md-4"><div class="m-t">
+        <i class="bi bi-apple"></i>
+        <h3>Apple-Infrastruktur</h3>
+        <p>Komplette Apple-Ökosystemverwaltung mit der neuen Apple Business-Plattform und macOS-Flottenbereitstellung.</p>
+        <span class="platform-badge badge-apple">macOS</span>
+        <span class="platform-badge badge-apple">iOS/iPadOS</span>
+        <span class="platform-badge badge-free">Kostenloses MDM</span>
+        <a href="#apple" class="m-lk" style="display:block;margin-top:0.5rem;">Mehr erfahren</a>
+      </div></div>
     </div>
   </div>
 </div>
 
-<style>
-  .text-white { color: white !important; }
-</style>
-```
-
-::: {.container .page-section}
-
-## Infrastruktur, die für Ihr Unternehmen funktioniert
-
-Wir entwerfen, implementieren und verwalten produktionsreife digitale Infrastruktur auf Basis von Open-Source-Software, UNIX-Betriebssystemen und Apple-Plattformen. Unsere Lösungen sind auf kleine und mittlere Unternehmen in jedem Tätigkeitsbereich zugeschnitten -- von Anwaltskanzleien und Kliniken über Fertigung, Einzelhandel, Logistik bis hin zu Kreativstudios.
-
-::: {.row .mt-4}
-::: {.col-md-4}
-::: {.card .mb-4 .h-100}
-::: {.card-body}
-### <i class="bi bi-code-square text-success"></i> Open-Source-Stack
-
-Produktionsreife Open-Source-Tools, die teure proprietäre Software ersetzen, ohne Funktionalität einzubüßen.
-
-<span class="platform-badge badge-opensource">Self-Hosted</span>
-<span class="platform-badge badge-opensource">Kein Vendor Lock-in</span>
-
-#### Beinhaltet:
-- Produktivitäts- und Collaboration-Suiten
-- Kommunikations- und Messaging-Plattformen
-- Identitäts- und Zugriffsverwaltung
-- Monitoring und Observability
-- DevOps und Versionskontrolle
-
-[Mehr erfahren](#open-source){.btn .btn-outline-primary .mt-2}
-:::
-:::
-:::
-
-::: {.col-md-4}
-::: {.card .mb-4 .h-100}
-::: {.card-body}
-### <i class="bi bi-terminal text-warning"></i> UNIX-Systeme
-
-BSD- und Linux-Infrastruktur in Enterprise-Qualität für Server, Firewalls, Speicher und Netzwerke.
-
-<span class="platform-badge badge-linux">Linux</span>
-<span class="platform-badge badge-bsd">BSD</span>
-<span class="platform-badge badge-linux">NixOS</span>
-
-#### Beinhaltet:
-- Server-Bereitstellung und Härtung
-- Firewall und Netzwerksicherheit
-- Speicher- und Backup-Systeme
-- Deklarative Infrastruktur
-- Hybridumgebungs-Integration
-
-[Mehr erfahren](#unix){.btn .btn-outline-primary .mt-2}
-:::
-:::
-:::
-
-::: {.col-md-4}
-::: {.card .mb-4 .h-100}
-::: {.card-body}
-### <i class="bi bi-apple text-secondary"></i> Apple-Infrastruktur
-
-Komplette Apple-Ökosystemverwaltung mit der neuen Apple Business-Plattform und macOS-Flottenbereitstellung.
-
-<span class="platform-badge badge-apple">macOS</span>
-<span class="platform-badge badge-apple">iOS/iPadOS</span>
-<span class="platform-badge badge-free">Kostenloses MDM</span>
-
-#### Beinhaltet:
-- Apple Business Einrichtung und Verwaltung
-- Zero-Touch-Gerätebereitstellung
-- Geschäfts-E-Mail, Kalender und Verzeichnis
-- Markenmanagement auf Apple Maps
-- AppleCare+ for Business
-
-[Mehr erfahren](#apple){.btn .btn-outline-primary .mt-2}
-:::
-:::
-:::
-:::
-
----
-
-## Open-Source-Stack für Unternehmen {#open-source}
-
-Ersetzen Sie teure proprietäre Lizenzen durch bewährte Open-Source-Alternativen. Wir übernehmen Bereitstellung, Konfiguration, Sicherheitshärtung und laufende Wartung, damit sich Ihr Team auf seine Arbeit konzentrieren kann.
-
-```{=html}
-<div class="row mt-4">
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-file-earmark-richtext"></i>
-      </div>
-      <h3>Produktivität und Zusammenarbeit</h3>
-      <p>Komplette Office-Suite, Cloud-Speicher und Echtzeit-Dokumentenzusammenarbeit für Ihr gesamtes Team.</p>
-      <small class="text-muted">LibreOffice | Nextcloud | Collabora Online | CryptPad | OnlyOffice</small>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-chat-dots"></i>
-      </div>
-      <h3>Kommunikation</h3>
-      <p>Sichere Nachrichten, Videokonferenzen und Teamkanäle mit vollständiger Datenhoheit.</p>
-      <small class="text-muted">Matrix/Element | Mattermost | Jitsi Meet | Rocket.Chat</small>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-person-badge"></i>
-      </div>
-      <h3>Identität und Zugriff</h3>
-      <p>Single Sign-On, Verzeichnisdienste und Multi-Faktor-Authentifizierung für alle Ihre Systeme.</p>
-      <small class="text-muted">Keycloak | OpenLDAP | FreeIPA | Authelia</small>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-graph-up"></i>
-      </div>
-      <h3>Monitoring und Observability</h3>
-      <p>Echtzeit-Dashboards, Alerting und Verfügbarkeitsüberwachung für Ihre gesamte Infrastruktur.</p>
-      <small class="text-muted">Prometheus | Grafana | Uptime Kuma | Zabbix | Loki</small>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-git"></i>
-      </div>
-      <h3>DevOps und Versionskontrolle</h3>
-      <p>Selbstgehostete Code-Repositories, CI/CD-Pipelines und Container-Orchestrierung.</p>
-      <small class="text-muted">Gitea/Forgejo | Woodpecker CI | Docker | Podman</small>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-database"></i>
-      </div>
-      <h3>Datenbanken und Speicher</h3>
-      <p>Zuverlässige Datenspeicherung, automatisierte Backups und hochverfügbare Datenbankcluster.</p>
-      <small class="text-muted">PostgreSQL | MariaDB | Redis | MinIO | Restic</small>
+<div class="m-s" id="open-source">
+  <div class="container">
+    <h2>Open-Source-Stack für Unternehmen</h2>
+    <p class="sub">Ersetzen Sie teure proprietäre Lizenzen durch bewährte Open-Source-Alternativen.</p>
+    <div class="row g-5">
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-file-earmark-richtext"></i><h3>Produktivität und Zusammenarbeit</h3><p>Komplette Office-Suite, Cloud-Speicher und Echtzeit-Dokumentenzusammenarbeit für Ihr gesamtes Team.</p><small class="text-muted">LibreOffice | Nextcloud | Collabora Online | CryptPad | OnlyOffice</small></div></div>
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-chat-dots"></i><h3>Kommunikation</h3><p>Sichere Nachrichten, Videokonferenzen und Teamkanäle mit vollständiger Datenhoheit.</p><small class="text-muted">Matrix/Element | Mattermost | Jitsi Meet | Rocket.Chat</small></div></div>
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-person-badge"></i><h3>Identität und Zugriff</h3><p>Single Sign-On, Verzeichnisdienste und Multi-Faktor-Authentifizierung für alle Ihre Systeme.</p><small class="text-muted">Keycloak | OpenLDAP | FreeIPA | Authelia</small></div></div>
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-graph-up"></i><h3>Monitoring und Observability</h3><p>Echtzeit-Dashboards, Alerting und Verfügbarkeitsüberwachung für Ihre gesamte Infrastruktur.</p><small class="text-muted">Prometheus | Grafana | Uptime Kuma | Zabbix | Loki</small></div></div>
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-git"></i><h3>DevOps und Versionskontrolle</h3><p>Selbstgehostete Code-Repositories, CI/CD-Pipelines und Container-Orchestrierung.</p><small class="text-muted">Gitea/Forgejo | Woodpecker CI | Docker | Podman</small></div></div>
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-database"></i><h3>Datenbanken und Speicher</h3><p>Zuverlässige Datenspeicherung, automatisierte Backups und hochverfügbare Datenbankcluster.</p><small class="text-muted">PostgreSQL | MariaDB | Redis | MinIO | Restic</small></div></div>
     </div>
   </div>
 </div>
-```
 
----
-
-## UNIX-Infrastruktur {#unix}
-
-Wir bauen und verwalten Server, Firewalls und Netzwerkgeräte auf bewährten UNIX-Betriebssystemen. Ob Sie eine gehärtete OpenBSD-Firewall, eine deklarative NixOS-Flotte oder einen traditionellen Linux-Serverstack benötigen -- wir liefern Infrastruktur, die sicher, reproduzierbar und wartbar ist.
-
-### Linux-Distributionen
-
-```{=html}
-<div class="row mt-4">
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-warning text-dark">
-        <h4 class="mb-0"><i class="bi bi-snow me-2"></i>NixOS</h4>
-      </div>
-      <div class="card-body">
-        <p>Deklarative, reproduzierbare Infrastruktur. Definieren Sie Ihr gesamtes System als Code und stellen Sie identische Konfigurationen auf beliebig vielen Maschinen bereit.</p>
-        <ul class="mb-0">
-          <li>Unveränderliche Systemkonfiguration</li>
-          <li>Atomare Upgrades und Rollbacks</li>
-          <li>Reproduzierbare Builds über Umgebungen hinweg</li>
-          <li>Flake-basierte Multi-Maschinen-Bereitstellungen</li>
-        </ul>
-      </div>
+<div class="m-bg" id="unix">
+  <div class="container">
+    <h2>UNIX-Infrastruktur</h2>
+    <p class="sub">Server, Firewalls und Netzwerkgeräte auf bewährten UNIX-Betriebssystemen.</p>
+    <h3>Linux-Distributionen</h3>
+    <div class="row g-5 mt-2">
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-snow"></i><h3>NixOS</h3><p>Deklarative, reproduzierbare Infrastruktur. Definieren Sie Ihr gesamtes System als Code.</p><ul><li>Unveränderliche Systemkonfiguration</li><li>Atomare Upgrades und Rollbacks</li><li>Reproduzierbare Builds über Umgebungen hinweg</li><li>Flake-basierte Multi-Maschinen-Bereitstellungen</li></ul></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-ubuntu"></i><h3>Debian/Ubuntu</h3><p>Die am breitesten unterstützte Linux-Familie. Ideal für Anwendungsserver und Webhosting.</p><ul><li>LTS-Versionen mit 5+ Jahren Support</li><li>Riesiges Paket-Ökosystem</li><li>Automatische Sicherheitsupdates</li><li>Bewährt in Produktion in jeder Größenordnung</li></ul></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-building"></i><h3>RHEL/AlmaLinux</h3><p>Enterprise-Stabilität für Workloads, die Zertifizierung oder Compliance erfordern.</p><ul><li>10 Jahre Lebenszyklus-Support</li><li>SELinux Mandatory Access Control</li><li>FIPS und Common Criteria zertifiziert</li><li>Herstellerzertifizierte Anwendungsstacks</li></ul></div></div>
     </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-warning text-dark">
-        <h4 class="mb-0"><i class="bi bi-ubuntu me-2"></i>Debian/Ubuntu</h4>
-      </div>
-      <div class="card-body">
-        <p>Die am breitesten unterstützte Linux-Familie. Ideal für Anwendungsserver, Webhosting und Workloads mit breiter Softwarekompatibilität.</p>
-        <ul class="mb-0">
-          <li>LTS-Versionen mit 5+ Jahren Support</li>
-          <li>Riesiges Paket-Ökosystem</li>
-          <li>Automatische Sicherheitsupdates</li>
-          <li>Bewährt in Produktion in jeder Größenordnung</li>
-        </ul>
-      </div>
+    <h3 style="margin-top:3rem;">BSD-Systeme</h3>
+    <div class="row g-5 mt-2">
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-shield-lock"></i><h3>OpenBSD</h3><p>Das sicherste Allzweck-Betriebssystem. Ideal für Firewalls und VPN-Gateways.</p><ul><li>pf-Paketfilter (Branchenstandard-Firewall)</li><li>Philosophie: Sicher als Standard</li><li>Integriertes VPN (WireGuard, IKEv2)</li><li>Minimale Angriffsfläche</li></ul></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-hdd-stack"></i><h3>FreeBSD</h3><p>Hochleistungsspeicher und Netzwerke. Die Grundlage von Netflix CDN, WhatsApp und Sony PlayStation Network.</p><ul><li>ZFS Enterprise-Dateisystem</li><li>Jails-Containerisierung</li><li>bhyve Hypervisor</li><li>Erweiterte Netzwerkfunktionen (VNET, CARP)</li></ul></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-cpu"></i><h3>NetBSD</h3><p>Läuft auf praktisch jeder Hardware. Perfekt für eingebettete Systeme und IoT-Gateways.</p><ul><li>Unterstützt über 60 Hardware-Plattformen</li><li>Leichtgewichtig und effizient</li><li>pkgsrc Cross-Platform-Pakete</li><li>Ideal für Edge- und IoT-Bereitstellungen</li></ul></div></div>
     </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-warning text-dark">
-        <h4 class="mb-0"><i class="bi bi-building me-2"></i>RHEL/AlmaLinux</h4>
-      </div>
-      <div class="card-body">
-        <p>Enterprise-Stabilität für Workloads, die Herstellerzertifizierung, Compliance-Anforderungen oder langfristigen Lebenszyklus-Support erfordern.</p>
-        <ul class="mb-0">
-          <li>10 Jahre Lebenszyklus-Support</li>
-          <li>SELinux Mandatory Access Control</li>
-          <li>FIPS und Common Criteria zertifiziert</li>
-          <li>Herstellerzertifizierte Anwendungsstacks</li>
-        </ul>
-      </div>
+    <h3 style="margin-top:3rem;">Hybridumgebungs-Integration</h3>
+    <div class="row g-5 mt-2">
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-people"></i><h3>Verzeichnisbrücke</h3><p>Samba/AD-Integration, die UNIX-Systeme mit bestehenden Windows-Umgebungen verbindet</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-key"></i><h3>Cross-Platform SSO</h3><p>Eine Identität auf Linux, BSD, macOS und Windows-Systemen</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-share"></i><h3>Dateifreigabe</h3><p>Einheitlicher Dateizugriff auf allen Plattformen über NFS, SMB und WebDAV</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-printer"></i><h3>Drucker und Peripherie</h3><p>CUPS-basierte Druckerverwaltung und Peripherie-Freigabe in gemischten Umgebungen</p></div></div>
     </div>
   </div>
 </div>
-```
 
-### BSD-Systeme
-
-```{=html}
-<div class="row mt-4">
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-danger text-white">
-        <h4 class="mb-0"><i class="bi bi-shield-lock me-2"></i>OpenBSD</h4>
-      </div>
-      <div class="card-body">
-        <p>Das sicherste Allzweck-Betriebssystem. Ideal für Firewalls, VPN-Gateways und sicherheitskritische Netzwerkgeräte.</p>
-        <ul class="mb-0">
-          <li>pf-Paketfilter (Branchenstandard-Firewall)</li>
-          <li>Philosophie: Sicher als Standard</li>
-          <li>Integriertes VPN (WireGuard, IKEv2)</li>
-          <li>Minimale Angriffsfläche</li>
-        </ul>
+<div class="m-s" id="apple">
+  <div class="container">
+    <h2>Apple-Infrastruktur</h2>
+    <p class="sub">Early Adopter und Bereitstellungspartner für die neue Apple Business-Plattform.</p>
+    <div class="m-highlight">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <h3 class="mb-2"><i class="bi bi-apple me-2"></i>Apple Business <span class="platform-badge badge-free">Kostenlose Plattform</span></h3>
+          <p class="mb-1">Eine neue All-in-One-Plattform für Unternehmen jeder Größe. Verwalten Sie Mitarbeiter und Geräte, erreichen Sie Kunden, statten Sie Ihr Team mit wichtigen Tools aus.</p>
+          <p class="mb-0 text-muted"><small>Verfügbar ab 14. April 2026 in über 200 Ländern und Regionen</small></p>
+        </div>
+        <div class="col-md-4 text-center">
+          <a href="https://business.apple.com/preview" target="_blank" class="m-b">Apple Business Vorschau</a>
+        </div>
       </div>
     </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-danger text-white">
-        <h4 class="mb-0"><i class="bi bi-hdd-stack me-2"></i>FreeBSD</h4>
-      </div>
-      <div class="card-body">
-        <p>Hochleistungsspeicher und Netzwerke. Die Grundlage von Netflix CDN, WhatsApp und Sony PlayStation Network.</p>
-        <ul class="mb-0">
-          <li>ZFS Enterprise-Dateisystem</li>
-          <li>Jails-Containerisierung</li>
-          <li>bhyve Hypervisor</li>
-          <li>Erweiterte Netzwerkfunktionen (VNET, CARP)</li>
-        </ul>
-      </div>
+    <h3 style="margin-top:3rem;">Geräteverwaltung und Bereitstellung</h3>
+    <div class="row g-5 mt-2">
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-phone"></i><h3>Integriertes MDM</h3><p>Umfassende Mobilgeräteverwaltung mit vollständiger organisatorischer Transparenz.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-layers"></i><h3>Blueprints</h3><p>Vorkonfigurierte Geräteeinstellungen für Zero-Touch-Bereitstellung.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-shield-lock"></i><h3>Verwaltete Apple-Accounts</h3><p>Kryptographische Trennung zwischen Arbeits- und persönlichen Daten.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-people"></i><h3>Teamverwaltung</h3><p>Gruppieren Sie Mitarbeiter nach Funktion oder Team. Weisen Sie Apps, Rollen und Berechtigungen zu.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-bag-check"></i><h3>App-Verteilung</h3><p>Verteilen Sie Geschäftsanwendungen aus dem App Store auf beliebig viele Geräte.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-code-slash"></i><h3>Admin API</h3><p>Programmatische Geräteverwaltung für groß angelegte Bereitstellungen.</p></div></div>
     </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-danger text-white">
-        <h4 class="mb-0"><i class="bi bi-cpu me-2"></i>NetBSD</h4>
-      </div>
-      <div class="card-body">
-        <p>Läuft auf praktisch jeder Hardware. Perfekt für eingebettete Systeme, IoT-Gateways und die Wiederverwendung älterer Hardware.</p>
-        <ul class="mb-0">
-          <li>Unterstützt über 60 Hardware-Plattformen</li>
-          <li>Leichtgewichtig und effizient</li>
-          <li>pkgsrc Cross-Platform-Pakete</li>
-          <li>Ideal für Edge- und IoT-Bereitstellungen</li>
-        </ul>
-      </div>
+    <h3 style="margin-top:3rem;">Kommunikations- und Zusammenarbeitstools</h3>
+    <div class="row g-5 mt-2">
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-envelope"></i><h3>Geschäfts-E-Mail und Kalender</h3><ul><li><strong>E-Mail mit eigener Domain:</strong> Professionelle E-Mail auf Ihrer eigenen Domain</li><li><strong>Kalenderdelegierung:</strong> Gemeinsame Kalender und Planungstools</li><li><strong>Firmenverzeichnis:</strong> Integriertes Verzeichnis mit personalisierten Kontaktkarten</li><li><strong>iCloud-Speicher:</strong> Automatisches Backup und Dateisynchronisierung (ab $0,99/Benutzer/Monat)</li></ul><small class="text-muted">Erfordert iOS 26, iPadOS 26 oder macOS 26</small></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-geo-alt"></i><h3>Marke und Kundenentdeckung</h3><ul><li><strong>Markenprofile:</strong> Verwalten Sie Ihre Marke auf Apple Maps, Wallet und Mail</li><li><strong>Detaillierte Ortskarten:</strong> Fotos, Öffnungszeiten, Standortdetails auf Apple Maps</li><li><strong>Standorteinblicke:</strong> Analysen darüber, wie Kunden Ihr Unternehmen entdecken</li><li><strong>Benutzerdefinierte Aktionen:</strong> Bestellen, reservieren oder buchen Sie direkt von Apple Maps</li><li><strong>Tap to Pay:</strong> Akzeptieren Sie Zahlungen auf dem iPhone mit gebrandeten Zahlungsbildschirmen</li></ul></div></div>
+    </div>
+    <h3 style="margin-top:3rem;">Apple Business Preise</h3>
+    <div class="row g-5 mt-2">
+      <div class="col-md-4"><div class="m-t" style="text-align:center;"><i class="bi bi-check-circle"></i><h3>Basisplattform</h3><h2 style="color:#81BD4A;">Kostenlos</h2><p>MDM, Blueprints, Verwaltete Accounts, Markenmanagement, App-Verteilung, Admin API</p></div></div>
+      <div class="col-md-4"><div class="m-t" style="text-align:center;"><i class="bi bi-cloud"></i><h3>iCloud-Speicher</h3><h2>$0,99+</h2><p>Pro Benutzer/Monat. Bis zu 2TB pro Benutzer für Backup, Dateisynchronisierung und Zusammenarbeit.</p></div></div>
+      <div class="col-md-4"><div class="m-t" style="text-align:center;"><i class="bi bi-wrench"></i><h3>AppleCare+ for Business</h3><h2>$6,99-$13,99</h2><p>Pro Gerät/Monat. Technischer Expertensupport und Hardware-Reparaturabdeckung.</p></div></div>
     </div>
   </div>
 </div>
-```
 
-### Hybridumgebungs-Integration
-
-```{=html}
-<div class="row mt-4">
-  <div class="col-md-12">
-    <div class="card mb-4">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-md-3 text-center">
-            <div class="process-step">
-              <div class="process-icon">
-                <i class="bi bi-people fs-1 text-primary"></i>
-              </div>
-              <h5>Verzeichnisbrücke</h5>
-              <p>Samba/AD-Integration, die UNIX-Systeme mit bestehenden Windows-Umgebungen verbindet</p>
-            </div>
+<div class="m-bg" id="packages">
+  <div class="container">
+    <h2>KMU-Pakete</h2>
+    <p class="sub">Maßgeschneiderte Pakete, die Open-Source-, UNIX- und Apple-Infrastruktur für Ihr Unternehmen kombinieren.</p>
+    <div class="row g-5">
+      <div class="col-md-4">
+        <div class="card pricing-card mb-4 h-100">
+          <div class="card-header bg-primary text-white text-center"><h3 class="mb-0">Starter</h3><small>1-10 Mitarbeiter</small></div>
+          <div class="card-body">
+            <h4 class="text-center mb-4">Für kleine Teams am Anfang</h4>
+            <ul>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Apple Business Einrichtung und Blueprints</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>1 Linux-Server (Debian/Ubuntu)</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Nextcloud (Dateien, Kontakte, Kalender)</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Geschäfts-E-Mail auf eigener Domain</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Basis-Firewall (OpenBSD pf oder UFW)</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Automatisierte Backups (Restic)</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Verfügbarkeitsüberwachung</li>
+            </ul>
+            <div class="text-center mt-auto"><a href="https://cal.com/chenist" target="_blank" class="m-b">Beratung buchen</a></div>
           </div>
-
-          <div class="col-md-3 text-center">
-            <div class="process-step">
-              <div class="process-icon">
-                <i class="bi bi-key fs-1 text-primary"></i>
-              </div>
-              <h5>Cross-Platform SSO</h5>
-              <p>Eine Identität auf Linux, BSD, macOS und Windows-Systemen</p>
-            </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card pricing-card pricing-featured mb-4 h-100">
+          <div class="card-header text-white text-center"><h3 class="mb-0">Growth</h3><small>11-50 Mitarbeiter</small></div>
+          <div class="card-body">
+            <h4 class="text-center mb-4">Für wachsende Unternehmen</h4>
+            <ul>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Alles aus Starter, plus:</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Vollständiges Apple MDM mit Teamgruppierung</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Dedizierte OpenBSD-Firewall/VPN</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Keycloak SSO für alle Systeme</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Matrix/Element Team-Messaging</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Collabora Online (Dokumentbearbeitung)</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Prometheus + Grafana Monitoring</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Samba/AD-Brücke (bei Bedarf)</li>
+            </ul>
+            <div class="text-center mt-auto"><a href="https://cal.com/chenist" target="_blank" class="m-b">Beratung buchen</a></div>
           </div>
-
-          <div class="col-md-3 text-center">
-            <div class="process-step">
-              <div class="process-icon">
-                <i class="bi bi-share fs-1 text-primary"></i>
-              </div>
-              <h5>Dateifreigabe</h5>
-              <p>Einheitlicher Dateizugriff auf allen Plattformen über NFS, SMB und WebDAV</p>
-            </div>
-          </div>
-
-          <div class="col-md-3 text-center">
-            <div class="process-step">
-              <div class="process-icon">
-                <i class="bi bi-printer fs-1 text-primary"></i>
-              </div>
-              <h5>Drucker und Peripherie</h5>
-              <p>CUPS-basierte Druckerverwaltung und Peripherie-Freigabe in gemischten Umgebungen</p>
-            </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card pricing-card mb-4 h-100">
+          <div class="card-header bg-warning text-dark text-center"><h3 class="mb-0">Enterprise</h3><small>50+ Mitarbeiter</small></div>
+          <div class="card-body">
+            <h4 class="text-center mb-4">Für komplexe Mehrstandort-Betriebe</h4>
+            <ul>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Alles aus Growth, plus:</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Apple Business Admin API-Integration</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>NixOS deklarative Multi-Server-Flotte</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>FreeBSD ZFS-Speichercluster</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Hochverfügbarkeitskonfigurationen</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Multi-Standort VPN-Mesh</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Compliance-Baselines (NIS2, DSGVO)</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>24/7-Überwachung und Incident Response</li>
+            </ul>
+            <div class="text-center mt-auto"><a href="https://cal.com/chenist" target="_blank" class="m-b">Beratung buchen</a></div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-```
 
----
-
-## Apple-Infrastruktur {#apple}
-
-Wir sind Early Adopter und Bereitstellungspartner für die neue **Apple Business**-Plattform, die am 14. April 2026 startet. Apple Business ersetzt Apple Business Manager, Apple Business Essentials und Apple Business Connect in einer einzigen, einheitlichen Plattform -- und der Basisdienst ist **kostenlos**.
-
-```{=html}
-<div class="m-highlight">
-  <div class="row align-items-center">
-    <div class="col-md-8">
-      <h3 class="mb-2"><i class="bi bi-apple me-2"></i>Apple Business <span class="platform-badge badge-free">Kostenlose Plattform</span></h3>
-      <p class="mb-1">Eine neue All-in-One-Plattform für Unternehmen jeder Größe. Verwalten Sie Mitarbeiter und Geräte, erreichen Sie Kunden, statten Sie Ihr Team mit wichtigen Tools aus und erhalten Sie Support von Apple-Experten.</p>
-      <p class="mb-0 text-muted"><small>Verfügbar ab 14. April 2026 in über 200 Ländern und Regionen</small></p>
-    </div>
-    <div class="col-md-4 text-center">
-      <a href="https://business.apple.com/preview" target="_blank" class="btn btn-outline-secondary btn-lg">
-        <i class="bi bi-box-arrow-up-right me-2"></i>Apple Business Vorschau
-      </a>
+<div class="m-s">
+  <div class="container">
+    <h2>Branchen, die wir bedienen</h2>
+    <p class="sub">Unsere Lösungen für digitale Infrastruktur sind für jeden Tätigkeitsbereich konzipiert.</p>
+    <div class="row g-5">
+      <div class="col-md-3 col-6"><div class="m-t"><i class="bi bi-building"></i><h3>Recht und Beratung</h3></div></div>
+      <div class="col-md-3 col-6"><div class="m-t"><i class="bi bi-heart-pulse"></i><h3>Gesundheitswesen und Kliniken</h3></div></div>
+      <div class="col-md-3 col-6"><div class="m-t"><i class="bi bi-gear"></i><h3>Fertigung</h3></div></div>
+      <div class="col-md-3 col-6"><div class="m-t"><i class="bi bi-shop"></i><h3>Einzelhandel und Gastgewerbe</h3></div></div>
+      <div class="col-md-3 col-6"><div class="m-t"><i class="bi bi-truck"></i><h3>Logistik und Transport</h3></div></div>
+      <div class="col-md-3 col-6"><div class="m-t"><i class="bi bi-palette"></i><h3>Kreativ und Medien</h3></div></div>
+      <div class="col-md-3 col-6"><div class="m-t"><i class="bi bi-mortarboard"></i><h3>Bildung</h3></div></div>
+      <div class="col-md-3 col-6"><div class="m-t"><i class="bi bi-bank"></i><h3>Finanzen und Versicherung</h3></div></div>
     </div>
   </div>
 </div>
-```
 
-### Geräteverwaltung und Bereitstellung
-
-```{=html}
-<div class="row mt-4">
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-phone"></i>
-      </div>
-      <h3>Integriertes MDM</h3>
-      <p>Umfassende Mobilgeräteverwaltung mit vollständiger organisatorischer Transparenz. Keine MDM-Drittanbieterlizenz erforderlich.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-layers"></i>
-      </div>
-      <h3>Blueprints</h3>
-      <p>Vorkonfigurierte Geräteeinstellungen für Zero-Touch-Bereitstellung. Mitarbeiter packen aus und arbeiten sofort los.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-shield-lock"></i>
-      </div>
-      <h3>Verwaltete Apple-Accounts</h3>
-      <p>Kryptographische Trennung zwischen Arbeits- und persönlichen Daten. Volle Privatsphäre für Mitarbeiter, volle Kontrolle für die IT.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-people"></i>
-      </div>
-      <h3>Teamverwaltung</h3>
-      <p>Gruppieren Sie Mitarbeiter nach Funktion oder Team. Weisen Sie Apps, Rollen und Berechtigungen im großen Maßstab zu.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-bag-check"></i>
-      </div>
-      <h3>App-Verteilung</h3>
-      <p>Verteilen Sie Geschäftsanwendungen aus dem App Store auf beliebig viele Geräte -- von 10 bis 10.000.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-code-slash"></i>
-      </div>
-      <h3>Admin API</h3>
-      <p>Programmatische Geräteverwaltung für groß angelegte Bereitstellungen und benutzerdefinierte Automatisierungsworkflows.</p>
+<div class="m-bg">
+  <div class="container">
+    <h2>Warum chen.ist wählen</h2>
+    <p class="sub">Unsere Expertise und unser Ansatz für Digitale Infrastruktur.</p>
+    <div class="row g-5">
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-award"></i><h3>Unsere Expertise</h3><ul><li><strong>UNIX-Veteranen:</strong> Tiefgehende Expertise in BSD, Linux und macOS-Administration</li><li><strong>Open-Source-Mitwirkende:</strong> Wir tragen zu den Tools bei, die wir bereitstellen</li><li><strong>Apple Business Early Adopter:</strong> Bereit ab dem ersten Tag (14. April 2026)</li><li><strong>Security-First-Mentalität:</strong> Jede Bereitstellung wird standardmäßig gehärtet</li><li><strong>Cross-Platform-Kompetenz:</strong> Nahtlose Integration über UNIX, Apple und Windows</li></ul></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-compass"></i><h3>Unser Ansatz</h3><ul><li><strong>Kein Vendor Lock-in:</strong> Open-Source und Standardprotokolle</li><li><strong>Passgenau dimensioniert:</strong> Wir passen Komplexität an tatsächliche Bedürfnisse an</li><li><strong>Transparente Preisgestaltung:</strong> Sie zahlen für Expertise, nicht für Lizenzen</li><li><strong>Wissenstransfer:</strong> Wir dokumentieren alles und schulen Ihr Team</li><li><strong>Langfristige Partnerschaft:</strong> Laufender Support und Weiterentwicklung</li></ul></div></div>
     </div>
   </div>
 </div>
-```
 
-### Kommunikations- und Zusammenarbeitstools
-
-```{=html}
-<div class="row mt-4">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-secondary text-white">
-        <h4 class="mb-0">Geschäfts-E-Mail und Kalender</h4>
-      </div>
-      <div class="card-body">
-        <ul>
-          <li><strong>E-Mail mit eigener Domain:</strong> Professionelle E-Mail auf Ihrer eigenen Domain (bestehende mitbringen oder neue erwerben)</li>
-          <li><strong>Kalenderdelegierung:</strong> Gemeinsame Kalender und Planungstools für Teams</li>
-          <li><strong>Firmenverzeichnis:</strong> Integriertes Verzeichnis mit personalisierten Kontaktkarten für jeden Mitarbeiter</li>
-          <li><strong>iCloud-Speicher:</strong> Automatisches Backup und Dateisynchronisierung (ab $0,99/Benutzer/Monat)</li>
-        </ul>
-        <p class="text-muted mb-0"><small>Erfordert iOS 26, iPadOS 26 oder macOS 26</small></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-secondary text-white">
-        <h4 class="mb-0">Marke und Kundenentdeckung</h4>
-      </div>
-      <div class="card-body">
-        <ul>
-          <li><strong>Markenprofile:</strong> Verwalten Sie Ihre Marke auf Apple Maps, Wallet und Mail</li>
-          <li><strong>Detaillierte Ortskarten:</strong> Fotos, Öffnungszeiten, Standortdetails auf Apple Maps</li>
-          <li><strong>Standorteinblicke:</strong> Analysen darüber, wie Kunden Ihr Unternehmen entdecken</li>
-          <li><strong>Benutzerdefinierte Aktionen:</strong> Bestellen, reservieren oder buchen Sie direkt von Apple Maps zu Ihrer Website</li>
-          <li><strong>Tap to Pay:</strong> Akzeptieren Sie Zahlungen auf dem iPhone mit gebrandeten Zahlungsbildschirmen</li>
-          <li><strong>Anzeigen auf Apple Maps:</strong> Beworbene Platzierung in Suchergebnissen und Vorgeschlagenen Orten (USA/Kanada, Sommer 2026)</li>
-        </ul>
-      </div>
-    </div>
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Bereit, Ihre digitale<br>Infrastruktur aufzubauen?</h2>
+    <p>Buchen Sie eine kostenlose Beratung, um Ihre Geschäftsanforderungen zu besprechen und einen maßgeschneiderten Infrastrukturvorschlag zu erhalten.</p>
+    <a href="https://cal.com/chenist" target="_blank" class="m-b">Beratung buchen</a>
   </div>
 </div>
-```
 
-### Apple Business Preise
-
-```{=html}
-<div class="row mt-4">
-  <div class="col-md-4">
-    <div class="card mb-4 text-center">
-      <div class="card-header bg-success text-white">
-        <h4 class="mb-0">Basisplattform</h4>
-      </div>
-      <div class="card-body">
-        <h2 class="text-success">Kostenlos</h2>
-        <p>MDM, Blueprints, Verwaltete Accounts, Markenmanagement, App-Verteilung, Admin API</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4 text-center">
-      <div class="card-header bg-primary text-white">
-        <h4 class="mb-0">iCloud-Speicher</h4>
-      </div>
-      <div class="card-body">
-        <h2 class="text-primary">$0,99+</h2>
-        <p>Pro Benutzer/Monat. Bis zu 2TB pro Benutzer für Backup, Dateisynchronisierung und Zusammenarbeit.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4 text-center">
-      <div class="card-header bg-warning text-dark">
-        <h4 class="mb-0">AppleCare+ for Business</h4>
-      </div>
-      <div class="card-body">
-        <h2 class="text-warning">$6,99-$13,99</h2>
-        <p>Pro Gerät/Monat. Technischer Expertensupport und Hardware-Reparaturabdeckung.</p>
-      </div>
-    </div>
-  </div>
 </div>
 ```
-
-### Migration von Legacy Apple-Diensten
-
-Wenn Ihr Unternehmen derzeit Apple Business Manager, Apple Business Essentials oder Apple Business Connect nutzt, werden alle drei am 14. April 2026 eingestellt. Wir übernehmen die komplette Migration:
-
-```{=html}
-<div class="row mt-4">
-  <div class="col-md-12">
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-marker bg-success"></div>
-        <div class="timeline-content">
-          <h3>Bestehende Einrichtung prüfen</h3>
-          <p>Überprüfung Ihrer aktuellen Apple Business Manager/Essentials-Konfiguration, registrierten Geräte und verwalteten Apple IDs.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-marker bg-success"></div>
-        <div class="timeline-content">
-          <h3>Migration planen</h3>
-          <p>Bestehende Gerätegruppen, App-Zuweisungen und Richtlinien auf Apple Business Blueprints und Teamstrukturen abbilden.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-marker bg-success"></div>
-        <div class="timeline-content">
-          <h3>Übergang durchführen</h3>
-          <p>Migration zur einheitlichen Apple Business-Plattform. Business Connect-Daten werden automatisch migriert; die Geräteverwaltung erfordert eine Planung der Neuregistrierung.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-marker bg-success"></div>
-        <div class="timeline-content">
-          <h3>Überprüfen und Optimieren</h3>
-          <p>Bestätigung, dass alle Geräte, Accounts und Markenprofile betriebsbereit sind. Blueprints optimieren und neue Funktionen konfigurieren (E-Mail, Kalender, Verzeichnis).</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-```
-
----
-
-## KMU-Pakete {#packages}
-
-Wir bieten maßgeschneiderte Pakete, die Open-Source-, UNIX- und Apple-Infrastruktur kombinieren und auf die Größe und Bedürfnisse Ihres Unternehmens abgestimmt sind. Jedes Paket ist an Ihre branchenspezifischen Anforderungen anpassbar.
-
-```{=html}
-<div class="row mt-5">
-  <div class="col-md-4">
-    <div class="card pricing-card mb-4 h-100">
-      <div class="card-header bg-primary text-white text-center">
-        <h3 class="mb-0">Starter</h3>
-        <small>1-10 Mitarbeiter</small>
-      </div>
-      <div class="card-body">
-        <h4 class="text-center mb-4">Für kleine Teams am Anfang</h4>
-        <ul>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Apple Business Einrichtung und Blueprints</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>1 Linux-Server (Debian/Ubuntu)</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Nextcloud (Dateien, Kontakte, Kalender)</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Geschäfts-E-Mail auf eigener Domain</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Basis-Firewall (OpenBSD pf oder UFW)</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Automatisierte Backups (Restic)</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Verfügbarkeitsüberwachung</li>
-        </ul>
-        <div class="text-center mt-auto">
-          <a href="https://cal.com/chenist" target="_blank" class="btn btn-outline-primary w-100">Beratung buchen</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card pricing-card pricing-featured mb-4 h-100">
-      <div class="card-header text-white text-center">
-        <h3 class="mb-0">Growth</h3>
-        <small>11-50 Mitarbeiter</small>
-      </div>
-      <div class="card-body">
-        <h4 class="text-center mb-4">Für wachsende Unternehmen</h4>
-        <ul>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Alles aus Starter, plus:</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Vollständiges Apple MDM mit Teamgruppierung</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Dedizierte OpenBSD-Firewall/VPN</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Keycloak SSO für alle Systeme</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Matrix/Element Team-Messaging</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Collabora Online (Dokumentbearbeitung)</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Prometheus + Grafana Monitoring</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Samba/AD-Brücke (bei Bedarf)</li>
-        </ul>
-        <div class="text-center mt-auto">
-          <a href="https://cal.com/chenist" target="_blank" class="btn btn-success w-100">Beratung buchen</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card pricing-card mb-4 h-100">
-      <div class="card-header bg-warning text-dark text-center">
-        <h3 class="mb-0">Enterprise</h3>
-        <small>50+ Mitarbeiter</small>
-      </div>
-      <div class="card-body">
-        <h4 class="text-center mb-4">Für komplexe Mehrstandort-Betriebe</h4>
-        <ul>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Alles aus Growth, plus:</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Apple Business Admin API-Integration</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>NixOS deklarative Multi-Server-Flotte</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>FreeBSD ZFS-Speichercluster</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Hochverfügbarkeitskonfigurationen</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Multi-Standort VPN-Mesh</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Compliance-Baselines (NIS2, DSGVO)</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>24/7-Überwachung und Incident Response</li>
-        </ul>
-        <div class="text-center mt-auto">
-          <a href="https://cal.com/chenist" target="_blank" class="btn btn-outline-warning w-100">Beratung buchen</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-```
-
-## Branchen, die wir bedienen
-
-Unsere Lösungen für digitale Infrastruktur sind für **jeden Tätigkeitsbereich** konzipiert. Wir haben Erfahrung in:
-
-```{=html}
-<div class="row mt-4">
-  <div class="col-md-3 col-6">
-    <div class="text-center mb-4">
-      <i class="bi bi-building fs-1 text-primary"></i>
-      <h5 class="mt-2">Recht und Beratung</h5>
-    </div>
-  </div>
-  <div class="col-md-3 col-6">
-    <div class="text-center mb-4">
-      <i class="bi bi-heart-pulse fs-1 text-primary"></i>
-      <h5 class="mt-2">Gesundheitswesen und Kliniken</h5>
-    </div>
-  </div>
-  <div class="col-md-3 col-6">
-    <div class="text-center mb-4">
-      <i class="bi bi-gear fs-1 text-primary"></i>
-      <h5 class="mt-2">Fertigung</h5>
-    </div>
-  </div>
-  <div class="col-md-3 col-6">
-    <div class="text-center mb-4">
-      <i class="bi bi-shop fs-1 text-primary"></i>
-      <h5 class="mt-2">Einzelhandel und Gastgewerbe</h5>
-    </div>
-  </div>
-  <div class="col-md-3 col-6">
-    <div class="text-center mb-4">
-      <i class="bi bi-truck fs-1 text-primary"></i>
-      <h5 class="mt-2">Logistik und Transport</h5>
-    </div>
-  </div>
-  <div class="col-md-3 col-6">
-    <div class="text-center mb-4">
-      <i class="bi bi-palette fs-1 text-primary"></i>
-      <h5 class="mt-2">Kreativ und Medien</h5>
-    </div>
-  </div>
-  <div class="col-md-3 col-6">
-    <div class="text-center mb-4">
-      <i class="bi bi-mortarboard fs-1 text-primary"></i>
-      <h5 class="mt-2">Bildung</h5>
-    </div>
-  </div>
-  <div class="col-md-3 col-6">
-    <div class="text-center mb-4">
-      <i class="bi bi-bank fs-1 text-primary"></i>
-      <h5 class="mt-2">Finanzen und Versicherung</h5>
-    </div>
-  </div>
-</div>
-```
-
-## Warum chen.ist für Digitale Infrastruktur wählen
-
-```{=html}
-<div class="row mt-4">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0">Unsere Expertise</h3>
-      </div>
-      <div class="card-body">
-        <ul>
-          <li><strong>UNIX-Veteranen:</strong> Tiefgehende Expertise in BSD, Linux und macOS-Administration über Jahrzehnte hinweg</li>
-          <li><strong>Open-Source-Mitwirkende:</strong> Wir tragen zu den Tools bei, die wir bereitstellen -- nicht nur konsumieren</li>
-          <li><strong>Apple Business Early Adopter:</strong> Bereit zur Bereitstellung ab dem ersten Tag (14. April 2026)</li>
-          <li><strong>Security-First-Mentalität:</strong> Jede Bereitstellung wird standardmäßig gehärtet, nicht als nachträglicher Gedanke</li>
-          <li><strong>Cross-Platform-Kompetenz:</strong> Nahtlose Integration über UNIX-, Apple- und Windows-Umgebungen hinweg</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0">Unser Ansatz</h3>
-      </div>
-      <div class="card-body">
-        <ul>
-          <li><strong>Kein Vendor Lock-in:</strong> Open-Source und Standardprotokolle stellen sicher, dass Sie immer Eigentümer Ihrer Daten sind und den Anbieter wechseln können</li>
-          <li><strong>Passgenau dimensionierte Lösungen:</strong> Wir passen die Infrastrukturkomplexität an Ihre tatsächlichen Geschäftsanforderungen an -- kein Over-Engineering</li>
-          <li><strong>Transparente Preisgestaltung:</strong> Sie zahlen für unsere Expertise, nicht für Softwarelizenzen</li>
-          <li><strong>Wissenstransfer:</strong> Wir dokumentieren alles und schulen Ihr Team zur Selbstständigkeit</li>
-          <li><strong>Langfristige Partnerschaft:</strong> Laufender Support, Monitoring und Weiterentwicklung, während Ihr Unternehmen wächst</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-```
-
-:::
-
-:::: {.cta-section}
-::: {.container .text-center}
-## <span class="text-white">Bereit, Ihre digitale Infrastruktur aufzubauen?</span>
-
-```{=html}
-<p class="mb-4">Buchen Sie eine kostenlose Beratung, um Ihre Geschäftsanforderungen zu besprechen und einen maßgeschneiderten Infrastrukturvorschlag zu erhalten.</p>
-```
-
-[Beratung buchen](https://cal.com/chenist){.cta-button target="_blank"}
-:::
-::::

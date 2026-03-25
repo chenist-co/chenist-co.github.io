@@ -77,10 +77,16 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 <meta property="og:title" content="chen.ist — Build. Secure. Grow.">
 <meta property="og:description" content="chen.ist delivers digital infrastructure, cybersecurity, cloud services, and technology education for modern organizations.">
+<meta property="og:image" content="https://chen.ist/assets/images/og-image.png">
 <meta property="og:site_name" content="chen.ist">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
 <meta name="twitter:title" content="chen.ist — Build. Secure. Grow.">
 <meta name="twitter:description" content="chen.ist delivers digital infrastructure, cybersecurity, cloud services, and technology education for modern organizations.">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://chen.ist/assets/images/og-image.png">
+<meta name="twitter:image-height" content="630">
+<meta name="twitter:image-width" content="1200">
+<meta name="twitter:card" content="summary_large_image">
 </head><body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
@@ -311,6 +317,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<meta name="view-transition" content="same-origin">
+<link rel="dns-prefetch" href="https://cal.com">
+<link rel="dns-prefetch" href="https://app.cal.com">
+<link rel="preconnect" href="https://cal.com" crossorigin="">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
@@ -365,7 +375,7 @@ footer { margin-top: 0 !important; }
 
 /* Hero — full-bleed image from top of viewport */
 .hp-hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8rem 1.5rem 6rem; position: relative; overflow: hidden; }
-.hp-hero-img { position: absolute; inset: 0; background: url('./assets/images/stock/network-closeup.jpg') center/cover no-repeat; }
+.hp-hero-img { position: absolute; inset: 0; background: url('./assets/images/stock/network-closeup.webp') center/cover no-repeat; }
 .hp-hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.8) 100%); }
 .hp-hero-content { position: relative; z-index: 1; }
 .hp-hero h1 { font-size: clamp(3rem, 8vw, 7rem); font-weight: 700; letter-spacing: -0.05em; line-height: 1.0; color: #fff; margin-bottom: 1.5rem; }
@@ -449,9 +459,6 @@ footer { margin-top: 0 !important; }
 
 
 <link rel="stylesheet" href="assets/css/styles.css">
-<link rel="stylesheet" href="assets/css/academy.scss">
-<link rel="stylesheet" href="assets/css/custom-hero.css">
-<link rel="stylesheet" href="assets/css/landing-pages.css">
 <link rel="stylesheet" href="assets/css/modern.css">
 
 
@@ -653,7 +660,7 @@ footer { margin-top: 0 !important; }
 
 <!-- DIGITAL INFRASTRUCTURE — text left, image right -->
 <div class="hp-sec hp-left" id="s1">
-  <div class="hp-sec-img" style="background-image:url('/assets/images/stock/hackathon-team.jpg');"></div>
+  <div class="hp-sec-img" style="background-image:url('/assets/images/stock/hackathon-team.webp');"></div>
   <div class="hp-sec-over"></div>
   <div class="hp-sec-content">
     <h2>Digital<br>Infrastructure</h2>
@@ -667,7 +674,7 @@ footer { margin-top: 0 !important; }
 
 <!-- SECURITY — text right, image left -->
 <div class="hp-sec hp-right">
-  <div class="hp-sec-img" style="background-image:url('/assets/images/stock/hacker-screens.jpg');"></div>
+  <div class="hp-sec-img" style="background-image:url('/assets/images/stock/hacker-screens.webp');"></div>
   <div class="hp-sec-over"></div>
   <div class="hp-sec-content">
     <h2>Proactive<br>Security</h2>
@@ -681,7 +688,7 @@ footer { margin-top: 0 !important; }
 
 <!-- CLOUD — centered over dark image -->
 <div class="hp-sec hp-center">
-  <div class="hp-sec-img" style="background-image:url('/assets/images/stock/datacenter-blue.jpg');"></div>
+  <div class="hp-sec-img" style="background-image:url('/assets/images/stock/datacenter-blue.webp');"></div>
   <div class="hp-sec-over"></div>
   <div class="hp-sec-content">
     <h2>Cloud Services</h2>
@@ -694,7 +701,7 @@ footer { margin-top: 0 !important; }
 
 <!-- ACADEMY — text left on code image -->
 <div class="hp-sec hp-left">
-  <div class="hp-sec-img" style="background-image:url('/assets/images/stock/terminal-green.jpg');"></div>
+  <div class="hp-sec-img" style="background-image:url('/assets/images/stock/terminal-green.webp');"></div>
   <div class="hp-sec-over"></div>
   <div class="hp-sec-content">
     <h2>Academy</h2>
@@ -708,7 +715,7 @@ footer { margin-top: 0 !important; }
 
 <!-- RESILIENCE — centered over sky image -->
 <div class="hp-sec hp-center">
-  <div class="hp-sec-img" style="background-image:url('/assets/images/stock/cloud-sky.jpg');"></div>
+  <div class="hp-sec-img" style="background-image:url('/assets/images/stock/cloud-sky.webp');"></div>
   <div class="hp-sec-over" style="background: rgba(0,0,0,0.35);"></div>
   <div class="hp-sec-content">
     <h2>Digital Resilience</h2>
@@ -1212,6 +1219,7 @@ footer { margin-top: 0 !important; }
         <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Connect</div>
         <a href="mailto:office@chen.ist" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">office@chen.ist</a>
         <a href="https://github.com/chenist" target="_blank" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">GitHub</a>
+        <a href="https://alinmechenici.substack.com" target="_blank" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Newsletter</a>
         <a href="https://linkedin.com/in/chenistsec" target="_blank" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">LinkedIn</a>
         <div style="margin-top:1rem; color:rgba(255,255,255,0.2); font-size:0.72rem;">Craiova · Bucharest · Stockholm</div>
       </div>

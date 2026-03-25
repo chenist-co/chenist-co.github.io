@@ -77,11 +77,13 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 <meta property="og:title" content="Infrastructură Digitală – chen.ist">
 <meta property="og:description" content="Infrastructură open-source, Linux, BSD și Apple Business de calitate pentru IMM-uri. NixOS, OpenBSD, FreeBSD, Nextcloud și implementare Apple fără configurare manuală.">
+<meta property="og:image" content="https://chen.ist/ro/digital/assets/images/og-image.png">
 <meta property="og:site_name" content="chen.ist">
 <meta name="twitter:title" content="Infrastructură Digitală – chen.ist">
 <meta name="twitter:description" content="Infrastructură open-source, Linux, BSD și Apple Business de calitate pentru IMM-uri. NixOS, OpenBSD, FreeBSD, Nextcloud și implementare Apple fără configurare manuală.">
-<meta name="twitter:card" content="summary">
-</head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<meta name="twitter:image" content="https://chen.ist/ro/digital/assets/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+</head><body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -311,6 +313,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<meta name="view-transition" content="same-origin">
+<link rel="dns-prefetch" href="https://cal.com">
+<link rel="dns-prefetch" href="https://app.cal.com">
+<link rel="preconnect" href="https://cal.com" crossorigin="">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
@@ -350,6 +356,9 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 </script>
 <style>
+.quarto-title-block, #title-block-header { display: none !important; }
+#quarto-content > * { margin-top: 0 !important; padding-top: 0 !important; }
+main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
 .platform-badge {
   display: inline-block;
   padding: 0.25rem 0.75rem;
@@ -379,9 +388,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <link rel="stylesheet" href="../../assets/css/styles.css">
-<link rel="stylesheet" href="../../assets/css/academy.scss">
-<link rel="stylesheet" href="../../assets/css/custom-hero.css">
-<link rel="stylesheet" href="../../assets/css/landing-pages.css">
 <link rel="stylesheet" href="../../assets/css/modern.css">
 
 
@@ -562,716 +568,295 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </header>
 
-<nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#sunteți-gata-să-vă-construiți-infrastructura-digitală" id="toc-sunteți-gata-să-vă-construiți-infrastructura-digitală"><span class="text-white">Sunteți gata să vă construiți infrastructura digitală?</span></a></li>
-  </ul>
-</nav>
+
+<div class="m">
 
 <div class="m-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-8 offset-md-2 text-center">
-        <h1><span class="text-white">Infrastructură</span> <span class="text-green">Digitală</span></h1>
-        <p>Platforme Open-Source, UNIX și Apple adaptate pentru IMM-uri din orice industrie</p>
-      </div>
+    <h1>Infrastructură <span class="gr">Digitală</span></h1>
+    <p>Platforme Open-Source, UNIX și Apple adaptate pentru IMM-uri din orice industrie</p>
+  </div>
+</div>
+
+<div class="m-bg">
+  <div class="container">
+    <h2>Infrastructură care funcționează pentru afacerea dvs.</h2>
+    <p class="sub">Proiectăm, implementăm și gestionăm infrastructură digitală de producție construită pe software open-source, sisteme de operare UNIX și platforme Apple.</p>
+    <div class="row g-5">
+      <div class="col-md-4"><div class="m-t">
+        <i class="bi bi-code-square"></i>
+        <h3>Stack Open-Source</h3>
+        <p>Instrumente open-source pregătite pentru producție care înlocuiesc software-ul proprietar costisitor fără a sacrifica funcționalitatea.</p>
+        <span class="platform-badge badge-opensource">Self-Hosted</span>
+        <span class="platform-badge badge-opensource">Fără dependență de furnizor</span>
+        <a href="#open-source" class="m-lk" style="display:block;margin-top:0.5rem;">Află mai mult</a>
+      </div></div>
+      <div class="col-md-4"><div class="m-t">
+        <i class="bi bi-terminal"></i>
+        <h3>Sisteme UNIX</h3>
+        <p>Infrastructură BSD și Linux de nivel enterprise pentru servere, firewall-uri, stocare și rețelistică.</p>
+        <span class="platform-badge badge-linux">Linux</span>
+        <span class="platform-badge badge-bsd">BSD</span>
+        <span class="platform-badge badge-linux">NixOS</span>
+        <a href="#unix" class="m-lk" style="display:block;margin-top:0.5rem;">Află mai mult</a>
+      </div></div>
+      <div class="col-md-4"><div class="m-t">
+        <i class="bi bi-apple"></i>
+        <h3>Infrastructură Apple</h3>
+        <p>Gestionare completă a ecosistemului Apple cu noua platformă Apple Business și implementarea flotei macOS.</p>
+        <span class="platform-badge badge-apple">macOS</span>
+        <span class="platform-badge badge-apple">iOS/iPadOS</span>
+        <span class="platform-badge badge-free">MDM Gratuit</span>
+        <a href="#apple" class="m-lk" style="display:block;margin-top:0.5rem;">Află mai mult</a>
+      </div></div>
     </div>
   </div>
 </div>
 
-<style>
-  .text-white { color: white !important; }
-</style>
-<div class="container page-section">
-<section id="infrastructură-care-funcționează-pentru-afacerea-dvs." class="level2">
-<h2 data-anchor-id="infrastructură-care-funcționează-pentru-afacerea-dvs.">Infrastructură care funcționează pentru afacerea dvs.</h2>
-<p>Proiectăm, implementăm și gestionăm infrastructură digitală de producție construită pe software open-source, sisteme de operare UNIX și platforme Apple. Soluțiile noastre sunt adaptate pentru întreprinderi mici și mijlocii din orice domeniu de activitate – de la cabinete juridice și clinici la producție, retail, logistică și studiouri creative.</p>
-<div class="row mt-4">
-<div class="col-md-4">
-<div class="card mb-4 h-100">
-<section id="stack-open-source" class="level3 card-body">
-<h3 data-anchor-id="stack-open-source"><i class="bi bi-code-square text-success"></i> Stack Open-Source</h3>
-<p>Instrumente open-source pregătite pentru producție care înlocuiesc software-ul proprietar costisitor fără a sacrifica funcționalitatea.</p>
-<p><span class="platform-badge badge-opensource">Self-Hosted</span> <span class="platform-badge badge-opensource">Fără dependență de furnizor</span></p>
-<section id="include" class="level4">
-<h4 data-anchor-id="include">Include:</h4>
-<ul>
-<li>Suite de productivitate și colaborare</li>
-<li>Platforme de comunicare și mesagerie</li>
-<li>Gestionarea identității și accesului</li>
-<li>Monitorizare și observabilitate</li>
-<li>DevOps și controlul versiunilor</li>
-</ul>
-<p><a href="#open-source" class="btn btn-outline-primary mt-2">Află mai mult</a></p>
-</section>
-</section>
-</div>
-</div>
-<div class="col-md-4">
-<div class="card mb-4 h-100">
-<section id="sisteme-unix" class="level3 card-body">
-<h3 data-anchor-id="sisteme-unix"><i class="bi bi-terminal text-warning"></i> Sisteme UNIX</h3>
-<p>Infrastructură BSD și Linux de nivel enterprise pentru servere, firewall-uri, stocare și rețelistică.</p>
-<p><span class="platform-badge badge-linux">Linux</span> <span class="platform-badge badge-bsd">BSD</span> <span class="platform-badge badge-linux">NixOS</span></p>
-<section id="include-1" class="level4">
-<h4 data-anchor-id="include-1">Include:</h4>
-<ul>
-<li>Implementare și securizare servere</li>
-<li>Firewall și securitate rețea</li>
-<li>Sisteme de stocare și backup</li>
-<li>Infrastructură declarativă</li>
-<li>Integrare medii hibride</li>
-</ul>
-<p><a href="#unix" class="btn btn-outline-primary mt-2">Află mai mult</a></p>
-</section>
-</section>
-</div>
-</div>
-<div class="col-md-4">
-<div class="card mb-4 h-100">
-<section id="infrastructură-apple" class="level3 card-body">
-<h3 data-anchor-id="infrastructură-apple"><i class="bi bi-apple text-secondary"></i> Infrastructură Apple</h3>
-<p>Gestionare completă a ecosistemului Apple cu noua platformă Apple Business și implementarea flotei macOS.</p>
-<p><span class="platform-badge badge-apple">macOS</span> <span class="platform-badge badge-apple">iOS/iPadOS</span> <span class="platform-badge badge-free">MDM Gratuit</span></p>
-<section id="include-2" class="level4">
-<h4 data-anchor-id="include-2">Include:</h4>
-<ul>
-<li>Configurare și gestionare Apple Business</li>
-<li>Implementare dispozitive fără configurare manuală</li>
-<li>Email de afaceri, calendar și director</li>
-<li>Gestionarea brandului pe Apple Maps</li>
-<li>AppleCare+ for Business</li>
-</ul>
-<p><a href="#apple" class="btn btn-outline-primary mt-2">Află mai mult</a></p>
-</section>
-</section>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="open-source" class="level2">
-<h2 data-anchor-id="open-source">Stack Open-Source pentru Afaceri</h2>
-<p>Înlocuiți licențele proprietare costisitoare cu alternative open-source testate în producție. Ne ocupăm de implementare, configurare, securizare și mentenanță continuă, astfel încât echipa dvs. să se poată concentra pe munca lor.</p>
-<div class="row mt-4">
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-file-earmark-richtext"></i>
-      </div>
-      <h3>Productivitate și Colaborare</h3>
-      <p>Suită completă de birou, stocare cloud și colaborare pe documente în timp real pentru întreaga echipă.</p>
-      <small class="text-muted">LibreOffice | Nextcloud | Collabora Online | CryptPad | OnlyOffice</small>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-chat-dots"></i>
-      </div>
-      <h3>Comunicare</h3>
-      <p>Mesagerie securizată, videoconferințe și canale de echipă cu suveranitate completă a datelor.</p>
-      <small class="text-muted">Matrix/Element | Mattermost | Jitsi Meet | Rocket.Chat</small>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-person-badge"></i>
-      </div>
-      <h3>Identitate și Acces</h3>
-      <p>Autentificare unică, servicii de director și autentificare multi-factor pe toate sistemele dvs.</p>
-      <small class="text-muted">Keycloak | OpenLDAP | FreeIPA | Authelia</small>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-graph-up"></i>
-      </div>
-      <h3>Monitorizare și Observabilitate</h3>
-      <p>Tablouri de bord în timp real, alerte și monitorizarea disponibilității pentru întreaga infrastructură.</p>
-      <small class="text-muted">Prometheus | Grafana | Uptime Kuma | Zabbix | Loki</small>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-git"></i>
-      </div>
-      <h3>DevOps și Controlul Versiunilor</h3>
-      <p>Repositorii de cod self-hosted, pipeline-uri CI/CD și orchestrare de containere.</p>
-      <small class="text-muted">Gitea/Forgejo | Woodpecker CI | Docker | Podman</small>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-database"></i>
-      </div>
-      <h3>Baze de Date și Stocare</h3>
-      <p>Stocare fiabilă a datelor, backup-uri automate și clustere de baze de date cu disponibilitate ridicată.</p>
-      <small class="text-muted">PostgreSQL | MariaDB | Redis | MinIO | Restic</small>
+<div class="m-s" id="open-source">
+  <div class="container">
+    <h2>Stack Open-Source pentru Afaceri</h2>
+    <p class="sub">Înlocuiți licențele proprietare costisitoare cu alternative open-source testate în producție.</p>
+    <div class="row g-5">
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-file-earmark-richtext"></i><h3>Productivitate și Colaborare</h3><p>Suită completă de birou, stocare cloud și colaborare pe documente în timp real.</p><small class="text-muted">LibreOffice | Nextcloud | Collabora Online | CryptPad | OnlyOffice</small></div></div>
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-chat-dots"></i><h3>Comunicare</h3><p>Mesagerie securizată, videoconferințe și canale de echipă cu suveranitate completă a datelor.</p><small class="text-muted">Matrix/Element | Mattermost | Jitsi Meet | Rocket.Chat</small></div></div>
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-person-badge"></i><h3>Identitate și Acces</h3><p>Autentificare unică, servicii de director și autentificare multi-factor pe toate sistemele dvs.</p><small class="text-muted">Keycloak | OpenLDAP | FreeIPA | Authelia</small></div></div>
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-graph-up"></i><h3>Monitorizare și Observabilitate</h3><p>Tablouri de bord în timp real, alerte și monitorizarea disponibilității pentru întreaga infrastructură.</p><small class="text-muted">Prometheus | Grafana | Uptime Kuma | Zabbix | Loki</small></div></div>
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-git"></i><h3>DevOps și Controlul Versiunilor</h3><p>Repositorii de cod self-hosted, pipeline-uri CI/CD și orchestrare de containere.</p><small class="text-muted">Gitea/Forgejo | Woodpecker CI | Docker | Podman</small></div></div>
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-database"></i><h3>Baze de Date și Stocare</h3><p>Stocare fiabilă a datelor, backup-uri automate și clustere de baze de date cu disponibilitate ridicată.</p><small class="text-muted">PostgreSQL | MariaDB | Redis | MinIO | Restic</small></div></div>
     </div>
   </div>
 </div>
-<hr>
-</section>
-<section id="unix" class="level2">
-<h2 data-anchor-id="unix">Infrastructură UNIX</h2>
-<p>Construim și gestionăm servere, firewall-uri și echipamente de rețea pe sisteme de operare UNIX dovedite. Fie că aveți nevoie de un firewall OpenBSD securizat, o flotă declarativă NixOS sau un stack tradițional de servere Linux, livrăm infrastructură sigură, reproductibilă și ușor de întreținut.</p>
-<section id="distribuții-linux" class="level3">
-<h3 data-anchor-id="distribuții-linux">Distribuții Linux</h3>
-<div class="row mt-4">
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-warning text-dark">
-        <h4 class="mb-0"><i class="bi bi-snow me-2"></i>NixOS</h4>
-      </div>
-      <div class="card-body">
-        <p>Infrastructură declarativă și reproductibilă. Definiți întregul sistem ca și cod și implementați configurații identice pe oricâte mașini.</p>
-        <ul class="mb-0">
-          <li>Configurare de sistem imutabilă</li>
-          <li>Actualizări și rollback-uri atomice</li>
-          <li>Build-uri reproductibile între medii</li>
-          <li>Implementări multi-mașină bazate pe Flake</li>
-        </ul>
-      </div>
-    </div>
-  </div>
 
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-warning text-dark">
-        <h4 class="mb-0"><i class="bi bi-ubuntu me-2"></i>Debian/Ubuntu</h4>
-      </div>
-      <div class="card-body">
-        <p>Cea mai larg suportată familie Linux. Ideală pentru servere de aplicații, găzduire web și sarcini de lucru cu compatibilitate software largă.</p>
-        <ul class="mb-0">
-          <li>Versiuni LTS cu 5+ ani de suport</li>
-          <li>Ecosistem masiv de pachete</li>
-          <li>Actualizări de securitate automate</li>
-          <li>Dovedit în producție la orice scală</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<div class="m-bg" id="unix">
+  <div class="container">
+    <h2>Infrastructură UNIX</h2>
+    <p class="sub">Servere, firewall-uri și echipamente de rețea pe sisteme de operare UNIX dovedite.</p>
 
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-warning text-dark">
-        <h4 class="mb-0"><i class="bi bi-building me-2"></i>RHEL/AlmaLinux</h4>
-      </div>
-      <div class="card-body">
-        <p>Stabilitate de nivel enterprise pentru sarcini de lucru care necesită certificare de furnizor, mandate de conformitate sau suport pe ciclul lung de viață.</p>
-        <ul class="mb-0">
-          <li>Suport pe ciclul de viață de 10 ani</li>
-          <li>Control de acces obligatoriu SELinux</li>
-          <li>Certificat FIPS și Common Criteria</li>
-          <li>Stack-uri de aplicații certificate de furnizor</li>
-        </ul>
-      </div>
+    <h3>Distribuții Linux</h3>
+    <div class="row g-5 mt-2">
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-snow"></i><h3>NixOS</h3><p>Infrastructură declarativă și reproductibilă. Definiți întregul sistem ca și cod.</p><ul><li>Configurare de sistem imutabilă</li><li>Actualizări și rollback-uri atomice</li><li>Build-uri reproductibile între medii</li><li>Implementări multi-mașină bazate pe Flake</li></ul></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-ubuntu"></i><h3>Debian/Ubuntu</h3><p>Cea mai larg suportată familie Linux. Ideală pentru servere de aplicații și găzduire web.</p><ul><li>Versiuni LTS cu 5+ ani de suport</li><li>Ecosistem masiv de pachete</li><li>Actualizări de securitate automate</li><li>Dovedit în producție la orice scală</li></ul></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-building"></i><h3>RHEL/AlmaLinux</h3><p>Stabilitate de nivel enterprise pentru sarcini de lucru care necesită certificare sau conformitate.</p><ul><li>Suport pe ciclul de viață de 10 ani</li><li>Control de acces obligatoriu SELinux</li><li>Certificat FIPS și Common Criteria</li><li>Stack-uri de aplicații certificate de furnizor</li></ul></div></div>
+    </div>
+
+    <h3 style="margin-top:3rem;">Sisteme BSD</h3>
+    <div class="row g-5 mt-2">
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-shield-lock"></i><h3>OpenBSD</h3><p>Cel mai sigur sistem de operare de uz general. Ideal pentru firewall-uri și gateway-uri VPN.</p><ul><li>Filtru de pachete pf (standard în industrie)</li><li>Filosofie sigur implicit</li><li>VPN integrat (WireGuard, IKEv2)</li><li>Suprafață minimă de atac</li></ul></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-hdd-stack"></i><h3>FreeBSD</h3><p>Stocare și rețelistică de înaltă performanță. Fundația Netflix CDN, WhatsApp și Sony PlayStation Network.</p><ul><li>Sistem de fișiere enterprise ZFS</li><li>Containerizare Jails</li><li>Hypervisor bhyve</li><li>Rețelistică avansată (VNET, CARP)</li></ul></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-cpu"></i><h3>NetBSD</h3><p>Rulează pe aproape orice hardware. Perfect pentru sisteme embedded și gateway-uri IoT.</p><ul><li>Suportă peste 60 de platforme hardware</li><li>Ușor și eficient</li><li>Pachete cross-platform pkgsrc</li><li>Ideal pentru implementări edge și IoT</li></ul></div></div>
+    </div>
+
+    <h3 style="margin-top:3rem;">Integrare Medii Hibride</h3>
+    <div class="row g-5 mt-2">
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-people"></i><h3>Integrare Director</h3><p>Integrare Samba/AD care conectează sistemele UNIX cu mediile Windows existente</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-key"></i><h3>SSO Cross-Platform</h3><p>Identitate unică pe sisteme Linux, BSD, macOS și Windows</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-share"></i><h3>Partajare Fișiere</h3><p>Acces unificat la fișiere pe toate platformele prin NFS, SMB și WebDAV</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-printer"></i><h3>Imprimare și Periferice</h3><p>Gestionare imprimare bazată pe CUPS și partajare periferice în medii mixte</p></div></div>
     </div>
   </div>
 </div>
-</section>
-<section id="sisteme-bsd" class="level3">
-<h3 data-anchor-id="sisteme-bsd">Sisteme BSD</h3>
-<div class="row mt-4">
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-danger text-white">
-        <h4 class="mb-0"><i class="bi bi-shield-lock me-2"></i>OpenBSD</h4>
-      </div>
-      <div class="card-body">
-        <p>Cel mai sigur sistem de operare de uz general. Ideal pentru firewall-uri, gateway-uri VPN și echipamente de rețea critice pentru securitate.</p>
-        <ul class="mb-0">
-          <li>Filtru de pachete pf (firewall standard în industrie)</li>
-          <li>Filosofie sigur implicit</li>
-          <li>VPN integrat (WireGuard, IKEv2)</li>
-          <li>Suprafață minimă de atac</li>
-        </ul>
-      </div>
-    </div>
-  </div>
 
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-danger text-white">
-        <h4 class="mb-0"><i class="bi bi-hdd-stack me-2"></i>FreeBSD</h4>
-      </div>
-      <div class="card-body">
-        <p>Stocare și rețelistică de înaltă performanță. Fundația Netflix CDN, WhatsApp și Sony PlayStation Network.</p>
-        <ul class="mb-0">
-          <li>Sistem de fișiere enterprise ZFS</li>
-          <li>Containerizare Jails</li>
-          <li>Hypervisor bhyve</li>
-          <li>Rețelistică avansată (VNET, CARP)</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<div class="m-s" id="apple">
+  <div class="container">
+    <h2>Infrastructură Apple</h2>
+    <p class="sub">Adoptatori timpurii și parteneri de implementare pentru noua platformă Apple Business.</p>
 
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-danger text-white">
-        <h4 class="mb-0"><i class="bi bi-cpu me-2"></i>NetBSD</h4>
-      </div>
-      <div class="card-body">
-        <p>Rulează pe aproape orice hardware. Perfect pentru sisteme embedded, gateway-uri IoT și reutilizarea hardware-ului vechi.</p>
-        <ul class="mb-0">
-          <li>Suportă peste 60 de platforme hardware</li>
-          <li>Ușor și eficient</li>
-          <li>Pachete cross-platform pkgsrc</li>
-          <li>Ideal pentru implementări edge și IoT</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-<section id="integrare-medii-hibride" class="level3">
-<h3 data-anchor-id="integrare-medii-hibride">Integrare Medii Hibride</h3>
-<div class="row mt-4">
-  <div class="col-md-12">
-    <div class="card mb-4">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-md-3 text-center">
-            <div class="process-step">
-              <div class="process-icon">
-                <i class="bi bi-people fs-1 text-primary"></i>
-              </div>
-              <h5>Integrare Director</h5>
-              <p>Integrare Samba/AD care conectează sistemele UNIX cu mediile Windows existente</p>
-            </div>
-          </div>
-
-          <div class="col-md-3 text-center">
-            <div class="process-step">
-              <div class="process-icon">
-                <i class="bi bi-key fs-1 text-primary"></i>
-              </div>
-              <h5>SSO Cross-Platform</h5>
-              <p>Identitate unică pe sisteme Linux, BSD, macOS și Windows</p>
-            </div>
-          </div>
-
-          <div class="col-md-3 text-center">
-            <div class="process-step">
-              <div class="process-icon">
-                <i class="bi bi-share fs-1 text-primary"></i>
-              </div>
-              <h5>Partajare Fișiere</h5>
-              <p>Acces unificat la fișiere pe toate platformele prin NFS, SMB și WebDAV</p>
-            </div>
-          </div>
-
-          <div class="col-md-3 text-center">
-            <div class="process-step">
-              <div class="process-icon">
-                <i class="bi bi-printer fs-1 text-primary"></i>
-              </div>
-              <h5>Imprimare și Periferice</h5>
-              <p>Gestionare imprimare bazată pe CUPS și partajare periferice în medii mixte</p>
-            </div>
-          </div>
+    <div class="m-highlight">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <h3 class="mb-2"><i class="bi bi-apple me-2"></i>Apple Business <span class="platform-badge badge-free">Platformă Gratuită</span></h3>
+          <p class="mb-1">O nouă platformă all-in-one pentru afaceri de toate dimensiunile. Gestionați oameni și dispozitive, ajungeți la clienți, echipați echipa cu instrumente esențiale.</p>
+          <p class="mb-0 text-muted"><small>Disponibil din 14 aprilie 2026 în peste 200 de țări și regiuni</small></p>
+        </div>
+        <div class="col-md-4 text-center">
+          <a href="https://business.apple.com/preview" target="_blank" class="m-b">Previzualizare Apple Business</a>
         </div>
       </div>
     </div>
-  </div>
-</div>
-<hr>
-</section>
-</section>
-<section id="apple" class="level2">
-<h2 data-anchor-id="apple">Infrastructură Apple</h2>
-<p>Suntem adoptatori timpurii și parteneri de implementare pentru noua platformă <strong>Apple Business</strong>, lansată pe 14 aprilie 2026. Apple Business înlocuiește Apple Business Manager, Apple Business Essentials și Apple Business Connect într-o singură platformă unificată – iar serviciul de bază este <strong>gratuit</strong>.</p>
-<div class="m-highlight">
-  <div class="row align-items-center">
-    <div class="col-md-8">
-      <h3 class="mb-2"><i class="bi bi-apple me-2"></i>Apple Business <span class="platform-badge badge-free">Platformă Gratuită</span></h3>
-      <p class="mb-1">O nouă platformă all-in-one pentru afaceri de toate dimensiunile. Gestionați oameni și dispozitive, ajungeți la clienți, echipați echipa cu instrumente esențiale și beneficiați de suport de la experții Apple.</p>
-      <p class="mb-0 text-muted"><small>Disponibil din 14 aprilie 2026 în peste 200 de țări și regiuni</small></p>
-    </div>
-    <div class="col-md-4 text-center">
-      <a href="https://business.apple.com/preview" target="_blank" class="btn btn-outline-secondary btn-lg">
-        <i class="bi bi-box-arrow-up-right me-2"></i>Previzualizare Apple Business
-      </a>
-    </div>
-  </div>
-</div>
-<section id="gestionarea-și-implementarea-dispozitivelor" class="level3">
-<h3 data-anchor-id="gestionarea-și-implementarea-dispozitivelor">Gestionarea și Implementarea Dispozitivelor</h3>
-<div class="row mt-4">
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-phone"></i>
-      </div>
-      <h3>MDM Integrat</h3>
-      <p>Gestionare completă a dispozitivelor mobile cu vizibilitate organizațională totală. Nu este necesară o licență MDM de la terți.</p>
-    </div>
-  </div>
 
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-layers"></i>
-      </div>
-      <h3>Blueprints</h3>
-      <p>Setări preconfigurare ale dispozitivelor pentru implementare fără configurare manuală. Angajații despachetează și încep să lucreze imediat.</p>
+    <h3 style="margin-top:3rem;">Gestionarea și Implementarea Dispozitivelor</h3>
+    <div class="row g-5 mt-2">
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-phone"></i><h3>MDM Integrat</h3><p>Gestionare completă a dispozitivelor mobile cu vizibilitate organizațională totală.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-layers"></i><h3>Blueprints</h3><p>Setări preconfigurare ale dispozitivelor pentru implementare fără configurare manuală.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-shield-lock"></i><h3>Conturi Apple Gestionate</h3><p>Separare criptografică între datele de serviciu și cele personale.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-people"></i><h3>Gestionarea Echipelor</h3><p>Grupați angajații pe funcție sau echipă. Atribuiți aplicații, roluri și permisiuni la scară.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-bag-check"></i><h3>Distribuție Aplicații</h3><p>Implementați aplicații de afaceri din App Store pe oricâte dispozitive.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-code-slash"></i><h3>Admin API</h3><p>Gestionare programatică a dispozitivelor pentru implementări la scară largă.</p></div></div>
     </div>
-  </div>
 
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-shield-lock"></i>
-      </div>
-      <h3>Conturi Apple Gestionate</h3>
-      <p>Separare criptografică între datele de serviciu și cele personale. Confidențialitate totală pentru angajați, control total pentru IT.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-people"></i>
-      </div>
-      <h3>Gestionarea Echipelor</h3>
-      <p>Grupați angajații pe funcție sau echipă. Atribuiți aplicații, roluri și permisiuni la scară.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-bag-check"></i>
-      </div>
-      <h3>Distribuție Aplicații</h3>
-      <p>Implementați aplicații de afaceri din App Store pe oricâte dispozitive -- de la 10 la 10.000.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-code-slash"></i>
-      </div>
-      <h3>Admin API</h3>
-      <p>Gestionare programatică a dispozitivelor pentru implementări la scară largă și fluxuri de automatizare personalizate.</p>
-    </div>
-  </div>
-</div>
-</section>
-<section id="instrumente-de-comunicare-și-colaborare" class="level3">
-<h3 data-anchor-id="instrumente-de-comunicare-și-colaborare">Instrumente de Comunicare și Colaborare</h3>
-<div class="row mt-4">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-secondary text-white">
-        <h4 class="mb-0">Email și Calendar de Afaceri</h4>
-      </div>
-      <div class="card-body">
+    <h3 style="margin-top:3rem;">Instrumente de Comunicare și Colaborare</h3>
+    <div class="row g-5 mt-2">
+      <div class="col-md-6"><div class="m-t">
+        <i class="bi bi-envelope"></i>
+        <h3>Email și Calendar de Afaceri</h3>
         <ul>
-          <li><strong>Email pe Domeniu Propriu:</strong> Email profesional pe propriul domeniu (aduceți unul existent sau achiziționați unul nou)</li>
-          <li><strong>Delegare Calendar:</strong> Calendare partajate și instrumente de programare pentru echipe</li>
-          <li><strong>Director Companie:</strong> Director integrat cu carduri de contact personalizate pentru fiecare angajat</li>
+          <li><strong>Email pe Domeniu Propriu:</strong> Email profesional pe propriul domeniu</li>
+          <li><strong>Delegare Calendar:</strong> Calendare partajate și instrumente de programare</li>
+          <li><strong>Director Companie:</strong> Director integrat cu carduri de contact personalizate</li>
           <li><strong>Stocare iCloud:</strong> Backup automat și sincronizare fișiere (de la $0,99/utilizator/lună)</li>
         </ul>
-        <p class="text-muted mb-0"><small>Necesită iOS 26, iPadOS 26 sau macOS 26</small></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-secondary text-white">
-        <h4 class="mb-0">Brand și Descoperire Clienți</h4>
-      </div>
-      <div class="card-body">
+        <small class="text-muted">Necesită iOS 26, iPadOS 26 sau macOS 26</small>
+      </div></div>
+      <div class="col-md-6"><div class="m-t">
+        <i class="bi bi-geo-alt"></i>
+        <h3>Brand și Descoperire Clienți</h3>
         <ul>
           <li><strong>Profiluri de Brand:</strong> Gestionați brandul pe Apple Maps, Wallet și Mail</li>
           <li><strong>Carduri Detaliate de Locație:</strong> Fotografii, program, detalii locație pe Apple Maps</li>
           <li><strong>Statistici Locație:</strong> Analize despre cum descoperă clienții afacerea dvs.</li>
-          <li><strong>Acțiuni Personalizate:</strong> Comandă, rezervă sau programare direct de pe Apple Maps către site-ul dvs.</li>
+          <li><strong>Acțiuni Personalizate:</strong> Comandă, rezervă sau programare direct de pe Apple Maps</li>
           <li><strong>Tap to Pay:</strong> Acceptați plăți pe iPhone cu ecrane de plată personalizate</li>
-          <li><strong>Reclame pe Apple Maps:</strong> Plasare promovată în rezultatele căutării și Locuri Sugerate (SUA/Canada, vara 2026)</li>
         </ul>
-      </div>
+      </div></div>
+    </div>
+
+    <h3 style="margin-top:3rem;">Prețuri Apple Business</h3>
+    <div class="row g-5 mt-2">
+      <div class="col-md-4"><div class="m-t" style="text-align:center;"><i class="bi bi-check-circle"></i><h3>Platforma de Bază</h3><h2 style="color:#81BD4A;">Gratuit</h2><p>MDM, Blueprints, Conturi Gestionate, Gestionare Brand, Distribuție Aplicații, Admin API</p></div></div>
+      <div class="col-md-4"><div class="m-t" style="text-align:center;"><i class="bi bi-cloud"></i><h3>Stocare iCloud</h3><h2>$0,99+</h2><p>Per utilizator/lună. Până la 2TB per utilizator pentru backup, sincronizare fișiere și colaborare.</p></div></div>
+      <div class="col-md-4"><div class="m-t" style="text-align:center;"><i class="bi bi-wrench"></i><h3>AppleCare+ for Business</h3><h2>$6,99-$13,99</h2><p>Per dispozitiv/lună. Suport tehnic de la experți și acoperire pentru reparații hardware.</p></div></div>
     </div>
   </div>
 </div>
-</section>
-<section id="prețuri-apple-business" class="level3">
-<h3>Prețuri Apple Business</h3>
-<div class="row mt-4">
-  <div class="col-md-4">
-    <div class="card mb-4 text-center">
-      <div class="card-header bg-success text-white">
-        <h4 class="mb-0">Platforma de Bază</h4>
-      </div>
-      <div class="card-body">
-        <h2 class="text-success" data-anchor-id="prețuri-apple-business">Gratuit</h2>
-        <p>MDM, Blueprints, Conturi Gestionate, Gestionare Brand, Distribuție Aplicații, Admin API</p>
-      </div>
-    </div>
-  </div>
 
-  <div class="col-md-4">
-    <div class="card mb-4 text-center">
-      <div class="card-header bg-primary text-white">
-        <h4 class="mb-0">Stocare iCloud</h4>
-      </div>
-      <div class="card-body">
-        <h2 class="text-primary">$0,99+</h2>
-        <p>Per utilizator/lună. Până la 2TB per utilizator pentru backup, sincronizare fișiere și colaborare.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4 text-center">
-      <div class="card-header bg-warning text-dark">
-        <h4 class="mb-0">AppleCare+ for Business</h4>
-      </div>
-      <div class="card-body">
-        <h2 class="text-warning">$6,99-$13,99</h2>
-        <p>Per dispozitiv/lună. Suport tehnic de la experți și acoperire pentru reparații hardware.</p>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-<section id="migrare-de-la-serviciile-apple-vechi" class="level3">
-<h3 data-anchor-id="migrare-de-la-serviciile-apple-vechi">Migrare de la Serviciile Apple Vechi</h3>
-<p>Dacă afacerea dvs. utilizează în prezent Apple Business Manager, Apple Business Essentials sau Apple Business Connect, toate trei vor fi discontinuate pe 14 aprilie 2026. Ne ocupăm de migrarea completă:</p>
-<div class="row mt-4">
-  <div class="col-md-12">
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-marker bg-success"></div>
-        <div class="timeline-content">
-          <h3>Audit Configurare Existentă</h3>
-          <p>Revizuim configurarea curentă Apple Business Manager/Essentials, dispozitivele înrolate și Apple ID-urile gestionate.</p>
+<div class="m-bg" id="packages">
+  <div class="container">
+    <h2>Pachete pentru IMM-uri</h2>
+    <p class="sub">Pachete adaptate care combină infrastructură Open-Source, UNIX și Apple pentru afacerea dvs.</p>
+    <div class="row g-5">
+      <div class="col-md-4">
+        <div class="card pricing-card mb-4 h-100">
+          <div class="card-header bg-primary text-white text-center">
+            <h3 class="mb-0">Starter</h3>
+            <small>1-10 angajați</small>
+          </div>
+          <div class="card-body">
+            <h4 class="text-center mb-4">Pentru echipe mici la început</h4>
+            <ul>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Configurare Apple Business și Blueprints</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>1 server Linux (Debian/Ubuntu)</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Nextcloud (fișiere, contacte, calendar)</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Email de afaceri pe domeniu propriu</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Firewall de bază (OpenBSD pf sau UFW)</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Backup-uri automate (Restic)</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Monitorizare disponibilitate</li>
+            </ul>
+            <div class="text-center mt-auto">
+              <a href="https://cal.com/chenist" target="_blank" class="m-b">Programează Consultație</a>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="timeline-item">
-        <div class="timeline-marker bg-success"></div>
-        <div class="timeline-content">
-          <h3>Planificare Migrare</h3>
-          <p>Mapăm grupurile de dispozitive existente, atribuirile de aplicații și politicile către Blueprints Apple Business și structuri de echipă.</p>
+      <div class="col-md-4">
+        <div class="card pricing-card pricing-featured mb-4 h-100">
+          <div class="card-header text-white text-center">
+            <h3 class="mb-0">Growth</h3>
+            <small>11-50 angajați</small>
+          </div>
+          <div class="card-body">
+            <h4 class="text-center mb-4">Pentru afaceri în creștere</h4>
+            <ul>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Tot din Starter, plus:</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Apple MDM complet cu grupare echipe</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Firewall/VPN dedicat OpenBSD</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>SSO Keycloak pe toate sistemele</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Mesagerie Matrix/Element</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Collabora Online (editare documente)</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Monitorizare Prometheus + Grafana</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Integrare Samba/AD (dacă este necesar)</li>
+            </ul>
+            <div class="text-center mt-auto">
+              <a href="https://cal.com/chenist" target="_blank" class="m-b">Programează Consultație</a>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="timeline-item">
-        <div class="timeline-marker bg-success"></div>
-        <div class="timeline-content">
-          <h3>Executare Tranziție</h3>
-          <p>Migrăm către platforma unificată Apple Business. Datele Business Connect migrează automat; gestionarea dispozitivelor necesită planificarea re-înrolării.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-marker bg-success"></div>
-        <div class="timeline-content">
-          <h3>Verificare și Optimizare</h3>
-          <p>Confirmăm că toate dispozitivele, conturile și profilurile de brand sunt operaționale. Optimizăm Blueprints și configurăm funcționalitățile noi (email, calendar, director).</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<hr>
-</section>
-</section>
-<section id="packages" class="level2">
-<h2 data-anchor-id="packages">Pachete pentru IMM-uri</h2>
-<p>Oferim pachete adaptate care combină infrastructură Open-Source, UNIX și Apple pentru a se potrivi dimensiunii și nevoilor afacerii dvs. Fiecare pachet este personalizabil pentru cerințele specifice ale industriei dvs.</p>
-<div class="row mt-5">
-  <div class="col-md-4">
-    <div class="card pricing-card mb-4 h-100">
-      <div class="card-header bg-primary text-white text-center">
-        <h3 class="mb-0">Starter</h3>
-        <small>1-10 angajați</small>
-      </div>
-      <div class="card-body">
-        <h4 class="text-center mb-4">Pentru echipe mici la început</h4>
-        <ul>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Configurare Apple Business și Blueprints</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>1 server Linux (Debian/Ubuntu)</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Nextcloud (fișiere, contacte, calendar)</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Email de afaceri pe domeniu propriu</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Firewall de bază (OpenBSD pf sau UFW)</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Backup-uri automate (Restic)</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Monitorizare disponibilitate</li>
-        </ul>
-        <div class="text-center mt-auto">
-          <a href="https://cal.com/chenist" target="_blank" class="btn btn-outline-primary w-100">Programează Consultație</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card pricing-card pricing-featured mb-4 h-100">
-      <div class="card-header text-white text-center">
-        <h3 class="mb-0">Growth</h3>
-        <small>11-50 angajați</small>
-      </div>
-      <div class="card-body">
-        <h4 class="text-center mb-4">Pentru afaceri în creștere</h4>
-        <ul>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Tot din Starter, plus:</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Apple MDM complet cu grupare echipe</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Firewall/VPN dedicat OpenBSD</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>SSO Keycloak pe toate sistemele</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Mesagerie Matrix/Element</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Collabora Online (editare documente)</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Monitorizare Prometheus + Grafana</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Integrare Samba/AD (dacă este necesar)</li>
-        </ul>
-        <div class="text-center mt-auto">
-          <a href="https://cal.com/chenist" target="_blank" class="btn btn-success w-100">Programează Consultație</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card pricing-card mb-4 h-100">
-      <div class="card-header bg-warning text-dark text-center">
-        <h3 class="mb-0">Enterprise</h3>
-        <small>50+ angajați</small>
-      </div>
-      <div class="card-body">
-        <h4 class="text-center mb-4">Pentru operațiuni complexe multi-sediu</h4>
-        <ul>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Tot din Growth, plus:</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Integrare Apple Business Admin API</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Flotă declarativă multi-server NixOS</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Cluster de stocare FreeBSD ZFS</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Configurații de înaltă disponibilitate</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Rețea VPN mesh multi-sediu</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Referințe de conformitate (NIS2, GDPR)</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Monitorizare 24/7 și răspuns la incidente</li>
-        </ul>
-        <div class="text-center mt-auto">
-          <a href="https://cal.com/chenist" target="_blank" class="btn btn-outline-warning w-100">Programează Consultație</a>
+      <div class="col-md-4">
+        <div class="card pricing-card mb-4 h-100">
+          <div class="card-header bg-warning text-dark text-center">
+            <h3 class="mb-0">Enterprise</h3>
+            <small>50+ angajați</small>
+          </div>
+          <div class="card-body">
+            <h4 class="text-center mb-4">Pentru operațiuni complexe multi-sediu</h4>
+            <ul>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Tot din Growth, plus:</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Integrare Apple Business Admin API</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Flotă declarativă multi-server NixOS</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Cluster de stocare FreeBSD ZFS</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Configurații de înaltă disponibilitate</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Rețea VPN mesh multi-sediu</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Referințe de conformitate (NIS2, GDPR)</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i>Monitorizare 24/7 și răspuns la incidente</li>
+            </ul>
+            <div class="text-center mt-auto">
+              <a href="https://cal.com/chenist" target="_blank" class="m-b">Programează Consultație</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-</section>
-<section id="industriile-pe-care-le-deservim" class="level2">
-<h2 data-anchor-id="industriile-pe-care-le-deservim">Industriile pe care le deservim</h2>
-<p>Soluțiile noastre de infrastructură digitală sunt concepute pentru <strong>orice domeniu de activitate</strong>. Avem experiență în:</p>
-<div class="row mt-4">
-  <div class="col-md-3 col-6">
-    <div class="text-center mb-4">
-      <i class="bi bi-building fs-1 text-primary"></i>
-      <h5 class="mt-2">Juridic și Consultanță</h5>
-    </div>
-  </div>
-  <div class="col-md-3 col-6">
-    <div class="text-center mb-4">
-      <i class="bi bi-heart-pulse fs-1 text-primary"></i>
-      <h5 class="mt-2">Sănătate și Clinici</h5>
-    </div>
-  </div>
-  <div class="col-md-3 col-6">
-    <div class="text-center mb-4">
-      <i class="bi bi-gear fs-1 text-primary"></i>
-      <h5 class="mt-2">Producție</h5>
-    </div>
-  </div>
-  <div class="col-md-3 col-6">
-    <div class="text-center mb-4">
-      <i class="bi bi-shop fs-1 text-primary"></i>
-      <h5 class="mt-2">Retail și Ospitalitate</h5>
-    </div>
-  </div>
-  <div class="col-md-3 col-6">
-    <div class="text-center mb-4">
-      <i class="bi bi-truck fs-1 text-primary"></i>
-      <h5 class="mt-2">Logistică și Transport</h5>
-    </div>
-  </div>
-  <div class="col-md-3 col-6">
-    <div class="text-center mb-4">
-      <i class="bi bi-palette fs-1 text-primary"></i>
-      <h5 class="mt-2">Creativ și Media</h5>
-    </div>
-  </div>
-  <div class="col-md-3 col-6">
-    <div class="text-center mb-4">
-      <i class="bi bi-mortarboard fs-1 text-primary"></i>
-      <h5 class="mt-2">Educație</h5>
-    </div>
-  </div>
-  <div class="col-md-3 col-6">
-    <div class="text-center mb-4">
-      <i class="bi bi-bank fs-1 text-primary"></i>
-      <h5 class="mt-2">Finanțe și Asigurări</h5>
+
+<div class="m-s">
+  <div class="container">
+    <h2>Industriile pe care le deservim</h2>
+    <p class="sub">Soluțiile noastre de infrastructură digitală sunt concepute pentru orice domeniu de activitate.</p>
+    <div class="row g-5">
+      <div class="col-md-3 col-6"><div class="m-t"><i class="bi bi-building"></i><h3>Juridic și Consultanță</h3></div></div>
+      <div class="col-md-3 col-6"><div class="m-t"><i class="bi bi-heart-pulse"></i><h3>Sănătate și Clinici</h3></div></div>
+      <div class="col-md-3 col-6"><div class="m-t"><i class="bi bi-gear"></i><h3>Producție</h3></div></div>
+      <div class="col-md-3 col-6"><div class="m-t"><i class="bi bi-shop"></i><h3>Retail și Ospitalitate</h3></div></div>
+      <div class="col-md-3 col-6"><div class="m-t"><i class="bi bi-truck"></i><h3>Logistică și Transport</h3></div></div>
+      <div class="col-md-3 col-6"><div class="m-t"><i class="bi bi-palette"></i><h3>Creativ și Media</h3></div></div>
+      <div class="col-md-3 col-6"><div class="m-t"><i class="bi bi-mortarboard"></i><h3>Educație</h3></div></div>
+      <div class="col-md-3 col-6"><div class="m-t"><i class="bi bi-bank"></i><h3>Finanțe și Asigurări</h3></div></div>
     </div>
   </div>
 </div>
-</section>
-<section id="de-ce-să-alegeți-chen.ist-pentru-infrastructura-digitală" class="level2">
-<h2 data-anchor-id="de-ce-să-alegeți-chen.ist-pentru-infrastructura-digitală">De ce să alegeți chen.ist pentru Infrastructura Digitală</h2>
-<div class="row mt-4">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0">Expertiza Noastră</h3>
-      </div>
-      <div class="card-body">
-        <ul>
-          <li><strong>Veterani UNIX:</strong> Expertiză profundă în administrarea BSD, Linux și macOS de-a lungul deceniilor</li>
-          <li><strong>Contribuitori Open-Source:</strong> Contribuim la instrumentele pe care le implementăm -- nu doar le consumăm</li>
-          <li><strong>Adoptatori Timpurii Apple Business:</strong> Pregătiți pentru implementare din prima zi (14 aprilie 2026)</li>
-          <li><strong>Mentalitate Security-First:</strong> Fiecare implementare este securizată implicit, nu ca un gând ulterior</li>
-          <li><strong>Fluență Cross-Platform:</strong> Integrare perfectă între mediile UNIX, Apple și Windows</li>
-        </ul>
-      </div>
-    </div>
-  </div>
 
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0">Abordarea Noastră</h3>
-      </div>
-      <div class="card-body">
+<div class="m-bg">
+  <div class="container">
+    <h2>De ce să alegeți chen.ist</h2>
+    <p class="sub">Expertiza și abordarea noastră pentru Infrastructura Digitală.</p>
+    <div class="row g-5">
+      <div class="col-md-6"><div class="m-t">
+        <i class="bi bi-award"></i>
+        <h3>Expertiza Noastră</h3>
         <ul>
-          <li><strong>Fără dependență de furnizor:</strong> Open-source și protocoale standard asigură că dețineți întotdeauna datele și puteți schimba furnizorul</li>
-          <li><strong>Soluții Dimensionate Corect:</strong> Potrivim complexitatea infrastructurii cu nevoile reale ale afacerii -- fără suprainginerizare</li>
+          <li><strong>Veterani UNIX:</strong> Expertiză profundă în administrarea BSD, Linux și macOS</li>
+          <li><strong>Contribuitori Open-Source:</strong> Contribuim la instrumentele pe care le implementăm</li>
+          <li><strong>Adoptatori Timpurii Apple Business:</strong> Pregătiți din prima zi (14 aprilie 2026)</li>
+          <li><strong>Mentalitate Security-First:</strong> Fiecare implementare este securizată implicit</li>
+          <li><strong>Fluență Cross-Platform:</strong> Integrare între mediile UNIX, Apple și Windows</li>
+        </ul>
+      </div></div>
+      <div class="col-md-6"><div class="m-t">
+        <i class="bi bi-compass"></i>
+        <h3>Abordarea Noastră</h3>
+        <ul>
+          <li><strong>Fără dependență de furnizor:</strong> Open-source și protocoale standard</li>
+          <li><strong>Soluții Dimensionate Corect:</strong> Potrivim complexitatea cu nevoile reale</li>
           <li><strong>Prețuri Transparente:</strong> Plătiți pentru expertiza noastră, nu pentru licențe software</li>
-          <li><strong>Transfer de Cunoștințe:</strong> Documentăm totul și instruim echipa dvs. pentru a fi autonomă</li>
-          <li><strong>Parteneriat pe Termen Lung:</strong> Suport continuu, monitorizare și evoluție pe măsură ce afacerea dvs. crește</li>
+          <li><strong>Transfer de Cunoștințe:</strong> Documentăm totul și instruim echipa dvs.</li>
+          <li><strong>Parteneriat pe Termen Lung:</strong> Suport continuu și evoluție</li>
         </ul>
-      </div>
+      </div></div>
     </div>
   </div>
 </div>
-</section>
+
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Sunteți gata să vă construiți<br>infrastructura digitală?</h2>
+    <p>Programați o consultație gratuită pentru a discuta nevoile afacerii dvs. și a primi o propunere personalizată.</p>
+    <a href="https://cal.com/chenist" target="_blank" class="m-b">Programează o Consultație</a>
+  </div>
 </div>
-<div class="cta-section">
-<section id="sunteți-gata-să-vă-construiți-infrastructura-digitală" class="level2 container text-center">
-<h2 data-anchor-id="sunteți-gata-să-vă-construiți-infrastructura-digitală"><span class="text-white">Sunteți gata să vă construiți infrastructura digitală?</span></h2>
-<p class="mb-4">Programați o consultație gratuită pentru a discuta nevoile afacerii dvs. și a primi o propunere de infrastructură personalizată.</p>
-<p><a href="https://cal.com/chenist" class="cta-button" target="_blank">Programează o Consultație</a></p>
-</section>
+
 </div>
 
 
@@ -1739,6 +1324,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Connect</div>
         <a href="mailto:office@chen.ist" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">office@chen.ist</a>
         <a href="https://github.com/chenist" target="_blank" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">GitHub</a>
+        <a href="https://alinmechenici.substack.com" target="_blank" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Newsletter</a>
         <a href="https://linkedin.com/in/chenistsec" target="_blank" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">LinkedIn</a>
         <div style="margin-top:1rem; color:rgba(255,255,255,0.2); font-size:0.72rem;">Craiova · Bucharest · Stockholm</div>
       </div>

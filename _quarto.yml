@@ -24,6 +24,7 @@ website:
   description: "Innovative technology & education"
   twitter-card: true
   open-graph: true
+  image: assets/images/og-image.png
   navbar:
     logo: assets/images/logo-light.svg
     logo-alt: "chen.ist Logo"
@@ -114,7 +115,7 @@ format:
     theme:
       light: [flatly, assets/css/light.scss]
       dark: assets/css/dark.scss
-    css: [assets/css/styles.css, assets/css/academy.scss, assets/css/custom-hero.css, assets/css/landing-pages.css, assets/css/modern.css]
+    css: [assets/css/styles.css, assets/css/modern.css]
     code-link: true
     link-external-icon: true
     link-external-newwindow: true
@@ -129,6 +130,10 @@ format:
     include-in-header:
       - text: |
           <script defer data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+          <meta name="view-transition" content="same-origin">
+          <link rel="dns-prefetch" href="https://cal.com">
+          <link rel="dns-prefetch" href="https://app.cal.com">
+          <link rel="preconnect" href="https://cal.com" crossorigin>
           <link rel="preconnect" href="https://fonts.googleapis.com">
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
           <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Source+Code+Pro&display=swap" rel="stylesheet">
