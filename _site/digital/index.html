@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-b984f3b3cb6b71a8ea84b04fabc41f2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-36e5f5eb5e62ac17850c20678128155a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-b984f3b3cb6b71a8ea84b04fabc41f2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a592c5a32ddb2bbfd9fa55d2db6a7c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-6b071a7e68b6cff4b621bc773a21853a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-a592c5a32ddb2bbfd9fa55d2db6a7c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,11 +79,11 @@ ul.task-list li input[type="checkbox"] {
 <meta property="og:description" content="Production-grade open-source, Linux, BSD, and Apple Business infrastructure for SMBs. NixOS, OpenBSD, FreeBSD, Nextcloud, and zero-touch Apple device deployment.">
 <meta property="og:image" content="https://chen.ist/assets/images/stock/code-screen.jpg">
 <meta property="og:site_name" content="chen.ist">
-<meta property="og:image:alt" content="Open-source software development environment">
+<meta property="og:image:alt" content="Open-source development">
 <meta name="twitter:title" content="Digital Infrastructure – chen.ist">
 <meta name="twitter:description" content="Production-grade open-source, Linux, BSD, and Apple Business infrastructure for SMBs. NixOS, OpenBSD, FreeBSD, Nextcloud, and zero-touch Apple device deployment.">
 <meta name="twitter:image" content="https://chen.ist/assets/images/stock/code-screen.jpg">
-<meta name="twitter:image:alt" content="Open-source software development environment">
+<meta name="twitter:image:alt" content="Open-source development">
 <meta name="twitter:card" content="summary_large_image">
 </head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
@@ -330,6 +330,61 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 }
 </script>
+<style>
+.ap { --c: #81BD4A; --g: #86868b; font-family: 'Open Sans', -apple-system, system-ui, sans-serif; }
+.ap-hero { padding: 12rem 0 8rem; text-align: center; }
+.ap-hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 700; letter-spacing: -0.045em; line-height: 1.06; }
+.ap-hero .gr { color: var(--c); }
+.ap-hero p { font-size: 1.35rem; color: var(--g); max-width: 500px; margin: 1.5rem auto 0; line-height: 1.45; }
+.ap-s { padding: 7rem 0; }
+.ap-bg { padding: 7rem 0; background: #f5f5f7; }
+[data-bs-theme="dark"] .ap-bg { background: #161617; }
+.ap h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.035em; text-align: center; line-height: 1.1; margin-bottom: 0.5rem; }
+.ap .sub { text-align: center; font-size: 1.1rem; color: var(--g); max-width: 480px; margin: 0 auto 5rem; }
+.ap-t { text-align: center; padding: 0 0.75rem; }
+.ap-t i { font-size: 1.75rem; color: var(--c); display: block; margin-bottom: 0.75rem; opacity: 0.85; }
+.ap-t h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.35rem; }
+.ap-t p { font-size: 0.88rem; color: var(--g); line-height: 1.5; }
+.ap-lk { color: var(--c); font-size: 1rem; text-decoration: none; }
+.ap-lk:hover { text-decoration: underline; }
+.ap-lk::after { content: " ›"; font-weight: 300; }
+.ap-r { display: flex; align-items: center; gap: 6rem; }
+.ap-r.rv { flex-direction: row-reverse; }
+.ap-ri { flex: 0 0 50%; }
+.ap-ri img { width: 100%; border-radius: 28px; }
+.ap-rt h2 { text-align: left; font-size: clamp(1.75rem, 3.5vw, 2.75rem); margin-bottom: 1rem; }
+.ap-rt p { font-size: 1.05rem; color: var(--g); line-height: 1.65; }
+.ap-rt .lk { margin-top: 1.75rem; }
+.ap-n { display: flex; justify-content: center; gap: 6rem; flex-wrap: wrap; }
+.ap-nn { font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 700; color: var(--c); line-height: 1; text-align: center; }
+.ap-nl { font-size: 0.75rem; color: var(--g); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.35rem; text-align: center; }
+.ap-cta { padding: 10rem 0; text-align: center; }
+.ap-cta h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; }
+.ap-cta p { font-size: 1.1rem; color: var(--g); max-width: 420px; margin: 0 auto 2.5rem; line-height: 1.5; }
+.ap-b { display: inline-block; padding: 0.85rem 2.25rem; background: var(--c); color: #fff; border-radius: 980px; font-weight: 500; font-size: 1rem; text-decoration: none; transition: background 0.15s; }
+.ap-b:hover { background: #6BA33A; color: #fff; text-decoration: none; }
+.ap-sm { font-size: 0.82rem; color: var(--g); margin-top: 1.75rem; }
+.ap-sm i { color: var(--c); }
+.ap-d { width: 36px; height: 3px; background: var(--c); margin: 0 auto 3.5rem; border-radius: 2px; opacity: 0.6; }
+.ap-pkg { text-align: center; padding: 2.5rem 2rem; border: 1.5px solid rgba(0,0,0,0.08); border-radius: 20px; height: 100%; display: flex; flex-direction: column; transition: border-color 0.2s; }
+[data-bs-theme="dark"] .ap-pkg { border-color: rgba(255,255,255,0.1); }
+.ap-pkg:hover { border-color: var(--c); }
+.ap-pkg.ft { border-color: var(--c); }
+.ap-pkg h3 { font-size: 1.35rem; font-weight: 700; margin-bottom: 0.15rem; }
+.ap-pkg .sz { font-size: 0.85rem; color: var(--g); margin-bottom: 1.5rem; }
+.ap-pkg ul { text-align: left; list-style: none; padding: 0; margin: 0 0 2rem; flex-grow: 1; }
+.ap-pkg ul li { padding: 0.35rem 0; font-size: 0.9rem; color: var(--g); }
+.ap-pkg ul li::before { content: "✓ "; color: var(--c); font-weight: 700; }
+.ap-badge { display: inline-block; background: var(--c); color: #fff; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.3rem 1rem; border-radius: 980px; margin-bottom: 1rem; }
+@media (max-width: 767px) {
+  .ap-hero { padding: 7rem 0 5rem; }
+  .ap-r, .ap-r.rv { flex-direction: column; gap: 3rem; }
+  .ap-ri { flex: none; }
+  .ap-rt h2 { text-align: center; }
+  .ap-n { gap: 3rem; }
+  .ap-cta { padding: 6rem 0; }
+}
+</style>
 
 
 <link rel="stylesheet" href="../assets/css/styles.css">
@@ -536,472 +591,148 @@ document.addEventListener('DOMContentLoaded', function() {
 </header>
 
 
-<!-- Section 1: Hero -->
-<div class="lp-hero lp-hero--dark">
+<div class="ap">
+
+<div class="ap-hero">
   <div class="container">
-    <div class="lp-hero__badge">Digital Infrastructure for SMBs</div>
-    <h1>Stop Paying Microsoft Licenses<br>for Software That <em>Already Exists Free</em></h1>
-    <p class="lp-hero__sub">
-      We build production-grade open-source, UNIX, and Apple Business infrastructure
-      that saves SMBs 40-70% on IT costs while giving you full control of your data.
-    </p>
-    <a href="https://cal.com/chenist" target="_blank" class="lp-btn lp-btn--primary lp-btn--large lp-btn--pulse">
-      <i class="bi bi-calendar-check"></i> Get Your Free Infrastructure Audit
-    </a>
-    <div class="lp-hero__proof">
-      <i class="bi bi-shield-check"></i> Trusted by SMBs across Romania &amp; the EU &nbsp;|&nbsp;
-      <strong>100% open-source</strong> — no vendor lock-in
+    <h1>Digital <span class="gr">Infrastructure</span></h1>
+    <p>Open-source, UNIX, and Apple platforms. Deployed and managed for your business.</p>
+  </div>
+</div>
+
+<div class="ap-bg">
+  <div class="container">
+    <h2 class="anchored">Three pillars. One partner.</h2>
+    <p class="sub">Everything your business needs to run, secured and maintained by us.</p>
+    <div class="row g-5">
+      <div class="col-md-4"><div class="ap-t"><i class="bi bi-code-square"></i><h3 class="anchored">Open-Source Stack</h3><p>Productivity, communication, identity, and monitoring — no license fees.</p></div></div>
+      <div class="col-md-4"><div class="ap-t"><i class="bi bi-terminal"></i><h3 class="anchored">UNIX Systems</h3><p>Linux and BSD servers, firewalls, storage, and declarative infrastructure.</p></div></div>
+      <div class="col-md-4"><div class="ap-t"><i class="bi bi-apple"></i><h3 class="anchored">Apple Infrastructure</h3><p>Apple Business MDM, zero-touch deployment, email, and brand management.</p></div></div>
     </div>
   </div>
 </div>
 
-<!-- Section 2: Pain Points -->
-<div class="lp-section">
+<div class="ap-s">
   <div class="container">
-    <div class="lp-section__header">
-      <div class="lp-section__eyebrow">The Problem</div>
-      <h2 class="anchored">Your IT Budget Is Being Drained by Licenses You Don't Need</h2>
-    </div>
-    <div class="row">
-      <div class="col-md-6 col-lg-4 mb-3">
-        <div class="lp-pain">
-          <div class="lp-pain__icon"><i class="bi bi-cash-stack"></i></div>
-          <div>
-            <h4 class="anchored">Rising License Costs</h4>
-            <p>Microsoft 365, Google Workspace, and Adobe subscriptions increase every year. A 50-person company spends EUR 30,000+/year just on basic productivity software.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 mb-3">
-        <div class="lp-pain">
-          <div class="lp-pain__icon"><i class="bi bi-lock-fill"></i></div>
-          <div>
-            <h4 class="anchored">Vendor Lock-In</h4>
-            <p>Your data sits on someone else's servers, governed by their terms. If they change pricing or policies, you have no leverage and no exit plan.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 mb-3">
-        <div class="lp-pain">
-          <div class="lp-pain__icon"><i class="bi bi-cloud-slash"></i></div>
-          <div>
-            <h4 class="anchored">No Control Over Data</h4>
-            <p>GDPR requires you to know where your data is processed. With US cloud providers, your EU customer data may cross borders without your knowledge.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 mb-3">
-        <div class="lp-pain">
-          <div class="lp-pain__icon"><i class="bi bi-people"></i></div>
-          <div>
-            <h4 class="anchored">No In-House IT Team</h4>
-            <p>You can't afford a full sysadmin team, so infrastructure decisions get made by whoever is least busy. Systems break, nobody knows why.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 mb-3">
-        <div class="lp-pain">
-          <div class="lp-pain__icon"><i class="bi bi-apple"></i></div>
-          <div>
-            <h4 class="anchored">Mac Management Chaos</h4>
-            <p>Your team uses Macs but nobody manages them centrally. No MDM, no security policies, no zero-touch deployment. New hires wait days to get set up.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 mb-3">
-        <div class="lp-pain">
-          <div class="lp-pain__icon"><i class="bi bi-exclamation-triangle"></i></div>
-          <div>
-            <h4 class="anchored">NIS2 Compliance Pressure</h4>
-            <p>EU regulations are tightening. You need documented infrastructure, access controls, and incident response capabilities you don't currently have.</p>
-          </div>
-        </div>
+    <div class="ap-r">
+      <div class="ap-ri"><img src="../assets/images/stock/code-screen.jpg" alt="Open-source development"></div>
+      <div class="ap-rt">
+        <h2 class="anchored">Replace licenses.<br>Keep the functionality.</h2>
+        <p>Nextcloud for files. Collabora for documents. Matrix for chat. Keycloak for SSO. Prometheus for monitoring. All open-source, all self-hosted, all yours.</p>
+        <div class="lk"><a href="https://cal.com/chenist" target="_blank" class="ap-lk">Plan your stack</a></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Section 3: Solution (What We Build) -->
-<div class="lp-section--alt">
+<div class="ap-bg">
   <div class="container">
-    <div class="lp-section__header">
-      <div class="lp-section__eyebrow">The Solution</div>
-      <h2 class="anchored">Infrastructure That Works for You, Not Against You</h2>
-      <p>Three pillars of modern SMB infrastructure, deployed and managed by chen.ist.</p>
-    </div>
-
-    <!-- Open-Source Stack -->
-    <div class="lp-feature-row">
-      <div class="lp-feature-row__img">
-        <img src="../assets/images/stock/code-screen.jpg" alt="Open-source software development environment">
-      </div>
-      <div class="lp-feature-row__text">
-        <div class="lp-section__eyebrow">Pillar 1</div>
-        <h2 class="anchored">Open-Source Stack for Business</h2>
-        <p>Replace expensive proprietary licenses with battle-tested open-source alternatives.
-        We handle deployment, configuration, security hardening, and ongoing maintenance.</p>
-        <div class="row mt-3">
-          <div class="col-6">
-            <ul class="lp-checklist">
-              <li>Nextcloud (files, calendar)</li>
-              <li>Collabora Online (docs)</li>
-              <li>Matrix/Element (chat)</li>
-            </ul>
-          </div>
-          <div class="col-6">
-            <ul class="lp-checklist">
-              <li>Keycloak (SSO)</li>
-              <li>Prometheus + Grafana</li>
-              <li>PostgreSQL, MinIO</li>
-            </ul>
-          </div>
-        </div>
+    <div class="ap-r rv">
+      <div class="ap-ri"><img src="../assets/images/stock/server-racks.jpg" alt="UNIX server infrastructure"></div>
+      <div class="ap-rt">
+        <h2 class="anchored">Servers that run<br>themselves.</h2>
+        <p>NixOS for declarative, reproducible deployments. OpenBSD for firewalls. FreeBSD for ZFS storage. Debian for everything else. Hardened by default.</p>
+        <div class="lk"><a href="https://cal.com/chenist" target="_blank" class="ap-lk">Design your infrastructure</a></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- UNIX Infrastructure -->
-<div class="lp-section">
+<div class="ap-s">
   <div class="container">
-    <div class="lp-feature-row lp-feature-row--reverse">
-      <div class="lp-feature-row__img">
-        <img src="../assets/images/stock/server-racks.jpg" alt="UNIX server infrastructure rack">
-      </div>
-      <div class="lp-feature-row__text">
-        <div class="lp-section__eyebrow">Pillar 2</div>
-        <h2 class="anchored">UNIX Infrastructure</h2>
-        <p>We build and manage servers, firewalls, and network appliances on proven UNIX operating systems. Whether you need a hardened OpenBSD firewall, a NixOS declarative fleet, or a traditional Linux server stack, we deliver infrastructure that is secure, reproducible, and maintainable.</p>
-        <div class="row mt-3">
-          <div class="col-6">
-            <ul class="lp-checklist">
-              <li>NixOS (declarative, atomic)</li>
-              <li>Debian/Ubuntu (LTS)</li>
-              <li>RHEL/AlmaLinux (FIPS)</li>
-            </ul>
-          </div>
-          <div class="col-6">
-            <ul class="lp-checklist">
-              <li>OpenBSD (secure firewall)</li>
-              <li>FreeBSD (ZFS, Jails)</li>
-              <li>NetBSD (embedded, IoT)</li>
-            </ul>
-          </div>
-        </div>
+    <div class="ap-r">
+      <div class="ap-ri"><img src="../assets/images/stock/team-macbooks.jpg" alt="Apple Business deployment"></div>
+      <div class="ap-rt">
+        <h2 class="anchored">Apple Business.<br>Free. Built-in. Ready.</h2>
+        <p>The new unified platform launches April 14, 2026. Free MDM, Blueprints for zero-touch setup, business email on your domain, and brand management across Maps, Wallet, and Mail.</p>
+        <div class="lk"><a href="https://cal.com/chenist" target="_blank" class="ap-lk">Set up Apple Business</a></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Apple Business -->
-<div class="lp-section--alt">
+<div class="ap-bg">
   <div class="container">
-    <div class="lp-feature-row">
-      <div class="lp-feature-row__img">
-        <img src="../assets/images/stock/team-macbooks.jpg" alt="Apple Business infrastructure with MacBooks">
-      </div>
-      <div class="lp-feature-row__text">
-        <div class="lp-section__eyebrow">Pillar 3</div>
-        <h2 class="anchored">Apple Business</h2>
-        <p>We are early adopters and deployment partners for the new Apple Business platform, launching April 14, 2026. Apple Business replaces Apple Business Manager, Apple Business Essentials, and Apple Business Connect into a single, unified platform.</p>
-        <div class="row mt-3">
-          <div class="col-6">
-            <ul class="lp-checklist">
-              <li>Built-in MDM</li>
-              <li>Zero-touch Blueprints</li>
-              <li>Business Email &amp; Calendar</li>
-            </ul>
-          </div>
-          <div class="col-6">
-            <ul class="lp-checklist">
-              <li>Brand Management</li>
-              <li>AppleCare+ for Business</li>
-              <li>Admin API integration</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <div class="ap-n">
+      <div><div class="ap-nn">40–70%</div><div class="ap-nl">IT cost savings</div></div>
+      <div><div class="ap-nn">100%</div><div class="ap-nl">Open-source</div></div>
+      <div><div class="ap-nn">EU</div><div class="ap-nl">Data sovereignty</div></div>
+      <div><div class="ap-nn">24/7</div><div class="ap-nl">Monitoring</div></div>
     </div>
   </div>
 </div>
 
-<!-- Section 4: Trust / Social Proof -->
-<div class="lp-section">
+<div class="ap-s">
   <div class="container">
-    <div class="lp-section__header">
-      <div class="lp-section__eyebrow">Why chen.ist</div>
-      <h2 class="anchored">Built on Proven Technology, Delivered by Specialists</h2>
-    </div>
-
-    <!-- Stat bar -->
-    <div class="lp-stats">
-      <div class="lp-stat">
-        <div class="lp-stat__number">15+</div>
-        <div class="lp-stat__label">Years in UNIX Systems</div>
-      </div>
-      <div class="lp-stat">
-        <div class="lp-stat__number">100%</div>
-        <div class="lp-stat__label">Open-Source Stack</div>
-      </div>
-      <div class="lp-stat">
-        <div class="lp-stat__number">EU</div>
-        <div class="lp-stat__label">Data Sovereignty</div>
-      </div>
-      <div class="lp-stat">
-        <div class="lp-stat__number">24/7</div>
-        <div class="lp-stat__label">Monitoring Included</div>
-      </div>
-    </div>
-
-    <!-- Technology logos -->
-    <div class="lp-trust">
-      <img src="../assets/images/logos/nixos.svg" alt="NixOS">
-      <img src="../assets/images/logos/openbsd.svg" alt="OpenBSD">
-      <img src="../assets/images/logos/apple-business.svg" alt="Apple Business">
-      <img src="../assets/images/logos/nextcloud.svg" alt="Nextcloud">
-      <img src="../assets/images/logos/postgresql.svg" alt="PostgreSQL">
-      <img src="../assets/images/logos/grafana.svg" alt="Grafana">
-    </div>
-
-    <!-- Guarantee cards -->
-    <div class="row mt-5">
+    <h2 class="anchored">Pick your starting point</h2>
+    <p class="sub">All packages include deployment, hardening, monitoring, and support.</p>
+    <div class="row g-4">
       <div class="col-md-4">
-        <div class="lp-feature">
-          <div class="lp-feature__icon"><i class="bi bi-file-earmark-code"></i></div>
-          <h3 class="anchored">Reproducible Deployments</h3>
-          <p>Every system we build is declared in code (NixOS, Ansible). If a server dies, we rebuild it identically in minutes, not days.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="lp-feature">
-          <div class="lp-feature__icon"><i class="bi bi-arrow-repeat"></i></div>
-          <h3 class="anchored">Open Source Guarantee</h3>
-          <p>You own everything. If we part ways, you keep every configuration file, every server, every account. Zero lock-in to us, either.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="lp-feature">
-          <div class="lp-feature__icon"><i class="bi bi-shield-check"></i></div>
-          <h3 class="anchored">Security-First Architecture</h3>
-          <p>Every deployment includes hardened baselines, automated patching, encrypted backups, and firewall rules reviewed against CIS benchmarks.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Section 5: Pricing / Packages -->
-<div class="lp-section--alt">
-  <div class="container">
-    <div class="lp-section__header">
-      <div class="lp-section__eyebrow">Packages</div>
-      <h2 class="anchored">Infrastructure Tailored to Your Team Size</h2>
-      <p>All packages include deployment, hardening, monitoring, and ongoing support. Custom pricing based on your specific needs.</p>
-    </div>
-    <div class="row">
-      <!-- Starter -->
-      <div class="col-md-4 mb-4">
-        <div class="lp-package">
+        <div class="ap-pkg">
           <h3 class="anchored">Starter</h3>
-          <div class="lp-package__subtitle">1-10 employees</div>
-          <div class="lp-package__price">Custom pricing based on scope</div>
+          <div class="sz">1–10 employees</div>
           <ul>
-            <li>Apple Business setup + Blueprints</li>
-            <li>1 Linux server (Debian/Ubuntu)</li>
-            <li>Nextcloud (files, contacts, calendar)</li>
-            <li>Business email on custom domain</li>
-            <li>Basic firewall (OpenBSD pf or UFW)</li>
-            <li>Automated backups (Restic)</li>
+            <li>Apple Business setup</li>
+            <li>1 Linux server</li>
+            <li>Nextcloud + email</li>
+            <li>Basic firewall</li>
+            <li>Automated backups</li>
             <li>Uptime monitoring</li>
           </ul>
-          <a href="https://cal.com/chenist" target="_blank" class="lp-btn lp-btn--outline lp-btn--full">Get a Quote</a>
+          <a href="https://cal.com/chenist" target="_blank" class="ap-lk">Get a quote</a>
         </div>
       </div>
-      <!-- Growth (FEATURED) -->
-      <div class="col-md-4 mb-4">
-        <div class="lp-package lp-package--featured">
-          <div class="lp-package__badge">Most Popular</div>
+      <div class="col-md-4">
+        <div class="ap-pkg ft">
+          <div class="ap-badge">Most popular</div>
           <h3 class="anchored">Growth</h3>
-          <div class="lp-package__subtitle">11-50 employees</div>
-          <div class="lp-package__price">Custom pricing based on scope</div>
+          <div class="sz">11–50 employees</div>
           <ul>
-            <li>Everything in Starter, plus:</li>
-            <li>Full Apple MDM with team grouping</li>
-            <li>OpenBSD dedicated firewall/VPN</li>
-            <li>Keycloak SSO across all systems</li>
-            <li>Matrix/Element team messaging</li>
-            <li>Collabora Online (document editing)</li>
-            <li>Prometheus + Grafana monitoring</li>
-            <li>Samba/AD bridging (if needed)</li>
+            <li>Everything in Starter</li>
+            <li>Full Apple MDM</li>
+            <li>OpenBSD firewall + VPN</li>
+            <li>Keycloak SSO</li>
+            <li>Matrix messaging</li>
+            <li>Collabora documents</li>
+            <li>Prometheus + Grafana</li>
           </ul>
-          <a href="https://cal.com/chenist" target="_blank" class="lp-btn lp-btn--primary lp-btn--full">Book Free Consultation</a>
+          <a href="https://cal.com/chenist" target="_blank" class="ap-b" style="font-size:0.9rem; padding:0.7rem 1.75rem;">Book consultation</a>
         </div>
       </div>
-      <!-- Enterprise -->
-      <div class="col-md-4 mb-4">
-        <div class="lp-package">
+      <div class="col-md-4">
+        <div class="ap-pkg">
           <h3 class="anchored">Enterprise</h3>
-          <div class="lp-package__subtitle">50+ employees</div>
-          <div class="lp-package__price">Custom pricing based on scope</div>
+          <div class="sz">50+ employees</div>
           <ul>
-            <li>Everything in Growth, plus:</li>
-            <li>Apple Business Admin API integration</li>
-            <li>NixOS declarative multi-server fleet</li>
-            <li>FreeBSD ZFS storage cluster</li>
-            <li>High-availability configurations</li>
+            <li>Everything in Growth</li>
+            <li>NixOS multi-server fleet</li>
+            <li>FreeBSD ZFS storage</li>
             <li>Multi-site VPN mesh</li>
-            <li>Compliance baselines (NIS2, GDPR)</li>
-            <li>24/7 monitoring + incident response</li>
+            <li>NIS2 + GDPR baselines</li>
+            <li>24/7 incident response</li>
           </ul>
-          <a href="https://cal.com/chenist" target="_blank" class="lp-btn lp-btn--outline lp-btn--full">Contact Us</a>
+          <a href="https://cal.com/chenist" target="_blank" class="ap-lk">Contact us</a>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Section 6: Urgency -->
-<div class="lp-section">
-  <div class="container" style="max-width: 800px;">
-    <div class="lp-urgency">
-      <h3 class="anchored"><i class="bi bi-apple me-2"></i>Apple Business Launches <span class="lp-urgency__date">April 14, 2026</span></h3>
-      <p>The new unified platform replaces Apple Business Manager, Apple Business Essentials, and Apple Business Connect. Companies that set up before launch get priority migration support. <strong>We are certified early-access deployment partners.</strong></p>
-    </div>
-    <div class="text-center mt-4">
-      <a href="https://cal.com/chenist" target="_blank" class="lp-btn lp-btn--primary">
-        <i class="bi bi-calendar-check"></i> Reserve Your Setup Slot
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- Micro-conversion: Lead Magnet -->
-<div class="lp-section--alt">
-  <div class="container" style="max-width: 700px;">
-    <div class="lp-lead-magnet">
-      <div class="lp-lead-magnet__icon"><i class="bi bi-file-earmark-pdf"></i></div>
-      <div>
-        <h4 class="anchored">Free Guide: Open-Source Alternatives for Every Business Tool</h4>
-        <p>A practical comparison of 30+ proprietary tools and their open-source replacements, with estimated cost savings for teams of 10, 25, and 50.</p>
-        <a href="#" class="lp-btn lp-btn--outline" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">
-          <i class="bi bi-download"></i> Download PDF (No email required)
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Section 7: Registration / Contact Form -->
-<div class="lp-section">
+<div class="ap-cta">
   <div class="container">
-    <div class="lp-section__header">
-      <h2 class="anchored">Start Your Infrastructure Transformation</h2>
-      <p>Register for a consultation or book a call directly.</p>
-    </div>
-    <div class="lp-form-wrap">
-      <ul class="nav nav-tabs" id="regTabs-digital" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#formReg-digital" type="button" role="tab">
-            <i class="bi bi-file-earmark-text me-2"></i>Register (Romania)
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#calReg-digital" type="button" role="tab">
-            <i class="bi bi-calendar-check me-2"></i>Book a Call (EU / International)
-          </button>
-        </li>
-      </ul>
-      <div class="tab-content pt-3">
-        <div class="tab-pane fade show active" id="formReg-digital" role="tabpanel">
-          <p class="text-muted"><i class="bi bi-geo-alt me-1"></i>Fill out the form and we'll get back to you within 24 hours.</p>
-          <form action="https://formspree.io/f/mpwkaqev" method="POST">
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label class="form-label">Full Name *</label>
-                <input type="text" class="form-control" name="name" required="" placeholder="Your full name">
-              </div>
-              <div class="col-md-6 mb-3">
-                <label class="form-label">Email *</label>
-                <input type="email" class="form-control" name="email" required="" placeholder="your@email.com">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label class="form-label">Phone</label>
-                <input type="tel" class="form-control" name="phone" placeholder="Phone number">
-              </div>
-              <div class="col-md-6 mb-3">
-                <label class="form-label">Company</label>
-                <input type="text" class="form-control" name="company" placeholder="Company">
-              </div>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Package Interest</label>
-              <select class="form-select" name="interest">
-                <option value="">Select a package...</option>
-                <option value="starter">Starter (1-10 employees)</option>
-                <option value="growth">Growth (11-50 employees)</option>
-                <option value="enterprise">Enterprise (50+ employees)</option>
-                <option value="custom">Custom / Not sure yet</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Tell us about your infrastructure needs</label>
-              <textarea class="form-control" name="message" rows="3" placeholder="Current setup, number of devices, specific needs (Linux, BSD, Apple, open-source tools)..."></textarea>
-            </div>
-            <input type="hidden" name="_subject" value="Digital Infrastructure Inquiry from chen.ist">
-            <input type="hidden" name="_source" value="digital-infrastructure">
-            <input type="text" name="_gotcha" style="display:none">
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" required="">
-              <label class="form-check-label">I agree to the <a href="../privacy.html" target="_blank">privacy policy</a> *</label>
-            </div>
-            <button type="submit" class="lp-btn lp-btn--primary lp-btn--full" style="border: none; cursor: pointer; padding: 1rem; font-size: 1.05rem;"><i class="bi bi-send me-2"></i>Request Consultation</button>
-          </form>
-        </div>
-        <div class="tab-pane fade" id="calReg-digital" role="tabpanel">
-          <p class="text-muted"><i class="bi bi-globe me-1"></i>Prefer a live conversation? Book directly in our calendar.</p>
-          <a href="https://cal.com/chenist" target="_blank" class="lp-btn lp-btn--outline lp-btn--full" style="padding: 1rem; font-size: 1.05rem;"><i class="bi bi-calendar-check me-2"></i>Book via Cal.com</a>
-        </div>
-      </div>
+    <div class="ap-d"></div>
+    <h2 class="anchored">Your infrastructure,<br>built right</h2>
+    <p>30 minutes. No pitch. Just an honest assessment of what we can build for you.</p>
+    <a href="https://cal.com/chenist" target="_blank" class="ap-b">Book your free audit</a>
+    <div class="ap-sm">
+      <i class="bi bi-check-circle-fill"></i> Free &nbsp;
+      <i class="bi bi-check-circle-fill"></i> No lock-in &nbsp;
+      <i class="bi bi-check-circle-fill"></i> Proposal in 48h
     </div>
   </div>
 </div>
 
-<!-- Section 8: Final CTA -->
-<div class="lp-cta-block">
-  <div class="container">
-    <h2 class="anchored">Your competitors are already cutting IT costs.<br>When will you?</h2>
-    <p>30-minute consultation. No sales pitch. Just an honest assessment of what open-source infrastructure can do for your business.</p>
-    <a href="https://cal.com/chenist" target="_blank" class="lp-btn lp-btn--primary lp-btn--large">
-      <i class="bi bi-calendar-check"></i> Book Your Free Audit
-    </a>
-    <div class="lp-cta-block__objection">
-      <span><i class="bi bi-check-circle-fill"></i> Free, no obligation</span> &nbsp;&nbsp;
-      <span><i class="bi bi-check-circle-fill"></i> 30 minutes or less</span> &nbsp;&nbsp;
-      <span><i class="bi bi-check-circle-fill"></i> Get a written proposal within 48h</span>
-    </div>
-  </div>
 </div>
-
-<!-- Mobile Sticky CTA Bar -->
-<div class="lp-sticky-cta" id="stickyCtaBar" style="display:none;">
-  <span style="font-weight:600; font-size:0.9rem;">Free 30-min consultation</span>
-  <a href="https://cal.com/chenist" target="_blank" class="lp-btn lp-btn--primary" style="padding:0.6rem 1.5rem; font-size:0.9rem;">
-    <i class="bi bi-calendar-check"></i> Book Now
-  </a>
-</div>
-<script>
-if (window.innerWidth < 768) {
-  var stickyBar = document.getElementById('stickyCtaBar');
-  window.addEventListener('scroll', function() {
-    stickyBar.style.display = window.scrollY > 500 ? 'flex' : 'none';
-  });
-  document.body.classList.add('has-sticky-cta');
-  var calBtn = document.querySelector('[data-cal-link]');
-  if (calBtn) calBtn.style.display = 'none';
-}
-</script>
 
 
 
@@ -1427,19 +1158,6 @@ if (window.innerWidth < 768) {
   });
   </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-
-</div>   
-    <div class="nav-footer-center">
-
-</div>
-    <div class="nav-footer-right">
-
-</div>
-  </div>
-</footer>
 <footer class="footer mt-5 py-3 cybersecurity-footer">
     <div class="container">
         <div class="row mb-3">
