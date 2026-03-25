@@ -9,73 +9,88 @@ format:
     include-in-header:
       text: |
         <style>
-        /* Full-width stacked sections — apple.com style */
         .hp { font-family: 'Open Sans', -apple-system, system-ui, sans-serif; }
-        .hp-section { min-height: 85vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 6rem 1.5rem; position: relative; overflow: hidden; }
-        .hp-section h2 { font-size: clamp(2.5rem, 5.5vw, 4.5rem); font-weight: 700; letter-spacing: -0.04em; line-height: 1.06; margin-bottom: 1rem; }
-        .hp-section p { font-size: clamp(1rem, 1.8vw, 1.3rem); max-width: 500px; margin: 0 auto 2rem; line-height: 1.5; }
-        .hp-section img { max-width: 100%; border-radius: 28px; margin-top: 2rem; }
-        .hp-links { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
-        .hp-links a { font-size: 1.05rem; font-weight: 500; text-decoration: none; }
-        .hp-links a:hover { text-decoration: underline; }
-        .hp-links .primary { color: #81BD4A; }
-        .hp-links .primary::after { content: " ›"; }
-        .hp-links .secondary { color: #86868b; }
-        .hp-links .secondary::after { content: " ›"; }
 
-        /* Hero — full viewport, dark */
-        .hp-hero { min-height: 100vh; background: #000; color: #fff; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%2381BD4A' fill-opacity='0.04'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-        .hp-hero h1 { font-size: clamp(3rem, 7vw, 6.5rem); font-weight: 700; letter-spacing: -0.05em; line-height: 1.02; color: #fff; margin-bottom: 1.5rem; }
+        /* Hero — full-bleed image from top of viewport */
+        .hp-hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8rem 1.5rem 6rem; position: relative; overflow: hidden; }
+        .hp-hero-img { position: absolute; inset: 0; background: url('/assets/images/stock/server-room-dark.jpg') center/cover no-repeat; }
+        .hp-hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.8) 100%); }
+        .hp-hero-content { position: relative; z-index: 1; }
+        .hp-hero h1 { font-size: clamp(3rem, 8vw, 7rem); font-weight: 700; letter-spacing: -0.05em; line-height: 1.0; color: #fff; margin-bottom: 1.5rem; }
         .hp-hero h1 .gr { color: #81BD4A; }
-        .hp-hero p { color: rgba(255,255,255,0.55); }
-        .hp-hero .hp-links .secondary { color: rgba(255,255,255,0.4); }
-
-        /* Dark sections */
-        .hp-dark { background: #111; color: #fff; background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2381BD4A' fill-opacity='0.03' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1.5'/%3E%3Ccircle cx='13' cy='13' r='1.5'/%3E%3C/g%3E%3C/svg%3E"); }
-        .hp-dark p { color: rgba(255,255,255,0.55); }
-        .hp-dark .hp-links .secondary { color: rgba(255,255,255,0.4); }
-
-        /* Light sections */
-        .hp-light { background: #f5f5f7; color: #1d1d1f; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.02' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"); }
-        .hp-light p { color: #86868b; }
-
-        /* White sections */
-        .hp-white { background: #fff; color: #1d1d1f; }
-        .hp-white p { color: #86868b; }
-
-        /* Image showcase */
-        .hp-img-wrap { max-width: 900px; margin: 0 auto; }
-        .hp-img-full { width: 100%; border-radius: 28px; box-shadow: 0 30px 80px rgba(0,0,0,0.15); }
+        .hp-hero p { font-size: clamp(1.1rem, 2vw, 1.35rem); color: rgba(255,255,255,0.6); max-width: 520px; margin: 0 auto 2.5rem; line-height: 1.5; }
+        .hp-hero-btn { display: inline-block; padding: 1rem 2.5rem; background: #81BD4A; color: #fff; border-radius: 980px; font-weight: 500; font-size: 1.05rem; text-decoration: none; transition: all 0.2s; }
+        .hp-hero-btn:hover { background: #6BA33A; color: #fff; text-decoration: none; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(129,189,74,0.3); }
+        .hp-scroll { display: block; margin-top: 3rem; color: rgba(255,255,255,0.2); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; text-decoration: none; }
+        .hp-scroll i { display: block; font-size: 1rem; margin-top: 0.4rem; animation: hpb 2s infinite; }
+        @keyframes hpb { 0%,100%{transform:translateY(0)} 50%{transform:translateY(5px)} }
 
         /* Marquee */
-        .hp-marquee { background: #81BD4A; padding: 0.65rem 0; overflow: hidden; white-space: nowrap; }
-        .hp-marquee-inner { display: inline-block; animation: hp-scroll 25s linear infinite; }
-        .hp-marquee span { display: inline-block; padding: 0 2.5rem; font-size: 0.8rem; font-weight: 600; color: #fff; letter-spacing: 0.04em; }
-        @keyframes hp-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .hp-mq { background: #81BD4A; padding: 0.6rem 0; overflow: hidden; white-space: nowrap; }
+        .hp-mq-inner { display: inline-block; animation: hps 22s linear infinite; }
+        .hp-mq span { display: inline-block; padding: 0 2rem; font-size: 0.75rem; font-weight: 700; color: #fff; letter-spacing: 0.06em; text-transform: uppercase; }
+        @keyframes hps { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
 
-        /* Scroll hint */
-        .hp-scroll-hint { display: block; margin-top: 3rem; color: rgba(255,255,255,0.25); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; text-decoration: none; }
-        .hp-scroll-hint i { display: block; font-size: 1.1rem; margin-top: 0.5rem; animation: hp-bounce 2s infinite; }
-        @keyframes hp-bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
+        /* Section — full-bleed image background */
+        .hp-sec { min-height: 90vh; display: flex; align-items: center; position: relative; overflow: hidden; padding: 6rem 0; }
+        .hp-sec-img { position: absolute; inset: 0; background-size: cover; background-position: center; }
+        .hp-sec-over { position: absolute; inset: 0; }
+        .hp-sec-content { position: relative; z-index: 1; width: 100%; }
+        .hp-sec h2 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 700; letter-spacing: -0.04em; line-height: 1.06; margin-bottom: 1rem; }
+        .hp-sec p { font-size: clamp(1rem, 1.6vw, 1.2rem); max-width: 480px; line-height: 1.55; margin-bottom: 2rem; }
+        .hp-sec-links a { font-size: 1rem; font-weight: 500; text-decoration: none; margin-right: 2rem; }
+        .hp-sec-links a:hover { text-decoration: underline; }
+        .hp-sec-links .pr { color: #81BD4A; }
+        .hp-sec-links .pr::after { content: " ›"; }
+        .hp-sec-links .se { color: rgba(255,255,255,0.4); }
+        .hp-sec-links .se::after { content: " ›"; }
+        .hp-sec-links .se-dark { color: #86868b; }
+        .hp-sec-links .se-dark::after { content: " ›"; }
 
-        /* Stats bar */
-        .hp-stats { display: flex; justify-content: center; gap: clamp(2rem, 5vw, 5rem); flex-wrap: wrap; padding: 5rem 1.5rem; background: #000; color: #fff; }
-        .hp-stat-n { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 700; color: #81BD4A; line-height: 1; }
-        .hp-stat-l { font-size: 0.7rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.3rem; }
+        /* Left-aligned text overlay on dark image */
+        .hp-left { color: #fff; }
+        .hp-left .hp-sec-over { background: linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%); }
+        .hp-left .hp-sec-content { padding-left: max(2rem, calc((100vw - 1200px)/2 + 1rem)); }
+        .hp-left p { color: rgba(255,255,255,0.55); }
 
-        /* Mobile */
+        /* Right-aligned text overlay on light/dark image */
+        .hp-right { color: #fff; }
+        .hp-right .hp-sec-over { background: linear-gradient(270deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%); }
+        .hp-right .hp-sec-content { text-align: right; padding-right: max(2rem, calc((100vw - 1200px)/2 + 1rem)); }
+        .hp-right p { color: rgba(255,255,255,0.55); margin-left: auto; }
+        .hp-right .hp-sec-links { text-align: right; }
+
+        /* Centered text on tinted image */
+        .hp-center { text-align: center; }
+        .hp-center .hp-sec-over { background: rgba(0,0,0,0.65); }
+        .hp-center .hp-sec-content { color: #fff; }
+        .hp-center p { color: rgba(255,255,255,0.55); margin: 0 auto 2rem; }
+        .hp-center .hp-sec-links { justify-content: center; }
+
+        /* Pattern section — no image, SVG pattern */
+        .hp-pattern { background: #f5f5f7; color: #1d1d1f; background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2381BD4A' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); min-height: auto; padding: 5rem 0; }
+        .hp-pattern p { color: #86868b; }
+
+        /* Stats */
+        .hp-stats { display: flex; justify-content: center; gap: clamp(2rem, 5vw, 5rem); flex-wrap: wrap; padding: 5rem 1.5rem; background: #000; background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2381BD4A' fill-opacity='0.07' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3Ccircle cx='13' cy='13' r='1'/%3E%3C/g%3E%3C/svg%3E"); }
+        .hp-sn { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 700; color: #81BD4A; line-height: 1; }
+        .hp-sl { font-size: 0.7rem; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.3rem; }
+
+        @media (max-width: 991px) {
+          .hp-left .hp-sec-over, .hp-right .hp-sec-over { background: rgba(0,0,0,0.7); }
+          .hp-left .hp-sec-content, .hp-right .hp-sec-content { padding: 0 2rem; text-align: center; }
+          .hp-right p { margin-left: auto; margin-right: auto; }
+          .hp-right .hp-sec-links { text-align: center; }
+        }
         @media (max-width: 767px) {
-          .hp-section { min-height: 70vh; padding: 4rem 1.5rem; }
-          .hp-hero { min-height: 85vh; }
-          .hp-img-wrap { padding: 0 0.5rem; }
-          .hp-img-full { border-radius: 16px; }
-          .hp-links { gap: 1.25rem; }
-          .hp-marquee span { padding: 0 1.5rem; font-size: 0.7rem; }
+          .hp-hero { min-height: 85vh; padding: 6rem 1.5rem 4rem; }
+          .hp-sec { min-height: 70vh; padding: 4rem 0; }
+          .hp-mq span { padding: 0 1.25rem; font-size: 0.65rem; }
           .hp-stats { gap: 1.5rem; padding: 3.5rem 1.5rem; }
         }
         @media (max-width: 480px) {
-          .hp-section { min-height: 60vh; padding: 3rem 1rem; }
           .hp-hero { min-height: 75vh; }
+          .hp-sec { min-height: 60vh; }
           .hp-stats { flex-direction: column; align-items: center; }
         }
         </style>
@@ -84,113 +99,114 @@ format:
 ```{=html}
 <div class="hp">
 
-<!-- ████ HERO ████ -->
-<div class="hp-section hp-hero">
-  <div>
+<!-- HERO — full-bleed photo from behind navbar -->
+<div class="hp-hero">
+  <div class="hp-hero-img"></div>
+  <div class="hp-hero-overlay"></div>
+  <div class="hp-hero-content">
     <h1>Build.<br><span class="gr">Secure.</span><br>Grow.</h1>
     <p>Digital infrastructure, cybersecurity, and education. Built on open-source for organizations that value control.</p>
-    <div class="hp-links">
-      <a href="https://cal.com/chenist" target="_blank" class="primary">Book a free consultation</a>
-      <a href="#digital" class="secondary">Explore services</a>
-    </div>
-    <a href="#digital" class="hp-scroll-hint">Scroll <i class="bi bi-chevron-down"></i></a>
+    <a href="https://cal.com/chenist" target="_blank" class="hp-hero-btn">Book a free consultation</a>
+    <a href="#s1" class="hp-scroll">Scroll <i class="bi bi-chevron-down"></i></a>
   </div>
 </div>
 
-<!-- ████ MARQUEE ████ -->
-<div class="hp-marquee">
-  <div class="hp-marquee-inner">
-    <span>NixOS</span><span>OpenBSD</span><span>FreeBSD</span><span>Apple Business</span><span>Nextcloud</span><span>Keycloak</span><span>Blue Team SOC</span><span>NIS2 Compliance</span><span>Threat Hunting</span><span>24/7 Monitoring</span><span>EU Data</span><span>Open Source</span>
-    <span>NixOS</span><span>OpenBSD</span><span>FreeBSD</span><span>Apple Business</span><span>Nextcloud</span><span>Keycloak</span><span>Blue Team SOC</span><span>NIS2 Compliance</span><span>Threat Hunting</span><span>24/7 Monitoring</span><span>EU Data</span><span>Open Source</span>
+<!-- MARQUEE -->
+<div class="hp-mq">
+  <div class="hp-mq-inner">
+    <span>NixOS</span><span>OpenBSD</span><span>FreeBSD</span><span>Apple Business</span><span>Nextcloud</span><span>Keycloak</span><span>Blue Team SOC</span><span>NIS2</span><span>Threat Hunting</span><span>24/7 Monitoring</span><span>EU Data</span><span>Open Source</span>
+    <span>NixOS</span><span>OpenBSD</span><span>FreeBSD</span><span>Apple Business</span><span>Nextcloud</span><span>Keycloak</span><span>Blue Team SOC</span><span>NIS2</span><span>Threat Hunting</span><span>24/7 Monitoring</span><span>EU Data</span><span>Open Source</span>
   </div>
 </div>
 
-<!-- ████ DIGITAL INFRASTRUCTURE ████ -->
-<div class="hp-section hp-light" id="digital">
-  <div>
-    <h2>Digital Infrastructure</h2>
-    <p>Open-source, UNIX, and Apple platforms. Deployed and managed for your business. No vendor lock-in.</p>
-    <div class="hp-links">
-      <a href="/digital/" class="primary">Learn more</a>
-      <a href="https://cal.com/chenist" target="_blank" class="secondary">Get started</a>
-    </div>
-    <div class="hp-img-wrap">
-      <img src="/assets/images/stock/team-macbooks.jpg" alt="Digital infrastructure team" class="hp-img-full">
+<!-- DIGITAL INFRASTRUCTURE — text left, image right -->
+<div class="hp-sec hp-left" id="s1">
+  <div class="hp-sec-img" style="background-image:url('/assets/images/stock/team-macbooks.jpg');"></div>
+  <div class="hp-sec-over"></div>
+  <div class="hp-sec-content">
+    <h2>Digital<br>Infrastructure</h2>
+    <p>Open-source, UNIX, and Apple platforms. Deployed and managed for your business. No vendor lock-in, no hidden costs.</p>
+    <div class="hp-sec-links">
+      <a href="/digital/" class="pr">Learn more</a>
+      <a href="https://cal.com/chenist" target="_blank" class="se">Get started</a>
     </div>
   </div>
 </div>
 
-<!-- ████ SECURITY ████ -->
-<div class="hp-section hp-dark">
-  <div>
-    <h2>Proactive Security</h2>
-    <p>24/7 SOC monitoring, threat hunting, NIS2 compliance, and CISO as a Service. For organizations that can't afford to be the next headline.</p>
-    <div class="hp-links">
-      <a href="/security/" class="primary">Learn more</a>
-      <a href="https://cal.com/chenist" target="_blank" class="secondary">Get a free assessment</a>
-    </div>
-    <div class="hp-img-wrap">
-      <img src="/assets/images/stock/cybersecurity-monitor.jpg" alt="Security monitoring" class="hp-img-full">
+<!-- SECURITY — text right, image left -->
+<div class="hp-sec hp-right">
+  <div class="hp-sec-img" style="background-image:url('/assets/images/stock/cybersecurity-monitor.jpg');"></div>
+  <div class="hp-sec-over"></div>
+  <div class="hp-sec-content">
+    <h2>Proactive<br>Security</h2>
+    <p>24/7 SOC monitoring. Threat hunting. NIS2 compliance. CISO as a Service. For organizations that can't afford to be the next headline.</p>
+    <div class="hp-sec-links">
+      <a href="/security/" class="pr">Learn more</a>
+      <a href="https://cal.com/chenist" target="_blank" class="se">Free assessment</a>
     </div>
   </div>
 </div>
 
-<!-- ████ CLOUD ████ -->
-<div class="hp-section hp-white">
-  <div>
+<!-- CLOUD — centered over dark image -->
+<div class="hp-sec hp-center">
+  <div class="hp-sec-img" style="background-image:url('/assets/images/stock/server-racks.jpg');"></div>
+  <div class="hp-sec-over"></div>
+  <div class="hp-sec-content">
     <h2>Cloud Services</h2>
-    <p>Migration, infrastructure, DevOps, and multi-cloud security across AWS, Azure, and Google Cloud.</p>
-    <div class="hp-links">
-      <a href="/services/cloud/" class="primary">Learn more</a>
-    </div>
-    <div class="hp-img-wrap">
-      <img src="/assets/images/stock/server-racks.jpg" alt="Cloud infrastructure" class="hp-img-full">
+    <p>Migration, infrastructure, DevOps, and multi-cloud security. AWS, Azure, Google Cloud.</p>
+    <div class="hp-sec-links" style="display:flex; gap:2rem; justify-content:center;">
+      <a href="/services/cloud/" class="pr">Learn more</a>
     </div>
   </div>
 </div>
 
-<!-- ████ ACADEMY ████ -->
-<div class="hp-section hp-dark">
-  <div>
-    <h2>chen.ist Academy</h2>
-    <p>Courses, hackathons, and intensive trainings in cybersecurity and open-source. Skills that stick — not certificates that collect dust.</p>
-    <div class="hp-links">
-      <a href="/academy/" class="primary">Explore the academy</a>
-      <a href="/academy/events.html" class="secondary">See events</a>
-    </div>
-    <div class="hp-img-wrap">
-      <img src="/assets/images/stock/code-screen.jpg" alt="Academy training" class="hp-img-full">
+<!-- ACADEMY — text left on code image -->
+<div class="hp-sec hp-left">
+  <div class="hp-sec-img" style="background-image:url('/assets/images/stock/code-screen.jpg');"></div>
+  <div class="hp-sec-over"></div>
+  <div class="hp-sec-content">
+    <h2>chen.ist<br>Academy</h2>
+    <p>Courses, hackathons, and intensive trainings. Skills that stick — not certificates that collect dust.</p>
+    <div class="hp-sec-links">
+      <a href="/academy/" class="pr">Explore</a>
+      <a href="/academy/events.html" class="se">Events</a>
     </div>
   </div>
 </div>
 
-<!-- ████ RESILIENCE ████ -->
-<div class="hp-section hp-light">
-  <div>
+<!-- RESILIENCE — pattern background, no image -->
+<div class="hp-sec hp-pattern" style="min-height: 60vh; text-align: center;">
+  <div class="hp-sec-content" style="padding: 0 1.5rem;">
     <h2>Digital Resilience</h2>
-    <p>Business continuity, disaster recovery, and architecture frameworks that keep you operational when everything else fails.</p>
-    <div class="hp-links">
-      <a href="/services/digital-resilience/" class="primary">Learn more</a>
+    <p style="margin: 0 auto 2rem;">Business continuity, disaster recovery, and architecture frameworks. When everything else fails, you stay operational.</p>
+    <div class="hp-sec-links" style="display:flex; gap:2rem; justify-content:center;">
+      <a href="/services/digital-resilience/" class="pr">Learn more</a>
     </div>
   </div>
 </div>
 
-<!-- ████ STATS ████ -->
+<!-- STATS -->
 <div class="hp-stats">
-  <div style="text-align:center;"><div class="hp-stat-n">15+</div><div class="hp-stat-l">Years experience</div></div>
-  <div style="text-align:center;"><div class="hp-stat-n">100%</div><div class="hp-stat-l">Open-source</div></div>
-  <div style="text-align:center;"><div class="hp-stat-n">EU</div><div class="hp-stat-l">Data residency</div></div>
-  <div style="text-align:center;"><div class="hp-stat-n">24/7</div><div class="hp-stat-l">Monitoring</div></div>
+  <div style="text-align:center;"><div class="hp-sn">15+</div><div class="hp-sl">Years</div></div>
+  <div style="text-align:center;"><div class="hp-sn">100%</div><div class="hp-sl">Open-source</div></div>
+  <div style="text-align:center;"><div class="hp-sn">EU</div><div class="hp-sl">Data residency</div></div>
+  <div style="text-align:center;"><div class="hp-sn">24/7</div><div class="hp-sl">Monitoring</div></div>
 </div>
 
-<!-- ████ CTA ████ -->
-<div class="hp-section hp-hero" style="min-height: 70vh;">
-  <div>
-    <h2 style="color:#fff; font-size: clamp(2rem, 5vw, 4rem);">Ready to take control?</h2>
+<!-- CTA — full-bleed dark with hero image -->
+<div class="hp-sec hp-center" style="min-height: 70vh;">
+  <div class="hp-sec-img" style="background-image:url('/assets/images/stock/server-room-dark.jpg');"></div>
+  <div class="hp-sec-over" style="background: rgba(0,0,0,0.75);"></div>
+  <div class="hp-sec-content">
+    <h2 style="color:#fff;">Ready to take control?</h2>
     <p>30 minutes. No pitch. Just an honest look at what you need.</p>
-    <div class="hp-links">
-      <a href="https://cal.com/chenist" target="_blank" class="primary">Book your free consultation</a>
-      <a href="/contact.html" class="secondary">Contact us</a>
+    <div style="display:flex; gap:2rem; justify-content:center; flex-wrap:wrap;">
+      <a href="https://cal.com/chenist" target="_blank" class="hp-hero-btn">Book your free consultation</a>
+    </div>
+    <div style="margin-top:2rem; font-size:0.8rem; color:rgba(255,255,255,0.3);">
+      <i class="bi bi-check-circle-fill" style="color:#81BD4A;"></i> Free &nbsp;
+      <i class="bi bi-check-circle-fill" style="color:#81BD4A;"></i> 30 min &nbsp;
+      <i class="bi bi-check-circle-fill" style="color:#81BD4A;"></i> No commitment
     </div>
   </div>
 </div>

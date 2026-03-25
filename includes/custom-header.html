@@ -1,43 +1,66 @@
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <style>
-.navbar-brand-container {
-  display: flex;
-  align-items: center;
+/* Modern transparent navbar — sits on top of content */
+.navbar {
+  background: rgba(0,0,0,0.8) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 0.5rem 0 !important;
+  font-size: 0.85rem;
 }
-
-.navbar-brand {
-  display: flex;
-  align-items: center;
-}
-
+.navbar-brand-container { display: flex; align-items: center; }
+.navbar-brand { display: flex; align-items: center; }
 .navbar-brand .navbar-title {
   display: inline-block;
   margin-left: 0;
   color: #FFFFFF;
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   letter-spacing: 0.5px;
 }
-
+.navbar .nav-link {
+  color: rgba(255,255,255,0.8) !important;
+  font-size: 0.82rem !important;
+  padding: 0.4rem 0.75rem !important;
+  transition: color 0.15s;
+}
+.navbar .nav-link:hover { color: #fff !important; }
+.navbar .dropdown-menu {
+  background: rgba(0,0,0,0.9);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 0.5rem;
+}
+.navbar .dropdown-item {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.82rem;
+  border-radius: 8px;
+  padding: 0.4rem 0.75rem;
+}
+.navbar .dropdown-item:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
 @media (max-width: 767.98px) {
-  .navbar-brand .navbar-title {
-    font-size: 1.1rem;
+  .navbar-brand .navbar-title { font-size: 1rem; }
+  .navbar .navbar-collapse {
+    background: rgba(0,0,0,0.95);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 0.5rem;
   }
 }
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Find the navbar brand element that contains the logo
   const navbarBrand = document.querySelector('.navbar-brand');
-  
   if (navbarBrand) {
-    // Create a span for the CHENIST text
     const titleSpan = document.createElement('span');
     titleSpan.className = 'navbar-title';
     titleSpan.textContent = 'CHENIST';
-    
-    // Append the span after the logo
     navbarBrand.appendChild(titleSpan);
   }
 });
