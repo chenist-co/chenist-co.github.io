@@ -2,41 +2,23 @@
 title: "SpaceApps Challenge"
 subtitle: "Innovating for space exploration and Earth observation"
 description: "The SpaceApps Challenge is our premier space-focused hackathon where participants develop innovative solutions for space exploration, satellite technology, and Earth observation."
-image: "/assets/images/sac.jpg"
-format: 
+page-layout: full
+toc: false
+format:
   html:
-    css: /assets/css/academy.scss
-    classes: [academy-section]
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
+image: "/assets/images/sac.jpg"
 ---
 
 ```{=html}
-<div class="container">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/">Home</a></li>
-      <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
-      <li class="breadcrumb-item"><a href="/academy/programs/">Programs</a></li>
-      <li class="breadcrumb-item"><a href="/academy/programs/hackathons/">Hackathons</a></li>
-      <li class="breadcrumb-item active" aria-current="page">SpaceApps</li>
-    </ol>
-  </nav>
-</div>
+<div class="m">
 
-<div class="hero-section">
+<div class="m-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-8">
-        <h1>SpaceApps Challenge</h1>
-        <p class="lead">A two-day hackathon dedicated to space innovation and exploration</p>
-        <div class="mt-4">
-          <a href="/academy/programs/hackathons/spaceapps/challenge-2025.html" class="btn btn-primary me-2">2025 Edition</a>
-          <a href="/academy/programs/hackathons/spaceapps/archive.html" class="btn btn-outline-primary">Past Events</a>
-        </div>
-      </div>
-      <div class="col-lg-4 text-center">
-        <img src="/assets/images/sac.jpg" alt="SpaceApps Challenge" class="img-fluid rounded shadow-lg" style="max-height: 300px;">
-      </div>
-    </div>
+    <h1>SpaceApps Challenge</h1>
+    <p>A two-day hackathon dedicated to space innovation and exploration</p>
   </div>
 </div>
 ```
@@ -68,7 +50,7 @@ Each year, participants form teams to tackle challenges across multiple tracks, 
       </div>
     </div>
   </div>
-  
+
   <div class="col-md-6">
     <div class="card">
       <div class="card-img-top overflow-hidden" style="max-height: 200px;">
@@ -102,7 +84,7 @@ Each year, participants form teams to tackle challenges across multiple tracks, 
       <p>Contribute to cutting-edge space technology development and potentially shape the future of space exploration.</p>
     </div>
   </div>
-  
+
   <div class="col-md-4">
     <div class="feature-card text-center">
       <div class="feature-card-icon">
@@ -112,7 +94,7 @@ Each year, participants form teams to tackle challenges across multiple tracks, 
       <p>Work with diverse teams and receive guidance from mentors with expertise in space technology and related fields.</p>
     </div>
   </div>
-  
+
   <div class="col-md-4">
     <div class="feature-card text-center">
       <div class="feature-card-icon">
@@ -124,8 +106,6 @@ Each year, participants form teams to tackle challenges across multiple tracks, 
   </div>
 </div>
 ```
-
-
 
 ## Get Involved
 
@@ -141,7 +121,7 @@ Each year, participants form teams to tackle challenges across multiple tracks, 
       </div>
     </div>
   </div>
-  
+
   <div class="col-md-4">
     <div class="card text-center h-100">
       <div class="card-body">
@@ -152,7 +132,7 @@ Each year, participants form teams to tackle challenges across multiple tracks, 
       </div>
     </div>
   </div>
-  
+
   <div class="col-md-4">
     <div class="card text-center h-100">
       <div class="card-body">
@@ -166,18 +146,14 @@ Each year, participants form teams to tackle challenges across multiple tracks, 
 </div>
 ```
 
-## Contact Us
-
 ```{=html}
-<div class="row mt-5">
-  <div class="col-md-8 offset-md-2">
-    <div class="card bg-light">
-      <div class="card-body text-center">
-        <h3>Questions about SpaceApps Challenge?</h3>
-        <p>Contact our team for more information about upcoming events, sponsorship opportunities, or any other inquiries.</p>
-        <a href="/contact.html" class="btn btn-primary">Contact Us</a>
-      </div>
-    </div>
+<div class="m-cta">
+  <div class="container">
+    <h2>SpaceApps Challenge</h2>
+    <p>Questions about SpaceApps Challenge? Get in touch.</p>
+    <a href="/contact.html" class="m-lk">Contact Us</a>
   </div>
+</div>
+
 </div>
 ```

@@ -1,45 +1,29 @@
 ---
 title: "Junior Summer School 2025"
 subtitle: "Technology Adventure for Teens"
+description: "A fun and engaging two-week tech adventure for teens exploring digital literacy, cyber safety, and creative technology."
+page-layout: full
+toc: false
+format:
+  html:
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
+from: markdown+raw_html
 date: "2025-07-07"
 enddate: "2025-07-21"
 location: "Private, Craiova"
 category: "summer-school"
 registration_date: "2025-05-15"
-description: "A fun and engaging two-week tech adventure for teens exploring digital literacy, cyber safety, and creative technology."
-from: markdown+raw_html
-format: 
-  html:
-    css: /assets/css/academy.scss
-    classes: [academy-section]
 ---
 
 ```{=html}
-<div class="container">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/">Home</a></li>
-      <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
-      <li class="breadcrumb-item"><a href="/academy/programs/">Programs</a></li>
-      <li class="breadcrumb-item"><a href="/academy/programs/summer-school/">Summer School</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Junior Summer School 2025</li>
-    </ol>
-  </nav>
-</div>
+<div class="m">
 
-<div class="hero-section py-5 mb-5 bg-light rounded">
+<div class="m-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-12">
-        <h2 class="display-5 fw-bold text-primary">Junior Summer School 2025</h2>
-        <p class="lead">A fun and engaging two-week tech adventure for teens (15-18 years old) exploring digital literacy, cyber safety, and creative technology.</p>
-        <div class="d-flex flex-wrap gap-2 mt-4">
-          <span class="badge bg-primary p-2">July 7 - July 21, 2025</span>
-          <span class="badge bg-secondary p-2">Private, Craiova</span>
-          <span class="badge bg-success p-2">Registration opens May 15</span>
-        </div>
-      </div>
-    </div>
+    <h1>Junior Summer School 2025</h1>
+    <p>A fun and engaging two-week tech adventure for teens (15-18 years old)</p>
   </div>
 </div>
 ```
@@ -65,7 +49,7 @@ format:
 
 ## Event Overview
 
-The Junior Summer School 2025 is a fun, interactive two-week program designed specifically for teenagers (15-18 years old) who want to explore technology in a friendly, engaging environment. No prior technical experience required – just bring your curiosity and creativity!
+The Junior Summer School 2025 is a fun, interactive two-week program designed specifically for teenagers (15-18 years old) who want to explore technology in a friendly, engaging environment. No prior technical experience required -- just bring your curiosity and creativity!
 
 ## Program Details
 
@@ -150,14 +134,6 @@ Over these exciting two weeks, teens will:
 
 Registration opens on May 15, 2025. Early registration is recommended as spaces are limited to 30 participants to ensure personalized attention and a quality experience.
 
-```{=html}
-<div class="event-cta">
-  <h3>Join Our Teen Tech Adventure!</h3>
-  <p>Discover technology in a fun, creative environment while making new friends and building cool projects.</p>
-  <a href="https://cal.com/chenist" target="_blank" class="btn btn-success">Register Interest</a>
-</div>
-```
-
 ## Frequently Asked Questions
 
 ### What should I bring?
@@ -198,19 +174,31 @@ After completing the Junior Summer School, teens are encouraged to continue thei
       </div>
     </div>
   </div>
-  
+
   <div class="col-md-6">
     <div class="card mb-4">
       <div class="card-header bg-success text-white">
-        <h3 class="mb-0">Ghid pentru Părinți (Română)</h3>
+        <h3 class="mb-0">Ghid pentru Parinti (Romana)</h3>
       </div>
       <div class="card-body">
-        <p>Descărcați ghidul nostru pentru părinți cu detalii despre program, informații de siguranță și întrebări frecvente.</p>
+        <p>Descarcati ghidul nostru pentru parinti cu detalii despre program, informatii de siguranta si intrebari frecvente.</p>
         <a href="/academy/programs/summer-school/press/junior-summer-school-2025-parent-guide-ro.md" class="btn btn-outline-success" download>
-          <i class="bi bi-file-pdf"></i> Descarcă Ghidul pentru Părinți
+          <i class="bi bi-file-pdf"></i> Descarca Ghidul pentru Parinti
         </a>
       </div>
     </div>
   </div>
+</div>
+```
+
+```{=html}
+<div class="m-cta">
+  <div class="container">
+    <h2>Junior Summer School 2025</h2>
+    <p>Interested in this program? Get in touch to learn more.</p>
+    <a href="/contact.html" class="m-lk">Contact Us</a>
+  </div>
+</div>
+
 </div>
 ```

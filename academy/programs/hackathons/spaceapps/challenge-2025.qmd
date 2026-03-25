@@ -2,6 +2,13 @@
 title: "SpaceApps Challenge 2025"
 subtitle: "Innovating for Space Exploration"
 description: "Join the NASA SpaceApps Challenge 2025 on October 4-5 in Craiova, Romania to innovate solutions for real space exploration problems."
+page-layout: full
+toc: false
+format:
+  html:
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
 date: "2025-10-04"
 enddate: "2025-10-05"
 location: "Craiova Art Museum, Craiova"
@@ -11,19 +18,17 @@ registration_date: "2025-07-17"
 ---
 
 ```{=html}
-<div class="container">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/">Home</a></li>
-      <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
-      <li class="breadcrumb-item"><a href="/academy/programs/">Programs</a></li>
-      <li class="breadcrumb-item"><a href="/academy/programs/hackathons/">Hackathons</a></li>
-      <li class="breadcrumb-item"><a href="/academy/programs/hackathons/spaceapps/">SpaceApps</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Challenge 2025</li>
-    </ol>
-  </nav>
-</div>
+<div class="m">
 
+<div class="m-hero">
+  <div class="container">
+    <h1>SpaceApps Challenge 2025</h1>
+    <p>The world's largest global hackathon — NASA open data, real-world challenges</p>
+  </div>
+</div>
+```
+
+```{=html}
 <div class="event-header">
   <div class="row align-items-center mb-4">
     <div class="col-md-3 text-center mb-3 mb-md-0">
@@ -43,27 +48,6 @@ registration_date: "2025-07-17"
       </div>
       <div class="event-location mt-2">
         <i class="bi bi-geo-alt"></i> Craiova Art Museum, Craiova
-      </div>
-    </div>
-  </div>
-</div>
-```
-
-```{=html}
-<div class="hero-section py-5 mb-5 bg-light rounded">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-4 text-center mb-4 mb-md-0">
-        <img src="/assets/images/sac2025.png" alt="NASA Space Apps Challenge Logo" class="img-fluid" style="max-width: 90%;">
-      </div>
-      <div class="col-md-8">
-        <h2 class="display-5 fw-bold text-primary">NASA Space Apps Challenge 2025</h2>
-        <p class="lead">The world's largest global hackathon, engaging thousands of citizens each year across the globe to use NASA's open data to build innovative solutions to challenges we face on Earth and in space.</p>
-        <div class="d-flex flex-wrap gap-2 mt-4">
-          <span class="badge bg-primary p-2">October 4-5, 2025</span>
-          <span class="badge bg-secondary p-2">Craiova Art Museum</span>
-          <span class="badge bg-success p-2">Registration opens July 17</span>
-        </div>
       </div>
     </div>
   </div>
@@ -142,14 +126,6 @@ Additionally, outstanding projects may receive support for further development t
 
 Registration opens on July 17, 2025. Early registration is recommended as participation is limited to +100 attendees. Teams of 3-5 members are suggested, but individuals are also welcome and will be assisted in finding teams.
 
-```{=html}
-<div class="event-cta">
-  <h3>Join the Next Generation of Space Innovators</h3>
-  <p>Be part of a weekend that could launch groundbreaking ideas for space exploration and technology.</p>
-  <a href="https://cal.com/chenist" target="_blank" class="btn btn-success">Register Interest</a>
-</div>
-```
-
 ## Frequently Asked Questions
 
 ### What skills or background do I need to participate?
@@ -220,5 +196,17 @@ After participating in the SpaceApps Challenge, continue your learning journey w
     </div>
     <p class="mt-3 mb-0">For interview requests or additional information, please <a href="/contact.html">contact us</a>.</p>
   </div>
+</div>
+```
+
+```{=html}
+<div class="m-cta">
+  <div class="container">
+    <h2>SpaceApps Challenge 2025</h2>
+    <p>Interested in this program? Get in touch to learn more.</p>
+    <a href="/contact.html" class="m-lk">Contact Us</a>
+  </div>
+</div>
+
 </div>
 ```

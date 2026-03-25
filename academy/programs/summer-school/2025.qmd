@@ -2,6 +2,13 @@
 title: "Summer School 2025"
 subtitle: "Intensive Technology Program"
 description: "Enroll in Summer School 2025, an intensive program in Craiova covering cybersecurity, cloud computing, and artificial intelligence tracks."
+page-layout: full
+toc: false
+format:
+  html:
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
 date: "2025-06-02"
 enddate: "2025-08-20"
 location: "Private, Craiova"
@@ -10,31 +17,12 @@ registration_date: "2025-07-07"
 ---
 
 ```{=html}
-<div class="container">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/">Home</a></li>
-      <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
-      <li class="breadcrumb-item"><a href="/academy/programs/">Programs</a></li>
-      <li class="breadcrumb-item"><a href="/academy/programs/summer-school/">Summer School</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Summer School 2025</li>
-    </ol>
-  </nav>
-</div>
+<div class="m">
 
-<div class="hero-section py-5 mb-5 bg-light rounded">
+<div class="m-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-12">
-        <h2 class="display-5 fw-bold text-primary">Summer School 2025</h2>
-        <p class="lead">An intensive month-long program focusing on cybersecurity, cloud computing, and artificial intelligence, with specialized tracks for each area.</p>
-        <div class="d-flex flex-wrap gap-2 mt-4">
-          <span class="badge bg-primary p-2">July 20 - August 20, 2025</span>
-          <span class="badge bg-secondary p-2">Private, Craiova</span>
-          <span class="badge bg-success p-2">Registration opens July 7</span>
-        </div>
-      </div>
-    </div>
+    <h1>Summer School 2025</h1>
+    <p>An intensive month-long program focusing on cybersecurity, cloud computing, and artificial intelligence</p>
   </div>
 </div>
 ```
@@ -142,14 +130,6 @@ Over the course of two weeks, participants will:
 
 Registration opens on July 7, 2025. Early registration is recommended as spaces are limited to 50 participants to ensure a high-quality, personalized experience.
 
-```{=html}
-<div class="event-cta">
-  <h3>Join Us for Summer School 2025</h3>
-  <p>Immerse yourself in an intensive learning experience that will transform your technical skills and career prospects.</p>
-  <a href="https://cal.com/chenist" target="_blank" class="btn btn-success">Register Interest</a>
-</div>
-```
-
 ## Frequently Asked Questions
 
 ### Is accommodation provided?
@@ -190,19 +170,31 @@ After completing the Summer School, participants are encouraged to apply their n
       </div>
     </div>
   </div>
-  
+
   <div class="col-md-6">
     <div class="card mb-4">
       <div class="card-header bg-success text-white">
-        <h3 class="mb-0">Comunicat de Presă (Română)</h3>
+        <h3 class="mb-0">Comunicat de Presa (Romana)</h3>
       </div>
       <div class="card-body">
-        <p>Descărcați comunicatul nostru de presă oficial pentru Școala de Vară 2025 în limba română.</p>
+        <p>Descarcati comunicatul nostru de presa oficial pentru Scoala de Vara 2025 in limba romana.</p>
         <a href="/academy/programs/summer-school/press/summer-school-2025-press-ro.pdf" class="btn btn-outline-success" download>
-          <i class="bi bi-file-pdf"></i> Descarcă Comunicatul de Presă
+          <i class="bi bi-file-pdf"></i> Descarca Comunicatul de Presa
         </a>
       </div>
     </div>
   </div>
+</div>
+```
+
+```{=html}
+<div class="m-cta">
+  <div class="container">
+    <h2>Summer School 2025</h2>
+    <p>Interested in this program? Get in touch to learn more.</p>
+    <a href="/contact.html" class="m-lk">Contact Us</a>
+  </div>
+</div>
+
 </div>
 ```

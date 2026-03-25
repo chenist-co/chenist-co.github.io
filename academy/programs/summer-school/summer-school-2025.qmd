@@ -2,6 +2,13 @@
 title: "Summer School 2025"
 subtitle: "Intensive Technology Program"
 description: "Join the Summer School 2025 intensive technology program running July 20 to August 20 at Tech Campus, Bucharest."
+page-layout: full
+toc: false
+format:
+  html:
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
 date: "2025-07-20"
 enddate: "2025-08-20"
 location: "Tech Campus, Bucharest"
@@ -9,6 +16,17 @@ category: "summer-school"
 image: "/assets/images/summer-school.jpg"
 registration_date: "2025-07-07"
 ---
+
+```{=html}
+<div class="m">
+
+<div class="m-hero">
+  <div class="container">
+    <h1>Summer School 2025</h1>
+    <p>Intensive Technology Program</p>
+  </div>
+</div>
+```
 
 ```{=html}
 <div class="event-header">
@@ -76,18 +94,10 @@ Over the course of two weeks, participants will:
 
 Registration opens on July 7, 2025. Early registration is recommended as spaces are limited to 50 participants to ensure a high-quality, personalized experience.
 
-```{=html}
-<div class="event-cta">
-  <h3>Join Us for Summer School 2025</h3>
-  <p>Immerse yourself in an intensive learning experience that will transform your technical skills and career prospects.</p>
-  <a href="https://cal.com/chenist" target="_blank" class="btn btn-success">Register Interest</a>
-</div>
-```
-
 ## Frequently Asked Questions
 
 ### What is the cost to attend?
-The full program fee is €1,500, which includes all materials, lunches, and special events. Early bird registrants receive a 15% discount. Limited scholarships are available for students.
+The full program fee is EUR 1,500, which includes all materials, lunches, and special events. Early bird registrants receive a 15% discount. Limited scholarships are available for students.
 
 ### Is accommodation provided?
 Accommodation is not included in the program fee. However, we can assist with recommendations and have partnered with nearby hotels to offer discounted rates.
@@ -109,3 +119,15 @@ After completing the Summer School, participants are encouraged to continue thei
 - **[SpaceApps Challenge 2025](/academy/programs/hackathons/spaceapps/challenge-2025.html)** - October 3-5, 2025
 - **[Cybersecurity Hackathon](/academy/programs/hackathons/cybersecurity-hackathon.html)** - November 15-17, 2025
 - **[AI Ethics Hackathon](/academy/programs/hackathons/ai-ethics-hackathon.html)** - May 10-12, 2026
+
+```{=html}
+<div class="m-cta">
+  <div class="container">
+    <h2>Summer School 2025</h2>
+    <p>Interested in this program? Get in touch to learn more.</p>
+    <a href="/contact.html" class="m-lk">Contact Us</a>
+  </div>
+</div>
+
+</div>
+```
