@@ -1,12 +1,19 @@
 ---
-title: "Digital Infrastructure"
-subtitle: "Open-Source, UNIX & Apple infrastructure for businesses of all sizes"
+pagetitle: "Digital Infrastructure — chen.ist"
+title-block-style: none
 description: "Production-grade open-source, Linux, BSD, and Apple Business infrastructure for SMBs. NixOS, OpenBSD, FreeBSD, Nextcloud, and zero-touch Apple device deployment."
 from: markdown+raw_html
-page-layout: full
+page-layout: custom
 format:
   html:
     toc: false
+    include-in-header:
+      text: |
+        <style>
+        .quarto-title-block, #title-block-header { display: none !important; }
+        #quarto-content > * { margin-top: 0 !important; padding-top: 0 !important; }
+        main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
+        </style>
 ---
 
 ```{=html}
