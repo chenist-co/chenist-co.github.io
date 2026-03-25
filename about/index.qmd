@@ -1,110 +1,94 @@
 ---
-title: "About chen.ist"
+title: "About"
 description: "Learn about chen.ist, a technology consulting firm specializing in cybersecurity, software development, and cloud infrastructure solutions."
+from: markdown+raw_html
+page-layout: full
+format:
+  html:
+    toc: false
 ---
 
 ```{=html}
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">About</li>
-  </ol>
-</nav>
-```
+<div class="m">
 
-## Who We Are
-
-chen.ist is a technology consulting firm specializing in cybersecurity, software development, and cloud infrastructure. We are passionate about leveraging cutting-edge technologies to solve complex challenges and drive innovation for our clients.
-
-### Our Mission
-
-Our mission is to provide high-quality, secure, and efficient technology solutions that empower organizations to reach their full potential in the digital world.
-
-### Our Vision
-
-We strive to be a leading technology partner known for excellence, innovation, and security, helping shape the future of digital transformation.
-
-
-## Our Values
-
-```{=html}
-<div class="row mt-5">
-  <div class="col-md-6">
-    <div class="security-feature">
-      <h3>Excellence</h3>
-      <p>We are committed to delivering the highest quality solutions that exceed expectations.</p>
-    </div>
+<div class="m-hero">
+  <div class="container">
+    <h1>About <span class="gr">chen.ist</span></h1>
+    <p>Technology consulting built on cybersecurity, software development, and cloud infrastructure.</p>
   </div>
-  <div class="col-md-6">
-    <div class="security-feature">
-      <h3>Integrity</h3>
-      <p>We operate with transparency, honesty, and ethical standards in all our interactions.</p>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="security-feature">
-      <h3>Innovation</h3>
-      <p>We constantly explore new ideas and technologies to provide cutting-edge solutions.</p>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="security-feature">
-      <h3>Partnership</h3>
-      <p>We build lasting relationships with our clients based on mutual trust and respect.</p>
+</div>
+
+<div class="m-bg">
+  <div class="container">
+    <h2>What drives us</h2>
+    <p class="sub">Four values at the core of everything we build.</p>
+    <div class="row g-5">
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-trophy"></i><h3>Excellence</h3><p>Solutions that exceed expectations in quality and reliability.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-shield-lock"></i><h3>Integrity</h3><p>Transparency, honesty, and ethical standards in every interaction.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-lightbulb"></i><h3>Innovation</h3><p>New ideas and emerging technologies explored and applied.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-people"></i><h3>Partnership</h3><p>Lasting relationships built on mutual trust and respect.</p></div></div>
     </div>
   </div>
 </div>
-```
 
-## Our Approach
-
-We take a collaborative and holistic approach to every project:
-
-1. **Understanding**: We begin by thoroughly understanding your unique needs and challenges.
-2. **Planning**: We develop a comprehensive plan tailored to your specific requirements.
-3. **Implementation**: Our expert team executes the plan with precision and attention to detail.
-4. **Testing**: We rigorously test our solutions to ensure they meet the highest standards.
-5. **Support**: We provide ongoing support and maintenance to ensure long-term success.
-
-## Learn More About Us
-
-```{=html}
-<div class="row mt-5">
-  <div class="col-md-6 mb-4">
-    <div class="card h-100">
-      <div class="card-body">
-        <h3 class="card-title">Corporate Social Responsibility</h3>
-        <p class="card-text">Discover our commitment to social and environmental initiatives that create positive impact in our communities.</p>
-        <a href="/about/csr.html" class="btn btn-primary">Learn About Our CSR</a>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-md-6 mb-4">
-    <div class="card h-100">
-      <div class="card-body">
-        <h3 class="card-title">Community Involvement</h3>
-        <p class="card-text">Explore how we engage with the tech community through meetups, open source contributions, and educational initiatives.</p>
-        <a href="/about/community.html" class="btn btn-primary">See Our Community Work</a>
+<div class="m-s">
+  <div class="container">
+    <div class="m-r">
+      <div class="m-ri"><img src="/assets/images/stock/team-meeting.jpg" alt="Team collaboration at chen.ist"></div>
+      <div class="m-rt">
+        <h2>Our mission.<br>Your potential.</h2>
+        <p>We provide high-quality, secure, and efficient technology solutions that empower organizations to reach their full potential in the digital world. From cybersecurity to cloud infrastructure, every engagement is tailored to your goals.</p>
+        <div class="lk"><a href="/services/" class="m-lk">Explore our services</a></div>
       </div>
     </div>
   </div>
 </div>
-```
 
-```{=html}
-<div class="cta-section">
-  <div class="container text-center">
-    <h2 class="cta-title"><span class="text-dark">Ready to work with us?</span></h2>
-    <p class="mb-4">Let's discuss how we can help you achieve your technology goals.</p>
-    <a href="/contact.html" class="cta-button">Contact Us</a>
+<div class="m-bg">
+  <div class="container">
+    <div class="m-r rv">
+      <div class="m-ri"><img src="/assets/images/stock/code-screen.jpg" alt="Modern software development"></div>
+      <div class="m-rt">
+        <h2>Built to last.<br>Designed to scale.</h2>
+        <p>We take a collaborative, holistic approach: understand your needs, plan precisely, implement with care, test rigorously, and support long-term. Every step is documented, every decision defensible.</p>
+        <div class="lk"><a href="https://cal.com/chenist" target="_blank" class="m-lk">Talk to our team</a></div>
+      </div>
+    </div>
   </div>
 </div>
 
-<style>
-  /* Ensure the text is white in both light and dark modes */
-  .cta-title .cta-white-text {
-    color: white !important;
-  }
-</style>
+<div class="m-s">
+  <div class="container">
+    <h2>Leading digital transformation</h2>
+    <p class="sub">We strive to be a technology partner known for excellence, innovation, and security.</p>
+    <div class="row g-5">
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-shield-check"></i><h3>Cybersecurity</h3><p>Blue team operations, threat hunting, and NIS2 compliance.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-code-slash"></i><h3>Software Development</h3><p>Full-stack engineering with modern frameworks and CI/CD.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-cloud"></i><h3>Cloud Infrastructure</h3><p>Architecture, migration, and optimization across providers.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-graph-up-arrow"></i><h3>Consulting</h3><p>Strategic guidance for technology transformation initiatives.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="m-bg">
+  <div class="container">
+    <h2>Learn more</h2>
+    <p class="sub">Our commitment extends beyond technology.</p>
+    <div class="row g-5">
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-heart"></i><h3>Social Responsibility</h3><p>Sustainable practices, community development, and social impact through technology.</p><a href="/about/csr.html" class="m-lk">Our CSR initiatives</a></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-people-fill"></i><h3>Community</h3><p>Open-source contributions, meetups, mentorship, and educational programs.</p><a href="/about/community.html" class="m-lk">Community involvement</a></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Ready to work<br>with us?</h2>
+    <p>Let's discuss how we can help you achieve your technology goals.</p>
+    <a href="/contact.html" class="m-b">Contact us</a>
+  </div>
+</div>
+
+</div>
 ```

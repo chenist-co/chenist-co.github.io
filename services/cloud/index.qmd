@@ -7,121 +7,74 @@ page-layout: full
 format:
   html:
     toc: false
-    include-in-header:
-      text: |
-        <style>
-        .ap { --c: #81BD4A; --g: #86868b; font-family: 'Open Sans', -apple-system, system-ui, sans-serif; }
-        .ap-hero { padding: 12rem 0 8rem; text-align: center; }
-        .ap-hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 700; letter-spacing: -0.045em; line-height: 1.06; }
-        .ap-hero .gr { color: var(--c); }
-        .ap-hero p { font-size: 1.35rem; color: var(--g); max-width: 500px; margin: 1.5rem auto 0; line-height: 1.45; }
-        .ap-s { padding: 7rem 0; }
-        .ap-bg { padding: 7rem 0; background: #f5f5f7; }
-        [data-bs-theme="dark"] .ap-bg { background: #161617; }
-        .ap h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.035em; text-align: center; line-height: 1.1; margin-bottom: 0.5rem; }
-        .ap .sub { text-align: center; font-size: 1.1rem; color: var(--g); max-width: 480px; margin: 0 auto 5rem; }
-        .ap-t { text-align: center; padding: 0 0.75rem; }
-        .ap-t i { font-size: 1.75rem; color: var(--c); display: block; margin-bottom: 0.75rem; opacity: 0.85; }
-        .ap-t h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.35rem; letter-spacing: -0.01em; }
-        .ap-t p { font-size: 0.88rem; color: var(--g); line-height: 1.5; }
-        .ap-lk { color: var(--c); font-size: 1rem; text-decoration: none; }
-        .ap-lk:hover { text-decoration: underline; }
-        .ap-lk::after { content: " ›"; font-weight: 300; }
-        .ap-r { display: flex; align-items: center; gap: 6rem; }
-        .ap-r.rv { flex-direction: row-reverse; }
-        .ap-ri { flex: 0 0 50%; }
-        .ap-ri img { width: 100%; border-radius: 28px; }
-        .ap-rt h2 { text-align: left; font-size: clamp(1.75rem, 3.5vw, 2.75rem); margin-bottom: 1rem; }
-        .ap-rt p { font-size: 1.05rem; color: var(--g); line-height: 1.65; }
-        .ap-rt .lk { margin-top: 1.75rem; }
-        .ap-n { display: flex; justify-content: center; gap: 6rem; flex-wrap: wrap; }
-        .ap-nn { font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 700; color: var(--c); line-height: 1; text-align: center; }
-        .ap-nl { font-size: 0.75rem; color: var(--g); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.35rem; text-align: center; }
-        .ap-cta { padding: 10rem 0; text-align: center; }
-        .ap-cta h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; }
-        .ap-cta p { font-size: 1.1rem; color: var(--g); max-width: 420px; margin: 0 auto 2.5rem; line-height: 1.5; }
-        .ap-b { display: inline-block; padding: 0.85rem 2.25rem; background: var(--c); color: #fff; border-radius: 980px; font-weight: 500; font-size: 1rem; text-decoration: none; transition: background 0.15s; }
-        .ap-b:hover { background: #6BA33A; color: #fff; text-decoration: none; }
-        .ap-sm { font-size: 0.82rem; color: var(--g); margin-top: 1.75rem; }
-        .ap-sm i { color: var(--c); }
-        .ap-d { width: 36px; height: 3px; background: var(--c); margin: 0 auto 3.5rem; border-radius: 2px; opacity: 0.6; }
-        @media (max-width: 767px) {
-          .ap-hero { padding: 7rem 0 5rem; }
-          .ap-r, .ap-r.rv { flex-direction: column; gap: 3rem; }
-          .ap-ri { flex: none; }
-          .ap-rt h2 { text-align: center; }
-          .ap-n { gap: 3rem; }
-          .ap-cta { padding: 6rem 0; }
-        }
-        </style>
 ---
 
 ```{=html}
-<div class="ap">
+<div class="m">
 
-<div class="ap-hero">
+<div class="m-hero">
   <div class="container">
     <h1>Cloud <span class="gr">Services</span></h1>
     <p>Scalable, secure, and efficient cloud solutions for modern businesses.</p>
   </div>
 </div>
 
-<div class="ap-bg">
+<div class="m-bg">
   <div class="container">
     <h2>Cloud, simplified</h2>
     <p class="sub">Four disciplines working together to power your business.</p>
     <div class="row g-5">
-      <div class="col-6 col-lg-3"><div class="ap-t"><i class="bi bi-cloud-arrow-up"></i><h3>Migration</h3><p>Seamless transition to the cloud with minimal disruption.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="ap-t"><i class="bi bi-hdd-network"></i><h3>Infrastructure</h3><p>Robust, cost-optimized environments built for scale.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="ap-t"><i class="bi bi-arrow-repeat"></i><h3>DevOps</h3><p>Automated pipelines for faster, reliable delivery.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="ap-t"><i class="bi bi-shield-lock"></i><h3>Security</h3><p>Cloud-native protection, compliance, and IAM.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-cloud-arrow-up"></i><h3>Migration</h3><p>Seamless transition to the cloud with minimal disruption.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-hdd-network"></i><h3>Infrastructure</h3><p>Robust, cost-optimized environments built for scale.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-arrow-repeat"></i><h3>DevOps</h3><p>Automated pipelines for faster, reliable delivery.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-shield-lock"></i><h3>Security</h3><p>Cloud-native protection, compliance, and IAM.</p></div></div>
     </div>
   </div>
 </div>
 
-<div class="ap-s">
+<div class="m-s">
   <div class="container">
-    <div class="ap-r">
-      <div class="ap-ri"><img src="/assets/images/stock/server-racks.jpg" alt="Multi-cloud infrastructure"></div>
-      <div class="ap-rt">
+    <div class="m-r">
+      <div class="m-ri"><img src="/assets/images/stock/server-racks.jpg" alt="Multi-cloud infrastructure"></div>
+      <div class="m-rt">
         <h2>Multi-cloud &<br>hybrid solutions.</h2>
         <p>AWS, Azure, Google Cloud — or all three. We design infrastructure that fits your workload, not the other way around. From lift-and-shift to cloud-native refactoring, every architecture decision is driven by your business goals.</p>
-        <div class="lk"><a href="https://cal.com/chenist" target="_blank" class="ap-lk">Plan your migration</a></div>
+        <div class="lk"><a href="https://cal.com/chenist" target="_blank" class="m-lk">Plan your migration</a></div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="ap-bg">
+<div class="m-bg">
   <div class="container">
-    <div class="ap-r rv">
-      <div class="ap-ri"><img src="/assets/images/stock/code-screen.jpg" alt="DevOps automation"></div>
-      <div class="ap-rt">
+    <div class="m-r rv">
+      <div class="m-ri"><img src="/assets/images/stock/code-screen.jpg" alt="DevOps automation"></div>
+      <div class="m-rt">
         <h2>DevOps &<br>automation.</h2>
         <p>CI/CD pipelines, Infrastructure as Code, container orchestration with Kubernetes — we automate the path from commit to production. Ship faster with confidence and full observability at every stage.</p>
-        <div class="lk"><a href="https://cal.com/chenist" target="_blank" class="ap-lk">Accelerate delivery</a></div>
+        <div class="lk"><a href="https://cal.com/chenist" target="_blank" class="m-lk">Accelerate delivery</a></div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="ap-s">
+<div class="m-s">
   <div class="container">
-    <div class="ap-n">
-      <div><div class="ap-nn">3</div><div class="ap-nl">Cloud platforms</div></div>
-      <div><div class="ap-nn">99.9%</div><div class="ap-nl">Uptime SLA</div></div>
-      <div><div class="ap-nn">40%</div><div class="ap-nl">Avg cost reduction</div></div>
+    <div class="m-n">
+      <div><div class="m-nn">3</div><div class="m-nl">Cloud platforms</div></div>
+      <div><div class="m-nn">99.9%</div><div class="m-nl">Uptime SLA</div></div>
+      <div><div class="m-nn">40%</div><div class="m-nl">Avg cost reduction</div></div>
     </div>
   </div>
 </div>
 
-<div class="ap-cta">
+<div class="m-cta">
   <div class="container">
-    <div class="ap-d"></div>
+    <div class="m-d"></div>
     <h2>Ready to move<br>to the cloud?</h2>
     <p>30 minutes. No pitch. Just an honest look at your infrastructure.</p>
-    <a href="https://cal.com/chenist" target="_blank" class="ap-b">Book a consultation</a>
-    <div class="ap-sm">
+    <a href="https://cal.com/chenist" target="_blank" class="m-b">Book a consultation</a>
+    <div class="m-sm">
       <i class="bi bi-check-circle-fill"></i> Free &nbsp;
       <i class="bi bi-check-circle-fill"></i> 30 min &nbsp;
       <i class="bi bi-check-circle-fill"></i> Actionable roadmap

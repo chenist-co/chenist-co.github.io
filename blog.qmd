@@ -1,6 +1,7 @@
 ---
 title: "Blog"
 subtitle: "Insights, tutorials, and updates from our team"
+description: "Insights, tutorials, and updates from the chen.ist team on cybersecurity, software development, and cloud infrastructure."
 listing:
   contents: blog
   sort: "date desc"
@@ -14,20 +15,21 @@ listing:
   feed: true
 page-layout: full
 site-url: https://chen.ist
+format:
+  html:
+    toc: false
 ---
 
 ```{=html}
-<div class="hero-section">
+<div class="m">
+<div class="m-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-8 offset-md-2 text-center">
-        <h1 class="hero-title"><span class="our-text">Our</span> <span class="text-green">Blog</span></h1>
-        <p>Insights, tutorials, and updates from our team</p>
-      </div>
-    </div>
+    <h1>Our <span class="gr">Blog</span></h1>
+    <p>Insights, tutorials, and updates from our team.</p>
   </div>
+</div>
 </div>
 ```
 
-::: {.container .page-section}
+::: {.container}
 :::

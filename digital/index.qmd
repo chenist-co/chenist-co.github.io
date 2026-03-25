@@ -7,144 +7,87 @@ page-layout: full
 format:
   html:
     toc: false
-    include-in-header:
-      text: |
-        <style>
-        .ap { --c: #81BD4A; --g: #86868b; font-family: 'Open Sans', -apple-system, system-ui, sans-serif; }
-        .ap-hero { padding: 12rem 0 8rem; text-align: center; }
-        .ap-hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 700; letter-spacing: -0.045em; line-height: 1.06; }
-        .ap-hero .gr { color: var(--c); }
-        .ap-hero p { font-size: 1.35rem; color: var(--g); max-width: 500px; margin: 1.5rem auto 0; line-height: 1.45; }
-        .ap-s { padding: 7rem 0; }
-        .ap-bg { padding: 7rem 0; background: #f5f5f7; }
-        [data-bs-theme="dark"] .ap-bg { background: #161617; }
-        .ap h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.035em; text-align: center; line-height: 1.1; margin-bottom: 0.5rem; }
-        .ap .sub { text-align: center; font-size: 1.1rem; color: var(--g); max-width: 480px; margin: 0 auto 5rem; }
-        .ap-t { text-align: center; padding: 0 0.75rem; }
-        .ap-t i { font-size: 1.75rem; color: var(--c); display: block; margin-bottom: 0.75rem; opacity: 0.85; }
-        .ap-t h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.35rem; }
-        .ap-t p { font-size: 0.88rem; color: var(--g); line-height: 1.5; }
-        .ap-lk { color: var(--c); font-size: 1rem; text-decoration: none; }
-        .ap-lk:hover { text-decoration: underline; }
-        .ap-lk::after { content: " ›"; font-weight: 300; }
-        .ap-r { display: flex; align-items: center; gap: 6rem; }
-        .ap-r.rv { flex-direction: row-reverse; }
-        .ap-ri { flex: 0 0 50%; }
-        .ap-ri img { width: 100%; border-radius: 28px; }
-        .ap-rt h2 { text-align: left; font-size: clamp(1.75rem, 3.5vw, 2.75rem); margin-bottom: 1rem; }
-        .ap-rt p { font-size: 1.05rem; color: var(--g); line-height: 1.65; }
-        .ap-rt .lk { margin-top: 1.75rem; }
-        .ap-n { display: flex; justify-content: center; gap: 6rem; flex-wrap: wrap; }
-        .ap-nn { font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 700; color: var(--c); line-height: 1; text-align: center; }
-        .ap-nl { font-size: 0.75rem; color: var(--g); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.35rem; text-align: center; }
-        .ap-cta { padding: 10rem 0; text-align: center; }
-        .ap-cta h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; }
-        .ap-cta p { font-size: 1.1rem; color: var(--g); max-width: 420px; margin: 0 auto 2.5rem; line-height: 1.5; }
-        .ap-b { display: inline-block; padding: 0.85rem 2.25rem; background: var(--c); color: #fff; border-radius: 980px; font-weight: 500; font-size: 1rem; text-decoration: none; transition: background 0.15s; }
-        .ap-b:hover { background: #6BA33A; color: #fff; text-decoration: none; }
-        .ap-sm { font-size: 0.82rem; color: var(--g); margin-top: 1.75rem; }
-        .ap-sm i { color: var(--c); }
-        .ap-d { width: 36px; height: 3px; background: var(--c); margin: 0 auto 3.5rem; border-radius: 2px; opacity: 0.6; }
-        .ap-pkg { text-align: center; padding: 2.5rem 2rem; border: 1.5px solid rgba(0,0,0,0.08); border-radius: 20px; height: 100%; display: flex; flex-direction: column; transition: border-color 0.2s; }
-        [data-bs-theme="dark"] .ap-pkg { border-color: rgba(255,255,255,0.1); }
-        .ap-pkg:hover { border-color: var(--c); }
-        .ap-pkg.ft { border-color: var(--c); }
-        .ap-pkg h3 { font-size: 1.35rem; font-weight: 700; margin-bottom: 0.15rem; }
-        .ap-pkg .sz { font-size: 0.85rem; color: var(--g); margin-bottom: 1.5rem; }
-        .ap-pkg ul { text-align: left; list-style: none; padding: 0; margin: 0 0 2rem; flex-grow: 1; }
-        .ap-pkg ul li { padding: 0.35rem 0; font-size: 0.9rem; color: var(--g); }
-        .ap-pkg ul li::before { content: "✓ "; color: var(--c); font-weight: 700; }
-        .ap-badge { display: inline-block; background: var(--c); color: #fff; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.3rem 1rem; border-radius: 980px; margin-bottom: 1rem; }
-        @media (max-width: 767px) {
-          .ap-hero { padding: 7rem 0 5rem; }
-          .ap-r, .ap-r.rv { flex-direction: column; gap: 3rem; }
-          .ap-ri { flex: none; }
-          .ap-rt h2 { text-align: center; }
-          .ap-n { gap: 3rem; }
-          .ap-cta { padding: 6rem 0; }
-        }
-        </style>
 ---
 
 ```{=html}
-<div class="ap">
+<div class="m">
 
-<div class="ap-hero">
+<div class="m-hero">
   <div class="container">
     <h1>Digital <span class="gr">Infrastructure</span></h1>
     <p>Open-source, UNIX, and Apple platforms. Deployed and managed for your business.</p>
   </div>
 </div>
 
-<div class="ap-bg">
+<div class="m-bg">
   <div class="container">
     <h2>Three pillars. One partner.</h2>
     <p class="sub">Everything your business needs to run, secured and maintained by us.</p>
     <div class="row g-5">
-      <div class="col-md-4"><div class="ap-t"><i class="bi bi-code-square"></i><h3>Open-Source Stack</h3><p>Productivity, communication, identity, and monitoring — no license fees.</p></div></div>
-      <div class="col-md-4"><div class="ap-t"><i class="bi bi-terminal"></i><h3>UNIX Systems</h3><p>Linux and BSD servers, firewalls, storage, and declarative infrastructure.</p></div></div>
-      <div class="col-md-4"><div class="ap-t"><i class="bi bi-apple"></i><h3>Apple Infrastructure</h3><p>Apple Business MDM, zero-touch deployment, email, and brand management.</p></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-code-square"></i><h3>Open-Source Stack</h3><p>Productivity, communication, identity, and monitoring — no license fees.</p></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-terminal"></i><h3>UNIX Systems</h3><p>Linux and BSD servers, firewalls, storage, and declarative infrastructure.</p></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-apple"></i><h3>Apple Infrastructure</h3><p>Apple Business MDM, zero-touch deployment, email, and brand management.</p></div></div>
     </div>
   </div>
 </div>
 
-<div class="ap-s">
+<div class="m-s">
   <div class="container">
-    <div class="ap-r">
-      <div class="ap-ri"><img src="/assets/images/stock/code-screen.jpg" alt="Open-source development"></div>
-      <div class="ap-rt">
+    <div class="m-r">
+      <div class="m-ri"><img src="/assets/images/stock/code-screen.jpg" alt="Open-source development"></div>
+      <div class="m-rt">
         <h2>Replace licenses.<br>Keep the functionality.</h2>
         <p>Nextcloud for files. Collabora for documents. Matrix for chat. Keycloak for SSO. Prometheus for monitoring. All open-source, all self-hosted, all yours.</p>
-        <div class="lk"><a href="https://cal.com/chenist" target="_blank" class="ap-lk">Plan your stack</a></div>
+        <div class="lk"><a href="https://cal.com/chenist" target="_blank" class="m-lk">Plan your stack</a></div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="ap-bg">
+<div class="m-bg">
   <div class="container">
-    <div class="ap-r rv">
-      <div class="ap-ri"><img src="/assets/images/stock/server-racks.jpg" alt="UNIX server infrastructure"></div>
-      <div class="ap-rt">
+    <div class="m-r rv">
+      <div class="m-ri"><img src="/assets/images/stock/server-racks.jpg" alt="UNIX server infrastructure"></div>
+      <div class="m-rt">
         <h2>Servers that run<br>themselves.</h2>
         <p>NixOS for declarative, reproducible deployments. OpenBSD for firewalls. FreeBSD for ZFS storage. Debian for everything else. Hardened by default.</p>
-        <div class="lk"><a href="https://cal.com/chenist" target="_blank" class="ap-lk">Design your infrastructure</a></div>
+        <div class="lk"><a href="https://cal.com/chenist" target="_blank" class="m-lk">Design your infrastructure</a></div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="ap-s">
+<div class="m-s">
   <div class="container">
-    <div class="ap-r">
-      <div class="ap-ri"><img src="/assets/images/stock/team-macbooks.jpg" alt="Apple Business deployment"></div>
-      <div class="ap-rt">
+    <div class="m-r">
+      <div class="m-ri"><img src="/assets/images/stock/team-macbooks.jpg" alt="Apple Business deployment"></div>
+      <div class="m-rt">
         <h2>Apple Business.<br>Free. Built-in. Ready.</h2>
         <p>The new unified platform launches April 14, 2026. Free MDM, Blueprints for zero-touch setup, business email on your domain, and brand management across Maps, Wallet, and Mail.</p>
-        <div class="lk"><a href="https://cal.com/chenist" target="_blank" class="ap-lk">Set up Apple Business</a></div>
+        <div class="lk"><a href="https://cal.com/chenist" target="_blank" class="m-lk">Set up Apple Business</a></div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="ap-bg">
+<div class="m-bg">
   <div class="container">
-    <div class="ap-n">
-      <div><div class="ap-nn">40–70%</div><div class="ap-nl">IT cost savings</div></div>
-      <div><div class="ap-nn">100%</div><div class="ap-nl">Open-source</div></div>
-      <div><div class="ap-nn">EU</div><div class="ap-nl">Data sovereignty</div></div>
-      <div><div class="ap-nn">24/7</div><div class="ap-nl">Monitoring</div></div>
+    <div class="m-n">
+      <div><div class="m-nn">40–70%</div><div class="m-nl">IT cost savings</div></div>
+      <div><div class="m-nn">100%</div><div class="m-nl">Open-source</div></div>
+      <div><div class="m-nn">EU</div><div class="m-nl">Data sovereignty</div></div>
+      <div><div class="m-nn">24/7</div><div class="m-nl">Monitoring</div></div>
     </div>
   </div>
 </div>
 
-<div class="ap-s">
+<div class="m-s">
   <div class="container">
     <h2>Pick your starting point</h2>
     <p class="sub">All packages include deployment, hardening, monitoring, and support.</p>
     <div class="row g-4">
       <div class="col-md-4">
-        <div class="ap-pkg">
+        <div class="m-pkg">
           <h3>Starter</h3>
           <div class="sz">1–10 employees</div>
           <ul>
@@ -155,12 +98,12 @@ format:
             <li>Automated backups</li>
             <li>Uptime monitoring</li>
           </ul>
-          <a href="https://cal.com/chenist" target="_blank" class="ap-lk">Get a quote</a>
+          <a href="https://cal.com/chenist" target="_blank" class="m-lk">Get a quote</a>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="ap-pkg ft">
-          <div class="ap-badge">Most popular</div>
+        <div class="m-pkg ft">
+          <div class="m-badge">Most popular</div>
           <h3>Growth</h3>
           <div class="sz">11–50 employees</div>
           <ul>
@@ -172,11 +115,11 @@ format:
             <li>Collabora documents</li>
             <li>Prometheus + Grafana</li>
           </ul>
-          <a href="https://cal.com/chenist" target="_blank" class="ap-b" style="font-size:0.9rem; padding:0.7rem 1.75rem;">Book consultation</a>
+          <a href="https://cal.com/chenist" target="_blank" class="m-b" style="font-size:0.9rem; padding:0.7rem 1.75rem;">Book consultation</a>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="ap-pkg">
+        <div class="m-pkg">
           <h3>Enterprise</h3>
           <div class="sz">50+ employees</div>
           <ul>
@@ -187,20 +130,20 @@ format:
             <li>NIS2 + GDPR baselines</li>
             <li>24/7 incident response</li>
           </ul>
-          <a href="https://cal.com/chenist" target="_blank" class="ap-lk">Contact us</a>
+          <a href="https://cal.com/chenist" target="_blank" class="m-lk">Contact us</a>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="ap-cta">
+<div class="m-cta">
   <div class="container">
-    <div class="ap-d"></div>
+    <div class="m-d"></div>
     <h2>Your infrastructure,<br>built right</h2>
     <p>30 minutes. No pitch. Just an honest assessment of what we can build for you.</p>
-    <a href="https://cal.com/chenist" target="_blank" class="ap-b">Book your free audit</a>
-    <div class="ap-sm">
+    <a href="https://cal.com/chenist" target="_blank" class="m-b">Book your free audit</a>
+    <div class="m-sm">
       <i class="bi bi-check-circle-fill"></i> Free &nbsp;
       <i class="bi bi-check-circle-fill"></i> No lock-in &nbsp;
       <i class="bi bi-check-circle-fill"></i> Proposal in 48h
