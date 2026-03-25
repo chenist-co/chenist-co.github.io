@@ -1255,7 +1255,20 @@ document.addEventListener('DOMContentLoaded', function() {
 @media (max-width: 480px) {
   footer > div > div { grid-template-columns: 1fr !important; }
 }
+footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
 </style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.m-s, .m-bg, .m-cta, .m-r, .m-n, .hp-sec, .hp-stats, .ev-card, .ev-past, .m-t').forEach(el => observer.observe(el));
+});
+</script>
 <!-- Cal.com floating button -->
 <script>
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");

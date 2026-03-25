@@ -1,33 +1,29 @@
 ---
-title: Page Not Found
+title: "Page Not Found"
 title-block-style: none
+page-layout: custom
+format:
+  html:
+    toc: false
 ---
 
-::: {.container .text-center .py-5}
-# 404 {.display-1}
+```{=html}
+<div class="m">
 
-The page you requested cannot be found.
+<div class="m-hero" style="min-height:80vh;display:flex;align-items:center;">
+  <div class="container" style="text-align:center;">
+    <p style="font-size:8rem;font-weight:800;line-height:1;margin-bottom:0.25em;" class="gr">404</p>
+    <h1>Page not found</h1>
+    <p>The page you're looking for has moved, been removed, or never existed.<br>Here are some places to start instead.</p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:2.5rem;">
+      <a href="/" class="m-b">Home</a>
+      <a href="/services/" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Services</a>
+      <a href="/academy/" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Academy</a>
+      <a href="/contact.html" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Contact</a>
+    </div>
+    <p style="margin-top:2rem;opacity:.7;">Or <a href="https://cal.com/chenist" target="_blank" style="color:var(--gr);">book a call</a> and we'll point you in the right direction.</p>
+  </div>
+</div>
 
-The page may have been moved, deleted, or may have never existed. Here are some places to start:
-
----
-
-::: {.row .mt-4}
-::: {.col-md-3}
-[<i class="bi bi-house me-2"></i>Home Page](/){.btn .btn-primary .w-100 .mb-2}
-:::
-::: {.col-md-3}
-[<i class="bi bi-terminal me-2"></i>Digital Infrastructure](/digital/){.btn .btn-outline-primary .w-100 .mb-2}
-:::
-::: {.col-md-3}
-[<i class="bi bi-shield-check me-2"></i>Services](/services/){.btn .btn-outline-primary .w-100 .mb-2}
-:::
-::: {.col-md-3}
-[<i class="bi bi-mortarboard me-2"></i>Academy](/academy/){.btn .btn-outline-primary .w-100 .mb-2}
-:::
-:::
-
-::: {.mt-4}
-Need help? [Contact us](/contact.html) or [book a call](https://cal.com/chenist){target="_blank"}.
-:::
-:::
+</div>
+```

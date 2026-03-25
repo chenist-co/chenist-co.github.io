@@ -75,12 +75,10 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <meta property="og:title" content="Page Not Found – chen.ist">
-<meta property="og:description" content="Innovative technology &amp; education">
 <meta property="og:site_name" content="chen.ist">
 <meta name="twitter:title" content="Page Not Found – chen.ist">
-<meta name="twitter:description" content="Innovative technology &amp; education">
 <meta name="twitter:card" content="summary">
-</head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+</head><body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -522,55 +520,40 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">404</a></li>
-  </ul>
-</nav>
-    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">Page Not Found</h1></header>
 
 
 <header id="title-block-header">
-
+<h1 class="title display-7">Page Not Found</h1>
 
 </header>
 
 
-<section id="section" class="level1 display-1 container text-center py-5">
-<h1 class="display-1">404</h1>
-<p>The page you requested cannot be found.</p>
-<p>The page may have been moved, deleted, or may have never existed. Here are some places to start:</p>
-<hr>
-<div class="row mt-4">
-<div class="col-md-3">
-<p><a href="/." class="btn btn-primary w-100 mb-2"><i class="bi bi-house me-2"></i>Home Page</a></p>
+<div class="m">
+
+<div class="m-hero" style="min-height:80vh;display:flex;align-items:center;">
+  <div class="container" style="text-align:center;">
+    <p style="font-size:8rem;font-weight:800;line-height:1;margin-bottom:0.25em;" class="gr">404</p>
+    <h1>Page not found</h1>
+    <p>The page you're looking for has moved, been removed, or never existed.<br>Here are some places to start instead.</p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:2.5rem;">
+      <a href="/" class="m-b">Home</a>
+      <a href="/services/" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Services</a>
+      <a href="/academy/" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Academy</a>
+      <a href="/contact.html" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Contact</a>
+    </div>
+    <p style="margin-top:2rem;opacity:.7;">Or <a href="https://cal.com/chenist" target="_blank" style="color:var(--gr);">book a call</a> and we'll point you in the right direction.</p>
+  </div>
 </div>
-<div class="col-md-3">
-<p><a href="/./digital/" class="btn btn-outline-primary w-100 mb-2"><i class="bi bi-terminal me-2"></i>Digital Infrastructure</a></p>
+
 </div>
-<div class="col-md-3">
-<p><a href="/./services/" class="btn btn-outline-primary w-100 mb-2"><i class="bi bi-shield-check me-2"></i>Services</a></p>
-</div>
-<div class="col-md-3">
-<p><a href="/./academy/" class="btn btn-outline-primary w-100 mb-2"><i class="bi bi-mortarboard me-2"></i>Academy</a></p>
-</div>
-</div>
-<div class="mt-4">
-<p>Need help? <a href="/./contact.html">Contact us</a> or <a href="https://cal.com/chenist" target="_blank">book a call</a>.</p>
-</div>
-</section>
 
 
 
-</main> <!-- /main -->
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1048,7 +1031,20 @@ document.addEventListener('DOMContentLoaded', function() {
 @media (max-width: 480px) {
   footer > div > div { grid-template-columns: 1fr !important; }
 }
+footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
 </style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.m-s, .m-bg, .m-cta, .m-r, .m-n, .hp-sec, .hp-stats, .ev-card, .ev-past, .m-t').forEach(el => observer.observe(el));
+});
+</script>
 <!-- Cal.com floating button -->
 <script>
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");

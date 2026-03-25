@@ -53,6 +53,17 @@
 .m-bo { display: inline-block; padding: 0.85rem 2.25rem; border: 1.5px solid var(--c); color: var(--c); border-radius: 980px; font-weight: 500; font-size: 1rem; text-decoration: none; transition: all 0.15s; }
 .m-bo:hover { background: var(--c); color: #fff; text-decoration: none; }
 
+/* Scroll reveal animations */
+.m-s, .m-bg, .m-cta, .m-r, .m-n, .hp-sec, .hp-stats, .ev-card, .ev-past, .m-t {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.m-s.visible, .m-bg.visible, .m-cta.visible, .m-r.visible, .m-n.visible, .hp-sec.visible, .hp-stats.visible, .ev-card.visible, .ev-past.visible, .m-t.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Small text & divider */
 .m-sm { font-size: 0.82rem; color: var(--g); margin-top: 1.75rem; }
 .m-sm i { color: var(--c); }

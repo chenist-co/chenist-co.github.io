@@ -168,7 +168,20 @@ format:
           }
           </script>
       - file: includes/custom-header.html
-    include-after-body: 
+    include-after-body:
+      - text: |
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('visible');
+                }
+              });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+            document.querySelectorAll('.m-s, .m-bg, .m-cta, .m-r, .m-n, .hp-sec, .hp-stats, .ev-card, .ev-past, .m-t').forEach(el => observer.observe(el));
+          });
+          </script>
       - text: |
           <!-- Cal.com floating button -->
           <script>
