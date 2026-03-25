@@ -2,8 +2,10 @@
 title: "Blog"
 subtitle: "Insights, tutorials, and updates from our team"
 listing:
-  contents: blog/*.qmd
+  contents: blog
   sort: "date desc"
+  include:
+    language: en
   type: grid
   categories: true
   sort-ui: true
