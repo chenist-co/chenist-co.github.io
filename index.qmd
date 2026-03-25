@@ -12,9 +12,13 @@ format:
         <style>
         /* Hide Quarto's auto-generated title block */
         .quarto-title-block, #title-block-header, header#title-block-header { display: none !important; }
-        /* Make content start from top — no margin */
+        /* Make content start from top — no margin/padding anywhere */
         #quarto-content > * { margin-top: 0 !important; padding-top: 0 !important; }
         main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
+        /* Kill white gap between content and footer */
+        footer { margin-top: 0 !important; }
+        #quarto-content { margin-bottom: 0 !important; padding-bottom: 0 !important; }
+        .page-columns { margin-bottom: 0 !important; }
         </style>
         <style>
         .hp { font-family: 'Open Sans', -apple-system, system-ui, sans-serif; }
