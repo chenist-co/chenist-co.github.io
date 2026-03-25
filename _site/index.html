@@ -424,7 +424,7 @@ footer { margin-top: 0 !important; }
 .hp-pattern p { color: #86868b; }
 
 /* Stats */
-.hp-stats { display: flex; justify-content: center; gap: clamp(2rem, 5vw, 5rem); flex-wrap: wrap; padding: 5rem 1.5rem; background: #000; background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2381BD4A' fill-opacity='0.07' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3Ccircle cx='13' cy='13' r='1'/%3E%3C/g%3E%3C/svg%3E"); }
+.hp-stats { display: flex; justify-content: center; gap: clamp(2rem, 5vw, 5rem); flex-wrap: wrap; padding: 5rem 1.5rem; background: #000; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='692' height='692' viewBox='0 0 800 800'%3E%3Crect fill='none' width='800' height='800'/%3E%3Cg fill='none' stroke='%2381BD4A' stroke-width='1' stroke-opacity='0.12'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%2381BD4A' fill-opacity='0.08'%3E%3Ccircle cx='769' cy='229' r='4'/%3E%3Ccircle cx='539' cy='269' r='4'/%3E%3Ccircle cx='603' cy='493' r='4'/%3E%3Ccircle cx='731' cy='737' r='4'/%3E%3Ccircle cx='520' cy='660' r='4'/%3E%3Ccircle cx='309' cy='538' r='4'/%3E%3Ccircle cx='295' cy='764' r='4'/%3E%3Ccircle cx='40' cy='599' r='4'/%3E%3Ccircle cx='102' cy='382' r='4'/%3E%3Ccircle cx='127' cy='80' r='4'/%3E%3Ccircle cx='370' cy='105' r='4'/%3E%3Ccircle cx='578' cy='42' r='4'/%3E%3Ccircle cx='237' cy='261' r='4'/%3E%3Ccircle cx='390' cy='382' r='4'/%3E%3C/g%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2381BD4A' fill-opacity='0.07' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3Ccircle cx='13' cy='13' r='1'/%3E%3C/g%3E%3C/svg%3E"); }
 .hp-sn { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 700; color: #81BD4A; line-height: 1; }
 .hp-sl { font-size: 0.7rem; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.3rem; }
 
@@ -706,29 +706,31 @@ footer { margin-top: 0 !important; }
   </div>
 </div>
 
-<!-- RESILIENCE — pattern background, no image -->
-<div class="hp-sec hp-pattern" style="min-height: 60vh; text-align: center;">
-  <div class="hp-sec-content" style="padding: 0 1.5rem;">
+<!-- RESILIENCE — centered over sky image -->
+<div class="hp-sec hp-center">
+  <div class="hp-sec-img" style="background-image:url('/assets/images/stock/cloud-sky.jpg');"></div>
+  <div class="hp-sec-over" style="background: rgba(0,0,0,0.55);"></div>
+  <div class="hp-sec-content">
     <h2>Digital Resilience</h2>
-    <p style="margin: 0 auto 2rem;">Business continuity, disaster recovery, and architecture frameworks. When everything else fails, you stay operational.</p>
+    <p>Business continuity, disaster recovery, and architecture frameworks. When everything else fails, you stay operational.</p>
     <div class="hp-sec-links" style="display:flex; gap:2rem; justify-content:center;">
       <a href="./services/digital-resilience/" class="pr">Learn more</a>
     </div>
   </div>
 </div>
 
-<!-- STATS -->
-<div class="hp-stats">
-  <div style="text-align:center;"><div class="hp-sn">15+</div><div class="hp-sl">Years</div></div>
-  <div style="text-align:center;"><div class="hp-sn">100%</div><div class="hp-sl">Open-source</div></div>
-  <div style="text-align:center;"><div class="hp-sn">EU</div><div class="hp-sl">Data residency</div></div>
-  <div style="text-align:center;"><div class="hp-sn">24/7</div><div class="hp-sl">Monitoring</div></div>
+<!-- STATS — with background image -->
+<div class="hp-stats" style="position:relative; overflow:hidden;">
+  <div style="position:absolute; inset:0; background:url('/assets/images/stock/server-room-dark.jpg') center/cover; opacity:0.15; z-index:0;"></div>
+  <div style="text-align:center; position:relative; z-index:1;"><div class="hp-sn">15+</div><div class="hp-sl">Years</div></div>
+  <div style="text-align:center; position:relative; z-index:1;"><div class="hp-sn">100%</div><div class="hp-sl">Open-source</div></div>
+  <div style="text-align:center; position:relative; z-index:1;"><div class="hp-sn">EU</div><div class="hp-sl">Data residency</div></div>
+  <div style="text-align:center; position:relative; z-index:1;"><div class="hp-sn">24/7</div><div class="hp-sl">Monitoring</div></div>
 </div>
 
-<!-- CTA — full-bleed dark with hero image -->
-<div class="hp-sec hp-center" style="min-height: 70vh;">
-  <div class="hp-sec-img" style="background-image:url('/assets/images/stock/server-room-dark.jpg');"></div>
-  <div class="hp-sec-over" style="background: rgba(0,0,0,0.75);"></div>
+<!-- CTA — full-bleed dark with wavey fingerprint pattern -->
+<div class="hp-sec hp-center" style="min-height: 70vh; background: #000; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='856' height='102.7' viewBox='0 0 1000 120'%3E%3Crect fill='%23000' width='1000' height='120'/%3E%3Cg fill='none' stroke='%2381BD4A' stroke-width='2' stroke-opacity='0.15'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E&quot;); background-size: 100% auto; background-repeat: repeat-y;">
+  <div class="hp-sec-over" style="background: radial-gradient(ellipse at center, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%);"></div>
   <div class="hp-sec-content">
     <h2 style="color:#fff;">Ready to take control?</h2>
     <p>30 minutes. No pitch. Just an honest look at what you need.</p>
