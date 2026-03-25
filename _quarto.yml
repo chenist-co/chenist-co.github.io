@@ -1,6 +1,11 @@
 project:
   type: website
   output-dir: _site
+  resources:
+    - "assets/images/stock/*"
+    - "assets/svg/*"
+    - "robots.txt"
+    - "CNAME"
 
 execute:
   freeze: auto
