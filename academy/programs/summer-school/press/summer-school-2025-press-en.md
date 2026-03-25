@@ -1,8 +1,8 @@
 ---
-title: "Press Release: Summer School 2025"
+title: "Press Release: Summer School 2026"
 subtitle: "Intensive Technology Program at Private Location in Craiova"
 author: "Chen.ist Academy"
-date: "June 2, 2025"
+date: "June 2, 2026"
 format:
   pdf:
     toc: false
@@ -17,15 +17,15 @@ format:
 
 # PRESS RELEASE
 ## For Immediate Release
-### June 2, 2025
+### June 2, 2026
 
-# Chen.ist Academy Announces Summer School 2025 Program
+# Chen.ist Academy Announces Summer School 2026 Program
 
-**CRAIOVA, ROMANIA** — Chen.ist Academy is pleased to announce its Summer School 2025, an intensive month-long program focusing on cybersecurity, cloud computing, and artificial intelligence. The program will be held from July 20 to August 20, 2025, at a private location in Craiova, Romania.
+**CRAIOVA, ROMANIA** — Chen.ist Academy is pleased to announce its Summer School 2026, an intensive month-long program focusing on cybersecurity, cloud computing, and artificial intelligence. The program will be held from July 20 to August 20, 2026, at a private location in Craiova, Romania.
 
 ## Program Overview
 
-The Summer School 2025 is designed to provide participants with comprehensive introductory-level education in specialized technical domains. The program combines theoretical lectures, hands-on workshops, group projects, and networking opportunities to create a rich learning environment.
+The Summer School 2026 is designed to provide participants with comprehensive introductory-level education in specialized technical domains. The program combines theoretical lectures, hands-on workshops, group projects, and networking opportunities to create a rich learning environment.
 
 ## Curriculum Highlights
 
@@ -46,14 +46,14 @@ The program is targeted toward:
 
 ## Registration Information
 
-Registration opens on July 7, 2025. Early registration is recommended as spaces are limited to 50 participants per track to ensure a high-quality, personalized experience.
+Registration opens on July 7, 2026. Early registration is recommended as spaces are limited to 50 participants per track to ensure a high-quality, personalized experience.
 
 ## Post-Program Opportunities
 
 After completing the Summer School, participants are encouraged to apply their new skills at upcoming events, including:
 
-- SpaceApps Challenge 2025 (October 3-5, 2025)
-- Cybersecurity Hackathon (November 15-17, 2025)
+- SpaceApps Challenge 2026 (October 3-5, 2026)
+- Cybersecurity Hackathon (November 15-17, 2026)
 
 ## About Chen.ist Academy
 
@@ -61,7 +61,7 @@ Chen.ist Academy is dedicated to providing high-quality technology education and
 
 ## Contact Information
 
-For more information about the Summer School 2025 program, please contact:
+For more information about the Summer School 2026 program, please contact:
 
 - **Email:** summerschool@chen.ist
 - **Phone:** +40 123 456 789

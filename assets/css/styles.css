@@ -2,6 +2,26 @@
 
 /* Google Fonts loaded via _quarto.yml <link> tag - do not duplicate here */
 
+/* Design tokens */
+:root {
+  --brand-navy: #323642;
+  --brand-green: #81BD4A;
+  --brand-green-dark: #5A9C25;
+  --brand-offwhite: #E5E3DA;
+  --brand-gray: #CFCDC4;
+  --radius: 6px;
+  --shadow-sm: 0 4px 6px rgba(50, 54, 66, 0.1);
+  --shadow-md: 0 8px 15px rgba(50, 54, 66, 0.15);
+  --transition: 0.2s ease;
+  --hover-lift: translateY(-4px);
+}
+
+/* Heading type scale */
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.375rem; }
+h4 { font-size: 1.125rem; }
+
 /* Layout */
 .container {
   max-width: 1200px;
@@ -31,24 +51,25 @@ a:hover {
   padding: 1.5rem;
   margin-bottom: 2rem;
   background-color: #fff;
-  border-radius: 4px;
-  border: 1px solid #CFCDC4;
-  box-shadow: 0 4px 6px rgba(50, 54, 66, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: var(--radius);
+  border: 1px solid var(--brand-gray);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+  height: 100%;
 }
 
 .feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(50, 54, 66, 0.15);
+  transform: var(--hover-lift);
+  box-shadow: var(--shadow-md);
 }
 
 .feature-card h3 {
-  color: #323642;
+  color: var(--brand-navy);
   font-size: 1.25rem;
 }
 
 .feature-card-icon {
-  color: #81BD4A;
+  color: var(--brand-green);
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -60,18 +81,18 @@ a:hover {
 
 /* Footer */
 footer {
-  background-color: #323642;
-  color: #E5E3DA;
+  background-color: var(--brand-navy);
+  color: var(--brand-offwhite);
   padding: 3rem 0;
   margin-top: 3rem;
 }
 
 footer a {
-  color: #81BD4A;
+  color: var(--brand-green);
 }
 
 footer a:hover {
-  color: #5A9C25;
+  color: var(--brand-green-dark);
 }
 
 /* Custom hero section */
@@ -91,7 +112,7 @@ footer a:hover {
 .hero-subtitle {
   font-size: 1.25rem;
   margin-bottom: 2rem;
-  opacity: 0.9;
+  
   color: #E5E3DA;
 }
 
@@ -99,7 +120,7 @@ footer a:hover {
 .hero-section p {
   font-size: 1.25rem;
   margin-bottom: 2rem;
-  opacity: 0.9;
+  
   color: #E5E3DA;
 }
 
@@ -129,7 +150,7 @@ footer a:hover {
 /* Code formatting */
 pre, code {
   font-family: 'Source Code Pro', monospace;
-  border-radius: 4px;
+  border-radius: var(--radius);
 }
 
 /* Navigation highlight for current page */
@@ -165,12 +186,12 @@ pre, code {
 
 /* Adjust the card hover transitions for smoother effect */
 .quarto-grid-item {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .quarto-grid-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: var(--hover-lift);
+  box-shadow: var(--shadow-md);
 }
 
 /* Better spacing for the navigation */
