@@ -5,7 +5,27 @@ date: "2025-04-01"
 image: /assets/images/stock/cybersecurity-monitor.jpg
 categories: [Cybersecurity, Best Practices]
 description: "Essential cybersecurity best practices that every organization should implement to protect against evolving threats in 2025."
+format:
+  html:
+    other-links:
+      - text: "Download PDF"
+        href: cyber-security-best-practices.pdf
+        icon: file-pdf
+      - text: "Download ePub"
+        href: cyber-security-best-practices.epub
+        icon: book
+  typst:
+    toc: true
+    number-sections: false
+  epub:
+    toc: true
 ---
+
+```{=html}
+<div class="text-center mb-4">
+  <img src="/assets/images/stock/cybersecurity-monitor.jpg" alt="Article cover" class="img-fluid rounded shadow" style="max-height: 400px; width: 100%; object-fit: cover;">
+</div>
+```
 
 ## The Evolving Threat Landscape
 
@@ -72,7 +92,7 @@ For more information or assistance with implementing these practices, [contact o
 Join our upcoming webinar on advanced cybersecurity strategies where we'll dive deeper into these topics and provide actionable insights for your organization.
 
 ::: {.text-center .mt-3}
-[Register Now](https://cal.com/chenist){target="_blank"}{.btn .btn-success}
+[Register Now](https://cal.com/chenist){.btn .btn-success target="_blank"}
 :::
 :::
 :::

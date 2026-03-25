@@ -5,7 +5,27 @@ date: "2026-03-20"
 image: /assets/images/stock/code-screen.jpg
 categories: [Open Source, Digital Infrastructure, SMB]
 description: "A practical guide to building SMB infrastructure with open-source tools — from productivity and communication to identity, monitoring, and UNIX foundations."
+format:
+  html:
+    other-links:
+      - text: "Download PDF"
+        href: open-source-infrastructure-smbs.pdf
+        icon: file-pdf
+      - text: "Download ePub"
+        href: open-source-infrastructure-smbs.epub
+        icon: book
+  typst:
+    toc: true
+    number-sections: false
+  epub:
+    toc: true
 ---
+
+```{=html}
+<div class="text-center mb-4">
+  <img src="/assets/images/stock/code-screen.jpg" alt="Article cover" class="img-fluid rounded shadow" style="max-height: 400px; width: 100%; object-fit: cover;">
+</div>
+```
 
 ## Why Open Source Makes Sense for SMBs
 
@@ -109,7 +129,7 @@ For a deeper look at how we approach digital infrastructure, visit our [Digital 
 Book a free consultation to discuss which tools fit your organization and how to plan a practical migration.
 
 ::: {.text-center .mt-3}
-[Book a Consultation](https://cal.com/chenist){target="_blank"}{.btn .btn-success}
+[Book a Consultation](https://cal.com/chenist){.btn .btn-success target="_blank"}
 :::
 :::
 :::

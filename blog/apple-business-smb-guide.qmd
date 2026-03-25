@@ -5,7 +5,27 @@ date: "2026-03-25"
 image: /assets/images/stock/team-macbooks.jpg
 categories: [Apple, Digital Infrastructure, SMB]
 description: "Everything SMBs need to know about Apple Business launching April 14, 2026 — from free MDM and Blueprints to paid add-ons and migration."
+format:
+  html:
+    other-links:
+      - text: "Download PDF"
+        href: apple-business-smb-guide.pdf
+        icon: file-pdf
+      - text: "Download ePub"
+        href: apple-business-smb-guide.epub
+        icon: book
+  typst:
+    toc: true
+    number-sections: false
+  epub:
+    toc: true
 ---
+
+```{=html}
+<div class="text-center mb-4">
+  <img src="/assets/images/stock/team-macbooks.jpg" alt="Article cover" class="img-fluid rounded shadow" style="max-height: 400px; width: 100%; object-fit: cover;">
+</div>
+```
 
 ## A Single Platform for Everything Apple at Work
 
@@ -93,7 +113,7 @@ Whether you are starting fresh or migrating from an existing setup, we can help 
 Book a free consultation to discuss your migration plan and get started before the April 14 deadline.
 
 ::: {.text-center .mt-3}
-[Book a Consultation](https://cal.com/chenist){target="_blank"}{.btn .btn-success}
+[Book a Consultation](https://cal.com/chenist){.btn .btn-success target="_blank"}
 :::
 :::
 :::
