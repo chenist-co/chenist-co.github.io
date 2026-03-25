@@ -46,9 +46,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-8dd3dd159173adcf0f2e6467a4c7591f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-34a1d7218939eaee31c1f1ef031ca8da.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-8dd3dd159173adcf0f2e6467a4c7591f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a592c5a32ddb2bbfd9fa55d2db6a7c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-29f4aea09a2439b849a9d23a02a83b44.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-a592c5a32ddb2bbfd9fa55d2db6a7c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -249,67 +249,100 @@ ul.task-list li input[type="checkbox"] {
     }
   </script><a href="#main-content" class="skip-link">Skip to main content</a>
 <style>
-/* Modern transparent navbar — sits on top of content */
+/* Corporate navbar — solid dark, structured, professional */
 .navbar {
-  background: rgba(0,0,0,0.8) !important;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  padding: 0.5rem 0 !important;
-  font-size: 0.85rem;
+  background: #0a0a0a !important;
+  border-bottom: 1px solid rgba(129,189,74,0.15);
+  padding: 0 !important;
+  font-size: 0.82rem;
+  min-height: 56px;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  height: 56px;
 }
 .navbar-brand-container { display: flex; align-items: center; }
-.navbar-brand { display: flex; align-items: center; }
+.navbar-brand { display: flex; align-items: center; gap: 0.5rem; }
 .navbar-brand .navbar-title {
   display: inline-block;
-  margin-left: 0;
   color: #FFFFFF;
-  font-weight: 600;
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: 'Source Code Pro', monospace;
 }
+.navbar-brand .brand-dot { color: #81BD4A; }
 .navbar .nav-link {
-  color: rgba(255,255,255,0.8) !important;
-  font-size: 0.82rem !important;
-  padding: 0.4rem 0.75rem !important;
+  color: rgba(255,255,255,0.65) !important;
+  font-size: 0.78rem !important;
+  font-weight: 500;
+  padding: 0.5rem 0.85rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   transition: color 0.15s;
 }
-.navbar .nav-link:hover { color: #fff !important; }
+.navbar .nav-link:hover,
+.navbar .nav-link.active { color: #81BD4A !important; }
 .navbar .dropdown-menu {
-  background: rgba(0,0,0,0.9);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 12px;
-  padding: 0.5rem;
+  background: #0a0a0a;
+  border: 1px solid rgba(129,189,74,0.12);
+  border-radius: 8px;
+  padding: 0.4rem;
+  margin-top: 0;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
 }
 .navbar .dropdown-item {
-  color: rgba(255,255,255,0.8);
-  font-size: 0.82rem;
-  border-radius: 8px;
-  padding: 0.4rem 0.75rem;
+  color: rgba(255,255,255,0.65);
+  font-size: 0.78rem;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 0.45rem 0.85rem;
+  letter-spacing: 0.02em;
 }
 .navbar .dropdown-item:hover {
-  background: rgba(255,255,255,0.1);
-  color: #fff;
+  background: rgba(129,189,74,0.1);
+  color: #81BD4A;
+}
+.navbar .quarto-navigation-tool { color: rgba(255,255,255,0.5) !important; }
+.navbar .quarto-navigation-tool:hover { color: #81BD4A !important; }
+.navbar .quarto-color-scheme-toggle { color: rgba(255,255,255,0.5) !important; }
+.navbar .quarto-color-scheme-toggle:hover { color: #81BD4A !important; }
+
+@media (max-width: 991px) {
+  .navbar .nav-link { font-size: 0.75rem !important; padding: 0.4rem 0.6rem !important; }
 }
 @media (max-width: 767.98px) {
-  .navbar-brand .navbar-title { font-size: 1rem; }
+  .navbar-brand .navbar-title { font-size: 0.9rem; }
   .navbar .navbar-collapse {
-    background: rgba(0,0,0,0.95);
-    border-radius: 12px;
+    background: #0a0a0a;
+    border: 1px solid rgba(129,189,74,0.1);
+    border-radius: 8px;
     padding: 1rem;
     margin-top: 0.5rem;
+  }
+  .navbar .nav-link {
+    text-transform: none;
+    font-size: 0.85rem !important;
+    padding: 0.5rem 0.75rem !important;
   }
 }
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const navbarBrand = document.querySelector('.navbar-brand');
+  var navbarBrand = document.querySelector('.navbar-brand');
   if (navbarBrand) {
-    const titleSpan = document.createElement('span');
+    var titleSpan = document.createElement('span');
     titleSpan.className = 'navbar-title';
-    titleSpan.textContent = 'CHENIST';
+    titleSpan.textContent = 'CHEN';
+    var dot = document.createElement('span');
+    dot.className = 'brand-dot';
+    dot.textContent = '.';
+    var ist = document.createTextNode('IST');
+    titleSpan.appendChild(dot);
+    titleSpan.appendChild(ist);
     navbarBrand.appendChild(titleSpan);
   }
 });
@@ -529,89 +562,126 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-<!-- main -->
-
-
-<header id="title-block-header">
-<h1 class="title display-7">Open-Source Infrastructure for SMBs: A Practical Guide</h1>
-<p class="author">CHENIST Team</p>
-
-<p class="date">2026-03-20</p>
-</header>
-
-<nav id="TOC" role="doc-toc">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#why-open-source-makes-sense-for-smbs" id="toc-why-open-source-makes-sense-for-smbs">Why Open Source Makes Sense for SMBs</a></li>
-  <li><a href="#productivity-and-collaboration" id="toc-productivity-and-collaboration">Productivity and Collaboration</a>
-  <ul>
-  <li><a href="#document-editing-and-office-tools" id="toc-document-editing-and-office-tools">Document Editing and Office Tools</a></li>
-  <li><a href="#file-storage-and-sync" id="toc-file-storage-and-sync">File Storage and Sync</a></li>
+  <li><a href="#why-open-source-makes-sense-for-smbs" id="toc-why-open-source-makes-sense-for-smbs" class="nav-link active" data-scroll-target="#why-open-source-makes-sense-for-smbs">Why Open Source Makes Sense for SMBs</a></li>
+  <li><a href="#productivity-and-collaboration" id="toc-productivity-and-collaboration" class="nav-link" data-scroll-target="#productivity-and-collaboration">Productivity and Collaboration</a>
+  <ul class="collapse">
+  <li><a href="#document-editing-and-office-tools" id="toc-document-editing-and-office-tools" class="nav-link" data-scroll-target="#document-editing-and-office-tools">Document Editing and Office Tools</a></li>
+  <li><a href="#file-storage-and-sync" id="toc-file-storage-and-sync" class="nav-link" data-scroll-target="#file-storage-and-sync">File Storage and Sync</a></li>
   </ul></li>
-  <li><a href="#communication" id="toc-communication">Communication</a>
-  <ul>
-  <li><a href="#messaging-and-chat" id="toc-messaging-and-chat">Messaging and Chat</a></li>
-  <li><a href="#video-conferencing" id="toc-video-conferencing">Video Conferencing</a></li>
+  <li><a href="#communication" id="toc-communication" class="nav-link" data-scroll-target="#communication">Communication</a>
+  <ul class="collapse">
+  <li><a href="#messaging-and-chat" id="toc-messaging-and-chat" class="nav-link" data-scroll-target="#messaging-and-chat">Messaging and Chat</a></li>
+  <li><a href="#video-conferencing" id="toc-video-conferencing" class="nav-link" data-scroll-target="#video-conferencing">Video Conferencing</a></li>
   </ul></li>
-  <li><a href="#identity-and-single-sign-on" id="toc-identity-and-single-sign-on">Identity and Single Sign-On</a>
-  <ul>
-  <li><a href="#centralized-authentication" id="toc-centralized-authentication">Centralized Authentication</a></li>
+  <li><a href="#identity-and-single-sign-on" id="toc-identity-and-single-sign-on" class="nav-link" data-scroll-target="#identity-and-single-sign-on">Identity and Single Sign-On</a>
+  <ul class="collapse">
+  <li><a href="#centralized-authentication" id="toc-centralized-authentication" class="nav-link" data-scroll-target="#centralized-authentication">Centralized Authentication</a></li>
   </ul></li>
-  <li><a href="#monitoring-and-observability" id="toc-monitoring-and-observability">Monitoring and Observability</a></li>
-  <li><a href="#unix-foundations" id="toc-unix-foundations">UNIX Foundations</a>
-  <ul>
-  <li><a href="#linux-distributions" id="toc-linux-distributions">Linux Distributions</a></li>
-  <li><a href="#bsd-systems" id="toc-bsd-systems">BSD Systems</a></li>
+  <li><a href="#monitoring-and-observability" id="toc-monitoring-and-observability" class="nav-link" data-scroll-target="#monitoring-and-observability">Monitoring and Observability</a></li>
+  <li><a href="#unix-foundations" id="toc-unix-foundations" class="nav-link" data-scroll-target="#unix-foundations">UNIX Foundations</a>
+  <ul class="collapse">
+  <li><a href="#linux-distributions" id="toc-linux-distributions" class="nav-link" data-scroll-target="#linux-distributions">Linux Distributions</a></li>
+  <li><a href="#bsd-systems" id="toc-bsd-systems" class="nav-link" data-scroll-target="#bsd-systems">BSD Systems</a></li>
   </ul></li>
-  <li><a href="#real-world-deployment-examples" id="toc-real-world-deployment-examples">Real-World Deployment Examples</a></li>
-  <li><a href="#addressing-common-concerns" id="toc-addressing-common-concerns">Addressing Common Concerns</a></li>
-  <li><a href="#getting-started" id="toc-getting-started">Getting Started</a>
-  <ul>
-  <li><a href="#ready-to-explore-open-source-infrastructure" id="toc-ready-to-explore-open-source-infrastructure">Ready to explore open-source infrastructure?</a></li>
+  <li><a href="#real-world-deployment-examples" id="toc-real-world-deployment-examples" class="nav-link" data-scroll-target="#real-world-deployment-examples">Real-World Deployment Examples</a></li>
+  <li><a href="#addressing-common-concerns" id="toc-addressing-common-concerns" class="nav-link" data-scroll-target="#addressing-common-concerns">Addressing Common Concerns</a></li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a>
+  <ul class="collapse">
+  <li><a href="#ready-to-explore-open-source-infrastructure" id="toc-ready-to-explore-open-source-infrastructure" class="nav-link" data-scroll-target="#ready-to-explore-open-source-infrastructure">Ready to explore open-source infrastructure?</a></li>
   </ul></li>
   </ul>
 <div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="open-source-infrastructure-smbs.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="open-source-infrastructure-smbs.epub"><i class="bi bi-book"></i>Download ePub</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Open-Source Infrastructure for SMBs: A Practical Guide</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Open Source</div>
+    <div class="quarto-category">Digital Infrastructure</div>
+    <div class="quarto-category">SMB</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    A practical guide to building SMB infrastructure with open-source tools — from productivity and communication to identity, monitoring, and UNIX foundations.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>CHENIST Team </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 20, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 <p><img src="../assets/images/stock/code-screen.webp" class="rounded shadow img-fluid" style="width:100.0%"></p>
 <section id="why-open-source-makes-sense-for-smbs" class="level2">
-<h2 data-anchor-id="why-open-source-makes-sense-for-smbs">Why Open Source Makes Sense for SMBs</h2>
+<h2 class="anchored" data-anchor-id="why-open-source-makes-sense-for-smbs">Why Open Source Makes Sense for SMBs</h2>
 <p>Small and medium-sized businesses face a familiar tension: they need enterprise-grade infrastructure but often cannot justify enterprise-grade licensing costs. Open-source software resolves this by providing production-ready tools with no per-seat fees, full data sovereignty, and freedom from vendor lock-in.</p>
 <p>This is not about ideology. It is about building infrastructure you actually own. When your email, identity system, or monitoring stack depends on a vendor that can change pricing, terms, or features at any time, you carry risk that is difficult to quantify until it materializes. Open-source alternatives give you control over that risk.</p>
 <p>Here is a practical breakdown of the open-source stack we recommend for SMBs, organized by function.</p>
 </section>
 <section id="productivity-and-collaboration" class="level2">
-<h2 data-anchor-id="productivity-and-collaboration">Productivity and Collaboration</h2>
+<h2 class="anchored" data-anchor-id="productivity-and-collaboration">Productivity and Collaboration</h2>
 <p>The productivity suite is where most businesses start, and where open-source options have matured considerably.</p>
 <section id="document-editing-and-office-tools" class="level3">
-<h3 data-anchor-id="document-editing-and-office-tools">Document Editing and Office Tools</h3>
+<h3 class="anchored" data-anchor-id="document-editing-and-office-tools">Document Editing and Office Tools</h3>
 <p><strong>LibreOffice</strong> remains the standard desktop office suite, handling word processing, spreadsheets, and presentations with strong compatibility for Microsoft Office formats. For teams that need real-time collaborative editing in the browser, <strong>Collabora Online</strong> provides a LibreOffice-based web editor that integrates directly with file storage platforms.</p>
 <p><strong>CryptPad</strong> offers a privacy-focused alternative for collaborative documents, spreadsheets, and presentations. All content is end-to-end encrypted, meaning even the server administrator cannot read your documents. This is particularly relevant for businesses handling sensitive client data.</p>
 </section>
 <section id="file-storage-and-sync" class="level3">
-<h3 data-anchor-id="file-storage-and-sync">File Storage and Sync</h3>
+<h3 class="anchored" data-anchor-id="file-storage-and-sync">File Storage and Sync</h3>
 <p><strong>Nextcloud</strong> is the centerpiece of most open-source productivity deployments. It provides file sync, shared calendars, contacts, task management, and an app ecosystem that extends its capabilities into project management, document signing, and more. Self-hosted or managed, Nextcloud replaces a significant portion of what businesses typically buy from cloud productivity vendors.</p>
 </section>
 </section>
 <section id="communication" class="level2">
-<h2 data-anchor-id="communication">Communication</h2>
+<h2 class="anchored" data-anchor-id="communication">Communication</h2>
 <section id="messaging-and-chat" class="level3">
-<h3 data-anchor-id="messaging-and-chat">Messaging and Chat</h3>
+<h3 class="anchored" data-anchor-id="messaging-and-chat">Messaging and Chat</h3>
 <p><strong>Matrix</strong> (via the <strong>Element</strong> client) provides federated, end-to-end encrypted messaging. Federation means your organization’s chat server can communicate with other Matrix servers, making it useful for cross-organization collaboration without creating accounts on third-party platforms.</p>
 <p><strong>Mattermost</strong> is a strong choice for teams that prefer a Slack-like experience with self-hosted control. It supports channels, threads, integrations, and has a well-documented API for automation.</p>
 </section>
 <section id="video-conferencing" class="level3">
-<h3 data-anchor-id="video-conferencing">Video Conferencing</h3>
+<h3 class="anchored" data-anchor-id="video-conferencing">Video Conferencing</h3>
 <p><strong>Jitsi Meet</strong> provides browser-based video conferencing with no account required for participants. It supports screen sharing, recording, and breakout rooms. For SMBs that need reliable video calls without per-user licensing, Jitsi is the most straightforward option.</p>
 </section>
 </section>
 <section id="identity-and-single-sign-on" class="level2">
-<h2 data-anchor-id="identity-and-single-sign-on">Identity and Single Sign-On</h2>
+<h2 class="anchored" data-anchor-id="identity-and-single-sign-on">Identity and Single Sign-On</h2>
 <p>Identity management is often the most overlooked piece of SMB infrastructure, but it is also one of the most impactful.</p>
 <section id="centralized-authentication" class="level3">
-<h3 data-anchor-id="centralized-authentication">Centralized Authentication</h3>
+<h3 class="anchored" data-anchor-id="centralized-authentication">Centralized Authentication</h3>
 <p><strong>Keycloak</strong> provides enterprise-grade identity and access management, including single sign-on (SSO), multi-factor authentication, social login, and integration with SAML and OpenID Connect applications. It is the open-source equivalent of commercial identity platforms and integrates well with the rest of the stack.</p>
 <p><strong>FreeIPA</strong> combines LDAP directory services, Kerberos authentication, DNS management, and certificate authority functions into a single platform. It is particularly well-suited for Linux-heavy environments where you need centralized user management across servers, workstations, and applications.</p>
 <p><strong>OpenLDAP</strong> remains relevant for organizations that need a lightweight, flexible directory service without the full FreeIPA stack.</p>
@@ -631,16 +701,16 @@ Tip
 </section>
 </section>
 <section id="monitoring-and-observability" class="level2">
-<h2 data-anchor-id="monitoring-and-observability">Monitoring and Observability</h2>
+<h2 class="anchored" data-anchor-id="monitoring-and-observability">Monitoring and Observability</h2>
 <p>You cannot manage what you cannot see. Monitoring infrastructure is non-negotiable, even for small teams.</p>
 <p><strong>Prometheus</strong> collects metrics from your servers, applications, and network devices using a pull-based model. Pair it with <strong>Grafana</strong> for dashboards and alerting, and you have a monitoring stack that scales from a handful of servers to thousands.</p>
 <p><strong>Uptime Kuma</strong> is a lightweight, self-hosted uptime monitor with a clean web interface. It supports HTTP, TCP, DNS, and ping checks with notifications via email, Slack, Matrix, and dozens of other channels. For SMBs that need basic uptime monitoring without the complexity of a full observability platform, Uptime Kuma is an excellent starting point.</p>
 </section>
 <section id="unix-foundations" class="level2">
-<h2 data-anchor-id="unix-foundations">UNIX Foundations</h2>
+<h2 class="anchored" data-anchor-id="unix-foundations">UNIX Foundations</h2>
 <p>The operating system layer is where open-source infrastructure begins, and the choice of OS shapes everything above it.</p>
 <section id="linux-distributions" class="level3">
-<h3 data-anchor-id="linux-distributions">Linux Distributions</h3>
+<h3 class="anchored" data-anchor-id="linux-distributions">Linux Distributions</h3>
 <ul>
 <li><strong>NixOS</strong> uses a declarative configuration model where your entire system state is defined in configuration files. This makes deployments reproducible and rollbacks trivial. It has a steep learning curve but pays dividends in consistency across environments.</li>
 <li><strong>Debian</strong> is the conservative choice: stable, well-documented, and widely supported. It is the default recommendation for organizations that want reliability without surprises.</li>
@@ -648,7 +718,7 @@ Tip
 </ul>
 </section>
 <section id="bsd-systems" class="level3">
-<h3 data-anchor-id="bsd-systems">BSD Systems</h3>
+<h3 class="anchored" data-anchor-id="bsd-systems">BSD Systems</h3>
 <ul>
 <li><strong>OpenBSD</strong> is purpose-built for security and is an excellent choice for firewalls, VPN gateways, and any network-facing role where minimizing attack surface is the priority. Its <code>pf</code> packet filter is among the most elegant firewall systems available.</li>
 <li><strong>FreeBSD</strong> excels at storage and networking workloads. With ZFS as a first-class filesystem and the <code>jail</code> system for lightweight containerization, FreeBSD is a strong foundation for file servers, backup targets, and network appliances.</li>
@@ -656,24 +726,24 @@ Tip
 </section>
 </section>
 <section id="real-world-deployment-examples" class="level2">
-<h2 data-anchor-id="real-world-deployment-examples">Real-World Deployment Examples</h2>
+<h2 class="anchored" data-anchor-id="real-world-deployment-examples">Real-World Deployment Examples</h2>
 <p><strong>Legal firm (15 employees):</strong> Nextcloud for file storage with Collabora Online for document editing, Keycloak for SSO, Matrix/Element for encrypted client communication, OpenBSD firewall at the network edge. Total licensing cost: zero.</p>
 <p><strong>Marketing agency (30 employees):</strong> Mattermost for internal chat, Jitsi for client video calls, Nextcloud for project file sharing, Prometheus and Grafana for monitoring their web hosting infrastructure, Debian servers throughout.</p>
 <p><strong>Manufacturing company (50 employees):</strong> FreeIPA for centralized identity across Linux workstations on the production floor, Uptime Kuma for monitoring critical internal applications, FreeBSD with ZFS for engineering file storage, CryptPad for sensitive R&amp;D collaboration.</p>
 </section>
 <section id="addressing-common-concerns" class="level2">
-<h2 data-anchor-id="addressing-common-concerns">Addressing Common Concerns</h2>
+<h2 class="anchored" data-anchor-id="addressing-common-concerns">Addressing Common Concerns</h2>
 <p><strong>“Who do we call for support?”</strong> Most mature open-source projects offer commercial support subscriptions. Red Hat, Collabora, Nextcloud GmbH, Element (Matrix), and Mattermost all sell enterprise support. You can also work with consultancies like chen.ist that specialize in open-source deployments.</p>
 <p><strong>“How do we train our team?”</strong> The learning curve varies by tool, but most of the software listed above has extensive documentation and active community forums. We typically include training as part of our deployment engagements.</p>
 <p><strong>“What about migration from existing tools?”</strong> Migration is project-specific, but the general approach is: run the open-source stack in parallel, migrate data incrementally, and cut over once the team is comfortable. We have helped businesses migrate from Microsoft 365, Google Workspace, and various proprietary tools.</p>
 </section>
 <section id="getting-started" class="level2">
-<h2 data-anchor-id="getting-started">Getting Started</h2>
+<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
 <p>Building an open-source infrastructure stack is not an all-or-nothing decision. Start with one area where you have the most pain — whether that is productivity, communication, or monitoring — deploy it, and expand from there.</p>
 <p>For a deeper look at how we approach digital infrastructure, visit our <a href="../digital/">Digital Infrastructure services page</a>.</p>
 <div class="card mt-5 mb-3">
 <section id="ready-to-explore-open-source-infrastructure" class="level3 card-body">
-<h3 data-anchor-id="ready-to-explore-open-source-infrastructure">Ready to explore open-source infrastructure?</h3>
+<h3 class="anchored" data-anchor-id="ready-to-explore-open-source-infrastructure">Ready to explore open-source infrastructure?</h3>
 <p>Book a free consultation to discuss which tools fit your organization and how to plan a practical migration.</p>
 <div class="text-center mt-3">
 <p><a href="https://cal.com/chenist" class="btn btn-success" target="_blank">Book a Consultation</a></p>
@@ -684,7 +754,7 @@ Tip
 
 </section>
 
-
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
