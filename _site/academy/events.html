@@ -77,10 +77,14 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 <meta property="og:title" content="Events – chen.ist">
 <meta property="og:description" content="Find upcoming hackathons, workshops, conferences, meetups, and summer school programs hosted by chen.ist Academy.">
+<meta property="og:image" content="https://chen.ist/assets/images/stock/team-meeting.jpg">
 <meta property="og:site_name" content="chen.ist">
+<meta property="og:image:alt" content="AI Ethics Hackathon">
 <meta name="twitter:title" content="Events – chen.ist">
 <meta name="twitter:description" content="Find upcoming hackathons, workshops, conferences, meetups, and summer school programs hosted by chen.ist Academy.">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://chen.ist/assets/images/stock/team-meeting.jpg">
+<meta name="twitter:image:alt" content="AI Ethics Hackathon">
+<meta name="twitter:card" content="summary_large_image">
 </head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
@@ -346,24 +350,50 @@ document.addEventListener('DOMContentLoaded', function() {
 .ap-cta { padding: 10rem 0; text-align: center; }
 .ap-cta h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; }
 .ap-cta p { font-size: 1.1rem; color: var(--g); max-width: 420px; margin: 0 auto 2.5rem; line-height: 1.5; }
-.ev { border: 1.5px solid rgba(0,0,0,0.08); border-radius: 20px; padding: 2.5rem; height: 100%; display: flex; flex-direction: column; transition: border-color 0.2s; }
-[data-bs-theme="dark"] .ev { border-color: rgba(255,255,255,0.1); }
-.ev:hover { border-color: var(--c); }
-.ev-badge { display: inline-block; background: var(--c); color: #fff; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.25rem 0.75rem; border-radius: 980px; margin-bottom: 1rem; }
-.ev-badge-past { background: var(--g); }
-.ev h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
-.ev-date { font-size: 0.85rem; color: var(--c); font-weight: 600; margin-bottom: 0.75rem; }
-.ev-loc { font-size: 0.85rem; color: var(--g); margin-bottom: 1rem; }
-.ev p { font-size: 0.92rem; color: var(--g); line-height: 1.55; flex-grow: 1; }
-.ev-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
-.ev-actions a { font-size: 0.88rem; }
+
+/* Featured event — large hero card */
+.ev-feat { display: flex; align-items: center; gap: 5rem; margin-bottom: 5rem; }
+.ev-feat-img { flex: 0 0 50%; }
+.ev-feat-img img { width: 100%; border-radius: 28px; }
+.ev-feat-txt .ev-tag { display: inline-block; background: var(--c); color: #fff; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.25rem 0.75rem; border-radius: 980px; margin-bottom: 1rem; }
+.ev-feat-txt h3 { font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700; letter-spacing: -0.03em; margin-bottom: 0.75rem; }
+.ev-feat-txt .ev-meta { font-size: 0.9rem; color: var(--c); font-weight: 600; margin-bottom: 1rem; }
+.ev-feat-txt .ev-meta i { margin-right: 0.25rem; }
+.ev-feat-txt p { font-size: 1.05rem; color: var(--g); line-height: 1.6; margin-bottom: 1.5rem; }
+
+/* Event list — clean, no cards */
+.ev-item { padding: 2.5rem 0; border-bottom: 1px solid rgba(0,0,0,0.06); display: flex; gap: 3rem; align-items: flex-start; }
+[data-bs-theme="dark"] .ev-item { border-color: rgba(255,255,255,0.06); }
+.ev-item:last-child { border-bottom: none; }
+.ev-item-date { flex-shrink: 0; width: 80px; text-align: center; }
+.ev-item-date .month { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--c); font-weight: 700; }
+.ev-item-date .day { font-size: 2.25rem; font-weight: 700; line-height: 1; margin-top: 0.1rem; }
+.ev-item-body h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.25rem; letter-spacing: -0.01em; }
+.ev-item-body .ev-loc { font-size: 0.85rem; color: var(--g); margin-bottom: 0.5rem; }
+.ev-item-body p { font-size: 0.92rem; color: var(--g); line-height: 1.5; margin-bottom: 0.75rem; }
+
+/* Recurring — clean tiles */
 .rec { text-align: center; padding: 0 1rem; }
 .rec i { font-size: 1.75rem; color: var(--c); display: block; margin-bottom: 0.75rem; opacity: 0.85; }
 .rec h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.35rem; }
 .rec p { font-size: 0.88rem; color: var(--g); line-height: 1.5; }
-.rec-when { font-size: 0.82rem; color: var(--c); font-weight: 600; margin-top: 0.5rem; }
+.rec-when { font-size: 0.8rem; color: var(--c); font-weight: 600; margin-top: 0.5rem; }
+
+/* Past — timeline style */
+.past-item { display: flex; gap: 2rem; align-items: flex-start; padding: 1.75rem 0; border-bottom: 1px solid rgba(0,0,0,0.04); }
+[data-bs-theme="dark"] .past-item { border-color: rgba(255,255,255,0.04); }
+.past-item:last-child { border-bottom: none; }
+.past-year { flex-shrink: 0; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--g); width: 80px; padding-top: 0.2rem; }
+.past-body h4 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.2rem; }
+.past-body p { font-size: 0.88rem; color: var(--g); line-height: 1.5; margin-bottom: 0.5rem; }
+
 @media (max-width: 767px) {
   .ap-hero { padding: 7rem 0 5rem; }
+  .ev-feat { flex-direction: column; gap: 2.5rem; }
+  .ev-feat-img { flex: none; }
+  .ev-item { flex-direction: column; gap: 0.5rem; }
+  .ev-item-date { width: auto; text-align: left; display: flex; gap: 0.5rem; align-items: baseline; }
+  .ev-item-date .day { font-size: 1.5rem; }
   .ap-cta { padding: 6rem 0; }
 }
 </style>
@@ -578,120 +608,155 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="ap-hero">
   <div class="container">
     <h1>Academy <span class="gr">Events</span></h1>
-    <p>Hackathons, workshops, and programs. Connect, learn, and build together.</p>
+    <p>Hackathons, workshops, and programs. Connect, learn, and build.</p>
   </div>
 </div>
 
-<div class="ap-bg">
-  <div class="container">
-    <h2 class="anchored">Upcoming events</h2>
-    <p class="sub">Register early — spots are limited.</p>
-    <div class="row g-4">
-      <div class="col-md-6">
-        <div class="ev">
-          <div class="ev-badge">New</div>
-          <h3 class="anchored">AI Ethics Hackathon</h3>
-          <div class="ev-date"><i class="bi bi-calendar3 me-1"></i> March 5, 2026</div>
-          <div class="ev-loc"><i class="bi bi-geo-alt me-1"></i> Bucharest</div>
-          <p>A weekend hackathon on ethical AI — bias detection, responsible design, and AI systems that prioritize human values.</p>
-          <div class="ev-actions">
-            <a href="../academy/events/pages/ai-ethics-hackathon.html" class="ap-lk">Details</a>
-            <a href="../academy/events/ical/ai-ethics-hackathon-2025.ics" class="ap-lk" download=""><i class="bi bi-calendar-plus me-1"></i>Add to calendar</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="ev">
-          <h3 class="anchored">Makers Workshop</h3>
-          <div class="ev-date"><i class="bi bi-calendar3 me-1"></i> September 15, 2026</div>
-          <div class="ev-loc"><i class="bi bi-geo-alt me-1"></i> Bucharest</div>
-          <p>Hands-on hardware workshop for makers, DIY experts, and hardware hackers. Build projects and share knowledge.</p>
-          <div class="ev-actions">
-            <a href="../academy/events/pages/makers-workshop.html" class="ap-lk">Details</a>
-            <a href="../academy/events/pdfs/makers-workshop.pdf" class="ap-lk" download=""><i class="bi bi-file-pdf me-1"></i>PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="ev">
-          <h3 class="anchored">Summer School 2026</h3>
-          <div class="ev-date"><i class="bi bi-calendar3 me-1"></i> August 1–15, 2026</div>
-          <div class="ev-loc"><i class="bi bi-geo-alt me-1"></i> Craiova</div>
-          <p>Two-week intensive program in cybersecurity, cloud, and AI. For students and professionals building technical careers.</p>
-          <div class="ev-actions">
-            <a href="../academy/events/pages/summer-school-2025.html" class="ap-lk">Details</a>
-            <a href="../academy/events/ical/summer-school-2025.ics" class="ap-lk" download=""><i class="bi bi-calendar-plus me-1"></i>Add to calendar</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="ev">
-          <h3 class="anchored">SpaceApps Challenge 2026</h3>
-          <div class="ev-date"><i class="bi bi-calendar3 me-1"></i> October 2026</div>
-          <div class="ev-loc"><i class="bi bi-geo-alt me-1"></i> Craiova</div>
-          <p>NASA's international hackathon — develop solutions for space exploration, satellite tech, and Earth observation.</p>
-          <div class="ev-actions">
-            <a href="../academy/events/pages/space-hackathon.html" class="ap-lk">Details</a>
-            <a href="../academy/events/ical/space-hackathon-2025.ics" class="ap-lk" download=""><i class="bi bi-calendar-plus me-1"></i>Add to calendar</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
+<!-- FEATURED EVENT -->
 <div class="ap-s">
   <div class="container">
-    <h2 class="anchored">Recurring events</h2>
-    <p class="sub">Join our community through regular meetups and talks.</p>
-    <div class="row g-5">
-      <div class="col-md-4"><div class="rec"><i class="bi bi-calendar-event"></i><h3 class="anchored">Computer Club</h3><p>Open discussion, knowledge sharing, and hands-on exploration of current tech.</p><div class="rec-when">Last Thursday of every month</div><a href="https://clubul.computer/" class="ap-lk">View schedule</a></div></div>
-      <div class="col-md-4"><div class="rec"><i class="bi bi-mic"></i><h3 class="anchored">Tech Talks</h3><p>Industry experts sharing insights on emerging technologies and best practices.</p><div class="rec-when">First Tuesday of every month</div><a href="https://lu.ma/chenistacademy" class="ap-lk">Upcoming talks</a></div></div>
-      <div class="col-md-4"><div class="rec"><i class="bi bi-code-slash"></i><h3 class="anchored">Workshops</h3><p>Coding sessions — personal projects, open-source contributions, and learning challenges.</p><div class="rec-when">Check calendar</div><a href="https://lu.ma/chenistacademy" class="ap-lk">Join session</a></div></div>
+    <div class="ev-feat">
+      <div class="ev-feat-img">
+        <img src="../assets/images/stock/team-meeting.jpg" alt="AI Ethics Hackathon">
+      </div>
+      <div class="ev-feat-txt">
+        <div class="ev-tag">Featured</div>
+        <h3 class="anchored">AI Ethics Hackathon</h3>
+        <div class="ev-meta">
+          <i class="bi bi-calendar3"></i> March 5, 2026 &nbsp;&nbsp;
+          <i class="bi bi-geo-alt"></i> Bucharest
+        </div>
+        <p>A weekend hackathon on ethical AI — bias detection, responsible design, and building AI systems that prioritize human values. Teams of 2-5, all skill levels welcome.</p>
+        <a href="../academy/events/pages/ai-ethics-hackathon.html" class="ap-b" style="font-size:0.9rem; padding:0.7rem 1.75rem;">Register now</a>
+      </div>
     </div>
   </div>
 </div>
 
+<!-- UPCOMING EVENTS LIST -->
 <div class="ap-bg">
+  <div class="container" style="max-width: 800px;">
+    <h2 class="anchored">Coming up</h2>
+    <p class="sub">Spots are limited. Register early.</p>
+
+    <div class="ev-item">
+      <div class="ev-item-date">
+        <div class="month">Aug</div>
+        <div class="day">1</div>
+      </div>
+      <div class="ev-item-body">
+        <h3 class="anchored">Summer School 2026</h3>
+        <div class="ev-loc"><i class="bi bi-geo-alt me-1"></i> Craiova · 2 weeks</div>
+        <p>Intensive program in cybersecurity, cloud, and AI. For students and professionals building technical careers.</p>
+        <a href="../academy/events/pages/summer-school-2025.html" class="ap-lk">Details</a>
+      </div>
+    </div>
+
+    <div class="ev-item">
+      <div class="ev-item-date">
+        <div class="month">Sep</div>
+        <div class="day">15</div>
+      </div>
+      <div class="ev-item-body">
+        <h3 class="anchored">Makers Workshop</h3>
+        <div class="ev-loc"><i class="bi bi-geo-alt me-1"></i> Bucharest · 1 day</div>
+        <p>Hands-on hardware workshop for makers, DIY experts, and hardware hackers.</p>
+        <a href="../academy/events/pages/makers-workshop.html" class="ap-lk">Details</a>
+      </div>
+    </div>
+
+    <div class="ev-item">
+      <div class="ev-item-date">
+        <div class="month">Oct</div>
+        <div class="day">4</div>
+      </div>
+      <div class="ev-item-body">
+        <h3 class="anchored">SpaceApps Challenge 2026</h3>
+        <div class="ev-loc"><i class="bi bi-geo-alt me-1"></i> Craiova · 48 hours</div>
+        <p>NASA's international hackathon — space exploration, satellite tech, and Earth observation solutions.</p>
+        <a href="../academy/events/pages/space-hackathon.html" class="ap-lk">Details</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RECURRING -->
+<div class="ap-s">
   <div class="container">
-    <h2 class="anchored">Past highlights</h2>
-    <p class="sub">A look at what we've done.</p>
-    <div class="row g-4">
+    <h2 class="anchored">Every month</h2>
+    <p class="sub">Regular meetups and talks you can count on.</p>
+    <div class="row g-5">
       <div class="col-md-4">
-        <div class="ev">
-          <div class="ev-badge ev-badge-past">2024</div>
-          <h3 class="anchored">Cyber Hygiene for Kids</h3>
-          <div class="ev-loc"><i class="bi bi-geo-alt me-1"></i> Craiova · November 2024</div>
-          <p>Conference on screen time, social media safety, and digital boundaries for children. With Rotary Club Probitas Craiova.</p>
-          <div class="ev-actions"><a href="https://marca-ro.ca/2024/11/23/conferinta-igiena-digitala-la-copii-are-loc-la-craiova/" class="ap-lk" target="_blank">Read more</a></div>
+        <div class="rec">
+          <i class="bi bi-calendar-event"></i>
+          <h3 class="anchored">Computer Club</h3>
+          <p>Open discussion, hacking, and exploration of current tech trends.</p>
+          <div class="rec-when">Last Thursday</div>
+          <a href="https://clubul.computer/" class="ap-lk">Schedule</a>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="ev">
-          <div class="ev-badge ev-badge-past">2023</div>
-          <h3 class="anchored">Capture the Flag Hackathon</h3>
-          <div class="ev-loc"><i class="bi bi-geo-alt me-1"></i> Craiova · November 2023</div>
-          <p>Web exploitation, cryptography, reverse engineering, and digital forensics. Invitation-only competition.</p>
+        <div class="rec">
+          <i class="bi bi-mic"></i>
+          <h3 class="anchored">Tech Talks</h3>
+          <p>Industry experts on emerging technologies and best practices.</p>
+          <div class="rec-when">First Tuesday</div>
+          <a href="https://lu.ma/chenistacademy" class="ap-lk">Next talk</a>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="ev">
-          <div class="ev-badge ev-badge-past">Since 2016</div>
-          <h3 class="anchored">SpaceApps Challenge</h3>
-          <div class="ev-loc"><i class="bi bi-geo-alt me-1"></i> Linköping · Gothenburg · Craiova</div>
-          <p>9 editions of NASA's hackathon across Sweden and Romania. From Mjardevi Science Park to Craiova.</p>
-          <div class="ev-actions"><a href="https://alinmechenici.substack.com/p/sac" class="ap-lk" target="_blank">Read the story</a></div>
+        <div class="rec">
+          <i class="bi bi-code-slash"></i>
+          <h3 class="anchored">Workshops</h3>
+          <p>Coding sessions, open-source projects, and collaborative learning.</p>
+          <div class="rec-when">See calendar</div>
+          <a href="https://lu.ma/chenistacademy" class="ap-lk">Join</a>
         </div>
       </div>
     </div>
   </div>
 </div>
 
+<!-- PAST EVENTS -->
+<div class="ap-bg">
+  <div class="container" style="max-width: 700px;">
+    <h2 class="anchored">Past highlights</h2>
+    <p class="sub"></p>
+
+    <div class="past-item">
+      <div class="past-year">2024</div>
+      <div class="past-body">
+        <h4 class="anchored">Cyber Hygiene for Kids</h4>
+        <p>Conference on screen time, social media safety, and digital boundaries. Craiova, with Rotary Club Probitas.</p>
+        <a href="https://marca-ro.ca/2024/11/23/conferinta-igiena-digitala-la-copii-are-loc-la-craiova/" class="ap-lk" target="_blank">Read more</a>
+      </div>
+    </div>
+
+    <div class="past-item">
+      <div class="past-year">2023</div>
+      <div class="past-body">
+        <h4 class="anchored">Capture the Flag Hackathon</h4>
+        <p>Web exploitation, cryptography, reverse engineering, digital forensics. Invitation-only, Craiova.</p>
+      </div>
+    </div>
+
+    <div class="past-item">
+      <div class="past-year">2016–2024</div>
+      <div class="past-body">
+        <h4 class="anchored">SpaceApps Challenge — 9 Editions</h4>
+        <p>NASA's hackathon across Sweden and Romania. Linköping, Gothenburg, and Craiova.</p>
+        <a href="https://alinmechenici.substack.com/p/sac" class="ap-lk" target="_blank">Read the story</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
 <div class="ap-cta">
   <div class="container">
     <div class="ap-d"></div>
     <h2 class="anchored">Don't miss the next one</h2>
-    <p>Subscribe to get event updates, or book a call to discuss hosting a private event for your team.</p>
+    <p>Get event updates or discuss hosting a private event for your team.</p>
     <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
       <a href="https://alinmechenici.substack.com" target="_blank" class="ap-b">Subscribe to updates</a>
       <a href="https://cal.com/chenist" target="_blank" class="ap-lk" style="padding-top:0.85rem;">Book a call</a>
