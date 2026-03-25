@@ -166,6 +166,15 @@
 /* Prevent horizontal scroll on all pages */
 html, body { overflow-x: hidden; }
 
+/* Dark mode backgrounds — eliminate white areas */
+[data-bs-theme="dark"] .m { background: #111; }
+[data-bs-theme="dark"] .m-hero { background: #111; }
+[data-bs-theme="dark"] .m-s { background: #111; }
+[data-bs-theme="dark"] .m-cta { background: #111; }
+[data-bs-theme="dark"] .m-listing-hero { background: #111; }
+[data-bs-theme="dark"] .m-listing-intro { background: #111; }
+[data-bs-theme="dark"] main, [data-bs-theme="dark"] #quarto-content { background: #111; }
+
 /* Responsive — Tablet */
 @media (max-width: 991px) {
   .m-hero { padding: 8rem 0 6rem; }
