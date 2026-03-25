@@ -121,6 +121,40 @@ document.addEventListener('DOMContentLoaded', function() {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "chen.ist",
+  "url": "https://chen.ist",
+  "logo": "https://chen.ist/assets/images/logo-light.svg",
+  "description": "Digital infrastructure, cybersecurity, cloud services, and technology education for modern organizations.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Str. Filantropiei, 1-3",
+    "addressLocality": "Craiova",
+    "postalCode": "200143",
+    "addressCountry": "RO"
+  },
+  "email": "office@chen.ist",
+  "sameAs": [
+    "https://github.com/chenist",
+    "https://linkedin.com/in/chenistsec",
+    "https://twitter.com/chenistsec"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Infrastructure", "url": "https://chen.ist/digital/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "NIS2 Compliance", "url": "https://chen.ist/services/nis2/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cybersecurity", "url": "https://chen.ist/services/cybersecurity/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cloud Services", "url": "https://chen.ist/services/cloud/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Resilience", "url": "https://chen.ist/services/digital-resilience/"}}
+    ]
+  }
+}
+</script>
 
 
 <link rel="stylesheet" href="../assets/css/styles.css">
@@ -520,7 +554,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <h3 class="text-center anchored" data-anchor-id="säkerhetslösningar">Säkerhetslösningar</h3>
 <p>Kompletta säkerhetslösningar som skyddar organisationens kritiska tillgångar och information.</p>
 <div class="text-center mt-3">
-<p><a href="../sv/services.html#cybersecurity" class="btn btn-outline-primary">Läs mer</a></p>
+<p><a href="../services/cybersecurity/" class="btn btn-outline-primary">Läs mer</a></p>
 </div>
 </section>
 </div>
@@ -534,7 +568,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <h3 class="text-center anchored" data-anchor-id="molntjänster">Molntjänster</h3>
 <p>Skalbar och pålitlig molninfrastruktur som växer med dina affärsbehov.</p>
 <div class="text-center mt-3">
-<p><a href="../sv/services.html#cloud-services" class="btn btn-outline-primary">Läs mer</a></p>
+<p><a href="../services/cloud/" class="btn btn-outline-primary">Läs mer</a></p>
 </div>
 </section>
 </div>
@@ -548,7 +582,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <h3 class="text-center anchored" data-anchor-id="digital-motståndskraft">Digital Motståndskraft</h3>
 <p>Strategiska tekniska ramverk som säkerställer att din organisation förblir operativ och säker under alla omständigheter.</p>
 <div class="text-center mt-3">
-<p><a href="../sv/services.html#digital-services" class="btn btn-outline-primary">Läs mer</a></p>
+<p><a href="../services/digital-resilience/" class="btn btn-outline-primary">Läs mer</a></p>
 </div>
 </section>
 </div>
@@ -590,10 +624,10 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="col-md-4">
 <div class="card h-100">
 <section id="bästa-praxis-för-cybersäkerhet" class="level3 card-body">
-<h3 class="anchored" data-anchor-id="bästa-praxis-för-cybersäkerhet"><a href="../sv/blogg/cyber-security-best-practices.html">Bästa praxis för cybersäkerhet</a></h3>
+<h3 class="anchored" data-anchor-id="bästa-praxis-för-cybersäkerhet"><a href="blogg/cyber-security-best-practices.html">Bästa praxis för cybersäkerhet</a></h3>
 <p>Viktiga cybersäkerhetsrutiner som alla organisationer bör implementera för att skydda sig mot utvecklande hot under 2025.</p>
 <div class="text-end mt-4">
-<p><a href="../sv/blogg/cyber-security-best-practices.html" class="btn btn-sm btn-outline-primary">Läs mer</a></p>
+<p><a href="blogg/cyber-security-best-practices.html" class="btn btn-sm btn-outline-primary">Läs mer</a></p>
 </div>
 </section>
 <div class="card-footer">
@@ -607,7 +641,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <h3 class="anchored" data-anchor-id="strategier-för-molnmigrering">Strategier för molnmigrering</h3>
 <p>Steg-för-steg-strategier för framgångsrik molnmigrering med minimal störning av verksamheten.</p>
 <div class="text-end mt-4">
-<p><a href="../sv/blogg.html" class="btn btn-sm btn-outline-primary">Läs mer</a></p>
+<p><a href="blogg.html" class="btn btn-sm btn-outline-primary">Läs mer</a></p>
 </div>
 </section>
 <div class="card-footer">
@@ -621,7 +655,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <h3 class="anchored" data-anchor-id="moderna-utvecklingsmetoder">Moderna utvecklingsmetoder</h3>
 <p>Utforska moderna utvecklingsmetoder som förbättrar effektivitet, kvalitet och samarbete.</p>
 <div class="text-end mt-4">
-<p><a href="../sv/blogg.html" class="btn btn-sm btn-outline-primary">Läs mer</a></p>
+<p><a href="blogg.html" class="btn btn-sm btn-outline-primary">Läs mer</a></p>
 </div>
 </section>
 <div class="card-footer">
@@ -631,7 +665,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 </div>
 <div class="text-center mt-4">
-<p><a href="../sv/blogg.html" class="btn btn-primary">Se alla inlägg →</a></p>
+<p><a href="blogg.html" class="btn btn-primary">Se alla inlägg →</a></p>
 </div>
 </section>
 <div class="cta-section">
