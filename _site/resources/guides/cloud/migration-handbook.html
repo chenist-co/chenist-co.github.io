@@ -524,94 +524,90 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#cloud-migration-handbook" id="toc-cloud-migration-handbook" class="nav-link active" data-scroll-target="#cloud-migration-handbook">Cloud Migration Handbook</a>
-  <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#migration-strategy" id="toc-migration-strategy" class="nav-link" data-scroll-target="#migration-strategy">Migration Strategy</a>
-  <ul class="collapse">
-  <li><a href="#migration-approaches" id="toc-migration-approaches" class="nav-link" data-scroll-target="#migration-approaches">Migration Approaches</a></li>
-  <li><a href="#migration-strategy-development" id="toc-migration-strategy-development" class="nav-link" data-scroll-target="#migration-strategy-development">Migration Strategy Development</a></li>
-  </ul></li>
-  <li><a href="#assessment-phase" id="toc-assessment-phase" class="nav-link" data-scroll-target="#assessment-phase">Assessment Phase</a>
-  <ul class="collapse">
-  <li><a href="#business-assessment" id="toc-business-assessment" class="nav-link" data-scroll-target="#business-assessment">Business Assessment</a></li>
-  <li><a href="#application-assessment" id="toc-application-assessment" class="nav-link" data-scroll-target="#application-assessment">Application Assessment</a></li>
-  <li><a href="#infrastructure-assessment" id="toc-infrastructure-assessment" class="nav-link" data-scroll-target="#infrastructure-assessment">Infrastructure Assessment</a></li>
-  </ul></li>
-  <li><a href="#planning-phase" id="toc-planning-phase" class="nav-link" data-scroll-target="#planning-phase">Planning Phase</a>
-  <ul class="collapse">
-  <li><a href="#target-architecture-design" id="toc-target-architecture-design" class="nav-link" data-scroll-target="#target-architecture-design">Target Architecture Design</a></li>
-  <li><a href="#migration-planning" id="toc-migration-planning" class="nav-link" data-scroll-target="#migration-planning">Migration Planning</a></li>
-  <li><a href="#operational-planning" id="toc-operational-planning" class="nav-link" data-scroll-target="#operational-planning">Operational Planning</a></li>
-  </ul></li>
-  <li><a href="#execution-phase" id="toc-execution-phase" class="nav-link" data-scroll-target="#execution-phase">Execution Phase</a>
-  <ul class="collapse">
-  <li><a href="#foundation-implementation" id="toc-foundation-implementation" class="nav-link" data-scroll-target="#foundation-implementation">Foundation Implementation</a></li>
-  <li><a href="#migration-execution" id="toc-migration-execution" class="nav-link" data-scroll-target="#migration-execution">Migration Execution</a></li>
-  <li><a href="#operational-transition" id="toc-operational-transition" class="nav-link" data-scroll-target="#operational-transition">Operational Transition</a></li>
-  </ul></li>
-  <li><a href="#optimization-phase" id="toc-optimization-phase" class="nav-link" data-scroll-target="#optimization-phase">Optimization Phase</a>
-  <ul class="collapse">
-  <li><a href="#performance-optimization" id="toc-performance-optimization" class="nav-link" data-scroll-target="#performance-optimization">Performance Optimization</a></li>
-  <li><a href="#cost-optimization" id="toc-cost-optimization" class="nav-link" data-scroll-target="#cost-optimization">Cost Optimization</a></li>
-  <li><a href="#operational-optimization" id="toc-operational-optimization" class="nav-link" data-scroll-target="#operational-optimization">Operational Optimization</a></li>
-  </ul></li>
-  <li><a href="#cloud-migration-patterns" id="toc-cloud-migration-patterns" class="nav-link" data-scroll-target="#cloud-migration-patterns">Cloud Migration Patterns</a>
-  <ul class="collapse">
-  <li><a href="#rehost-lift-and-shift-pattern" id="toc-rehost-lift-and-shift-pattern" class="nav-link" data-scroll-target="#rehost-lift-and-shift-pattern">Rehost (Lift and Shift) Pattern</a></li>
-  <li><a href="#replatform-lift-and-reshape-pattern" id="toc-replatform-lift-and-reshape-pattern" class="nav-link" data-scroll-target="#replatform-lift-and-reshape-pattern">Replatform (Lift and Reshape) Pattern</a></li>
-  <li><a href="#refactorre-architect-pattern" id="toc-refactorre-architect-pattern" class="nav-link" data-scroll-target="#refactorre-architect-pattern">Refactor/Re-architect Pattern</a></li>
-  </ul></li>
-  <li><a href="#migration-challenges-and-solutions" id="toc-migration-challenges-and-solutions" class="nav-link" data-scroll-target="#migration-challenges-and-solutions">Migration Challenges and Solutions</a>
-  <ul class="collapse">
-  <li><a href="#common-challenges" id="toc-common-challenges" class="nav-link" data-scroll-target="#common-challenges">Common Challenges</a></li>
-  <li><a href="#risk-mitigation" id="toc-risk-mitigation" class="nav-link" data-scroll-target="#risk-mitigation">Risk Mitigation</a></li>
-  </ul></li>
-  <li><a href="#multi-cloud-considerations" id="toc-multi-cloud-considerations" class="nav-link" data-scroll-target="#multi-cloud-considerations">Multi-Cloud Considerations</a>
-  <ul class="collapse">
-  <li><a href="#multi-cloud-strategy" id="toc-multi-cloud-strategy" class="nav-link" data-scroll-target="#multi-cloud-strategy">Multi-Cloud Strategy</a></li>
-  <li><a href="#multi-cloud-challenges" id="toc-multi-cloud-challenges" class="nav-link" data-scroll-target="#multi-cloud-challenges">Multi-Cloud Challenges</a></li>
-  </ul></li>
-  <li><a href="#team-and-organization" id="toc-team-and-organization" class="nav-link" data-scroll-target="#team-and-organization">Team and Organization</a>
-  <ul class="collapse">
-  <li><a href="#migration-team-structure" id="toc-migration-team-structure" class="nav-link" data-scroll-target="#migration-team-structure">Migration Team Structure</a></li>
-  <li><a href="#skills-and-training" id="toc-skills-and-training" class="nav-link" data-scroll-target="#skills-and-training">Skills and Training</a></li>
-  </ul></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
-  <li><a href="#references-and-resources" id="toc-references-and-resources" class="nav-link" data-scroll-target="#references-and-resources">References and Resources</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">Cloud Migration Handbook</h1></header>
 
 
 <header id="title-block-header">
-
+<h1 class="title display-7">Cloud Migration Handbook</h1>
 
 <p class="date">2025-02-15</p>
 </header>
 
-
+<nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#cloud-migration-handbook" id="toc-cloud-migration-handbook">Cloud Migration Handbook</a>
+  <ul>
+  <li><a href="#introduction" id="toc-introduction">Introduction</a></li>
+  <li><a href="#migration-strategy" id="toc-migration-strategy">Migration Strategy</a>
+  <ul>
+  <li><a href="#migration-approaches" id="toc-migration-approaches">Migration Approaches</a></li>
+  <li><a href="#migration-strategy-development" id="toc-migration-strategy-development">Migration Strategy Development</a></li>
+  </ul></li>
+  <li><a href="#assessment-phase" id="toc-assessment-phase">Assessment Phase</a>
+  <ul>
+  <li><a href="#business-assessment" id="toc-business-assessment">Business Assessment</a></li>
+  <li><a href="#application-assessment" id="toc-application-assessment">Application Assessment</a></li>
+  <li><a href="#infrastructure-assessment" id="toc-infrastructure-assessment">Infrastructure Assessment</a></li>
+  </ul></li>
+  <li><a href="#planning-phase" id="toc-planning-phase">Planning Phase</a>
+  <ul>
+  <li><a href="#target-architecture-design" id="toc-target-architecture-design">Target Architecture Design</a></li>
+  <li><a href="#migration-planning" id="toc-migration-planning">Migration Planning</a></li>
+  <li><a href="#operational-planning" id="toc-operational-planning">Operational Planning</a></li>
+  </ul></li>
+  <li><a href="#execution-phase" id="toc-execution-phase">Execution Phase</a>
+  <ul>
+  <li><a href="#foundation-implementation" id="toc-foundation-implementation">Foundation Implementation</a></li>
+  <li><a href="#migration-execution" id="toc-migration-execution">Migration Execution</a></li>
+  <li><a href="#operational-transition" id="toc-operational-transition">Operational Transition</a></li>
+  </ul></li>
+  <li><a href="#optimization-phase" id="toc-optimization-phase">Optimization Phase</a>
+  <ul>
+  <li><a href="#performance-optimization" id="toc-performance-optimization">Performance Optimization</a></li>
+  <li><a href="#cost-optimization" id="toc-cost-optimization">Cost Optimization</a></li>
+  <li><a href="#operational-optimization" id="toc-operational-optimization">Operational Optimization</a></li>
+  </ul></li>
+  <li><a href="#cloud-migration-patterns" id="toc-cloud-migration-patterns">Cloud Migration Patterns</a>
+  <ul>
+  <li><a href="#rehost-lift-and-shift-pattern" id="toc-rehost-lift-and-shift-pattern">Rehost (Lift and Shift) Pattern</a></li>
+  <li><a href="#replatform-lift-and-reshape-pattern" id="toc-replatform-lift-and-reshape-pattern">Replatform (Lift and Reshape) Pattern</a></li>
+  <li><a href="#refactorre-architect-pattern" id="toc-refactorre-architect-pattern">Refactor/Re-architect Pattern</a></li>
+  </ul></li>
+  <li><a href="#migration-challenges-and-solutions" id="toc-migration-challenges-and-solutions">Migration Challenges and Solutions</a>
+  <ul>
+  <li><a href="#common-challenges" id="toc-common-challenges">Common Challenges</a></li>
+  <li><a href="#risk-mitigation" id="toc-risk-mitigation">Risk Mitigation</a></li>
+  </ul></li>
+  <li><a href="#multi-cloud-considerations" id="toc-multi-cloud-considerations">Multi-Cloud Considerations</a>
+  <ul>
+  <li><a href="#multi-cloud-strategy" id="toc-multi-cloud-strategy">Multi-Cloud Strategy</a></li>
+  <li><a href="#multi-cloud-challenges" id="toc-multi-cloud-challenges">Multi-Cloud Challenges</a></li>
+  </ul></li>
+  <li><a href="#team-and-organization" id="toc-team-and-organization">Team and Organization</a>
+  <ul>
+  <li><a href="#migration-team-structure" id="toc-migration-team-structure">Migration Team Structure</a></li>
+  <li><a href="#skills-and-training" id="toc-skills-and-training">Skills and Training</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion">Conclusion</a></li>
+  <li><a href="#references-and-resources" id="toc-references-and-resources">References and Resources</a></li>
+  </ul></li>
+  </ul>
+</nav>
 <section id="cloud-migration-handbook" class="level1">
 <h1>Cloud Migration Handbook</h1>
 <section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<h2 data-anchor-id="introduction">Introduction</h2>
 <p>This handbook provides a comprehensive approach to migrating applications and infrastructure to the cloud. It covers the entire migration journey from initial assessment through planning, execution, and optimization.</p>
 </section>
 <section id="migration-strategy" class="level2">
-<h2 class="anchored" data-anchor-id="migration-strategy">Migration Strategy</h2>
+<h2 data-anchor-id="migration-strategy">Migration Strategy</h2>
 <section id="migration-approaches" class="level3">
-<h3 class="anchored" data-anchor-id="migration-approaches">Migration Approaches</h3>
+<h3 data-anchor-id="migration-approaches">Migration Approaches</h3>
 <p>There are several approaches to cloud migration, often referred to as the “6 Rs”:</p>
 <ol type="1">
 <li><strong>Rehost (Lift and Shift)</strong>: Move applications without modification</li>
@@ -624,7 +620,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>Each approach has different benefits, challenges, and resource requirements. The right approach depends on application characteristics, business requirements, and organizational constraints.</p>
 </section>
 <section id="migration-strategy-development" class="level3">
-<h3 class="anchored" data-anchor-id="migration-strategy-development">Migration Strategy Development</h3>
+<h3 data-anchor-id="migration-strategy-development">Migration Strategy Development</h3>
 <p>Develop a migration strategy that includes:</p>
 <ul>
 <li><strong>Business case and objectives</strong>: Define the expected benefits and success criteria</li>
@@ -637,9 +633,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="assessment-phase" class="level2">
-<h2 class="anchored" data-anchor-id="assessment-phase">Assessment Phase</h2>
+<h2 data-anchor-id="assessment-phase">Assessment Phase</h2>
 <section id="business-assessment" class="level3">
-<h3 class="anchored" data-anchor-id="business-assessment">Business Assessment</h3>
+<h3 data-anchor-id="business-assessment">Business Assessment</h3>
 <p>Evaluate business factors affecting migration:</p>
 <ul>
 <li><strong>Strategic objectives</strong>: Alignment with business strategy</li>
@@ -650,7 +646,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="application-assessment" class="level3">
-<h3 class="anchored" data-anchor-id="application-assessment">Application Assessment</h3>
+<h3 data-anchor-id="application-assessment">Application Assessment</h3>
 <p>Analyze applications for cloud readiness:</p>
 <ul>
 <li><strong>Application inventory</strong>: Catalog all applications and their components</li>
@@ -662,7 +658,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="infrastructure-assessment" class="level3">
-<h3 class="anchored" data-anchor-id="infrastructure-assessment">Infrastructure Assessment</h3>
+<h3 data-anchor-id="infrastructure-assessment">Infrastructure Assessment</h3>
 <p>Evaluate current infrastructure:</p>
 <ul>
 <li><strong>Server inventory</strong>: Document server specifications and utilization</li>
@@ -675,9 +671,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="planning-phase" class="level2">
-<h2 class="anchored" data-anchor-id="planning-phase">Planning Phase</h2>
+<h2 data-anchor-id="planning-phase">Planning Phase</h2>
 <section id="target-architecture-design" class="level3">
-<h3 class="anchored" data-anchor-id="target-architecture-design">Target Architecture Design</h3>
+<h3 data-anchor-id="target-architecture-design">Target Architecture Design</h3>
 <p>Design the cloud environment:</p>
 <ul>
 <li><strong>Cloud service model</strong>: Choose appropriate service models (IaaS, PaaS, SaaS)</li>
@@ -690,7 +686,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="migration-planning" class="level3">
-<h3 class="anchored" data-anchor-id="migration-planning">Migration Planning</h3>
+<h3 data-anchor-id="migration-planning">Migration Planning</h3>
 <p>Develop detailed migration plans:</p>
 <ul>
 <li><strong>Application prioritization</strong>: Sequence applications for migration</li>
@@ -702,7 +698,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="operational-planning" class="level3">
-<h3 class="anchored" data-anchor-id="operational-planning">Operational Planning</h3>
+<h3 data-anchor-id="operational-planning">Operational Planning</h3>
 <p>Prepare for cloud operations:</p>
 <ul>
 <li><strong>Cloud governance</strong>: Establish governance framework for cloud resources</li>
@@ -715,9 +711,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="execution-phase" class="level2">
-<h2 class="anchored" data-anchor-id="execution-phase">Execution Phase</h2>
+<h2 data-anchor-id="execution-phase">Execution Phase</h2>
 <section id="foundation-implementation" class="level3">
-<h3 class="anchored" data-anchor-id="foundation-implementation">Foundation Implementation</h3>
+<h3 data-anchor-id="foundation-implementation">Foundation Implementation</h3>
 <p>Establish the cloud foundation:</p>
 <ul>
 <li><strong>Cloud accounts and subscriptions</strong>: Set up cloud accounts and billing</li>
@@ -729,7 +725,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="migration-execution" class="level3">
-<h3 class="anchored" data-anchor-id="migration-execution">Migration Execution</h3>
+<h3 data-anchor-id="migration-execution">Migration Execution</h3>
 <p>Execute the migration:</p>
 <ul>
 <li><strong>Data migration</strong>: Transfer data to cloud storage</li>
@@ -741,7 +737,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="operational-transition" class="level3">
-<h3 class="anchored" data-anchor-id="operational-transition">Operational Transition</h3>
+<h3 data-anchor-id="operational-transition">Operational Transition</h3>
 <p>Transition to cloud operations:</p>
 <ul>
 <li><strong>Operational handover</strong>: Transfer responsibility to operations teams</li>
@@ -754,9 +750,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="optimization-phase" class="level2">
-<h2 class="anchored" data-anchor-id="optimization-phase">Optimization Phase</h2>
+<h2 data-anchor-id="optimization-phase">Optimization Phase</h2>
 <section id="performance-optimization" class="level3">
-<h3 class="anchored" data-anchor-id="performance-optimization">Performance Optimization</h3>
+<h3 data-anchor-id="performance-optimization">Performance Optimization</h3>
 <p>Improve cloud performance:</p>
 <ul>
 <li><strong>Performance analysis</strong>: Analyze application performance in cloud</li>
@@ -767,7 +763,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="cost-optimization" class="level3">
-<h3 class="anchored" data-anchor-id="cost-optimization">Cost Optimization</h3>
+<h3 data-anchor-id="cost-optimization">Cost Optimization</h3>
 <p>Manage and optimize costs:</p>
 <ul>
 <li><strong>Cost analysis</strong>: Analyze cloud spending patterns</li>
@@ -779,7 +775,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="operational-optimization" class="level3">
-<h3 class="anchored" data-anchor-id="operational-optimization">Operational Optimization</h3>
+<h3 data-anchor-id="operational-optimization">Operational Optimization</h3>
 <p>Refine cloud operations:</p>
 <ul>
 <li><strong>Process automation</strong>: Automate operational tasks</li>
@@ -792,9 +788,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="cloud-migration-patterns" class="level2">
-<h2 class="anchored" data-anchor-id="cloud-migration-patterns">Cloud Migration Patterns</h2>
+<h2 data-anchor-id="cloud-migration-patterns">Cloud Migration Patterns</h2>
 <section id="rehost-lift-and-shift-pattern" class="level3">
-<h3 class="anchored" data-anchor-id="rehost-lift-and-shift-pattern">Rehost (Lift and Shift) Pattern</h3>
+<h3 data-anchor-id="rehost-lift-and-shift-pattern">Rehost (Lift and Shift) Pattern</h3>
 <p>Implementation approach:</p>
 <ol type="1">
 <li><strong>Discover</strong>: Identify servers and dependencies</li>
@@ -807,7 +803,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>Best suited for: - Legacy applications with few dependencies - Applications with stable workloads - Time-sensitive migrations - Applications planned for later modernization</p>
 </section>
 <section id="replatform-lift-and-reshape-pattern" class="level3">
-<h3 class="anchored" data-anchor-id="replatform-lift-and-reshape-pattern">Replatform (Lift and Reshape) Pattern</h3>
+<h3 data-anchor-id="replatform-lift-and-reshape-pattern">Replatform (Lift and Reshape) Pattern</h3>
 <p>Implementation approach:</p>
 <ol type="1">
 <li><strong>Assess</strong>: Identify opportunities for platform changes</li>
@@ -820,7 +816,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>Best suited for: - Applications with clear platform upgrade paths - Database applications that can benefit from managed databases - Applications with scaling issues in current platform - Applications requiring improved resilience</p>
 </section>
 <section id="refactorre-architect-pattern" class="level3">
-<h3 class="anchored" data-anchor-id="refactorre-architect-pattern">Refactor/Re-architect Pattern</h3>
+<h3 data-anchor-id="refactorre-architect-pattern">Refactor/Re-architect Pattern</h3>
 <p>Implementation approach:</p>
 <ol type="1">
 <li><strong>Analyze</strong>: Perform detailed application analysis</li>
@@ -834,9 +830,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="migration-challenges-and-solutions" class="level2">
-<h2 class="anchored" data-anchor-id="migration-challenges-and-solutions">Migration Challenges and Solutions</h2>
+<h2 data-anchor-id="migration-challenges-and-solutions">Migration Challenges and Solutions</h2>
 <section id="common-challenges" class="level3">
-<h3 class="anchored" data-anchor-id="common-challenges">Common Challenges</h3>
+<h3 data-anchor-id="common-challenges">Common Challenges</h3>
 <p>Address these frequent migration challenges:</p>
 <ol type="1">
 <li><strong>Dependency complexity</strong>: Applications with many dependencies
@@ -866,7 +862,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ol>
 </section>
 <section id="risk-mitigation" class="level3">
-<h3 class="anchored" data-anchor-id="risk-mitigation">Risk Mitigation</h3>
+<h3 data-anchor-id="risk-mitigation">Risk Mitigation</h3>
 <p>Implement these risk mitigation measures:</p>
 <ul>
 <li><strong>Phased approach</strong>: Start with lower-risk applications</li>
@@ -879,9 +875,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="multi-cloud-considerations" class="level2">
-<h2 class="anchored" data-anchor-id="multi-cloud-considerations">Multi-Cloud Considerations</h2>
+<h2 data-anchor-id="multi-cloud-considerations">Multi-Cloud Considerations</h2>
 <section id="multi-cloud-strategy" class="level3">
-<h3 class="anchored" data-anchor-id="multi-cloud-strategy">Multi-Cloud Strategy</h3>
+<h3 data-anchor-id="multi-cloud-strategy">Multi-Cloud Strategy</h3>
 <p>Develop an effective multi-cloud approach:</p>
 <ul>
 <li><strong>Cloud selection criteria</strong>: Define criteria for choosing clouds for workloads</li>
@@ -893,7 +889,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="multi-cloud-challenges" class="level3">
-<h3 class="anchored" data-anchor-id="multi-cloud-challenges">Multi-Cloud Challenges</h3>
+<h3 data-anchor-id="multi-cloud-challenges">Multi-Cloud Challenges</h3>
 <p>Address common multi-cloud challenges:</p>
 <ul>
 <li><strong>Skills diversity</strong>: Need for expertise across platforms</li>
@@ -906,9 +902,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="team-and-organization" class="level2">
-<h2 class="anchored" data-anchor-id="team-and-organization">Team and Organization</h2>
+<h2 data-anchor-id="team-and-organization">Team and Organization</h2>
 <section id="migration-team-structure" class="level3">
-<h3 class="anchored" data-anchor-id="migration-team-structure">Migration Team Structure</h3>
+<h3 data-anchor-id="migration-team-structure">Migration Team Structure</h3>
 <p>Establish an effective migration team:</p>
 <ul>
 <li><strong>Migration program office</strong>: Provide overall governance</li>
@@ -920,7 +916,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="skills-and-training" class="level3">
-<h3 class="anchored" data-anchor-id="skills-and-training">Skills and Training</h3>
+<h3 data-anchor-id="skills-and-training">Skills and Training</h3>
 <p>Develop necessary cloud skills:</p>
 <ul>
 <li><strong>Skill assessment</strong>: Identify current skills and gaps</li>
@@ -933,12 +929,12 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<h2 data-anchor-id="conclusion">Conclusion</h2>
 <p>Cloud migration is a transformative journey that requires careful planning, execution, and optimization. By following a structured approach and leveraging established patterns, organizations can successfully migrate to the cloud while minimizing risks and maximizing benefits.</p>
 <p>Remember that migration is not just a technical exercise—it requires alignment with business objectives, effective change management, and organizational adaptation. The cloud journey continues after migration with ongoing optimization to fully realize the benefits of cloud computing.</p>
 </section>
 <section id="references-and-resources" class="level2">
-<h2 class="anchored" data-anchor-id="references-and-resources">References and Resources</h2>
+<h2 data-anchor-id="references-and-resources">References and Resources</h2>
 <ul>
 <li>AWS Cloud Adoption Framework</li>
 <li>Microsoft Cloud Adoption Framework</li>
@@ -951,7 +947,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 
-</main> <!-- /main -->
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

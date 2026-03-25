@@ -1,12 +1,10 @@
 ---
 title: "Events"
+page-layout: custom
 title-block-style: none
+toc: false
 subtitle: "Browse all our events"
 description: "Browse upcoming and past chen.ist Academy events including hackathons, workshops, conferences, meetups, and summer school programs."
-format: 
-  html:
-    css: /assets/css/academy.scss
-    classes: [academy-section]
 listing:
   contents: "pages/*.qmd"
   type: grid
@@ -16,14 +14,30 @@ listing:
   filter-ui: true
   fields: [image, date, title, subtitle, location, category]
   date-format: "MMMM D, YYYY"
+include-in-header:
+  text: |
+    <style>.m { --c: #F5A623; }</style>
 ---
 
-Welcome to our events listing page. Here you can browse all upcoming and past events organized by chen.ist. Use the filters to find events by category, date, or location.
-
 ```{=html}
-<div class="alert alert-success mt-4 mb-4" role="alert">
-  <h4 class="alert-heading"><i class="bi bi-megaphone"></i> New Event Added!</h4>
-  <p>Check out our <a href="pages/ai-ethics-hackathon.html" class="alert-link">AI Ethics Hackathon</a> on July 20-21, 2025 - a weekend focusing on ethical AI development and responsible technology.</p>
+<div class="m">
+
+<div class="m-hero">
+  <div class="container">
+    <h1>Academy <span class="gr">Events</span></h1>
+    <p>Browse all our events</p>
+  </div>
+</div>
+
+<div class="m-s">
+  <div class="container">
+    <div class="alert alert-success mt-4 mb-4" role="alert">
+      <h4 class="alert-heading"><i class="bi bi-megaphone"></i> New Event Added!</h4>
+      <p>Check out our <a href="pages/ai-ethics-hackathon.html" class="alert-link">AI Ethics Hackathon</a> on July 20-21, 2025 - a weekend focusing on ethical AI development and responsible technology.</p>
+    </div>
+  </div>
+</div>
+
 </div>
 ```
 

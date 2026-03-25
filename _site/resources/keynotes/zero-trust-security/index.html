@@ -80,12 +80,10 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <meta property="og:title" content="Zero Trust Security Architecture – chen.ist">
 <meta property="og:description" content="View the Zero Trust Security Architecture keynote presentation covering modern enterprise security models and implementation strategies.">
-<meta property="og:image" content="https://chen.ist/assets/images/cyber-security.jpg">
 <meta property="og:site_name" content="chen.ist">
 <meta name="twitter:title" content="Zero Trust Security Architecture – chen.ist">
 <meta name="twitter:description" content="View the Zero Trust Security Architecture keynote presentation covering modern enterprise security models and implementation strategies.">
-<meta name="twitter:image" content="https://chen.ist/assets/images/cyber-security.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
@@ -529,80 +527,76 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#zero-trust-security-architecture" id="toc-zero-trust-security-architecture" class="nav-link active" data-scroll-target="#zero-trust-security-architecture">Zero Trust Security Architecture</a>
-  <ul class="collapse">
-  <li><a href="#presenter" id="toc-presenter" class="nav-link" data-scroll-target="#presenter">Presenter</a></li>
-  </ul></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a>
-  <ul class="collapse">
-  <li><a href="#the-end-of-the-perimeter" id="toc-the-end-of-the-perimeter" class="nav-link" data-scroll-target="#the-end-of-the-perimeter">The End of the Perimeter</a></li>
-  <li><a href="#the-fatal-flaw" id="toc-the-fatal-flaw" class="nav-link" data-scroll-target="#the-fatal-flaw">The Fatal Flaw</a></li>
-  </ul></li>
-  <li><a href="#zero-trust-fundamentals" id="toc-zero-trust-fundamentals" class="nav-link" data-scroll-target="#zero-trust-fundamentals">Zero Trust Fundamentals</a>
-  <ul class="collapse">
-  <li><a href="#what-is-zero-trust" id="toc-what-is-zero-trust" class="nav-link" data-scroll-target="#what-is-zero-trust">What is Zero Trust?</a></li>
-  <li><a href="#zero-trust-evolution" id="toc-zero-trust-evolution" class="nav-link" data-scroll-target="#zero-trust-evolution">Zero Trust Evolution</a>
-  <ul class="collapse">
-  <li><a href="#timeline-highlights" id="toc-timeline-highlights" class="nav-link" data-scroll-target="#timeline-highlights">Timeline Highlights</a></li>
-  </ul></li>
-  <li><a href="#the-zero-trust-security-model" id="toc-the-zero-trust-security-model" class="nav-link" data-scroll-target="#the-zero-trust-security-model">The Zero Trust Security Model</a></li>
-  </ul></li>
-  <li><a href="#core-components" id="toc-core-components" class="nav-link" data-scroll-target="#core-components">Core Components</a>
-  <ul class="collapse">
-  <li><a href="#identity-and-access-management" id="toc-identity-and-access-management" class="nav-link" data-scroll-target="#identity-and-access-management">Identity and Access Management</a></li>
-  <li><a href="#device-security" id="toc-device-security" class="nav-link" data-scroll-target="#device-security">Device Security</a></li>
-  <li><a href="#micro-segmentation" id="toc-micro-segmentation" class="nav-link" data-scroll-target="#micro-segmentation">Micro-segmentation</a></li>
-  <li><a href="#data-protection" id="toc-data-protection" class="nav-link" data-scroll-target="#data-protection">Data Protection</a></li>
-  <li><a href="#continuous-monitoring" id="toc-continuous-monitoring" class="nav-link" data-scroll-target="#continuous-monitoring">Continuous Monitoring</a></li>
-  </ul></li>
-  <li><a href="#implementation-strategy" id="toc-implementation-strategy" class="nav-link" data-scroll-target="#implementation-strategy">Implementation Strategy</a>
-  <ul class="collapse">
-  <li><a href="#phased-implementation-approach" id="toc-phased-implementation-approach" class="nav-link" data-scroll-target="#phased-implementation-approach">Phased Implementation Approach</a></li>
-  <li><a href="#implementation-considerations-1" id="toc-implementation-considerations-1" class="nav-link" data-scroll-target="#implementation-considerations-1">Implementation Considerations</a></li>
-  </ul></li>
-  <li><a href="#case-studies" id="toc-case-studies" class="nav-link" data-scroll-target="#case-studies">Case Studies</a>
-  <ul class="collapse">
-  <li><a href="#financial-services-global-bank" id="toc-financial-services-global-bank" class="nav-link" data-scroll-target="#financial-services-global-bank">Financial Services: Global Bank</a></li>
-  <li><a href="#healthcare-regional-provider" id="toc-healthcare-regional-provider" class="nav-link" data-scroll-target="#healthcare-regional-provider">Healthcare: Regional Provider</a></li>
-  </ul></li>
-  <li><a href="#measuring-success" id="toc-measuring-success" class="nav-link" data-scroll-target="#measuring-success">Measuring Success</a>
-  <ul class="collapse">
-  <li><a href="#key-performance-indicators" id="toc-key-performance-indicators" class="nav-link" data-scroll-target="#key-performance-indicators">Key Performance Indicators</a></li>
-  <li><a href="#maturity-assessment-framework" id="toc-maturity-assessment-framework" class="nav-link" data-scroll-target="#maturity-assessment-framework">Maturity Assessment Framework</a></li>
-  </ul></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a>
-  <ul class="collapse">
-  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">Key Takeaways</a>
-  <ul class="collapse">
-  <li><a href="#remember" id="toc-remember" class="nav-link" data-scroll-target="#remember">Remember:</a></li>
-  </ul></li>
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a>
-  <ul class="collapse">
-  <li><a href="#additional-reading" id="toc-additional-reading" class="nav-link" data-scroll-target="#additional-reading">Additional Reading</a></li>
-  </ul></li>
-  <li><a href="#qa" id="toc-qa" class="nav-link" data-scroll-target="#qa">Q&amp;A</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">Zero Trust Security Architecture</h1></header>
 
 
 <header id="title-block-header">
-
+<h1 class="title display-7">Zero Trust Security Architecture</h1>
 
 </header>
 
-
+<nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#zero-trust-security-architecture" id="toc-zero-trust-security-architecture">Zero Trust Security Architecture</a>
+  <ul>
+  <li><a href="#presenter" id="toc-presenter">Presenter</a></li>
+  </ul></li>
+  <li><a href="#introduction" id="toc-introduction">Introduction</a>
+  <ul>
+  <li><a href="#the-end-of-the-perimeter" id="toc-the-end-of-the-perimeter">The End of the Perimeter</a></li>
+  <li><a href="#the-fatal-flaw" id="toc-the-fatal-flaw">The Fatal Flaw</a></li>
+  </ul></li>
+  <li><a href="#zero-trust-fundamentals" id="toc-zero-trust-fundamentals">Zero Trust Fundamentals</a>
+  <ul>
+  <li><a href="#what-is-zero-trust" id="toc-what-is-zero-trust">What is Zero Trust?</a></li>
+  <li><a href="#zero-trust-evolution" id="toc-zero-trust-evolution">Zero Trust Evolution</a>
+  <ul>
+  <li><a href="#timeline-highlights" id="toc-timeline-highlights">Timeline Highlights</a></li>
+  </ul></li>
+  <li><a href="#the-zero-trust-security-model" id="toc-the-zero-trust-security-model">The Zero Trust Security Model</a></li>
+  </ul></li>
+  <li><a href="#core-components" id="toc-core-components">Core Components</a>
+  <ul>
+  <li><a href="#identity-and-access-management" id="toc-identity-and-access-management">Identity and Access Management</a></li>
+  <li><a href="#device-security" id="toc-device-security">Device Security</a></li>
+  <li><a href="#micro-segmentation" id="toc-micro-segmentation">Micro-segmentation</a></li>
+  <li><a href="#data-protection" id="toc-data-protection">Data Protection</a></li>
+  <li><a href="#continuous-monitoring" id="toc-continuous-monitoring">Continuous Monitoring</a></li>
+  </ul></li>
+  <li><a href="#implementation-strategy" id="toc-implementation-strategy">Implementation Strategy</a>
+  <ul>
+  <li><a href="#phased-implementation-approach" id="toc-phased-implementation-approach">Phased Implementation Approach</a></li>
+  <li><a href="#implementation-considerations-1" id="toc-implementation-considerations-1">Implementation Considerations</a></li>
+  </ul></li>
+  <li><a href="#case-studies" id="toc-case-studies">Case Studies</a>
+  <ul>
+  <li><a href="#financial-services-global-bank" id="toc-financial-services-global-bank">Financial Services: Global Bank</a></li>
+  <li><a href="#healthcare-regional-provider" id="toc-healthcare-regional-provider">Healthcare: Regional Provider</a></li>
+  </ul></li>
+  <li><a href="#measuring-success" id="toc-measuring-success">Measuring Success</a>
+  <ul>
+  <li><a href="#key-performance-indicators" id="toc-key-performance-indicators">Key Performance Indicators</a></li>
+  <li><a href="#maturity-assessment-framework" id="toc-maturity-assessment-framework">Maturity Assessment Framework</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion">Conclusion</a>
+  <ul>
+  <li><a href="#key-takeaways" id="toc-key-takeaways">Key Takeaways</a>
+  <ul>
+  <li><a href="#remember" id="toc-remember">Remember:</a></li>
+  </ul></li>
+  <li><a href="#resources" id="toc-resources">Resources</a>
+  <ul>
+  <li><a href="#additional-reading" id="toc-additional-reading">Additional Reading</a></li>
+  </ul></li>
+  <li><a href="#qa" id="toc-qa">Q&amp;A</a></li>
+  </ul></li>
+  </ul>
+</nav>
 <div class="alert alert-info">
 <p>
 Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Security Architecture</a>…
@@ -612,13 +606,13 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 <section id="zero-trust-security-architecture" class="level1 title-slide" data-background-color="#282a36">
 <h1 class="title-slide" data-background-color="#282a36">Zero Trust Security Architecture</h1>
 <section id="presenter" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="presenter">Presenter</h2>
+<h2 class="smaller" data-anchor-id="presenter">Presenter</h2>
 <div class="columns">
 <div class="column" style="width:30%;">
 <p><img src="../../../assets/images/cyber-security.jpg" class="border rounded img-fluid" width="250"></p>
 </div><div class="column" style="width:70%;">
 <section id="chenist-team" class="level3">
-<h3 class="anchored" data-anchor-id="chenist-team">CHENIST Team</h3>
+<h3 data-anchor-id="chenist-team">CHENIST Team</h3>
 <p><strong>Chief Information Security Officer</strong></p>
 <ul>
 <li>15+ years in enterprise security</li>
@@ -635,11 +629,11 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
 <section id="the-end-of-the-perimeter" class="level2 center">
-<h2 class="center anchored" data-anchor-id="the-end-of-the-perimeter">The End of the Perimeter</h2>
+<h2 class="center" data-anchor-id="the-end-of-the-perimeter">The End of the Perimeter</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <section id="traditional-security-model" class="level3">
-<h3 class="anchored" data-anchor-id="traditional-security-model">Traditional Security Model</h3>
+<h3 data-anchor-id="traditional-security-model">Traditional Security Model</h3>
 <ul>
 <li>Trusted internal network</li>
 <li>Untrusted external network</li>
@@ -650,7 +644,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </section>
 </div><div class="column" style="width:50%;">
 <section id="current-reality" class="level3">
-<h3 class="anchored" data-anchor-id="current-reality">Current Reality</h3>
+<h3 data-anchor-id="current-reality">Current Reality</h3>
 <ul>
 <li>Cloud adoption</li>
 <li>Remote workforce</li>
@@ -671,14 +665,14 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </div>
 </section>
 <section id="the-fatal-flaw" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="the-fatal-flaw">The Fatal Flaw</h2>
+<h2 class="smaller" data-anchor-id="the-fatal-flaw">The Fatal Flaw</h2>
 <blockquote class="blockquote">
 <p>“The problem with traditional security is that once an attacker gets past the perimeter, they’re often free to move laterally within the network.”</p>
 </blockquote>
 <div class="columns">
 <div class="column" style="width:50%;">
 <section id="attack-chain" class="level3">
-<h3 class="anchored" data-anchor-id="attack-chain">Attack Chain</h3>
+<h3 data-anchor-id="attack-chain">Attack Chain</h3>
 <ol type="1">
 <li>Initial compromise</li>
 <li><strong>Privilege escalation</strong></li>
@@ -690,7 +684,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </section>
 </div><div class="column" style="width:50%;">
 <section id="breach-statistics" class="level3">
-<h3 class="anchored" data-anchor-id="breach-statistics">Breach Statistics</h3>
+<h3 data-anchor-id="breach-statistics">Breach Statistics</h3>
 <ul>
 <li>280 days: Average time to identify and contain a breach</li>
 <li>75%: Breaches involving lateral movement</li>
@@ -706,14 +700,14 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 <section id="zero-trust-fundamentals" class="level1">
 <h1>Zero Trust Fundamentals</h1>
 <section id="what-is-zero-trust" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="what-is-zero-trust">What is Zero Trust?</h2>
+<h2 class="smaller" data-anchor-id="what-is-zero-trust">What is Zero Trust?</h2>
 <blockquote class="blockquote">
 <p>“Never trust, always verify.”</p>
 </blockquote>
 <div class="columns">
 <div class="column" style="width:50%;">
 <section id="core-principles" class="level3">
-<h3 class="anchored" data-anchor-id="core-principles">Core Principles</h3>
+<h3 data-anchor-id="core-principles">Core Principles</h3>
 <ul>
 <li><strong>Never trust, always verify</strong>: No implicit trust based on network location</li>
 <li><strong>Least privilege access</strong>: Minimal access required to perform job</li>
@@ -724,7 +718,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </section>
 </div><div class="column" style="width:50%;">
 <section id="key-components" class="level3">
-<h3 class="anchored" data-anchor-id="key-components">Key Components</h3>
+<h3 data-anchor-id="key-components">Key Components</h3>
 <ul>
 <li>Strong identity verification</li>
 <li>Device health validation</li>
@@ -748,11 +742,11 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </div>
 </section>
 <section id="zero-trust-evolution" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="zero-trust-evolution">Zero Trust Evolution</h2>
+<h2 class="smaller" data-anchor-id="zero-trust-evolution">Zero Trust Evolution</h2>
 <div class="columns">
 <div class="column" style="width:30%;">
 <section id="origin-2010" class="level3">
-<h3 class="anchored" data-anchor-id="origin-2010">Origin (2010)</h3>
+<h3 data-anchor-id="origin-2010">Origin (2010)</h3>
 <ul>
 <li>Forrester Research (John Kindervag)</li>
 <li>Network-centric approach</li>
@@ -762,7 +756,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </section>
 </div><div class="column" style="width:35%;">
 <section id="middle-era-2014-2018" class="level3">
-<h3 class="anchored" data-anchor-id="middle-era-2014-2018">Middle Era (2014-2018)</h3>
+<h3 data-anchor-id="middle-era-2014-2018">Middle Era (2014-2018)</h3>
 <ul>
 <li>Google’s BeyondCorp</li>
 <li>Identity-centric approach</li>
@@ -773,7 +767,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </section>
 </div><div class="column" style="width:35%;">
 <section id="current-2019-present" class="level3">
-<h3 class="anchored" data-anchor-id="current-2019-present">Current (2019-Present)</h3>
+<h3 data-anchor-id="current-2019-present">Current (2019-Present)</h3>
 <ul>
 <li>NIST 800-207 standard</li>
 <li>Comprehensive frameworks</li>
@@ -785,7 +779,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </div>
 </div>
 <section id="timeline-highlights" class="level3">
-<h3 class="anchored" data-anchor-id="timeline-highlights">Timeline Highlights</h3>
+<h3 data-anchor-id="timeline-highlights">Timeline Highlights</h3>
 <ul>
 <li>2010: Zero Trust concept introduced by Forrester</li>
 <li>2014: Google publishes BeyondCorp research</li>
@@ -797,7 +791,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </section>
 </section>
 <section id="the-zero-trust-security-model" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="the-zero-trust-security-model">The Zero Trust Security Model</h2>
+<h2 class="smaller" data-anchor-id="the-zero-trust-security-model">The Zero Trust Security Model</h2>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -839,14 +833,14 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 <section id="core-components" class="level1">
 <h1>Core Components</h1>
 <section id="identity-and-access-management" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="identity-and-access-management">Identity and Access Management</h2>
+<h2 class="smaller" data-anchor-id="identity-and-access-management">Identity and Access Management</h2>
 <blockquote class="blockquote">
 <p>“Identity is the new perimeter.”</p>
 </blockquote>
 <div class="columns">
 <div class="column" style="width:60%;">
 <section id="essential-elements" class="level3">
-<h3 class="anchored" data-anchor-id="essential-elements">Essential Elements</h3>
+<h3 data-anchor-id="essential-elements">Essential Elements</h3>
 <ul>
 <li><strong>Strong authentication</strong>
 <ul>
@@ -872,7 +866,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </section>
 </div><div class="column" style="width:40%;">
 <section id="implementation-considerations" class="level3">
-<h3 class="anchored" data-anchor-id="implementation-considerations">Implementation Considerations</h3>
+<h3 data-anchor-id="implementation-considerations">Implementation Considerations</h3>
 <ul>
 <li><strong>Identity provider selection</strong>
 <ul>
@@ -907,14 +901,14 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </div>
 </section>
 <section id="device-security" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="device-security">Device Security</h2>
+<h2 class="smaller" data-anchor-id="device-security">Device Security</h2>
 <blockquote class="blockquote">
 <p>“Trust the user and the device.”</p>
 </blockquote>
 <div class="columns">
 <div class="column" style="width:50%;">
 <section id="device-trust-signals" class="level3">
-<h3 class="anchored" data-anchor-id="device-trust-signals">Device Trust Signals</h3>
+<h3 data-anchor-id="device-trust-signals">Device Trust Signals</h3>
 <ul>
 <li><strong>Software state</strong>
 <ul>
@@ -934,7 +928,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </section>
 </div><div class="column" style="width:50%;">
 <section id="management-approaches" class="level3">
-<h3 class="anchored" data-anchor-id="management-approaches">Management Approaches</h3>
+<h3 data-anchor-id="management-approaches">Management Approaches</h3>
 <ul>
 <li><strong>Endpoint management</strong>
 <ul>
@@ -965,14 +959,14 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </div>
 </section>
 <section id="micro-segmentation" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="micro-segmentation">Micro-segmentation</h2>
+<h2 class="smaller" data-anchor-id="micro-segmentation">Micro-segmentation</h2>
 <blockquote class="blockquote">
 <p>“Limit lateral movement by creating secure zones.”</p>
 </blockquote>
 <div class="columns">
 <div class="column" style="width:60%;">
 <section id="implementation-approaches" class="level3">
-<h3 class="anchored" data-anchor-id="implementation-approaches">Implementation Approaches</h3>
+<h3 data-anchor-id="implementation-approaches">Implementation Approaches</h3>
 <ul>
 <li><strong>Network-based segmentation</strong>
 <ul>
@@ -996,7 +990,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </section>
 </div><div class="column" style="width:40%;">
 <section id="key-principles" class="level3">
-<h3 class="anchored" data-anchor-id="key-principles">Key Principles</h3>
+<h3 data-anchor-id="key-principles">Key Principles</h3>
 <ul>
 <li><strong>Default deny stance</strong>
 <ul>
@@ -1024,14 +1018,14 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </div>
 </section>
 <section id="data-protection" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="data-protection">Data Protection</h2>
+<h2 class="smaller" data-anchor-id="data-protection">Data Protection</h2>
 <blockquote class="blockquote">
 <p>“Protect what matters most.”</p>
 </blockquote>
 <div class="columns">
 <div class="column" style="width:50%;">
 <section id="data-security-strategy" class="level3">
-<h3 class="anchored" data-anchor-id="data-security-strategy">Data Security Strategy</h3>
+<h3 data-anchor-id="data-security-strategy">Data Security Strategy</h3>
 <ul>
 <li><strong>Classification</strong>
 <ul>
@@ -1055,7 +1049,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </section>
 </div><div class="column" style="width:50%;">
 <section id="protection-mechanisms" class="level3">
-<h3 class="anchored" data-anchor-id="protection-mechanisms">Protection Mechanisms</h3>
+<h3 data-anchor-id="protection-mechanisms">Protection Mechanisms</h3>
 <ul>
 <li><strong>Encryption</strong>
 <ul>
@@ -1090,14 +1084,14 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </div>
 </section>
 <section id="continuous-monitoring" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="continuous-monitoring">Continuous Monitoring</h2>
+<h2 class="smaller" data-anchor-id="continuous-monitoring">Continuous Monitoring</h2>
 <blockquote class="blockquote">
 <p>“Trust but verify, continuously.”</p>
 </blockquote>
 <div class="columns">
 <div class="column" style="width:50%;">
 <section id="monitoring-components" class="level3">
-<h3 class="anchored" data-anchor-id="monitoring-components">Monitoring Components</h3>
+<h3 data-anchor-id="monitoring-components">Monitoring Components</h3>
 <ul>
 <li><strong>Security information and event management (SIEM)</strong>
 <ul>
@@ -1121,7 +1115,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </section>
 </div><div class="column" style="width:50%;">
 <section id="operational-considerations" class="level3">
-<h3 class="anchored" data-anchor-id="operational-considerations">Operational Considerations</h3>
+<h3 data-anchor-id="operational-considerations">Operational Considerations</h3>
 <ul>
 <li><strong>Security operations center (SOC)</strong>
 <ul>
@@ -1159,14 +1153,14 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 <section id="implementation-strategy" class="level1">
 <h1>Implementation Strategy</h1>
 <section id="phased-implementation-approach" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="phased-implementation-approach">Phased Implementation Approach</h2>
+<h2 class="smaller" data-anchor-id="phased-implementation-approach">Phased Implementation Approach</h2>
 <blockquote class="blockquote">
 <p>“Zero Trust is a journey, not a destination.”</p>
 </blockquote>
 <div class="columns">
 <div class="column" style="width:33%;">
 <section id="phase-1-foundation" class="level3">
-<h3 class="anchored" data-anchor-id="phase-1-foundation">Phase 1: Foundation</h3>
+<h3 data-anchor-id="phase-1-foundation">Phase 1: Foundation</h3>
 <p><em>3-6 months</em></p>
 <ul>
 <li>Security assessment</li>
@@ -1184,7 +1178,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </section>
 </div><div class="column" style="width:33%;">
 <section id="phase-2-expansion" class="level3">
-<h3 class="anchored" data-anchor-id="phase-2-expansion">Phase 2: Expansion</h3>
+<h3 data-anchor-id="phase-2-expansion">Phase 2: Expansion</h3>
 <p><em>6-12 months</em></p>
 <ul>
 <li>Expanded identity controls</li>
@@ -1199,7 +1193,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </section>
 </div><div class="column" style="width:33%;">
 <section id="phase-3-optimization" class="level3">
-<h3 class="anchored" data-anchor-id="phase-3-optimization">Phase 3: Optimization</h3>
+<h3 data-anchor-id="phase-3-optimization">Phase 3: Optimization</h3>
 <p><em>12-24 months</em></p>
 <ul>
 <li>Comprehensive segmentation</li>
@@ -1225,11 +1219,11 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </div>
 </section>
 <section id="implementation-considerations-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="implementation-considerations-1">Implementation Considerations</h2>
+<h2 class="smaller" data-anchor-id="implementation-considerations-1">Implementation Considerations</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <section id="technical-challenges" class="level3">
-<h3 class="anchored" data-anchor-id="technical-challenges">Technical Challenges</h3>
+<h3 data-anchor-id="technical-challenges">Technical Challenges</h3>
 <ul>
 <li><strong>Legacy system integration</strong>
 <ul>
@@ -1253,7 +1247,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </section>
 </div><div class="column" style="width:50%;">
 <section id="organizational-challenges" class="level3">
-<h3 class="anchored" data-anchor-id="organizational-challenges">Organizational Challenges</h3>
+<h3 data-anchor-id="organizational-challenges">Organizational Challenges</h3>
 <ul>
 <li><strong>Cultural resistance</strong>
 <ul>
@@ -1291,11 +1285,11 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 <section id="case-studies" class="level1">
 <h1>Case Studies</h1>
 <section id="financial-services-global-bank" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="financial-services-global-bank">Financial Services: Global Bank</h2>
+<h2 class="smaller" data-anchor-id="financial-services-global-bank">Financial Services: Global Bank</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
 <section id="implementation-approach" class="level3">
-<h3 class="anchored" data-anchor-id="implementation-approach">Implementation Approach</h3>
+<h3 data-anchor-id="implementation-approach">Implementation Approach</h3>
 <ul>
 <li><strong>Driver</strong>: Regulatory requirements and breach protection</li>
 <li><strong>Scope</strong>: 50,000 employees, 10,000 applications</li>
@@ -1307,7 +1301,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </section>
 </div><div class="column" style="width:40%;">
 <section id="results-lessons" class="level3">
-<h3 class="anchored" data-anchor-id="results-lessons">Results &amp; Lessons</h3>
+<h3 data-anchor-id="results-lessons">Results &amp; Lessons</h3>
 <p><strong>Results</strong>: * 85% reduction in lateral movement risk * 60% decrease in security incidents * Improved compliance posture</p>
 <p><strong>Key Lessons</strong>: * Executive sponsorship critical * Legacy system challenges significant * Education reduced resistance * Phased approach prevented disruption * Technical talent investment necessary</p>
 </section>
@@ -1324,11 +1318,11 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </div>
 </section>
 <section id="healthcare-regional-provider" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="healthcare-regional-provider">Healthcare: Regional Provider</h2>
+<h2 class="smaller" data-anchor-id="healthcare-regional-provider">Healthcare: Regional Provider</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
 <section id="implementation-approach-1" class="level3">
-<h3 class="anchored" data-anchor-id="implementation-approach-1">Implementation Approach</h3>
+<h3 data-anchor-id="implementation-approach-1">Implementation Approach</h3>
 <ul>
 <li><strong>Driver</strong>: Patient data protection and clinical mobility</li>
 <li><strong>Scope</strong>: 15 facilities, 8,000 employees, BYOD environment</li>
@@ -1339,7 +1333,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </section>
 </div><div class="column" style="width:40%;">
 <section id="results-lessons-1" class="level3">
-<h3 class="anchored" data-anchor-id="results-lessons-1">Results &amp; Lessons</h3>
+<h3 data-anchor-id="results-lessons-1">Results &amp; Lessons</h3>
 <p><strong>Results</strong>: * 90% reduction in unauthorized access attempts * 70% decrease in security incidents * Improved clinical workflow efficiency * Maintained HIPAA compliance</p>
 <p><strong>Key Lessons</strong>: * Clinical workflow understanding critical * Legacy medical devices required special approach * User experience focus increased adoption * Phased implementation by department reduced risk * Strong partnership with clinical leadership</p>
 </section>
@@ -1359,11 +1353,11 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 <section id="measuring-success" class="level1">
 <h1>Measuring Success</h1>
 <section id="key-performance-indicators" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="key-performance-indicators">Key Performance Indicators</h2>
+<h2 class="smaller" data-anchor-id="key-performance-indicators">Key Performance Indicators</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <section id="security-metrics" class="level3">
-<h3 class="anchored" data-anchor-id="security-metrics">Security Metrics</h3>
+<h3 data-anchor-id="security-metrics">Security Metrics</h3>
 <ul>
 <li><strong>Risk reduction</strong>
 <ul>
@@ -1388,7 +1382,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </section>
 </div><div class="column" style="width:50%;">
 <section id="operational-metrics" class="level3">
-<h3 class="anchored" data-anchor-id="operational-metrics">Operational Metrics</h3>
+<h3 data-anchor-id="operational-metrics">Operational Metrics</h3>
 <ul>
 <li><strong>User experience</strong>
 <ul>
@@ -1424,7 +1418,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </div>
 </section>
 <section id="maturity-assessment-framework" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="maturity-assessment-framework">Maturity Assessment Framework</h2>
+<h2 class="smaller" data-anchor-id="maturity-assessment-framework">Maturity Assessment Framework</h2>
 <table class="table table-bordered caption-top">
 <thead class="table-dark">
 <tr class="header">
@@ -1493,11 +1487,11 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 <section id="conclusion" class="level1">
 <h1>Conclusion</h1>
 <section id="key-takeaways" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="key-takeaways">Key Takeaways</h2>
+<h2 class="smaller" data-anchor-id="key-takeaways">Key Takeaways</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <section id="zero-trust-principles" class="level3">
-<h3 class="anchored" data-anchor-id="zero-trust-principles">Zero Trust Principles</h3>
+<h3 data-anchor-id="zero-trust-principles">Zero Trust Principles</h3>
 <ul>
 <li>Never trust, always verify</li>
 <li>Verify explicitly using multiple signals</li>
@@ -1508,7 +1502,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </section>
 </div><div class="column" style="width:50%;">
 <section id="implementation-advice" class="level3">
-<h3 class="anchored" data-anchor-id="implementation-advice">Implementation Advice</h3>
+<h3 data-anchor-id="implementation-advice">Implementation Advice</h3>
 <ul>
 <li>Start with high-value assets</li>
 <li>Implement in phases</li>
@@ -1521,7 +1515,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </div>
 </div>
 <section id="remember" class="level3">
-<h3 class="anchored" data-anchor-id="remember">Remember:</h3>
+<h3 data-anchor-id="remember">Remember:</h3>
 <blockquote class="blockquote">
 <p>“Zero Trust is not a product or technology - it’s a strategy and mindset for approaching security in today’s complex environments.”</p>
 </blockquote>
@@ -1537,11 +1531,11 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </section>
 </section>
 <section id="resources" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="resources">Resources</h2>
+<h2 class="smaller" data-anchor-id="resources">Resources</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <section id="standards-frameworks" class="level3">
-<h3 class="anchored" data-anchor-id="standards-frameworks">Standards &amp; Frameworks</h3>
+<h3 data-anchor-id="standards-frameworks">Standards &amp; Frameworks</h3>
 <ul>
 <li><a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf">NIST Special Publication 800-207: Zero Trust Architecture</a></li>
 <li><a href="https://www.cisa.gov/zero-trust-maturity-model">CISA Zero Trust Maturity Model</a></li>
@@ -1552,7 +1546,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </section>
 </div><div class="column" style="width:50%;">
 <section id="chen.ist-resources" class="level3">
-<h3 class="anchored" data-anchor-id="chen.ist-resources">chen.ist Resources</h3>
+<h3 data-anchor-id="chen.ist-resources">chen.ist Resources</h3>
 <ul>
 <li><a href="../../../projects/manuscripts/zero-trust-implementation/">Zero Trust Implementation Guide</a></li>
 <li><a href="../../../resources/tools/zero-trust-assessment/">Zero Trust Assessment Tool</a></li>
@@ -1564,7 +1558,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </div>
 </div>
 <section id="additional-reading" class="level3">
-<h3 class="anchored" data-anchor-id="additional-reading">Additional Reading</h3>
+<h3 data-anchor-id="additional-reading">Additional Reading</h3>
 <ul>
 <li>Gilman, E., &amp; Barth, D. (2017). <em>Zero Trust Networks: Building Secure Systems in Untrusted Networks</em>. O’Reilly Media.</li>
 <li>Kindervag, J. (2010). <em>Build Security Into Your Network’s DNA: The Zero Trust Network Architecture</em>. Forrester Research.</li>
@@ -1572,7 +1566,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </section>
 </section>
 <section id="qa" class="level2 r-fit-text" data-background-color="#44475a" style="color: white;">
-<h2 class="r-fit-text anchored" data-background-color="#44475a" style="color: white;" data-anchor-id="qa">Q&amp;A</h2>
+<h2 class="r-fit-text" data-background-color="#44475a" style="color: white;" data-anchor-id="qa">Q&amp;A</h2>
 <div style="text-align: center;">
 <p><strong>Thank you for your attention!</strong></p>
 <p>CHENIST Team<br>
@@ -1597,7 +1591,7 @@ Redirecting to <a href="../../../keynotes/zero-trust-security/">Zero Trust Secur
 </section>
 </section>
 
-</main> <!-- /main -->
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

@@ -1,6 +1,8 @@
 ---
 title: "Zero Trust Security Architecture"
+page-layout: custom
 title-block-style: none
+toc: false
 subtitle: "Implementing Modern Security Models for Enterprise Protection"
 description: "Learn to implement zero trust security architecture for enterprise protection in this 90-minute webinar with CHENIST Team CHENIST Team."
 date: "2025-06-10"
@@ -10,116 +12,138 @@ category: "cybersecurity"
 presenter: "CHENIST Team, CHENIST Team"
 image: "/assets/images/cyber-security.jpg"
 registration_date: "2025-05-01"
-format: 
-  html:
-    css: /assets/css/academy.scss
-    classes: [academy-section]
+include-in-header:
+  text: |
+    <style>.m { --c: #F5A623; }</style>
 ---
 
 ```{=html}
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
-    <li class="breadcrumb-item"><a href="/academy/webinars/">Webinars</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Zero Trust Security Architecture</li>
-  </ol>
-</nav>
+<div class="m">
 
-<div class="text-center mb-4">
-  <img src="/assets/svg/security.svg" alt="Zero Trust Security" style="max-width: 150px; margin-bottom: 20px;">
+<div class="m-hero">
+  <div class="container">
+    <h1>Zero Trust Security <span class="gr">Architecture</span></h1>
+    <p>Implementing Modern Security Models for Enterprise Protection</p>
+  </div>
 </div>
-```
 
-```{=html}
-<div class="webinar-header">
-  <div class="webinar-dates">
-    <span class="badge bg-primary">June 10, 2025</span>
-    <span class="badge bg-secondary">90 minutes</span>
-    <div class="webinar-actions">
-      <a href="/academy/webinars/ical/zero-trust-security.ics" class="btn btn-outline-primary btn-sm" download>
-        <i class="bi bi-calendar3"></i> Add to Calendar
-      </a>
-      <a href="/academy/webinars/pdfs/zero-trust-security.pdf" class="btn btn-outline-secondary btn-sm" download>
-        <i class="bi bi-file-pdf"></i> Download PDF
-      </a>
+<div class="m-s">
+  <div class="container">
+    <div class="text-center mb-4">
+      <img src="/assets/svg/security.svg" alt="Zero Trust Security" style="max-width: 150px; margin-bottom: 20px;">
+    </div>
+    <div class="webinar-dates">
+      <span class="badge bg-primary">June 10, 2025</span>
+      <span class="badge bg-secondary">90 minutes</span>
+      <div class="webinar-actions">
+        <a href="/academy/webinars/ical/zero-trust-security.ics" class="btn btn-outline-primary btn-sm" download>
+          <i class="bi bi-calendar3"></i> Add to Calendar
+        </a>
+        <a href="/academy/webinars/pdfs/zero-trust-security.pdf" class="btn btn-outline-secondary btn-sm" download>
+          <i class="bi bi-file-pdf"></i> Download PDF
+        </a>
+      </div>
+    </div>
+    <div class="webinar-presenter">
+      <i class="bi bi-person-circle"></i> CHENIST Team, Chief Information Security Officer
     </div>
   </div>
-  <div class="webinar-presenter">
-    <i class="bi bi-person-circle"></i> CHENIST Team, Chief Information Security Officer
+</div>
+
+<div class="m-bg">
+  <div class="container">
+
+<h2>Webinar Overview</h2>
+
+<p>In this comprehensive webinar, we'll explore the principles and implementation strategies of Zero Trust security architecture. As traditional perimeter-based security models become increasingly ineffective against sophisticated threats, organizations must adopt a "never trust, always verify" approach to protect their assets.</p>
+
+<p>CHENIST Team, a seasoned CHENIST Team with over 15 years of enterprise security experience, will guide you through the theory, practical implementation steps, and real-world case studies of successful Zero Trust deployments.</p>
+
+<h2>Key Topics</h2>
+
+<ul>
+<li><strong>Zero Trust Fundamentals</strong>: Understanding the core principles and philosophy</li>
+<li><strong>Identity and Access Management</strong>: Implementing strong authentication and authorization</li>
+<li><strong>Micro-segmentation Strategies</strong>: Dividing networks into secure zones</li>
+<li><strong>Continuous Monitoring</strong>: Leveraging analytics for anomaly detection</li>
+<li><strong>Data Protection</strong>: Securing data across all environments</li>
+<li><strong>Cloud-Native Security</strong>: Adapting Zero Trust for modern cloud architectures</li>
+<li><strong>Implementation Roadmap</strong>: Practical steps for transitioning to Zero Trust</li>
+<li><strong>Measuring Success</strong>: Metrics and KPIs for Zero Trust effectiveness</li>
+</ul>
+
+<h2>Agenda</h2>
+
+<table class="table">
+<thead><tr><th>Time</th><th>Topic</th></tr></thead>
+<tbody>
+<tr><td>00:00 - 10:00</td><td>Introduction to Zero Trust concepts and evolution</td></tr>
+<tr><td>10:00 - 25:00</td><td>Core pillars of a Zero Trust architecture</td></tr>
+<tr><td>25:00 - 40:00</td><td>Authentication and identity management best practices</td></tr>
+<tr><td>40:00 - 55:00</td><td>Network segmentation and microsegmentation strategies</td></tr>
+<tr><td>55:00 - 70:00</td><td>Continuous monitoring and security analytics</td></tr>
+<tr><td>70:00 - 80:00</td><td>Case studies and implementation examples</td></tr>
+<tr><td>80:00 - 90:00</td><td>Q&amp;A session</td></tr>
+</tbody>
+</table>
+
+<h2>About the Presenter</h2>
+
+<p>CHENIST Team is the Chief Information Security Officer at Global Enterprise Solutions, where he leads the security strategy for a Fortune 500 company with operations in 30+ countries. With over 15 years of experience in cybersecurity, Alex has successfully implemented Zero Trust architectures across multiple enterprises and industries.</p>
+
+<p>Prior to his current role, Alex worked as a security architect at leading financial institutions and has contributed to several industry standards for secure architecture. He holds CISSP, CISM, and AWS Security Specialty certifications and regularly speaks at major security conferences.</p>
+
+<h2>Who Should Attend</h2>
+
+<ul>
+<li>CHENIST Teams, CIOs, and security leaders responsible for organizational security strategy</li>
+<li>Security architects and engineers involved in designing and implementing security controls</li>
+<li>Network administrators managing complex enterprise networks</li>
+<li>Cloud security professionals responsible for securing multi-cloud environments</li>
+<li>IT managers interested in modernizing their security approach</li>
+<li>Risk and compliance professionals concerned with data protection regulations</li>
+</ul>
+
+<h2>Registration Information</h2>
+
+<p>Registration for this webinar opens on May 1, 2025. Early registration is recommended as live attendance will be limited to ensure quality Q&amp;A opportunities.</p>
+
+<ul>
+<li><strong>Standard Registration</strong>: Free</li>
+<li><strong>Premium Registration</strong>: $29 (includes access to extended Q&amp;A session and implementation templates)</li>
+</ul>
+
   </div>
 </div>
-```
 
-## Webinar Overview
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Ready to Transform Your Security Architecture?</h2>
+    <p>Join our Zero Trust Security Architecture webinar to learn practical strategies for implementing a modern, effective security model.</p>
+    <a href="https://cal.com/chenist" target="_blank" class="m-b">Register Interest</a>
+  </div>
+</div>
 
-In this comprehensive webinar, we'll explore the principles and implementation strategies of Zero Trust security architecture. As traditional perimeter-based security models become increasingly ineffective against sophisticated threats, organizations must adopt a "never trust, always verify" approach to protect their assets. 
+<div class="m-bg">
+  <div class="container">
 
-CHENIST Team, a seasoned CHENIST Team with over 15 years of enterprise security experience, will guide you through the theory, practical implementation steps, and real-world case studies of successful Zero Trust deployments.
+<h2>Frequently Asked Questions</h2>
 
-## Key Topics
+<h3>Is this webinar appropriate for small businesses?</h3>
+<p>Yes, the principles of Zero Trust apply to organizations of all sizes. We'll discuss implementation approaches that scale from small businesses to large enterprises.</p>
 
-- **Zero Trust Fundamentals**: Understanding the core principles and philosophy
-- **Identity and Access Management**: Implementing strong authentication and authorization
-- **Micro-segmentation Strategies**: Dividing networks into secure zones
-- **Continuous Monitoring**: Leveraging analytics for anomaly detection
-- **Data Protection**: Securing data across all environments
-- **Cloud-Native Security**: Adapting Zero Trust for modern cloud architectures
-- **Implementation Roadmap**: Practical steps for transitioning to Zero Trust
-- **Measuring Success**: Metrics and KPIs for Zero Trust effectiveness
+<h3>Will the webinar be recorded?</h3>
+<p>Yes, a recording will be made available to registered participants for 30 days after the live session.</p>
 
-## Agenda
+<h3>Can I get CPE credits for attending?</h3>
+<p>Yes, this webinar qualifies for 1.5 CPE credits for various security certifications including CISSP, CISM, and CompTIA Security+.</p>
 
-| Time | Topic |
-|------|-------|
-| 00:00 - 10:00 | Introduction to Zero Trust concepts and evolution |
-| 10:00 - 25:00 | Core pillars of a Zero Trust architecture |
-| 25:00 - 40:00 | Authentication and identity management best practices |
-| 40:00 - 55:00 | Network segmentation and microsegmentation strategies |
-| 55:00 - 70:00 | Continuous monitoring and security analytics |
-| 70:00 - 80:00 | Case studies and implementation examples |
-| 80:00 - 90:00 | Q&A session |
+<h3>What technical knowledge is required?</h3>
+<p>A basic understanding of networking and security concepts is helpful, but the webinar is designed to be accessible to both technical and non-technical audiences.</p>
 
-## About the Presenter
+  </div>
+</div>
 
-CHENIST Team is the Chief Information Security Officer at Global Enterprise Solutions, where he leads the security strategy for a Fortune 500 company with operations in 30+ countries. With over 15 years of experience in cybersecurity, Alex has successfully implemented Zero Trust architectures across multiple enterprises and industries.
-
-Prior to his current role, Alex worked as a security architect at leading financial institutions and has contributed to several industry standards for secure architecture. He holds CISSP, CISM, and AWS Security Specialty certifications and regularly speaks at major security conferences.
-
-## Who Should Attend
-
-- CHENIST Teams, CIOs, and security leaders responsible for organizational security strategy
-- Security architects and engineers involved in designing and implementing security controls
-- Network administrators managing complex enterprise networks
-- Cloud security professionals responsible for securing multi-cloud environments
-- IT managers interested in modernizing their security approach
-- Risk and compliance professionals concerned with data protection regulations
-
-## Registration Information
-
-Registration for this webinar opens on May 1, 2025. Early registration is recommended as live attendance will be limited to ensure quality Q&A opportunities.
-
-- **Standard Registration**: Free
-- **Premium Registration**: $29 (includes access to extended Q&A session and implementation templates)
-
-```{=html}
-<div class="webinar-cta">
-  <h3>Ready to Transform Your Security Architecture?</h3>
-  <p>Join our Zero Trust Security Architecture webinar to learn practical strategies for implementing a modern, effective security model.</p>
-  <a href="https://cal.com/chenist" target="_blank" class="btn btn-success">Register Interest</a>
 </div>
 ```
-
-## Frequently Asked Questions
-
-### Is this webinar appropriate for small businesses?
-Yes, the principles of Zero Trust apply to organizations of all sizes. We'll discuss implementation approaches that scale from small businesses to large enterprises.
-
-### Will the webinar be recorded?
-Yes, a recording will be made available to registered participants for 30 days after the live session.
-
-### Can I get CPE credits for attending?
-Yes, this webinar qualifies for 1.5 CPE credits for various security certifications including CISSP, CISM, and CompTIA Security+.
-
-### What technical knowledge is required?
-A basic understanding of networking and security concepts is helpful, but the webinar is designed to be accessible to both technical and non-technical audiences.

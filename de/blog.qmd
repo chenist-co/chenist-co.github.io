@@ -12,21 +12,20 @@ listing:
   page-size: 12
   feed: true
 page-layout: custom
+toc: false
 site-url: https://chen.ist/de
 ---
 
 ```{=html}
-<div class="hero-section">
+<div class="m">
+<div class="m-listing-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-8 offset-md-2 text-center">
-        <h1>Unser <span class="text-green">Blog</span></h1>
-        <p>Einblicke, Tutorials und Updates von unserem Team</p>
-      </div>
-    </div>
+    <h1>Unser <span class="gr">Blog</span></h1>
+    <p>Einblicke, Tutorials und Updates von unserem Team</p>
   </div>
+</div>
 </div>
 ```
 
-::: {.container .page-section}
+::: {.container}
 :::

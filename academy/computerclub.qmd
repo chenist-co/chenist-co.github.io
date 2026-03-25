@@ -1,22 +1,28 @@
 ---
 title: "Computer Club"
+page-layout: custom
 title-block-style: none
+toc: false
 subtitle: "A community-driven technology club for all ages"
 description: "Building digital literacy and community through technology education"
-from: markdown+raw_html
-format: 
-  html:
-    css: /assets/css/academy.scss
-    classes: [academy-section]
+include-in-header:
+  text: |
+    <style>.m { --c: #F5A623; }</style>
 ---
 
 ```{=html}
+<div class="m">
+
 <meta http-equiv="refresh" content="0;url=/academy/programs/computerclub/" />
 <script>window.location.href = "/academy/programs/computerclub/";</script>
-```
 
-<div class="container">
-  <div class="alert alert-info mt-5">
-    <p>This page has moved. If you are not redirected automatically, please <a href="/academy/programs/computerclub/">click here</a>.</p>
+<div class="m-s">
+  <div class="container">
+    <div class="alert alert-info mt-5">
+      <p>This page has moved. If you are not redirected automatically, please <a href="/academy/programs/computerclub/">click here</a>.</p>
+    </div>
   </div>
 </div>
+
+</div>
+```

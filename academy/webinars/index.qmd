@@ -1,12 +1,10 @@
 ---
 title: "Webinars"
+page-layout: custom
 title-block-style: none
+toc: false
 subtitle: "Browse all our webinars"
 description: "Browse and register for free online webinars on cybersecurity, cloud, AI, development, and business topics from chen.ist Academy."
-format: 
-  html:
-    css: /assets/css/academy.scss
-    classes: [academy-section]
 listing:
   contents: "pages/*.qmd"
   type: grid
@@ -16,20 +14,30 @@ listing:
   filter-ui: true
   fields: [image, date, title, subtitle, presenter, category]
   date-format: "MMMM D, YYYY"
+include-in-header:
+  text: |
+    <style>.m { --c: #F5A623; }</style>
 ---
 
 ```{=html}
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Webinars</li>
-  </ol>
-</nav>
-```
+<div class="m">
 
-```{=html}
-<img src="/assets/svg/presentation.svg" alt="Webinars" style="max-width: 150px; margin-bottom: 20px;">
+<div class="m-hero">
+  <div class="container">
+    <h1>Academy <span class="gr">Webinars</span></h1>
+    <p>Browse all our webinars</p>
+  </div>
+</div>
+
+<div class="m-s">
+  <div class="container">
+    <div class="text-center mb-4">
+      <img src="/assets/svg/presentation.svg" alt="Webinars" style="max-width: 150px; margin-bottom: 20px;">
+    </div>
+  </div>
+</div>
+
+</div>
 ```
 
 Welcome to our webinars listing page. Here you can browse all upcoming and past webinars hosted by chen.ist. Use the filters to find webinars by category, date, or presenter.
@@ -40,12 +48,18 @@ Learn how to strengthen your organization's human layer of defense with new-scho
 
 **Hosts:** Alin Mechenici, CEO @ Chenist Cybersecurity & Aneta Kozakiewicz, Channel Account Manager @ KnowBe4
 
-[Learn more about this webinar →](/academy/webinars/pages/cyber-awareness.html)
+[Learn more about this webinar -->](/academy/webinars/pages/cyber-awareness.html)
 
 ```{=html}
-<div class="alert alert-success mt-4 mb-4" role="alert">
-  <h4 class="alert-heading"><i class="bi bi-megaphone"></i> New Webinar Added!</h4>
-  <p>Check out our <a href="pages/cyber-awareness.html" class="alert-link">Cyber Awareness</a> webinar on September 20, 2025 - learn how to strengthen your organization's human layer of defense with new-school security awareness training.</p>
+<div class="m">
+<div class="m-s">
+  <div class="container">
+    <div class="alert alert-success mt-4 mb-4" role="alert">
+      <h4 class="alert-heading"><i class="bi bi-megaphone"></i> New Webinar Added!</h4>
+      <p>Check out our <a href="pages/cyber-awareness.html" class="alert-link">Cyber Awareness</a> webinar on September 20, 2025 - learn how to strengthen your organization's human layer of defense with new-school security awareness training.</p>
+    </div>
+  </div>
+</div>
 </div>
 ```
 

@@ -537,65 +537,65 @@ document.addEventListener('DOMContentLoaded', function() {
 </header>
 
 
-<div class="ev-page">
+<div class="m">
 
-<!-- HERO — full-screen dark with atmospheric image -->
-<div class="ev-hero">
-  <div class="ev-hero-bg" style="background-image: url('/assets/images/stock/hackathon-team.jpg');"></div>
-  <div class="ev-hero-content">
-    <div class="ev-hero-tag">Next Event</div>
-    <h1>AI Ethics<br>Hackathon</h1>
-    <div class="ev-hero-meta">
-      <i class="bi bi-calendar3"></i> March 5, 2026 &nbsp;&nbsp;
-      <i class="bi bi-geo-alt"></i> Bucharest
-    </div>
-    <p>A weekend hackathon on ethical AI — bias detection, responsible design, and AI that puts people first.</p>
-    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-      <a href="../academy/events/pages/ai-ethics-hackathon.html" class="ev-btn">Register now</a>
-      <a href="../academy/events/ical/ai-ethics-hackathon-2025.ics" class="ev-btn-ghost" download="">Add to calendar</a>
+<!-- HERO -->
+<div class="m-hero">
+  <div class="container">
+    <h1>Academy <span class="gr">Events</span></h1>
+    <p>Upcoming and recurring events hosted by chen.ist</p>
+  </div>
+</div>
+
+<!-- FEATURED EVENT -->
+<div class="m-bg">
+  <div class="container" style="text-align:center;">
+    <div class="m-t" style="max-width:700px; margin:0 auto;">
+      <div style="margin-bottom:0.5rem;"><span style="background:var(--c);color:#000;padding:0.25rem 0.75rem;border-radius:4px;font-size:0.85rem;font-weight:600;">Next Event</span></div>
+      <h2>AI Ethics Hackathon</h2>
+      <div style="opacity:0.7; margin-bottom:1rem;">
+        <i class="bi bi-calendar3"></i> March 5, 2026 &nbsp;&nbsp;
+        <i class="bi bi-geo-alt"></i> Bucharest
+      </div>
+      <p>A weekend hackathon on ethical AI — bias detection, responsible design, and AI that puts people first.</p>
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+        <a href="../academy/events/pages/ai-ethics-hackathon.html" class="m-b">Register now</a>
+        <a href="../academy/events/ical/ai-ethics-hackathon-2025.ics" class="m-b-ghost" download="">Add to calendar</a>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- UPCOMING — dark image cards -->
-<div class="ev-s">
+<!-- UPCOMING -->
+<div class="m-s">
   <div class="container">
     <h2>Coming up</h2>
     <p class="sub">Spots are limited. Register early.</p>
     <div class="row g-5">
       <div class="col-md-4">
         <a href="../academy/events/pages/summer-school-2025.html" style="text-decoration:none;">
-          <div class="ev-card">
-            <img src="../assets/images/stock/code-screen.jpg" alt="Summer School">
-            <div class="ev-card-body">
-              <h3>Summer School 2026</h3>
-              <div class="ev-card-meta"><i class="bi bi-calendar3"></i> Aug 1–15 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
-              <p>Two weeks of cybersecurity, cloud, and AI.</p>
-            </div>
+          <div class="m-t">
+            <h3>Summer School 2026</h3>
+            <div style="opacity:0.7;font-size:0.9rem;"><i class="bi bi-calendar3"></i> Aug 1-15 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
+            <p>Two weeks of cybersecurity, cloud, and AI.</p>
           </div>
         </a>
       </div>
       <div class="col-md-4">
         <a href="../academy/events/pages/makers-workshop.html" style="text-decoration:none;">
-          <div class="ev-card">
-            <img src="../assets/images/stock/server-racks.jpg" alt="Makers Workshop">
-            <div class="ev-card-body">
-              <h3>Makers Workshop</h3>
-              <div class="ev-card-meta"><i class="bi bi-calendar3"></i> Sep 15 &nbsp; <i class="bi bi-geo-alt"></i> Bucharest</div>
-              <p>Hardware, DIY, and hands-on building.</p>
-            </div>
+          <div class="m-t">
+            <h3>Makers Workshop</h3>
+            <div style="opacity:0.7;font-size:0.9rem;"><i class="bi bi-calendar3"></i> Sep 15 &nbsp; <i class="bi bi-geo-alt"></i> Bucharest</div>
+            <p>Hardware, DIY, and hands-on building.</p>
           </div>
         </a>
       </div>
       <div class="col-md-4">
         <a href="../academy/events/pages/space-hackathon.html" style="text-decoration:none;">
-          <div class="ev-card">
-            <img src="../assets/images/stock/cybersecurity-monitor.jpg" alt="SpaceApps Challenge">
-            <div class="ev-card-body">
-              <h3>SpaceApps Challenge</h3>
-              <div class="ev-card-meta"><i class="bi bi-calendar3"></i> Oct 2026 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
-              <p>NASA's 48-hour global hackathon.</p>
-            </div>
+          <div class="m-t">
+            <h3>SpaceApps Challenge</h3>
+            <div style="opacity:0.7;font-size:0.9rem;"><i class="bi bi-calendar3"></i> Oct 2026 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
+            <p>NASA's 48-hour global hackathon.</p>
           </div>
         </a>
       </div>
@@ -604,52 +604,43 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <!-- RECURRING -->
-<div class="ev-bg">
+<div class="m-bg">
   <div class="container">
     <h2>Every month</h2>
     <p class="sub">Regular meetups you can count on.</p>
     <div class="row g-5">
-      <div class="col-md-4"><div class="rec"><i class="bi bi-calendar-event"></i><h3>Computer Club</h3><p>Open discussion, hacking, and tech exploration.</p><div class="rec-when">Last Thursday</div><a href="https://clubul.computer/" class="ev-lk">Schedule</a></div></div>
-      <div class="col-md-4"><div class="rec"><i class="bi bi-mic"></i><h3>Tech Talks</h3><p>Industry experts on emerging tech and best practices.</p><div class="rec-when">First Tuesday</div><a href="https://lu.ma/chenistacademy" class="ev-lk">Next talk</a></div></div>
-      <div class="col-md-4"><div class="rec"><i class="bi bi-code-slash"></i><h3>Workshops</h3><p>Coding sessions, open-source projects, collaborative learning.</p><div class="rec-when">See calendar</div><a href="https://lu.ma/chenistacademy" class="ev-lk">Join</a></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-calendar-event"></i><h3>Computer Club</h3><p>Open discussion, hacking, and tech exploration.</p><div style="opacity:0.7;font-size:0.9rem;">Last Thursday</div><a href="https://clubul.computer/" class="m-lk">Schedule</a></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-mic"></i><h3>Tech Talks</h3><p>Industry experts on emerging tech and best practices.</p><div style="opacity:0.7;font-size:0.9rem;">First Tuesday</div><a href="https://lu.ma/chenistacademy" class="m-lk">Next talk</a></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-code-slash"></i><h3>Workshops</h3><p>Coding sessions, open-source projects, collaborative learning.</p><div style="opacity:0.7;font-size:0.9rem;">See calendar</div><a href="https://lu.ma/chenistacademy" class="m-lk">Join</a></div></div>
     </div>
   </div>
 </div>
 
-<!-- PAST EVENTS — dark thumbnail gallery -->
-<div class="ev-s">
+<!-- PAST EVENTS -->
+<div class="m-s">
   <div class="container">
     <h2>Past events</h2>
     <p class="sub"></p>
     <div class="row g-5">
       <div class="col-md-4">
         <a href="https://marca-ro.ca/2024/11/23/conferinta-igiena-digitala-la-copii-are-loc-la-craiova/" target="_blank" style="text-decoration:none;">
-          <div class="ev-past">
-            <img src="../assets/images/stock/hackathon-team.jpg" alt="Cyber Hygiene for Kids">
-            <div class="ev-past-body">
-              <h4>Cyber Hygiene for Kids</h4>
-              <div class="yr">Craiova · November 2024</div>
-            </div>
+          <div class="m-t">
+            <h4>Cyber Hygiene for Kids</h4>
+            <div style="opacity:0.7;font-size:0.9rem;">Craiova · November 2024</div>
           </div>
         </a>
       </div>
       <div class="col-md-4">
-        <div class="ev-past">
-          <img src="../assets/images/stock/server-room-dark.jpg" alt="Capture the Flag">
-          <div class="ev-past-body">
-            <h4>Capture the Flag</h4>
-            <div class="yr">Craiova · November 2023</div>
-          </div>
+        <div class="m-t">
+          <h4>Capture the Flag</h4>
+          <div style="opacity:0.7;font-size:0.9rem;">Craiova · November 2023</div>
         </div>
       </div>
       <div class="col-md-4">
         <a href="https://alinmechenici.substack.com/p/sac" target="_blank" style="text-decoration:none;">
-          <div class="ev-past">
-            <img src="../assets/images/stock/cybersecurity-monitor.jpg" alt="SpaceApps Challenge">
-            <div class="ev-past-body">
-              <h4>SpaceApps · 9 Editions</h4>
-              <div class="yr">Sweden &amp; Romania · 2016–2024</div>
-            </div>
+          <div class="m-t">
+            <h4>SpaceApps · 9 Editions</h4>
+            <div style="opacity:0.7;font-size:0.9rem;">Sweden &amp; Romania · 2016-2024</div>
           </div>
         </a>
       </div>
@@ -658,14 +649,14 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <!-- CTA -->
-<div class="ev-cta">
+<div class="m-cta">
   <div class="container">
-    <div class="ev-d"></div>
+    <div class="m-d"></div>
     <h2>Don't miss the next one</h2>
     <p>Get event updates or discuss hosting a private event for your team.</p>
     <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-      <a href="https://alinmechenici.substack.com" target="_blank" class="ev-btn">Subscribe to updates</a>
-      <a href="https://cal.com/chenist" target="_blank" class="ev-lk" style="padding-top:0.85rem;">Book a call</a>
+      <a href="https://alinmechenici.substack.com" target="_blank" class="m-b">Subscribe to updates</a>
+      <a href="https://cal.com/chenist" target="_blank" class="m-b-ghost">Book a call</a>
     </div>
   </div>
 </div>
