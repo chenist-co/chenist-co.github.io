@@ -1,7 +1,6 @@
 /* Custom CSS styles for chen.ist */
 
-/* Add Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Source+Code+Pro&display=swap');
+/* Google Fonts loaded via _quarto.yml <link> tag - do not duplicate here */
 
 /* Layout */
 .container {
@@ -180,14 +179,32 @@ pre, code {
   transition: all 0.2s ease;
 }
 
-/* Better page transitions */
-body {
-  animation: fadein 0.3s;
+/* Global focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid #81BD4A;
+  outline-offset: 2px;
 }
 
-@keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+/* Skip to content link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: #81BD4A;
+  color: white;
+  padding: 0.5rem 1rem;
+  z-index: 10000;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Feature card equal heights */
+.feature-card {
+  height: 100%;
 }
 
 /* Responsive adjustments */
