@@ -17,15 +17,14 @@ format:
   typst:
     toc: true
     number-sections: false
+    include-in-header: ""
+    include-after-body: ""
+    include-before-body: ""
   epub:
     toc: true
 ---
 
-```{=html}
-<div class="text-center mb-4">
-  <img src="/assets/images/stock/team-macbooks.jpg" alt="Article cover" class="img-fluid rounded shadow" style="max-height: 400px; width: 100%; object-fit: cover;">
-</div>
-```
+![](/assets/images/stock/team-macbooks.jpg){.rounded .shadow width=100%}
 
 ## A Single Platform for Everything Apple at Work
 
