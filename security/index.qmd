@@ -7,489 +7,495 @@ page-layout: full
 format:
   html:
     toc: false
+    include-in-header:
+      text: |
+        <style>
+        /* Apple-clean design — confidence through whitespace */
+        .sec-hero {
+          padding: 8rem 0 6rem;
+          text-align: center;
+          background: #fafafa;
+        }
+        [data-bs-theme="dark"] .sec-hero { background: #1a1a1e; }
+        .sec-hero h1 {
+          font-size: 3.5rem;
+          font-weight: 700;
+          letter-spacing: -0.03em;
+          line-height: 1.1;
+          margin-bottom: 1.5rem;
+          color: var(--bs-body-color);
+        }
+        .sec-hero h1 span { color: #81BD4A; }
+        .sec-hero p {
+          font-size: 1.3rem;
+          color: #86868b;
+          max-width: 620px;
+          margin: 0 auto 2.5rem;
+          line-height: 1.5;
+        }
+        .sec-link {
+          color: #81BD4A;
+          font-size: 1.15rem;
+          font-weight: 500;
+          text-decoration: none;
+        }
+        .sec-link:hover { text-decoration: underline; }
+        .sec-link::after { content: " ›"; }
+
+        .sec-section { padding: 6rem 0; }
+        .sec-section-alt { padding: 6rem 0; background: #f5f5f7; }
+        [data-bs-theme="dark"] .sec-section-alt { background: #1d1d1f; }
+
+        .sec-section h2 {
+          font-size: 2.75rem;
+          font-weight: 700;
+          letter-spacing: -0.025em;
+          text-align: center;
+          margin-bottom: 0.75rem;
+          line-height: 1.15;
+        }
+        .sec-section > .container > p.sec-sub {
+          text-align: center;
+          font-size: 1.15rem;
+          color: #86868b;
+          max-width: 580px;
+          margin: 0 auto 4rem;
+        }
+
+        /* Feature tile — Apple style: no borders, subtle bg, generous padding */
+        .sec-tile {
+          text-align: center;
+          padding: 2.5rem 1.5rem;
+          border-radius: 20px;
+          background: #fff;
+          height: 100%;
+          transition: transform 0.3s ease;
+        }
+        [data-bs-theme="dark"] .sec-tile { background: #2a2a2e; }
+        .sec-tile:hover { transform: translateY(-4px); }
+        .sec-tile i {
+          font-size: 2.25rem;
+          color: #81BD4A;
+          display: block;
+          margin-bottom: 1.25rem;
+        }
+        .sec-tile h3 {
+          font-size: 1.2rem;
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+        }
+        .sec-tile p {
+          font-size: 0.95rem;
+          color: #86868b;
+          line-height: 1.55;
+          margin-bottom: 0;
+        }
+
+        /* Feature row — image + text, Apple-style generous spacing */
+        .sec-row {
+          display: flex;
+          align-items: center;
+          gap: 5rem;
+        }
+        .sec-row.reverse { flex-direction: row-reverse; }
+        .sec-row-img { flex: 0 0 48%; }
+        .sec-row-img img {
+          width: 100%;
+          border-radius: 20px;
+        }
+        .sec-row-text h2 {
+          text-align: left;
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+        }
+        .sec-row-text p {
+          font-size: 1.1rem;
+          color: #86868b;
+          line-height: 1.7;
+        }
+        .sec-row-text .sec-checks {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1rem;
+          margin-top: 1.5rem;
+        }
+        .sec-row-text .sec-checks span {
+          font-size: 0.95rem;
+          font-weight: 500;
+          color: var(--bs-body-color);
+        }
+        .sec-row-text .sec-checks i {
+          color: #81BD4A;
+          margin-right: 0.35rem;
+        }
+
+        /* Stat row */
+        .sec-stats {
+          display: flex;
+          justify-content: center;
+          gap: 4rem;
+          flex-wrap: wrap;
+          padding: 2rem 0;
+        }
+        .sec-stat { text-align: center; }
+        .sec-stat-num {
+          font-size: 3rem;
+          font-weight: 700;
+          color: #81BD4A;
+          line-height: 1;
+        }
+        .sec-stat-label {
+          font-size: 0.85rem;
+          color: #86868b;
+          margin-top: 0.25rem;
+          text-transform: uppercase;
+          letter-spacing: 0.04em;
+        }
+
+        /* Process — clean numbered list */
+        .sec-process {
+          counter-reset: step;
+          max-width: 600px;
+        }
+        .sec-step {
+          counter-increment: step;
+          padding: 1.5rem 0;
+          border-bottom: 1px solid rgba(0,0,0,0.06);
+          display: flex;
+          gap: 1.5rem;
+          align-items: flex-start;
+        }
+        [data-bs-theme="dark"] .sec-step { border-color: rgba(255,255,255,0.08); }
+        .sec-step:last-child { border-bottom: none; }
+        .sec-step::before {
+          content: counter(step);
+          flex-shrink: 0;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #81BD4A;
+          color: #fff;
+          font-weight: 700;
+          border-radius: 50%;
+          font-size: 1rem;
+        }
+        .sec-step h4 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
+        .sec-step p { font-size: 0.95rem; color: #86868b; margin-bottom: 0; }
+
+        /* NIS2 list — clean, no heavy styling */
+        .sec-nis2-col h3 {
+          font-size: 1.1rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          color: #86868b;
+          margin-bottom: 1.5rem;
+        }
+        .sec-nis2-col ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        .sec-nis2-col ul li {
+          padding: 0.6rem 0;
+          font-size: 1rem;
+          border-bottom: 1px solid rgba(0,0,0,0.04);
+        }
+        [data-bs-theme="dark"] .sec-nis2-col ul li { border-color: rgba(255,255,255,0.06); }
+
+        /* CTA section */
+        .sec-cta {
+          padding: 7rem 0;
+          text-align: center;
+          background: #fafafa;
+        }
+        [data-bs-theme="dark"] .sec-cta { background: #1a1a1e; }
+        .sec-cta h2 {
+          font-size: 2.75rem;
+          font-weight: 700;
+          letter-spacing: -0.025em;
+          margin-bottom: 1rem;
+        }
+        .sec-cta p {
+          font-size: 1.15rem;
+          color: #86868b;
+          max-width: 520px;
+          margin: 0 auto 2.5rem;
+        }
+        .sec-btn {
+          display: inline-block;
+          padding: 0.9rem 2.5rem;
+          background: #81BD4A;
+          color: #fff;
+          border-radius: 50px;
+          font-weight: 600;
+          font-size: 1.05rem;
+          text-decoration: none;
+          transition: all 0.2s;
+        }
+        .sec-btn:hover {
+          background: #6BA33A;
+          color: #fff;
+          text-decoration: none;
+          transform: translateY(-1px);
+        }
+        .sec-objections {
+          margin-top: 2rem;
+          font-size: 0.9rem;
+          color: #86868b;
+        }
+        .sec-objections i { color: #81BD4A; margin-right: 0.25rem; }
+
+        @media (max-width: 767px) {
+          .sec-hero { padding: 5rem 0 4rem; }
+          .sec-hero h1 { font-size: 2.25rem; }
+          .sec-hero p { font-size: 1.1rem; }
+          .sec-section h2, .sec-cta h2 { font-size: 2rem; }
+          .sec-row, .sec-row.reverse { flex-direction: column; gap: 2.5rem; }
+          .sec-row-img { flex: none; }
+          .sec-row-text h2 { font-size: 1.75rem; text-align: center; }
+          .sec-stats { gap: 2rem; }
+          .sec-stat-num { font-size: 2.25rem; }
+        }
+        </style>
 ---
 
 ```{=html}
-<!-- ==================== HERO ==================== -->
-<div class="lp-hero lp-hero--dark" style="padding: 6rem 0 5rem; background: linear-gradient(135deg, #323642 0%, #1a1d24 60%, #0f1215 100%); position: relative; overflow: hidden;">
-  <!-- Subtle grid pattern overlay -->
-  <div style="position:absolute; inset:0; background-image: radial-gradient(rgba(129,189,74,0.07) 1px, transparent 1px); background-size: 30px 30px; pointer-events:none;"></div>
-  <div class="container" style="position:relative; z-index:1;">
-    <div class="lp-hero__badge"><i class="bi bi-shield-lock-fill me-1"></i> Blue Team Cybersecurity &amp; NIS2 Compliance</div>
-    <h1>The Average SMB Takes <em>197 Days</em><br>to Detect a Breach.<br><span style="font-size:0.75em; opacity:0.7;">How Long Would Yours Take?</span></h1>
-    <p class="lp-hero__sub">
-      Proactive Blue Team cybersecurity operations, NIS2 compliance programs, and
-      CISO-as-a-Service for organizations that can't afford to be the next headline.
-    </p>
-    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-      <a href="https://cal.com/chenist" target="_blank" class="lp-btn lp-btn--primary lp-btn--large lp-btn--pulse">
-        <i class="bi bi-shield-check"></i> Get a Free Security Assessment
-      </a>
-      <a href="#services" class="lp-btn lp-btn--outline lp-btn--large" style="border-color: rgba(229,227,218,0.3); color: var(--lp-offwhite);">
-        <i class="bi bi-arrow-down-circle"></i> See How We Protect You
-      </a>
-    </div>
-    <div class="lp-hero__proof" style="margin-top:2.5rem;">
-      <span style="display:inline-flex; align-items:center; gap:0.5rem; margin:0 1rem;">
-        <i class="bi bi-clock-history" style="color:var(--lp-green);"></i> NIS2 enforcement is <strong>active now</strong>
-      </span>
-      <span style="display:inline-flex; align-items:center; gap:0.5rem; margin:0 1rem;">
-        <i class="bi bi-exclamation-triangle" style="color:#D94F4F;"></i> Fines up to <strong>EUR 10M</strong>
-      </span>
-      <span style="display:inline-flex; align-items:center; gap:0.5rem; margin:0 1rem;">
-        <i class="bi bi-geo-alt" style="color:var(--lp-green);"></i> <strong>EU-based</strong> SOC operations
-      </span>
-    </div>
+<!-- ===== HERO ===== -->
+<div class="sec-hero">
+  <div class="container">
+    <h1>Proactive <span>Security</span><br>for Modern Organizations</h1>
+    <p>Blue Team cybersecurity operations and NIS2 compliance. Effortlessly monitor threats, respond to incidents, and maintain regulatory alignment.</p>
+    <a href="https://cal.com/chenist" target="_blank" class="sec-btn">Get a Free Assessment</a>
   </div>
 </div>
 
-<!-- ==================== THREAT COUNTER BAR ==================== -->
-<div style="background: #0a0c0f; padding: 1.25rem 0; text-align:center; border-bottom: 1px solid rgba(129,189,74,0.15);">
+<!-- ===== SERVICES GRID ===== -->
+<div class="sec-section-alt">
   <div class="container">
-    <div style="display:flex; justify-content:center; gap:3rem; flex-wrap:wrap; font-size:0.9rem; color: #86868b;">
-      <span><strong style="color:#D94F4F; font-size:1.25rem;">4.45M</strong><br>Avg. breach cost globally (IBM 2023)</span>
-      <span><strong style="color:#D94F4F; font-size:1.25rem;">83%</strong><br>of SMBs not prepared for cyberattacks</span>
-      <span><strong style="color:var(--lp-green); font-size:1.25rem;">&lt;24h</strong><br>Our detection + response time</span>
-      <span><strong style="color:var(--lp-green); font-size:1.25rem;">0 EUR</strong><br>Your free assessment cost</span>
-    </div>
-  </div>
-</div>
-
-<!-- ==================== PAIN POINTS ==================== -->
-<div class="lp-section">
-  <div class="container">
-    <div class="lp-section__header">
-      <div class="lp-section__eyebrow">The Reality</div>
-      <h2>Most SMBs Are One Phishing Email Away from a Crisis</h2>
-      <p>These aren't hypothetical risks. They're happening to companies like yours right now.</p>
-    </div>
-    <div class="row">
-      <div class="col-md-6 col-lg-4 mb-3">
-        <div class="lp-pain">
-          <div class="lp-pain__icon"><i class="bi bi-envelope-exclamation"></i></div>
-          <div>
-            <h4>No Threat Detection</h4>
-            <p>Without a SOC, attacks go unnoticed for months. By the time you discover a breach, the damage is done -- data exfiltrated, ransomware deployed, trust destroyed.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 mb-3">
-        <div class="lp-pain">
-          <div class="lp-pain__icon"><i class="bi bi-file-earmark-x"></i></div>
-          <div>
-            <h4>NIS2 Non-Compliance</h4>
-            <p>The NIS2 Directive is now enforceable across the EU. Non-compliant organizations face fines of EUR 7-10M and personal liability for management boards.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 mb-3">
-        <div class="lp-pain">
-          <div class="lp-pain__icon"><i class="bi bi-person-x"></i></div>
-          <div>
-            <h4>No Security Leadership</h4>
-            <p>You know you need a CISO but can't justify the EUR 120K+ salary. So security decisions get made ad-hoc, or not at all.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 mb-3">
-        <div class="lp-pain">
-          <div class="lp-pain__icon"><i class="bi bi-clock"></i></div>
-          <div>
-            <h4>24-Hour Reporting Requirement</h4>
-            <p>NIS2 requires you to report significant incidents within 24 hours. If you don't have detection and response procedures, you'll miss this window.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 mb-3">
-        <div class="lp-pain">
-          <div class="lp-pain__icon"><i class="bi bi-diagram-3"></i></div>
-          <div>
-            <h4>Supply Chain Exposure</h4>
-            <p>Your vendors are your attack surface. NIS2 mandates supply chain security assessments that most SMBs have never conducted.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 mb-3">
-        <div class="lp-pain">
-          <div class="lp-pain__icon"><i class="bi bi-graph-down-arrow"></i></div>
-          <div>
-            <h4>Reputation Destruction</h4>
-            <p>The average cost of a data breach for SMBs is EUR 120,000. But the reputational damage -- lost clients, broken trust -- is incalculable.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ==================== SERVICES ==================== -->
-<div class="lp-section--alt" id="services">
-  <div class="container">
-    <div class="lp-section__header">
-      <div class="lp-section__eyebrow">Our Services</div>
-      <h2>Complete Cybersecurity Operations for Your Organization</h2>
-      <p>Four integrated services that work together to protect every layer of your business.</p>
-    </div>
-    <div class="row">
-      <div class="col-md-6 col-lg-3 mb-4">
-        <div class="lp-feature" style="border-top: 3px solid var(--lp-green);">
-          <div class="lp-feature__icon"><i class="bi bi-shield-check"></i></div>
+    <h2>Everything you need to stay secure</h2>
+    <p class="sec-sub">Four integrated services that protect every layer of your business.</p>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="sec-tile">
+          <i class="bi bi-shield-check"></i>
           <h3>SOC Monitoring</h3>
-          <p>24/7 real-time surveillance, threat detection, and expert analysis of your security environment.</p>
-          <ul>
-            <li>SIEM deployment &amp; management</li>
-            <li>Real-time alerting &amp; triage</li>
-            <li>Monthly threat reports</li>
-            <li>Incident response coordination</li>
-          </ul>
+          <p>24/7 real-time surveillance, threat detection, and expert triage of your entire security environment.</p>
         </div>
       </div>
-      <div class="col-md-6 col-lg-3 mb-4">
-        <div class="lp-feature" style="border-top: 3px solid var(--lp-green);">
-          <div class="lp-feature__icon"><i class="bi bi-search"></i></div>
+      <div class="col-md-6 col-lg-3">
+        <div class="sec-tile">
+          <i class="bi bi-search"></i>
           <h3>Threat Hunting</h3>
-          <p>Proactive identification of hidden threats and advanced persistent attackers in your network.</p>
-          <ul>
-            <li>IOC &amp; behavioral analysis</li>
-            <li>Hypothesis-based hunting</li>
-            <li>Threat intelligence feeds</li>
-            <li>Detection rule enhancement</li>
-          </ul>
+          <p>Proactive identification of hidden threats that have evaded your automated detection systems.</p>
         </div>
       </div>
-      <div class="col-md-6 col-lg-3 mb-4">
-        <div class="lp-feature" style="border-top: 3px solid var(--lp-green);">
-          <div class="lp-feature__icon"><i class="bi bi-clipboard-check"></i></div>
+      <div class="col-md-6 col-lg-3">
+        <div class="sec-tile">
+          <i class="bi bi-clipboard-check"></i>
           <h3>NIS2 Compliance</h3>
           <p>End-to-end assessments, gap analysis, and compliance roadmaps for the NIS2 Directive.</p>
-          <ul>
-            <li>Scoping &amp; gap analysis</li>
-            <li>Risk management framework</li>
-            <li>Compliance roadmap</li>
-            <li>Board-ready reporting</li>
-          </ul>
         </div>
       </div>
-      <div class="col-md-6 col-lg-3 mb-4">
-        <div class="lp-feature" style="border-top: 3px solid var(--lp-green);">
-          <div class="lp-feature__icon"><i class="bi bi-person-badge"></i></div>
+      <div class="col-md-6 col-lg-3">
+        <div class="sec-tile">
+          <i class="bi bi-person-badge"></i>
           <h3>CISO as a Service</h3>
-          <p>Strategic cybersecurity leadership, board reporting, and policy development without the full-time cost.</p>
-          <ul>
-            <li>Security strategy &amp; governance</li>
-            <li>Executive reporting</li>
-            <li>Policy &amp; procedure development</li>
-            <li>Vendor risk management</li>
-          </ul>
+          <p>Strategic cybersecurity leadership, board reporting, and policy development on demand.</p>
         </div>
       </div>
-    </div>
-    <div class="text-center mt-3">
-      <a href="https://cal.com/chenist" target="_blank" class="lp-btn lp-btn--primary">
-        <i class="bi bi-calendar-check"></i> Discuss Your Security Needs
-      </a>
     </div>
   </div>
 </div>
 
-<!-- ==================== FEATURE ROWS ==================== -->
-<div class="lp-section">
+<!-- ===== FEATURE: Blue Team ===== -->
+<div class="sec-section">
   <div class="container">
-    <div class="lp-feature-row">
-      <div class="lp-feature-row__img">
-        <img src="/assets/images/stock/server-room-dark.jpg" alt="Security Operations Center monitoring screens" style="border-radius: var(--lp-radius-lg); box-shadow: 0 20px 60px rgba(0,0,0,0.2);">
+    <div class="sec-row">
+      <div class="sec-row-img">
+        <img src="/assets/images/stock/server-room-dark.jpg" alt="Security Operations Center">
       </div>
-      <div class="lp-feature-row__text">
-        <div class="lp-section__eyebrow">Blue Team Operations</div>
-        <h2>Continuous Monitoring<br>&amp; Rapid Response</h2>
-        <p>Our Security Operations Center operates around the clock, delivering continuous monitoring, advanced threat detection, expert analysis, and rapid incident response.</p>
-        <div style="display:flex; gap:1.5rem; margin-top:1.5rem; flex-wrap:wrap;">
-          <div style="display:flex; align-items:center; gap:0.5rem;">
-            <i class="bi bi-check-circle-fill" style="color:var(--lp-green);"></i>
-            <span style="font-weight:600;">24/7 SOC</span>
-          </div>
-          <div style="display:flex; align-items:center; gap:0.5rem;">
-            <i class="bi bi-check-circle-fill" style="color:var(--lp-green);"></i>
-            <span style="font-weight:600;">Open-source tools</span>
-          </div>
-          <div style="display:flex; align-items:center; gap:0.5rem;">
-            <i class="bi bi-check-circle-fill" style="color:var(--lp-green);"></i>
-            <span style="font-weight:600;">EU-based team</span>
-          </div>
+      <div class="sec-row-text">
+        <h2>Continuous Monitoring.<br>Rapid Response.</h2>
+        <p>Our Security Operations Center operates around the clock. We detect threats in real time, investigate with expert analysis, and respond before damage spreads. Your environment is watched even when you're not.</p>
+        <div class="sec-checks">
+          <span><i class="bi bi-check-circle-fill"></i> 24/7 SOC</span>
+          <span><i class="bi bi-check-circle-fill"></i> Open-source tooling</span>
+          <span><i class="bi bi-check-circle-fill"></i> EU-based team</span>
+        </div>
+        <div style="margin-top:2rem;">
+          <a href="https://cal.com/chenist" target="_blank" class="sec-link">Talk to our team</a>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="lp-section--alt">
+<!-- ===== FEATURE: NIS2 ===== -->
+<div class="sec-section-alt">
   <div class="container">
-    <div class="lp-feature-row lp-feature-row--reverse">
-      <div class="lp-feature-row__img">
-        <img src="/assets/images/stock/cybersecurity-monitor.jpg" alt="NIS2 compliance monitoring dashboard" style="border-radius: var(--lp-radius-lg); box-shadow: 0 20px 60px rgba(0,0,0,0.2);">
+    <div class="sec-row reverse">
+      <div class="sec-row-img">
+        <img src="/assets/images/stock/cybersecurity-monitor.jpg" alt="NIS2 compliance dashboard">
       </div>
-      <div class="lp-feature-row__text">
-        <div class="lp-section__eyebrow">Regulatory Compliance</div>
-        <h2>NIS2 Compliance<br>from Gap to Green</h2>
-        <p>From initial scoping and gap analysis through to full compliance and continuous regulatory alignment. We deliver risk management framework assessments, supply chain security reviews, and actionable compliance roadmaps tailored to your sector.</p>
-        <div style="display:flex; gap:1.5rem; margin-top:1.5rem; flex-wrap:wrap;">
-          <div style="display:flex; align-items:center; gap:0.5rem;">
-            <i class="bi bi-check-circle-fill" style="color:var(--lp-green);"></i>
-            <span style="font-weight:600;">4-6 week programs</span>
-          </div>
-          <div style="display:flex; align-items:center; gap:0.5rem;">
-            <i class="bi bi-check-circle-fill" style="color:var(--lp-green);"></i>
-            <span style="font-weight:600;">Board-ready reports</span>
-          </div>
-          <div style="display:flex; align-items:center; gap:0.5rem;">
-            <i class="bi bi-check-circle-fill" style="color:var(--lp-green);"></i>
-            <span style="font-weight:600;">Ongoing alignment</span>
-          </div>
+      <div class="sec-row-text">
+        <h2>NIS2 Compliance.<br>From Gap to Green.</h2>
+        <p>The NIS2 Directive is now enforceable. We guide you from initial scoping through full compliance — risk assessments, supply chain reviews, incident reporting procedures, and board-ready documentation.</p>
+        <div class="sec-checks">
+          <span><i class="bi bi-check-circle-fill"></i> 4-6 week programs</span>
+          <span><i class="bi bi-check-circle-fill"></i> Board-ready reports</span>
+          <span><i class="bi bi-check-circle-fill"></i> Ongoing alignment</span>
+        </div>
+        <div style="margin-top:2rem;">
+          <a href="https://cal.com/chenist" target="_blank" class="sec-link">Check your NIS2 status</a>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="lp-section">
+<!-- ===== FEATURE: Incident Response ===== -->
+<div class="sec-section">
   <div class="container">
-    <div class="lp-feature-row">
-      <div class="lp-feature-row__img">
-        <img src="/assets/images/stock/server-racks.jpg" alt="Incident response infrastructure" style="border-radius: var(--lp-radius-lg); box-shadow: 0 20px 60px rgba(0,0,0,0.2);">
+    <div class="sec-row">
+      <div class="sec-row-img">
+        <img src="/assets/images/stock/server-racks.jpg" alt="Incident response infrastructure">
       </div>
-      <div class="lp-feature-row__text">
-        <div class="lp-section__eyebrow">Incident Preparedness</div>
-        <h2>When the Worst Happens,<br>You'll Be Ready</h2>
-        <p>We develop, test, and maintain your incident response capabilities so that when a security incident occurs, your organization responds in minutes -- not weeks. From preparation through post-incident analysis, every phase is documented and rehearsed.</p>
-        <div style="display:flex; gap:1.5rem; margin-top:1.5rem; flex-wrap:wrap;">
-          <div style="display:flex; align-items:center; gap:0.5rem;">
-            <i class="bi bi-check-circle-fill" style="color:var(--lp-green);"></i>
-            <span style="font-weight:600;">IR plan development</span>
-          </div>
-          <div style="display:flex; align-items:center; gap:0.5rem;">
-            <i class="bi bi-check-circle-fill" style="color:var(--lp-green);"></i>
-            <span style="font-weight:600;">Tabletop exercises</span>
-          </div>
-          <div style="display:flex; align-items:center; gap:0.5rem;">
-            <i class="bi bi-check-circle-fill" style="color:var(--lp-green);"></i>
-            <span style="font-weight:600;">NIS2 24h reporting</span>
-          </div>
+      <div class="sec-row-text">
+        <h2>When the Worst Happens.<br>You'll Be Ready.</h2>
+        <p>We develop, test, and maintain your incident response capabilities. When a security incident occurs, your organization responds in minutes — not weeks. Every phase is documented and rehearsed.</p>
+        <div class="sec-checks">
+          <span><i class="bi bi-check-circle-fill"></i> IR plan development</span>
+          <span><i class="bi bi-check-circle-fill"></i> Tabletop exercises</span>
+          <span><i class="bi bi-check-circle-fill"></i> NIS2 24h reporting</span>
+        </div>
+        <div style="margin-top:2rem;">
+          <a href="https://cal.com/chenist" target="_blank" class="sec-link">Build your IR plan</a>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ==================== PROCESS ==================== -->
-<div class="lp-section--alt">
+<!-- ===== STATS ===== -->
+<div class="sec-section-alt">
+  <div class="container">
+    <div class="sec-stats">
+      <div class="sec-stat">
+        <div class="sec-stat-num">197</div>
+        <div class="sec-stat-label">Days to Detect (industry avg.)</div>
+      </div>
+      <div class="sec-stat">
+        <div class="sec-stat-num">&lt;24h</div>
+        <div class="sec-stat-label">Our Detection + Response</div>
+      </div>
+      <div class="sec-stat">
+        <div class="sec-stat-num">EUR 10M</div>
+        <div class="sec-stat-label">Max NIS2 Fine</div>
+      </div>
+      <div class="sec-stat">
+        <div class="sec-stat-num">0</div>
+        <div class="sec-stat-label">Cost of Your Assessment</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PROCESS ===== -->
+<div class="sec-section">
   <div class="container">
     <div class="row">
-      <div class="col-md-5">
-        <div class="lp-section__eyebrow">Our Process</div>
-        <h2 style="font-size: 2.25rem; font-weight: 700;">A Proven Four-Phase Approach</h2>
-        <p style="color: var(--lp-gray-500); font-size: 1.05rem; line-height: 1.7;">From initial discovery to continuous monitoring, our structured methodology ensures nothing falls through the cracks.</p>
-        <a href="https://cal.com/chenist" target="_blank" class="lp-btn lp-btn--primary mt-3">
-          <i class="bi bi-calendar-check"></i> Start with Discovery
-        </a>
+      <div class="col-lg-5">
+        <h2 style="text-align:left; font-size: 2.5rem;">How we work</h2>
+        <p style="color: #86868b; font-size: 1.1rem; line-height: 1.7;">A structured four-phase approach. No ambiguity, no surprises.</p>
       </div>
-      <div class="col-md-6 offset-md-1">
-        <div class="lp-process">
-          <div class="lp-process__number">1</div>
-          <h4>Discovery</h4>
-          <p>Stakeholder interviews, documentation review, and scoping analysis to understand your environment and regulatory obligations.</p>
-        </div>
-        <div class="lp-process">
-          <div class="lp-process__number">2</div>
-          <h4>Assessment</h4>
-          <p>Technical controls evaluation, risk management review, and gap identification against NIS2 requirements and industry standards.</p>
-        </div>
-        <div class="lp-process">
-          <div class="lp-process__number">3</div>
-          <h4>Implementation</h4>
-          <p>Remediation of identified gaps, policy development, security controls deployment, and compliance program buildout.</p>
-        </div>
-        <div class="lp-process">
-          <div class="lp-process__number">4</div>
-          <h4>Monitoring</h4>
-          <p>Continuous SOC monitoring, regular compliance reviews, threat hunting, and ongoing security posture optimization.</p>
+      <div class="col-lg-6 offset-lg-1">
+        <div class="sec-process">
+          <div class="sec-step">
+            <div></div>
+            <div>
+              <h4>Discovery</h4>
+              <p>Stakeholder interviews, documentation review, scoping analysis.</p>
+            </div>
+          </div>
+          <div class="sec-step">
+            <div></div>
+            <div>
+              <h4>Assessment</h4>
+              <p>Technical controls evaluation, gap identification, risk review.</p>
+            </div>
+          </div>
+          <div class="sec-step">
+            <div></div>
+            <div>
+              <h4>Implementation</h4>
+              <p>Gap remediation, policy development, security controls deployment.</p>
+            </div>
+          </div>
+          <div class="sec-step">
+            <div></div>
+            <div>
+              <h4>Monitoring</h4>
+              <p>Continuous SOC, compliance reviews, threat hunting, optimization.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ==================== NIS2 SECTORS ==================== -->
-<div class="lp-section">
+<!-- ===== NIS2 SECTORS ===== -->
+<div class="sec-section-alt">
   <div class="container">
-    <div class="lp-section__header">
-      <div class="lp-section__eyebrow">NIS2 Scope</div>
-      <h2>Does NIS2 Apply to Your Organization?</h2>
-      <p>If you operate in any of these sectors with 50+ employees or EUR 10M+ revenue, NIS2 applies to you.</p>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div style="padding: 2rem; background: rgba(129,189,74,0.05); border-radius: var(--lp-radius-md); border-left: 4px solid var(--lp-green); height:100%;">
-          <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 1.25rem; color: var(--lp-green);">
-            <i class="bi bi-exclamation-triangle-fill me-2"></i>Essential Entities (Highest Scrutiny)
-          </h3>
-          <ul style="list-style: none; padding: 0; margin: 0; font-size: 1rem; line-height: 2.2;">
-            <li><i class="bi bi-lightning-charge me-2" style="color:var(--lp-green);"></i>Energy (electricity, oil, gas, hydrogen)</li>
-            <li><i class="bi bi-truck me-2" style="color:var(--lp-green);"></i>Transport (air, rail, water, road)</li>
-            <li><i class="bi bi-bank me-2" style="color:var(--lp-green);"></i>Banking and financial market infrastructures</li>
-            <li><i class="bi bi-heart-pulse me-2" style="color:var(--lp-green);"></i>Health sector</li>
-            <li><i class="bi bi-droplet me-2" style="color:var(--lp-green);"></i>Drinking water and wastewater</li>
-            <li><i class="bi bi-hdd-network me-2" style="color:var(--lp-green);"></i>Digital infrastructure</li>
-            <li><i class="bi bi-building me-2" style="color:var(--lp-green);"></i>Public administration</li>
-            <li><i class="bi bi-rocket me-2" style="color:var(--lp-green);"></i>Space</li>
-          </ul>
-        </div>
+    <h2>Does NIS2 apply to you?</h2>
+    <p class="sec-sub">Organizations with 50+ employees or EUR 10M+ revenue in these sectors are in scope.</p>
+    <div class="row" style="max-width: 800px; margin: 0 auto;">
+      <div class="col-md-6 sec-nis2-col">
+        <h3>Essential Entities</h3>
+        <ul>
+          <li>Energy</li>
+          <li>Transport</li>
+          <li>Banking &amp; Financial Markets</li>
+          <li>Healthcare</li>
+          <li>Water &amp; Wastewater</li>
+          <li>Digital Infrastructure</li>
+          <li>Public Administration</li>
+          <li>Space</li>
+        </ul>
       </div>
-      <div class="col-md-6">
-        <div style="padding: 2rem; background: rgba(129,189,74,0.05); border-radius: var(--lp-radius-md); border-left: 4px solid rgba(129,189,74,0.4); height:100%;">
-          <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 1.25rem;">
-            <i class="bi bi-info-circle-fill me-2" style="color:var(--lp-gray-500);"></i>Important Entities
-          </h3>
-          <ul style="list-style: none; padding: 0; margin: 0; font-size: 1rem; line-height: 2.2;">
-            <li><i class="bi bi-envelope me-2" style="color:var(--lp-gray-500);"></i>Postal and courier services</li>
-            <li><i class="bi bi-recycle me-2" style="color:var(--lp-gray-500);"></i>Waste management</li>
-            <li><i class="bi bi-flask me-2" style="color:var(--lp-gray-500);"></i>Chemicals production and distribution</li>
-            <li><i class="bi bi-basket me-2" style="color:var(--lp-gray-500);"></i>Food production and distribution</li>
-            <li><i class="bi bi-gear me-2" style="color:var(--lp-gray-500);"></i>Manufacturing (medical devices, electronics, machinery)</li>
-            <li><i class="bi bi-cloud me-2" style="color:var(--lp-gray-500);"></i>Digital providers (cloud, data centers, CDNs)</li>
-            <li><i class="bi bi-mortarboard me-2" style="color:var(--lp-gray-500);"></i>Research organizations</li>
-          </ul>
-        </div>
+      <div class="col-md-6 sec-nis2-col">
+        <h3>Important Entities</h3>
+        <ul>
+          <li>Postal &amp; Courier Services</li>
+          <li>Waste Management</li>
+          <li>Chemicals</li>
+          <li>Food Production</li>
+          <li>Manufacturing</li>
+          <li>Digital Providers</li>
+          <li>Research Organizations</li>
+        </ul>
       </div>
     </div>
-    <div class="text-center mt-5">
-      <div class="lp-urgency" style="max-width: 700px; margin: 0 auto;">
-        <h3><i class="bi bi-question-circle me-2"></i>Not sure if NIS2 applies to you?</h3>
-        <p>Book a free 15-minute scoping call. We'll tell you in plain language whether you're in scope, what you need to do, and by when.</p>
-      </div>
-      <a href="https://cal.com/chenist" target="_blank" class="lp-btn lp-btn--primary mt-3">
-        <i class="bi bi-calendar-check"></i> Check My NIS2 Status
-      </a>
+    <div class="text-center" style="margin-top: 3rem;">
+      <a href="https://cal.com/chenist" target="_blank" class="sec-link">Not sure? Book a free scoping call</a>
     </div>
   </div>
 </div>
 
-<!-- ==================== TRUST / SOCIAL PROOF ==================== -->
-<div class="lp-section--alt">
+<!-- ===== CTA ===== -->
+<div class="sec-cta">
   <div class="container">
-    <div class="lp-section__header">
-      <div class="lp-section__eyebrow">Why chen.ist</div>
-      <h2>Numbers Don't Lie</h2>
-    </div>
-    <div class="lp-stats">
-      <div class="lp-stat">
-        <div class="lp-stat__number">197</div>
-        <div class="lp-stat__label">Avg. Days to Detect (without SOC)</div>
-      </div>
-      <div class="lp-stat">
-        <div class="lp-stat__number" style="color:var(--lp-green);">&lt;24h</div>
-        <div class="lp-stat__label">Our Detection + Response</div>
-      </div>
-      <div class="lp-stat">
-        <div class="lp-stat__number" style="color:#D94F4F;">EUR 10M</div>
-        <div class="lp-stat__label">Max NIS2 Fine</div>
-      </div>
-      <div class="lp-stat">
-        <div class="lp-stat__number" style="color:var(--lp-green);">0 EUR</div>
-        <div class="lp-stat__label">Your Free Assessment</div>
-      </div>
-    </div>
-
-    <div class="row mt-5">
-      <div class="col-md-4 mb-4">
-        <div class="lp-feature" style="border-top: 3px solid var(--lp-green);">
-          <div class="lp-feature__icon"><i class="bi bi-patch-check"></i></div>
-          <h3>EU-Based Operations</h3>
-          <p>Your security data never leaves the EU. Our SOC operates from Romania, fully compliant with GDPR and EU data sovereignty requirements.</p>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="lp-feature" style="border-top: 3px solid var(--lp-green);">
-          <div class="lp-feature__icon"><i class="bi bi-journal-check"></i></div>
-          <h3>Open-Source Tooling</h3>
-          <p>We use open-source security tools (Wazuh, Suricata, YARA, TheHive) so you can audit every rule, every alert, every response action.</p>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="lp-feature" style="border-top: 3px solid var(--lp-green);">
-          <div class="lp-feature__icon"><i class="bi bi-graph-up-arrow"></i></div>
-          <h3>Continuous Improvement</h3>
-          <p>Monthly security posture reports, quarterly reviews, and annual penetration testing ensure your security matures over time.</p>
-        </div>
-      </div>
+    <h2>Get your free<br>security assessment</h2>
+    <p>30 minutes. No sales pitch. An honest evaluation of your risk posture, NIS2 gaps, and top 3 priorities for this quarter.</p>
+    <a href="https://cal.com/chenist" target="_blank" class="sec-btn">Book Your Assessment</a>
+    <div class="sec-objections">
+      <span><i class="bi bi-check-circle-fill"></i> Free, no obligation</span> &nbsp;&nbsp;
+      <span><i class="bi bi-check-circle-fill"></i> 30 minutes or less</span> &nbsp;&nbsp;
+      <span><i class="bi bi-check-circle-fill"></i> Written report within 5 days</span>
     </div>
   </div>
 </div>
-
-<!-- ==================== LEAD MAGNET ==================== -->
-<div class="lp-section">
-  <div class="container" style="max-width: 700px;">
-    <div class="lp-lead-magnet">
-      <div class="lp-lead-magnet__icon"><i class="bi bi-clipboard-check"></i></div>
-      <div>
-        <h4>Free NIS2 Self-Assessment Checklist</h4>
-        <p>20-point checklist to evaluate your organization's current NIS2 readiness. Takes 10 minutes, reveals your biggest gaps.</p>
-        <a href="/resources/tools/zero-trust-assessment.html" class="lp-btn lp-btn--outline" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">
-          <i class="bi bi-arrow-right"></i> Take the Assessment
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ==================== URGENCY ==================== -->
-<div class="lp-section--dark" style="background: linear-gradient(135deg, #323642 0%, #1a1d24 100%);">
-  <div class="container" style="max-width: 800px; text-align: center;">
-    <div style="font-size:3rem; margin-bottom:1rem;"><i class="bi bi-exclamation-octagon" style="color:#D94F4F;"></i></div>
-    <div class="lp-section__eyebrow" style="color: #D94F4F;">Time-Sensitive</div>
-    <h2 style="color: var(--lp-offwhite); font-size: 2rem;">NIS2 Enforcement Is Active. Fines Are Real.</h2>
-    <p style="color: rgba(229,227,218,0.8); font-size: 1.05rem; max-width: 600px; margin: 0 auto 1.5rem;">
-      EU member states are now enforcing the NIS2 Directive. Organizations found non-compliant
-      face fines up to <strong style="color:#D94F4F;">EUR 10M or 2% of global annual turnover</strong> -- whichever is higher.
-      <strong>Management boards face personal liability.</strong>
-    </p>
-    <a href="https://cal.com/chenist" target="_blank" class="lp-btn lp-btn--primary lp-btn--large lp-btn--pulse">
-      <i class="bi bi-shield-check"></i> Start Your Compliance Journey Now
-    </a>
-  </div>
-</div>
-
-<!-- ==================== FINAL CTA ==================== -->
-<div class="lp-cta-block">
-  <div class="container">
-    <h2>You Can't Protect<br>What You Can't See</h2>
-    <p>A free 30-minute security assessment reveals your actual risk posture, NIS2 gaps, and the 3 highest-priority actions you should take this quarter.</p>
-    <a href="https://cal.com/chenist" target="_blank" class="lp-btn lp-btn--primary lp-btn--large lp-btn--pulse">
-      <i class="bi bi-shield-check"></i> Get Your Free Assessment
-    </a>
-    <div class="lp-cta-block__objection" style="margin-top:2rem;">
-      <span><i class="bi bi-check-circle-fill"></i> Free, confidential assessment</span> &nbsp;&nbsp;
-      <span><i class="bi bi-check-circle-fill"></i> No vendor lock-in</span> &nbsp;&nbsp;
-      <span><i class="bi bi-check-circle-fill"></i> Actionable report within 5 business days</span>
-    </div>
-  </div>
-</div>
-
-<!-- ==================== MOBILE STICKY CTA ==================== -->
-<div class="lp-sticky-cta" id="stickyCtaBar" style="display:none;">
-  <span style="font-weight:600; font-size:0.9rem;">Free security assessment</span>
-  <a href="https://cal.com/chenist" target="_blank" class="lp-btn lp-btn--primary" style="padding:0.6rem 1.5rem; font-size:0.9rem;">
-    <i class="bi bi-shield-check"></i> Book Now
-  </a>
-</div>
-<script>
-if (window.innerWidth < 768) {
-  var stickyBar = document.getElementById('stickyCtaBar');
-  window.addEventListener('scroll', function() {
-    stickyBar.style.display = window.scrollY > 500 ? 'flex' : 'none';
-  });
-  document.body.classList.add('has-sticky-cta');
-  var calBtn = document.querySelector('[data-cal-link]');
-  if (calBtn) calBtn.style.display = 'none';
-}
-</script>
 ```
