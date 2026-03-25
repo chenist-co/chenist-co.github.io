@@ -27,15 +27,31 @@ from: markdown+raw_html
 ## Våra tjänster {.text-center .mt-5 .mb-4}
 
 ::: {.row .mt-5}
-::: {.col-md-4}
+::: {.col-lg-4 .col-md-6}
+::: {.feature-card}
+::: {.feature-card-icon .text-center}
+<i class="bi bi-terminal"></i>
+:::
+
+### Digital Infrastruktur {.text-center}
+
+Open Source, UNIX & Apple för SMF. Linux, BSD, NixOS och nya Apple Business-plattformen.
+
+::: {.text-center .mt-3}
+[Läs mer](/digital/){.btn .btn-outline-primary}
+:::
+:::
+:::
+
+::: {.col-lg-4 .col-md-6}
 ::: {.feature-card}
 ::: {.feature-card-icon .text-center}
 <i class="bi bi-shield-check"></i>
 :::
 
-### Säkerhetslösningar {.text-center}
+### Cybersäkerhet {.text-center}
 
-Kompletta säkerhetslösningar som skyddar organisationens kritiska tillgångar och information.
+Blue Team: SOC-övervakning dygnet runt, hotjakt, incidenthantering och säkerhetsanalys.
 
 ::: {.text-center .mt-3}
 [Läs mer](/services/cybersecurity/){.btn .btn-outline-primary}
@@ -43,7 +59,7 @@ Kompletta säkerhetslösningar som skyddar organisationens kritiska tillgångar 
 :::
 :::
 
-::: {.col-md-4}
+::: {.col-lg-4 .col-md-6}
 ::: {.feature-card}
 ::: {.feature-card-icon .text-center}
 <i class="bi bi-cloud"></i>
@@ -51,26 +67,10 @@ Kompletta säkerhetslösningar som skyddar organisationens kritiska tillgångar 
 
 ### Molntjänster {.text-center}
 
-Skalbar och pålitlig molninfrastruktur som växer med dina affärsbehov.
+Migrering, infrastruktur, DevOps och molnsäkerhet på AWS, Azure och Google Cloud.
 
 ::: {.text-center .mt-3}
 [Läs mer](/services/cloud/){.btn .btn-outline-primary}
-:::
-:::
-:::
-
-::: {.col-md-4}
-::: {.feature-card}
-::: {.feature-card-icon .text-center}
-<i class="bi bi-code-square"></i>
-:::
-
-### Digital Motståndskraft {.text-center}
-
-Strategiska tekniska ramverk som säkerställer att din organisation förblir operativ och säker under alla omständigheter.
-
-::: {.text-center .mt-3}
-[Läs mer](/services/digital-resilience/){.btn .btn-outline-primary}
 :::
 :::
 :::

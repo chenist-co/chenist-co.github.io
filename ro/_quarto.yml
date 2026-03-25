@@ -7,10 +7,12 @@ website:
     left:
       - href: index.qmd
         text: Acasă
-      - href: services.qmd
-        text: Servicii
-      - href: projects.qmd
-        text: Proiecte
+      - text: Servicii
+        menu:
+          - href: services.qmd
+            text: Prezentare
+          - href: digital/index.qmd
+            text: Infrastructură Digitală
       - href: blog.qmd
         text: Blog
       - href: resources.qmd

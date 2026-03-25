@@ -7,10 +7,12 @@ website:
     left:
       - href: index.qmd
         text: Startseite
-      - href: services.qmd
-        text: Dienstleistungen
-      - href: projects.qmd
-        text: Projekte
+      - text: Dienstleistungen
+        menu:
+          - href: services.qmd
+            text: Übersicht
+          - href: digital/index.qmd
+            text: Digitale Infrastruktur
       - href: blog.qmd
         text: Blog
       - href: resources.qmd

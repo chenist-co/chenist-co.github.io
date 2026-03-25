@@ -1,0 +1,798 @@
+---
+title: "Digital Infrastruktur"
+subtitle: "Open-Source, UNIX och Apple-infrastruktur för företag i alla storlekar"
+description: "Produktionsgrad open-source, Linux, BSD och Apple Business-infrastruktur för SMF. NixOS, OpenBSD, FreeBSD, Nextcloud och zero-touch Apple-enhetsdistribution."
+from: markdown+raw_html
+format:
+  html:
+    include-in-header:
+      text: |
+        <style>
+        .platform-badge {
+          display: inline-block;
+          padding: 0.25rem 0.75rem;
+          border-radius: 2rem;
+          font-size: 0.8rem;
+          font-weight: 600;
+          margin: 0.15rem;
+        }
+        .badge-linux { background: rgba(255, 193, 7, 0.15); color: #FFC107; }
+        .badge-bsd { background: rgba(220, 53, 69, 0.15); color: #DC3545; }
+        .badge-apple { background: rgba(108, 117, 125, 0.15); color: #6C757D; }
+        .badge-opensource { background: rgba(129, 189, 74, 0.15); color: #81BD4A; }
+        .badge-free { background: rgba(25, 135, 84, 0.15); color: #198754; font-weight: 700; }
+        .pricing-card { border: 2px solid transparent; transition: all 0.3s ease; }
+        .pricing-card:hover { border-color: #81BD4A; transform: translateY(-4px); }
+        .pricing-card .card-header { font-size: 1.1rem; }
+        .pricing-featured { border-color: #81BD4A; }
+        .pricing-featured .card-header { background-color: #81BD4A !important; }
+        .apple-business-highlight {
+          background: linear-gradient(135deg, rgba(108,117,125,0.08) 0%, rgba(129,189,74,0.08) 100%);
+          border-left: 4px solid #6C757D;
+          padding: 1.5rem;
+          border-radius: 0 0.5rem 0.5rem 0;
+          margin: 1rem 0;
+        }
+        </style>
+---
+
+```{=html}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Hem</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Digital Infrastruktur</li>
+  </ol>
+</nav>
+
+<div class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8 offset-md-2 text-center">
+        <h1><span class="text-white">Digital</span> <span class="text-green">Infrastruktur</span></h1>
+        <p>Open-Source, UNIX och Apple-plattformar anpassade för SMF i alla branscher</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .text-white { color: white !important; }
+</style>
+```
+
+::: {.container .page-section}
+
+## Infrastruktur som fungerar för ditt företag
+
+Vi designar, driftsätter och hanterar produktionsgrad digital infrastruktur byggd på open-source-programvara, UNIX-operativsystem och Apple-plattformar. Våra lösningar är anpassade för små och medelstora företag i alla verksamhetsområden -- från advokatbyråer och kliniker till tillverkning, detaljhandel, logistik och kreativa studior.
+
+::: {.row .mt-4}
+::: {.col-md-4}
+::: {.card .mb-4 .h-100}
+::: {.card-body}
+### <i class="bi bi-code-square text-success"></i> Open-Source-stack
+
+Produktionsklara open-source-verktyg som ersätter dyr proprietär programvara utan att offra funktionalitet.
+
+<span class="platform-badge badge-opensource">Self-Hosted</span>
+<span class="platform-badge badge-opensource">Ingen leverantörsinlåsning</span>
+
+#### Inkluderar:
+- Produktivitets- och samarbetssviter
+- Kommunikations- och meddelandeplattformar
+- Identitets- och åtkomsthantering
+- Övervakning och observerbarhet
+- DevOps och versionshantering
+
+[Läs mer](#open-source){.btn .btn-outline-primary .mt-2}
+:::
+:::
+:::
+
+::: {.col-md-4}
+::: {.card .mb-4 .h-100}
+::: {.card-body}
+### <i class="bi bi-terminal text-warning"></i> UNIX-system
+
+BSD- och Linux-infrastruktur i enterpriseklass för servrar, brandväggar, lagring och nätverk.
+
+<span class="platform-badge badge-linux">Linux</span>
+<span class="platform-badge badge-bsd">BSD</span>
+<span class="platform-badge badge-linux">NixOS</span>
+
+#### Inkluderar:
+- Serverdistribution och härdning
+- Brandvägg och nätverkssäkerhet
+- Lagrings- och backupsystem
+- Deklarativ infrastruktur
+- Hybridmiljöbrygga
+
+[Läs mer](#unix){.btn .btn-outline-primary .mt-2}
+:::
+:::
+:::
+
+::: {.col-md-4}
+::: {.card .mb-4 .h-100}
+::: {.card-body}
+### <i class="bi bi-apple text-secondary"></i> Apple-infrastruktur
+
+Komplett Apple-ekosystemhantering med den nya Apple Business-plattformen och macOS-flottutrullning.
+
+<span class="platform-badge badge-apple">macOS</span>
+<span class="platform-badge badge-apple">iOS/iPadOS</span>
+<span class="platform-badge badge-free">Gratis MDM</span>
+
+#### Inkluderar:
+- Apple Business-installation och hantering
+- Zero-touch enhetsdistribution
+- Företags-e-post, kalender och katalog
+- Varumärkeshantering på Apple Maps
+- AppleCare+ for Business
+
+[Läs mer](#apple){.btn .btn-outline-primary .mt-2}
+:::
+:::
+:::
+:::
+
+---
+
+## Open-Source-stack för företag {#open-source}
+
+Ersätt dyra proprietära licenser med stridsbeprövade open-source-alternativ. Vi hanterar driftsättning, konfiguration, säkerhetshärdning och löpande underhåll så att ditt team kan fokusera på sitt arbete.
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-lg-4 col-md-6">
+    <div class="feature-card text-center mb-4">
+      <div class="feature-card-icon">
+        <i class="bi bi-file-earmark-richtext"></i>
+      </div>
+      <h3>Produktivitet och Samarbete</h3>
+      <p>Komplett kontorssvit, molnlagring och dokumentsamarbete i realtid för hela teamet.</p>
+      <small class="text-muted">LibreOffice | Nextcloud | Collabora Online | CryptPad | OnlyOffice</small>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="feature-card text-center mb-4">
+      <div class="feature-card-icon">
+        <i class="bi bi-chat-dots"></i>
+      </div>
+      <h3>Kommunikation</h3>
+      <p>Säker meddelanden, videokonferenser och teamkanaler med fullständig datasuveränitet.</p>
+      <small class="text-muted">Matrix/Element | Mattermost | Jitsi Meet | Rocket.Chat</small>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="feature-card text-center mb-4">
+      <div class="feature-card-icon">
+        <i class="bi bi-person-badge"></i>
+      </div>
+      <h3>Identitet och Åtkomst</h3>
+      <p>Enkel inloggning, katalogtjänster och multifaktorautentisering på alla dina system.</p>
+      <small class="text-muted">Keycloak | OpenLDAP | FreeIPA | Authelia</small>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="feature-card text-center mb-4">
+      <div class="feature-card-icon">
+        <i class="bi bi-graph-up"></i>
+      </div>
+      <h3>Övervakning och Observerbarhet</h3>
+      <p>Instrumentpaneler i realtid, larm och drifttidsövervakning för hela din infrastruktur.</p>
+      <small class="text-muted">Prometheus | Grafana | Uptime Kuma | Zabbix | Loki</small>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="feature-card text-center mb-4">
+      <div class="feature-card-icon">
+        <i class="bi bi-git"></i>
+      </div>
+      <h3>DevOps och Versionshantering</h3>
+      <p>Egenvärdade kodarkiv, CI/CD-pipelines och containerorkestrering.</p>
+      <small class="text-muted">Gitea/Forgejo | Woodpecker CI | Docker | Podman</small>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="feature-card text-center mb-4">
+      <div class="feature-card-icon">
+        <i class="bi bi-database"></i>
+      </div>
+      <h3>Databaser och Lagring</h3>
+      <p>Pålitlig datalagring, automatiserade backuper och databaskluster med hög tillgänglighet.</p>
+      <small class="text-muted">PostgreSQL | MariaDB | Redis | MinIO | Restic</small>
+    </div>
+  </div>
+</div>
+```
+
+---
+
+## UNIX-infrastruktur {#unix}
+
+Vi bygger och hanterar servrar, brandväggar och nätverksenheter på beprövade UNIX-operativsystem. Oavsett om du behöver en härdad OpenBSD-brandvägg, en deklarativ NixOS-flotta eller en traditionell Linux-serverstack, levererar vi infrastruktur som är säker, reproducerbar och underhållbar.
+
+### Linux-distributioner
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-warning text-dark">
+        <h4 class="mb-0"><i class="bi bi-snow me-2"></i>NixOS</h4>
+      </div>
+      <div class="card-body">
+        <p>Deklarativ, reproducerbar infrastruktur. Definiera hela ditt system som kod och distribuera identiska konfigurationer till valfritt antal maskiner.</p>
+        <ul class="mb-0">
+          <li>Oföränderlig systemkonfiguration</li>
+          <li>Atomiska uppgraderingar och tillbakarullningar</li>
+          <li>Reproducerbara byggen över miljöer</li>
+          <li>Flake-baserade multi-maskindistributioner</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-warning text-dark">
+        <h4 class="mb-0"><i class="bi bi-ubuntu me-2"></i>Debian/Ubuntu</h4>
+      </div>
+      <div class="card-body">
+        <p>Den mest stödda Linux-familjen. Idealisk för applikationsservrar, webbhotell och arbetsbelastningar med bred programvarukompatibilitet.</p>
+        <ul class="mb-0">
+          <li>LTS-versioner med 5+ års support</li>
+          <li>Massivt paketekosystem</li>
+          <li>Oövervakade säkerhetsuppdateringar</li>
+          <li>Beprövad i produktion i alla skalor</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-warning text-dark">
+        <h4 class="mb-0"><i class="bi bi-building me-2"></i>RHEL/AlmaLinux</h4>
+      </div>
+      <div class="card-body">
+        <p>Stabilitet i enterpriseklass för arbetsbelastningar som kräver leverantörscertifiering, efterlevnadsmandat eller långt livscykelsupport.</p>
+        <ul class="mb-0">
+          <li>10 års livscykelsupport</li>
+          <li>SELinux obligatorisk åtkomstkontroll</li>
+          <li>FIPS och Common Criteria-certifierad</li>
+          <li>Leverantörscertifierade applikationsstackar</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+### BSD-system
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-danger text-white">
+        <h4 class="mb-0"><i class="bi bi-shield-lock me-2"></i>OpenBSD</h4>
+      </div>
+      <div class="card-body">
+        <p>Det säkraste operativsystemet för allmänt bruk. Idealiskt för brandväggar, VPN-gateways och säkerhetskritiska nätverksenheter.</p>
+        <ul class="mb-0">
+          <li>pf-paketfilter (branschstandardbrandvägg)</li>
+          <li>Säker som standard-filosofi</li>
+          <li>Inbyggt VPN (WireGuard, IKEv2)</li>
+          <li>Minimal attackyta</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-danger text-white">
+        <h4 class="mb-0"><i class="bi bi-hdd-stack me-2"></i>FreeBSD</h4>
+      </div>
+      <div class="card-body">
+        <p>Högpresterande lagring och nätverk. Grunden för Netflix CDN, WhatsApp och Sony PlayStation Network.</p>
+        <ul class="mb-0">
+          <li>ZFS enterprise-filsystem</li>
+          <li>Jails-containerisering</li>
+          <li>bhyve hypervisor</li>
+          <li>Avancerat nätverk (VNET, CARP)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header bg-danger text-white">
+        <h4 class="mb-0"><i class="bi bi-cpu me-2"></i>NetBSD</h4>
+      </div>
+      <div class="card-body">
+        <p>Körs på i princip vilken hårdvara som helst. Perfekt för inbyggda system, IoT-gateways och återanvändning av äldre hårdvara.</p>
+        <ul class="mb-0">
+          <li>Stödjer 60+ hårdvaruplattformar</li>
+          <li>Lättviktig och effektiv</li>
+          <li>pkgsrc cross-platform-paket</li>
+          <li>Idealisk för edge- och IoT-distributioner</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+### Hybridmiljöintegration
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-md-12">
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-3 text-center">
+            <div class="process-step">
+              <div class="process-icon">
+                <i class="bi bi-people fs-1 text-primary"></i>
+              </div>
+              <h5>Katalogbrygga</h5>
+              <p>Samba/AD-integration som kopplar UNIX-system med befintliga Windows-miljöer</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 text-center">
+            <div class="process-step">
+              <div class="process-icon">
+                <i class="bi bi-key fs-1 text-primary"></i>
+              </div>
+              <h5>Cross-Platform SSO</h5>
+              <p>En identitet på Linux, BSD, macOS och Windows-system</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 text-center">
+            <div class="process-step">
+              <div class="process-icon">
+                <i class="bi bi-share fs-1 text-primary"></i>
+              </div>
+              <h5>Fildelning</h5>
+              <p>Enhetlig filåtkomst på alla plattformar via NFS, SMB och WebDAV</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 text-center">
+            <div class="process-step">
+              <div class="process-icon">
+                <i class="bi bi-printer fs-1 text-primary"></i>
+              </div>
+              <h5>Skrivare och Kringutrustning</h5>
+              <p>CUPS-baserad skrivarhantering och kringutrustningsdelning i blandade miljöer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+---
+
+## Apple-infrastruktur {#apple}
+
+Vi är tidiga användare och distributionspartner för den nya **Apple Business**-plattformen, som lanseras 14 april 2026. Apple Business ersätter Apple Business Manager, Apple Business Essentials och Apple Business Connect i en enda, enhetlig plattform -- och bastjänsten är **gratis**.
+
+```{=html}
+<div class="apple-business-highlight">
+  <div class="row align-items-center">
+    <div class="col-md-8">
+      <h3 class="mb-2"><i class="bi bi-apple me-2"></i>Apple Business <span class="platform-badge badge-free">Gratis Plattform</span></h3>
+      <p class="mb-1">En ny allt-i-ett-plattform för företag i alla storlekar. Hantera personer och enheter, nå kunder, utrusta ditt team med viktiga verktyg och få support från Apple-experter.</p>
+      <p class="mb-0 text-muted"><small>Tillgänglig 14 april 2026 i 200+ länder och regioner</small></p>
+    </div>
+    <div class="col-md-4 text-center">
+      <a href="https://business.apple.com/preview" target="_blank" class="btn btn-outline-secondary btn-lg">
+        <i class="bi bi-box-arrow-up-right me-2"></i>Apple Business Förhandsvisning
+      </a>
+    </div>
+  </div>
+</div>
+```
+
+### Enhetshantering och Distribution
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-lg-4 col-md-6">
+    <div class="feature-card text-center mb-4">
+      <div class="feature-card-icon">
+        <i class="bi bi-phone"></i>
+      </div>
+      <h3>Inbyggt MDM</h3>
+      <p>Omfattande hantering av mobila enheter med fullständig organisatorisk synlighet. Ingen tredjepartslicens för MDM krävs.</p>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="feature-card text-center mb-4">
+      <div class="feature-card-icon">
+        <i class="bi bi-layers"></i>
+      </div>
+      <h3>Blueprints</h3>
+      <p>Förkonfigurerade enhetsinställningar för zero-touch-distribution. Anställda packar upp och börjar arbeta direkt.</p>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="feature-card text-center mb-4">
+      <div class="feature-card-icon">
+        <i class="bi bi-shield-lock"></i>
+      </div>
+      <h3>Hanterade Apple-konton</h3>
+      <p>Kryptografisk separation mellan arbets- och personlig data. Fullständig integritet för anställda, full kontroll för IT.</p>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="feature-card text-center mb-4">
+      <div class="feature-card-icon">
+        <i class="bi bi-people"></i>
+      </div>
+      <h3>Teamhantering</h3>
+      <p>Gruppera anställda efter funktion eller team. Tilldela appar, roller och behörigheter i stor skala.</p>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="feature-card text-center mb-4">
+      <div class="feature-card-icon">
+        <i class="bi bi-bag-check"></i>
+      </div>
+      <h3>Appdistribution</h3>
+      <p>Distribuera företagsappar från App Store till valfritt antal enheter -- från 10 till 10 000.</p>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="feature-card text-center mb-4">
+      <div class="feature-card-icon">
+        <i class="bi bi-code-slash"></i>
+      </div>
+      <h3>Admin API</h3>
+      <p>Programmatisk enhetshantering för storskaliga distributioner och anpassade automatiseringsflöden.</p>
+    </div>
+  </div>
+</div>
+```
+
+### Kommunikations- och Samarbetsverktyg
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-secondary text-white">
+        <h4 class="mb-0">Företags-e-post och Kalender</h4>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li><strong>E-post med egen domän:</strong> Professionell e-post på din egen domän (ta med befintlig eller köp ny)</li>
+          <li><strong>Kalenderdelegering:</strong> Delade kalendrar och schemaläggningsverktyg för team</li>
+          <li><strong>Företagskatalog:</strong> Inbyggd katalog med personliga kontaktkort för varje anställd</li>
+          <li><strong>iCloud-lagring:</strong> Automatisk backup och filsynkronisering (från $0,99/användare/månad)</li>
+        </ul>
+        <p class="text-muted mb-0"><small>Kräver iOS 26, iPadOS 26 eller macOS 26</small></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-secondary text-white">
+        <h4 class="mb-0">Varumärke och Kundupptäckt</h4>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li><strong>Varumärkesprofiler:</strong> Hantera ditt varumärke på Apple Maps, Wallet och Mail</li>
+          <li><strong>Rika Platskort:</strong> Foton, öppettider, platsdetaljer på Apple Maps</li>
+          <li><strong>Platsinsikter:</strong> Analys av hur kunder upptäcker ditt företag</li>
+          <li><strong>Anpassade Åtgärder:</strong> Beställ, reservera eller boka direkt från Apple Maps till din webbplats</li>
+          <li><strong>Tap to Pay:</strong> Acceptera betalningar på iPhone med märkta betalningsskärmar</li>
+          <li><strong>Annonser på Apple Maps:</strong> Sponsrad placering i sökresultat och Föreslagna Platser (USA/Kanada, sommar 2026)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+### Apple Business Prissättning
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-md-4">
+    <div class="card mb-4 text-center">
+      <div class="card-header bg-success text-white">
+        <h4 class="mb-0">Basplattform</h4>
+      </div>
+      <div class="card-body">
+        <h2 class="text-success">Gratis</h2>
+        <p>MDM, Blueprints, Hanterade Konton, Varumärkeshantering, Appdistribution, Admin API</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card mb-4 text-center">
+      <div class="card-header bg-primary text-white">
+        <h4 class="mb-0">iCloud-lagring</h4>
+      </div>
+      <div class="card-body">
+        <h2 class="text-primary">$0,99+</h2>
+        <p>Per användare/månad. Upp till 2TB per användare för backup, filsynk och samarbete.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card mb-4 text-center">
+      <div class="card-header bg-warning text-dark">
+        <h4 class="mb-0">AppleCare+ for Business</h4>
+      </div>
+      <div class="card-body">
+        <h2 class="text-warning">$6,99-$13,99</h2>
+        <p>Per enhet/månad. Expertteknisk support och hårdvarureparationstäckning.</p>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+### Migrering från Äldre Apple-tjänster
+
+Om ditt företag för närvarande använder Apple Business Manager, Apple Business Essentials eller Apple Business Connect, kommer alla tre att avvecklas den 14 april 2026. Vi hanterar den kompletta migreringen:
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-md-12">
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-marker bg-success"></div>
+        <div class="timeline-content">
+          <h3>Granska Befintlig Installation</h3>
+          <p>Granskning av din nuvarande Apple Business Manager/Essentials-konfiguration, registrerade enheter och hanterade Apple ID:n.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker bg-success"></div>
+        <div class="timeline-content">
+          <h3>Planera Migrering</h3>
+          <p>Mappa befintliga enhetsgrupper, apptilldelningar och policyer till Apple Business Blueprints och teamstrukturer.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker bg-success"></div>
+        <div class="timeline-content">
+          <h3>Genomföra Övergång</h3>
+          <p>Migrera till den enhetliga Apple Business-plattformen. Business Connect-data migrerar automatiskt; enhetshantering kräver planering av omregistrering.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker bg-success"></div>
+        <div class="timeline-content">
+          <h3>Verifiera och Optimera</h3>
+          <p>Bekräfta att alla enheter, konton och varumärkesprofiler är operativa. Optimera Blueprints och konfigurera nya funktioner (e-post, kalender, katalog).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+---
+
+## SMF-paket {#packages}
+
+Vi erbjuder skräddarsydda paket som kombinerar Open-Source, UNIX och Apple-infrastruktur för att matcha ditt företags storlek och behov. Varje paket kan anpassas till dina specifika branschkrav.
+
+```{=html}
+<div class="row mt-5">
+  <div class="col-md-4">
+    <div class="card pricing-card mb-4 h-100">
+      <div class="card-header bg-primary text-white text-center">
+        <h3 class="mb-0">Starter</h3>
+        <small>1-10 anställda</small>
+      </div>
+      <div class="card-body">
+        <h4 class="text-center mb-4">För små team som kommer igång</h4>
+        <ul>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Apple Business-installation och Blueprints</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>1 Linux-server (Debian/Ubuntu)</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Nextcloud (filer, kontakter, kalender)</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Företags-e-post på egen domän</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Grundläggande brandvägg (OpenBSD pf eller UFW)</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Automatiserade backuper (Restic)</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Drifttidsövervakning</li>
+        </ul>
+        <div class="text-center mt-auto">
+          <a href="https://cal.com/chenist" target="_blank" class="btn btn-outline-primary w-100">Boka Konsultation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card pricing-card pricing-featured mb-4 h-100">
+      <div class="card-header text-white text-center">
+        <h3 class="mb-0">Growth</h3>
+        <small>11-50 anställda</small>
+      </div>
+      <div class="card-body">
+        <h4 class="text-center mb-4">För växande företag</h4>
+        <ul>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Allt i Starter, plus:</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Fullständigt Apple MDM med teamgruppering</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Dedikerad OpenBSD-brandvägg/VPN</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Keycloak SSO på alla system</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Matrix/Element teammeddelanden</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Collabora Online (dokumentredigering)</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Prometheus + Grafana-övervakning</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Samba/AD-brygga (vid behov)</li>
+        </ul>
+        <div class="text-center mt-auto">
+          <a href="https://cal.com/chenist" target="_blank" class="btn btn-success w-100">Boka Konsultation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card pricing-card mb-4 h-100">
+      <div class="card-header bg-warning text-dark text-center">
+        <h3 class="mb-0">Enterprise</h3>
+        <small>50+ anställda</small>
+      </div>
+      <div class="card-body">
+        <h4 class="text-center mb-4">För komplexa flersitesverksamheter</h4>
+        <ul>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Allt i Growth, plus:</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Apple Business Admin API-integration</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>NixOS deklarativ flerserverflotta</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>FreeBSD ZFS-lagringskluster</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Högtillgänglighetskonfigurationer</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>VPN-mesh för flera platser</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>Efterlevnadsbaslinjer (NIS2, GDPR)</li>
+          <li><i class="bi bi-check-circle text-success me-2"></i>24/7-övervakning och incidenthantering</li>
+        </ul>
+        <div class="text-center mt-auto">
+          <a href="https://cal.com/chenist" target="_blank" class="btn btn-outline-warning w-100">Boka Konsultation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+## Branscher vi betjänar
+
+Våra digitala infrastrukturlösningar är utformade för **alla verksamhetsområden**. Vi har erfarenhet inom:
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-md-3 col-6">
+    <div class="text-center mb-4">
+      <i class="bi bi-building fs-1 text-primary"></i>
+      <h5 class="mt-2">Juridik och Konsulting</h5>
+    </div>
+  </div>
+  <div class="col-md-3 col-6">
+    <div class="text-center mb-4">
+      <i class="bi bi-heart-pulse fs-1 text-primary"></i>
+      <h5 class="mt-2">Sjukvård och Kliniker</h5>
+    </div>
+  </div>
+  <div class="col-md-3 col-6">
+    <div class="text-center mb-4">
+      <i class="bi bi-gear fs-1 text-primary"></i>
+      <h5 class="mt-2">Tillverkning</h5>
+    </div>
+  </div>
+  <div class="col-md-3 col-6">
+    <div class="text-center mb-4">
+      <i class="bi bi-shop fs-1 text-primary"></i>
+      <h5 class="mt-2">Detaljhandel och Besöksnäring</h5>
+    </div>
+  </div>
+  <div class="col-md-3 col-6">
+    <div class="text-center mb-4">
+      <i class="bi bi-truck fs-1 text-primary"></i>
+      <h5 class="mt-2">Logistik och Transport</h5>
+    </div>
+  </div>
+  <div class="col-md-3 col-6">
+    <div class="text-center mb-4">
+      <i class="bi bi-palette fs-1 text-primary"></i>
+      <h5 class="mt-2">Kreativa Branscher och Media</h5>
+    </div>
+  </div>
+  <div class="col-md-3 col-6">
+    <div class="text-center mb-4">
+      <i class="bi bi-mortarboard fs-1 text-primary"></i>
+      <h5 class="mt-2">Utbildning</h5>
+    </div>
+  </div>
+  <div class="col-md-3 col-6">
+    <div class="text-center mb-4">
+      <i class="bi bi-bank fs-1 text-primary"></i>
+      <h5 class="mt-2">Finans och Försäkring</h5>
+    </div>
+  </div>
+</div>
+```
+
+## Varför välja chen.ist för Digital Infrastruktur
+
+```{=html}
+<div class="row mt-4">
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">Vår Expertis</h3>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li><strong>UNIX-veteraner:</strong> Djup expertis inom BSD, Linux och macOS-administration som sträcker sig över årtionden</li>
+          <li><strong>Open-Source-bidragsgivare:</strong> Vi bidrar till verktygen vi driftsätter -- vi konsumerar inte bara dem</li>
+          <li><strong>Tidiga Apple Business-användare:</strong> Redo att distribuera från dag ett (14 april 2026)</li>
+          <li><strong>Säkerhet först-tänk:</strong> Varje distribution härdas som standard, inte som en eftertanke</li>
+          <li><strong>Cross-Platform-flyt:</strong> Sömlös integration mellan UNIX, Apple och Windows-miljöer</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3 class="card-title mb-0">Vårt Tillvägagångssätt</h3>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li><strong>Ingen leverantörsinlåsning:</strong> Open-source och standardprotokoll säkerställer att du alltid äger din data och kan byta leverantör</li>
+          <li><strong>Rätt Dimensionerade Lösningar:</strong> Vi matchar infrastrukturens komplexitet med dina faktiska affärsbehov -- ingen överingenjörskonst</li>
+          <li><strong>Transparent Prissättning:</strong> Du betalar för vår expertis, inte för programvarulicenser</li>
+          <li><strong>Kunskapsöverföring:</strong> Vi dokumenterar allt och utbildar ditt team att vara självständigt</li>
+          <li><strong>Långsiktigt Partnerskap:</strong> Löpande support, övervakning och utveckling i takt med att ditt företag växer</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+:::
+
+:::: {.cta-section}
+::: {.container .text-center}
+## <span class="text-white">Redo att bygga din digitala infrastruktur?</span>
+
+```{=html}
+<p class="mb-4">Boka en gratis konsultation för att diskutera dina affärsbehov och få ett skräddarsytt infrastrukturförslag.</p>
+```
+
+[Boka en Konsultation](https://cal.com/chenist){.cta-button target="_blank"}
+:::
+::::

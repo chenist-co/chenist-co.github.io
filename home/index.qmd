@@ -14,7 +14,7 @@ from: markdown+raw_html
 # [Welcome to]{.text-dark} [chen.ist]{.text-green}
 
 ```{=html}
-<p>Innovative technology solutions for the modern world</p>
+<p>Digital infrastructure, cybersecurity & technology education for modern organizations</p>
 ```
 
 [Get Started](https://cal.com/chenist){.btn .btn-success .btn-lg .cta-button target="_blank"}
@@ -28,15 +28,31 @@ from: markdown+raw_html
 ## Our Services {.text-center .mt-5 .mb-4}
 
 ::: {.row .mt-5}
-::: {.col-md-4}
+::: {.col-lg-4 .col-md-6}
+::: {.feature-card}
+::: {.feature-card-icon .text-center}
+<i class="bi bi-terminal"></i>
+:::
+
+### Digital Infrastructure {.text-center}
+
+Open-Source, UNIX & Apple infrastructure for SMBs. Linux, BSD, NixOS, and the new Apple Business platform.
+
+::: {.text-center .mt-3}
+[Learn More](/digital/){.btn .btn-outline-primary}
+:::
+:::
+:::
+
+::: {.col-lg-4 .col-md-6}
 ::: {.feature-card}
 ::: {.feature-card-icon .text-center}
 <i class="bi bi-shield-check"></i>
 :::
 
-### Security Solutions {.text-center}
+### Cybersecurity {.text-center}
 
-End-to-end security solutions that protect your organization's critical assets and information.
+Blue Team operations: 24/7 SOC monitoring, threat hunting, incident response, and security log analysis.
 
 ::: {.text-center .mt-3}
 [Learn More](/services/cybersecurity/){.btn .btn-outline-primary}
@@ -44,7 +60,23 @@ End-to-end security solutions that protect your organization's critical assets a
 :::
 :::
 
-::: {.col-md-4}
+::: {.col-lg-4 .col-md-6}
+::: {.feature-card}
+::: {.feature-card-icon .text-center}
+<i class="bi bi-clipboard-check"></i>
+:::
+
+### NIS2 Compliance {.text-center}
+
+Expert NIS2 Directive compliance, CISO as a Service, and gap assessments for EU entities.
+
+::: {.text-center .mt-3}
+[Learn More](/services/nis2/){.btn .btn-outline-primary}
+:::
+:::
+:::
+
+::: {.col-lg-4 .col-md-6}
 ::: {.feature-card}
 ::: {.feature-card-icon .text-center}
 <i class="bi bi-cloud"></i>
@@ -52,7 +84,7 @@ End-to-end security solutions that protect your organization's critical assets a
 
 ### Cloud Services {.text-center}
 
-Scalable and reliable cloud infrastructure that grows with your business needs.
+Migration, infrastructure, DevOps, and cloud security across AWS, Azure, and Google Cloud.
 
 ::: {.text-center .mt-3}
 [Learn More](/services/cloud/){.btn .btn-outline-primary}
@@ -60,7 +92,7 @@ Scalable and reliable cloud infrastructure that grows with your business needs.
 :::
 :::
 
-::: {.col-md-4}
+::: {.col-lg-4 .col-md-6}
 ::: {.feature-card}
 ::: {.feature-card-icon .text-center}
 <i class="bi bi-code-square"></i>
@@ -68,10 +100,26 @@ Scalable and reliable cloud infrastructure that grows with your business needs.
 
 ### Digital Resilience {.text-center}
 
-Strategic technological frameworks that ensure your organization remains operational and secure under any circumstances.
+Business continuity, disaster recovery, and adaptive frameworks for operational resilience.
 
 ::: {.text-center .mt-3}
 [Learn More](/services/digital-resilience/){.btn .btn-outline-primary}
+:::
+:::
+:::
+
+::: {.col-lg-4 .col-md-6}
+::: {.feature-card}
+::: {.feature-card-icon .text-center}
+<i class="bi bi-mortarboard"></i>
+:::
+
+### Academy {.text-center}
+
+Courses, trainings, microlearning, hackathons, and summer schools in cybersecurity and open-source.
+
+::: {.text-center .mt-3}
+[Learn More](/academy/){.btn .btn-outline-primary}
 :::
 :::
 :::
@@ -86,31 +134,31 @@ Strategic technological frameworks that ensure your organization remains operati
 ::: {.security-feature}
 ### Expertise
 
-Our team of experts brings years of experience across multiple technology domains.
+Our team brings decades of experience across UNIX systems, cybersecurity, cloud infrastructure, and Apple platforms.
 :::
 :::
 
 ::: {.col-md-6}
 ::: {.security-feature}
-### Innovation
+### Open-Source First
 
-We're constantly exploring new technologies and approaches to solve complex problems.
+We build on open-source software and contribute back. No vendor lock-in, no hidden license costs.
 :::
 :::
 
 ::: {.col-md-6}
 ::: {.security-feature}
-### Quality
+### Security by Default
 
-We maintain the highest standards in all our work, from planning to implementation.
+Every deployment is hardened from day one. We don't bolt security on as an afterthought.
 :::
 :::
 
 ::: {.col-md-6}
 ::: {.security-feature}
-### Support
+### Knowledge Transfer
 
-We're with you every step of the way, providing ongoing support and maintenance.
+We document everything and train your team. Our goal is your independence, not your dependency.
 :::
 :::
 :::
@@ -120,12 +168,48 @@ We're with you every step of the way, providing ongoing support and maintenance.
 ## Latest from Our Blog {.text-center .mt-5 .mb-4}
 
 ::: {.row}
-::: {.col-md-12}
+::: {.col-md-4}
+::: {.card .h-100}
+::: {.card-body}
+### [Apple Business: What SMBs Need to Know](/blog/apple-business-smb-guide.html)
+
+Apple's new unified platform launches April 14, 2026 with free MDM, business email, and brand management. Here's what it means for your business.
+
+::: {.text-end .mt-4}
+[Read More](/blog/apple-business-smb-guide.html){.btn .btn-sm .btn-outline-primary}
+:::
+:::
+
+::: {.card-footer}
+<i class="bi bi-calendar me-1"></i> March 25, 2026
+:::
+:::
+:::
+
+::: {.col-md-4}
+::: {.card .h-100}
+::: {.card-body}
+### [Open-Source Infrastructure for SMBs](/blog/open-source-infrastructure-smbs.html)
+
+How to replace expensive proprietary software with battle-tested open-source alternatives without sacrificing functionality.
+
+::: {.text-end .mt-4}
+[Read More](/blog/open-source-infrastructure-smbs.html){.btn .btn-sm .btn-outline-primary}
+:::
+:::
+
+::: {.card-footer}
+<i class="bi bi-calendar me-1"></i> March 20, 2026
+:::
+:::
+:::
+
+::: {.col-md-4}
 ::: {.card .h-100}
 ::: {.card-body}
 ### [Cybersecurity Best Practices](/blog/cyber-security-best-practices.html)
 
-Essential cybersecurity best practices that every organization should implement to protect against evolving threats in 2025.
+Essential cybersecurity best practices that every organization should implement to protect against evolving threats.
 
 ::: {.text-end .mt-4}
 [Read More](/blog/cyber-security-best-practices.html){.btn .btn-sm .btn-outline-primary}
@@ -146,10 +230,10 @@ Essential cybersecurity best practices that every organization should implement 
 
 :::: {.cta-section .theme-cyber}
 ::: {.container .text-center}
-## <span class="text-white">Ready to enhance your cybersecurity?</span>
+## <span class="text-white">Ready to build your digital infrastructure?</span>
 
 ```{=html}
-<p class="mb-4">Contact us today to learn how we can help protect your organization from evolving threats.</p>
+<p class="mb-4">Book a free consultation to discuss your business needs and get a tailored proposal.</p>
 ```
 
 [Book a Consultation](https://cal.com/chenist){.cta-button target="_blank"}

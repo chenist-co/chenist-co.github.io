@@ -27,15 +27,31 @@ from: markdown+raw_html
 ## Unsere Dienstleistungen {.text-center .mt-5 .mb-4}
 
 ::: {.row .mt-5}
-::: {.col-md-4}
+::: {.col-lg-4 .col-md-6}
+::: {.feature-card}
+::: {.feature-card-icon .text-center}
+<i class="bi bi-terminal"></i>
+:::
+
+### Digitale Infrastruktur {.text-center}
+
+Open Source, UNIX & Apple für KMU. Linux, BSD, NixOS und die neue Apple Business-Plattform.
+
+::: {.text-center .mt-3}
+[Mehr erfahren](/digital/){.btn .btn-outline-primary}
+:::
+:::
+:::
+
+::: {.col-lg-4 .col-md-6}
 ::: {.feature-card}
 ::: {.feature-card-icon .text-center}
 <i class="bi bi-shield-check"></i>
 :::
 
-### Sicherheitslösungen {.text-center}
+### Cybersicherheit {.text-center}
 
-Umfassende Sicherheitslösungen, die die kritischen Ressourcen und Informationen Ihrer Organisation schützen.
+Blue Team: SOC-Überwachung rund um die Uhr, Bedrohungsjagd, Incident Response und Sicherheitsanalyse.
 
 ::: {.text-center .mt-3}
 [Mehr erfahren](/services/cybersecurity/){.btn .btn-outline-primary}
@@ -43,7 +59,7 @@ Umfassende Sicherheitslösungen, die die kritischen Ressourcen und Informationen
 :::
 :::
 
-::: {.col-md-4}
+::: {.col-lg-4 .col-md-6}
 ::: {.feature-card}
 ::: {.feature-card-icon .text-center}
 <i class="bi bi-cloud"></i>
@@ -51,26 +67,10 @@ Umfassende Sicherheitslösungen, die die kritischen Ressourcen und Informationen
 
 ### Cloud-Dienste {.text-center}
 
-Skalierbare und zuverlässige Cloud-Infrastruktur, die mit Ihren Geschäftsanforderungen wächst.
+Migration, Infrastruktur, DevOps und Cloud-Sicherheit auf AWS, Azure und Google Cloud.
 
 ::: {.text-center .mt-3}
 [Mehr erfahren](/services/cloud/){.btn .btn-outline-primary}
-:::
-:::
-:::
-
-::: {.col-md-4}
-::: {.feature-card}
-::: {.feature-card-icon .text-center}
-<i class="bi bi-code-square"></i>
-:::
-
-### Entwicklung {.text-center}
-
-Maßgeschneiderte Softwareentwicklung, die auf Ihre spezifischen Anforderungen und Herausforderungen zugeschnitten ist.
-
-::: {.text-center .mt-3}
-[Mehr erfahren](/services/digital-resilience/){.btn .btn-outline-primary}
 :::
 :::
 :::

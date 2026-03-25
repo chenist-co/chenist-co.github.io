@@ -27,15 +27,31 @@ from: markdown+raw_html
 ## Serviciile Noastre {.text-center .mt-5 .mb-4}
 
 ::: {.row .mt-5}
-::: {.col-md-4}
+::: {.col-lg-4 .col-md-6}
+::: {.feature-card}
+::: {.feature-card-icon .text-center}
+<i class="bi bi-terminal"></i>
+:::
+
+### Infrastructură Digitală {.text-center}
+
+Open-Source, UNIX & Apple pentru IMM-uri. Linux, BSD, NixOS și noua platformă Apple Business.
+
+::: {.text-center .mt-3}
+[Află mai mult](/digital/){.btn .btn-outline-primary}
+:::
+:::
+:::
+
+::: {.col-lg-4 .col-md-6}
 ::: {.feature-card}
 ::: {.feature-card-icon .text-center}
 <i class="bi bi-shield-check"></i>
 :::
 
-### Soluții de Securitate {.text-center}
+### Securitate Cibernetică {.text-center}
 
-Soluții complete de securitate care protejează activele și informațiile critice ale organizației dvs.
+Operațiuni Blue Team: monitorizare SOC 24/7, threat hunting, răspuns la incidente.
 
 ::: {.text-center .mt-3}
 [Află mai mult](/services/cybersecurity/){.btn .btn-outline-primary}
@@ -43,7 +59,7 @@ Soluții complete de securitate care protejează activele și informațiile crit
 :::
 :::
 
-::: {.col-md-4}
+::: {.col-lg-4 .col-md-6}
 ::: {.feature-card}
 ::: {.feature-card-icon .text-center}
 <i class="bi bi-cloud"></i>
@@ -51,26 +67,10 @@ Soluții complete de securitate care protejează activele și informațiile crit
 
 ### Servicii Cloud {.text-center}
 
-Infrastructură cloud scalabilă și fiabilă care crește odată cu nevoile afacerii dvs.
+Migrare, infrastructură, DevOps și securitate cloud pe AWS, Azure și Google Cloud.
 
 ::: {.text-center .mt-3}
 [Află mai mult](/services/cloud/){.btn .btn-outline-primary}
-:::
-:::
-:::
-
-::: {.col-md-4}
-::: {.feature-card}
-::: {.feature-card-icon .text-center}
-<i class="bi bi-code-square"></i>
-:::
-
-### Reziliență Digitală {.text-center}
-
-Cadre tehnologice strategice care asigură că organizația dvs. rămâne operațională și securizată în orice circumstanțe.
-
-::: {.text-center .mt-3}
-[Află mai mult](/services/digital-resilience/){.btn .btn-outline-primary}
 :::
 :::
 :::

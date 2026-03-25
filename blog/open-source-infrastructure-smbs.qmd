@@ -1,0 +1,115 @@
+---
+title: "Open-Source Infrastructure for SMBs: A Practical Guide"
+author: "Alex Chen"
+date: "2026-03-20"
+categories: [Open Source, Digital Infrastructure, SMB]
+image: "../assets/svg/open_source.svg"
+description: "A practical guide to building SMB infrastructure with open-source tools — from productivity and communication to identity, monitoring, and UNIX foundations."
+---
+
+## Why Open Source Makes Sense for SMBs
+
+Small and medium-sized businesses face a familiar tension: they need enterprise-grade infrastructure but often cannot justify enterprise-grade licensing costs. Open-source software resolves this by providing production-ready tools with no per-seat fees, full data sovereignty, and freedom from vendor lock-in.
+
+This is not about ideology. It is about building infrastructure you actually own. When your email, identity system, or monitoring stack depends on a vendor that can change pricing, terms, or features at any time, you carry risk that is difficult to quantify until it materializes. Open-source alternatives give you control over that risk.
+
+Here is a practical breakdown of the open-source stack we recommend for SMBs, organized by function.
+
+## Productivity and Collaboration
+
+The productivity suite is where most businesses start, and where open-source options have matured considerably.
+
+### Document Editing and Office Tools
+
+**LibreOffice** remains the standard desktop office suite, handling word processing, spreadsheets, and presentations with strong compatibility for Microsoft Office formats. For teams that need real-time collaborative editing in the browser, **Collabora Online** provides a LibreOffice-based web editor that integrates directly with file storage platforms.
+
+**CryptPad** offers a privacy-focused alternative for collaborative documents, spreadsheets, and presentations. All content is end-to-end encrypted, meaning even the server administrator cannot read your documents. This is particularly relevant for businesses handling sensitive client data.
+
+### File Storage and Sync
+
+**Nextcloud** is the centerpiece of most open-source productivity deployments. It provides file sync, shared calendars, contacts, task management, and an app ecosystem that extends its capabilities into project management, document signing, and more. Self-hosted or managed, Nextcloud replaces a significant portion of what businesses typically buy from cloud productivity vendors.
+
+## Communication
+
+### Messaging and Chat
+
+**Matrix** (via the **Element** client) provides federated, end-to-end encrypted messaging. Federation means your organization's chat server can communicate with other Matrix servers, making it useful for cross-organization collaboration without creating accounts on third-party platforms.
+
+**Mattermost** is a strong choice for teams that prefer a Slack-like experience with self-hosted control. It supports channels, threads, integrations, and has a well-documented API for automation.
+
+### Video Conferencing
+
+**Jitsi Meet** provides browser-based video conferencing with no account required for participants. It supports screen sharing, recording, and breakout rooms. For SMBs that need reliable video calls without per-user licensing, Jitsi is the most straightforward option.
+
+## Identity and Single Sign-On
+
+Identity management is often the most overlooked piece of SMB infrastructure, but it is also one of the most impactful.
+
+### Centralized Authentication
+
+**Keycloak** provides enterprise-grade identity and access management, including single sign-on (SSO), multi-factor authentication, social login, and integration with SAML and OpenID Connect applications. It is the open-source equivalent of commercial identity platforms and integrates well with the rest of the stack.
+
+**FreeIPA** combines LDAP directory services, Kerberos authentication, DNS management, and certificate authority functions into a single platform. It is particularly well-suited for Linux-heavy environments where you need centralized user management across servers, workstations, and applications.
+
+**OpenLDAP** remains relevant for organizations that need a lightweight, flexible directory service without the full FreeIPA stack.
+
+::: {.callout-tip}
+**Practical advice:** Start with Keycloak for web application SSO, and add FreeIPA when you need centralized Linux workstation and server authentication. They integrate well together.
+:::
+
+## Monitoring and Observability
+
+You cannot manage what you cannot see. Monitoring infrastructure is non-negotiable, even for small teams.
+
+**Prometheus** collects metrics from your servers, applications, and network devices using a pull-based model. Pair it with **Grafana** for dashboards and alerting, and you have a monitoring stack that scales from a handful of servers to thousands.
+
+**Uptime Kuma** is a lightweight, self-hosted uptime monitor with a clean web interface. It supports HTTP, TCP, DNS, and ping checks with notifications via email, Slack, Matrix, and dozens of other channels. For SMBs that need basic uptime monitoring without the complexity of a full observability platform, Uptime Kuma is an excellent starting point.
+
+## UNIX Foundations
+
+The operating system layer is where open-source infrastructure begins, and the choice of OS shapes everything above it.
+
+### Linux Distributions
+
+- **NixOS** uses a declarative configuration model where your entire system state is defined in configuration files. This makes deployments reproducible and rollbacks trivial. It has a steep learning curve but pays dividends in consistency across environments.
+- **Debian** is the conservative choice: stable, well-documented, and widely supported. It is the default recommendation for organizations that want reliability without surprises.
+- **Red Hat Enterprise Linux (RHEL)** and its community derivatives provide a supported, certified platform for businesses that need vendor backing or compliance certifications.
+
+### BSD Systems
+
+- **OpenBSD** is purpose-built for security and is an excellent choice for firewalls, VPN gateways, and any network-facing role where minimizing attack surface is the priority. Its `pf` packet filter is among the most elegant firewall systems available.
+- **FreeBSD** excels at storage and networking workloads. With ZFS as a first-class filesystem and the `jail` system for lightweight containerization, FreeBSD is a strong foundation for file servers, backup targets, and network appliances.
+
+## Real-World Deployment Examples
+
+**Legal firm (15 employees):** Nextcloud for file storage with Collabora Online for document editing, Keycloak for SSO, Matrix/Element for encrypted client communication, OpenBSD firewall at the network edge. Total licensing cost: zero.
+
+**Marketing agency (30 employees):** Mattermost for internal chat, Jitsi for client video calls, Nextcloud for project file sharing, Prometheus and Grafana for monitoring their web hosting infrastructure, Debian servers throughout.
+
+**Manufacturing company (50 employees):** FreeIPA for centralized identity across Linux workstations on the production floor, Uptime Kuma for monitoring critical internal applications, FreeBSD with ZFS for engineering file storage, CryptPad for sensitive R&D collaboration.
+
+## Addressing Common Concerns
+
+**"Who do we call for support?"** Most mature open-source projects offer commercial support subscriptions. Red Hat, Collabora, Nextcloud GmbH, Element (Matrix), and Mattermost all sell enterprise support. You can also work with consultancies like chen.ist that specialize in open-source deployments.
+
+**"How do we train our team?"** The learning curve varies by tool, but most of the software listed above has extensive documentation and active community forums. We typically include training as part of our deployment engagements.
+
+**"What about migration from existing tools?"** Migration is project-specific, but the general approach is: run the open-source stack in parallel, migrate data incrementally, and cut over once the team is comfortable. We have helped businesses migrate from Microsoft 365, Google Workspace, and various proprietary tools.
+
+## Getting Started
+
+Building an open-source infrastructure stack is not an all-or-nothing decision. Start with one area where you have the most pain — whether that is productivity, communication, or monitoring — deploy it, and expand from there.
+
+For a deeper look at how we approach digital infrastructure, visit our [Digital Infrastructure services page](/digital/).
+
+::: {.card .mt-5 .mb-3}
+::: {.card-body}
+### Ready to explore open-source infrastructure?
+
+Book a free consultation to discuss which tools fit your organization and how to plan a practical migration.
+
+::: {.text-center .mt-3}
+[Book a Consultation](https://cal.com/chenist){target="_blank"}{.btn .btn-success}
+:::
+:::
+:::
