@@ -1,0 +1,99 @@
+---
+title: "Apple Business: Vad SMF behöver veta"
+author: "CHENIST Team"
+date: "2026-03-25"
+image: /assets/images/stock/team-macbooks.jpg
+categories: [Apple, Digital Infrastructure, SMB]
+description: "Allt SMF behöver veta om lanseringen av Apple Business den 14 april 2026 — från gratis MDM och Blueprints till betalda tillägg och migrering."
+---
+
+## En enda plattform för allt Apple på jobbet
+
+Den 14 april 2026 slår Apple samman Apple Business Manager, Apple Business Essentials och Apple Business Connect till en enda enhetlig plattform: **Apple Business**. För små och medelstora företag som redan investerat i Apples ekosystem är detta en betydande förändring som förenklar hantering, driftsättning och varumärkesnärvaro — allt från en enda konsol.
+
+Om din organisation använder någon av Apples företagstjänster idag är migrering inte valfritt. De äldre tjänsterna avvecklas den 14 april. Här är vad du behöver veta.
+
+## Vad du får gratis
+
+Apple Business basplattform är tillgänglig utan kostnad och inkluderar en överraskande kapabel uppsättning verktyg.
+
+### Inbyggd MDM och Blueprints
+
+Apple Business inkluderar inbyggd hantering av mobila enheter (MDM) med **Blueprints**, ett zero-touch-driftsättningssystem som låter dig förkonfigurera enheter innan de ens når dina anställda. Definiera säkerhetspolicyer, installera appar, konfigurera Wi-Fi- och VPN-inställningar och tilldela enheter till team — allt utan att behöva röra varje enhet individuellt.
+
+För SMF som tidigare förlitade sig på MDM-lösningar från tredje part eller manuell konfiguration kan enbart detta spara timmar per enhet.
+
+### Hanterade Apple-konton
+
+Varje anställd får ett **Hanterat Apple-konto** kopplat till din organisation. Dessa konton är separata från personliga Apple-ID:n, vilket ger ditt företag kontroll över företagsdata samtidigt som de anställdas integritet respekteras. Hanterade konton integreras med identitetsleverantörer via federerad autentisering, så du kan koppla dem till din befintliga SSO-infrastruktur.
+
+### Företagsmail, kalender och katalog
+
+Apple Business tillhandahåller företagsmail, delade kalendrar och en företagskatalog på din **egna domän**. Detta är ett meningsfullt alternativ till produktivitetssviter från tredje part för team som vill stanna helt inom Apples ekosystem.
+
+::: {.callout-note}
+**Viktigt:** Funktionerna för företagsmail och kalender kräver enheter som kör iOS 26, iPadOS 26 eller macOS 26, som levereras senare under 2026. Planera din uppgraderingstidslinje för enheter därefter.
+:::
+
+## Varumärkeshantering över Apples tjänster
+
+Apple Business samlar varumärkesnärvarohantering som tidigare var utspridd över Apple Business Connect och andra verktyg.
+
+### Apple Maps, Wallet och Mail
+
+Från Apple Business-konsolen kan du hantera ditt företags listningar på **Apple Maps**, skapa varumärkesprofilerade pass för **Apple Wallet** (lojalitetskort, evenemangsbiljetter, boardingkort) och konfigurera din verifierade varumärkesidentitet i **Apple Mail**. För kundorienterade företag är detta ett enkelt sätt att upprätthålla ett konsekvent varumärke vid varje Apple-kontaktpunkt.
+
+### Tap to Pay på iPhone
+
+**Tap to Pay på iPhone** är integrerat direkt i Apple Business, vilket gör att du kan ta emot kontaktlösa betalningar utan extra hårdvara. För detaljhandel, tjänsteföretag och fältverksamheter eliminerar detta behovet av separata avtal och hårdvara för betalningsterminal.
+
+### Annonser på Apple Maps
+
+Från och med sommaren 2026 kommer företag i USA och Kanada att kunna köpa **annonsplatser på Apple Maps**. Information om prissättning och målgruppsstyrning är fortfarande under utveckling, men detta representerar en ny lokal upptäcktskanal som är värd att bevaka.
+
+## Valfria betalda tillägg
+
+Medan kärnplattformen är gratis erbjuder Apple två betalda nivåer för ytterligare tjänster.
+
+### iCloud-lagring för företag
+
+Ytterligare iCloud-lagring för Hanterade Apple-konton börjar på **0,99 $ per användare och månad**. Detta täcker molnlagring för dokument, säkerhetskopior och samarbetsfunktioner kopplade till företagskontot. Prissättningen skalas med lagringsnivåer, liknande iCloud+-planer för konsumenter.
+
+### AppleCare+ för företag
+
+Enhetsskydd genom **AppleCare+ för företag** kostar mellan **6,99 $ och 13,99 $ per enhet och månad**, beroende på enhetstyp. Detta täcker oavsiktlig skada, batteribyte och prioriterad support. För organisationer med betydande hårdvaruinvesteringar kan den månatliga per-enhets-modellen vara mer förutsägbar än att hantera reparationer ad hoc.
+
+## Migreringsväg från äldre tjänster
+
+Om din organisation för närvarande använder Apple Business Manager, Apple Business Essentials eller Apple Business Connect behöver du migrera före den 14 april 2026. Apple har publicerat migreringsguider för varje tjänst, och i de flesta fall innebär övergången att du loggar in på Apple Business med dina befintliga inloggningsuppgifter och följer den guidade konfigurationen.
+
+Viktiga migreringsöverväganden:
+
+1. **Apple Business Manager-användare**: Enhetsregistreringar och apptilldelningar överförs, men granska dina MDM-konfigurationer mot det nya Blueprints-systemet
+2. **Apple Business Essentials-användare**: Dina befintliga enhetshanteringspolicyer migreras, men verifiera att alla inställningar överfördes korrekt
+3. **Apple Business Connect-användare**: Varumärkesinformation och platsdata bör migreras automatiskt, men granska dina listningar efter övergången
+4. **MDM från tredje part**: Om du använder en MDM från tredje part tillsammans med Apples verktyg, bekräfta kompatibilitet med de nya Apple Business-API:erna
+
+## Hur chen.ist kan hjälpa
+
+På chen.ist har vi arbetat med Apple Business sedan programmet för tidig åtkomst och är redo att hjälpa SMF att navigera denna övergång. Våra tjänster inkluderar:
+
+- **Migreringsplanering** från äldre Apple-tjänster till Apple Business
+- **Blueprints-konfiguration** för zero-touch-driftsättning av enheter
+- **Identitetsintegrering** som kopplar Hanterade Apple-konton med din befintliga SSO-leverantör
+- **Varumärkeskonfiguration** på Apple Maps, Wallet och Mail
+- **Löpande hantering** och support för din Apple Business-miljö
+
+Oavsett om du börjar från början eller migrerar från en befintlig konfiguration kan vi hjälpa dig att få ut det mesta av plattformen från dag ett.
+
+::: {.card .mt-5 .mb-3}
+::: {.card-body}
+### Redo att konfigurera Apple Business?
+
+Boka en kostnadsfri konsultation för att diskutera din migreringsplan och komma igång före deadline den 14 april.
+
+::: {.text-center .mt-3}
+[Boka en konsultation](https://cal.com/chenist){target="_blank"}{.btn .btn-success}
+:::
+:::
+:::

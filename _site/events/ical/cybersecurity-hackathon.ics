@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//chenist.dev//Cybersecurity Hackathon//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:cybersecurity-hackathon@chen.ist
+SUMMARY:Cybersecurity Hackathon
+DTSTART:20251003T080000Z
+DTEND:20251005T200000Z
+LOCATION:Craiova / Bucharest, Romania
+DESCRIPTION:The Cybersecurity Hackathon is a 48-hour challenge where participants work in teams to solve real-world cybersecurity problems. Open to security enthusiasts of all levels, from beginners to experts, this event provides a platform to develop and showcase your skills while networking with industry professionals.\n\nNote: Details, dates, and themes are subject to change.\n\nFor more information: https://chen.ist/academy/programs/hackathons/cybersecurity-hackathon.html
+URL:https://chen.ist/academy/programs/hackathons/cybersecurity-hackathon.html
+ORGANIZER;CN=Chenist Academy:mailto:contact@chen.ist
+STATUS:TENTATIVE
+CATEGORIES:Hackathon,Cybersecurity
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Cybersecurity Hackathon starts in 1 week
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+END:VCALENDAR
