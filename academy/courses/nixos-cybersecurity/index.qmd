@@ -22,13 +22,10 @@ format:
     include-in-header:
       text: |
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  # pdf output disabled - requires LaTeX on build server
-  # pdf:
-  #   documentclass: report
-  #   toc: true
-  #   toc-depth: 3
-  #   number-sections: true
-  #   colorlinks: true
+  typst:
+    toc: true
+    toc-depth: 3
+    number-sections: true
 citation: true
 link-citations: true
 citeproc: true
@@ -40,7 +37,7 @@ bibliography: references.bib
 <div class="other-formats">
   <h6>Export:</h6>
   <ul class="downloads">
-    <li><a href="#" onclick="alert('PDF version coming soon!'); return false;" target="_blank" rel="noopener noreferrer"><i class="bi bi-file-pdf"></i> PDF</a></li>
+    <li><a href="/academy/courses/nixos-cybersecurity/index.pdf" target="_blank" rel="noopener noreferrer"><i class="bi bi-file-pdf"></i> PDF</a></li>
   </ul>
 </div>
 
