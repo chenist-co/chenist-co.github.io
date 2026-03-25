@@ -10,9 +10,43 @@
 #quarto-content > * { margin-top: 0 !important; padding-top: 0 !important; }
 main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
 
-/* GLOBAL dark mode fix — must be in styles.css (loads on ALL pages) */
-html[data-bs-theme="dark"] { --bs-body-bg: #111 !important; background-color: #111 !important; }
-html[data-bs-theme="dark"] body { background-color: #111 !important; }
+/* GLOBAL dark mode fix — targets BOTH Quarto class + Bootstrap attribute */
+html[data-bs-theme="dark"],
+body.quarto-dark {
+  --bs-body-bg: #111 !important;
+  background-color: #111 !important;
+}
+body.quarto-dark,
+html[data-bs-theme="dark"] body {
+  background-color: #111 !important;
+}
+body.quarto-dark #quarto-content,
+body.quarto-dark main,
+body.quarto-dark main.content,
+body.quarto-dark .page-columns,
+body.quarto-dark .page-rows-contents,
+body.quarto-dark .quarto-container,
+body.quarto-dark .container-fluid,
+body.quarto-dark .m,
+body.quarto-dark .m-hero,
+body.quarto-dark .m-s,
+body.quarto-dark .m-cta,
+body.quarto-dark .m-listing-hero,
+body.quarto-dark .m-listing-intro,
+body.quarto-dark .page-section,
+body.quarto-dark .card,
+body.quarto-dark .card-body,
+body.quarto-dark .card-header,
+body.quarto-dark .feature-card,
+body.quarto-dark .security-feature,
+body.quarto-dark .quarto-grid-item,
+body.quarto-dark .hero-section,
+body.quarto-dark .cta-section {
+  background-color: #111 !important;
+}
+body.quarto-dark .m-bg {
+  background-color: #1a1a1d !important;
+}
 html[data-bs-theme="dark"] main,
 html[data-bs-theme="dark"] main.content,
 html[data-bs-theme="dark"] #quarto-content,
