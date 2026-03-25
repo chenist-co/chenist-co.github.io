@@ -115,7 +115,7 @@ format:
     theme:
       light: [flatly, assets/css/light.scss]
       dark: assets/css/dark.scss
-    css: [assets/css/styles.css, assets/css/modern.css]
+    css: assets/css/main.min.css
     code-link: true
     link-external-icon: true
     link-external-newwindow: true
@@ -130,6 +130,8 @@ format:
     include-in-header:
       - text: |
           <script defer data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+          <link rel="preload" href="/assets/images/stock/network-closeup.webp" as="image" type="image/webp">
+          <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Source+Code+Pro&display=swap" as="style">
           <meta name="view-transition" content="same-origin">
           <link rel="dns-prefetch" href="https://cal.com">
           <link rel="dns-prefetch" href="https://app.cal.com">
