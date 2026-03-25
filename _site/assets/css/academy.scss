@@ -1,0 +1,172 @@
+/*-- Academy-specific color scheme --*/
+
+// Yellow-orange primary color
+$academy-primary: #F5A623; // Bright yellow-orange
+$academy-primary-dark: darken($academy-primary, 10%);
+$academy-primary-light: lighten($academy-primary, 20%);
+
+// Complementary color (blue-purple)
+$academy-complementary: #5D4FF5; // Blue-purple
+$academy-complementary-dark: darken($academy-complementary, 10%);
+$academy-complementary-light: lighten($academy-complementary, 20%);
+
+// Keep dark blue for consultancy
+$consultancy-blue: #323642; // Dark navy
+
+// Applying styles for academy pages
+
+// Text color for academy titles
+.academy-section h1, 
+.academy-section h2, 
+.academy-section h3,
+.academy-section .text-green {
+  color: $academy-primary !important;
+}
+
+// Hero section styling
+.academy-section .hero-section {
+  background-color: lighten($academy-primary, 35%);
+  border-bottom: 4px solid $academy-primary;
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+}
+
+// Feature cards for academy
+.academy-section .feature-card {
+  border-top: 3px solid $academy-primary;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+  
+  .feature-card-icon {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    
+    .feature-card-svg {
+      max-height: 80px;
+      max-width: 80px;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    }
+  }
+  
+  h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: $academy-primary !important;
+  }
+}
+
+// Card headers for academy
+.academy-section .card-header {
+  background-color: $academy-complementary !important;
+  color: white !important;
+}
+
+// Alert styling for academy
+.academy-section .alert-success {
+  background-color: transparentize($academy-primary, 0.8);
+  border-color: $academy-primary;
+  color: darken($academy-primary, 25%);
+}
+
+// CTA section for academy
+.academy-section .cta-section {
+  background-color: $academy-complementary !important;
+  color: white;
+  padding: 3rem 0;
+}
+
+// CTA buttons for academy
+.academy-section .cta-button {
+  background-color: $academy-primary !important;
+  color: darken($academy-primary, 35%) !important;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  border: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+  text-decoration: none;
+  
+  &:hover {
+    background-color: darken($academy-primary, 5%) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+  }
+}
+
+// Button styling
+.academy-section .btn-primary {
+  background-color: $academy-complementary !important;
+  border-color: $academy-complementary !important;
+  
+  &:hover, &:focus {
+    background-color: darken($academy-complementary, 10%) !important;
+    border-color: darken($academy-complementary, 10%) !important;
+  }
+}
+
+.academy-section .btn-outline-primary {
+  color: $academy-complementary !important;
+  border-color: $academy-complementary !important;
+  
+  &:hover, &:focus {
+    background-color: $academy-complementary !important;
+    color: white !important;
+  }
+}
+
+.academy-section .btn-success {
+  background-color: $academy-primary !important;
+  border-color: $academy-primary !important;
+  
+  &:hover, &:focus {
+    background-color: darken($academy-primary, 10%) !important;
+    border-color: darken($academy-primary, 10%) !important;
+  }
+}
+
+// Process steps for partners page
+.academy-section .process-icon {
+  color: $academy-primary;
+  margin-bottom: 0.5rem;
+}
+
+// Partner cards
+.academy-section .partner-card {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  height: 100%;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+}
+
+// Background color for event CTA box
+.academy-section .event-cta {
+  background-color: transparentize($academy-primary, 0.9) !important;
+  border-left: 4px solid $academy-primary !important;
+}
+
+// Security feature styling kept for consultancy
+.security-feature {
+  border-left: 4px solid #81BD4A;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  background-color: transparentize(#81BD4A, 0.95);
+}
