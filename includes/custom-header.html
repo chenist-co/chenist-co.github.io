@@ -1,66 +1,99 @@
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <style>
-/* Modern transparent navbar — sits on top of content */
+/* Corporate navbar — solid dark, structured, professional */
 .navbar {
-  background: rgba(0,0,0,0.8) !important;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  padding: 0.5rem 0 !important;
-  font-size: 0.85rem;
+  background: #0a0a0a !important;
+  border-bottom: 1px solid rgba(129,189,74,0.15);
+  padding: 0 !important;
+  font-size: 0.82rem;
+  min-height: 56px;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  height: 56px;
 }
 .navbar-brand-container { display: flex; align-items: center; }
-.navbar-brand { display: flex; align-items: center; }
+.navbar-brand { display: flex; align-items: center; gap: 0.5rem; }
 .navbar-brand .navbar-title {
   display: inline-block;
-  margin-left: 0;
   color: #FFFFFF;
-  font-weight: 600;
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: 'Source Code Pro', monospace;
 }
+.navbar-brand .brand-dot { color: #81BD4A; }
 .navbar .nav-link {
-  color: rgba(255,255,255,0.8) !important;
-  font-size: 0.82rem !important;
-  padding: 0.4rem 0.75rem !important;
+  color: rgba(255,255,255,0.65) !important;
+  font-size: 0.78rem !important;
+  font-weight: 500;
+  padding: 0.5rem 0.85rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   transition: color 0.15s;
 }
-.navbar .nav-link:hover { color: #fff !important; }
+.navbar .nav-link:hover,
+.navbar .nav-link.active { color: #81BD4A !important; }
 .navbar .dropdown-menu {
-  background: rgba(0,0,0,0.9);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 12px;
-  padding: 0.5rem;
+  background: #0a0a0a;
+  border: 1px solid rgba(129,189,74,0.12);
+  border-radius: 8px;
+  padding: 0.4rem;
+  margin-top: 0;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
 }
 .navbar .dropdown-item {
-  color: rgba(255,255,255,0.8);
-  font-size: 0.82rem;
-  border-radius: 8px;
-  padding: 0.4rem 0.75rem;
+  color: rgba(255,255,255,0.65);
+  font-size: 0.78rem;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 0.45rem 0.85rem;
+  letter-spacing: 0.02em;
 }
 .navbar .dropdown-item:hover {
-  background: rgba(255,255,255,0.1);
-  color: #fff;
+  background: rgba(129,189,74,0.1);
+  color: #81BD4A;
+}
+.navbar .quarto-navigation-tool { color: rgba(255,255,255,0.5) !important; }
+.navbar .quarto-navigation-tool:hover { color: #81BD4A !important; }
+.navbar .quarto-color-scheme-toggle { color: rgba(255,255,255,0.5) !important; }
+.navbar .quarto-color-scheme-toggle:hover { color: #81BD4A !important; }
+
+@media (max-width: 991px) {
+  .navbar .nav-link { font-size: 0.75rem !important; padding: 0.4rem 0.6rem !important; }
 }
 @media (max-width: 767.98px) {
-  .navbar-brand .navbar-title { font-size: 1rem; }
+  .navbar-brand .navbar-title { font-size: 0.9rem; }
   .navbar .navbar-collapse {
-    background: rgba(0,0,0,0.95);
-    border-radius: 12px;
+    background: #0a0a0a;
+    border: 1px solid rgba(129,189,74,0.1);
+    border-radius: 8px;
     padding: 1rem;
     margin-top: 0.5rem;
+  }
+  .navbar .nav-link {
+    text-transform: none;
+    font-size: 0.85rem !important;
+    padding: 0.5rem 0.75rem !important;
   }
 }
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const navbarBrand = document.querySelector('.navbar-brand');
+  var navbarBrand = document.querySelector('.navbar-brand');
   if (navbarBrand) {
-    const titleSpan = document.createElement('span');
+    var titleSpan = document.createElement('span');
     titleSpan.className = 'navbar-title';
-    titleSpan.textContent = 'CHENIST';
+    titleSpan.textContent = 'CHEN';
+    var dot = document.createElement('span');
+    dot.className = 'brand-dot';
+    dot.textContent = '.';
+    var ist = document.createTextNode('IST');
+    titleSpan.appendChild(dot);
+    titleSpan.appendChild(ist);
     navbarBrand.appendChild(titleSpan);
   }
 });
