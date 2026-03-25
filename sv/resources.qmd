@@ -2,134 +2,57 @@
 title: "Resurser"
 title-block-style: none
 subtitle: "Användbara resurser och verktyg för din tekniska framgång"
+page-layout: custom
+toc: false
+from: markdown+raw_html
 ---
 
-::: {.container .page-section}
-## Tillgängliga resurser {.text-center .mt-5 .mb-4}
+```{=html}
+<div class="m">
 
-Utforska vår samling av resurser skapade för att hjälpa dig förbättra din kunskap och implementera bästa praxis i dina teknikinitiativ.
+<div class="m-hero">
+  <div class="container">
+    <h1>Tillgängliga <span class="gr">Resurser</span></h1>
+    <p>Användbara resurser och verktyg för din tekniska framgång</p>
+  </div>
+</div>
 
-### Guider och handledningar
+<div class="m-bg">
+  <div class="container">
+    <h2>Guider och handledningar</h2>
+    <p class="sub">Utforska vår samling av resurser skapade för att hjälpa dig implementera bästa praxis.</p>
+    <div class="row g-5">
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-shield-check"></i><h3>Omfattande guide för cybersäkerhet</h3><p>En omfattande guide för implementering av cybersäkerhetsåtgärder i din organisation, som täcker bästa praxis, rekommenderade verktyg och regelverk.</p><a href="/resources/cybersecurity-guide-sv.pdf" class="m-lk">Ladda ner PDF</a></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-cloud"></i><h3>Tips för molnkostnadsoptimering</h3><p>Praktiska strategier för att minska molnkostnader samtidigt som prestanda och tillförlitlighet bibehålls.</p><a href="/resources/cloud-cost-optimization-sv.pdf" class="m-lk">Ladda ner PDF</a></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-code-square"></i><h3>Guide för modern mjukvaruarkitektur</h3><p>En detaljerad guide om principer och metoder för samtida mjukvaruarkitektur, med fokus på skalbara och underhållbara system.</p><a href="/resources/modern-software-architecture-sv.pdf" class="m-lk">Ladda ner PDF</a></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-gear"></i><h3>Introduktion till DevOps</h3><p>En introduktionsguide till DevOps-principer, metoder och verktyg, med fallstudier och praktiska steg för implementering.</p><a href="/resources/devops-introduction-sv.pdf" class="m-lk">Ladda ner PDF</a></div></div>
+    </div>
+  </div>
+</div>
 
-::: {.row .mt-4}
-::: {.col-md-6}
-::: {.card .mb-4}
-::: {.card-body}
-#### Omfattande guide för cybersäkerhet
+<div class="m-s">
+  <div class="container">
+    <h2>Mallar och verktyg</h2>
+    <p class="sub">Praktiska verktyg för din organisation.</p>
+    <div class="row g-5">
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-file-earmark-text"></i><h3>Mall för säkerhetspolicy</h3><p>En omfattande mall för att dokumentera din organisations säkerhetspolicyer.</p><a href="/resources/security-policy-template-sv.docx" class="m-lk">Ladda ner</a></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-calculator"></i><h3>Kalkylator för molnets ROI</h3><p>Ett verktyg för att beräkna avkastningen på investeringar för molnmigrering och transformationsinitiativ.</p><a href="/resources/cloud-roi-calculator-sv.xlsx" class="m-lk">Ladda ner</a></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-clipboard-check"></i><h3>Checklista för riskbedömning</h3><p>En detaljerad checklista för att identifiera och utvärdera säkerhetsrisker i IT-system.</p><a href="/resources/risk-assessment-checklist-sv.pdf" class="m-lk">Ladda ner</a></div></div>
+    </div>
+  </div>
+</div>
 
-En omfattande guide för implementering av cybersäkerhetsåtgärder i din organisation, som täcker bästa praxis, rekommenderade verktyg och regelverk.
+<div class="m-bg">
+  <div class="container">
+    <h2>Webbseminarier och presentationer</h2>
+    <p class="sub">Videoinspelningar av våra presentationer.</p>
+    <div class="row g-5">
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-play-circle"></i><h3>Nya trender inom cybersäkerhet</h3><p>En presentation av de senaste trenderna, hoten och lösningarna inom cybersäkerhetslandskapet.</p><a href="https://www.youtube.com/watch?v=example" class="m-lk">Titta på inspelningen</a></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-play-circle"></i><h3>Maximera molneffektiviteten</h3><p>Strategier och metoder för att optimera molnmiljöer för kostnad, prestanda och säkerhet.</p><a href="https://www.youtube.com/watch?v=example" class="m-lk">Titta på inspelningen</a></div></div>
+    </div>
+    <div style="margin-top:2rem;"><p>Utforska <a href="blogg.html">vår blogg</a> för regelbundet innehåll om de senaste tekniska utvecklingarna, fallstudier och bästa praxis.</p></div>
+  </div>
+</div>
 
-[Ladda ner PDF](/resources/cybersecurity-guide-sv.pdf){.btn .btn-outline-primary .mt-3}
-:::
-:::
-:::
-
-::: {.col-md-6}
-::: {.card .mb-4}
-::: {.card-body}
-#### Tips för molnkostnadsoptimering
-
-Praktiska strategier för att minska molnkostnader samtidigt som prestanda och tillförlitlighet bibehålls.
-
-[Ladda ner PDF](/resources/cloud-cost-optimization-sv.pdf){.btn .btn-outline-primary .mt-3}
-:::
-:::
-:::
-
-::: {.col-md-6}
-::: {.card .mb-4}
-::: {.card-body}
-#### Guide för modern mjukvaruarkitektur
-
-En detaljerad guide om principer och metoder för samtida mjukvaruarkitektur, med fokus på skalbara och underhållbara system.
-
-[Ladda ner PDF](/resources/modern-software-architecture-sv.pdf){.btn .btn-outline-primary .mt-3}
-:::
-:::
-:::
-
-::: {.col-md-6}
-::: {.card .mb-4}
-::: {.card-body}
-#### Introduktion till DevOps
-
-En introduktionsguide till DevOps-principer, metoder och verktyg, med fallstudier och praktiska steg för implementering.
-
-[Ladda ner PDF](/resources/devops-introduction-sv.pdf){.btn .btn-outline-primary .mt-3}
-:::
-:::
-:::
-:::
-
-### Mallar och verktyg
-
-::: {.row .mt-4}
-::: {.col-md-4}
-::: {.card .mb-4}
-::: {.card-body}
-#### Mall för säkerhetspolicy
-
-En omfattande mall för att dokumentera din organisations säkerhetspolicyer.
-
-[Ladda ner](/resources/security-policy-template-sv.docx){.btn .btn-outline-primary .mt-3}
-:::
-:::
-:::
-
-::: {.col-md-4}
-::: {.card .mb-4}
-::: {.card-body}
-#### Kalkylator för molnets avkastning på investering
-
-Ett verktyg för att beräkna avkastningen på investeringar för molnmigrering och transformationsinitiativ.
-
-[Ladda ner](/resources/cloud-roi-calculator-sv.xlsx){.btn .btn-outline-primary .mt-3}
-:::
-:::
-:::
-
-::: {.col-md-4}
-::: {.card .mb-4}
-::: {.card-body}
-#### Checklista för riskbedömning
-
-En detaljerad checklista för att identifiera och utvärdera säkerhetsrisker i IT-system.
-
-[Ladda ner](/resources/risk-assessment-checklist-sv.pdf){.btn .btn-outline-primary .mt-3}
-:::
-:::
-:::
-:::
-
-### Webbseminarier och presentationer
-
-::: {.row .mt-4}
-::: {.col-md-6}
-::: {.card .mb-4}
-::: {.card-body}
-#### Nya trender inom cybersäkerhet
-
-En presentation av de senaste trenderna, hoten och lösningarna inom cybersäkerhetslandskapet.
-
-[Titta på inspelningen](https://www.youtube.com/watch?v=example){.btn .btn-outline-primary .mt-3}
-:::
-:::
-:::
-
-::: {.col-md-6}
-::: {.card .mb-4}
-::: {.card-body}
-#### Maximera molneffektiviteten
-
-Strategier och metoder för att optimera molnmiljöer för kostnad, prestanda och säkerhet.
-
-[Titta på inspelningen](https://www.youtube.com/watch?v=example){.btn .btn-outline-primary .mt-3}
-:::
-:::
-:::
-:::
-
-### Blogg och artiklar
-
-Utforska [vår blogg](blogg.html) för regelbundet innehåll om de senaste tekniska utvecklingarna, fallstudier och bästa praxis.
-:::
+</div>
+```

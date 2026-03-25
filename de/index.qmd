@@ -3,191 +3,67 @@ title: "chen.ist"
 title-block-style: none
 subtitle: "Innovative Technologielösungen für die moderne Welt"
 page-layout: custom
+toc: false
 from: markdown+raw_html
 ---
 
-:::: {.hero-section}
-
-::: {.container}
-::: {.row .align-items-center}
-::: {.col-md-8 .offset-md-2 .text-center}
-# [Willkommen bei]{.text-white} [chen.ist]{.text-green}
-
 ```{=html}
-<p>Innovative Technologielösungen für die moderne Welt</p>
+<div class="m">
+
+<div class="m-hero">
+  <div class="container">
+    <h1>Willkommen bei <span class="gr">chen.ist</span></h1>
+    <p>Innovative Technologielösungen für die moderne Welt</p>
+    <a href="https://cal.com/chenist" class="m-b">Loslegen</a>
+  </div>
+</div>
+
+<div class="m-bg">
+  <div class="container">
+    <h2>Unsere Dienstleistungen</h2>
+    <p class="sub">Umfassende Technologielösungen für Ihr Unternehmen.</p>
+    <div class="row g-5">
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-terminal"></i><h3>Digitale Infrastruktur</h3><p>Open Source, UNIX & Apple für KMU. Linux, BSD, NixOS und die neue Apple Business-Plattform.</p><a href="/digital/" class="m-lk">Mehr erfahren</a></div></div>
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-shield-check"></i><h3>Cybersicherheit</h3><p>Blue Team: SOC-Überwachung rund um die Uhr, Bedrohungsjagd, Incident Response und Sicherheitsanalyse.</p><a href="/services/cybersecurity/" class="m-lk">Mehr erfahren</a></div></div>
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-cloud"></i><h3>Cloud-Dienste</h3><p>Migration, Infrastruktur, DevOps und Cloud-Sicherheit auf AWS, Azure und Google Cloud.</p><a href="/services/cloud/" class="m-lk">Mehr erfahren</a></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="m-s">
+  <div class="container">
+    <h2>Warum uns wählen</h2>
+    <p class="sub">Vier Werte im Kern von allem, was wir aufbauen.</p>
+    <div class="row g-5">
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-trophy"></i><h3>Expertise</h3><p>Unser Expertenteam bringt jahrelange Erfahrung aus verschiedenen Technologiebereichen mit.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-lightbulb"></i><h3>Innovation</h3><p>Wir erforschen ständig neue Technologien und Ansätze zur Lösung komplexer Probleme.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-star"></i><h3>Qualität</h3><p>Wir halten in unserer gesamten Arbeit die höchsten Standards ein, von der Planung bis zur Umsetzung.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-headset"></i><h3>Support</h3><p>Wir begleiten Sie auf jedem Schritt des Weges und bieten kontinuierliche Unterstützung und Wartung.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="m-bg">
+  <div class="container">
+    <h2>Neueste Blogbeiträge</h2>
+    <p class="sub">Einblicke, Tutorials und Updates von unserem Team.</p>
+    <div class="row g-5">
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-shield-lock"></i><h3><a href="blog/cyber-security-best-practices.html">Cybersicherheit Best Practices</a></h3><p>Wesentliche Cybersicherheits-Best-Practices, die jede Organisation implementieren sollte, um sich gegen sich entwickelnde Bedrohungen im Jahr 2025 zu schützen.</p></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-cloud-arrow-up"></i><h3>Cloud-Migrationsstrategien</h3><p>Schritt-für-Schritt-Strategien für eine erfolgreiche Cloud-Migration mit minimaler Störung Ihrer Abläufe.</p></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-code-slash"></i><h3>Moderne Entwicklungspraktiken</h3><p>Erkundung moderner Entwicklungspraktiken, die Effizienz, Qualität und Zusammenarbeit verbessern.</p></div></div>
+    </div>
+    <div style="text-align:center;margin-top:2rem;"><a href="blog.html" class="m-b">Alle Beiträge anzeigen</a></div>
+  </div>
+</div>
+
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Bereit loszulegen?</h2>
+    <p>Kontaktieren Sie uns noch heute, um zu erfahren, wie wir Ihnen helfen können, Ihre Ziele zu erreichen.</p>
+    <a href="https://cal.com/chenist" class="m-b">Kontakt</a>
+  </div>
+</div>
+
+</div>
 ```
-
-[Loslegen](https://cal.com/chenist){.btn .btn-success .btn-lg .cta-button}
-:::
-:::
-:::
-
-::::
-
-::: {.container .page-section}
-## Unsere Dienstleistungen {.text-center .mt-5 .mb-4}
-
-::: {.row .mt-5}
-::: {.col-lg-4 .col-md-6}
-::: {.feature-card}
-::: {.feature-card-icon .text-center}
-<i class="bi bi-terminal"></i>
-:::
-
-### Digitale Infrastruktur {.text-center}
-
-Open Source, UNIX & Apple für KMU. Linux, BSD, NixOS und die neue Apple Business-Plattform.
-
-::: {.text-center .mt-3}
-[Mehr erfahren](/digital/){.btn .btn-outline-primary}
-:::
-:::
-:::
-
-::: {.col-lg-4 .col-md-6}
-::: {.feature-card}
-::: {.feature-card-icon .text-center}
-<i class="bi bi-shield-check"></i>
-:::
-
-### Cybersicherheit {.text-center}
-
-Blue Team: SOC-Überwachung rund um die Uhr, Bedrohungsjagd, Incident Response und Sicherheitsanalyse.
-
-::: {.text-center .mt-3}
-[Mehr erfahren](/services/cybersecurity/){.btn .btn-outline-primary}
-:::
-:::
-:::
-
-::: {.col-lg-4 .col-md-6}
-::: {.feature-card}
-::: {.feature-card-icon .text-center}
-<i class="bi bi-cloud"></i>
-:::
-
-### Cloud-Dienste {.text-center}
-
-Migration, Infrastruktur, DevOps und Cloud-Sicherheit auf AWS, Azure und Google Cloud.
-
-::: {.text-center .mt-3}
-[Mehr erfahren](/services/cloud/){.btn .btn-outline-primary}
-:::
-:::
-:::
-:::
-:::
-
-::: {.container .page-section}
-## Warum uns wählen {.text-center .mt-5 .mb-4}
-
-::: {.row .mt-4}
-::: {.col-md-6}
-::: {.security-feature}
-### Expertise
-
-Unser Expertenteam bringt jahrelange Erfahrung aus verschiedenen Technologiebereichen mit.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Innovation
-
-Wir erforschen ständig neue Technologien und Ansätze zur Lösung komplexer Probleme.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Qualität
-
-Wir halten in unserer gesamten Arbeit die höchsten Standards ein, von der Planung bis zur Umsetzung.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Support
-
-Wir begleiten Sie auf jedem Schritt des Weges und bieten kontinuierliche Unterstützung und Wartung.
-:::
-:::
-:::
-:::
-
-::: {.container .page-section}
-## Neueste Blogbeiträge {.text-center .mt-5 .mb-4}
-
-::: {.row}
-::: {.col-md-4}
-::: {.card .h-100}
-::: {.card-body}
-### [Cybersicherheit Best Practices](blog/cyber-security-best-practices.html)
-
-Wesentliche Cybersicherheits-Best-Practices, die jede Organisation implementieren sollte, um sich gegen sich entwickelnde Bedrohungen im Jahr 2025 zu schützen.
-
-::: {.text-end .mt-4}
-[Weiterlesen](blog/cyber-security-best-practices.html){.btn .btn-sm .btn-outline-primary}
-:::
-:::
-
-::: {.card-footer}
-<i class="bi bi-calendar me-1"></i> 1. April 2025
-:::
-:::
-:::
-
-::: {.col-md-4}
-::: {.card .h-100}
-::: {.card-body}
-### Cloud-Migrationsstrategien
-
-Schritt-für-Schritt-Strategien für eine erfolgreiche Cloud-Migration mit minimaler Störung Ihrer Abläufe.
-
-::: {.text-end .mt-4}
-[Weiterlesen](blog.html){.btn .btn-sm .btn-outline-primary}
-:::
-:::
-
-::: {.card-footer}
-<i class="bi bi-calendar me-1"></i> 15. März 2025
-:::
-:::
-:::
-
-::: {.col-md-4}
-::: {.card .h-100}
-::: {.card-body}
-### Moderne Entwicklungspraktiken
-
-Erkundung moderner Entwicklungspraktiken, die Effizienz, Qualität und Zusammenarbeit verbessern.
-
-::: {.text-end .mt-4}
-[Weiterlesen](blog.html){.btn .btn-sm .btn-outline-primary}
-:::
-:::
-
-::: {.card-footer}
-<i class="bi bi-calendar me-1"></i> 22. Februar 2025
-:::
-:::
-:::
-:::
-
-::: {.text-center .mt-4}
-[Alle Beiträge anzeigen →](blog.html){.btn .btn-primary}
-:::
-:::
-
-:::: {.cta-section}
-::: {.container .text-center}
-## Bereit loszulegen?
-
-```{=html}
-<p class="mb-4">Kontaktieren Sie uns noch heute, um zu erfahren, wie wir Ihnen helfen können, Ihre Ziele zu erreichen.</p>
-```
-
-[Kontakt](https://cal.com/chenist){.cta-button}
-:::
-::::

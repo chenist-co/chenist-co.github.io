@@ -2,174 +2,70 @@
 title: "Dienstleistungen"
 title-block-style: none
 subtitle: "Hochwertige Technologielösungen für Ihr Unternehmen"
+page-layout: custom
+toc: false
+from: markdown+raw_html
 ---
 
-::: {.container .page-section}
-## Unsere Dienstleistungen {.text-center .mt-5 .mb-4}
+```{=html}
+<div class="m">
 
-Bei chen.ist bieten wir ein breites Spektrum an Technologiedienstleistungen an, um Organisationen dabei zu helfen, ihre strategischen Ziele zu erreichen. Unser Expertenteam kann Sie in allen Aspekten der Technologie unterstützen, von der strategischen Planung bis hin zur Implementierung und kontinuierlichen Unterstützung.
+<div class="m-hero">
+  <div class="container">
+    <h1>Unsere <span class="gr">Dienstleistungen</span></h1>
+    <p>Hochwertige Technologielösungen für Ihr Unternehmen</p>
+  </div>
+</div>
 
-::: {.row .mt-5}
-::: {.col-md-4}
-::: {.feature-card}
-::: {.feature-card-icon .text-center}
-<i class="bi bi-shield-check"></i>
-:::
+<div class="m-bg">
+  <div class="container">
+    <p class="sub">Bei chen.ist bieten wir ein breites Spektrum an Technologiedienstleistungen an, um Organisationen dabei zu helfen, ihre strategischen Ziele zu erreichen.</p>
+    <div class="row g-5">
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-shield-check"></i><h3>Sicherheit</h3><p>Umfassende Sicherheitslösungen zum Schutz der kritischen Vermögenswerte und Informationen Ihrer Organisation.</p><a href="#cybersicherheit" class="m-lk">Mehr erfahren</a></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-cloud"></i><h3>Cloud</h3><p>Skalierbare und zuverlässige Cloud-Infrastruktur, die mit den Anforderungen Ihres Unternehmens mitwächst.</p><a href="#cloud-dienste" class="m-lk">Mehr erfahren</a></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-code-square"></i><h3>Entwicklung</h3><p>Maßgeschneiderte Softwareentwicklung, die auf Ihre spezifischen Anforderungen und Herausforderungen zugeschnitten ist.</p><a href="#entwicklungsdienste" class="m-lk">Mehr erfahren</a></div></div>
+    </div>
+  </div>
+</div>
 
-### Sicherheit {.text-center}
+<div class="m-s" id="cybersicherheit">
+  <div class="container">
+    <h2>Cybersicherheitsdienste</h2>
+    <p class="sub">Schutz Ihrer Organisation vor sich entwickelnden Bedrohungen und Gewährleistung der Einhaltung relevanter Vorschriften.</p>
+    <div class="row g-5">
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-search"></i><h3>Sicherheitsbewertung</h3><p>Umfassende Bewertung Ihrer Sicherheitslage zur Identifizierung von Schwachstellen und Risiken.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-bug"></i><h3>Penetrationstests</h3><p>Simulierte Angriffe zur Identifizierung und Behebung von Sicherheitsschwachstellen, bevor diese ausgenutzt werden können.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-mortarboard"></i><h3>Sicherheitsschulung</h3><p>Schulung Ihres Teams zu Sicherheitsmaßnahmen und Bedrohungsbewusstsein.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-exclamation-triangle"></i><h3>Vorfallreaktion</h3><p>Schnelle und effektive Reaktion auf Sicherheitsvorfälle zur Minimierung der Auswirkungen.</p></div></div>
+    </div>
+  </div>
+</div>
 
-Umfassende Sicherheitslösungen zum Schutz der kritischen Vermögenswerte und Informationen Ihrer Organisation.
+<div class="m-bg" id="cloud-dienste">
+  <div class="container">
+    <h2>Cloud-Dienste</h2>
+    <p class="sub">Nutzen Sie das volle Potenzial des Cloud Computing für verbesserte Effizienz, Skalierbarkeit und Kosteneinsparungen.</p>
+    <div class="row g-5">
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-cloud-arrow-up"></i><h3>Cloud-Migration</h3><p>Nahtloser Übergang Ihrer Anwendungen und Daten in die Cloud.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-hdd-rack"></i><h3>Cloud-Infrastruktur</h3><p>Design und Implementierung robuster Cloud-Umgebungen, die auf Ihre Bedürfnisse zugeschnitten sind.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-gear"></i><h3>DevOps</h3><p>Optimieren Sie Ihre Entwicklungs- und Betriebsprozesse für eine schnellere, zuverlässigere Bereitstellung.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-shield-lock"></i><h3>Cloud-Sicherheit</h3><p>Stellen Sie sicher, dass Ihre Cloud-Umgebung vor Bedrohungen und Schwachstellen geschützt ist.</p></div></div>
+    </div>
+  </div>
+</div>
 
-::: {.text-center .mt-3}
-[Mehr erfahren](#cybersicherheit){.btn .btn-outline-primary}
-:::
-:::
-:::
+<div class="m-s" id="entwicklungsdienste">
+  <div class="container">
+    <h2>Entwicklungsdienste</h2>
+    <p class="sub">Maßgeschneiderte Softwarelösungen, die auf die einzigartigen Geschäftsanforderungen Ihres Unternehmens eingehen.</p>
+    <div class="row g-5">
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-code-square"></i><h3>Maßgeschneiderte Software</h3><p>Speziell für Ihre Geschäftsanforderungen entwickelte Anwendungen.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-globe"></i><h3>Webentwicklung</h3><p>Websites und Webanwendungen, die Aufmerksamkeit erregen und Ergebnisse liefern.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-phone"></i><h3>Mobile Entwicklung</h3><p>Native und plattformübergreifende mobile Anwendungen für iOS und Android.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-plug"></i><h3>API-Integration</h3><p>Verbinden Sie Ihre Systeme und Anwendungen für einen nahtlosen Datenfluss.</p></div></div>
+    </div>
+  </div>
+</div>
 
-::: {.col-md-4}
-::: {.feature-card}
-::: {.feature-card-icon .text-center}
-<i class="bi bi-cloud"></i>
-:::
-
-### Cloud {.text-center}
-
-Skalierbare und zuverlässige Cloud-Infrastruktur, die mit den Anforderungen Ihres Unternehmens mitwächst.
-
-::: {.text-center .mt-3}
-[Mehr erfahren](#cloud-dienste){.btn .btn-outline-primary}
-:::
-:::
-:::
-
-::: {.col-md-4}
-::: {.feature-card}
-::: {.feature-card-icon .text-center}
-<i class="bi bi-code-square"></i>
-:::
-
-### Entwicklung {.text-center}
-
-Maßgeschneiderte Softwareentwicklung, die auf Ihre spezifischen Anforderungen und Herausforderungen zugeschnitten ist.
-
-::: {.text-center .mt-3}
-[Mehr erfahren](#entwicklung){.btn .btn-outline-primary}
-:::
-:::
-:::
-:::
-:::
-
-## Cybersicherheitsdienste {#cybersicherheit}
-
-Unsere umfassenden Cybersicherheitsdienste helfen, Ihre Organisation vor sich entwickelnden Bedrohungen zu schützen und die Einhaltung relevanter Vorschriften zu gewährleisten.
-
-::: {.row .mt-4}
-::: {.col-md-6}
-::: {.security-feature}
-### Sicherheitsbewertung
-
-Umfassende Bewertung Ihrer Sicherheitslage zur Identifizierung von Schwachstellen und Risiken.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Penetrationstests
-
-Simulierte Angriffe zur Identifizierung und Behebung von Sicherheitsschwachstellen, bevor diese ausgenutzt werden können.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Sicherheitsschulung
-
-Schulung Ihres Teams zu Sicherheitsmaßnahmen und Bedrohungsbewusstsein.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Vorfallreaktion
-
-Schnelle und effektive Reaktion auf Sicherheitsvorfälle zur Minimierung der Auswirkungen.
-:::
-:::
-:::
-
-## Cloud-Dienste {#cloud-dienste}
-
-Unsere Cloud-Dienste helfen Ihnen, das volle Potenzial des Cloud Computing für verbesserte Effizienz, Skalierbarkeit und Kosteneinsparungen zu nutzen.
-
-::: {.row .mt-4}
-::: {.col-md-6}
-::: {.security-feature}
-### Cloud-Migration
-
-Nahtloser Übergang Ihrer Anwendungen und Daten in die Cloud.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Cloud-Infrastruktur
-
-Design und Implementierung robuster Cloud-Umgebungen, die auf Ihre Bedürfnisse zugeschnitten sind.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### DevOps
-
-Optimieren Sie Ihre Entwicklungs- und Betriebsprozesse für eine schnellere, zuverlässigere Bereitstellung.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Cloud-Sicherheit
-
-Stellen Sie sicher, dass Ihre Cloud-Umgebung vor Bedrohungen und Schwachstellen geschützt ist.
-:::
-:::
-:::
-
-## Entwicklungsdienste {#entwicklungsdienste}
-
-Unser Entwicklungsteam erstellt maßgeschneiderte Softwarelösungen, die auf die einzigartigen Geschäftsanforderungen und Herausforderungen Ihres Unternehmens eingehen.
-
-::: {.row .mt-4}
-::: {.col-md-6}
-::: {.security-feature}
-### Maßgeschneiderte Software
-
-Speziell für Ihre Geschäftsanforderungen entwickelte Anwendungen.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Webentwicklung
-
-Websites und Webanwendungen, die Aufmerksamkeit erregen und Ergebnisse liefern.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Mobile Entwicklung
-
-Native und plattformübergreifende mobile Anwendungen für iOS und Android.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### API-Integration
-
-Verbinden Sie Ihre Systeme und Anwendungen für einen nahtlosen Datenfluss.
-:::
-:::
-:::
+</div>
+```

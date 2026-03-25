@@ -1,69 +1,121 @@
 ---
 title: "Kontakt"
 title-block-style: none
-subtitle: "Kontaktieren Sie uns für mehr Informationen"
+description: "Kontaktieren Sie uns für mehr Informationen"
+page-layout: custom
+toc: false
+from: markdown+raw_html
 ---
 
-::: {.container .page-section}
-## Kontaktieren Sie uns {.text-center .mt-5 .mb-4}
-
-Wir sind für Sie da, um Fragen zu beantworten, Dienstleistungsanfragen zu bearbeiten oder Feedback entgegenzunehmen. Bitte kontaktieren Sie uns über eine der unten genannten Methoden, und wir werden uns so schnell wie möglich bei Ihnen melden.
-
-::: {.row .mt-5}
-::: {.col-md-6}
-### Kontaktinformationen
-
-**Adresse:**  
-Beispielstraße 123  
-Berlin, Deutschland
-
-**E-Mail:**  
-info@chen.ist
-
-**Telefon:**  
-+49 30 12345678
-
-**Öffnungszeiten:**  
-Montag - Freitag: 9:00 - 18:00  
-Samstag - Sonntag: Geschlossen
-:::
-
-::: {.col-md-6}
-### Kontaktformular
-
 ```{=html}
-<form class="contact-form">
-  <div class="mb-3">
-    <label for="name" class="form-label">Name</label>
-    <input type="text" class="form-control" id="name" required>
-  </div>
-  <div class="mb-3">
-    <label for="email" class="form-label">E-Mail</label>
-    <input type="email" class="form-control" id="email" required>
-  </div>
-  <div class="mb-3">
-    <label for="subject" class="form-label">Betreff</label>
-    <input type="text" class="form-control" id="subject">
-  </div>
-  <div class="mb-3">
-    <label for="message" class="form-label">Nachricht</label>
-    <textarea class="form-control" id="message" rows="5" required></textarea>
-  </div>
-  <button type="submit" class="btn btn-success">Nachricht senden</button>
-</form>
-```
-:::
-:::
-:::
+<div class="m">
 
-:::: {.map-section}
-::: {.container}
-## Unser Standort {.text-center .mt-5 .mb-4}
+<div class="m-hero">
+  <div class="container">
+    <h1>Nehmen Sie <span class="gr">Kontakt</span> auf</h1>
+    <p>Fragen, Projekte oder einfach ein Gespräch — erreichen Sie uns unter <a href="mailto:office@chen.ist">office@chen.ist</a></p>
+  </div>
+</div>
 
-```{=html}
-<div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d155421.70514844316!2d13.258051558738267!3d52.50647111281074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e373f035901%3A0x42120465b5e3b70!2sBerlin%2C%20Germany!5e0!3m2!1sen!2sus!4v1649597153841!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<div class="m-bg">
+  <div class="container">
+    <div class="m-r">
+      <div class="m-ri m-contact-info">
+        <div class="ci">
+          <i class="bi bi-envelope"></i>
+          <h3>E-Mail</h3>
+          <p><a href="mailto:office@chen.ist">office@chen.ist</a> — Allgemeine Anfragen</p>
+          <p><a href="mailto:support@chen.ist">support@chen.ist</a> — Support</p>
+        </div>
+        <div class="ci">
+          <i class="bi bi-geo-alt"></i>
+          <h3>Hauptsitz</h3>
+          <p>Str. Filantropiei, 1-3, 200143<br>Craiova, Rumänien</p>
+        </div>
+        <div class="ci">
+          <i class="bi bi-geo-alt"></i>
+          <h3>Partnerbüro</h3>
+          <p>Bukarest, Rumänien<br><a href="mailto:bucharest@chen.ist">bucharest@chen.ist</a></p>
+        </div>
+        <div class="ci m-social">
+          <a href="https://linkedin.com/in/chenist" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/chenist" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+        </div>
+      </div>
+      <div class="m-ri m-form">
+        <h2 style="text-align:left;font-size:clamp(1.5rem,3vw,2rem);margin-bottom:2rem;">Nachricht senden</h2>
+        <form action="https://formspree.io/f/mpwkaqev" method="POST">
+          <div class="fr">
+            <div class="fg">
+              <label>Vollständiger Name *</label>
+              <input type="text" name="name" required placeholder="Ihr vollständiger Name">
+            </div>
+            <div class="fg">
+              <label>E-Mail *</label>
+              <input type="email" name="email" required placeholder="ihre@email.de">
+            </div>
+          </div>
+          <div class="fr">
+            <div class="fg">
+              <label>Telefon</label>
+              <input type="tel" name="phone" placeholder="Telefonnummer">
+            </div>
+            <div class="fg">
+              <label>Unternehmen</label>
+              <input type="text" name="company" placeholder="Unternehmen (optional)">
+            </div>
+          </div>
+          <div class="fg">
+            <label>Interesse *</label>
+            <select name="interest" required>
+              <option value="">Auswählen...</option>
+              <optgroup label="Dienstleistungen">
+                <option value="digital-infrastructure">Digitale Infrastruktur</option>
+                <option value="cybersecurity">Cybersicherheit</option>
+                <option value="nis2">NIS2-Konformität</option>
+                <option value="cloud">Cloud-Dienste</option>
+              </optgroup>
+              <optgroup label="Academy">
+                <option value="course">Kursanmeldung</option>
+                <option value="training">Schulungsregistrierung</option>
+                <option value="event">Veranstaltung / Hackathon</option>
+                <option value="webinar">Webinar</option>
+                <option value="summer-school">Sommerschule</option>
+              </optgroup>
+              <option value="general">Allgemeine Anfrage</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Nachricht *</label>
+            <textarea name="message" rows="4" required placeholder="Wie können wir Ihnen helfen?"></textarea>
+          </div>
+          <input type="hidden" name="_subject" value="Neuer Kontakt von chen.ist">
+          <input type="hidden" name="_source" value="contact-page-de">
+          <input type="text" name="_gotcha" style="display:none">
+          <div class="fc">
+            <input type="checkbox" required>
+            <span>Ich stimme der <a href="/privacy.html" target="_blank">Datenschutzrichtlinie</a> zu *</span>
+          </div>
+          <button type="submit"><i class="bi bi-send me-2"></i>Nachricht senden</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Bevorzugen Sie ein<br>persönliches Gespräch?</h2>
+    <p>Buchen Sie direkt in unserem Kalender. 30 Minuten, unverbindlich.</p>
+    <a href="https://cal.com/chenist" target="_blank" class="m-b">Auf Cal.com buchen</a>
+    <div class="m-sm">
+      <i class="bi bi-check-circle-fill"></i> Kostenlos &nbsp;
+      <i class="bi bi-check-circle-fill"></i> 30 Min &nbsp;
+      <i class="bi bi-check-circle-fill"></i> EU & International
+    </div>
+  </div>
+</div>
+
 </div>
 ```
-:::
-::::

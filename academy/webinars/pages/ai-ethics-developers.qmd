@@ -1,6 +1,8 @@
 ---
 title: "AI Ethics for Developers"
+page-layout: custom
 title-block-style: none
+toc: false
 subtitle: "Building Responsible AI Systems in Practice"
 description: "Learn practical approaches to building responsible AI systems in this 120-minute webinar with AI ethics researcher CHENIST Team."
 date: "2025-08-05"
@@ -10,113 +12,139 @@ category: "ai-ml"
 presenter: "CHENIST Team, CHENIST Team"
 image: "/assets/images/ai-ethics.jpg"
 registration_date: "2025-06-15"
+include-in-header:
+  text: |
+    <style>.m { --c: #F5A623; }</style>
 ---
 
 ```{=html}
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
-    <li class="breadcrumb-item"><a href="/academy/webinars/">Webinars</a></li>
-    <li class="breadcrumb-item active" aria-current="page">AI Ethics for Developers</li>
-  </ol>
-</nav>
+<div class="m">
 
-<div class="text-center mb-4">
-  <img src="/assets/svg/artificial_intelligence.svg" alt="AI Ethics" style="max-width: 150px; margin-bottom: 20px;">
+<div class="m-hero">
+  <div class="container">
+    <h1>AI Ethics for <span class="gr">Developers</span></h1>
+    <p>Building Responsible AI Systems in Practice</p>
+  </div>
 </div>
-```
 
-```{=html}
-<div class="webinar-header">
-  <div class="webinar-dates">
-    <span class="badge bg-primary">August 5, 2025</span>
-    <span class="badge bg-secondary">120 minutes</span>
-    <div class="webinar-actions">
-      <a href="/webinars/ical/ai-ethics-developers.ics" class="btn btn-outline-primary btn-sm" download>
-        <i class="bi bi-calendar3"></i> Add to Calendar
-      </a>
-      <a href="/webinars/pdfs/ai-ethics-developers.pdf" class="btn btn-outline-secondary btn-sm" download>
-        <i class="bi bi-file-pdf"></i> Download PDF
-      </a>
+<div class="m-s">
+  <div class="container">
+    <div class="text-center mb-4">
+      <img src="/assets/svg/artificial_intelligence.svg" alt="AI Ethics" style="max-width: 150px; margin-bottom: 20px;">
+    </div>
+    <div class="webinar-dates">
+      <span class="badge bg-primary">August 5, 2025</span>
+      <span class="badge bg-secondary">120 minutes</span>
+      <div class="webinar-actions">
+        <a href="/webinars/ical/ai-ethics-developers.ics" class="btn btn-outline-primary btn-sm" download>
+          <i class="bi bi-calendar3"></i> Add to Calendar
+        </a>
+        <a href="/webinars/pdfs/ai-ethics-developers.pdf" class="btn btn-outline-secondary btn-sm" download>
+          <i class="bi bi-file-pdf"></i> Download PDF
+        </a>
+      </div>
+    </div>
+    <div class="webinar-presenter">
+      <i class="bi bi-person-circle"></i> CHENIST Team, CHENIST Team
     </div>
   </div>
-  <div class="webinar-presenter">
-    <i class="bi bi-person-circle"></i> CHENIST Team, CHENIST Team
+</div>
+
+<div class="m-bg">
+  <div class="container">
+
+<h2>Webinar Overview</h2>
+
+<p>As AI systems become increasingly integrated into critical domains such as healthcare, finance, hiring, and criminal justice, the ethical implications of these technologies cannot be overlooked. Developers play a crucial role in ensuring AI systems are built responsibly from the ground up.</p>
+
+<p>In this comprehensive webinar, CHENIST Team, a renowned AI ethics researcher, will bridge the gap between theoretical ethical principles and practical implementation considerations for developers. Participants will gain concrete strategies for identifying potential ethical issues, mitigating bias, ensuring fairness, and building transparent and accountable AI systems.</p>
+
+<h2>Key Topics</h2>
+
+<ul>
+<li><strong>Ethical Frameworks for AI Development</strong>: Understanding key principles and their practical applications</li>
+<li><strong>Bias Identification and Mitigation</strong>: Techniques for detecting and addressing bias in data and models</li>
+<li><strong>Fairness Metrics and Trade-offs</strong>: Quantifiable approaches to measuring and balancing different notions of fairness</li>
+<li><strong>Privacy-Preserving Techniques</strong>: Methods for building AI systems that respect user privacy</li>
+<li><strong>Explainability and Interpretability</strong>: Tools and approaches for making AI systems more transparent</li>
+<li><strong>Testing for Ethical Concerns</strong>: Developing test suites to identify potential ethical issues</li>
+<li><strong>Documentation Practices</strong>: Creating comprehensive documentation for datasets and models</li>
+<li><strong>Responsible Deployment</strong>: Strategies for monitoring systems and addressing issues in production</li>
+</ul>
+
+<h2>Agenda</h2>
+
+<table class="table">
+<thead><tr><th>Time</th><th>Topic</th></tr></thead>
+<tbody>
+<tr><td>00:00 - 15:00</td><td>Introduction to AI ethics and key principles</td></tr>
+<tr><td>15:00 - 35:00</td><td>Data ethics: collection, representation, and bias</td></tr>
+<tr><td>35:00 - 55:00</td><td>Algorithmic fairness: metrics, trade-offs, and implementation</td></tr>
+<tr><td>55:00 - 70:00</td><td>Privacy considerations in AI development</td></tr>
+<tr><td>70:00 - 90:00</td><td>Transparency, explainability, and documentation</td></tr>
+<tr><td>90:00 - 105:00</td><td>Practical implementation strategies and case studies</td></tr>
+<tr><td>105:00 - 120:00</td><td>Q&amp;A and discussion</td></tr>
+</tbody>
+</table>
+
+<h2>About the Presenter</h2>
+
+<p>CHENIST Team is a leading researcher in AI ethics with a focus on developing practical tools and methodologies for ethical AI implementation. She currently leads the AI Ethics Research division at the Institute for Responsible Technology, where she works with industry partners to develop ethical guidelines and assessment frameworks.</p>
+
+<p>Dr. Wilkins holds a Ph.D. in Computer Science with a specialization in AI ethics from Stanford University and has published numerous papers on fairness, accountability, and transparency in AI systems. Her recent book, "Ethical AI by Design," has become a standard reference for practitioners seeking to implement responsible AI practices.</p>
+
+<h2>Who Should Attend</h2>
+
+<ul>
+<li>Software engineers and developers working on AI systems</li>
+<li>Data scientists building and deploying machine learning models</li>
+<li>AI/ML researchers concerned with ethical implications of their work</li>
+<li>Engineering managers overseeing AI development teams</li>
+<li>Product managers guiding AI product development</li>
+<li>IT leaders responsible for AI strategy and governance</li>
+<li>Ethics officers and compliance professionals in tech organizations</li>
+</ul>
+
+<h2>Registration Information</h2>
+
+<p>Registration for this webinar opens on June 15, 2025. Due to the interactive nature of this session, attendance will be limited to 200 participants.</p>
+
+<ul>
+<li><strong>Standard Registration</strong>: $35 (includes access to the live session and recording)</li>
+<li><strong>Premium Registration</strong>: $75 (includes additional reference materials, code examples, and a follow-up Q&amp;A session)</li>
+</ul>
+
   </div>
 </div>
-```
 
-## Webinar Overview
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Build More Responsible AI Systems</h2>
+    <p>Join our AI Ethics for Developers webinar to learn practical strategies for integrating ethical considerations into your AI development workflow.</p>
+    <a href="https://cal.com/chenist" target="_blank" class="m-b">Register Interest</a>
+  </div>
+</div>
 
-As AI systems become increasingly integrated into critical domains such as healthcare, finance, hiring, and criminal justice, the ethical implications of these technologies cannot be overlooked. Developers play a crucial role in ensuring AI systems are built responsibly from the ground up.
+<div class="m-bg">
+  <div class="container">
 
-In this comprehensive webinar, CHENIST Team, a renowned AI ethics researcher, will bridge the gap between theoretical ethical principles and practical implementation considerations for developers. Participants will gain concrete strategies for identifying potential ethical issues, mitigating bias, ensuring fairness, and building transparent and accountable AI systems.
+<h2>Frequently Asked Questions</h2>
 
-## Key Topics
+<h3>What programming languages or frameworks will be covered?</h3>
+<p>The webinar will include examples in Python using common ML frameworks like TensorFlow and PyTorch, but the principles and approaches discussed are applicable across languages and frameworks.</p>
 
-- **Ethical Frameworks for AI Development**: Understanding key principles and their practical applications
-- **Bias Identification and Mitigation**: Techniques for detecting and addressing bias in data and models
-- **Fairness Metrics and Trade-offs**: Quantifiable approaches to measuring and balancing different notions of fairness
-- **Privacy-Preserving Techniques**: Methods for building AI systems that respect user privacy
-- **Explainability and Interpretability**: Tools and approaches for making AI systems more transparent
-- **Testing for Ethical Concerns**: Developing test suites to identify potential ethical issues
-- **Documentation Practices**: Creating comprehensive documentation for datasets and models
-- **Responsible Deployment**: Strategies for monitoring systems and addressing issues in production
+<h3>Is this webinar suitable for beginners in AI/ML?</h3>
+<p>A basic understanding of machine learning concepts is recommended, but deep technical expertise is not required. The focus is on practical approaches that can be applied at various levels of technical proficiency.</p>
 
-## Agenda
+<h3>Will there be coding demonstrations?</h3>
+<p>Yes, the webinar includes practical code examples demonstrating implementation of fairness metrics, bias testing, and explainability tools.</p>
 
-| Time | Topic |
-|------|-------|
-| 00:00 - 15:00 | Introduction to AI ethics and key principles |
-| 15:00 - 35:00 | Data ethics: collection, representation, and bias |
-| 35:00 - 55:00 | Algorithmic fairness: metrics, trade-offs, and implementation |
-| 55:00 - 70:00 | Privacy considerations in AI development |
-| 70:00 - 90:00 | Transparency, explainability, and documentation |
-| 90:00 - 105:00 | Practical implementation strategies and case studies |
-| 105:00 - 120:00 | Q&A and discussion |
+<h3>How does this differ from philosophical discussions about AI ethics?</h3>
+<p>While we'll cover key ethical frameworks, this webinar emphasizes practical implementation rather than theoretical discussions. You'll leave with concrete techniques and tools you can apply immediately in your work.</p>
 
-## About the Presenter
+  </div>
+</div>
 
-CHENIST Team is a leading researcher in AI ethics with a focus on developing practical tools and methodologies for ethical AI implementation. She currently leads the AI Ethics Research division at the Institute for Responsible Technology, where she works with industry partners to develop ethical guidelines and assessment frameworks.
-
-Dr. Wilkins holds a Ph.D. in Computer Science with a specialization in AI ethics from Stanford University and has published numerous papers on fairness, accountability, and transparency in AI systems. Her recent book, "Ethical AI by Design," has become a standard reference for practitioners seeking to implement responsible AI practices.
-
-## Who Should Attend
-
-- Software engineers and developers working on AI systems
-- Data scientists building and deploying machine learning models
-- AI/ML researchers concerned with ethical implications of their work
-- Engineering managers overseeing AI development teams
-- Product managers guiding AI product development
-- IT leaders responsible for AI strategy and governance
-- Ethics officers and compliance professionals in tech organizations
-
-## Registration Information
-
-Registration for this webinar opens on June 15, 2025. Due to the interactive nature of this session, attendance will be limited to 200 participants.
-
-- **Standard Registration**: $35 (includes access to the live session and recording)
-- **Premium Registration**: $75 (includes additional reference materials, code examples, and a follow-up Q&A session)
-
-```{=html}
-<div class="webinar-cta">
-  <h3>Build More Responsible AI Systems</h3>
-  <p>Join our AI Ethics for Developers webinar to learn practical strategies for integrating ethical considerations into your AI development workflow.</p>
-  <a href="https://cal.com/chenist" target="_blank" class="btn btn-success">Register Interest</a>
 </div>
 ```
-
-## Frequently Asked Questions
-
-### What programming languages or frameworks will be covered?
-The webinar will include examples in Python using common ML frameworks like TensorFlow and PyTorch, but the principles and approaches discussed are applicable across languages and frameworks.
-
-### Is this webinar suitable for beginners in AI/ML?
-A basic understanding of machine learning concepts is recommended, but deep technical expertise is not required. The focus is on practical approaches that can be applied at various levels of technical proficiency.
-
-### Will there be coding demonstrations?
-Yes, the webinar includes practical code examples demonstrating implementation of fairness metrics, bias testing, and explainability tools.
-
-### How does this differ from philosophical discussions about AI ethics?
-While we'll cover key ethical frameworks, this webinar emphasizes practical implementation rather than theoretical discussions. You'll leave with concrete techniques and tools you can apply immediately in your work.

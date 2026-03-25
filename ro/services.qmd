@@ -2,174 +2,70 @@
 title: "Servicii"
 title-block-style: none
 subtitle: "Soluții tehnologice de nivel înalt pentru afacerea dumneavoastră"
+page-layout: custom
+toc: false
+from: markdown+raw_html
 ---
 
-::: {.container .page-section}
-## Serviciile Noastre {.text-center .mt-5 .mb-4}
+```{=html}
+<div class="m">
 
-La chen.ist, oferim o gamă largă de servicii de tehnologie pentru a ajuta organizațiile să își atingă obiectivele strategice. Echipa noastră de experți vă poate asista în toate aspectele legate de tehnologie, de la planificare strategică până la implementare și suport continuu.
+<div class="m-hero">
+  <div class="container">
+    <h1>Serviciile <span class="gr">Noastre</span></h1>
+    <p>Soluții tehnologice de nivel înalt pentru afacerea dumneavoastră</p>
+  </div>
+</div>
 
-::: {.row .mt-5}
-::: {.col-md-4}
-::: {.feature-card}
-::: {.feature-card-icon .text-center}
-<i class="bi bi-shield-check"></i>
-:::
+<div class="m-bg">
+  <div class="container">
+    <p class="sub">La chen.ist, oferim o gamă largă de servicii de tehnologie pentru a ajuta organizațiile să își atingă obiectivele strategice.</p>
+    <div class="row g-5">
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-shield-check"></i><h3>Securitate</h3><p>Soluții complete de securitate pentru a proteja activele și informațiile critice ale organizației dvs.</p><a href="#security" class="m-lk">Află mai mult</a></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-cloud"></i><h3>Cloud</h3><p>Infrastructură cloud scalabilă și fiabilă care crește odată cu nevoile afacerii dvs.</p><a href="#cloud-ro" class="m-lk">Află mai mult</a></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-code-square"></i><h3>Reziliență Digitală</h3><p>Cadre tehnologice strategice care asigură că organizația dvs. rămâne operațională și securizată în orice circumstanțe.</p><a href="#digital" class="m-lk">Află mai mult</a></div></div>
+    </div>
+  </div>
+</div>
 
-### Securitate {.text-center}
+<div class="m-s" id="security">
+  <div class="container">
+    <h2>Servicii de Securitate Cibernetică</h2>
+    <p class="sub">Protejarea organizației dvs. împotriva amenințărilor în evoluție și asigurarea conformității cu reglementările relevante.</p>
+    <div class="row g-5">
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-search"></i><h3>Evaluare de Securitate</h3><p>Evaluare cuprinzătoare a posturii dvs. de securitate pentru a identifica vulnerabilitățile și riscurile.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-bug"></i><h3>Testare de Penetrare</h3><p>Atacuri simulate pentru a identifica și aborda slăbiciunile de securitate înainte de a putea fi exploatate.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-mortarboard"></i><h3>Instruire în Securitate</h3><p>Educați-vă echipa cu privire la cele mai bune practici de securitate și conștientizarea amenințărilor.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-exclamation-triangle"></i><h3>Răspuns la Incidente</h3><p>Răspuns rapid și eficient la incidentele de securitate pentru a minimiza impactul.</p></div></div>
+    </div>
+  </div>
+</div>
 
-Soluții complete de securitate pentru a proteja activele și informațiile critice ale organizației dvs.
+<div class="m-bg" id="cloud-ro">
+  <div class="container">
+    <h2>Servicii Cloud</h2>
+    <p class="sub">Valorificați potențialul complet al cloud computing pentru o eficiență, scalabilitate și economii de costuri îmbunătățite.</p>
+    <div class="row g-5">
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-cloud-arrow-up"></i><h3>Migrare în Cloud</h3><p>Tranziție fără probleme a aplicațiilor și datelor dvs. în cloud.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-hdd-rack"></i><h3>Infrastructură Cloud</h3><p>Proiectarea și implementarea unor medii cloud robuste, adaptate nevoilor dvs.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-gear"></i><h3>DevOps</h3><p>Eficientizați procesele de dezvoltare și operațiuni pentru o livrare mai rapidă și mai fiabilă.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-shield-lock"></i><h3>Securitate Cloud</h3><p>Asigurați-vă că mediul dvs. cloud este protejat împotriva amenințărilor și vulnerabilităților.</p></div></div>
+    </div>
+  </div>
+</div>
 
-::: {.text-center .mt-3}
-[Află mai mult](#security){.btn .btn-outline-primary}
-:::
-:::
-:::
+<div class="m-s" id="digital">
+  <div class="container">
+    <h2>Servicii de Reziliență Digitală</h2>
+    <p class="sub">Întărim capacitatea organizației dvs. de a rezista, adapta și recupera rapid în urma perturbărilor.</p>
+    <div class="row g-5">
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-code-square"></i><h3>Software Personalizat</h3><p>Aplicații realizate special pentru cerințele afacerii dvs.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-globe"></i><h3>Dezvoltare Web</h3><p>Site-uri web și aplicații web care captează atenția și oferă rezultate.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-phone"></i><h3>Dezvoltare Mobilă</h3><p>Aplicații mobile native și cross-platform pentru iOS și Android.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-plug"></i><h3>Integrare API</h3><p>Conectați-vă sistemele și aplicațiile pentru un flux de date fără probleme.</p></div></div>
+    </div>
+  </div>
+</div>
 
-::: {.col-md-4}
-::: {.feature-card}
-::: {.feature-card-icon .text-center}
-<i class="bi bi-cloud"></i>
-:::
-
-### Cloud {.text-center}
-
-Infrastructură cloud scalabilă și fiabilă care crește odată cu nevoile afacerii dvs.
-
-::: {.text-center .mt-3}
-[Află mai mult](#cloud){.btn .btn-outline-primary}
-:::
-:::
-:::
-
-::: {.col-md-4}
-::: {.feature-card}
-::: {.feature-card-icon .text-center}
-<i class="bi bi-code-square"></i>
-:::
-
-### Reziliență Digitală {.text-center}
-
-Cadre tehnologice strategice care asigură că organizația dvs. rămâne operațională și securizată în orice circumstanțe.
-
-::: {.text-center .mt-3}
-[Află mai mult](#digital){.btn .btn-outline-primary}
-:::
-:::
-:::
-:::
-:::
-
-## Servicii de Securitate Cibernetică {#security}
-
-Serviciile noastre complete de securitate cibernetică ajută la protejarea organizației dvs. împotriva amenințărilor în evoluție și asigură conformitatea cu reglementările relevante.
-
-::: {.row .mt-4}
-::: {.col-md-6}
-::: {.security-feature}
-### Evaluare de Securitate
-
-Evaluare cuprinzătoare a posturii dvs. de securitate pentru a identifica vulnerabilitățile și riscurile.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Testare de Penetrare
-
-Atacuri simulate pentru a identifica și aborda slăbiciunile de securitate înainte de a putea fi exploatate.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Instruire în Securitate
-
-Educați-vă echipa cu privire la cele mai bune practici de securitate și conștientizarea amenințărilor.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Răspuns la Incidente
-
-Răspuns rapid și eficient la incidentele de securitate pentru a minimiza impactul.
-:::
-:::
-:::
-
-## Servicii Cloud {#cloud-ro}
-
-Serviciile noastre cloud vă ajută să valorificați potențialul complet al cloud computing pentru o eficiență, scalabilitate și economii de costuri îmbunătățite.
-
-::: {.row .mt-4}
-::: {.col-md-6}
-::: {.security-feature}
-### Migrare în Cloud
-
-Tranziție fără probleme a aplicațiilor și datelor dvs. în cloud.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Infrastructură Cloud
-
-Proiectarea și implementarea unor medii cloud robuste, adaptate nevoilor dvs.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### DevOps
-
-Eficientizați procesele de dezvoltare și operațiuni pentru o livrare mai rapidă și mai fiabilă.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Securitate Cloud
-
-Asigurați-vă că mediul dvs. cloud este protejat împotriva amenințărilor și vulnerabilităților.
-:::
-:::
-:::
-
-## Servicii de Reziliență Digitală {#digital}
-
-Soluțiile noastre de reziliență digitală întăresc capacitatea organizației dvs. de a rezista, adapta și recupera rapid în urma perturbărilor, asigurând continuitatea operațiunilor critice în fața amenințărilor cibernetice și a defecțiunilor tehnice.
-
-::: {.row .mt-4}
-::: {.col-md-6}
-::: {.security-feature}
-### Software Personalizat
-
-Aplicații realizate special pentru cerințele afacerii dvs.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Dezvoltare Web
-
-Site-uri web și aplicații web care captează atenția și oferă rezultate.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Dezvoltare Mobilă
-
-Aplicații mobile native și cross-platform pentru iOS și Android.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Integrare API
-
-Conectați-vă sistemele și aplicațiile pentru un flux de date fără probleme.
-:::
-:::
-:::
+</div>
+```

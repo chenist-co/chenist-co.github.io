@@ -1,6 +1,8 @@
 ---
 title: "Summer School 2025"
+page-layout: custom
 title-block-style: none
+toc: false
 subtitle: "Intensive Two-Week Technology Program"
 description: "Enroll in the chen.ist Summer School 2025, an intensive two-week technology program running August 1-15 at Tech Campus, Bucharest."
 date: "2025-08-01"
@@ -9,95 +11,134 @@ location: "Tech Campus, Bucharest"
 category: "summer-school"
 image: "/assets/images/summer-school.jpg"
 registration_date: "2025-05-01"
+include-in-header:
+  text: |
+    <style>.m { --c: #F5A623; }</style>
 ---
 
 ```{=html}
-<div class="event-header">
-  <div class="event-dates">
-    <span class="badge bg-primary">August 1-15, 2025</span>
-    <div class="event-actions">
-      <a href="/events/ical/summer-school-2025.ics" class="btn btn-outline-primary btn-sm" download>
-        <i class="bi bi-calendar3"></i> Add to Calendar
-      </a>
-      <a href="/events/pdfs/summer-school-2025.pdf" class="btn btn-outline-secondary btn-sm" download>
-        <i class="bi bi-file-pdf"></i> Download PDF
-      </a>
+<div class="m">
+
+<div class="m-hero">
+  <div class="container">
+    <h1>Summer School <span class="gr">2025</span></h1>
+    <p>Intensive Two-Week Technology Program</p>
+  </div>
+</div>
+
+<div class="m-s">
+  <div class="container">
+    <div class="event-dates">
+      <span class="badge bg-primary">August 1-15, 2025</span>
+      <div class="event-actions">
+        <a href="/events/ical/summer-school-2025.ics" class="btn btn-outline-primary btn-sm" download>
+          <i class="bi bi-calendar3"></i> Add to Calendar
+        </a>
+        <a href="/events/pdfs/summer-school-2025.pdf" class="btn btn-outline-secondary btn-sm" download>
+          <i class="bi bi-file-pdf"></i> Download PDF
+        </a>
+      </div>
+    </div>
+    <div class="event-location">
+      <i class="bi bi-geo-alt"></i> Tech Campus, Bucharest
     </div>
   </div>
-  <div class="event-location">
-    <i class="bi bi-geo-alt"></i> Tech Campus, Bucharest
+</div>
+
+<div class="m-bg">
+  <div class="container">
+
+<h2>Event Overview</h2>
+
+<p>The Summer School 2025 is an intensive two-week program focused on cutting-edge technologies and practical skills development. Perfect for students and professionals looking to enhance their technical capabilities in a condensed, immersive format.</p>
+
+<h2>Program Details</h2>
+
+<p>Over the course of two weeks, participants will:</p>
+
+<ul>
+<li>Engage with industry experts through daily workshops and lectures</li>
+<li>Work on real-world projects in small teams</li>
+<li>Build a comprehensive portfolio of technical work</li>
+<li>Network with peers and potential employers</li>
+<li>Receive personalized mentorship and feedback</li>
+</ul>
+
+<h2>Curriculum</h2>
+
+<h3>Week 1: Fundamentals &amp; Exploration</h3>
+
+<table class="table">
+<thead><tr><th>Day</th><th>Morning</th><th>Afternoon</th></tr></thead>
+<tbody>
+<tr><td>Monday</td><td>Opening Ceremony &amp; Introduction</td><td>Technology Landscape Overview</td></tr>
+<tr><td>Tuesday</td><td>Web Development Foundations</td><td>Responsive Design Workshop</td></tr>
+<tr><td>Wednesday</td><td>Backend Architecture</td><td>Database Design Principles</td></tr>
+<tr><td>Thursday</td><td>API Development</td><td>Integration Challenges</td></tr>
+<tr><td>Friday</td><td>Cloud Infrastructure</td><td>Deployment Strategies</td></tr>
+</tbody>
+</table>
+
+<h3>Week 2: Advanced Topics &amp; Project Work</h3>
+
+<table class="table">
+<thead><tr><th>Day</th><th>Morning</th><th>Afternoon</th></tr></thead>
+<tbody>
+<tr><td>Monday</td><td>AI &amp; Machine Learning Intro</td><td>Data Analysis Workshop</td></tr>
+<tr><td>Tuesday</td><td>Applied ML Techniques</td><td>Computer Vision Labs</td></tr>
+<tr><td>Wednesday</td><td>Security Fundamentals</td><td>Ethical Hacking Workshop</td></tr>
+<tr><td>Thursday</td><td>Project Work</td><td>Project Work</td></tr>
+<tr><td>Friday</td><td>Final Presentations</td><td>Closing Ceremony &amp; Networking</td></tr>
+</tbody>
+</table>
+
+<h2>Who Should Attend</h2>
+
+<ul>
+<li>Students pursuing degrees in computer science or related fields</li>
+<li>Early-career professionals looking to expand their skill set</li>
+<li>Career changers transitioning into tech roles</li>
+<li>Educators seeking to update their technical knowledge</li>
+</ul>
+
+<h2>Registration Information</h2>
+
+<p>Registration opens on May 1, 2025. Early registration is recommended as spaces are limited to 50 participants to ensure a high-quality, personalized experience.</p>
+
   </div>
 </div>
-```
 
-## Event Overview
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Join Us for Summer School 2025</h2>
+    <p>Immerse yourself in an intensive learning experience that will transform your technical skills and career prospects.</p>
+    <a href="https://cal.com/chenist" target="_blank" class="m-b">Register Interest</a>
+  </div>
+</div>
 
-The Summer School 2025 is an intensive two-week program focused on cutting-edge technologies and practical skills development. Perfect for students and professionals looking to enhance their technical capabilities in a condensed, immersive format.
+<div class="m-bg">
+  <div class="container">
 
-## Program Details
+<h2>Frequently Asked Questions</h2>
 
-Over the course of two weeks, participants will:
+<h3>What is the cost to attend?</h3>
+<p>The full program fee is &euro;1,500, which includes all materials, lunches, and special events. Early bird registrants receive a 15% discount. Limited scholarships are available for students.</p>
 
-- Engage with industry experts through daily workshops and lectures
-- Work on real-world projects in small teams
-- Build a comprehensive portfolio of technical work
-- Network with peers and potential employers
-- Receive personalized mentorship and feedback
+<h3>Is accommodation provided?</h3>
+<p>Accommodation is not included in the program fee. However, we can assist with recommendations and have partnered with nearby hotels to offer discounted rates.</p>
 
-## Curriculum
+<h3>What level of technical knowledge is required?</h3>
+<p>Participants should have basic programming experience (in any language) and familiarity with web concepts. A pre-course assessment and learning resources will be provided to help you prepare.</p>
 
-### Week 1: Fundamentals & Exploration
+<h3>Will I receive a certificate?</h3>
+<p>Yes, all participants who complete the program will receive a certificate of completion. Additionally, top performers will receive special recognition.</p>
 
-| Day | Morning | Afternoon |
-|-----|---------|----------|
-| Monday | Opening Ceremony & Introduction | Technology Landscape Overview |
-| Tuesday | Web Development Foundations | Responsive Design Workshop |
-| Wednesday | Backend Architecture | Database Design Principles |
-| Thursday | API Development | Integration Challenges |
-| Friday | Cloud Infrastructure | Deployment Strategies |
+<h3>Can I attend virtually?</h3>
+<p>The program is designed as an in-person experience to maximize hands-on learning and networking. However, select lectures may be available for remote viewing.</p>
 
-### Week 2: Advanced Topics & Project Work
+  </div>
+</div>
 
-| Day | Morning | Afternoon |
-|-----|---------|----------|
-| Monday | AI & Machine Learning Intro | Data Analysis Workshop |
-| Tuesday | Applied ML Techniques | Computer Vision Labs |
-| Wednesday | Security Fundamentals | Ethical Hacking Workshop |
-| Thursday | Project Work | Project Work |
-| Friday | Final Presentations | Closing Ceremony & Networking |
-
-## Who Should Attend
-
-- Students pursuing degrees in computer science or related fields
-- Early-career professionals looking to expand their skill set
-- Career changers transitioning into tech roles
-- Educators seeking to update their technical knowledge
-
-## Registration Information
-
-Registration opens on May 1, 2025. Early registration is recommended as spaces are limited to 50 participants to ensure a high-quality, personalized experience.
-
-```{=html}
-<div class="event-cta">
-  <h3>Join Us for Summer School 2025</h3>
-  <p>Immerse yourself in an intensive learning experience that will transform your technical skills and career prospects.</p>
-  <a href="https://cal.com/chenist" target="_blank" class="btn btn-success">Register Interest</a>
 </div>
 ```
-
-## Frequently Asked Questions
-
-### What is the cost to attend?
-The full program fee is €1,500, which includes all materials, lunches, and special events. Early bird registrants receive a 15% discount. Limited scholarships are available for students.
-
-### Is accommodation provided?
-Accommodation is not included in the program fee. However, we can assist with recommendations and have partnered with nearby hotels to offer discounted rates.
-
-### What level of technical knowledge is required?
-Participants should have basic programming experience (in any language) and familiarity with web concepts. A pre-course assessment and learning resources will be provided to help you prepare.
-
-### Will I receive a certificate?
-Yes, all participants who complete the program will receive a certificate of completion. Additionally, top performers will receive special recognition.
-
-### Can I attend virtually?
-The program is designed as an in-person experience to maximize hands-on learning and networking. However, select lectures may be available for remote viewing.

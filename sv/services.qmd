@@ -2,174 +2,70 @@
 title: "Tjänster"
 title-block-style: none
 subtitle: "Avancerade tekniklösningar för din verksamhet"
+page-layout: custom
+toc: false
+from: markdown+raw_html
 ---
 
-::: {.container .page-section}
-## Våra tjänster {.text-center .mt-5 .mb-4}
+```{=html}
+<div class="m">
 
-På chen.ist erbjuder vi ett brett utbud av tekniktjänster för att hjälpa organisationer att nå sina strategiska mål. Vårt expertteam kan hjälpa dig med alla aspekter av teknik, från strategisk planering till implementering och löpande support.
+<div class="m-hero">
+  <div class="container">
+    <h1>Våra <span class="gr">Tjänster</span></h1>
+    <p>Avancerade tekniklösningar för din verksamhet</p>
+  </div>
+</div>
 
-::: {.row .mt-5}
-::: {.col-md-4}
-::: {.feature-card}
-::: {.feature-card-icon .text-center}
-<i class="bi bi-shield-check"></i>
-:::
+<div class="m-bg">
+  <div class="container">
+    <p class="sub">På chen.ist erbjuder vi ett brett utbud av tekniktjänster för att hjälpa organisationer att nå sina strategiska mål.</p>
+    <div class="row g-5">
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-shield-check"></i><h3>Säkerhet</h3><p>Kompletta säkerhetslösningar som skyddar din organisations kritiska tillgångar och information.</p><a href="#security" class="m-lk">Läs mer</a></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-cloud"></i><h3>Moln</h3><p>Skalbar och tillförlitlig molninfrastruktur som växer med dina affärsbehov.</p><a href="#cloud" class="m-lk">Läs mer</a></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-code-square"></i><h3>Digital Motståndskraft</h3><p>Strategiska tekniska ramverk som säkerställer att din organisation förblir operativ och säker under alla omständigheter.</p><a href="#digital" class="m-lk">Läs mer</a></div></div>
+    </div>
+  </div>
+</div>
 
-### Säkerhet {.text-center}
+<div class="m-s" id="security">
+  <div class="container">
+    <h2>Cybersäkerhetstjänster</h2>
+    <p class="sub">Skydda din organisation från utvecklande hot och säkerställ efterlevnad av relevanta föreskrifter.</p>
+    <div class="row g-5">
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-search"></i><h3>Säkerhetsbedömning</h3><p>Omfattande utvärdering av din säkerhetsstatus för att identifiera sårbarheter och risker.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-bug"></i><h3>Penetrationstestning</h3><p>Simulerade attacker för att identifiera och åtgärda säkerhetsbrister innan de kan utnyttjas.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-mortarboard"></i><h3>Säkerhetsutbildning</h3><p>Utbilda ditt team om säkerhetsbästa praxis och hotmedvetenhet.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-exclamation-triangle"></i><h3>Incidenthantering</h3><p>Snabb och effektiv hantering av säkerhetsincidenter för att minimera påverkan.</p></div></div>
+    </div>
+  </div>
+</div>
 
-Kompletta säkerhetslösningar som skyddar din organisations kritiska tillgångar och information.
+<div class="m-bg" id="cloud">
+  <div class="container">
+    <h2>Molntjänster</h2>
+    <p class="sub">Utnyttja den fulla potentialen av molnberäkning för förbättrad effektivitet, skalbarhet och kostnadsbesparingar.</p>
+    <div class="row g-5">
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-cloud-arrow-up"></i><h3>Molnmigrering</h3><p>Sömlös övergång av dina applikationer och data till molnet.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-hdd-rack"></i><h3>Molninfrastruktur</h3><p>Design och implementering av robusta molnmiljöer skräddarsydda efter dina behov.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-gear"></i><h3>DevOps</h3><p>Effektivisera dina utvecklings- och driftsprocesser för snabbare, mer tillförlitlig leverans.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-shield-lock"></i><h3>Molnsäkerhet</h3><p>Säkerställ att din molnmiljö är skyddad mot hot och sårbarheter.</p></div></div>
+    </div>
+  </div>
+</div>
 
-::: {.text-center .mt-3}
-[Läs mer](#security){.btn .btn-outline-primary}
-:::
-:::
-:::
+<div class="m-s" id="digital">
+  <div class="container">
+    <h2>Digital Motståndskraftstjänster</h2>
+    <p class="sub">Stärk din organisations förmåga att motstå, anpassa sig till och snabbt återhämta sig från störningar.</p>
+    <div class="row g-5">
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-code-square"></i><h3>Skräddarsydd Mjukvara</h3><p>Specialbyggda applikationer designade specifikt för dina verksamhetskrav.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-globe"></i><h3>Webbutveckling</h3><p>Webbplatser och webbapplikationer som engagerar och levererar resultat.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-phone"></i><h3>Mobilutveckling</h3><p>Nativa och plattformsoberoende mobilapplikationer för iOS och Android.</p></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-plug"></i><h3>API-integration</h3><p>Anslut dina system och applikationer för ett sömlöst dataflöde.</p></div></div>
+    </div>
+  </div>
+</div>
 
-::: {.col-md-4}
-::: {.feature-card}
-::: {.feature-card-icon .text-center}
-<i class="bi bi-cloud"></i>
-:::
-
-### Moln {.text-center}
-
-Skalbar och tillförlitlig molninfrastruktur som växer med dina affärsbehov.
-
-::: {.text-center .mt-3}
-[Läs mer](#cloud){.btn .btn-outline-primary}
-:::
-:::
-:::
-
-::: {.col-md-4}
-::: {.feature-card}
-::: {.feature-card-icon .text-center}
-<i class="bi bi-code-square"></i>
-:::
-
-### Digital Motståndskraft {.text-center}
-
-Strategiska tekniska ramverk som säkerställer att din organisation förblir operativ och säker under alla omständigheter.
-
-::: {.text-center .mt-3}
-[Läs mer](#digital){.btn .btn-outline-primary}
-:::
-:::
-:::
-:::
-:::
-
-## Cybersäkerhetstjänster {#security}
-
-Våra omfattande cybersäkerhetstjänster hjälper till att skydda din organisation från utvecklande hot och säkerställer efterlevnad av relevanta föreskrifter.
-
-::: {.row .mt-4}
-::: {.col-md-6}
-::: {.security-feature}
-### Säkerhetsbedömning
-
-Omfattande utvärdering av din säkerhetsstatus för att identifiera sårbarheter och risker.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Penetrationstestning
-
-Simulerade attacker för att identifiera och åtgärda säkerhetsbrister innan de kan utnyttjas.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Säkerhetsutbildning
-
-Utbilda ditt team om säkerhetsbästa praxis och hotmedvetenhet.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Incidenthantering
-
-Snabb och effektiv hantering av säkerhetsincidenter för att minimera påverkan.
-:::
-:::
-:::
-
-## Molntjänster {#cloud}
-
-Våra molntjänster hjälper dig att utnyttja den fulla potentialen av molnberäkning för förbättrad effektivitet, skalbarhet och kostnadsbesparingar.
-
-::: {.row .mt-4}
-::: {.col-md-6}
-::: {.security-feature}
-### Molnmigrering
-
-Sömlös övergång av dina applikationer och data till molnet.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Molninfrastruktur
-
-Design och implementering av robusta molnmiljöer skräddarsydda efter dina behov.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### DevOps
-
-Effektivisera dina utvecklings- och driftsprocesser för snabbare, mer tillförlitlig leverans.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Molnsäkerhet
-
-Säkerställ att din molnmiljö är skyddad mot hot och sårbarheter.
-:::
-:::
-:::
-
-## Digital Motståndskraftstjänster {#digital}
-
-Våra digitala motståndskraftslösningar stärker din organisations förmåga att motstå, anpassa sig till och snabbt återhämta sig från störningar, vilket säkerställer kontinuitet i kritiska affärsprocesser när du står inför cyberhot och tekniska fel.
-
-::: {.row .mt-4}
-::: {.col-md-6}
-::: {.security-feature}
-### Skräddarsydd Mjukvara
-
-Specialbyggda applikationer designade specifikt för dina verksamhetskrav.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Webbutveckling
-
-Webbplatser och webbapplikationer som engagerar och levererar resultat.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Mobilutveckling
-
-Nativa och plattformsoberoende mobilapplikationer för iOS och Android.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### API-integration
-
-Anslut dina system och applikationer för ett sömlöst dataflöde.
-:::
-:::
-:::
+</div>
+```

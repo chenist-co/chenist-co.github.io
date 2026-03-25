@@ -3,191 +3,67 @@ title: "chen.ist"
 title-block-style: none
 subtitle: "Innovativa tekniklösningar för den moderna världen"
 page-layout: custom
+toc: false
 from: markdown+raw_html
 ---
 
-:::: {.hero-section}
-
-::: {.container}
-::: {.row .align-items-center}
-::: {.col-md-8 .offset-md-2 .text-center}
-# [Välkommen till]{.text-white} [chen.ist]{.text-green}
-
 ```{=html}
-<p>Innovativa tekniklösningar för den moderna världen</p>
+<div class="m">
+
+<div class="m-hero">
+  <div class="container">
+    <h1>Välkommen till <span class="gr">chen.ist</span></h1>
+    <p>Innovativa tekniklösningar för den moderna världen</p>
+    <a href="https://cal.com/chenist" class="m-b">Kom igång</a>
+  </div>
+</div>
+
+<div class="m-bg">
+  <div class="container">
+    <h2>Våra tjänster</h2>
+    <p class="sub">Kompletta tekniklösningar för din verksamhet.</p>
+    <div class="row g-5">
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-terminal"></i><h3>Digital Infrastruktur</h3><p>Open Source, UNIX & Apple för SMF. Linux, BSD, NixOS och nya Apple Business-plattformen.</p><a href="/digital/" class="m-lk">Läs mer</a></div></div>
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-shield-check"></i><h3>Cybersäkerhet</h3><p>Blue Team: SOC-övervakning dygnet runt, hotjakt, incidenthantering och säkerhetsanalys.</p><a href="/services/cybersecurity/" class="m-lk">Läs mer</a></div></div>
+      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-cloud"></i><h3>Molntjänster</h3><p>Migrering, infrastruktur, DevOps och molnsäkerhet på AWS, Azure och Google Cloud.</p><a href="/services/cloud/" class="m-lk">Läs mer</a></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="m-s">
+  <div class="container">
+    <h2>Varför välja oss</h2>
+    <p class="sub">Fyra värderingar i kärnan av allt vi bygger.</p>
+    <div class="row g-5">
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-trophy"></i><h3>Expertis</h3><p>Vårt team av experter har mångårig erfarenhet från flera tekniska områden.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-lightbulb"></i><h3>Innovation</h3><p>Vi utforskar ständigt nya tekniker och metoder för att lösa komplexa problem.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-star"></i><h3>Kvalitet</h3><p>Vi upprätthåller högsta standard i allt vårt arbete, från planering till implementering.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-headset"></i><h3>Support</h3><p>Vi finns vid din sida under hela processen och erbjuder kontinuerligt stöd och underhåll.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="m-bg">
+  <div class="container">
+    <h2>Senast från vår blogg</h2>
+    <p class="sub">Insikter, handledningar och uppdateringar från vårt team.</p>
+    <div class="row g-5">
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-shield-lock"></i><h3><a href="blogg/cyber-security-best-practices.html">Bästa praxis för cybersäkerhet</a></h3><p>Viktiga cybersäkerhetsrutiner som alla organisationer bör implementera för att skydda sig mot utvecklande hot under 2025.</p></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-cloud-arrow-up"></i><h3>Strategier för molnmigrering</h3><p>Steg-för-steg-strategier för framgångsrik molnmigrering med minimal störning av verksamheten.</p></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-code-slash"></i><h3>Moderna utvecklingsmetoder</h3><p>Utforska moderna utvecklingsmetoder som förbättrar effektivitet, kvalitet och samarbete.</p></div></div>
+    </div>
+    <div style="text-align:center;margin-top:2rem;"><a href="blogg.html" class="m-b">Se alla inlägg</a></div>
+  </div>
+</div>
+
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Redo att komma igång?</h2>
+    <p>Kontakta oss idag för att se hur vi kan hjälpa dig att nå dina mål.</p>
+    <a href="https://cal.com/chenist" class="m-b">Kontakta oss</a>
+  </div>
+</div>
+
+</div>
 ```
-
-[Kom igång](https://cal.com/chenist){.btn .btn-success .btn-lg .cta-button}
-:::
-:::
-:::
-
-::::
-
-::: {.container .page-section}
-## Våra tjänster {.text-center .mt-5 .mb-4}
-
-::: {.row .mt-5}
-::: {.col-lg-4 .col-md-6}
-::: {.feature-card}
-::: {.feature-card-icon .text-center}
-<i class="bi bi-terminal"></i>
-:::
-
-### Digital Infrastruktur {.text-center}
-
-Open Source, UNIX & Apple för SMF. Linux, BSD, NixOS och nya Apple Business-plattformen.
-
-::: {.text-center .mt-3}
-[Läs mer](/digital/){.btn .btn-outline-primary}
-:::
-:::
-:::
-
-::: {.col-lg-4 .col-md-6}
-::: {.feature-card}
-::: {.feature-card-icon .text-center}
-<i class="bi bi-shield-check"></i>
-:::
-
-### Cybersäkerhet {.text-center}
-
-Blue Team: SOC-övervakning dygnet runt, hotjakt, incidenthantering och säkerhetsanalys.
-
-::: {.text-center .mt-3}
-[Läs mer](/services/cybersecurity/){.btn .btn-outline-primary}
-:::
-:::
-:::
-
-::: {.col-lg-4 .col-md-6}
-::: {.feature-card}
-::: {.feature-card-icon .text-center}
-<i class="bi bi-cloud"></i>
-:::
-
-### Molntjänster {.text-center}
-
-Migrering, infrastruktur, DevOps och molnsäkerhet på AWS, Azure och Google Cloud.
-
-::: {.text-center .mt-3}
-[Läs mer](/services/cloud/){.btn .btn-outline-primary}
-:::
-:::
-:::
-:::
-:::
-
-::: {.container .page-section}
-## Varför välja oss {.text-center .mt-5 .mb-4}
-
-::: {.row .mt-4}
-::: {.col-md-6}
-::: {.security-feature}
-### Expertis
-
-Vårt team av experter har mångårig erfarenhet från flera tekniska områden.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Innovation
-
-Vi utforskar ständigt nya tekniker och metoder för att lösa komplexa problem.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Kvalitet
-
-Vi upprätthåller högsta standard i allt vårt arbete, från planering till implementering.
-:::
-:::
-
-::: {.col-md-6}
-::: {.security-feature}
-### Support
-
-Vi finns vid din sida under hela processen och erbjuder kontinuerligt stöd och underhåll.
-:::
-:::
-:::
-:::
-
-::: {.container .page-section}
-## Senast från vår blogg {.text-center .mt-5 .mb-4}
-
-::: {.row}
-::: {.col-md-4}
-::: {.card .h-100}
-::: {.card-body}
-### [Bästa praxis för cybersäkerhet](blogg/cyber-security-best-practices.html)
-
-Viktiga cybersäkerhetsrutiner som alla organisationer bör implementera för att skydda sig mot utvecklande hot under 2025.
-
-::: {.text-end .mt-4}
-[Läs mer](blogg/cyber-security-best-practices.html){.btn .btn-sm .btn-outline-primary}
-:::
-:::
-
-::: {.card-footer}
-<i class="bi bi-calendar me-1"></i> 1 april, 2025
-:::
-:::
-:::
-
-::: {.col-md-4}
-::: {.card .h-100}
-::: {.card-body}
-### Strategier för molnmigrering
-
-Steg-för-steg-strategier för framgångsrik molnmigrering med minimal störning av verksamheten.
-
-::: {.text-end .mt-4}
-[Läs mer](blogg.html){.btn .btn-sm .btn-outline-primary}
-:::
-:::
-
-::: {.card-footer}
-<i class="bi bi-calendar me-1"></i> 15 mars, 2025
-:::
-:::
-:::
-
-::: {.col-md-4}
-::: {.card .h-100}
-::: {.card-body}
-### Moderna utvecklingsmetoder
-
-Utforska moderna utvecklingsmetoder som förbättrar effektivitet, kvalitet och samarbete.
-
-::: {.text-end .mt-4}
-[Läs mer](blogg.html){.btn .btn-sm .btn-outline-primary}
-:::
-:::
-
-::: {.card-footer}
-<i class="bi bi-calendar me-1"></i> 22 februari, 2025
-:::
-:::
-:::
-:::
-
-::: {.text-center .mt-4}
-[Se alla inlägg →](blogg.html){.btn .btn-primary}
-:::
-:::
-
-:::: {.cta-section}
-::: {.container .text-center}
-## Redo att komma igång?
-
-```{=html}
-<p class="mb-4">Kontakta oss idag för att se hur vi kan hjälpa dig att nå dina mål.</p>
-```
-
-[Kontakta oss](https://cal.com/chenist){.cta-button}
-:::
-::::
