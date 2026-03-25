@@ -167,9 +167,12 @@
 /* Prevent horizontal scroll on all pages */
 html, body { overflow-x: hidden; }
 
-/* Dark mode — eliminate ALL white backgrounds globally */
-html[data-bs-theme="dark"],
-html[data-bs-theme="dark"] body,
+/* Dark mode — override Bootstrap's --bs-body-bg variable + force backgrounds */
+html[data-bs-theme="dark"] {
+  --bs-body-bg: #111 !important;
+  background-color: #111 !important;
+}
+html[data-bs-theme="dark"] body { background-color: #111 !important; }
 html[data-bs-theme="dark"] main,
 html[data-bs-theme="dark"] main.content,
 html[data-bs-theme="dark"] #quarto-content,
