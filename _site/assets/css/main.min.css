@@ -46,3 +46,17 @@ html[data-bs-theme="dark"] .blog-cta, body.quarto-dark .blog-cta { background: #
   .blog-header { padding: 6rem 1.5rem 2rem; }
   main.content { padding: 1.5rem 1rem 3rem; font-size: 1rem; }
 }
+
+/* Fix: scope blog styles to article layout only */
+.page-layout-article main.content { max-width: 760px; }
+.page-layout-article .quarto-title-meta { font-size: 0.85rem; color: #86868b; margin-bottom: 2rem; }
+.page-layout-article .quarto-title-meta a { color: #81BD4A; }
+.page-layout-article .quarto-title h1.title { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 0.5rem; }
+.page-layout-article .quarto-categories { margin-bottom: 1.5rem; }
+.page-layout-article .quarto-category { background: rgba(129,189,74,0.1); color: #81BD4A; border: none; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: 980px; }
+
+/* TOC sidebar styling */
+#TOC, .sidebar nav[role="doc-toc"] { font-size: 0.82rem; }
+#TOC a, .sidebar nav[role="doc-toc"] a { color: rgba(var(--bs-body-color-rgb), 0.6); text-decoration: none; padding: 0.2rem 0; display: block; }
+#TOC a:hover, .sidebar nav[role="doc-toc"] a:hover { color: #81BD4A; }
+#TOC a.active, .sidebar nav[role="doc-toc"] a.active { color: #81BD4A; font-weight: 600; }
