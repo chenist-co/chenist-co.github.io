@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-b984f3b3cb6b71a8ea84b04fabc41f2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-36e5f5eb5e62ac17850c20678128155a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-b984f3b3cb6b71a8ea84b04fabc41f2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a592c5a32ddb2bbfd9fa55d2db6a7c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-6b071a7e68b6cff4b621bc773a21853a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-a592c5a32ddb2bbfd9fa55d2db6a7c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,14 +77,10 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 <meta property="og:title" content="Events – chen.ist">
 <meta property="og:description" content="Find upcoming hackathons, workshops, conferences, meetups, and summer school programs hosted by chen.ist Academy.">
-<meta property="og:image" content="https://chen.ist/assets/svg/events.svg">
 <meta property="og:site_name" content="chen.ist">
-<meta property="og:image:alt" content="Academy Events">
 <meta name="twitter:title" content="Events – chen.ist">
 <meta name="twitter:description" content="Find upcoming hackathons, workshops, conferences, meetups, and summer school programs hosted by chen.ist Academy.">
-<meta name="twitter:image" content="https://chen.ist/assets/svg/events.svg">
-<meta name="twitter:image:alt" content="Academy Events">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
@@ -330,12 +326,53 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 }
 </script>
+<style>
+.ap { --c: #F5A623; --g: #86868b; font-family: 'Open Sans', -apple-system, system-ui, sans-serif; }
+.ap-hero { padding: 12rem 0 8rem; text-align: center; }
+.ap-hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 700; letter-spacing: -0.045em; line-height: 1.06; }
+.ap-hero .gr { color: var(--c); }
+.ap-hero p { font-size: 1.35rem; color: var(--g); max-width: 500px; margin: 1.5rem auto 0; line-height: 1.45; }
+.ap-s { padding: 7rem 0; }
+.ap-bg { padding: 7rem 0; background: #f5f5f7; }
+[data-bs-theme="dark"] .ap-bg { background: #161617; }
+.ap h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.035em; text-align: center; line-height: 1.1; margin-bottom: 0.5rem; }
+.ap .sub { text-align: center; font-size: 1.1rem; color: var(--g); max-width: 480px; margin: 0 auto 5rem; }
+.ap-lk { color: var(--c); font-size: 1rem; text-decoration: none; }
+.ap-lk:hover { text-decoration: underline; }
+.ap-lk::after { content: " ›"; font-weight: 300; }
+.ap-b { display: inline-block; padding: 0.85rem 2.25rem; background: var(--c); color: #fff; border-radius: 980px; font-weight: 500; font-size: 1rem; text-decoration: none; transition: background 0.15s; }
+.ap-b:hover { background: #d9901e; color: #fff; text-decoration: none; }
+.ap-d { width: 36px; height: 3px; background: var(--c); margin: 0 auto 3.5rem; border-radius: 2px; opacity: 0.6; }
+.ap-cta { padding: 10rem 0; text-align: center; }
+.ap-cta h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; }
+.ap-cta p { font-size: 1.1rem; color: var(--g); max-width: 420px; margin: 0 auto 2.5rem; line-height: 1.5; }
+.ev { border: 1.5px solid rgba(0,0,0,0.08); border-radius: 20px; padding: 2.5rem; height: 100%; display: flex; flex-direction: column; transition: border-color 0.2s; }
+[data-bs-theme="dark"] .ev { border-color: rgba(255,255,255,0.1); }
+.ev:hover { border-color: var(--c); }
+.ev-badge { display: inline-block; background: var(--c); color: #fff; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.25rem 0.75rem; border-radius: 980px; margin-bottom: 1rem; }
+.ev-badge-past { background: var(--g); }
+.ev h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
+.ev-date { font-size: 0.85rem; color: var(--c); font-weight: 600; margin-bottom: 0.75rem; }
+.ev-loc { font-size: 0.85rem; color: var(--g); margin-bottom: 1rem; }
+.ev p { font-size: 0.92rem; color: var(--g); line-height: 1.55; flex-grow: 1; }
+.ev-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
+.ev-actions a { font-size: 0.88rem; }
+.rec { text-align: center; padding: 0 1rem; }
+.rec i { font-size: 1.75rem; color: var(--c); display: block; margin-bottom: 0.75rem; opacity: 0.85; }
+.rec h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.35rem; }
+.rec p { font-size: 0.88rem; color: var(--g); line-height: 1.5; }
+.rec-when { font-size: 0.82rem; color: var(--c); font-weight: 600; margin-top: 0.5rem; }
+@media (max-width: 767px) {
+  .ap-hero { padding: 7rem 0 5rem; }
+  .ap-cta { padding: 6rem 0; }
+}
+</style>
 
 
 <link rel="stylesheet" href="../assets/css/styles.css">
 <link rel="stylesheet" href="../assets/css/academy.scss">
 <link rel="stylesheet" href="../assets/css/custom-hero.css">
-<link rel="stylesheet" href="../assets/css/academy.scss">
+<link rel="stylesheet" href="../assets/css/landing-pages.css">
 
 
 
@@ -368,6 +405,10 @@ document.addEventListener('DOMContentLoaded', function() {
         <li>
     <a class="dropdown-item" href="../services/index.html">
  <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../security/index.html">
+ <span class="dropdown-text">Security</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../digital/index.html">
@@ -499,28 +540,19 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Events</h1>
 <p class="subtitle lead">Upcoming and recurring events hosted by chen.ist</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">hackathon</div>
-    <div class="quarto-category">workshop</div>
-    <div class="quarto-category">conference</div>
-    <div class="quarto-category">meetup</div>
-    <div class="quarto-category">summer-school</div>
-  </div>
-  </div>
+</div>
 
 <div>
   <div class="description">
@@ -529,7 +561,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -541,454 +573,133 @@ document.addEventListener('DOMContentLoaded', function() {
 </header>
 
 
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="../">Home</a></li>
-    <li class="breadcrumb-item"><a href="../academy/">Academy</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Events</li>
-  </ol>
-</nav>
+<div class="ap">
 
-<!-- Announcement bar for new events -->
-<div class="announcement-bar">
+<div class="ap-hero">
   <div class="container">
-    <div class="announcement-content">
-      <i class="bi bi-megaphone-fill"></i>
-      <div class="announcement-text">
-        <span class="event-highlight"><strong>NEW EVENT:</strong> AI Ethics Hackathon</span>
-        <span class="event-date">November 20-21, 2025</span>
-        <div class="event-actions">
-          <a href="../academy/events/pages/ai-ethics-hackathon.html" class="action-button"><i class="bi bi-info-circle-fill"></i> Learn more</a>
-          <span class="divider">|</span>
-          <a href="../academy/events/" class="action-button"><i class="bi bi-calendar-event-fill"></i> Event Calendar</a>
-        </div>
-        <button class="announcement-close"><i class="bi bi-x-lg"></i></button>
-      </div>
-
-    </div>
+    <h1>Academy <span class="gr">Events</span></h1>
+    <p>Hackathons, workshops, and programs. Connect, learn, and build together.</p>
   </div>
 </div>
-<br>
 
-<div class="hero-section">
+<div class="ap-bg">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-8 offset-md-2 text-center">
-        <img src="../assets/svg/events.svg" alt="Academy Events" style="max-width: 150px; margin-bottom: 20px;">
-        <h1><span class="academy-text">Academy</span> <span class="text-green">Events</span></h1>
-        <p>Connect, learn, and innovate at our events</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style>
-  /* Ensure the text is white in both light and dark modes */
-  .academy-text {
-    color: white !important;
-  }
-</style>
-<div class="container page-section">
-<section id="upcoming-events" class="level2">
-<h2 class="anchored" data-anchor-id="upcoming-events">Upcoming Events</h2>
-<p>Join us at one of our upcoming events to connect with peers, learn new skills, and stay at the forefront of technology innovation.</p>
-<div class="row mt-4">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Summer School 2025</h3>
-        <span class="badge bg-primary">August 1-15, 2025</span>
-      </div>
-      <div class="card-body">
-        <p>An intensive two-week program focused on cutting-edge technologies and practical skills development. Perfect for students and professionals looking to enhance their technical capabilities.</p>
-        <p><strong>Location:</strong>Craiova</p>
-        <p><strong>Registration:</strong> Opens July 1st, 2025</p>
-        <div class="d-flex flex-wrap gap-2">
-          <a href="../academy/events/pages/summer-school-2025.html" class="btn btn-success">View Details</a>
-          <a href="../academy/events/ical/summer-school-2025.ics" class="btn btn-outline-primary" download="">
-            <i class="bi bi-calendar3"></i> Calendar
-          </a>
-          <a href="../academy/events/pdfs/summer-school-2025.pdf" class="btn btn-outline-secondary" download="">
-            <i class="bi bi-file-pdf"></i> PDF
-          </a>
+    <h2 class="anchored">Upcoming events</h2>
+    <p class="sub">Register early — spots are limited.</p>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="ev">
+          <div class="ev-badge">New</div>
+          <h3 class="anchored">AI Ethics Hackathon</h3>
+          <div class="ev-date"><i class="bi bi-calendar3 me-1"></i> March 5, 2026</div>
+          <div class="ev-loc"><i class="bi bi-geo-alt me-1"></i> Bucharest</div>
+          <p>A weekend hackathon on ethical AI — bias detection, responsible design, and AI systems that prioritize human values.</p>
+          <div class="ev-actions">
+            <a href="../academy/events/pages/ai-ethics-hackathon.html" class="ap-lk">Details</a>
+            <a href="../academy/events/ical/ai-ethics-hackathon-2025.ics" class="ap-lk" download=""><i class="bi bi-calendar-plus me-1"></i>Add to calendar</a>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Cybersecurity Hackathon</h3>
-        <span class="badge bg-primary">Octomber 15-16, 2025</span>
+      <div class="col-md-6">
+        <div class="ev">
+          <h3 class="anchored">Makers Workshop</h3>
+          <div class="ev-date"><i class="bi bi-calendar3 me-1"></i> September 15, 2026</div>
+          <div class="ev-loc"><i class="bi bi-geo-alt me-1"></i> Bucharest</div>
+          <p>Hands-on hardware workshop for makers, DIY experts, and hardware hackers. Build projects and share knowledge.</p>
+          <div class="ev-actions">
+            <a href="../academy/events/pages/makers-workshop.html" class="ap-lk">Details</a>
+            <a href="../academy/events/pdfs/makers-workshop.pdf" class="ap-lk" download=""><i class="bi bi-file-pdf me-1"></i>PDF</a>
+          </div>
+        </div>
       </div>
-      <div class="card-body">
-        <p>A 48-hour challenge where participants work in teams to solve real-world cybersecurity problems. Open to security enthusiasts of all levels, from beginners to experts.</p>
-        <p><strong>Location:</strong> Craiova</p>
-        <p><strong>Registration:</strong> Opens Octomber 5-6th, 2025</p>
-        <div class="d-flex flex-wrap gap-2">
-          <a href="../academy/events/pages/cybersecurity-hackathon.html" class="btn btn-success">Learn More</a>
-          <a href="../academy/events/ical/cybersecurity-hackathon-2025.ics" class="btn btn-outline-primary" download="">
-            <i class="bi bi-calendar3"></i> Calendar
-          </a>
-          <a href="../academy/events/pdfs/cybersecurity-hackathon.pdf" class="btn btn-outline-secondary" download="">
-            <i class="bi bi-file-pdf"></i> PDF
-          </a>
+      <div class="col-md-6">
+        <div class="ev">
+          <h3 class="anchored">Summer School 2026</h3>
+          <div class="ev-date"><i class="bi bi-calendar3 me-1"></i> August 1–15, 2026</div>
+          <div class="ev-loc"><i class="bi bi-geo-alt me-1"></i> Craiova</div>
+          <p>Two-week intensive program in cybersecurity, cloud, and AI. For students and professionals building technical careers.</p>
+          <div class="ev-actions">
+            <a href="../academy/events/pages/summer-school-2025.html" class="ap-lk">Details</a>
+            <a href="../academy/events/ical/summer-school-2025.ics" class="ap-lk" download=""><i class="bi bi-calendar-plus me-1"></i>Add to calendar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="ev">
+          <h3 class="anchored">SpaceApps Challenge 2026</h3>
+          <div class="ev-date"><i class="bi bi-calendar3 me-1"></i> October 2026</div>
+          <div class="ev-loc"><i class="bi bi-geo-alt me-1"></i> Craiova</div>
+          <p>NASA's international hackathon — develop solutions for space exploration, satellite tech, and Earth observation.</p>
+          <div class="ev-actions">
+            <a href="../academy/events/pages/space-hackathon.html" class="ap-lk">Details</a>
+            <a href="../academy/events/ical/space-hackathon-2025.ics" class="ap-lk" download=""><i class="bi bi-calendar-plus me-1"></i>Add to calendar</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-6">
-    <div class="card mb-4" id="ai-ethics-hackathon">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">AI Ethics Hackathon</h3>
-        <span class="badge bg-primary">March 5th, 2026</span>
-        <span class="badge bg-warning text-dark">New</span>
-      </div>
-      <div class="card-body">
-        <p>A weekend hackathon focusing on ethical AI development. Explore responsible AI design, bias detection, and creating AI systems that prioritize human values.</p>
-        <p><strong>Location:</strong> Bucharest</p>
-        <p><strong>Registration:</strong> Soon to be announced</p>
-        <div class="d-flex flex-wrap gap-2">
-          <a href="../academy/events/pages/ai-ethics-hackathon.html" class="btn btn-success">Early Registration</a>
-          <a href="../academy/events/ical/ai-ethics-hackathon-2025.ics" class="btn btn-outline-primary" download="">
-            <i class="bi bi-calendar3"></i> Calendar
-          </a>
-          <a href="../academy/events/pdfs/ai-ethics-hackathon.pdf" class="btn btn-outline-secondary" download="">
-            <i class="bi bi-file-pdf"></i> PDF
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">SPACEAPPS Challenge 2025 Craiova - Hackathon</h3>
-        <span class="badge bg-primary">October 4-5th, 2025</span>
-      </div>
-      <div class="card-body">
-        <p>A three-day event focused on developing innovative solutions for space exploration, satellite technology, and Earth observation. Collaborate with industry experts and like-minded innovators.</p>
-        <p><strong>Location:</strong>Craiova</p>
-        <p><strong>Registration:</strong> RSVP opens July 17, 2025</p>
-        <div class="d-flex flex-wrap gap-2">
-          <a href="../academy/events/pages/space-hackathon.html" class="btn btn-success">Register Interest</a>
-          <a href="../academy/events/ical/space-hackathon-2025.ics" class="btn btn-outline-primary" download="">
-            <i class="bi bi-calendar3"></i> Calendar
-          </a>
-          <a href="../academy/events/pdfs/space-hackathon.pdf" class="btn btn-outline-secondary" download="">
-            <i class="bi bi-file-pdf"></i> PDF
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Makers Workshop</h3>
-        <span class="badge bg-primary">September 15th, 2026</span>
-      </div>
-      <div class="card-body">
-        <p>A hands-on workshop for hardware enthusiasts, bringing together makers, DIY experts, and hardware hackers to build projects and share knowledge.</p>
-        <p><strong>Location:</strong> Bucharest</p>
-        <p><strong>Registration:</strong> Opens January 15th, 2026</p>
-        <div class="d-flex flex-wrap gap-2">
-          <a href="../academy/events/pages/makers-workshop.html" class="btn btn-success">Learn More</a>
-          <a href="../academy/events/ical/makers-workshop.ics" class="btn btn-outline-primary" download="">
-            <i class="bi bi-calendar3"></i> Calendar
-          </a>
-          <a href="../academy/events/pdfs/makers-workshop.pdf" class="btn btn-outline-secondary" download="">
-            <i class="bi bi-file-pdf"></i> PDF
-          </a>
-        </div>
-      </div>
+<div class="ap-s">
+  <div class="container">
+    <h2 class="anchored">Recurring events</h2>
+    <p class="sub">Join our community through regular meetups and talks.</p>
+    <div class="row g-5">
+      <div class="col-md-4"><div class="rec"><i class="bi bi-calendar-event"></i><h3 class="anchored">Computer Club</h3><p>Open discussion, knowledge sharing, and hands-on exploration of current tech.</p><div class="rec-when">Last Thursday of every month</div><a href="https://clubul.computer/" class="ap-lk">View schedule</a></div></div>
+      <div class="col-md-4"><div class="rec"><i class="bi bi-mic"></i><h3 class="anchored">Tech Talks</h3><p>Industry experts sharing insights on emerging technologies and best practices.</p><div class="rec-when">First Tuesday of every month</div><a href="https://lu.ma/chenistacademy" class="ap-lk">Upcoming talks</a></div></div>
+      <div class="col-md-4"><div class="rec"><i class="bi bi-code-slash"></i><h3 class="anchored">Workshops</h3><p>Coding sessions — personal projects, open-source contributions, and learning challenges.</p><div class="rec-when">Check calendar</div><a href="https://lu.ma/chenistacademy" class="ap-lk">Join session</a></div></div>
     </div>
   </div>
 </div>
-</section>
-<section id="recurring-events" class="level2">
-<h2 class="anchored" data-anchor-id="recurring-events">Recurring Events</h2>
-<p>Stay connected with our community through these regular events designed to foster collaboration and continuous learning.</p>
-<div class="row mt-4">
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card">
-      <div class="feature-card-icon text-center">
-        <i class="bi bi-calendar-event"></i>
-      </div>
-      <h3 class="text-center anchored">Computer Club</h3>
-      <p>Monthly meetups focused on open discussion, knowledge sharing, and hands-on exploration of current tech trends.</p>
-      <p><strong>When:</strong> Last Thursday of every month</p>
-      <p><strong>Location:</strong> Various venues (check calendar)</p>
-      <div class="text-center mt-3">
-        <a href="https://clubul.computer/" class="btn btn-outline-primary">View Schedule</a>
-      </div>
-    </div>
-  </div>
 
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card">
-      <div class="feature-card-icon text-center">
-        <i class="bi bi-people-fill"></i>
-      </div>
-      <h3 class="text-center anchored">Tech Talks</h3>
-      <p>Monthly speaker series featuring industry experts sharing insights on emerging technologies and best practices.</p>
-      <p><strong>When:</strong> First Tuesday of every month</p>
-      <p><strong>Location:</strong> Online and in-person options</p>
-      <div class="text-center mt-3">
-        <a href="https://lu.ma/chenistacademy" class="btn btn-outline-primary">Upcoming Talks</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card">
-      <div class="feature-card-icon text-center">
-        <i class="bi bi-code-slash"></i>
-      </div>
-      <h3 class="text-center anchored">Workshops</h3>
-      <p>Coding sessions where participants can work on personal projects, contribute to open-source initiatives, or collaborate on learning challenges.</p>
-      <p><strong>When:</strong> Check the calendar</p>
-      <p><strong>Location:</strong> Online &amp; In-Person</p>
-      <div class="text-center mt-3">
-        <a href="https://lu.ma/chenistacademy" class="btn btn-outline-primary">Join Session</a>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-<section id="past-events" class="level2">
-<h2 class="anchored" data-anchor-id="past-events">Past Events</h2>
-<p>Explore our previous events to get a sense of what to expect and the type of content we deliver.</p>
-<div class="row mt-4">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header">
-        <h3 class="card-title mb-0 anchored">"Cyber Hygiene for Kids" Conference Craiova</h3>
-        <span class="badge bg-secondary">November 27th 2024</span>
-      </div>
-      <div class="card-body">
-        <p>Psychotherapist Diana Stanculeanu and cybersecurity consultant Alin Mechenici addressed the growing concerns of excessive screen time, social media influence, and online safety for children. Topics covered: managing screen addiction, protecting against cyber threats, establishing healthy digital boundaries, and practical parenting strategies for the digital age. Event organized by: Bebevesel și Rotary Club Probitas Craiova.
-        </p>
-        <a href="https://marca-ro.ca/2024/11/23/conferinta-igiena-digitala-la-copii-are-loc-la-craiova/" class="btn btn-primary">Details</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header">
-        <h3 class="card-title mb-0 anchored"> "Capture the Flag" - Cybersecurity Hackathon</h3>
-        <span class="badge bg-secondary">November 5-6th, 2023</span>
-      </div>
-      <div class="card-body">
-        <p>
-        We successfully organized the 2023 Capture the Flag - Cybersecurity Hackathon, bringing together cybersecurity enthusiasts, students, and professionals for an intensive competition focused on real-world security challenges.
-        Our event featured multiple categories including web exploitation, cryptography, reverse engineering, and digital forensics, providing participants with hands-on experience in identifying vulnerabilities and solving complex security puzzles in a competitive environment.
-        </p>
-        <a href="" class="btn btn-primary">Invitation Only</a>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header">
-        <h3 class="card-title mb-0 anchored">SPACEAPPS Challenge - NASA Hackathon</h3>
-        <span class="badge bg-secondary">Yearly - since 2016</span>
-      </div>
-      <div class="card-body">
-        <p>
-        We are proud to organize 9th editions of NASA's SpaceApps Challenge. Our journey began in 2016 at Mjardevi Science Park in Linköping, Sweden, where we successfully hosted 3 in-person editions, followed by 2 online editions in Gothenburg during the COVID period.
-        Building on this international experience, we expanded our operations to Romania, bringing the prestigious NASA-sponsored hackathon to new communities and continuing our mission to foster innovation in space technology.
-        </p>
-        <a href="https://alinmechenici.substack.com/p/sac" class="btn btn-primary">Read our blog article</a>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-<section id="register-book" class="level2">
-<h2 class="anchored" data-anchor-id="register-book">Register / Book</h2>
-<div class="card mt-5">
-<div class="card-body">
-<h3 class="mb-4 anchored"><i class="bi bi-pencil-square me-2"></i>Register / Book</h3>
-<ul class="nav nav-tabs" id="regTabs-events" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#formReg-events" type="button" role="tab">
-      <i class="bi bi-file-earmark-text me-2"></i>Register (Romania)
-    </button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#calReg-events" type="button" role="tab">
-      <i class="bi bi-calendar-check me-2"></i>Book a Call (EU / International)
-    </button>
-  </li>
-</ul>
-<div class="tab-content pt-3">
-  <div class="tab-pane fade show active" id="formReg-events" role="tabpanel">
-    <p class="text-muted"><i class="bi bi-geo-alt me-1"></i>Fill out the form and we.ll get back to you within 24 hours. We'll contact you within 24 hours.</p>
-    <form action="https://formspree.io/f/mpwkaqev" method="POST">
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <label class="form-label">Full Name *</label>
-          <input type="text" class="form-control" name="name" required="" placeholder="Your full name">
-        </div>
-        <div class="col-md-6 mb-3">
-          <label class="form-label">Email *</label>
-          <input type="email" class="form-control" name="email" required="" placeholder="your@email.com">
+<div class="ap-bg">
+  <div class="container">
+    <h2 class="anchored">Past highlights</h2>
+    <p class="sub">A look at what we've done.</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="ev">
+          <div class="ev-badge ev-badge-past">2024</div>
+          <h3 class="anchored">Cyber Hygiene for Kids</h3>
+          <div class="ev-loc"><i class="bi bi-geo-alt me-1"></i> Craiova · November 2024</div>
+          <p>Conference on screen time, social media safety, and digital boundaries for children. With Rotary Club Probitas Craiova.</p>
+          <div class="ev-actions"><a href="https://marca-ro.ca/2024/11/23/conferinta-igiena-digitala-la-copii-are-loc-la-craiova/" class="ap-lk" target="_blank">Read more</a></div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <label class="form-label">Phone</label>
-          <input type="tel" class="form-control" name="phone" placeholder="Phone number">
-        </div>
-        <div class="col-md-6 mb-3">
-          <label class="form-label">Company</label>
-          <input type="text" class="form-control" name="company" placeholder="Company (optional)">
+      <div class="col-md-4">
+        <div class="ev">
+          <div class="ev-badge ev-badge-past">2023</div>
+          <h3 class="anchored">Capture the Flag Hackathon</h3>
+          <div class="ev-loc"><i class="bi bi-geo-alt me-1"></i> Craiova · November 2023</div>
+          <p>Web exploitation, cryptography, reverse engineering, and digital forensics. Invitation-only competition.</p>
         </div>
       </div>
-      <div class="mb-3">
-        <label class="form-label">Details</label>
-        <textarea class="form-control" name="message" rows="2" placeholder="Which event would you like to attend?"></textarea>
-      </div>
-      <input type="hidden" name="_subject" value="Event Registration">
-      <input type="hidden" name="_source" value="academy-events">
-      <input type="text" name="_gotcha" style="display:none">
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" required="">
-        <label class="form-check-label">I agree to the <a href="../privacy.html" target="_blank">privacy policy</a> *</label>
-      </div>
-      <button type="submit" class="btn btn-success w-100"><i class="bi bi-send me-2"></i>Submit Registration</button>
-    </form>
-  </div>
-  <div class="tab-pane fade" id="calReg-events" role="tabpanel">
-    <p class="text-muted"><i class="bi bi-globe me-1"></i>Prefer a live conversation? Book directly in our calendar. Book directly in our calendar.</p>
-    <a href="https://cal.com/chenist" target="_blank" class="btn btn-outline-primary btn-lg w-100"><i class="bi bi-calendar-check me-2"></i>Book via Cal.com</a>
-  </div>
-</div>
-</div>
-</div>
-</section>
-</div>
-<div class="cta-section">
-  <div class="container text-center">
-    <h2 class="anchored">Stay updated on our events</h2>
-    <div class="row justify-content-center mt-4">
-      <div class="col-md-6 offset-md-3">
-        <div class="newsletter-box">
-          <h3 class="anchored"><i class="bi bi-journal-richtext"></i> Subscribe to our Substack newsletter</h3>
-          <p>Get the latest event updates, tech insights, and exclusive content delivered to your inbox.</p>
-          <!-- Substack embed code -->
-          <iframe src="https://alinmechenici.substack.com/embed" width="100%" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+      <div class="col-md-4">
+        <div class="ev">
+          <div class="ev-badge ev-badge-past">Since 2016</div>
+          <h3 class="anchored">SpaceApps Challenge</h3>
+          <div class="ev-loc"><i class="bi bi-geo-alt me-1"></i> Linköping · Gothenburg · Craiova</div>
+          <p>9 editions of NASA's hackathon across Sweden and Romania. From Mjardevi Science Park to Craiova.</p>
+          <div class="ev-actions"><a href="https://alinmechenici.substack.com/p/sac" class="ap-lk" target="_blank">Read the story</a></div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Scripts for event functionality -->
-<script>
-  // Handle announcement bar close button
-  document.addEventListener('DOMContentLoaded', function() {
-    const closeButton = document.querySelector('.announcement-close');
-    const announcementBar = document.querySelector('.announcement-bar');
+<div class="ap-cta">
+  <div class="container">
+    <div class="ap-d"></div>
+    <h2 class="anchored">Don't miss the next one</h2>
+    <p>Subscribe to get event updates, or book a call to discuss hosting a private event for your team.</p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <a href="https://alinmechenici.substack.com" target="_blank" class="ap-b">Subscribe to updates</a>
+      <a href="https://cal.com/chenist" target="_blank" class="ap-lk" style="padding-top:0.85rem;">Book a call</a>
+    </div>
+  </div>
+</div>
 
-    if (closeButton && announcementBar) {
-      closeButton.addEventListener('click', function() {
-        announcementBar.style.display = 'none';
-        // Save to session storage so it stays closed during the session
-        sessionStorage.setItem('announcementClosed', 'true');
-      });
-
-      // Check if announcement was previously closed
-      if (sessionStorage.getItem('announcementClosed') === 'true') {
-        announcementBar.style.display = 'none';
-      }
-    }
-
-    // Handle calendar downloads
-    const calendarButtons = document.querySelectorAll('a[download][href$=".ics"]');
-
-    calendarButtons.forEach(button => {
-      button.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        // Get event details from the card
-        const card = this.closest('.card');
-        const title = card.querySelector('.card-title').textContent;
-        const dateText = card.querySelector('.badge').textContent;
-        const description = card.querySelector('p').textContent;
-
-        // Find location element without using jQuery-specific selectors
-        const locationElement = Array.from(card.querySelectorAll('p strong')).find(el =>
-          el.textContent.includes('Location:')
-        );
-        const location = locationElement ? locationElement.parentNode.textContent.replace('Location:', '').trim() : '';
-
-        // Parse date (simple implementation, would need better parsing for production)
-        let startDate, endDate;
-        if (dateText.includes('-')) {
-          const dates = dateText.split('-');
-          // This is a very simplified date parser - would need better parsing in production
-          startDate = new Date(dates[0]);
-          endDate = new Date(dates[1]);
-        } else {
-          startDate = new Date(dateText);
-          endDate = new Date(startDate);
-          endDate.setHours(startDate.getHours() + 2); // Default 2-hour event
-        }
-
-        // Generate iCal content
-        const icalContent = generateICalEvent(title, startDate, endDate, description, location);
-
-        // Create and trigger download
-        const blob = new Blob([icalContent], { type: 'text/calendar;charset=utf-8' });
-        const fileName = this.getAttribute('href').split('/').pop();
-
-        // Create download link and trigger it
-        const downloadLink = document.createElement('a');
-        downloadLink.href = URL.createObjectURL(blob);
-        downloadLink.download = fileName;
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        document.body.removeChild(downloadLink);
-      });
-    });
-
-    // Function to generate iCal format
-    function generateICalEvent(title, start, end, description, location) {
-      const formatDate = (date) => {
-        return date.toISOString().replace(/-|:|\.\d+/g, '');
-      };
-
-      return [
-        'BEGIN:VCALENDAR',
-        'VERSION:2.0',
-        'PRODID:-//chen.ist//events//EN',
-        'CALSCALE:GREGORIAN',
-        'BEGIN:VEVENT',
-        `SUMMARY:${title}`,
-        `DTSTART:${formatDate(start)}`,
-        `DTEND:${formatDate(end)}`,
-        `DESCRIPTION:${description.replace(/\n/g, '\\n')}`,
-        `LOCATION:${location}`,
-        'STATUS:CONFIRMED',
-        `DTSTAMP:${formatDate(new Date())}`,
-        `UID:${Math.random().toString(36).substring(2)}@chen.ist`,
-        'END:VEVENT',
-        'END:VCALENDAR'
-      ].join('\r\n');
-    }
-  });
-</script>
+</div>
 
 
 
@@ -1414,19 +1125,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-
-</div>   
-    <div class="nav-footer-center">
-
-</div>
-    <div class="nav-footer-right">
-
-</div>
-  </div>
-</footer>
 <footer class="footer mt-5 py-3 cybersecurity-footer">
     <div class="container">
         <div class="row mb-3">
