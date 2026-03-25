@@ -2,6 +2,14 @@
 
 /* Google Fonts loaded via _quarto.yml <link> tag - do not duplicate here */
 
+/* Hide Quarto title block on all modern pages (hero handles the title) */
+#title-block-header { display: none !important; }
+.quarto-title-block { display: none !important; }
+
+/* Zero out content margins/padding globally */
+#quarto-content > * { margin-top: 0 !important; padding-top: 0 !important; }
+main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
+
 /* GLOBAL dark mode fix — must be in styles.css (loads on ALL pages) */
 html[data-bs-theme="dark"] { --bs-body-bg: #111 !important; background-color: #111 !important; }
 html[data-bs-theme="dark"] body { background-color: #111 !important; }
