@@ -1,253 +1,232 @@
 ---
 title: "Academy Overview"
-subtitle: "Our educational philosophy and approach"
+subtitle: "Courses, trainings, and hands-on programs in cybersecurity, open-source, and digital skills"
 description: "Learn about chen.ist Academy's educational philosophy, hands-on approach, and commitment to real-world technical skills development."
-format: 
+from: markdown+raw_html
+page-layout: full
+format:
   html:
-    css: /assets/css/academy.scss
-    classes: [academy-section]
+    toc: false
+    include-in-header:
+      text: |
+        <style>
+        /* Apple Business-inspired clean design */
+        .apple-section { padding: 5rem 0; }
+        .apple-section-alt { padding: 5rem 0; background-color: #f5f5f7; }
+        [data-bs-theme="dark"] .apple-section-alt { background-color: #1d1d1f; }
+        .apple-hero { padding: 6rem 0 4rem; text-align: center; }
+        .apple-hero h1 { font-size: 3.5rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1rem; }
+        .apple-hero p { font-size: 1.35rem; color: #86868b; max-width: 700px; margin: 0 auto; }
+        .apple-grid-item { text-align: center; padding: 2rem 1.5rem; }
+        .apple-grid-item i { font-size: 2.5rem; color: #F5A623; margin-bottom: 1rem; display: block; }
+        .apple-grid-item h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .apple-grid-item p { font-size: 0.95rem; color: #86868b; }
+        .apple-feature-row { display: flex; align-items: center; gap: 4rem; padding: 3rem 0; }
+        .apple-feature-row.reverse { flex-direction: row-reverse; }
+        .apple-feature-text h2 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1rem; }
+        .apple-feature-text p { font-size: 1.1rem; color: #86868b; line-height: 1.6; }
+        .apple-feature-img { flex: 0 0 45%; }
+        .apple-feature-img img { width: 100%; border-radius: 12px; }
+        .apple-link { color: #F5A623; font-weight: 500; text-decoration: none; }
+        .apple-link:hover { text-decoration: underline; }
+        .apple-link::after { content: " \2192"; }
+        .apple-cta { text-align: center; padding: 5rem 0; }
+        .apple-cta h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; }
+        .apple-cta p { font-size: 1.1rem; color: #86868b; margin-bottom: 2rem; }
+        .apple-btn { background-color: #F5A623; color: white; padding: 0.75rem 2rem; border-radius: 50px; font-weight: 600; text-decoration: none; display: inline-block; transition: opacity 0.2s; }
+        .apple-btn:hover { opacity: 0.85; color: white; text-decoration: none; }
+        .apple-btn-outline { border: 2px solid #F5A623; color: #F5A623; padding: 0.75rem 2rem; border-radius: 50px; font-weight: 600; text-decoration: none; display: inline-block; transition: all 0.2s; }
+        .apple-btn-outline:hover { background-color: #F5A623; color: white; text-decoration: none; }
+        .apple-track-card { background: white; border-radius: 12px; padding: 2rem; text-align: center; height: 100%; }
+        [data-bs-theme="dark"] .apple-track-card { background: #2d2d2f; }
+        .apple-track-card i { font-size: 2rem; color: #F5A623; margin-bottom: 1rem; display: block; }
+        .apple-track-card h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .apple-track-card p { font-size: 0.95rem; color: #86868b; margin-bottom: 0.5rem; }
+        .apple-track-card ul { list-style: none; padding: 0; margin: 0; text-align: left; }
+        .apple-track-card ul li { font-size: 0.9rem; color: #86868b; padding: 0.25rem 0; border-bottom: 1px solid #f0f0f0; }
+        [data-bs-theme="dark"] .apple-track-card ul li { border-bottom-color: #3a3a3c; }
+        .apple-track-card ul li:last-child { border-bottom: none; }
+        @media (max-width: 768px) {
+          .apple-hero h1 { font-size: 2.25rem; }
+          .apple-feature-row, .apple-feature-row.reverse { flex-direction: column; gap: 2rem; }
+          .apple-feature-img { flex: none; }
+          .apple-feature-text h2 { font-size: 1.75rem; }
+        }
+        </style>
 ---
 
 ```{=html}
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Overview</li>
-  </ol>
-</nav>
-
-<div class="hero-section">
+<!-- Hero -->
+<div class="apple-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-8 offset-md-2 text-center">
-        <img src="/assets/svg/knowledge.svg" alt="Academy Knowledge" style="max-width: 150px; margin-bottom: 20px;">
-        <h1 class="hero-title"><span class="academy-text">Academy</span> <span class="text-green">Overview</span></h1>
-        <p>Education designed for the real world</p>
-      </div>
-    </div>
-  </div>
-</div>
-```
-
-::: {.container .page-section}
-
-## Our Educational Philosophy
-
-At chen.ist Academy, we believe in a learning approach that combines theoretical knowledge with practical, hands-on experience. Our educational philosophy is built on these core principles:
-
-1. **Learn by Doing**: Practical application of concepts through projects, labs, and real-world challenges
-2. **Community-Driven**: Learning as part of a supportive community that shares knowledge and experiences
-3. **Industry Relevance**: Content and skills aligned with current industry needs and emerging technologies
-4. **Continuous Growth**: Encouraging lifelong learning and adaptation to evolving technological landscapes
-
-## What Makes Us Different
-
-```{=html}
-<div class="row mt-4">
-  <div class="col-md-6">
-    <div class="card mb-4 h-100">
-      <div class="card-body">
-        <h3 class="card-title"><i class="bi bi-people-fill text-primary"></i> Expert Instructors</h3>
-        <p class="card-text">Our courses and events are led by industry professionals with extensive real-world experience, ensuring you learn current best practices and practical skills.</p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-md-6">
-    <div class="card mb-4 h-100">
-      <div class="card-body">
-        <h3 class="card-title"><i class="bi bi-gear-fill text-primary"></i> Hands-On Approach</h3>
-        <p class="card-text">We emphasize practical application with real-world tools, projects, and environments that simulate professional scenarios.</p>
-      </div>
-    </div>
+    <h1>chen.ist Academy</h1>
+    <p>Courses, trainings, and hands-on programs in cybersecurity, open-source, and digital skills.</p>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-6">
-    <div class="card mb-4 h-100">
-      <div class="card-body">
-        <h3 class="card-title"><i class="bi bi-compass text-primary"></i> Structured Learning Paths</h3>
-        <p class="card-text">Our curriculum is organized into clear learning paths that guide your development from foundational knowledge to advanced specialization.</p>
+<!-- Offerings Grid -->
+<div class="apple-section-alt">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="apple-grid-item">
+          <i class="bi bi-book"></i>
+          <h3>Courses</h3>
+          <p>Multi-week structured programs covering cybersecurity, open-source development, and digital skills with hands-on labs and certification.</p>
+          <a class="apple-link" href="/academy/courses.html">Browse</a>
+        </div>
       </div>
-    </div>
-  </div>
-  
-  <div class="col-md-6">
-    <div class="card mb-4 h-100">
-      <div class="card-body">
-        <h3 class="card-title"><i class="bi bi-building text-primary"></i> Industry Partnerships</h3>
-        <p class="card-text">Collaborations with leading technology companies ensure our content remains relevant and aligned with industry needs.</p>
+      <div class="col-md-4 col-sm-6">
+        <div class="apple-grid-item">
+          <i class="bi bi-lightning-charge"></i>
+          <h3>Trainings</h3>
+          <p>Intensive 1-2 day workshops for professionals who need to quickly develop specific technical skills and best practices.</p>
+          <a class="apple-link" href="/academy/trainings.html">Browse</a>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-```
-
-## Our Academy Offerings
-
-The chen.ist Academy provides a comprehensive ecosystem of educational resources:
-
-### Courses
-
-Our structured courses cover a wide range of technology topics, from foundational concepts to advanced specializations. Each course includes:
-
-- Interactive learning materials and resources
-- Practical exercises and hands-on labs
-- Assessment and feedback opportunities
-- Certification upon successful completion
-
-[Browse our course catalog →](/academy/courses.html)
-
-### Events
-
-We host regular events designed to enhance learning through collaboration and immersive experiences:
-
-- Hackathons and innovation challenges
-- Workshops and skill-building sessions
-- Summer schools and intensive learning programs
-- Community meetups and networking events
-
-[See upcoming events →](/academy/events.html)
-
-### Webinars
-
-Our webinar series brings expert knowledge directly to you through online sessions:
-
-- Technical deep dives and case studies
-- Industry trends and emerging technologies
-- Best practices and professional insights
-- Q&A sessions with experts
-
-[View webinar schedule →](/academy/webinars.html)
-
-### Computer Club
-
-Our Computer Club fosters a community of tech enthusiasts who meet regularly to:
-
-- Collaborate on group projects
-- Share knowledge and experiences
-- Explore new technologies and tools
-- Build a supportive learning network
-
-[Join our Computer Club →](/academy/computerclub.html)
-
-### Partnerships
-
-We actively collaborate with educational institutions, industry leaders, and technology organizations to:
-
-- Develop industry-relevant curriculum
-- Provide internship and employment opportunities
-- Create joint educational initiatives
-- Build a stronger technology ecosystem
-
-[Learn about our partnerships →](/academy/partnerships.html)
-
-## How to Get Started
-
-```{=html}
-<div class="row mt-4">
-  <div class="col-md-12">
-    <div class="card mb-4">
-      <div class="card-body">
-        <h3 class="card-title">Start Your Learning Journey</h3>
-        <ol>
-          <li><strong>Explore our offerings</strong> - Browse through our courses, events, and other resources</li>
-          <li><strong>Identify your learning path</strong> - Choose a track that aligns with your interests and goals</li>
-          <li><strong>Register for a course or event</strong> - Sign up for your first learning experience</li>
-          <li><strong>Join our community</strong> - Connect with fellow learners and instructors</li>
-          <li><strong>Apply your knowledge</strong> - Participate in projects and practical applications</li>
-        </ol>
-        <div class="text-center mt-3">
-          <a href="/academy/courses.html" class="btn btn-primary">Browse Courses</a>
-          <a href="https://cal.com/chenist" target="_blank" class="btn btn-outline-primary ms-2">Contact Us</a>
+      <div class="col-md-4 col-sm-6">
+        <div class="apple-grid-item">
+          <i class="bi bi-stopwatch"></i>
+          <h3>Microlearning</h3>
+          <p>Bite-sized 1-2 hour sessions focused on specific tools and technologies for quick, targeted skill acquisition.</p>
+          <a class="apple-link" href="/academy/microlearning.html">Browse</a>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="apple-grid-item">
+          <i class="bi bi-calendar-event"></i>
+          <h3>Events &amp; Hackathons</h3>
+          <p>Immersive hackathons, summer schools, and innovation challenges that build skills through collaboration and competition.</p>
+          <a class="apple-link" href="/academy/events.html">Browse</a>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="apple-grid-item">
+          <i class="bi bi-camera-video"></i>
+          <h3>Webinars</h3>
+          <p>Online sessions led by industry experts covering technical deep dives, emerging trends, and best practices.</p>
+          <a class="apple-link" href="/academy/webinars.html">Browse</a>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="apple-grid-item">
+          <i class="bi bi-pc-display"></i>
+          <h3>Computer Club</h3>
+          <p>A community of tech enthusiasts meeting regularly to collaborate on projects, share knowledge, and explore new technologies.</p>
+          <a class="apple-link" href="/academy/computerclub.html">Browse</a>
         </div>
       </div>
     </div>
   </div>
 </div>
-```
 
-## Register / Book
-
-```{=html}
-<div class="card mt-5">
-<div class="card-body">
-<h3 class="mb-4"><i class="bi bi-pencil-square me-2"></i>Register / Book</h3>
-<ul class="nav nav-tabs" id="regTabs-overview" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#formReg-overview" type="button" role="tab">
-      <i class="bi bi-file-earmark-text me-2"></i>Register (Romania)
-    </button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#calReg-overview" type="button" role="tab">
-      <i class="bi bi-calendar-check me-2"></i>Book a Call (EU / International)
-    </button>
-  </li>
-</ul>
-<div class="tab-content pt-3">
-  <div class="tab-pane fade show active" id="formReg-overview" role="tabpanel">
-    <p class="text-muted"><i class="bi bi-geo-alt me-1"></i>Fill out the form and we.ll get back to you within 24 hours. We'll contact you within 24 hours.</p>
-    <form action="https://formspree.io/f/mpwkaqev" method="POST">
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <label class="form-label">Full Name *</label>
-          <input type="text" class="form-control" name="name" required placeholder="Your full name">
-        </div>
-        <div class="col-md-6 mb-3">
-          <label class="form-label">Email *</label>
-          <input type="email" class="form-control" name="email" required placeholder="your@email.com">
-        </div>
+<!-- Feature: Courses -->
+<div class="apple-section">
+  <div class="container">
+    <div class="apple-feature-row">
+      <div class="apple-feature-img">
+        <img src="/assets/images/stock/team-meeting.jpg" alt="Team collaborating in a classroom setting">
       </div>
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <label class="form-label">Phone</label>
-          <input type="tel" class="form-control" name="phone" placeholder="Phone number">
-        </div>
-        <div class="col-md-6 mb-3">
-          <label class="form-label">Company</label>
-          <input type="text" class="form-control" name="company" placeholder="Company (optional)">
-        </div>
+      <div class="apple-feature-text">
+        <h2>Structured Courses</h2>
+        <p>Our catalog includes six comprehensive courses designed for real-world impact: Practical Cybersecurity, Human Firewall, Data Protection and Privacy, Open Source Development, Unix/Linux Systems, and Hardware Fundamentals.</p>
+        <p>Each course combines interactive learning materials, hands-on labs, practical exercises, and assessment opportunities. Participants receive certification upon successful completion.</p>
+        <a class="apple-link" href="/academy/courses.html">Explore the course catalog</a>
       </div>
-      <div class="mb-3">
-        <label class="form-label">Details</label>
-        <textarea class="form-control" name="message" rows="2" placeholder="Tell us about your learning goals..."></textarea>
-      </div>
-      <input type="hidden" name="_subject" value="Academy Inquiry">
-      <input type="hidden" name="_source" value="academy-overview">
-      <input type="text" name="_gotcha" style="display:none">
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" required>
-        <label class="form-check-label">I agree to the <a href="/privacy.html" target="_blank">privacy policy</a> *</label>
-      </div>
-      <button type="submit" class="btn btn-success w-100"><i class="bi bi-send me-2"></i>Submit Registration</button>
-    </form>
-  </div>
-  <div class="tab-pane fade" id="calReg-overview" role="tabpanel">
-    <p class="text-muted"><i class="bi bi-globe me-1"></i>Prefer a live conversation? Book directly in our calendar. Book directly in our calendar.</p>
-    <a href="https://cal.com/chenist" target="_blank" class="btn btn-outline-primary btn-lg w-100"><i class="bi bi-calendar-check me-2"></i>Book via Cal.com</a>
+    </div>
   </div>
 </div>
-</div>
-</div>
-```
 
-:::
+<!-- Feature: Programs -->
+<div class="apple-section-alt">
+  <div class="container">
+    <div class="apple-feature-row reverse">
+      <div class="apple-feature-img">
+        <img src="/assets/images/stock/code-screen.jpg" alt="Code on screen during a hackathon">
+      </div>
+      <div class="apple-feature-text">
+        <h2>Programs &amp; Community</h2>
+        <p>Go beyond the classroom with our immersive programs. Hackathons challenge teams to solve real problems under time pressure. Summer School offers intensive multi-day deep dives into emerging technologies.</p>
+        <p>The Computer Club meets regularly, giving members a space to collaborate on group projects, experiment with new tools, and build a lasting network of fellow technologists.</p>
+        <a class="apple-link" href="/academy/programs/">Explore programs</a>
+      </div>
+    </div>
+  </div>
+</div>
 
-```{=html}
-<div class="cta-section theme-tech with-secondary-bg">
-  <div class="container text-center">
-    <h2 class="cta-title"><span class="text-white">Ready to expand your knowledge?</span></h2>
-    <p class="mb-4">Join our growing community of learners and start your educational journey today.</p>
-    <a href="/academy/courses.html" class="cta-button">Browse Academy Offerings</a>
+<!-- Learning Paths -->
+<div class="apple-section-alt">
+  <div class="container" style="text-align: center; margin-bottom: 2rem;">
+    <h2 style="font-size: 2.5rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.5rem;">Learning Paths</h2>
+    <p style="font-size: 1.1rem; color: #86868b;">Structured tracks to guide your educational journey from foundations to specialization.</p>
   </div>
-  <div class="cta-accent bottom-right" style="--cta-accent-size: 30px;">
-    <!-- <img src="/assets/svg/learning.svg" alt="Learning illustration"> -->
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-3 col-sm-6">
+        <div class="apple-track-card">
+          <i class="bi bi-shield-lock"></i>
+          <h3>Cybersecurity Track</h3>
+          <ul>
+            <li>Practical Cybersecurity</li>
+            <li>Human Firewall</li>
+            <li>Data Protection</li>
+            <li>Security Awareness Trainings</li>
+            <li>Cybersecurity Hackathon</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="apple-track-card">
+          <i class="bi bi-code-slash"></i>
+          <h3>Open Source Track</h3>
+          <ul>
+            <li>Open Source Development</li>
+            <li>Unix/Linux Systems</li>
+            <li>CLI &amp; Tmux Microlearning</li>
+            <li>Linux Admin Fundamentals</li>
+            <li>Computer Club Projects</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="apple-track-card">
+          <i class="bi bi-lightbulb"></i>
+          <h3>Innovation Track</h3>
+          <ul>
+            <li>Hardware Fundamentals</li>
+            <li>IoT Security</li>
+            <li>Makers Workshop</li>
+            <li>Space Hackathon</li>
+            <li>IoT Prototyping Projects</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="apple-track-card">
+          <i class="bi bi-file-earmark-lock"></i>
+          <h3>Privacy Track</h3>
+          <ul>
+            <li>Data Protection &amp; Privacy</li>
+            <li>Security Awareness</li>
+            <li>Privacy Compliance Workshop</li>
+            <li>GDPR &amp; NIS2 Seminars</li>
+            <li>Privacy Impact Assessments</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="cta-accent top-center" style="--cta-accent-size: 7px; --cta-accent-opacity: 0.6;">
-    <img src="/assets/svgsmall/know.svg" alt="Studying illustration">
+</div>
+
+<!-- CTA -->
+<div class="apple-section">
+  <div class="apple-cta">
+    <div class="container">
+      <h2>Start your learning journey</h2>
+      <p>Explore our courses, trainings, and programs to find the perfect starting point for your goals.</p>
+      <a class="apple-btn" href="/academy/courses.html" style="margin-right: 1rem;">Browse Courses</a>
+      <a class="apple-btn-outline" href="https://cal.com/chenist" target="_blank">Book a Consultation</a>
+    </div>
   </div>
 </div>
 ```

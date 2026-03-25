@@ -3,884 +3,393 @@ title: "Digital Infrastructure"
 subtitle: "Open-Source, UNIX & Apple infrastructure for businesses of all sizes"
 description: "Production-grade open-source, Linux, BSD, and Apple Business infrastructure for SMBs. NixOS, OpenBSD, FreeBSD, Nextcloud, and zero-touch Apple device deployment."
 from: markdown+raw_html
+page-layout: full
 format:
   html:
+    toc: false
     include-in-header:
       text: |
         <style>
-        .platform-badge {
-          display: inline-block;
-          padding: 0.25rem 0.75rem;
-          border-radius: 2rem;
-          font-size: 0.8rem;
-          font-weight: 600;
-          margin: 0.15rem;
-        }
-        .badge-linux { background: rgba(255, 193, 7, 0.15); color: #FFC107; }
-        .badge-bsd { background: rgba(220, 53, 69, 0.15); color: #DC3545; }
-        .badge-apple { background: rgba(108, 117, 125, 0.15); color: #6C757D; }
-        .badge-opensource { background: rgba(129, 189, 74, 0.15); color: #81BD4A; }
-        .badge-free { background: rgba(25, 135, 84, 0.15); color: #198754; font-weight: 700; }
-        .pricing-card { border: 2px solid transparent; transition: all 0.3s ease; }
-        .pricing-card:hover { border-color: #81BD4A; transform: translateY(-4px); }
-        .pricing-card .card-header { font-size: 1.1rem; }
-        .pricing-featured { border-color: #81BD4A; }
-        .pricing-featured .card-header { background-color: #81BD4A !important; }
-        .apple-business-highlight {
-          background: linear-gradient(135deg, rgba(108,117,125,0.08) 0%, rgba(129,189,74,0.08) 100%);
-          border-left: 4px solid #6C757D;
-          padding: 1.5rem;
-          border-radius: 0 0.5rem 0.5rem 0;
-          margin: 1rem 0;
+        /* Apple Business-inspired clean design */
+        .apple-section { padding: 5rem 0; }
+        .apple-section-alt { padding: 5rem 0; background-color: #f5f5f7; }
+        [data-bs-theme="dark"] .apple-section-alt { background-color: #1d1d1f; }
+        .apple-hero { padding: 6rem 0 4rem; text-align: center; }
+        .apple-hero h1 { font-size: 3.5rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1rem; }
+        .apple-hero p { font-size: 1.35rem; color: #86868b; max-width: 700px; margin: 0 auto; }
+        .apple-grid-item { text-align: center; padding: 2rem 1.5rem; }
+        .apple-grid-item i { font-size: 2.5rem; color: var(--brand-green, #81BD4A); margin-bottom: 1rem; display: block; }
+        .apple-grid-item h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .apple-grid-item p { font-size: 0.95rem; color: #86868b; }
+        .apple-feature-row { display: flex; align-items: center; gap: 4rem; padding: 3rem 0; }
+        .apple-feature-row.reverse { flex-direction: row-reverse; }
+        .apple-feature-text h2 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1rem; }
+        .apple-feature-text p { font-size: 1.1rem; color: #86868b; line-height: 1.6; }
+        .apple-feature-text ul { font-size: 1.05rem; color: #86868b; line-height: 2; list-style: none; padding: 0; }
+        .apple-feature-text ul li::before { content: "\2713  "; color: var(--brand-green, #81BD4A); font-weight: 700; }
+        .apple-feature-img { flex: 0 0 45%; }
+        .apple-feature-img img { width: 100%; border-radius: 12px; }
+        .apple-link { color: var(--brand-green, #81BD4A); font-weight: 500; text-decoration: none; }
+        .apple-link:hover { text-decoration: underline; }
+        .apple-link::after { content: " \2192"; }
+        .apple-cta { text-align: center; padding: 5rem 0; }
+        .apple-cta h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; }
+        .apple-cta p { font-size: 1.1rem; color: #86868b; margin-bottom: 2rem; }
+        .apple-btn { background-color: var(--brand-green, #81BD4A); color: white; padding: 0.75rem 2rem; border-radius: 50px; font-weight: 600; text-decoration: none; display: inline-block; transition: opacity 0.2s; }
+        .apple-btn:hover { opacity: 0.85; color: white; text-decoration: none; }
+        .apple-btn-outline { border: 2px solid var(--brand-green, #81BD4A); color: var(--brand-green, #81BD4A); padding: 0.75rem 2rem; border-radius: 50px; font-weight: 600; text-decoration: none; display: inline-block; transition: all 0.2s; }
+        .apple-btn-outline:hover { background-color: var(--brand-green, #81BD4A); color: white; text-decoration: none; }
+        .apple-package-card { border: 2px solid #e0e0e0; border-radius: 16px; padding: 2.5rem 2rem; text-align: center; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; }
+        .apple-package-card:hover { border-color: var(--brand-green, #81BD4A); transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+        .apple-package-card.featured { border-color: var(--brand-green, #81BD4A); }
+        .apple-package-card h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.25rem; }
+        .apple-package-card .subtitle { font-size: 0.9rem; color: #86868b; margin-bottom: 1.5rem; }
+        .apple-package-card .tagline { font-size: 1rem; color: #86868b; margin-bottom: 1.5rem; }
+        .apple-package-card ul { text-align: left; list-style: none; padding: 0; margin-bottom: 2rem; flex-grow: 1; }
+        .apple-package-card ul li { padding: 0.35rem 0; font-size: 0.95rem; color: #555; }
+        .apple-package-card ul li::before { content: "\2713  "; color: var(--brand-green, #81BD4A); font-weight: 700; }
+        [data-bs-theme="dark"] .apple-package-card { border-color: #333; }
+        [data-bs-theme="dark"] .apple-package-card.featured { border-color: var(--brand-green, #81BD4A); }
+        [data-bs-theme="dark"] .apple-package-card ul li { color: #aaa; }
+        .apple-callout { background: linear-gradient(135deg, rgba(108,117,125,0.08) 0%, rgba(129,189,74,0.08) 100%); border-radius: 12px; padding: 1.5rem 2rem; margin-top: 1.5rem; }
+        .apple-callout h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .apple-callout p { font-size: 0.95rem; color: #86868b; margin-bottom: 0; }
+        .apple-section-header { text-align: center; margin-bottom: 3rem; }
+        .apple-section-header h2 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+        .apple-section-header p { font-size: 1.1rem; color: #86868b; }
+        @media (max-width: 768px) {
+          .apple-hero h1 { font-size: 2.25rem; }
+          .apple-feature-row, .apple-feature-row.reverse { flex-direction: column; gap: 2rem; }
+          .apple-feature-img { flex: none; }
+          .apple-feature-text h2 { font-size: 1.75rem; }
         }
         </style>
 ---
 
 ```{=html}
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Digital Infrastructure</li>
-  </ol>
-</nav>
-
-<div class="hero-section">
+<!-- Hero -->
+<div class="apple-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-8 offset-md-2 text-center">
-        <h1><span class="text-dark">Digital</span> <span class="text-green">Infrastructure</span></h1>
-        <p>Open-Source, UNIX & Apple platforms tailored for SMBs across every industry</p>
+    <h1>Digital Infrastructure</h1>
+    <p>Open-Source, UNIX &amp; Apple platforms tailored for SMBs across every industry</p>
+  </div>
+</div>
+
+<!-- Services Grid -->
+<div class="apple-section-alt">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="apple-grid-item">
+          <i class="bi bi-code-square"></i>
+          <h3>Open-Source Stack</h3>
+          <p>Production-ready open-source tools that replace expensive proprietary software. Self-hosted, no vendor lock-in.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="apple-grid-item">
+          <i class="bi bi-terminal"></i>
+          <h3>UNIX Systems</h3>
+          <p>Enterprise-grade BSD and Linux infrastructure for servers, firewalls, storage, and networking.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="apple-grid-item">
+          <i class="bi bi-apple"></i>
+          <h3>Apple Infrastructure</h3>
+          <p>Complete Apple ecosystem management with the new Apple Business platform and macOS fleet deployment.</p>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<style>
-  .text-white { color: white !important; }
-</style>
-```
-
-::: {.container .page-section}
-
-
-```{=html}
-<div class="text-center mb-4">
-  <img src="/assets/images/stock/code-screen.jpg" alt="Digital Infrastructure" class="img-fluid rounded shadow" style="max-height: 400px; width: 100%; object-fit: cover;">
-</div>
-```
-
-## Infrastructure That Works for Your Business
-
-We design, deploy, and manage production-grade digital infrastructure built on open-source software, UNIX operating systems, and Apple platforms. Our solutions are tailored for small and medium businesses in any activity domain -- from legal offices and clinics to manufacturing, retail, logistics, and creative studios.
-
-::: {.row .mt-4}
-::: {.col-md-4}
-::: {.card .mb-4 .h-100}
-::: {.card-body}
-### <i class="bi bi-code-square text-success"></i> Open-Source Stack
-
-Production-ready open-source tools that replace expensive proprietary software without sacrificing functionality.
-
-<span class="platform-badge badge-opensource">Self-Hosted</span>
-<span class="platform-badge badge-opensource">No Vendor Lock-in</span>
-
-#### Includes:
-- Productivity & collaboration suites
-- Communication & messaging platforms
-- Identity & access management
-- Monitoring & observability
-- DevOps & version control
-
-[Learn More](#open-source){.btn .btn-outline-primary .mt-2}
-:::
-:::
-:::
-
-::: {.col-md-4}
-::: {.card .mb-4 .h-100}
-::: {.card-body}
-### <i class="bi bi-terminal text-warning"></i> UNIX Systems
-
-Enterprise-grade BSD and Linux infrastructure for servers, firewalls, storage, and networking.
-
-<span class="platform-badge badge-linux">Linux</span>
-<span class="platform-badge badge-bsd">BSD</span>
-<span class="platform-badge badge-linux">NixOS</span>
-
-#### Includes:
-- Server deployment & hardening
-- Firewall & network security
-- Storage & backup systems
-- Declarative infrastructure
-- Hybrid environment bridging
-
-[Learn More](#unix){.btn .btn-outline-primary .mt-2}
-:::
-:::
-:::
-
-::: {.col-md-4}
-::: {.card .mb-4 .h-100}
-::: {.card-body}
-### <i class="bi bi-apple text-secondary"></i> Apple Infrastructure
-
-Complete Apple ecosystem management with the new Apple Business platform and macOS fleet deployment.
-
-<span class="platform-badge badge-apple">macOS</span>
-<span class="platform-badge badge-apple">iOS/iPadOS</span>
-<span class="platform-badge badge-free">Free MDM</span>
-
-#### Includes:
-- Apple Business setup & management
-- Zero-touch device deployment
-- Business email, calendar & directory
-- Brand management on Apple Maps
-- AppleCare+ for Business
-
-[Learn More](#apple){.btn .btn-outline-primary .mt-2}
-:::
-:::
-:::
-:::
-
----
-
-## Open-Source Stack for Business {#open-source}
-
-Replace expensive proprietary licenses with battle-tested open-source alternatives. We handle the deployment, configuration, security hardening, and ongoing maintenance so your team can focus on their work.
-
-```{=html}
-<div class="row mt-4">
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-file-earmark-richtext"></i>
+<!-- Feature 1: Open-Source Stack -->
+<div class="apple-section">
+  <div class="container">
+    <div class="apple-feature-row">
+      <div class="apple-feature-img">
+        <img src="/assets/images/stock/code-screen.jpg" alt="Open-source software development environment">
       </div>
-      <h3>Productivity & Collaboration</h3>
-      <p>Full office suite, cloud storage, and real-time document collaboration for your entire team.</p>
-      <small class="text-muted">LibreOffice | Nextcloud | Collabora Online | CryptPad | OnlyOffice</small>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-chat-dots"></i>
-      </div>
-      <h3>Communication</h3>
-      <p>Secure messaging, video conferencing, and team channels with full data sovereignty.</p>
-      <small class="text-muted">Matrix/Element | Mattermost | Jitsi Meet | Rocket.Chat</small>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-person-badge"></i>
-      </div>
-      <h3>Identity & Access</h3>
-      <p>Single sign-on, directory services, and multi-factor authentication across all your systems.</p>
-      <small class="text-muted">Keycloak | OpenLDAP | FreeIPA | Authelia</small>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-graph-up"></i>
-      </div>
-      <h3>Monitoring & Observability</h3>
-      <p>Real-time dashboards, alerting, and uptime monitoring for your entire infrastructure.</p>
-      <small class="text-muted">Prometheus | Grafana | Uptime Kuma | Zabbix | Loki</small>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-git"></i>
-      </div>
-      <h3>DevOps & Version Control</h3>
-      <p>Self-hosted code repositories, CI/CD pipelines, and container orchestration.</p>
-      <small class="text-muted">Gitea/Forgejo | Woodpecker CI | Docker | Podman</small>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-database"></i>
-      </div>
-      <h3>Databases & Storage</h3>
-      <p>Reliable data storage, automated backups, and high-availability database clusters.</p>
-      <small class="text-muted">PostgreSQL | MariaDB | Redis | MinIO | Restic</small>
-    </div>
-  </div>
-</div>
-```
-
----
-
-## UNIX Infrastructure {#unix}
-
-We build and manage servers, firewalls, and network appliances on proven UNIX operating systems. Whether you need a hardened OpenBSD firewall, a NixOS declarative fleet, or a traditional Linux server stack, we deliver infrastructure that is secure, reproducible, and maintainable.
-
-### Linux Distributions
-
-```{=html}
-<div class="row mt-4">
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-warning text-dark">
-        <h4 class="mb-0"><i class="bi bi-snow me-2"></i>NixOS</h4>
-      </div>
-      <div class="card-body">
-        <p>Declarative, reproducible infrastructure. Define your entire system as code and deploy identical configurations across any number of machines.</p>
-        <ul class="mb-0">
-          <li>Immutable system configuration</li>
-          <li>Atomic upgrades and rollbacks</li>
-          <li>Reproducible builds across environments</li>
-          <li>Flake-based multi-machine deployments</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-warning text-dark">
-        <h4 class="mb-0"><i class="bi bi-ubuntu me-2"></i>Debian/Ubuntu</h4>
-      </div>
-      <div class="card-body">
-        <p>The most widely supported Linux family. Ideal for application servers, web hosting, and workloads with broad software compatibility.</p>
-        <ul class="mb-0">
-          <li>LTS releases with 5+ years of support</li>
-          <li>Massive package ecosystem</li>
-          <li>Unattended security updates</li>
-          <li>Proven in production at any scale</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-warning text-dark">
-        <h4 class="mb-0"><i class="bi bi-building me-2"></i>RHEL/AlmaLinux</h4>
-      </div>
-      <div class="card-body">
-        <p>Enterprise-grade stability for workloads that require vendor certification, compliance mandates, or long lifecycle support.</p>
-        <ul class="mb-0">
-          <li>10-year lifecycle support</li>
-          <li>SELinux mandatory access control</li>
-          <li>FIPS and Common Criteria certified</li>
-          <li>Vendor-certified application stacks</li>
+      <div class="apple-feature-text">
+        <h2>Open-Source Stack for Business</h2>
+        <p>Replace expensive proprietary licenses with battle-tested open-source alternatives. We handle deployment, configuration, security hardening, and ongoing maintenance so your team can focus on their work.</p>
+        <ul>
+          <li><strong>Productivity &amp; Collaboration</strong> &mdash; LibreOffice, Nextcloud, Collabora Online, CryptPad, OnlyOffice</li>
+          <li><strong>Communication</strong> &mdash; Matrix/Element, Mattermost, Jitsi Meet, Rocket.Chat</li>
+          <li><strong>Identity &amp; Access</strong> &mdash; Keycloak, OpenLDAP, FreeIPA, Authelia</li>
+          <li><strong>Monitoring &amp; Observability</strong> &mdash; Prometheus, Grafana, Uptime Kuma, Zabbix, Loki</li>
+          <li><strong>DevOps &amp; Version Control</strong> &mdash; Gitea/Forgejo, Woodpecker CI, Docker, Podman</li>
+          <li><strong>Databases &amp; Storage</strong> &mdash; PostgreSQL, MariaDB, Redis, MinIO, Restic</li>
         </ul>
       </div>
     </div>
   </div>
 </div>
-```
 
-### BSD Systems
-
-```{=html}
-<div class="row mt-4">
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-danger text-white">
-        <h4 class="mb-0"><i class="bi bi-shield-lock me-2"></i>OpenBSD</h4>
+<!-- Feature 2: UNIX Infrastructure -->
+<div class="apple-section-alt">
+  <div class="container">
+    <div class="apple-feature-row reverse">
+      <div class="apple-feature-img">
+        <img src="/assets/images/stock/server-racks.jpg" alt="UNIX server infrastructure rack">
       </div>
-      <div class="card-body">
-        <p>The most secure general-purpose operating system. Ideal for firewalls, VPN gateways, and security-critical network appliances.</p>
-        <ul class="mb-0">
-          <li>pf packet filter (industry-standard firewall)</li>
-          <li>Secure by default philosophy</li>
-          <li>Built-in VPN (WireGuard, IKEv2)</li>
-          <li>Minimal attack surface</li>
+      <div class="apple-feature-text">
+        <h2>UNIX Infrastructure</h2>
+        <p>We build and manage servers, firewalls, and network appliances on proven UNIX operating systems. Whether you need a hardened OpenBSD firewall, a NixOS declarative fleet, or a traditional Linux server stack, we deliver infrastructure that is secure, reproducible, and maintainable.</p>
+        <ul>
+          <li><strong>NixOS</strong> &mdash; Declarative, reproducible, atomic upgrades and rollbacks</li>
+          <li><strong>Debian/Ubuntu</strong> &mdash; LTS releases, massive package ecosystem, proven at any scale</li>
+          <li><strong>RHEL/AlmaLinux</strong> &mdash; 10-year lifecycle, SELinux, FIPS certified</li>
+          <li><strong>OpenBSD</strong> &mdash; Secure by default, pf firewall, built-in VPN</li>
+          <li><strong>FreeBSD</strong> &mdash; ZFS enterprise filesystem, Jails, bhyve hypervisor</li>
+          <li><strong>NetBSD</strong> &mdash; 60+ hardware platforms, ideal for embedded and IoT</li>
         </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-danger text-white">
-        <h4 class="mb-0"><i class="bi bi-hdd-stack me-2"></i>FreeBSD</h4>
-      </div>
-      <div class="card-body">
-        <p>High-performance storage and networking. The foundation of Netflix CDN, WhatsApp, and Sony PlayStation Network.</p>
-        <ul class="mb-0">
-          <li>ZFS enterprise filesystem</li>
-          <li>Jails containerization</li>
-          <li>bhyve hypervisor</li>
-          <li>Advanced networking (VNET, CARP)</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-danger text-white">
-        <h4 class="mb-0"><i class="bi bi-cpu me-2"></i>NetBSD</h4>
-      </div>
-      <div class="card-body">
-        <p>Runs on virtually any hardware. Perfect for embedded systems, IoT gateways, and legacy hardware repurposing.</p>
-        <ul class="mb-0">
-          <li>Supports 60+ hardware platforms</li>
-          <li>Lightweight and efficient</li>
-          <li>pkgsrc cross-platform packages</li>
-          <li>Ideal for edge and IoT deployments</li>
-        </ul>
+        <p>Hybrid environment integration included: Samba/AD directory bridging, cross-platform SSO, unified file sharing via NFS/SMB/WebDAV, and CUPS-based print management.</p>
       </div>
     </div>
   </div>
 </div>
-```
 
-### Hybrid Environment Integration
+<!-- Feature 3: Apple Business -->
+<div class="apple-section">
+  <div class="container">
+    <div class="apple-feature-row">
+      <div class="apple-feature-img">
+        <img src="/assets/images/stock/team-macbooks.jpg" alt="Apple Business infrastructure with MacBooks">
+      </div>
+      <div class="apple-feature-text">
+        <h2>Apple Business</h2>
+        <p>We are early adopters and deployment partners for the new Apple Business platform, launching April 14, 2026. Apple Business replaces Apple Business Manager, Apple Business Essentials, and Apple Business Connect into a single, unified platform.</p>
+        <ul>
+          <li><strong>Built-in MDM</strong> &mdash; Full device management, no third-party license required</li>
+          <li><strong>Blueprints</strong> &mdash; Zero-touch deployment, employees unbox and start working</li>
+          <li><strong>Business Email &amp; Calendar</strong> &mdash; Custom domain email, shared calendars, company directory</li>
+          <li><strong>Brand Management</strong> &mdash; Apple Maps, Wallet, Mail brand profiles and location insights</li>
+          <li><strong>AppleCare+ for Business</strong> &mdash; Expert support and hardware repair coverage</li>
+        </ul>
+        <div class="apple-callout">
+          <h4><i class="bi bi-apple me-2"></i>Free Platform</h4>
+          <p>The Apple Business base platform is <strong>free</strong> &mdash; MDM, Blueprints, Managed Accounts, Brand Management, App Distribution, and Admin API included at no cost. Available April 14, 2026 in 200+ countries and regions.</p>
+        </div>
+        <br>
+        <a class="apple-link" href="https://business.apple.com/preview" target="_blank">Apple Business Preview</a>
+      </div>
+    </div>
+  </div>
+</div>
 
-```{=html}
-<div class="row mt-4">
-  <div class="col-md-12">
-    <div class="card mb-4">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-md-3 text-center">
-            <div class="process-step">
-              <div class="process-icon">
-                <i class="bi bi-people fs-1 text-primary"></i>
+<!-- SMB Packages -->
+<div class="apple-section-alt">
+  <div class="container">
+    <div class="apple-section-header">
+      <h2>SMB Packages</h2>
+      <p>Tailored packages combining Open-Source, UNIX, and Apple infrastructure to match your business size and needs.</p>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="apple-package-card">
+          <h3>Starter</h3>
+          <div class="subtitle">1 &ndash; 10 employees</div>
+          <div class="tagline">For small teams getting started</div>
+          <ul>
+            <li>Apple Business setup &amp; Blueprints</li>
+            <li>1 Linux server (Debian/Ubuntu)</li>
+            <li>Nextcloud (files, contacts, calendar)</li>
+            <li>Business email on custom domain</li>
+            <li>Basic firewall (OpenBSD pf or UFW)</li>
+            <li>Automated backups (Restic)</li>
+            <li>Uptime monitoring</li>
+          </ul>
+          <a class="apple-btn-outline" href="https://cal.com/chenist" target="_blank">Book Consultation</a>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="apple-package-card featured">
+          <h3>Growth</h3>
+          <div class="subtitle">11 &ndash; 50 employees</div>
+          <div class="tagline">For scaling businesses</div>
+          <ul>
+            <li>Everything in Starter, plus:</li>
+            <li>Full Apple MDM with team grouping</li>
+            <li>OpenBSD dedicated firewall/VPN</li>
+            <li>Keycloak SSO across all systems</li>
+            <li>Matrix/Element team messaging</li>
+            <li>Collabora Online (document editing)</li>
+            <li>Prometheus + Grafana monitoring</li>
+            <li>Samba/AD bridging (if needed)</li>
+          </ul>
+          <a class="apple-btn" href="https://cal.com/chenist" target="_blank">Book Consultation</a>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="apple-package-card">
+          <h3>Enterprise</h3>
+          <div class="subtitle">50+ employees</div>
+          <div class="tagline">For complex multi-site operations</div>
+          <ul>
+            <li>Everything in Growth, plus:</li>
+            <li>Apple Business Admin API integration</li>
+            <li>NixOS declarative multi-server fleet</li>
+            <li>FreeBSD ZFS storage cluster</li>
+            <li>High-availability configurations</li>
+            <li>Multi-site VPN mesh</li>
+            <li>Compliance baselines (NIS2, GDPR)</li>
+            <li>24/7 monitoring &amp; incident response</li>
+          </ul>
+          <a class="apple-btn-outline" href="https://cal.com/chenist" target="_blank">Book Consultation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Industries Grid -->
+<div class="apple-section">
+  <div class="container">
+    <div class="apple-section-header">
+      <h2>Industries We Serve</h2>
+      <p>Our digital infrastructure solutions are designed for any activity domain.</p>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-6">
+        <div class="apple-grid-item">
+          <i class="bi bi-building"></i>
+          <h3>Legal &amp; Consulting</h3>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="apple-grid-item">
+          <i class="bi bi-heart-pulse"></i>
+          <h3>Healthcare &amp; Clinics</h3>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="apple-grid-item">
+          <i class="bi bi-gear"></i>
+          <h3>Manufacturing</h3>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="apple-grid-item">
+          <i class="bi bi-shop"></i>
+          <h3>Retail &amp; Hospitality</h3>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="apple-grid-item">
+          <i class="bi bi-truck"></i>
+          <h3>Logistics &amp; Transport</h3>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="apple-grid-item">
+          <i class="bi bi-palette"></i>
+          <h3>Creative &amp; Media</h3>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="apple-grid-item">
+          <i class="bi bi-mortarboard"></i>
+          <h3>Education</h3>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="apple-grid-item">
+          <i class="bi bi-bank"></i>
+          <h3>Finance &amp; Insurance</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Registration / Booking Form -->
+<div class="apple-section-alt">
+  <div class="container" style="max-width: 800px;">
+    <div class="apple-section-header">
+      <h2>Request a Consultation</h2>
+      <p>Register your interest or book a call with our team.</p>
+    </div>
+    <div style="background: white; border-radius: 16px; padding: 2.5rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
+      <ul class="nav nav-tabs" id="regTabs-digital" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#formReg-digital" type="button" role="tab">
+            <i class="bi bi-file-earmark-text me-2"></i>Register (Romania)
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#calReg-digital" type="button" role="tab">
+            <i class="bi bi-calendar-check me-2"></i>Book a Call (EU / International)
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content pt-3">
+        <div class="tab-pane fade show active" id="formReg-digital" role="tabpanel">
+          <p class="text-muted"><i class="bi bi-geo-alt me-1"></i>Fill out the form and we'll get back to you within 24 hours.</p>
+          <form action="https://formspree.io/f/mpwkaqev" method="POST">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Full Name *</label>
+                <input type="text" class="form-control" name="name" required placeholder="Your full name">
               </div>
-              <h5>Directory Bridging</h5>
-              <p>Samba/AD integration connecting UNIX systems with existing Windows environments</p>
-            </div>
-          </div>
-
-          <div class="col-md-3 text-center">
-            <div class="process-step">
-              <div class="process-icon">
-                <i class="bi bi-key fs-1 text-primary"></i>
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Email *</label>
+                <input type="email" class="form-control" name="email" required placeholder="your@email.com">
               </div>
-              <h5>Cross-Platform SSO</h5>
-              <p>Single identity across Linux, BSD, macOS, and Windows systems</p>
             </div>
-          </div>
-
-          <div class="col-md-3 text-center">
-            <div class="process-step">
-              <div class="process-icon">
-                <i class="bi bi-share fs-1 text-primary"></i>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Phone</label>
+                <input type="tel" class="form-control" name="phone" placeholder="Phone number">
               </div>
-              <h5>File Sharing</h5>
-              <p>Unified file access across all platforms via NFS, SMB, and WebDAV</p>
-            </div>
-          </div>
-
-          <div class="col-md-3 text-center">
-            <div class="process-step">
-              <div class="process-icon">
-                <i class="bi bi-printer fs-1 text-primary"></i>
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Company</label>
+                <input type="text" class="form-control" name="company" placeholder="Company">
               </div>
-              <h5>Print & Peripherals</h5>
-              <p>CUPS-based print management and peripheral sharing across mixed environments</p>
             </div>
-          </div>
+            <div class="mb-3">
+              <label class="form-label">Package Interest</label>
+              <select class="form-select" name="interest">
+                <option value="">Select a package...</option>
+                <option value="starter">Starter (1-10 employees)</option>
+                <option value="growth">Growth (11-50 employees)</option>
+                <option value="enterprise">Enterprise (50+ employees)</option>
+                <option value="custom">Custom / Not sure yet</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Tell us about your infrastructure needs</label>
+              <textarea class="form-control" name="message" rows="3" placeholder="Current setup, number of devices, specific needs (Linux, BSD, Apple, open-source tools)..."></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="Digital Infrastructure Inquiry from chen.ist">
+            <input type="hidden" name="_source" value="digital-infrastructure">
+            <input type="text" name="_gotcha" style="display:none">
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" required>
+              <label class="form-check-label">I agree to the <a href="/privacy.html" target="_blank">privacy policy</a> *</label>
+            </div>
+            <button type="submit" class="apple-btn" style="width: 100%; border: none; cursor: pointer; padding: 1rem; font-size: 1.05rem;"><i class="bi bi-send me-2"></i>Request Consultation</button>
+          </form>
+        </div>
+        <div class="tab-pane fade" id="calReg-digital" role="tabpanel">
+          <p class="text-muted"><i class="bi bi-globe me-1"></i>Prefer a live conversation? Book directly in our calendar.</p>
+          <a href="https://cal.com/chenist" target="_blank" class="apple-btn-outline" style="display: block; text-align: center; padding: 1rem; font-size: 1.05rem;"><i class="bi bi-calendar-check me-2"></i>Book via Cal.com</a>
         </div>
       </div>
     </div>
   </div>
 </div>
-```
 
----
-
-## Apple Infrastructure {#apple}
-
-```{=html}
-<div class="text-center mb-4">
-  <img src="/assets/images/stock/team-macbooks.jpg" alt="Apple Business Infrastructure" class="img-fluid rounded shadow" style="max-height: 350px; width: 100%; object-fit: cover;">
-</div>
-```
-
-We are early adopters and deployment partners for the new **Apple Business** platform, launching April 14, 2026. Apple Business replaces Apple Business Manager, Apple Business Essentials, and Apple Business Connect into a single, unified platform -- and the base service is **free**.
-
-```{=html}
-<div class="apple-business-highlight">
-  <div class="row align-items-center">
-    <div class="col-md-8">
-      <h3 class="mb-2"><i class="bi bi-apple me-2"></i>Apple Business <span class="platform-badge badge-free">Free Platform</span></h3>
-      <p class="mb-1">A new all-in-one platform for businesses of all sizes. Manage people and devices, reach customers, equip your team with essential tools, and get support from Apple experts.</p>
-      <p class="mb-0 text-muted"><small>Available April 14, 2026 in 200+ countries and regions</small></p>
-    </div>
-    <div class="col-md-4 text-center">
-      <a href="https://business.apple.com/preview" target="_blank" class="btn btn-outline-secondary btn-lg">
-        <i class="bi bi-box-arrow-up-right me-2"></i>Apple Business Preview
-      </a>
+<!-- CTA -->
+<div class="apple-section">
+  <div class="apple-cta">
+    <div class="container">
+      <h2>Ready to build your digital infrastructure?</h2>
+      <p>Book a free consultation to discuss your business needs and get a tailored infrastructure proposal.</p>
+      <a class="apple-btn" href="https://cal.com/chenist" target="_blank" style="margin-right: 1rem;">Book a Consultation</a>
+      <a class="apple-btn-outline" href="mailto:digital@chen.ist">Email digital@chen.ist</a>
     </div>
   </div>
 </div>
 ```
-
-### Device Management & Deployment
-
-```{=html}
-<div class="row mt-4">
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-phone"></i>
-      </div>
-      <h3>Built-in MDM</h3>
-      <p>Comprehensive mobile device management with full organizational visibility. No third-party MDM license required.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-layers"></i>
-      </div>
-      <h3>Blueprints</h3>
-      <p>Preconfigured device settings for zero-touch deployment. Employees unbox and start working immediately.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-shield-lock"></i>
-      </div>
-      <h3>Managed Apple Accounts</h3>
-      <p>Cryptographic separation between work and personal data. Full privacy for employees, full control for IT.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-people"></i>
-      </div>
-      <h3>Team Management</h3>
-      <p>Group employees by function or team. Assign apps, roles, and permissions at scale.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-bag-check"></i>
-      </div>
-      <h3>App Distribution</h3>
-      <p>Deploy business apps from the App Store to any number of devices -- from 10 to 10,000.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center mb-4">
-      <div class="feature-card-icon">
-        <i class="bi bi-code-slash"></i>
-      </div>
-      <h3>Admin API</h3>
-      <p>Programmatic device management for large-scale deployments and custom automation workflows.</p>
-    </div>
-  </div>
-</div>
-```
-
-### Communication & Collaboration Tools
-
-```{=html}
-<div class="row mt-4">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-secondary text-white">
-        <h4 class="mb-0">Business Email & Calendar</h4>
-      </div>
-      <div class="card-body">
-        <ul>
-          <li><strong>Custom Domain Email:</strong> Professional email on your own domain (bring existing or purchase new)</li>
-          <li><strong>Calendar Delegation:</strong> Shared calendars and scheduling tools for teams</li>
-          <li><strong>Company Directory:</strong> Built-in directory with personalized contact cards for every employee</li>
-          <li><strong>iCloud Storage:</strong> Automatic backup and file synchronization (from $0.99/user/month)</li>
-        </ul>
-        <p class="text-muted mb-0"><small>Requires iOS 26, iPadOS 26, or macOS 26</small></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-secondary text-white">
-        <h4 class="mb-0">Brand & Customer Discovery</h4>
-      </div>
-      <div class="card-body">
-        <ul>
-          <li><strong>Brand Profiles:</strong> Manage your brand across Apple Maps, Wallet, and Mail</li>
-          <li><strong>Rich Place Cards:</strong> Photos, business hours, location details on Apple Maps</li>
-          <li><strong>Location Insights:</strong> Analytics on how customers discover your business</li>
-          <li><strong>Custom Actions:</strong> Order, reserve, or book directly from Apple Maps to your website</li>
-          <li><strong>Tap to Pay:</strong> Accept payments on iPhone with branded payment screens</li>
-          <li><strong>Ads on Apple Maps:</strong> Promoted placement in search results and Suggested Places (U.S./Canada, summer 2026)</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-```
-
-### Apple Business Pricing
-
-```{=html}
-<div class="row mt-4">
-  <div class="col-md-4">
-    <div class="card mb-4 text-center">
-      <div class="card-header bg-success text-white">
-        <h4 class="mb-0">Base Platform</h4>
-      </div>
-      <div class="card-body">
-        <h2 class="text-success">Free</h2>
-        <p>MDM, Blueprints, Managed Accounts, Brand Management, App Distribution, Admin API</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4 text-center">
-      <div class="card-header bg-primary text-white">
-        <h4 class="mb-0">iCloud Storage</h4>
-      </div>
-      <div class="card-body">
-        <h2 class="text-primary">$0.99+</h2>
-        <p>Per user/month. Up to 2TB per user for backup, file sync, and collaboration.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4 text-center">
-      <div class="card-header bg-warning text-dark">
-        <h4 class="mb-0">AppleCare+ for Business</h4>
-      </div>
-      <div class="card-body">
-        <h2 class="text-warning">$6.99-$13.99</h2>
-        <p>Per device/month. Expert technical support and hardware repair coverage.</p>
-      </div>
-    </div>
-  </div>
-</div>
-```
-
-### Migration from Legacy Apple Services
-
-If your business currently uses Apple Business Manager, Apple Business Essentials, or Apple Business Connect, all three are being discontinued on April 14, 2026. We handle the complete migration:
-
-```{=html}
-<div class="row mt-4">
-  <div class="col-md-12">
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-marker bg-success"></div>
-        <div class="timeline-content">
-          <h3>Audit Existing Setup</h3>
-          <p>Review your current Apple Business Manager/Essentials configuration, enrolled devices, and managed Apple IDs.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-marker bg-success"></div>
-        <div class="timeline-content">
-          <h3>Plan Migration</h3>
-          <p>Map existing device groups, app assignments, and policies to Apple Business Blueprints and team structures.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-marker bg-success"></div>
-        <div class="timeline-content">
-          <h3>Execute Transition</h3>
-          <p>Migrate to the unified Apple Business platform. Business Connect data migrates automatically; device management requires re-enrollment planning.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-marker bg-success"></div>
-        <div class="timeline-content">
-          <h3>Verify & Optimize</h3>
-          <p>Confirm all devices, accounts, and brand profiles are operational. Optimize Blueprints and configure new features (email, calendar, directory).</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-```
-
----
-
-## SMB Packages {#packages}
-
-We offer tailored packages that combine Open-Source, UNIX, and Apple infrastructure to match your business size and needs. Every package is customizable to your specific industry requirements.
-
-```{=html}
-<div class="row mt-5">
-  <div class="col-md-4">
-    <div class="card pricing-card mb-4 h-100">
-      <div class="card-header bg-primary text-white text-center">
-        <h3 class="mb-0">Starter</h3>
-        <small>1-10 employees</small>
-      </div>
-      <div class="card-body">
-        <h4 class="text-center mb-4">For small teams getting started</h4>
-        <ul>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Apple Business setup & Blueprints</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>1 Linux server (Debian/Ubuntu)</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Nextcloud (files, contacts, calendar)</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Business email on custom domain</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Basic firewall (OpenBSD pf or UFW)</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Automated backups (Restic)</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Uptime monitoring</li>
-        </ul>
-        <div class="text-center mt-auto">
-          <a href="https://cal.com/chenist" target="_blank" class="btn btn-outline-primary w-100">Book Consultation</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card pricing-card pricing-featured mb-4 h-100">
-      <div class="card-header text-white text-center">
-        <h3 class="mb-0">Growth</h3>
-        <small>11-50 employees</small>
-      </div>
-      <div class="card-body">
-        <h4 class="text-center mb-4">For scaling businesses</h4>
-        <ul>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Everything in Starter, plus:</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Full Apple MDM with team grouping</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>OpenBSD dedicated firewall/VPN</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Keycloak SSO across all systems</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Matrix/Element team messaging</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Collabora Online (document editing)</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Prometheus + Grafana monitoring</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Samba/AD bridging (if needed)</li>
-        </ul>
-        <div class="text-center mt-auto">
-          <a href="https://cal.com/chenist" target="_blank" class="btn btn-success w-100">Book Consultation</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card pricing-card mb-4 h-100">
-      <div class="card-header bg-warning text-dark text-center">
-        <h3 class="mb-0">Enterprise</h3>
-        <small>50+ employees</small>
-      </div>
-      <div class="card-body">
-        <h4 class="text-center mb-4">For complex multi-site operations</h4>
-        <ul>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Everything in Growth, plus:</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Apple Business Admin API integration</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>NixOS declarative multi-server fleet</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>FreeBSD ZFS storage cluster</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>High-availability configurations</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Multi-site VPN mesh</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>Compliance baselines (NIS2, GDPR)</li>
-          <li><i class="bi bi-check-circle text-success me-2"></i>24/7 monitoring & incident response</li>
-        </ul>
-        <div class="text-center mt-auto">
-          <a href="https://cal.com/chenist" target="_blank" class="btn btn-outline-warning w-100">Book Consultation</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-```
-
-## Industries We Serve
-
-Our digital infrastructure solutions are designed for **any activity domain**. We have experience across:
-
-```{=html}
-<div class="row mt-4">
-  <div class="col-md-3 col-6">
-    <div class="text-center mb-4">
-      <i class="bi bi-building fs-1 text-primary"></i>
-      <h5 class="mt-2">Legal & Consulting</h5>
-    </div>
-  </div>
-  <div class="col-md-3 col-6">
-    <div class="text-center mb-4">
-      <i class="bi bi-heart-pulse fs-1 text-primary"></i>
-      <h5 class="mt-2">Healthcare & Clinics</h5>
-    </div>
-  </div>
-  <div class="col-md-3 col-6">
-    <div class="text-center mb-4">
-      <i class="bi bi-gear fs-1 text-primary"></i>
-      <h5 class="mt-2">Manufacturing</h5>
-    </div>
-  </div>
-  <div class="col-md-3 col-6">
-    <div class="text-center mb-4">
-      <i class="bi bi-shop fs-1 text-primary"></i>
-      <h5 class="mt-2">Retail & Hospitality</h5>
-    </div>
-  </div>
-  <div class="col-md-3 col-6">
-    <div class="text-center mb-4">
-      <i class="bi bi-truck fs-1 text-primary"></i>
-      <h5 class="mt-2">Logistics & Transport</h5>
-    </div>
-  </div>
-  <div class="col-md-3 col-6">
-    <div class="text-center mb-4">
-      <i class="bi bi-palette fs-1 text-primary"></i>
-      <h5 class="mt-2">Creative & Media</h5>
-    </div>
-  </div>
-  <div class="col-md-3 col-6">
-    <div class="text-center mb-4">
-      <i class="bi bi-mortarboard fs-1 text-primary"></i>
-      <h5 class="mt-2">Education</h5>
-    </div>
-  </div>
-  <div class="col-md-3 col-6">
-    <div class="text-center mb-4">
-      <i class="bi bi-bank fs-1 text-primary"></i>
-      <h5 class="mt-2">Finance & Insurance</h5>
-    </div>
-  </div>
-</div>
-```
-
-## Why Choose chen.ist for Digital Infrastructure
-
-```{=html}
-<div class="row mt-4">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0">Our Expertise</h3>
-      </div>
-      <div class="card-body">
-        <ul>
-          <li><strong>UNIX Veterans:</strong> Deep expertise in BSD, Linux, and macOS administration spanning decades</li>
-          <li><strong>Open-Source Contributors:</strong> We contribute to the tools we deploy -- not just consume them</li>
-          <li><strong>Apple Business Early Adopters:</strong> Ready to deploy from day one (April 14, 2026)</li>
-          <li><strong>Security-First Mindset:</strong> Every deployment is hardened by default, not as an afterthought</li>
-          <li><strong>Cross-Platform Fluency:</strong> Seamless integration across UNIX, Apple, and Windows environments</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0">Our Approach</h3>
-      </div>
-      <div class="card-body">
-        <ul>
-          <li><strong>No Vendor Lock-in:</strong> Open-source and standard protocols ensure you always own your data and can switch providers</li>
-          <li><strong>Right-Sized Solutions:</strong> We match infrastructure complexity to your actual business needs -- no over-engineering</li>
-          <li><strong>Transparent Pricing:</strong> You pay for our expertise, not for software licenses</li>
-          <li><strong>Knowledge Transfer:</strong> We document everything and train your team to be self-sufficient</li>
-          <li><strong>Long-Term Partnership:</strong> Ongoing support, monitoring, and evolution as your business grows</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-```
-
-:::
-
-## Get Started
-
-```{=html}
-<div class="card mt-4 mb-5">
-<div class="card-body">
-<h3 class="mb-3"><i class="bi bi-pencil-square me-2"></i>Request a Consultation</h3>
-<ul class="nav nav-tabs" id="regTabs-digital" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#formReg-digital" type="button" role="tab">
-      <i class="bi bi-file-earmark-text me-2"></i>Register (Romania)
-    </button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#calReg-digital" type="button" role="tab">
-      <i class="bi bi-calendar-check me-2"></i>Book a Call (EU / International)
-    </button>
-  </li>
-</ul>
-<div class="tab-content pt-3">
-  <div class="tab-pane fade show active" id="formReg-digital" role="tabpanel">
-    <p class="text-muted"><i class="bi bi-geo-alt me-1"></i>Fill out the form and we.ll get back to you within 24 hours. We'll contact you within 24 hours.</p>
-    <form action="https://formspree.io/f/mpwkaqev" method="POST">
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <label class="form-label">Full Name *</label>
-          <input type="text" class="form-control" name="name" required placeholder="Your full name">
-        </div>
-        <div class="col-md-6 mb-3">
-          <label class="form-label">Email *</label>
-          <input type="email" class="form-control" name="email" required placeholder="your@email.com">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <label class="form-label">Phone</label>
-          <input type="tel" class="form-control" name="phone" placeholder="Phone number">
-        </div>
-        <div class="col-md-6 mb-3">
-          <label class="form-label">Company</label>
-          <input type="text" class="form-control" name="company" placeholder="Company">
-        </div>
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Package Interest</label>
-        <select class="form-select" name="interest">
-          <option value="">Select a package...</option>
-          <option value="starter">Starter (1-10 employees)</option>
-          <option value="growth">Growth (11-50 employees)</option>
-          <option value="enterprise">Enterprise (50+ employees)</option>
-          <option value="custom">Custom / Not sure yet</option>
-        </select>
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Tell us about your infrastructure needs</label>
-        <textarea class="form-control" name="message" rows="3" placeholder="Current setup, number of devices, specific needs (Linux, BSD, Apple, open-source tools)..."></textarea>
-      </div>
-      <input type="hidden" name="_subject" value="Digital Infrastructure Inquiry from chen.ist">
-      <input type="hidden" name="_source" value="digital-infrastructure">
-      <input type="text" name="_gotcha" style="display:none">
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" required>
-        <label class="form-check-label">I agree to the <a href="/privacy.html" target="_blank">privacy policy</a> *</label>
-      </div>
-      <button type="submit" class="btn btn-success btn-lg w-100"><i class="bi bi-send me-2"></i>Request Consultation</button>
-    </form>
-  </div>
-  <div class="tab-pane fade" id="calReg-digital" role="tabpanel">
-    <p class="text-muted"><i class="bi bi-globe me-1"></i>Prefer a live conversation? Book directly in our calendar. Book directly in our calendar.</p>
-    <a href="https://cal.com/chenist" target="_blank" class="btn btn-outline-primary btn-lg w-100"><i class="bi bi-calendar-check me-2"></i>Book via Cal.com</a>
-  </div>
-</div>
-</div>
-</div>
-```
-
-:::: {.cta-section}
-::: {.container .text-center}
-## <span class="text-dark">Ready to build your digital infrastructure?</span>
-
-```{=html}
-<p class="mb-4">Book a free consultation to discuss your business needs and get a tailored infrastructure proposal.</p>
-```
-
-[Book a Consultation](https://cal.com/chenist){.cta-button target="_blank"}
-:::
-::::
