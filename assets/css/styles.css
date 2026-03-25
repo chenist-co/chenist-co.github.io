@@ -2,6 +2,18 @@
 
 /* Google Fonts loaded via _quarto.yml <link> tag - do not duplicate here */
 
+/* GLOBAL dark mode fix — must be in styles.css (loads on ALL pages) */
+html[data-bs-theme="dark"] { --bs-body-bg: #111 !important; background-color: #111 !important; }
+html[data-bs-theme="dark"] body { background-color: #111 !important; }
+html[data-bs-theme="dark"] main,
+html[data-bs-theme="dark"] main.content,
+html[data-bs-theme="dark"] #quarto-content,
+html[data-bs-theme="dark"] .page-columns,
+html[data-bs-theme="dark"] .page-rows-contents,
+html[data-bs-theme="dark"] .container-fluid,
+html[data-bs-theme="dark"] .quarto-title-block,
+html[data-bs-theme="dark"] #title-block-header { background-color: #111 !important; }
+
 /* Design tokens */
 :root {
   --brand-navy: #323642;
