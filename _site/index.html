@@ -396,12 +396,9 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 </script>
 <style>
-/* Hide Quarto's auto-generated title block */
-.quarto-title-block, #title-block-header, header#title-block-header { display: none !important; }
-/* Make content start from top — no margin/padding anywhere */
+.quarto-title-block, #title-block-header { display: none !important; }
 #quarto-content > * { margin-top: 0 !important; padding-top: 0 !important; }
 main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
-/* Kill white gap between content and footer */
 footer { margin-top: 0 !important; }
 #quarto-content { margin-bottom: 0 !important; padding-bottom: 0 !important; }
 .page-columns { margin-bottom: 0 !important; }
@@ -409,7 +406,7 @@ footer { margin-top: 0 !important; }
 <style>
 .hp { font-family: 'Open Sans', -apple-system, system-ui, sans-serif; }
 
-/* Hero — full-bleed image from top of viewport */
+/* Hero */
 .hp-hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8rem 1.5rem 6rem; position: relative; overflow: hidden; }
 .hp-hero-img { position: absolute; inset: 0; background: url('./assets/images/stock/network-closeup.webp') center/cover no-repeat; }
 .hp-hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.8) 100%); }
@@ -429,74 +426,70 @@ footer { margin-top: 0 !important; }
 .hp-mq span { display: inline-block; padding: 0 2rem; font-size: 0.75rem; font-weight: 700; color: #fff; letter-spacing: 0.06em; text-transform: uppercase; }
 @keyframes hps { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
 
-/* Section — full-bleed image background */
-.hp-sec { min-height: 90vh; display: flex; align-items: center; position: relative; overflow: hidden; padding: 6rem 0; }
-.hp-sec-img { position: absolute; inset: 0; background-size: cover; background-position: center; }
-.hp-sec-over { position: absolute; inset: 0; }
-.hp-sec-content { position: relative; z-index: 1; width: 100%; }
+/* Sections */
+.hp-sec { min-height: 90vh; display: flex; align-items: center; position: relative; overflow: hidden; padding: 6rem 0; color: #fff; }
+.hp-sec-content { position: relative; z-index: 1; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 .hp-sec h2 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 700; letter-spacing: -0.04em; line-height: 1.06; margin-bottom: 1rem; }
-.hp-sec p { font-size: clamp(1rem, 1.6vw, 1.2rem); max-width: 480px; line-height: 1.55; margin-bottom: 2rem; }
+.hp-sec p { font-size: clamp(1rem, 1.6vw, 1.15rem); max-width: 500px; line-height: 1.6; margin-bottom: 2rem; color: rgba(255,255,255,0.55); }
 .hp-sec-links a { font-size: 1rem; font-weight: 500; text-decoration: none; margin-right: 2rem; }
 .hp-sec-links a:hover { text-decoration: underline; }
 .hp-sec-links .pr { color: #81BD4A; }
-.hp-sec-links .pr::after { content: " ›"; }
+.hp-sec-links .pr::after { content: " \203A"; }
 .hp-sec-links .se { color: rgba(255,255,255,0.4); }
-.hp-sec-links .se::after { content: " ›"; }
-.hp-sec-links .se-dark { color: #86868b; }
-.hp-sec-links .se-dark::after { content: " ›"; }
+.hp-sec-links .se::after { content: " \203A"; }
 
-/* Left-aligned text overlay on dark image */
-.hp-left { color: #fff; }
-.hp-left .hp-sec-over { background: linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%, transparent 100%); }
-.hp-left .hp-sec-content { padding-left: max(2rem, calc((100vw - 1200px)/2 + 1rem)); }
-.hp-left p { color: rgba(255,255,255,0.55); }
+/* Layout variants */
+.hp-split { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.hp-split-text h2 { margin-bottom: 1.5rem; }
+.hp-split-visual { display: flex; flex-direction: column; gap: 1rem; }
 
-/* Right-aligned text overlay on light/dark image */
-.hp-right { color: #fff; }
-.hp-right .hp-sec-over { background: linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%, transparent 100%); }
-.hp-right .hp-sec-content { text-align: right; padding-right: max(2rem, calc((100vw - 1200px)/2 + 1rem)); }
-.hp-right p { color: rgba(255,255,255,0.55); margin-left: auto; }
-.hp-right .hp-sec-links { text-align: right; }
+/* Feature pills */
+.hp-pill { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: rgba(129,189,74,0.08); border: 1px solid rgba(129,189,74,0.15); border-radius: 980px; font-size: 0.82rem; color: rgba(255,255,255,0.7); margin: 0.25rem; }
+.hp-pill i { color: #81BD4A; font-size: 0.9rem; }
 
-/* Centered text on tinted image */
-.hp-center { text-align: center; }
-.hp-center .hp-sec-over { background: rgba(0,0,0,0.4); }
-.hp-center .hp-sec-content { color: #fff; }
-.hp-center p { color: rgba(255,255,255,0.55); margin: 0 auto 2rem; }
-.hp-center .hp-sec-links { justify-content: center; }
+/* Icon grid */
+.hp-icons { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.hp-icon { display: flex; gap: 1rem; align-items: flex-start; }
+.hp-icon-circle { flex-shrink: 0; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: rgba(129,189,74,0.1); border-radius: 12px; font-size: 1.2rem; color: #81BD4A; }
+.hp-icon h4 { font-size: 0.95rem; font-weight: 600; color: #fff; margin: 0 0 0.2rem; }
+.hp-icon p { font-size: 0.82rem; color: rgba(255,255,255,0.45); margin: 0; line-height: 1.4; }
 
-/* SVG pattern backgrounds */
-.hp-squares { background: #161617 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Crect fill='%23161617' width='200' height='200'/%3E%3Cg fill='%231e1e21' fill-opacity='1'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='%2381BD4A' fill-opacity='0.06' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='%2381BD4A' fill-opacity='0.04' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E"); color: #fff; }
-.hp-squares p { color: rgba(255,255,255,0.55); }
-.hp-triangles { background: #111 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='540' height='450' viewBox='0 0 1080 900'%3E%3Crect fill='%23111' width='1080' height='900'/%3E%3Cg fill-opacity='0.07'%3E%3Cpolygon fill='%2381BD4A' points='90 150 0 300 180 300'/%3E%3Cpolygon fill='%231a1a1d' points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%2381BD4A' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%231a1a1d' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%2381BD4A' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%231a1a1d' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%2381BD4A' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%231a1a1d' points='90 450 0 600 180 600'/%3E%3Cpolygon fill='%2381BD4A' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%231a1a1d' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%2381BD4A' points='630 450 720 300 540 300'/%3E%3Cpolygon fill='%231a1a1d' points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%2381BD4A' points='990 450 1080 300 900 300'/%3E%3C/g%3E%3C/svg%3E"); color: #fff; }
-.hp-triangles p { color: rgba(255,255,255,0.55); }
-.hp-constellation { background: #0a0a0a url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='692' height='692' viewBox='0 0 800 800'%3E%3Crect fill='none' width='800' height='800'/%3E%3Cg fill='none' stroke='%2381BD4A' stroke-width='1' stroke-opacity='0.1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3C/g%3E%3Cg fill='%2381BD4A' fill-opacity='0.06'%3E%3Ccircle cx='769' cy='229' r='4'/%3E%3Ccircle cx='539' cy='269' r='4'/%3E%3Ccircle cx='603' cy='493' r='4'/%3E%3Ccircle cx='731' cy='737' r='4'/%3E%3Ccircle cx='295' cy='764' r='4'/%3E%3Ccircle cx='102' cy='382' r='4'/%3E%3Ccircle cx='370' cy='105' r='4'/%3E%3Ccircle cx='390' cy='382' r='4'/%3E%3C/g%3E%3C/svg%3E"); color: #fff; }
-.hp-constellation p { color: rgba(255,255,255,0.55); }
-.hp-stripes { background: #131315; background-image: repeating-linear-gradient(135deg, rgba(129,189,74,0) 0px, rgba(129,189,74,0) 20px, rgba(129,189,74,0.03) 20px, rgba(129,189,74,0.03) 22px, rgba(129,189,74,0) 22px, rgba(129,189,74,0) 40px, rgba(129,189,74,0.05) 40px, rgba(129,189,74,0.05) 43px, rgba(129,189,74,0) 43px, rgba(129,189,74,0) 60px, rgba(129,189,74,0.02) 60px, rgba(129,189,74,0.02) 61px); color: #fff; }
-.hp-stripes p { color: rgba(255,255,255,0.55); }
-.hp-mountains { background: #0e0e10; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Crect fill='%230e0e10' width='1600' height='900'/%3E%3Cpolygon fill='%23151517' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23131315' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23171719' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23141416' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%231a1a1d' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23161618' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%231c1c1f' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23181819' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%231e1e21' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%231a1a1c' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23202023' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%231c1c1e' points='943 900 1210 900 971 687'/%3E%3C/svg%3E"); background-size: cover; background-position: bottom; color: #fff; }
-.hp-mountains p { color: rgba(255,255,255,0.55); }
+/* Badge */
+.hp-badge { display: inline-block; background: rgba(129,189,74,0.12); color: #81BD4A; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.3rem 0.85rem; border-radius: 980px; margin-bottom: 1.25rem; }
+
+/* SVG patterns */
+.hp-squares { background: #161617 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Crect fill='%23161617' width='200' height='200'/%3E%3Cg fill='%231e1e21' fill-opacity='1'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='%2381BD4A' fill-opacity='0.06' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='%2381BD4A' fill-opacity='0.04' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E"); }
+.hp-triangles { background: #111 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='540' height='450' viewBox='0 0 1080 900'%3E%3Crect fill='%23111' width='1080' height='900'/%3E%3Cg fill-opacity='0.07'%3E%3Cpolygon fill='%2381BD4A' points='90 150 0 300 180 300'/%3E%3Cpolygon fill='%231a1a1d' points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%2381BD4A' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%231a1a1d' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%2381BD4A' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%231a1a1d' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%2381BD4A' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%231a1a1d' points='90 450 0 600 180 600'/%3E%3Cpolygon fill='%2381BD4A' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%231a1a1d' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%2381BD4A' points='630 450 720 300 540 300'/%3E%3Cpolygon fill='%231a1a1d' points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%2381BD4A' points='990 450 1080 300 900 300'/%3E%3C/g%3E%3C/svg%3E"); }
+.hp-constellation { background: #0a0a0a url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='692' height='692' viewBox='0 0 800 800'%3E%3Crect fill='none' width='800' height='800'/%3E%3Cg fill='none' stroke='%2381BD4A' stroke-width='1' stroke-opacity='0.1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3C/g%3E%3Cg fill='%2381BD4A' fill-opacity='0.06'%3E%3Ccircle cx='769' cy='229' r='4'/%3E%3Ccircle cx='539' cy='269' r='4'/%3E%3Ccircle cx='603' cy='493' r='4'/%3E%3Ccircle cx='731' cy='737' r='4'/%3E%3Ccircle cx='295' cy='764' r='4'/%3E%3Ccircle cx='102' cy='382' r='4'/%3E%3Ccircle cx='370' cy='105' r='4'/%3E%3Ccircle cx='390' cy='382' r='4'/%3E%3C/g%3E%3C/svg%3E"); }
+.hp-stripes { background: #131315; background-image: repeating-linear-gradient(135deg, rgba(129,189,74,0) 0px, rgba(129,189,74,0) 20px, rgba(129,189,74,0.03) 20px, rgba(129,189,74,0.03) 22px, rgba(129,189,74,0) 22px, rgba(129,189,74,0) 40px, rgba(129,189,74,0.05) 40px, rgba(129,189,74,0.05) 43px, rgba(129,189,74,0) 43px, rgba(129,189,74,0) 60px, rgba(129,189,74,0.02) 60px, rgba(129,189,74,0.02) 61px); }
+.hp-mountains { background: #0e0e10; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Crect fill='%230e0e10' width='1600' height='900'/%3E%3Cpolygon fill='%23151517' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23131315' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23171719' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23141416' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%231a1a1d' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23161618' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%231c1c1f' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23181819' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%231e1e21' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%231a1a1c' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23202023' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%231c1c1e' points='943 900 1210 900 971 687'/%3E%3C/svg%3E"); background-size: cover; background-position: bottom; }
 
 /* Stats */
-.hp-stats { display: flex; justify-content: center; gap: clamp(2rem, 5vw, 5rem); flex-wrap: wrap; padding: 5rem 1.5rem; background: #000; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='692' height='692' viewBox='0 0 800 800'%3E%3Crect fill='none' width='800' height='800'/%3E%3Cg fill='none' stroke='%2381BD4A' stroke-width='1' stroke-opacity='0.12'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%2381BD4A' fill-opacity='0.08'%3E%3Ccircle cx='769' cy='229' r='4'/%3E%3Ccircle cx='539' cy='269' r='4'/%3E%3Ccircle cx='603' cy='493' r='4'/%3E%3Ccircle cx='731' cy='737' r='4'/%3E%3Ccircle cx='520' cy='660' r='4'/%3E%3Ccircle cx='309' cy='538' r='4'/%3E%3Ccircle cx='295' cy='764' r='4'/%3E%3Ccircle cx='40' cy='599' r='4'/%3E%3Ccircle cx='102' cy='382' r='4'/%3E%3Ccircle cx='127' cy='80' r='4'/%3E%3Ccircle cx='370' cy='105' r='4'/%3E%3Ccircle cx='578' cy='42' r='4'/%3E%3Ccircle cx='237' cy='261' r='4'/%3E%3Ccircle cx='390' cy='382' r='4'/%3E%3C/g%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2381BD4A' fill-opacity='0.07' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3Ccircle cx='13' cy='13' r='1'/%3E%3C/g%3E%3C/svg%3E"); }
+.hp-stats { display: flex; justify-content: center; gap: clamp(2rem, 5vw, 5rem); flex-wrap: wrap; padding: 5rem 1.5rem; background: #000; }
 .hp-sn { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 700; color: #81BD4A; line-height: 1; }
 .hp-sl { font-size: 0.7rem; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.3rem; }
 
+/* Blog list */
+.hp-blog { max-width: 700px; margin: 0 auto; }
+.hp-blog-item { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); text-decoration: none; color: inherit; }
+.hp-blog-item:hover .hp-blog-title { color: #81BD4A; }
+.hp-blog-title { font-size: 1.05rem; font-weight: 600; color: #fff; transition: color 0.15s; }
+.hp-blog-date { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+.hp-blog-arrow { color: #81BD4A; flex-shrink: 0; margin-left: 1.5rem; font-size: 0.9rem; }
+
 @media (max-width: 991px) {
-  .hp-left .hp-sec-over, .hp-right .hp-sec-over { background: rgba(0,0,0,0.5); }
-  .hp-left .hp-sec-content, .hp-right .hp-sec-content { padding: 0 2rem; text-align: center; }
-  .hp-right p { margin-left: auto; margin-right: auto; }
-  .hp-right .hp-sec-links { text-align: center; }
+  .hp-split { grid-template-columns: 1fr; gap: 2.5rem; }
+  .hp-icons { grid-template-columns: 1fr; }
 }
 @media (max-width: 767px) {
   .hp-hero { min-height: 85vh; padding: 6rem 1.5rem 4rem; }
-  .hp-sec { min-height: 70vh; padding: 4rem 0; }
+  .hp-sec { min-height: auto; padding: 5rem 0; }
   .hp-mq span { padding: 0 1.25rem; font-size: 0.65rem; }
   .hp-stats { gap: 1.5rem; padding: 3.5rem 1.5rem; }
+  .hp-sec-content { padding: 0 1.5rem; }
 }
 @media (max-width: 480px) {
   .hp-hero { min-height: 75vh; }
-  .hp-sec { min-height: 60vh; }
   .hp-stats { flex-direction: column; align-items: center; }
 }
 </style>
@@ -681,7 +674,7 @@ footer { margin-top: 0 !important; }
 
 <div class="hp">
 
-<!-- HERO — full-bleed photo from behind navbar -->
+<!-- HERO -->
 <div class="hp-hero">
   <div class="hp-hero-img"></div>
   <div class="hp-hero-overlay"></div>
@@ -701,83 +694,165 @@ footer { margin-top: 0 !important; }
   </div>
 </div>
 
-<!-- DIGITAL INFRASTRUCTURE — protruding squares pattern -->
-<div class="hp-sec hp-left hp-squares" id="s1">
+<!-- DIGITAL INFRASTRUCTURE — split layout with icon grid -->
+<div class="hp-sec hp-squares" id="s1">
   <div class="hp-sec-content">
-    <h2>Digital<br>Infrastructure</h2>
-    <p>Open-source, UNIX, and Apple platforms. Deployed and managed for your business. No vendor lock-in, no hidden costs.</p>
-    <div class="hp-sec-links">
-      <a href="./digital/" class="pr">Learn more</a>
-      <a href="https://cal.com/chenist" target="_blank" class="se">Get started</a>
+    <div class="hp-split">
+      <div class="hp-split-text">
+        <div class="hp-badge"><i class="bi bi-terminal me-1"></i> Digital Infrastructure</div>
+        <h2>Infrastructure you<br>actually own.</h2>
+        <p>Open-source, UNIX, and Apple platforms. No vendor lock-in, no hidden costs. We deploy and manage it all.</p>
+        <div class="hp-sec-links">
+          <a href="./digital/" class="pr">Learn more</a>
+          <a href="https://cal.com/chenist" target="_blank" class="se">Get started</a>
+        </div>
+      </div>
+      <div class="hp-split-visual">
+        <div class="hp-icons">
+          <div class="hp-icon"><div class="hp-icon-circle"><i class="bi bi-server"></i></div><div><h4>NixOS / Debian</h4><p>Declarative, reproducible servers</p></div></div>
+          <div class="hp-icon"><div class="hp-icon-circle"><i class="bi bi-shield-lock"></i></div><div><h4>OpenBSD Firewall</h4><p>Hardened network security</p></div></div>
+          <div class="hp-icon"><div class="hp-icon-circle"><i class="bi bi-apple"></i></div><div><h4>Apple Business</h4><p>Zero-touch device management</p></div></div>
+          <div class="hp-icon"><div class="hp-icon-circle"><i class="bi bi-cloud-arrow-up"></i></div><div><h4>Nextcloud + SSO</h4><p>Files, email, identity</p></div></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- SECURITY — large triangles pattern -->
-<div class="hp-sec hp-right hp-triangles">
+<!-- SECURITY — split layout with feature pills -->
+<div class="hp-sec hp-triangles">
   <div class="hp-sec-content">
-    <h2>Proactive<br>Security</h2>
-    <p>24/7 SOC monitoring. Threat hunting. NIS2 compliance. CISO as a Service. For organizations that can't afford to be the next headline.</p>
-    <div class="hp-sec-links">
-      <a href="./security/" class="pr">Learn more</a>
-      <a href="https://cal.com/chenist" target="_blank" class="se">Free assessment</a>
+    <div class="hp-split" style="direction: rtl;">
+      <div class="hp-split-text" style="direction: ltr;">
+        <div class="hp-badge"><i class="bi bi-shield-check me-1"></i> Proactive Security</div>
+        <h2>Threats don't sleep.<br>Neither do we.</h2>
+        <p>24/7 SOC monitoring, threat hunting, NIS2 compliance, and CISO as a Service.</p>
+        <div style="margin-bottom: 2rem;">
+          <span class="hp-pill"><i class="bi bi-eye"></i> 24/7 SOC</span>
+          <span class="hp-pill"><i class="bi bi-search"></i> Threat Hunting</span>
+          <span class="hp-pill"><i class="bi bi-clipboard-check"></i> NIS2</span>
+          <span class="hp-pill"><i class="bi bi-person-badge"></i> vCISO</span>
+          <span class="hp-pill"><i class="bi bi-lightning"></i> Incident Response</span>
+        </div>
+        <div class="hp-sec-links">
+          <a href="./security/" class="pr">Learn more</a>
+          <a href="https://cal.com/chenist" target="_blank" class="se">Free assessment</a>
+        </div>
+      </div>
+      <div class="hp-split-visual" style="direction: ltr; text-align: center;">
+        <div class="hp-sn" style="font-size: 5rem; margin-bottom: 0.5rem;">197</div>
+        <div style="color: rgba(255,255,255,0.4); font-size: 0.85rem;">avg. days to detect a breach</div>
+        <div style="margin-top: 1.5rem; color: #81BD4A; font-size: 1.5rem; font-weight: 700;">&lt;24h</div>
+        <div style="color: rgba(255,255,255,0.4); font-size: 0.85rem;">our detection + response</div>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- CLOUD — constellation pattern -->
-<div class="hp-sec hp-center hp-constellation">
-  <div class="hp-sec-content">
+<!-- CLOUD — centered with pill tags -->
+<div class="hp-sec hp-constellation" style="text-align: center;">
+  <div class="hp-sec-content" style="max-width: 700px;">
+    <div class="hp-badge"><i class="bi bi-cloud me-1"></i> Cloud Services</div>
     <h2>Cloud Services</h2>
-    <p>Migration, infrastructure, DevOps, and multi-cloud security. AWS, Azure, Google Cloud.</p>
+    <p style="margin: 0 auto 1.5rem;">Migration, infrastructure, DevOps, and multi-cloud security.</p>
+    <div style="margin-bottom: 2rem;">
+      <span class="hp-pill"><i class="bi bi-arrow-repeat"></i> Migration</span>
+      <span class="hp-pill"><i class="bi bi-hdd-rack"></i> Infrastructure</span>
+      <span class="hp-pill"><i class="bi bi-gear"></i> DevOps</span>
+      <span class="hp-pill"><i class="bi bi-shield"></i> Security</span>
+    </div>
     <div class="hp-sec-links" style="display:flex; gap:2rem; justify-content:center;">
       <a href="./services/cloud/" class="pr">Learn more</a>
     </div>
   </div>
 </div>
 
-<!-- ACADEMY — varying stripes pattern -->
-<div class="hp-sec hp-left hp-stripes">
+<!-- ACADEMY — split with icon grid -->
+<div class="hp-sec hp-stripes">
   <div class="hp-sec-content">
-    <h2>Academy</h2>
-    <p>Courses, hackathons, and intensive trainings. Skills that stick — not certificates that collect dust.</p>
-    <div class="hp-sec-links">
-      <a href="./academy/" class="pr">Explore</a>
-      <a href="./academy/events.html" class="se">Events</a>
+    <div class="hp-split">
+      <div class="hp-split-text">
+        <div class="hp-badge" style="background: rgba(245,166,35,0.12); color: #F5A623; border-color: rgba(245,166,35,0.2);"><i class="bi bi-mortarboard me-1"></i> Academy</div>
+        <h2>Skills that stick.</h2>
+        <p>Courses, hackathons, and intensive trainings. Everything we teach, we do.</p>
+        <div class="hp-sec-links">
+          <a href="./academy/" class="pr">Explore</a>
+          <a href="./academy/events.html" class="se">Events</a>
+        </div>
+      </div>
+      <div class="hp-split-visual">
+        <div class="hp-icons">
+          <div class="hp-icon"><div class="hp-icon-circle" style="background:rgba(245,166,35,0.1);"><i class="bi bi-book" style="color:#F5A623;"></i></div><div><h4>6 Courses</h4><p>Multi-week cybersecurity &amp; open-source</p></div></div>
+          <div class="hp-icon"><div class="hp-icon-circle" style="background:rgba(245,166,35,0.1);"><i class="bi bi-lightning" style="color:#F5A623;"></i></div><div><h4>7 Trainings</h4><p>1-2 day intensive workshops</p></div></div>
+          <div class="hp-icon"><div class="hp-icon-circle" style="background:rgba(245,166,35,0.1);"><i class="bi bi-trophy" style="color:#F5A623;"></i></div><div><h4>Hackathons</h4><p>SpaceApps, AI Ethics, Cybersecurity</p></div></div>
+          <div class="hp-icon"><div class="hp-icon-circle" style="background:rgba(245,166,35,0.1);"><i class="bi bi-people" style="color:#F5A623;"></i></div><div><h4>Computer Club</h4><p>Monthly meetups, all levels</p></div></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- RESILIENCE — flat mountains pattern -->
-<div class="hp-sec hp-center hp-mountains">
-  <div class="hp-sec-content">
-    <h2>Digital Resilience</h2>
-    <p>Business continuity, disaster recovery, and architecture frameworks. When everything else fails, you stay operational.</p>
+<!-- RESILIENCE — centered minimal -->
+<div class="hp-sec hp-mountains" style="min-height: 70vh; text-align: center;">
+  <div class="hp-sec-content" style="max-width: 600px;">
+    <div class="hp-badge"><i class="bi bi-heart-pulse me-1"></i> Digital Resilience</div>
+    <h2>When everything fails,<br>you stay operational.</h2>
+    <p style="margin: 0 auto 2rem;">Business continuity, disaster recovery, and architecture frameworks.</p>
     <div class="hp-sec-links" style="display:flex; gap:2rem; justify-content:center;">
       <a href="./services/digital-resilience/" class="pr">Learn more</a>
     </div>
   </div>
 </div>
 
-<!-- STATS — with background image -->
-<div class="hp-stats" style="position:relative; overflow:hidden;">
-  <div style="position:absolute; inset:0; background:url('/assets/images/stock/server-room-dark.jpg') center/cover; opacity:0.15; z-index:0;"></div>
-  <div style="text-align:center; position:relative; z-index:1;"><div class="hp-sn">15+</div><div class="hp-sl">Years</div></div>
-  <div style="text-align:center; position:relative; z-index:1;"><div class="hp-sn">100%</div><div class="hp-sl">Open-source</div></div>
-  <div style="text-align:center; position:relative; z-index:1;"><div class="hp-sn">EU</div><div class="hp-sl">Data residency</div></div>
-  <div style="text-align:center; position:relative; z-index:1;"><div class="hp-sn">24/7</div><div class="hp-sl">Monitoring</div></div>
+<!-- STATS -->
+<div class="hp-stats">
+  <div style="text-align:center;"><div class="hp-sn">15+</div><div class="hp-sl">Years</div></div>
+  <div style="text-align:center;"><div class="hp-sn">100%</div><div class="hp-sl">Open-source</div></div>
+  <div style="text-align:center;"><div class="hp-sn">EU</div><div class="hp-sl">Data residency</div></div>
+  <div style="text-align:center;"><div class="hp-sn">24/7</div><div class="hp-sl">Monitoring</div></div>
 </div>
 
-<!-- CTA — full-bleed dark with wavey fingerprint pattern -->
-<div class="hp-sec hp-center" style="min-height: 70vh; background: #000; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='856' height='102.7' viewBox='0 0 1000 120'%3E%3Crect fill='%23000' width='1000' height='120'/%3E%3Cg fill='none' stroke='%2381BD4A' stroke-width='2' stroke-opacity='0.15'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E&quot;); background-size: 100% auto; background-repeat: repeat-y;">
-  <div class="hp-sec-over" style="background: radial-gradient(ellipse at center, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%);"></div>
+<!-- BLOG -->
+<div class="hp-sec hp-squares" style="min-height: auto; padding: 5rem 0;">
   <div class="hp-sec-content">
-    <h2 style="color:#fff;">Ready to take control?</h2>
-    <p>30 minutes. No pitch. Just an honest look at what you need.</p>
-    <div style="display:flex; gap:2rem; justify-content:center; flex-wrap:wrap;">
-      <a href="https://cal.com/chenist" target="_blank" class="hp-hero-btn">Book your free consultation</a>
+    <div class="hp-blog">
+      <h2 style="text-align: center; margin-bottom: 3rem;">Latest</h2>
+      <a href="./blog/apple-business-smb-guide.html" class="hp-blog-item">
+        <div>
+          <div class="hp-blog-title">Apple Business: What SMBs Need to Know</div>
+          <div class="hp-blog-date">March 25, 2026</div>
+        </div>
+        <span class="hp-blog-arrow"><i class="bi bi-arrow-right"></i></span>
+      </a>
+      <a href="./blog/open-source-infrastructure-smbs.html" class="hp-blog-item">
+        <div>
+          <div class="hp-blog-title">Open-Source Infrastructure for SMBs</div>
+          <div class="hp-blog-date">March 20, 2026</div>
+        </div>
+        <span class="hp-blog-arrow"><i class="bi bi-arrow-right"></i></span>
+      </a>
+      <a href="./blog/cyber-security-best-practices.html" class="hp-blog-item">
+        <div>
+          <div class="hp-blog-title">Cybersecurity Best Practices</div>
+          <div class="hp-blog-date">April 1, 2025</div>
+        </div>
+        <span class="hp-blog-arrow"><i class="bi bi-arrow-right"></i></span>
+      </a>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="./blog.html" class="pr" style="font-size: 0.95rem; font-weight: 500; color: #81BD4A; text-decoration: none;">All posts <span style="font-weight: 300;">›</span></a>
+      </div>
     </div>
-    <div style="margin-top:2rem; font-size:0.8rem; color:rgba(255,255,255,0.3);">
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="hp-sec" style="min-height: 70vh; background: #000; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='856' height='102.7' viewBox='0 0 1000 120'%3E%3Crect fill='%23000' width='1000' height='120'/%3E%3Cg fill='none' stroke='%2381BD4A' stroke-width='2' stroke-opacity='0.15'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E&quot;); background-size: 100% auto; background-repeat: repeat-y; text-align: center;">
+  <div class="hp-sec-content" style="max-width: 600px;">
+    <div style="width: 36px; height: 3px; background: #81BD4A; margin: 0 auto 3rem; border-radius: 2px; opacity: 0.6;"></div>
+    <h2>Ready to take control?</h2>
+    <p style="margin: 0 auto 2rem;">30 minutes. No pitch. Just an honest look at what you need.</p>
+    <a href="https://cal.com/chenist" target="_blank" class="hp-hero-btn">Book your free consultation</a>
+    <div style="margin-top: 2rem; font-size: 0.8rem; color: rgba(255,255,255,0.3);">
       <i class="bi bi-check-circle-fill" style="color:#81BD4A;"></i> Free &nbsp;
       <i class="bi bi-check-circle-fill" style="color:#81BD4A;"></i> 30 min &nbsp;
       <i class="bi bi-check-circle-fill" style="color:#81BD4A;"></i> No commitment
