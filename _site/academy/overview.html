@@ -77,14 +77,10 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 <meta property="og:title" content="Academy Overview – chen.ist">
 <meta property="og:description" content="Learn about chen.ist Academy’s educational philosophy, hands-on approach, and commitment to real-world technical skills development.">
-<meta property="og:image" content="https://chen.ist/assets/svg/knowledge.svg">
 <meta property="og:site_name" content="chen.ist">
-<meta property="og:image:alt" content="Academy Knowledge">
 <meta name="twitter:title" content="Academy Overview – chen.ist">
 <meta name="twitter:description" content="Learn about chen.ist Academy’s educational philosophy, hands-on approach, and commitment to real-world technical skills development.">
-<meta name="twitter:image" content="https://chen.ist/assets/svg/knowledge.svg">
-<meta name="twitter:image:alt" content="Academy Knowledge">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
@@ -335,7 +331,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <link rel="stylesheet" href="../assets/css/styles.css">
 <link rel="stylesheet" href="../assets/css/academy.scss">
 <link rel="stylesheet" href="../assets/css/custom-hero.css">
-<link rel="stylesheet" href="../assets/css/academy.scss">
+<link rel="stylesheet" href="../assets/css/landing-pages.css">
 
 
 
@@ -503,20 +499,18 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Academy Overview</h1>
-<p class="subtitle lead">Our educational philosophy and approach</p>
+<p class="subtitle lead">Courses, trainings, and hands-on programs in cybersecurity, open-source, and digital skills</p>
 </div>
 
 <div>
@@ -526,7 +520,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -538,237 +532,319 @@ document.addEventListener('DOMContentLoaded', function() {
 </header>
 
 
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="../">Home</a></li>
-    <li class="breadcrumb-item"><a href="../academy/">Academy</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Overview</li>
-  </ol>
-</nav>
+<!-- Academy color override -->
+<style>:root { --lp-green: #F5A623; }</style>
 
-<div class="hero-section">
+<!-- Section 1: Hero -->
+<div class="lp-hero lp-hero--dark">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-8 offset-md-2 text-center">
-        <img src="../assets/svg/knowledge.svg" alt="Academy Knowledge" style="max-width: 150px; margin-bottom: 20px;">
-        <h1 class="hero-title"><span class="academy-text">Academy</span> <span class="text-green">Overview</span></h1>
-        <p>Education designed for the real world</p>
-      </div>
+    <div class="lp-hero__badge">chen.ist Academy</div>
+    <h1>Your Team Knows <em>How to Use Software</em>.<br>Do They Know <em>How to Defend It</em>?</h1>
+    <p class="lp-hero__sub">
+      Hands-on cybersecurity and open-source training programs that turn your employees
+      from your biggest vulnerability into your strongest defense.
+    </p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="https://cal.com/chenist" target="_blank" class="lp-btn lp-btn--primary lp-btn--large">
+        <i class="bi bi-calendar-check"></i> Book a Training Consultation
+      </a>
+      <a href="#programs" class="lp-btn lp-btn--outline lp-btn--large" style="border-color: rgba(229,227,218,0.4); color: var(--lp-offwhite);">
+        Browse Programs
+      </a>
+    </div>
+    <div class="lp-hero__proof">
+      <strong>Summer School 2025</strong> registration open &nbsp;|&nbsp;
+      Courses, trainings, hackathons &amp; more
     </div>
   </div>
 </div>
-<div class="container page-section">
-<section id="our-educational-philosophy" class="level2">
-<h2 class="anchored" data-anchor-id="our-educational-philosophy">Our Educational Philosophy</h2>
-<p>At chen.ist Academy, we believe in a learning approach that combines theoretical knowledge with practical, hands-on experience. Our educational philosophy is built on these core principles:</p>
-<ol type="1">
-<li><strong>Learn by Doing</strong>: Practical application of concepts through projects, labs, and real-world challenges</li>
-<li><strong>Community-Driven</strong>: Learning as part of a supportive community that shares knowledge and experiences</li>
-<li><strong>Industry Relevance</strong>: Content and skills aligned with current industry needs and emerging technologies</li>
-<li><strong>Continuous Growth</strong>: Encouraging lifelong learning and adaptation to evolving technological landscapes</li>
-</ol>
-</section>
-<section id="what-makes-us-different" class="level2">
-<h2 class="anchored" data-anchor-id="what-makes-us-different">What Makes Us Different</h2>
-<div class="row mt-4">
-  <div class="col-md-6">
-    <div class="card mb-4 h-100">
-      <div class="card-body">
-        <h3 class="card-title anchored"><i class="bi bi-people-fill text-primary"></i> Expert Instructors</h3>
-        <p class="card-text">Our courses and events are led by industry professionals with extensive real-world experience, ensuring you learn current best practices and practical skills.</p>
-      </div>
+
+<!-- Section 2: Pain Points -->
+<div class="lp-section">
+  <div class="container">
+    <div class="lp-section__header">
+      <div class="lp-section__eyebrow">The Skills Gap</div>
+      <h2 class="anchored">95% of Cybersecurity Breaches Involve Human Error</h2>
     </div>
-  </div>
-  
-  <div class="col-md-6">
-    <div class="card mb-4 h-100">
-      <div class="card-body">
-        <h3 class="card-title anchored"><i class="bi bi-gear-fill text-primary"></i> Hands-On Approach</h3>
-        <p class="card-text">We emphasize practical application with real-world tools, projects, and environments that simulate professional scenarios.</p>
+    <div class="row">
+      <div class="col-md-6 col-lg-4 mb-3">
+        <div class="lp-pain">
+          <div class="lp-pain__icon"><i class="bi bi-envelope-exclamation"></i></div>
+          <div>
+            <h4 class="anchored">Phishing Vulnerability</h4>
+            <p>One untrained employee clicking one malicious link can compromise your entire organization. Generic "don't click suspicious links" training doesn't work.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-3">
+        <div class="lp-pain">
+          <div class="lp-pain__icon"><i class="bi bi-file-earmark-lock"></i></div>
+          <div>
+            <h4 class="anchored">Compliance Training Gaps</h4>
+            <p>NIS2 requires documented security awareness programs. A yearly PowerPoint doesn't meet the standard. You need ongoing, measurable training.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-3">
+        <div class="lp-pain">
+          <div class="lp-pain__icon"><i class="bi bi-mortarboard"></i></div>
+          <div>
+            <h4 class="anchored">Outdated IT Skills</h4>
+            <p>Your IT team learned Linux 10 years ago. Modern infrastructure (NixOS, containers, zero-trust) requires continuous learning they're not getting.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-6">
-    <div class="card mb-4 h-100">
-      <div class="card-body">
-        <h3 class="card-title anchored"><i class="bi bi-compass text-primary"></i> Structured Learning Paths</h3>
-        <p class="card-text">Our curriculum is organized into clear learning paths that guide your development from foundational knowledge to advanced specialization.</p>
-      </div>
+<!-- Section 3: Training Formats -->
+<div class="lp-section--alt" id="programs">
+  <div class="container">
+    <div class="lp-section__header">
+      <div class="lp-section__eyebrow">Training Formats</div>
+      <h2 class="anchored">Learning That Fits Your Team's Schedule</h2>
+      <p>From 1-hour microlearning to week-long immersive programs, pick the format that works.</p>
     </div>
-  </div>
-  
-  <div class="col-md-6">
-    <div class="card mb-4 h-100">
-      <div class="card-body">
-        <h3 class="card-title anchored"><i class="bi bi-building text-primary"></i> Industry Partnerships</h3>
-        <p class="card-text">Collaborations with leading technology companies ensure our content remains relevant and aligned with industry needs.</p>
+    <div class="row">
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="lp-feature">
+          <div class="lp-feature__icon"><i class="bi bi-lightning-charge"></i></div>
+          <h3 class="anchored">Microlearning</h3>
+          <p>1-2 hour focused sessions on specific tools and techniques. Minimal time away from work, maximum skill transfer.</p>
+          <ul>
+            <li>CLI fundamentals</li>
+            <li>QubesOS, NixOS</li>
+            <li>Security tools</li>
+          </ul>
+          <a href="../academy/microlearning.html" class="lp-btn lp-btn--outline" style="padding: 0.5rem 1.25rem; font-size: 0.9rem; margin-top: 1rem;">Browse Sessions</a>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-</section>
-<section id="our-academy-offerings" class="level2">
-<h2 class="anchored" data-anchor-id="our-academy-offerings">Our Academy Offerings</h2>
-<p>The chen.ist Academy provides a comprehensive ecosystem of educational resources:</p>
-<section id="courses" class="level3">
-<h3 class="anchored" data-anchor-id="courses">Courses</h3>
-<p>Our structured courses cover a wide range of technology topics, from foundational concepts to advanced specializations. Each course includes:</p>
-<ul>
-<li>Interactive learning materials and resources</li>
-<li>Practical exercises and hands-on labs</li>
-<li>Assessment and feedback opportunities</li>
-<li>Certification upon successful completion</li>
-</ul>
-<p><a href="../academy/courses.html">Browse our course catalog →</a></p>
-</section>
-<section id="events" class="level3">
-<h3 class="anchored" data-anchor-id="events">Events</h3>
-<p>We host regular events designed to enhance learning through collaboration and immersive experiences:</p>
-<ul>
-<li>Hackathons and innovation challenges</li>
-<li>Workshops and skill-building sessions</li>
-<li>Summer schools and intensive learning programs</li>
-<li>Community meetups and networking events</li>
-</ul>
-<p><a href="../academy/events.html">See upcoming events →</a></p>
-</section>
-<section id="webinars" class="level3">
-<h3 class="anchored" data-anchor-id="webinars">Webinars</h3>
-<p>Our webinar series brings expert knowledge directly to you through online sessions:</p>
-<ul>
-<li>Technical deep dives and case studies</li>
-<li>Industry trends and emerging technologies</li>
-<li>Best practices and professional insights</li>
-<li>Q&amp;A sessions with experts</li>
-</ul>
-<p><a href="../academy/webinars.html">View webinar schedule →</a></p>
-</section>
-<section id="computer-club" class="level3">
-<h3 class="anchored" data-anchor-id="computer-club">Computer Club</h3>
-<p>Our Computer Club fosters a community of tech enthusiasts who meet regularly to:</p>
-<ul>
-<li>Collaborate on group projects</li>
-<li>Share knowledge and experiences</li>
-<li>Explore new technologies and tools</li>
-<li>Build a supportive learning network</li>
-</ul>
-<p><a href="../academy/computerclub.html">Join our Computer Club →</a></p>
-</section>
-<section id="partnerships" class="level3">
-<h3 class="anchored" data-anchor-id="partnerships">Partnerships</h3>
-<p>We actively collaborate with educational institutions, industry leaders, and technology organizations to:</p>
-<ul>
-<li>Develop industry-relevant curriculum</li>
-<li>Provide internship and employment opportunities</li>
-<li>Create joint educational initiatives</li>
-<li>Build a stronger technology ecosystem</li>
-</ul>
-<p><a href="../academy/partnerships.html">Learn about our partnerships →</a></p>
-</section>
-</section>
-<section id="how-to-get-started" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-get-started">How to Get Started</h2>
-<div class="row mt-4">
-  <div class="col-md-12">
-    <div class="card mb-4">
-      <div class="card-body">
-        <h3 class="card-title anchored">Start Your Learning Journey</h3>
-        <ol>
-          <li><strong>Explore our offerings</strong> - Browse through our courses, events, and other resources</li>
-          <li><strong>Identify your learning path</strong> - Choose a track that aligns with your interests and goals</li>
-          <li><strong>Register for a course or event</strong> - Sign up for your first learning experience</li>
-          <li><strong>Join our community</strong> - Connect with fellow learners and instructors</li>
-          <li><strong>Apply your knowledge</strong> - Participate in projects and practical applications</li>
-        </ol>
-        <div class="text-center mt-3">
-          <a href="../academy/courses.html" class="btn btn-primary">Browse Courses</a>
-          <a href="https://cal.com/chenist" target="_blank" class="btn btn-outline-primary ms-2">Contact Us</a>
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="lp-feature" style="border-color: var(--lp-green);">
+          <div class="lp-feature__icon"><i class="bi bi-journal-code"></i></div>
+          <h3 class="anchored">Intensive Trainings</h3>
+          <p>1-2 day workshops that build practical skills through hands-on labs and real-world scenarios. Perfect for team upskilling.</p>
+          <ul>
+            <li>Cybersecurity Essentials</li>
+            <li>Security Awareness for Teams</li>
+            <li>Linux Admin Fundamentals</li>
+            <li>NixOS Security Jumpstart</li>
+          </ul>
+          <a href="../academy/trainings.html" class="lp-btn lp-btn--primary" style="padding: 0.5rem 1.25rem; font-size: 0.9rem; margin-top: 1rem;">Browse Trainings</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="lp-feature">
+          <div class="lp-feature__icon"><i class="bi bi-book"></i></div>
+          <h3 class="anchored">Multi-Week Courses</h3>
+          <p>Deep-dive courses spanning multiple weeks for comprehensive skill development. For teams building serious expertise.</p>
+          <ul>
+            <li>Practical Cybersecurity</li>
+            <li>Open Source Development</li>
+            <li>Data Protection &amp; Privacy</li>
+          </ul>
+          <a href="../academy/courses.html" class="lp-btn lp-btn--outline" style="padding: 0.5rem 1.25rem; font-size: 0.9rem; margin-top: 1rem;">Browse Courses</a>
         </div>
       </div>
     </div>
   </div>
 </div>
-</section>
-<section id="register-book" class="level2">
-<h2 class="anchored" data-anchor-id="register-book">Register / Book</h2>
-<div class="card mt-5">
-<div class="card-body">
-<h3 class="mb-4 anchored"><i class="bi bi-pencil-square me-2"></i>Register / Book</h3>
-<ul class="nav nav-tabs" id="regTabs-overview" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#formReg-overview" type="button" role="tab">
-      <i class="bi bi-file-earmark-text me-2"></i>Register (Romania)
-    </button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#calReg-overview" type="button" role="tab">
-      <i class="bi bi-calendar-check me-2"></i>Book a Call (EU / International)
-    </button>
-  </li>
-</ul>
-<div class="tab-content pt-3">
-  <div class="tab-pane fade show active" id="formReg-overview" role="tabpanel">
-    <p class="text-muted"><i class="bi bi-geo-alt me-1"></i>Fill out the form and we.ll get back to you within 24 hours. We'll contact you within 24 hours.</p>
-    <form action="https://formspree.io/f/mpwkaqev" method="POST">
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <label class="form-label">Full Name *</label>
-          <input type="text" class="form-control" name="name" required="" placeholder="Your full name">
-        </div>
-        <div class="col-md-6 mb-3">
-          <label class="form-label">Email *</label>
-          <input type="email" class="form-control" name="email" required="" placeholder="your@email.com">
+
+<!-- Section 4: Immersive Programs -->
+<div class="lp-section">
+  <div class="container">
+    <div class="lp-section__header">
+      <div class="lp-section__eyebrow">Immersive Programs</div>
+      <h2 class="anchored">Go Beyond Classroom Training</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="lp-feature">
+          <div class="lp-feature__icon"><i class="bi bi-trophy"></i></div>
+          <h3 class="anchored">Hackathons</h3>
+          <p>Competitive team-based events where participants solve real cybersecurity challenges under time pressure. Build skills through adrenaline-fueled problem solving.</p>
+          <a href="../academy/programs/hackathons/" class="lp-btn lp-btn--outline" style="padding: 0.5rem 1.25rem; font-size: 0.9rem; margin-top: 1rem;">Learn More</a>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <label class="form-label">Phone</label>
-          <input type="tel" class="form-control" name="phone" placeholder="Phone number">
+      <div class="col-md-4 mb-4">
+        <div class="lp-feature" style="border-color: var(--lp-green); position: relative;">
+          <div style="position: absolute; top: -1px; right: 20px; background: var(--lp-green); color: #fff; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.3rem 0.75rem; border-radius: 0 0 8px 8px;">Registration Open</div>
+          <div class="lp-feature__icon"><i class="bi bi-sun"></i></div>
+          <h3 class="anchored">Summer School 2025</h3>
+          <p>Multi-day immersive program combining cybersecurity, open-source development, and hands-on labs in an intensive boot camp format.</p>
+          <a href="../academy/programs/summer-school/" class="lp-btn lp-btn--primary" style="padding: 0.5rem 1.25rem; font-size: 0.9rem; margin-top: 1rem;">Register Now</a>
         </div>
-        <div class="col-md-6 mb-3">
-          <label class="form-label">Company</label>
-          <input type="text" class="form-control" name="company" placeholder="Company (optional)">
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="lp-feature">
+          <div class="lp-feature__icon"><i class="bi bi-pc-display"></i></div>
+          <h3 class="anchored">Computer Club</h3>
+          <p>Weekly community meetups for ongoing learning, project collaboration, and networking. Free and open to all skill levels.</p>
+          <a href="../academy/computerclub.html" class="lp-btn lp-btn--outline" style="padding: 0.5rem 1.25rem; font-size: 0.9rem; margin-top: 1rem;">Join Free</a>
         </div>
       </div>
-      <div class="mb-3">
-        <label class="form-label">Details</label>
-        <textarea class="form-control" name="message" rows="2" placeholder="Tell us about your learning goals..."></textarea>
+    </div>
+  </div>
+</div>
+
+<!-- Section 5: Learning Paths -->
+<div class="lp-section--alt">
+  <div class="container">
+    <div class="lp-section__header">
+      <div class="lp-section__eyebrow">Learning Paths</div>
+      <h2 class="anchored">Structured Tracks for Your Goals</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="lp-feature" style="border-top: 4px solid #D94F4F;">
+          <h3 class="anchored"><i class="bi bi-shield-lock me-2" style="color: #D94F4F;"></i>Cybersecurity Track</h3>
+          <p>From security fundamentals to advanced threat hunting. For IT teams, compliance officers, and anyone responsible for protecting organizational data.</p>
+          <ul>
+            <li>Practical Cybersecurity (Course)</li>
+            <li>Security Awareness for Teams (Training)</li>
+            <li>Cybersecurity Essentials (Training)</li>
+            <li>Data Privacy Compliance (Training)</li>
+            <li>Cybersecurity Hackathon (Event)</li>
+          </ul>
+          <a href="../academy/courses.html" class="lp-btn lp-btn--outline" style="padding: 0.5rem 1.25rem; font-size: 0.9rem;">Explore Track</a>
+        </div>
       </div>
-      <input type="hidden" name="_subject" value="Academy Inquiry">
-      <input type="hidden" name="_source" value="academy-overview">
-      <input type="text" name="_gotcha" style="display:none">
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" required="">
-        <label class="form-check-label">I agree to the <a href="../privacy.html" target="_blank">privacy policy</a> *</label>
+      <div class="col-md-6 mb-4">
+        <div class="lp-feature" style="border-top: 4px solid var(--lp-green);">
+          <h3 class="anchored"><i class="bi bi-terminal me-2" style="color: var(--lp-green);"></i>Open Source &amp; Infrastructure Track</h3>
+          <p>Linux administration, NixOS, open-source contribution, and modern infrastructure tooling. For developers and sysadmins building real-world skills.</p>
+          <ul>
+            <li>Linux Admin Fundamentals (Training)</li>
+            <li>NixOS Security Jumpstart (Training)</li>
+            <li>Open Source Contribution Workshop (Training)</li>
+            <li>Computer Club (Weekly meetup)</li>
+          </ul>
+          <a href="../academy/courses.html" class="lp-btn lp-btn--outline" style="padding: 0.5rem 1.25rem; font-size: 0.9rem;">Explore Track</a>
+        </div>
       </div>
-      <button type="submit" class="btn btn-success w-100"><i class="bi bi-send me-2"></i>Submit Registration</button>
-    </form>
-  </div>
-  <div class="tab-pane fade" id="calReg-overview" role="tabpanel">
-    <p class="text-muted"><i class="bi bi-globe me-1"></i>Prefer a live conversation? Book directly in our calendar. Book directly in our calendar.</p>
-    <a href="https://cal.com/chenist" target="_blank" class="btn btn-outline-primary btn-lg w-100"><i class="bi bi-calendar-check me-2"></i>Book via Cal.com</a>
+    </div>
   </div>
 </div>
-</div>
-</div>
-</section>
-</div>
-<div class="cta-section theme-tech with-secondary-bg">
-  <div class="container text-center">
-    <h2 class="cta-title anchored"><span class="text-white">Ready to expand your knowledge?</span></h2>
-    <p class="mb-4">Join our growing community of learners and start your educational journey today.</p>
-    <a href="../academy/courses.html" class="cta-button">Browse Academy Offerings</a>
+
+<!-- Section 6: Trust / Social Proof -->
+<div class="lp-section">
+  <div class="container">
+    <div class="lp-stats">
+      <div class="lp-stat">
+        <div class="lp-stat__number">7+</div>
+        <div class="lp-stat__label">Training Programs</div>
+      </div>
+      <div class="lp-stat">
+        <div class="lp-stat__number">100%</div>
+        <div class="lp-stat__label">Hands-On Labs</div>
+      </div>
+      <div class="lp-stat">
+        <div class="lp-stat__number">EU</div>
+        <div class="lp-stat__label">Based Instructors</div>
+      </div>
+      <div class="lp-stat">
+        <div class="lp-stat__number">Free</div>
+        <div class="lp-stat__label">Computer Club Membership</div>
+      </div>
+    </div>
+
+    <!-- Methodology trust -->
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <div class="lp-feature">
+          <div class="lp-feature__icon"><i class="bi bi-tools"></i></div>
+          <h3 class="anchored">Real Labs, Not Slides</h3>
+          <p>Every training uses actual tools in sandboxed environments. Participants leave with skills they can use on Monday morning, not just certificates.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="lp-feature">
+          <div class="lp-feature__icon"><i class="bi bi-building"></i></div>
+          <h3 class="anchored">Corporate Customization</h3>
+          <p>We tailor training content to your industry, your tech stack, and your compliance requirements. No generic off-the-shelf modules.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="lp-feature">
+          <div class="lp-feature__icon"><i class="bi bi-people"></i></div>
+          <h3 class="anchored">Small Cohorts</h3>
+          <p>Maximum 20 participants per session ensures everyone gets individual attention, feedback, and hands-on practice time.</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="cta-accent bottom-right" style="--cta-accent-size: 30px;">
-    <!-- <img src="/assets/svg/learning.svg" alt="Learning illustration"> -->
-  </div>
-  <div class="cta-accent top-center" style="--cta-accent-size: 7px; --cta-accent-opacity: 0.6;">
-    <img src="../assets/svgsmall/know.svg" alt="Studying illustration">
+</div>
+
+<!-- Micro-conversion: Computer Club -->
+<div class="lp-section--alt">
+  <div class="container" style="max-width: 700px;">
+    <div class="lp-lead-magnet">
+      <div class="lp-lead-magnet__icon"><i class="bi bi-calendar-event"></i></div>
+      <div>
+        <h4 class="anchored">Free Weekly Computer Club</h4>
+        <p>Join our open community meetups every week. No cost, no commitment. Learn alongside peers, work on projects, and see if our teaching style is right for you.</p>
+        <a href="../academy/computerclub.html" class="lp-btn lp-btn--outline" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">
+          <i class="bi bi-arrow-right"></i> Join Computer Club
+        </a>
+      </div>
+    </div>
   </div>
 </div>
+
+<!-- Section 7: Urgency -->
+<div class="lp-section--dark">
+  <div class="container" style="max-width: 800px; text-align: center;">
+    <div class="lp-section__eyebrow" style="color: var(--lp-green);">Limited Seats</div>
+    <h2 style="color: var(--lp-offwhite);" class="anchored">Summer School 2025 Registration Is Open</h2>
+    <p style="color: rgba(229,227,218,0.8); font-size: 1.05rem; max-width: 600px; margin: 0 auto 2rem;">
+      Multi-day immersive cybersecurity and open-source boot camp. Limited to 20 participants to ensure hands-on lab access for everyone.
+    </p>
+    <a href="../academy/programs/summer-school/" class="lp-btn lp-btn--primary lp-btn--large">
+      <i class="bi bi-sun"></i> Reserve Your Spot
+    </a>
+  </div>
+</div>
+
+<!-- Section 8: Final CTA -->
+<div class="lp-cta-block">
+  <div class="container">
+    <h2 class="anchored">Invest in Your Team's Security Skills Before the Next Incident</h2>
+    <p>Whether you need a one-day workshop for 10 people or a full annual training program, we'll design the right solution.</p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="https://cal.com/chenist" target="_blank" class="lp-btn lp-btn--primary lp-btn--large">
+        <i class="bi bi-calendar-check"></i> Discuss Corporate Training
+      </a>
+      <a href="../academy/courses.html" class="lp-btn lp-btn--outline lp-btn--large">
+        <i class="bi bi-mortarboard"></i> Browse Individual Programs
+      </a>
+    </div>
+    <div class="lp-cta-block__objection">
+      <span><i class="bi bi-check-circle-fill"></i> Custom content for your team</span> &nbsp;&nbsp;
+      <span><i class="bi bi-check-circle-fill"></i> Flexible scheduling</span> &nbsp;&nbsp;
+      <span><i class="bi bi-check-circle-fill"></i> NIS2 compliance documentation included</span>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile Sticky CTA Bar -->
+<div class="lp-sticky-cta" id="stickyCtaBar" style="display:none;">
+  <span style="font-weight:600; font-size:0.9rem;">Free 30-min consultation</span>
+  <a href="https://cal.com/chenist" target="_blank" class="lp-btn lp-btn--primary" style="padding:0.6rem 1.5rem; font-size:0.9rem;">
+    <i class="bi bi-calendar-check"></i> Book Now
+  </a>
+</div>
+<script>
+if (window.innerWidth < 768) {
+  var stickyBar = document.getElementById('stickyCtaBar');
+  window.addEventListener('scroll', function() {
+    stickyBar.style.display = window.scrollY > 500 ? 'flex' : 'none';
+  });
+  document.body.classList.add('has-sticky-cta');
+  var calBtn = document.querySelector('[data-cal-link]');
+  if (calBtn) calBtn.style.display = 'none';
+}
+</script>
 
 
 
