@@ -2,6 +2,13 @@
 title: "SpaceApps Junior Challenge 2025"
 subtitle: "Space Innovation for Young Explorers"
 description: "Register for SpaceApps Junior Challenge 2025 in Craiova, a space innovation hackathon for young explorers on October 3-5, 2025."
+page-layout: full
+toc: false
+format:
+  html:
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
 date: "2025-10-03"
 enddate: "2025-10-05"
 location: "Craiova Art Museum, Craiova"
@@ -11,18 +18,17 @@ registration_date: "2025-07-17"
 ---
 
 ```{=html}
-<div class="container">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/">Home</a></li>
-      <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
-      <li class="breadcrumb-item"><a href="/academy/programs/">Programs</a></li>
-      <li class="breadcrumb-item"><a href="/academy/programs/hackathons/">Hackathons</a></li>
-      <li class="breadcrumb-item active" aria-current="page">SpaceApps Junior Challenge</li>
-    </ol>
-  </nav>
-</div>
+<div class="m">
 
+<div class="m-hero">
+  <div class="container">
+    <h1>SpaceApps Junior Challenge 2025</h1>
+    <p>Space Innovation for Young Explorers</p>
+  </div>
+</div>
+```
+
+```{=html}
 <div class="event-header">
   <div class="event-dates">
     <span class="badge bg-primary">October 3-5, 2025</span>
@@ -123,14 +129,6 @@ All participants will receive certificates, SpaceApps Junior t-shirts, and digit
 
 Registration opens on July 17, 2025. Participation is free and open to all students aged 13-18. Space is limited to 80 participants, so early registration is encouraged. Students can register individually or in teams of 3-4 members. Individual participants will be helped to find teams during the first day of the event. Parental consent forms will be required for all participants.
 
-```{=html}
-<div class="event-cta">
-  <h3>Join the Next Generation of Space Innovators</h3>
-  <p>Be part of a weekend that could launch groundbreaking ideas for space exploration and technology.</p>
-  <a href="/contact.html" class="btn btn-success">Register Interest</a>
-</div>
-```
-
 ## Frequently Asked Questions
 
 ### What skills or background do I need to participate?
@@ -156,3 +154,15 @@ After participating in the SpaceApps Junior Challenge, continue your tech journe
 - **[Junior Summer School](/academy/programs/summer-school/junior.html)** - July 7-21, 2025
 - **[Cybersecurity Basics Workshop](/academy/programs/hackathons/cybersecurity-hackathon.html)** - March 15-17, 2025
 - **[Main SpaceApps Challenge](/academy/programs/hackathons/spaceapps/challenge-2025.html)** - For students 18+ and adults
+
+```{=html}
+<div class="m-cta">
+  <div class="container">
+    <h2>SpaceApps Junior Challenge 2025</h2>
+    <p>Interested in this program? Get in touch to learn more.</p>
+    <a href="/contact.html" class="m-lk">Contact Us</a>
+  </div>
+</div>
+
+</div>
+```

@@ -2,13 +2,13 @@
 title: "Unix Command Line Introduction"
 subtitle: "Master the essentials of the command line in just 2 hours"
 description: "A practical introduction to the Unix command line interface for beginners, focused on essential commands and navigation."
-format: 
+page-layout: full
+toc: false
+format:
   html:
-    toc: true
-    toc-depth: 3
-    number-sections: true
-    css: /assets/css/academy.scss
-    classes: [academy-section]
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
 date-modified: last-modified
 categories:
   - unix
@@ -18,32 +18,15 @@ categories:
 ---
 
 ```{=html}
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
-    <li class="breadcrumb-item"><a href="/academy/microlearning.html">Microlearning</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Unix Command Line Introduction</li>
-  </ol>
-</nav>
+<div class="m">
 
-<div class="hero-section">
+<div class="m-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-8 offset-md-2 text-center">
-        <h1>Unix <span class="text-green">Command Line</span></h1>
-        <p>Master essential command line skills in just 2 hours</p>
-        <div class="d-flex justify-content-center">
-          <span class="badge bg-primary me-2">Beginner</span>
-          <span class="badge bg-secondary">2 Hours</span>
-        </div>
-      </div>
-    </div>
+    <h1>Unix Command Line Introduction</h1>
+    <p>Master essential command line skills in just 2 hours</p>
   </div>
 </div>
 ```
-
-::: {.container .page-section}
 
 ## Session Overview
 
@@ -154,7 +137,7 @@ By completing this microlearning session, you will be able to:
       </div>
     </div>
   </div>
-  
+
   <div class="col-md-6">
     <div class="card mb-4">
       <div class="card-header bg-primary text-white">
@@ -207,33 +190,9 @@ Participants will receive:
   </div>
   <div class="col-md-9">
     <h3>David Williams</h3>
-    <p><strong>Senior DevOps Engineer, chen.ist</strong></p>
+    <p><strong>CHENIST Team</strong></p>
     <p>David has been using Unix-based systems for over 15 years and specializes in helping beginners overcome their fear of the command line. He has trained hundreds of students and professionals to become confident terminal users.</p>
-    <p>Known for his clear explanations and patient teaching style, David excels at breaking down complex concepts into approachable steps that build confidence and competence.</p>
-  </div>
-</div>
-```
-
-## Registration
-
-```{=html}
-<div class="event-cta">
-  <div class="row">
-    <div class="col-md-8">
-      <h3><i class="bi bi-calendar-check"></i> Upcoming Sessions</h3>
-      <p>Secure your spot in one of our upcoming Unix Command Line Introduction sessions:</p>
-      <ul>
-        <li><strong>June 10, 2025:</strong> 10:00 AM - 12:00 PM (In-person and Virtual)</li>
-        <li><strong>July 15, 2025:</strong> 2:00 PM - 4:00 PM (In-person and Virtual)</li>
-        <li><strong>August 20, 2025:</strong> 6:00 PM - 8:00 PM (Virtual Only)</li>
-      </ul>
-      <p>Group discounts available for teams of 3 or more. Virtual attendees will need access to a Unix-based system (Linux, macOS) or WSL on Windows.</p>
-    </div>
-    <div class="col-md-4 text-center">
-      <a href="https://cal.com/chenist" target="_blank" class="btn btn-success btn-lg mt-3">Register Now</a>
-      <p class="mt-2">or</p>
-      <a href="https://cal.com/chenist" target="_blank" class="btn btn-outline-primary">Contact Us for Group Rates</a>
-    </div>
+    <p>Known for their clear explanations and patient teaching style, David excels at breaking down complex concepts into approachable steps that build confidence and competence.</p>
   </div>
 </div>
 ```
@@ -250,7 +209,7 @@ Participants will receive:
       </div>
     </div>
   </div>
-  
+
   <div class="col-md-6">
     <div class="card mb-4">
       <div class="card-body">
@@ -270,23 +229,14 @@ If you're interested in this microlearning session, you might also consider:
 - [Linux Administration Fundamentals Training](/academy/trainings/linux-admin-fundamentals/) - A 2-day workshop for more in-depth Linux skills
 - [Unix/Linux Systems Course](/academy/courses/unix-linux-administration/) - Our comprehensive course for system administrators
 
-:::
-
 ```{=html}
-<div class="cta-section">
-  <div class="container text-center">
-    <h2><span class="text-dark">Ready to master the command line?</span></h2>
-    <p class="mb-4">Join our Unix Command Line Introduction session and gain essential terminal skills in just 2 hours.</p>
-    <div class="row justify-content-center mt-4">
-      <div class="col-md-6">
-        <a href="https://cal.com/chenist" target="_blank" class="cta-button">Register for Session</a>
-      </div>
-      <br>
-      <br>
-      <div class="col-md-6">
-        <a href="/academy/microlearning.html" class="cta-button">Explore Other Microlearning</a>
-      </div>
-    </div>
+<div class="m-cta">
+  <div class="container">
+    <h2>Unix Command Line Introduction</h2>
+    <p>Interested in this program? Get in touch to learn more.</p>
+    <a href="/contact.html" class="m-lk">Contact Us</a>
   </div>
+</div>
+
 </div>
 ```

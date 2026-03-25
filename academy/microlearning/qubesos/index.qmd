@@ -2,13 +2,13 @@
 title: "QubesOS Security Model"
 subtitle: "Learn the fundamentals of this security-focused, compartmentalized OS in just 2 hours"
 description: "Explore QubesOS, a security-focused operating system that uses virtualization to provide strong isolation between different activities and security domains on your computer."
-format: 
+page-layout: full
+toc: false
+format:
   html:
-    toc: true
-    toc-depth: 3
-    number-sections: true
-    css: /assets/css/academy.scss
-    classes: [academy-section]
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
 date-modified: last-modified
 categories:
   - security
@@ -18,33 +18,12 @@ categories:
 ---
 
 ```{=html}
-<div class="container">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/">Home</a></li>
-      <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
-      <li class="breadcrumb-item"><a href="/academy/microlearning.html">Microlearning</a></li>
-      <li class="breadcrumb-item active" aria-current="page">QubesOS Security Model</li>
-    </ol>
-  </nav>
-</div>
+<div class="m">
 
-<div class="hero-section">
+<div class="m-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-8">
-        <h1>QubesOS Security Model</h1>
-        <p class="lead">Master the essentials of this unique, compartmentalized operating system in just 2 hours</p>
-        <div class="mt-4">
-          <span class="badge bg-primary me-2">2 Hours</span>
-          <span class="badge bg-secondary me-2">Beginner to Intermediate</span>
-          <span class="badge bg-success">Hands-on</span>
-        </div>
-      </div>
-      <div class="col-lg-4 text-center">
-        <img src="/assets/images/stock/team-meeting.jpg" alt="QubesOS Workshop" class="img-fluid rounded shadow-lg" style="max-height: 300px;">
-      </div>
-    </div>
+    <h1>QubesOS Security Model</h1>
+    <p>Master the essentials of this unique, compartmentalized operating system in just 2 hours</p>
   </div>
 </div>
 ```
@@ -174,56 +153,9 @@ All participants will receive:
     <div class="col-md-6">
       <div class="card mb-4">
         <div class="card-body">
-          <h3>Register Now</h3>
-          <p>Next session: <strong>August 20, 2023, 2:00 PM - 4:00 PM CEST</strong></p>
-          <p>Fee: <strong>€49</strong> (Discounts available for NGOs and journalists)</p>
-          <p>Location: <strong>Online via Zoom</strong></p>
-          <a href="/contact.html" class="btn btn-primary">Register for This Session</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container mt-4 mb-5">
-  <h2 class="text-center mb-4">What Participants Say</h2>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card h-100">
-        <div class="card-body">
+          <h3>What Participants Say</h3>
           <p class="fst-italic">"The compartmentalization approach finally clicked for me in this session. I now have a clear strategy for separating my work, personal, and financial activities on my computer."</p>
-          <div class="d-flex align-items-center">
-            <div>
-              <h5 class="mb-0">Olivia M.</h5>
-              <p class="text-muted mb-0">Independent Journalist</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card h-100">
-        <div class="card-body">
-          <p class="fst-italic">"I've been intimidated by QubesOS for a while, but this session presented the concepts in an accessible way. The workflow examples were particularly valuable for understanding how to use it in practice."</p>
-          <div class="d-flex align-items-center">
-            <div>
-              <h5 class="mb-0">David R.</h5>
-              <p class="text-muted mb-0">Privacy Advocate</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card h-100">
-        <div class="card-body">
-          <p class="fst-italic">"As someone who works with sensitive client data, the security benefits of QubesOS are compelling. This session provided a clear roadmap for transitioning my workflow to this more secure environment."</p>
-          <div class="d-flex align-items-center">
-            <div>
-              <h5 class="mb-0">Natasha K.</h5>
-              <p class="text-muted mb-0">Legal Consultant</p>
-            </div>
-          </div>
+          <p class="mb-0"><strong>— Olivia M., Independent Journalist</strong></p>
         </div>
       </div>
     </div>
@@ -261,5 +193,17 @@ All participants will receive:
       </div>
     </div>
   </div>
+</div>
+```
+
+```{=html}
+<div class="m-cta">
+  <div class="container">
+    <h2>QubesOS Security Model</h2>
+    <p>Interested in this program? Get in touch to learn more.</p>
+    <a href="/contact.html" class="m-lk">Contact Us</a>
+  </div>
+</div>
+
 </div>
 ```

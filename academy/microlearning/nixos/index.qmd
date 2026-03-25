@@ -2,13 +2,13 @@
 title: "NixOS Introduction"
 subtitle: "Get started with this declarative Linux distribution in just 2 hours"
 description: "Learn the basics of NixOS, a unique Linux distribution with a declarative approach to system configuration, package management, and reproducible builds."
-format: 
+page-layout: full
+toc: false
+format:
   html:
-    toc: true
-    toc-depth: 3
-    number-sections: true
-    css: /assets/css/academy.scss
-    classes: [academy-section]
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
 date-modified: last-modified
 categories:
   - linux
@@ -18,33 +18,12 @@ categories:
 ---
 
 ```{=html}
-<div class="container">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/">Home</a></li>
-      <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
-      <li class="breadcrumb-item"><a href="/academy/microlearning.html">Microlearning</a></li>
-      <li class="breadcrumb-item active" aria-current="page">NixOS Introduction</li>
-    </ol>
-  </nav>
-</div>
+<div class="m">
 
-<div class="hero-section">
+<div class="m-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-8">
-        <h1>NixOS Introduction</h1>
-        <p class="lead">Learn the fundamentals of this unique, declarative Linux distribution in just 2 hours</p>
-        <div class="mt-4">
-          <span class="badge bg-primary me-2">2 Hours</span>
-          <span class="badge bg-secondary me-2">Beginner to Intermediate</span>
-          <span class="badge bg-success">Hands-on</span>
-        </div>
-      </div>
-      <div class="col-lg-4 text-center">
-        <img src="/assets/images/stock/team-meeting.jpg" alt="NixOS Workshop" class="img-fluid rounded shadow-lg" style="max-height: 300px;">
-      </div>
-    </div>
+    <h1>NixOS Introduction</h1>
+    <p>Learn the fundamentals of this unique, declarative Linux distribution in just 2 hours</p>
   </div>
 </div>
 ```
@@ -173,56 +152,9 @@ All participants will receive:
     <div class="col-md-6">
       <div class="card mb-4">
         <div class="card-body">
-          <h3>Register Now</h3>
-          <p>Next session: <strong>August 5, 2023, 10:00 AM - 12:00 PM CEST</strong></p>
-          <p>Fee: <strong>€49</strong> (Group discounts available)</p>
-          <p>Location: <strong>Online via Zoom</strong></p>
-          <a href="/contact.html" class="btn btn-primary">Register for This Session</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container mt-4 mb-5">
-  <h2 class="text-center mb-4">What Participants Say</h2>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card h-100">
-        <div class="card-body">
+          <h3>What Participants Say</h3>
           <p class="fst-italic">"The declarative approach to system configuration completely changed how I think about managing servers. This session gave me a clear roadmap for exploring NixOS further."</p>
-          <div class="d-flex align-items-center">
-            <div>
-              <h5 class="mb-0">Thomas L.</h5>
-              <p class="text-muted mb-0">System Administrator</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card h-100">
-        <div class="card-body">
-          <p class="fst-italic">"As a developer, the reproducible environments aspect of NixOS is a game-changer. The instructor explained complex concepts clearly and made the learning curve feel manageable."</p>
-          <div class="d-flex align-items-center">
-            <div>
-              <h5 class="mb-0">Mira J.</h5>
-              <p class="text-muted mb-0">Software Engineer</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card h-100">
-        <div class="card-body">
-          <p class="fst-italic">"I was skeptical about learning yet another Linux distribution, but the unique advantages of NixOS are compelling. The hands-on VM exercises were particularly helpful for understanding the practical aspects."</p>
-          <div class="d-flex align-items-center">
-            <div>
-              <h5 class="mb-0">Kevin M.</h5>
-              <p class="text-muted mb-0">DevOps Engineer</p>
-            </div>
-          </div>
+          <p class="mb-0"><strong>— Thomas L., System Administrator</strong></p>
         </div>
       </div>
     </div>
@@ -260,5 +192,17 @@ All participants will receive:
       </div>
     </div>
   </div>
+</div>
+```
+
+```{=html}
+<div class="m-cta">
+  <div class="container">
+    <h2>NixOS Introduction</h2>
+    <p>Interested in this program? Get in touch to learn more.</p>
+    <a href="/contact.html" class="m-lk">Contact Us</a>
+  </div>
+</div>
+
 </div>
 ```

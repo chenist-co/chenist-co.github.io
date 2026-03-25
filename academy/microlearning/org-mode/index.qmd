@@ -2,13 +2,13 @@
 title: "Org-mode Fundamentals"
 subtitle: "Master Emacs' powerful organization and note-taking system in just 2 hours"
 description: "Learn the basics of Org-mode, a powerful plain text system for notes, planning, and project management within Emacs, featuring outlines, todo lists, scheduling, and much more."
-format: 
+page-layout: full
+toc: false
+format:
   html:
-    toc: true
-    toc-depth: 3
-    number-sections: true
-    css: /assets/css/academy.scss
-    classes: [academy-section]
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
 date-modified: last-modified
 categories:
   - productivity
@@ -18,33 +18,12 @@ categories:
 ---
 
 ```{=html}
-<div class="container">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/">Home</a></li>
-      <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
-      <li class="breadcrumb-item"><a href="/academy/microlearning.html">Microlearning</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Org-mode Fundamentals</li>
-    </ol>
-  </nav>
-</div>
+<div class="m">
 
-<div class="hero-section">
+<div class="m-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-8">
-        <h1>Org-mode Fundamentals</h1>
-        <p class="lead">Learn the basics of this powerful organization and note-taking system for Emacs in just 2 hours</p>
-        <div class="mt-4">
-          <span class="badge bg-primary me-2">2 Hours</span>
-          <span class="badge bg-secondary me-2">Beginner to Intermediate</span>
-          <span class="badge bg-success">Hands-on</span>
-        </div>
-      </div>
-      <div class="col-lg-4 text-center">
-        <img src="/assets/images/stock/team-meeting.jpg" alt="Org-mode Workshop" class="img-fluid rounded shadow-lg" style="max-height: 300px;">
-      </div>
-    </div>
+    <h1>Org-mode Fundamentals</h1>
+    <p>Learn the basics of this powerful organization and note-taking system for Emacs in just 2 hours</p>
   </div>
 </div>
 ```
@@ -173,56 +152,9 @@ All participants will receive:
     <div class="col-md-6">
       <div class="card mb-4">
         <div class="card-body">
-          <h3>Register Now</h3>
-          <p>Next session: <strong>July 28, 2023, 3:00 PM - 5:00 PM CEST</strong></p>
-          <p>Fee: <strong>€49</strong> (Academic discount available)</p>
-          <p>Location: <strong>Online via Zoom</strong></p>
-          <a href="/contact.html" class="btn btn-primary">Register for This Session</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container mt-4 mb-5">
-  <h2 class="text-center mb-4">What Participants Say</h2>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card h-100">
-        <div class="card-body">
+          <h3>What Participants Say</h3>
           <p class="fst-italic">"I've tried dozens of productivity apps, but nothing compares to the flexibility of Org-mode. This session gave me a solid foundation to build my own system that actually fits my workflow."</p>
-          <div class="d-flex align-items-center">
-            <div>
-              <h5 class="mb-0">Nathan T.</h5>
-              <p class="text-muted mb-0">Project Manager</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card h-100">
-        <div class="card-body">
-          <p class="fst-italic">"The agenda view completely changed how I manage my research projects. The instructor's examples were directly applicable to my academic work, which was refreshing."</p>
-          <div class="d-flex align-items-center">
-            <div>
-              <h5 class="mb-0">Julia M.</h5>
-              <p class="text-muted mb-0">PhD Candidate</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card h-100">
-        <div class="card-body">
-          <p class="fst-italic">"As a software developer, I appreciated how Org-mode integrates with my coding workflow. The literate programming section was particularly valuable, and I now use it for all my documentation."</p>
-          <div class="d-flex align-items-center">
-            <div>
-              <h5 class="mb-0">Alex P.</h5>
-              <p class="text-muted mb-0">Senior Developer</p>
-            </div>
-          </div>
+          <p class="mb-0"><strong>— Nathan T., Project Manager</strong></p>
         </div>
       </div>
     </div>
@@ -260,5 +192,17 @@ All participants will receive:
       </div>
     </div>
   </div>
+</div>
+```
+
+```{=html}
+<div class="m-cta">
+  <div class="container">
+    <h2>Org-mode Fundamentals</h2>
+    <p>Interested in this program? Get in touch to learn more.</p>
+    <a href="/contact.html" class="m-lk">Contact Us</a>
+  </div>
+</div>
+
 </div>
 ```

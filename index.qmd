@@ -1,44 +1,170 @@
 ---
-title: "Academy"
-subtitle: "Learn, collaborate, and grow with our educational programs"
+title: "chen.ist"
+description: "chen.ist delivers digital infrastructure, cybersecurity, cloud services, and technology education for modern organizations."
 from: markdown+raw_html
+page-layout: full
 format:
   html:
-    css: /assets/css/academy.scss
-    classes: [academy-section]
-listing:
-  contents:
-    - overview.qmd
-    - courses.qmd
-    - trainings.qmd
-    - microlearning.qmd
-    - programs/index.qmd
-    - events.qmd
-    - webinars.qmd
-    - partnerships.qmd
-  type: grid
-  categories: true
-  sort-ui: true
-  filter-ui: true
-  page-size: 12
+    toc: false
+    include-in-header:
+      text: |
+        <style>
+        .hp-hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 4rem 1.5rem; position: relative; overflow: hidden; background: #000; }
+        .hp-hero-bg { position: absolute; inset: 0; background: url('/assets/images/stock/server-room-dark.jpg') center/cover; opacity: 0.25; }
+        .hp-hero-content { position: relative; z-index: 1; }
+        .hp-hero h1 { font-size: clamp(3rem, 7vw, 6rem); font-weight: 700; letter-spacing: -0.05em; line-height: 1.02; color: #fff; margin-bottom: 1.5rem; }
+        .hp-hero h1 .gr { color: #81BD4A; }
+        .hp-hero p { font-size: clamp(1.1rem, 2vw, 1.4rem); color: rgba(255,255,255,0.6); max-width: 520px; margin: 0 auto 3rem; line-height: 1.5; }
+        .hp-btn { display: inline-block; padding: 1rem 2.5rem; background: #81BD4A; color: #fff; border-radius: 980px; font-weight: 500; font-size: 1.05rem; text-decoration: none; transition: all 0.2s; }
+        .hp-btn:hover { background: #6BA33A; color: #fff; text-decoration: none; transform: translateY(-2px); }
+        .hp-scroll { display: block; margin-top: 3rem; color: rgba(255,255,255,0.3); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.12em; text-decoration: none; }
+        .hp-scroll:hover { color: rgba(255,255,255,0.5); text-decoration: none; }
+        .hp-scroll i { display: block; font-size: 1.25rem; margin-top: 0.5rem; animation: hp-bounce 2s infinite; }
+        @keyframes hp-bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+        .hp-marquee { background: #81BD4A; padding: 0.75rem 0; overflow: hidden; white-space: nowrap; }
+        .hp-marquee-inner { display: inline-block; animation: hp-scroll-left 30s linear infinite; }
+        .hp-marquee span { display: inline-block; padding: 0 3rem; font-size: 0.85rem; font-weight: 600; color: #fff; letter-spacing: 0.03em; }
+        @keyframes hp-scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        </style>
 ---
 
 ```{=html}
+<div class="m">
 
-<div class="m-listing-hero">
-  <div class="container">
-    <h1>chen.ist <span class="gr">Academy</span></h1>
-    <p>Hands-on courses, trainings, and programs in cybersecurity, open-source, and digital skills.</p>
+<!-- HERO -->
+<div class="hp-hero">
+  <div class="hp-hero-bg"></div>
+  <div class="hp-hero-content">
+    <h1>Build.<br><span class="gr">Secure.</span><br>Grow.</h1>
+    <p>Digital infrastructure, cybersecurity, and education — built on open-source for organizations that value control.</p>
+    <a href="https://cal.com/chenist" target="_blank" class="hp-btn">Book a free consultation</a>
+    <a href="#services" class="hp-scroll">Discover what we do <i class="bi bi-chevron-down"></i></a>
   </div>
 </div>
 
-<div class="m-listing-intro">
-  <div class="container">
-    <h2>Browse by category</h2>
-    <p>Use the filters below to find what interests you.</p>
+<!-- MARQUEE -->
+<div class="hp-marquee">
+  <div class="hp-marquee-inner">
+    <span>NixOS</span><span>OpenBSD</span><span>FreeBSD</span><span>Apple Business</span><span>Nextcloud</span><span>Keycloak</span><span>Blue Team SOC</span><span>NIS2 Compliance</span><span>Threat Hunting</span><span>24/7 Monitoring</span><span>EU Data Sovereignty</span><span>Open Source</span>
+    <span>NixOS</span><span>OpenBSD</span><span>FreeBSD</span><span>Apple Business</span><span>Nextcloud</span><span>Keycloak</span><span>Blue Team SOC</span><span>NIS2 Compliance</span><span>Threat Hunting</span><span>24/7 Monitoring</span><span>EU Data Sovereignty</span><span>Open Source</span>
   </div>
+</div>
+
+<!-- SERVICES -->
+<div class="m-bg" id="services">
+  <div class="container">
+    <h2>What we do</h2>
+    <p class="sub">End-to-end technology services built on transparency and security.</p>
+    <div class="row g-5">
+      <div class="col-6 col-lg"><div class="m-t"><i class="bi bi-terminal"></i><h3>Digital Infrastructure</h3><p>Open-source, UNIX, and Apple platforms for SMBs.</p><a href="/digital/" class="m-lk">Learn more</a></div></div>
+      <div class="col-6 col-lg"><div class="m-t"><i class="bi bi-shield-check"></i><h3>Security</h3><p>SOC monitoring, threat hunting, NIS2 compliance.</p><a href="/security/" class="m-lk">Learn more</a></div></div>
+      <div class="col-6 col-lg"><div class="m-t"><i class="bi bi-cloud"></i><h3>Cloud</h3><p>Migration, DevOps, and multi-cloud infrastructure.</p><a href="/services/cloud/" class="m-lk">Learn more</a></div></div>
+      <div class="col-6 col-lg"><div class="m-t"><i class="bi bi-mortarboard"></i><h3>Academy</h3><p>Courses, hackathons, and hands-on training.</p><a href="/academy/" class="m-lk">Learn more</a></div></div>
+      <div class="col-6 col-lg"><div class="m-t"><i class="bi bi-code-square"></i><h3>Resilience</h3><p>Business continuity and disaster recovery.</p><a href="/services/digital-resilience/" class="m-lk">Learn more</a></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE 1 -->
+<div class="m-s">
+  <div class="container">
+    <div class="m-r">
+      <div class="m-ri"><img src="/assets/images/stock/team-macbooks.jpg" alt="Team working on infrastructure"></div>
+      <div class="m-rt">
+        <h2>Infrastructure you<br>actually own.</h2>
+        <p>Nextcloud for files. Matrix for chat. Keycloak for SSO. NixOS for servers. Apple Business for devices. We deploy and manage it all — you keep every config, every credential, every byte of data.</p>
+        <div class="lk"><a href="/digital/" class="m-lk">Explore digital infrastructure</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE 2 -->
+<div class="m-bg">
+  <div class="container">
+    <div class="m-r rv">
+      <div class="m-ri"><img src="/assets/images/stock/cybersecurity-monitor.jpg" alt="Security monitoring"></div>
+      <div class="m-rt">
+        <h2>Threats don't sleep.<br>Neither do we.</h2>
+        <p>Our Blue Team SOC runs 24/7 with open-source tools you can audit. Real-time detection, proactive hunting, and incident response — for organizations that take security seriously.</p>
+        <div class="lk"><a href="/security/" class="m-lk">Explore security services</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE 3 -->
+<div class="m-s">
+  <div class="container">
+    <div class="m-r">
+      <div class="m-ri"><img src="/assets/images/stock/code-screen.jpg" alt="Academy training"></div>
+      <div class="m-rt">
+        <h2>Skills that stick.<br>Not certificates that collect dust.</h2>
+        <p>Hackathons, intensive trainings, and multi-week courses in cybersecurity and open-source. Everything we teach, we do. Everything you learn, you apply on Monday morning.</p>
+        <div class="lk"><a href="/academy/" class="m-lk">Explore the academy</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="m-bg">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn">15+</div><div class="m-nl">Years experience</div></div>
+      <div><div class="m-nn">100%</div><div class="m-nl">Open-source</div></div>
+      <div><div class="m-nn">EU</div><div class="m-nl">Data residency</div></div>
+      <div><div class="m-nn">24/7</div><div class="m-nl">Monitoring</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- BLOG -->
+<div class="m-s">
+  <div class="container" style="max-width: 700px;">
+    <h2>Latest</h2>
+    <p class="sub"></p>
+    <div style="border-top: 1px solid rgba(0,0,0,0.06);">
+      <a href="/blog/apple-business-smb-guide.html" style="display:flex; justify-content:space-between; align-items:center; padding: 1.5rem 0; border-bottom: 1px solid rgba(0,0,0,0.06); text-decoration:none; color:inherit;">
+        <div>
+          <div style="font-size:1.1rem; font-weight:600;">Apple Business: What SMBs Need to Know</div>
+          <div style="font-size:0.82rem; color:#86868b; margin-top:0.15rem;">March 25, 2026</div>
+        </div>
+        <span class="m-lk" style="flex-shrink:0; margin-left:2rem;">Read</span>
+      </a>
+      <a href="/blog/open-source-infrastructure-smbs.html" style="display:flex; justify-content:space-between; align-items:center; padding: 1.5rem 0; border-bottom: 1px solid rgba(0,0,0,0.06); text-decoration:none; color:inherit;">
+        <div>
+          <div style="font-size:1.1rem; font-weight:600;">Open-Source Infrastructure for SMBs</div>
+          <div style="font-size:0.82rem; color:#86868b; margin-top:0.15rem;">March 20, 2026</div>
+        </div>
+        <span class="m-lk" style="flex-shrink:0; margin-left:2rem;">Read</span>
+      </a>
+      <a href="/blog/cyber-security-best-practices.html" style="display:flex; justify-content:space-between; align-items:center; padding: 1.5rem 0; text-decoration:none; color:inherit;">
+        <div>
+          <div style="font-size:1.1rem; font-weight:600;">Cybersecurity Best Practices</div>
+          <div style="font-size:0.82rem; color:#86868b; margin-top:0.15rem;">April 1, 2025</div>
+        </div>
+        <span class="m-lk" style="flex-shrink:0; margin-left:2rem;">Read</span>
+      </a>
+    </div>
+    <div style="text-align:center; margin-top:2rem;"><a href="/blog.html" class="m-lk">All posts</a></div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="m-cta" style="background: #000; color: #fff; padding: 10rem 0;">
+  <div class="container">
+    <div class="m-d" style="background: #81BD4A;"></div>
+    <h2 style="color: #fff;">Ready to take control<br>of your infrastructure?</h2>
+    <p style="color: rgba(255,255,255,0.5);">30 minutes. No pitch. Just an honest look at what you need and how we can help.</p>
+    <a href="https://cal.com/chenist" target="_blank" class="hp-btn">Book your free consultation</a>
+    <div class="m-sm" style="color: rgba(255,255,255,0.35);">
+      <i class="bi bi-check-circle-fill" style="color:#81BD4A;"></i> Free &nbsp;
+      <i class="bi bi-check-circle-fill" style="color:#81BD4A;"></i> 30 min &nbsp;
+      <i class="bi bi-check-circle-fill" style="color:#81BD4A;"></i> No commitment
+    </div>
+  </div>
+</div>
+
 </div>
 ```
-
-::: {.container}
-:::

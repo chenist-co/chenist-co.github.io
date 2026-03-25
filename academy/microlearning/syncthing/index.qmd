@@ -2,13 +2,13 @@
 title: "Syncthing Essentials"
 subtitle: "Secure file synchronization across your devices in just 2 hours"
 description: "Learn how to set up and use Syncthing, an open-source, secure, and decentralized file synchronization tool to keep your files in sync across all your devices."
-format: 
+page-layout: full
+toc: false
+format:
   html:
-    toc: true
-    toc-depth: 3
-    number-sections: true
-    css: /assets/css/academy.scss
-    classes: [academy-section]
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
 date-modified: last-modified
 categories:
   - file-synchronization
@@ -18,33 +18,12 @@ categories:
 ---
 
 ```{=html}
-<div class="container">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/">Home</a></li>
-      <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
-      <li class="breadcrumb-item"><a href="/academy/microlearning.html">Microlearning</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Syncthing Essentials</li>
-    </ol>
-  </nav>
-</div>
+<div class="m">
 
-<div class="hero-section">
+<div class="m-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-8">
-        <h1>Syncthing Essentials</h1>
-        <p class="lead">Master secure file synchronization across all your devices with this 2-hour hands-on session</p>
-        <div class="mt-4">
-          <span class="badge bg-primary me-2">2 Hours</span>
-          <span class="badge bg-secondary me-2">Beginner to Intermediate</span>
-          <span class="badge bg-success">Hands-on</span>
-        </div>
-      </div>
-      <div class="col-lg-4 text-center">
-        <img src="/assets/images/stock/team-meeting.jpg" alt="Syncthing Workshop" class="img-fluid rounded shadow-lg" style="max-height: 300px;">
-      </div>
-    </div>
+    <h1>Syncthing Essentials</h1>
+    <p>Master secure file synchronization across all your devices with this 2-hour hands-on session</p>
   </div>
 </div>
 ```
@@ -167,56 +146,9 @@ All participants will receive:
     <div class="col-md-6">
       <div class="card mb-4">
         <div class="card-body">
-          <h3>Register Now</h3>
-          <p>Next session: <strong>July 18, 2023, 2:00 PM - 4:00 PM CEST</strong></p>
-          <p>Fee: <strong>€45</strong> (Group discounts available)</p>
-          <p>Location: <strong>Online via Zoom</strong></p>
-          <a href="/contact.html" class="btn btn-primary">Register for This Session</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container mt-4 mb-5">
-  <h2 class="text-center mb-4">What Participants Say</h2>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card h-100">
-        <div class="card-body">
+          <h3>What Participants Say</h3>
           <p class="fst-italic">"I've been looking for a secure alternative to cloud services, and this session gave me everything I needed to set up Syncthing across all my devices. Great investment of 2 hours!"</p>
-          <div class="d-flex align-items-center">
-            <div>
-              <h5 class="mb-0">Mark T.</h5>
-              <p class="text-muted mb-0">Software Developer</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card h-100">
-        <div class="card-body">
-          <p class="fst-italic">"The hands-on approach was perfect. I had Syncthing running on my laptop and phone by the end of the session, with all my important files automatically syncing."</p>
-          <div class="d-flex align-items-center">
-            <div>
-              <h5 class="mb-0">Lena K.</h5>
-              <p class="text-muted mb-0">Freelance Designer</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card h-100">
-        <div class="card-body">
-          <p class="fst-italic">"The instructor's knowledge of advanced configurations saved me hours of research. I particularly appreciated the section on security best practices."</p>
-          <div class="d-flex align-items-center">
-            <div>
-              <h5 class="mb-0">David R.</h5>
-              <p class="text-muted mb-0">IT Manager</p>
-            </div>
-          </div>
+          <p class="mb-0"><strong>— Mark T., Software Developer</strong></p>
         </div>
       </div>
     </div>
@@ -254,5 +186,17 @@ All participants will receive:
       </div>
     </div>
   </div>
+</div>
+```
+
+```{=html}
+<div class="m-cta">
+  <div class="container">
+    <h2>Syncthing Essentials</h2>
+    <p>Interested in this program? Get in touch to learn more.</p>
+    <a href="/contact.html" class="m-lk">Contact Us</a>
+  </div>
+</div>
+
 </div>
 ```

@@ -2,13 +2,13 @@
 title: "Tmux Terminal Multiplexer"
 subtitle: "Master terminal session management in just 1 hour"
 description: "Learn to use Tmux, a powerful terminal multiplexer that allows you to manage multiple terminal sessions within a single window, enhancing productivity and workflow."
-format: 
+page-layout: full
+toc: false
+format:
   html:
-    toc: true
-    toc-depth: 3
-    number-sections: true
-    css: /assets/css/academy.scss
-    classes: [academy-section]
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
 date-modified: last-modified
 categories:
   - terminal
@@ -18,32 +18,15 @@ categories:
 ---
 
 ```{=html}
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
-    <li class="breadcrumb-item"><a href="/academy/microlearning.html">Microlearning</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Tmux Terminal Multiplexer</li>
-  </ol>
-</nav>
+<div class="m">
 
-<div class="hero-section">
+<div class="m-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-8 offset-md-2 text-center">
-        <h1>Tmux <span class="text-green">Terminal Multiplexer</span></h1>
-        <p>Enhance your terminal workflow with powerful session management</p>
-        <div class="d-flex justify-content-center">
-          <span class="badge bg-primary me-2">Beginner</span>
-          <span class="badge bg-secondary">1 Hour</span>
-        </div>
-      </div>
-    </div>
+    <h1>Tmux Terminal Multiplexer</h1>
+    <p>Enhance your terminal workflow with powerful session management</p>
   </div>
 </div>
 ```
-
-::: {.container .page-section}
 
 ## Session Overview
 
@@ -132,7 +115,7 @@ By completing this microlearning session, you will be able to:
       </div>
     </div>
   </div>
-  
+
   <div class="col-md-6">
     <div class="card mb-4">
       <div class="card-header bg-primary text-white">
@@ -185,34 +168,10 @@ Participants will receive:
     <img src="/assets/images/stock/team-meeting.jpg" alt="Instructor Photo" class="img-fluid rounded">
   </div>
   <div class="col-md-9">
-    <h3>Mateo Rodriguez</h3>
-    <p><strong>Senior DevOps Engineer, chen.ist</strong></p>
-    <p>Mateo has been using Tmux daily for over 8 years as a core part of his development and server management workflow. He has customized and optimized Tmux configurations for teams across multiple organizations and regularly contributes to open source Tmux plugins.</p>
-    <p>Known for his clear, practical teaching style, Mateo focuses on helping participants implement Tmux in ways that immediately improve their daily workflow.</p>
-  </div>
-</div>
-```
-
-## Registration
-
-```{=html}
-<div class="event-cta">
-  <div class="row">
-    <div class="col-md-8">
-      <h3><i class="bi bi-calendar-check"></i> Upcoming Sessions</h3>
-      <p>Secure your spot in one of our upcoming Tmux Terminal Multiplexer sessions:</p>
-      <ul>
-        <li><strong>June 22, 2025:</strong> 3:00 PM - 4:00 PM (In-person and Virtual)</li>
-        <li><strong>July 25, 2025:</strong> 11:00 AM - 12:00 PM (In-person and Virtual)</li>
-        <li><strong>August 30, 2025:</strong> 2:00 PM - 3:00 PM (Virtual Only)</li>
-      </ul>
-      <p>Participants will need a Unix-based system (Linux, macOS) or WSL on Windows with Tmux installed (installation instructions will be provided).</p>
-    </div>
-    <div class="col-md-4 text-center">
-      <a href="https://cal.com/chenist" target="_blank" class="btn btn-success btn-lg mt-3">Register Now</a>
-      <p class="mt-2">or</p>
-      <a href="https://cal.com/chenist" target="_blank" class="btn btn-outline-primary">Contact Us for Group Rates</a>
-    </div>
+    <h3>CHENIST Team</h3>
+    <p><strong>CHENIST Team</strong></p>
+    <p>The CHENIST team has been using Tmux daily for over 8 years as a core part of his development and server management workflow. He has customized and optimized Tmux configurations for teams across multiple organizations and regularly contributes to open source Tmux plugins.</p>
+    <p>Known for their clear, practical teaching style, The team focuses on helping participants implement Tmux in ways that immediately improve their daily workflow.</p>
   </div>
 </div>
 ```
@@ -229,7 +188,7 @@ Participants will receive:
       </div>
     </div>
   </div>
-  
+
   <div class="col-md-6">
     <div class="card mb-4">
       <div class="card-body">
@@ -249,23 +208,14 @@ If you're interested in this microlearning session, you might also consider:
 - [SC-IM Spreadsheets in Terminal](/academy/microlearning/sc-im/) - Learn spreadsheets for the terminal
 - [Linux Administration Fundamentals Training](/academy/trainings/linux-admin-fundamentals/) - A comprehensive 2-day training on Linux systems
 
-:::
-
 ```{=html}
-<div class="cta-section">
-  <div class="container text-center">
-    <h2><span class="text-dark">Ready to supercharge your terminal productivity?</span></h2>
-    <p class="mb-4">Join our Tmux session and transform how you work in the command line.</p>
-    <div class="row justify-content-center mt-4">
-      <div class="col-md-6">
-        <a href="https://cal.com/chenist" target="_blank" class="cta-button">Register for Session</a>
-      </div>
-      <br>
-      <br>
-      <div class="col-md-6">
-        <a href="/academy/microlearning.html" class="cta-button">Explore Other Microlearning</a>
-      </div>
-    </div>
+<div class="m-cta">
+  <div class="container">
+    <h2>Tmux Terminal Multiplexer</h2>
+    <p>Interested in this program? Get in touch to learn more.</p>
+    <a href="/contact.html" class="m-lk">Contact Us</a>
   </div>
+</div>
+
 </div>
 ```

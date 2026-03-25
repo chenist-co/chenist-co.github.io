@@ -2,37 +2,27 @@
 title: "Hackathons"
 subtitle: "Intensive collaborative events to solve real-world challenges"
 description: "Participate in our hackathons where you can collaborate with peers, learn from mentors, and develop innovative solutions to real-world problems in cybersecurity, AI ethics, and space technology."
+page-layout: full
+toc: false
+format:
+  html:
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
 from: markdown+raw_html
 categories:
   - hackathons
   - team-events
   - problem-solving
-format: 
-  html:
-    css: /assets/css/academy.scss
-    classes: [academy-section]
 ---
 
 ```{=html}
-<div class="container">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/">Home</a></li>
-      <li class="breadcrumb-item"><a href="/academy/">Academy</a></li>
-      <li class="breadcrumb-item"><a href="/academy/programs/">Programs</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Hackathons</li>
-    </ol>
-  </nav>
-</div>
+<div class="m">
 
-<div class="hero-section">
+<div class="m-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-12">
-        <h1>Hackathons</h1>
-        <p class="lead">Intensive problem-solving events where innovation meets collaboration</p>
-      </div>
-    </div>
+    <h1>Hackathons</h1>
+    <p>Intensive problem-solving events where innovation meets collaboration</p>
   </div>
 </div>
 ```
@@ -61,7 +51,7 @@ Whether you're a developer, designer, data scientist, or domain expert, our hack
       </div>
     </div>
   </div>
-  
+
   <div class="col-md-4">
     <div class="card mb-4">
       <img src="/assets/images/ai-ml-hackathon.jpg" class="card-img-top" alt="AI with Ethics - Hackathon">
@@ -76,7 +66,7 @@ Whether you're a developer, designer, data scientist, or domain expert, our hack
       </div>
     </div>
   </div>
-  
+
   <div class="col-md-4">
     <div class="card mb-4">
       <img src="/assets/images/sac.jpg" class="card-img-top" alt="SpaceApps Challenge">
@@ -114,7 +104,7 @@ Whether you're a developer, designer, data scientist, or domain expert, our hack
       </div>
     </div>
   </div>
-  
+
   <div class="col-md-6">
     <div class="card mb-4">
       <div class="card-header bg-success text-white">
@@ -149,7 +139,7 @@ Our hackathons typically follow this structure to maximize learning, collaborati
           <p>Introduction to the hackathon theme, challenges, and rules. Participants form diverse teams with complementary skills.</p>
         </div>
       </div>
-      
+
       <div class="timeline-item">
         <div class="timeline-marker bg-primary"></div>
         <div class="timeline-content">
@@ -157,7 +147,7 @@ Our hackathons typically follow this structure to maximize learning, collaborati
           <p>Teams brainstorm solutions, define project scope, and create a development plan with clearly defined tasks and goals.</p>
         </div>
       </div>
-      
+
       <div class="timeline-item">
         <div class="timeline-marker bg-primary"></div>
         <div class="timeline-content">
@@ -165,7 +155,7 @@ Our hackathons typically follow this structure to maximize learning, collaborati
           <p>Teams work on implementing their solutions with guidance from industry mentors who provide technical advice and feedback.</p>
         </div>
       </div>
-      
+
       <div class="timeline-item">
         <div class="timeline-marker bg-primary"></div>
         <div class="timeline-content">
@@ -173,7 +163,7 @@ Our hackathons typically follow this structure to maximize learning, collaborati
           <p>Teams refine their solutions based on mentor feedback, user testing, and technical challenges encountered.</p>
         </div>
       </div>
-      
+
       <div class="timeline-item">
         <div class="timeline-marker bg-primary"></div>
         <div class="timeline-content">
@@ -181,7 +171,7 @@ Our hackathons typically follow this structure to maximize learning, collaborati
           <p>Teams present their solutions to a panel of judges who evaluate based on innovation, technical implementation, usability, and potential impact.</p>
         </div>
       </div>
-      
+
       <div class="timeline-item">
         <div class="timeline-marker bg-primary"></div>
         <div class="timeline-content">
@@ -213,7 +203,7 @@ Our hackathons typically follow this structure to maximize learning, collaborati
           </div>
         </div>
       </div>
-      
+
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingTwo">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -226,7 +216,7 @@ Our hackathons typically follow this structure to maximize learning, collaborati
           </div>
         </div>
       </div>
-      
+
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingThree">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -239,7 +229,7 @@ Our hackathons typically follow this structure to maximize learning, collaborati
           </div>
         </div>
       </div>
-      
+
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingFour">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
@@ -252,7 +242,7 @@ Our hackathons typically follow this structure to maximize learning, collaborati
           </div>
         </div>
       </div>
-      
+
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingFive">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -284,7 +274,7 @@ Our hackathons typically follow this structure to maximize learning, collaborati
       </div>
     </div>
   </div>
-  
+
   <div class="col-md-4">
     <div class="card text-center h-100">
       <div class="card-body">
@@ -295,7 +285,7 @@ Our hackathons typically follow this structure to maximize learning, collaborati
       </div>
     </div>
   </div>
-  
+
   <div class="col-md-4">
     <div class="card text-center h-100">
       <div class="card-body">
@@ -309,18 +299,14 @@ Our hackathons typically follow this structure to maximize learning, collaborati
 </div>
 ```
 
-## Contact Us
-
 ```{=html}
-<div class="row mt-5">
-  <div class="col-md-8 offset-md-2">
-    <div class="card bg-light">
-      <div class="card-body text-center">
-        <h3>Have questions about our hackathons?</h3>
-        <p>Contact our team for more information about upcoming events, sponsorship opportunities, or any other inquiries.</p>
-        <a href="/contact.html" class="btn btn-primary">Contact Us</a>
-      </div>
-    </div>
+<div class="m-cta">
+  <div class="container">
+    <h2>Hackathons</h2>
+    <p>Have questions about our hackathons? Get in touch.</p>
+    <a href="/contact.html" class="m-lk">Contact Us</a>
   </div>
+</div>
+
 </div>
 ```

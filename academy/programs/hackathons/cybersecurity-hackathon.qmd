@@ -2,6 +2,13 @@
 title: "Cybersecurity Hackathon"
 subtitle: "48-Hour Challenge for Security Enthusiasts"
 description: "Take on the 48-hour Cybersecurity Hackathon challenge in Craiova and Bucharest, designed for security enthusiasts at all levels."
+page-layout: full
+toc: false
+format:
+  html:
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
 date: "2025-06-01"
 edited: "2023-07-02"
 location: "Craiova / Bucharest"
@@ -9,6 +16,17 @@ category: "hackathon"
 image: "/assets/images/cyber-security.jpg"
 registration_date: "2025-08-01"
 ---
+
+```{=html}
+<div class="m">
+
+<div class="m-hero">
+  <div class="container">
+    <h1>Cybersecurity Hackathon</h1>
+    <p>48-Hour Challenge for Security Enthusiasts</p>
+  </div>
+</div>
+```
 
 ```{=html}
 <div class="event-header">
@@ -97,14 +115,6 @@ Registration opens soon. Early registration is encouraged as participation is li
 
 *Note: Details, dates, and themes are subject to change.*
 
-```{=html}
-<div class="event-cta">
-  <h3>Ready to Learn More?</h3>
-  <p>Join us for an intense 48-hour hackathon that will challenge your abilities and connect you with the cybersecurity community.</p>
-  <a href="/academy/courses.html" class="btn btn-success">Browse Courses</a>
-</div>
-```
-
 ## Frequently Asked Questions
 
 ### Do I need to be a cybersecurity expert to participate?
@@ -130,3 +140,15 @@ After participating in the Cybersecurity Hackathon, continue your learning journ
 - **[Technology Summer School](/academy/programs/summer-school/2025.html)** - July 20 - August 20, 2025
 - **[AI Ethics Hackathon](/academy/programs/hackathons/ai-ethics-hackathon.html)** - May 10-12, 2026
 - **[SpaceApps Challenge](/academy/programs/hackathons/spaceapps/challenge-2025.html)** - October 3-5, 2025
+
+```{=html}
+<div class="m-cta">
+  <div class="container">
+    <h2>Cybersecurity Hackathon</h2>
+    <p>Interested in this program? Get in touch to learn more.</p>
+    <a href="/contact.html" class="m-lk">Contact Us</a>
+  </div>
+</div>
+
+</div>
+```
