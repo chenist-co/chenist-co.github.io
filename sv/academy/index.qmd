@@ -1,0 +1,91 @@
+---
+title: "Academy"
+title-block-style: none
+subtitle: "Lär dig, samarbeta och väx med våra utbildningsprogram"
+description: "Utforska chen.ist Academys kurser, webbinarier, evenemang och utbildningsprogram inom cybersäkerhet, open source, moln och mjukvaruutveckling."
+from: markdown+raw_html
+page-layout: custom
+format:
+  html:
+    toc: false
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
+---
+
+```{=html}
+<div class="m">
+
+<div class="m-hero">
+  <div class="container">
+    <h1>chen.ist <span class="gr">Academy</span></h1>
+    <p>Praktiska kurser, utbildningar och program inom cybersäkerhet, open source och digitala färdigheter.</p>
+  </div>
+</div>
+
+<div class="m-bg m-bg-squares">
+  <div class="container">
+    <h2>Lär dig genom att göra</h2>
+    <p class="sub">Sex sätt att bygga praktiska tekniska färdigheter.</p>
+    <div class="row g-5">
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-book"></i><h3>Kurser</h3><p>Flerveckorsprogram inom cybersäkerhet, integritet och open source-utveckling.</p><a href="/academy/courses.html" class="m-lk">Utforska kurser</a></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-lightning"></i><h3>Utbildningar</h3><p>Intensiva 1–2-dagarsworkshops med fokuserade ämnen och praktiska labbar.</p><a href="/academy/trainings.html" class="m-lk">Utforska utbildningar</a></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-clock-history"></i><h3>Microlearning</h3><p>1–2-timmarspass om specifika verktyg — CLI, NixOS, Emacs, tmux med mera.</p><a href="/academy/microlearning.html" class="m-lk">Utforska sessioner</a></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-trophy"></i><h3>Hackathons</h3><p>Cybersäkerhet, AI-etik och SpaceApps-utmaningar. Bygg under press.</p><a href="/academy/events.html" class="m-lk">Se evenemang</a></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-camera-video"></i><h3>Webbinarier</h3><p>Livesessioner online om zero trust, molnsäkerhet och digital transformation.</p><a href="/academy/webinars.html" class="m-lk">Se schema</a></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-people"></i><h3>Computer Club</h3><p>Veckovisa träffar för kodning, hacking och att bygga tillsammans.</p><a href="/academy/programs/computerclub/" class="m-lk">Gå med i klubben</a></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="m-s">
+  <div class="container">
+    <div class="m-r">
+      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Academy training session"></div>
+      <div class="m-rt">
+        <h2>Riktiga färdigheter.<br>Inte certifikat.</h2>
+        <p>Varje kurs är uppbyggd kring praktiska övningar, riktiga verktyg och scenarier från faktiska uppdrag. Du går därifrån med kunskaper du kan använda på måndag morgon — inte en PDF du aldrig öppnar.</p>
+        <div class="lk"><a href="/academy/courses.html" class="m-lk">Utforska kursplanen</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="m-bg m-bg-squares">
+  <div class="container">
+    <div class="m-r rv">
+      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="Hackathon coding"></div>
+      <div class="m-rt">
+        <h2>Bygg under press.<br>Lär dig snabbare.</h2>
+        <p>Våra hackathons och sommarskoleprogram kastar in dig i 24–48-timmarsutmaningar. SpaceApps, cybersäkerhet, AI-etik — riktiga problem, riktiga team, riktiga deadlines.</p>
+        <div class="lk"><a href="/academy/events.html" class="m-lk">Se kommande program</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="m-s">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn">6</div><div class="m-nl">Kompletta kurser</div></div>
+      <div><div class="m-nn">7</div><div class="m-nl">Intensiva utbildningar</div></div>
+      <div><div class="m-nn">14</div><div class="m-nl">Microlearning-sessioner</div></div>
+      <div><div class="m-nn">4</div><div class="m-nl">Språk</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Börja lära dig</h2>
+    <p>Bläddra i vår katalog eller boka ett samtal för att diskutera anpassad utbildning för ditt team.</p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <a href="/academy/courses.html" class="m-b">Utforska kurser</a>
+      <a href="https://cal.com/chenist" target="_blank" class="m-bo">Boka en konsultation</a>
+    </div>
+  </div>
+</div>
+
+</div>
+```

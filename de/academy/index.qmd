@@ -1,0 +1,91 @@
+---
+title: "Academy"
+title-block-style: none
+subtitle: "Lernen, zusammenarbeiten und wachsen mit unseren Bildungsprogrammen"
+description: "Durchsuchen Sie die Kurse, Webinare, Veranstaltungen und Schulungsprogramme der chen.ist Academy in den Bereichen Cybersicherheit, Open Source, Cloud und Softwareentwicklung."
+from: markdown+raw_html
+page-layout: custom
+format:
+  html:
+    toc: false
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
+---
+
+```{=html}
+<div class="m">
+
+<div class="m-hero">
+  <div class="container">
+    <h1>chen.ist <span class="gr">Academy</span></h1>
+    <p>Praxisnahe Kurse, Schulungen und Programme in Cybersicherheit, Open Source und digitalen Kompetenzen.</p>
+  </div>
+</div>
+
+<div class="m-bg m-bg-squares">
+  <div class="container">
+    <h2>Lernen durch Praxis</h2>
+    <p class="sub">Sechs Wege, um praxisnahe technische Fähigkeiten aufzubauen.</p>
+    <div class="row g-5">
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-book"></i><h3>Kurse</h3><p>Mehrwöchige Programme in Cybersicherheit, Datenschutz und Open-Source-Entwicklung.</p><a href="/academy/courses.html" class="m-lk">Kurse durchsuchen</a></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-lightning"></i><h3>Trainings</h3><p>Intensive 1-2-tägige Workshops zu fokussierten Themen mit praktischen Übungen.</p><a href="/academy/trainings.html" class="m-lk">Trainings durchsuchen</a></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-clock-history"></i><h3>Microlearning</h3><p>1-2-stündige Sessions zu bestimmten Tools — CLI, NixOS, Emacs, tmux und mehr.</p><a href="/academy/microlearning.html" class="m-lk">Sessions durchsuchen</a></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-trophy"></i><h3>Hackathons</h3><p>Cybersicherheit, KI-Ethik und SpaceApps-Herausforderungen. Bauen unter Druck.</p><a href="/academy/events.html" class="m-lk">Veranstaltungen ansehen</a></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-camera-video"></i><h3>Webinare</h3><p>Live-Online-Sessions zu Zero Trust, Cloud-Sicherheit und digitaler Transformation.</p><a href="/academy/webinars.html" class="m-lk">Programm ansehen</a></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-people"></i><h3>Computer Club</h3><p>Wöchentliche Treffen zum Programmieren, Hacken und gemeinsamen Bauen.</p><a href="/academy/programs/computerclub/" class="m-lk">Dem Club beitreten</a></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="m-s">
+  <div class="container">
+    <div class="m-r">
+      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Academy-Schulung"></div>
+      <div class="m-rt">
+        <h2>Echte Fähigkeiten.<br>Keine Zertifikate.</h2>
+        <p>Jeder Kurs basiert auf praktischen Übungen, echten Tools und Szenarien aus realen Projekten. Sie verlassen den Kurs mit Fähigkeiten, die Sie am Montagmorgen einsetzen können — nicht mit einem PDF, das Sie nie öffnen werden.</p>
+        <div class="lk"><a href="/academy/courses.html" class="m-lk">Curriculum entdecken</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="m-bg m-bg-squares">
+  <div class="container">
+    <div class="m-r rv">
+      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="Hackathon-Programmierung"></div>
+      <div class="m-rt">
+        <h2>Bauen unter Druck.<br>Schneller lernen.</h2>
+        <p>Unsere Hackathons und Sommerschul-Programme tauchen Sie in 24-48-stündige Herausforderungen ein. SpaceApps, Cybersicherheit, KI-Ethik — echte Probleme, echte Teams, echte Deadlines.</p>
+        <div class="lk"><a href="/academy/events.html" class="m-lk">Kommende Programme ansehen</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="m-s">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn">6</div><div class="m-nl">Vollständige Kurse</div></div>
+      <div><div class="m-nn">7</div><div class="m-nl">Intensive Trainings</div></div>
+      <div><div class="m-nn">14</div><div class="m-nl">Microlearning-Sessions</div></div>
+      <div><div class="m-nn">4</div><div class="m-nl">Sprachen</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Jetzt lernen</h2>
+    <p>Durchsuchen Sie unseren Katalog oder buchen Sie ein Gespräch, um maßgeschneiderte Schulungen für Ihr Team zu besprechen.</p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <a href="/academy/courses.html" class="m-b">Kurse durchsuchen</a>
+      <a href="https://cal.com/chenist" target="_blank" class="m-bo">Beratung buchen</a>
+    </div>
+  </div>
+</div>
+
+</div>
+```

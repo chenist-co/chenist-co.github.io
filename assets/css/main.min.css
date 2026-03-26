@@ -185,3 +185,8 @@ html[data-bs-theme="dark"] .page-layout-article .card{background:#1a1a1d !import
 .navbar{margin-bottom:0 !important;}
 
 .page-navbar.page-layout-custom #quarto-content{padding-top:0 !important;}
+
+/* No bullet points on landing pages */
+.m ul,.m ol{list-style:none;padding-left:0;}
+.m li::before{content:none !important;}
+.m-hero ul,.m-s ul,.m-bg ul,.m-cta ul{list-style:none;padding-left:0;}
