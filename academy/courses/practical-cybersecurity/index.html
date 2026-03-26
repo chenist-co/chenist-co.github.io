@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-6cb3fdec3a604e15d7c32437517db040.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-398b749543a727f3b66e7cafba33b310.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-6cb3fdec3a604e15d7c32437517db040.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-73406dad87c631b3ff16adcaa0b1ab21.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-d670e99d9fdfed706f1502bc605e1805.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-73406dad87c631b3ff16adcaa0b1ab21.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:description" content="Hands-on cybersecurity course covering network security, penetration testing, cryptography, and incident response for real-world security challenges.">
 <meta name="twitter:image" content="https://chen.ist/academy/courses/practical-cybersecurity/assets/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-</head><body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+</head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -414,7 +414,10 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 }
 </script>
-<style>.m { --c: #F5A623; }</style>
+<style>
+.m { --c: #F5A623; }
+.quarto-title-block { display: none !important; }
+</style>
 
 
 <link rel="stylesheet" href="../../../assets/css/main.min.css">
@@ -428,8 +431,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
-    <img src="../../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
+    <img src="../../../assets/images/logo-light.svg" alt="" class="navbar-logo light-content">
+    <img src="../../../assets/images/logo-light.svg" alt="" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -585,34 +588,86 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#course-overview" id="toc-course-overview" class="nav-link active" data-scroll-target="#course-overview">Course Overview</a>
+  <ul class="collapse">
+  <li><a href="#next-cohort" id="toc-next-cohort" class="nav-link" data-scroll-target="#next-cohort">Next Cohort</a></li>
+  </ul></li>
+  <li><a href="#course-curriculum" id="toc-course-curriculum" class="nav-link" data-scroll-target="#course-curriculum">Course Curriculum</a>
+  <ul class="collapse">
+  <li><a href="#module-1-cybersecurity-fundamentals-weeks-1-2" id="toc-module-1-cybersecurity-fundamentals-weeks-1-2" class="nav-link" data-scroll-target="#module-1-cybersecurity-fundamentals-weeks-1-2">Module 1: Cybersecurity Fundamentals (Weeks 1-2)</a></li>
+  <li><a href="#module-2-network-security-weeks-3-4" id="toc-module-2-network-security-weeks-3-4" class="nav-link" data-scroll-target="#module-2-network-security-weeks-3-4">Module 2: Network Security (Weeks 3-4)</a></li>
+  <li><a href="#module-3-web-application-security-weeks-5-6" id="toc-module-3-web-application-security-weeks-5-6" class="nav-link" data-scroll-target="#module-3-web-application-security-weeks-5-6">Module 3: Web Application Security (Weeks 5-6)</a></li>
+  <li><a href="#module-4-cryptography-and-secure-communications-week-7" id="toc-module-4-cryptography-and-secure-communications-week-7" class="nav-link" data-scroll-target="#module-4-cryptography-and-secure-communications-week-7">Module 4: Cryptography and Secure Communications (Week 7)</a></li>
+  <li><a href="#module-5-vulnerability-assessment-and-penetration-testing-weeks-8-9" id="toc-module-5-vulnerability-assessment-and-penetration-testing-weeks-8-9" class="nav-link" data-scroll-target="#module-5-vulnerability-assessment-and-penetration-testing-weeks-8-9">Module 5: Vulnerability Assessment and Penetration Testing (Weeks 8-9)</a></li>
+  <li><a href="#module-6-security-operations-and-incident-response-weeks-10-11" id="toc-module-6-security-operations-and-incident-response-weeks-10-11" class="nav-link" data-scroll-target="#module-6-security-operations-and-incident-response-weeks-10-11">Module 6: Security Operations and Incident Response (Weeks 10-11)</a></li>
+  <li><a href="#module-7-advanced-topics-and-capstone-project-week-12" id="toc-module-7-advanced-topics-and-capstone-project-week-12" class="nav-link" data-scroll-target="#module-7-advanced-topics-and-capstone-project-week-12">Module 7: Advanced Topics and Capstone Project (Week 12)</a></li>
+  </ul></li>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link" data-scroll-target="#learning-outcomes">Learning Outcomes</a></li>
+  <li><a href="#instructors" id="toc-instructors" class="nav-link" data-scroll-target="#instructors">Instructors</a></li>
+  <li><a href="#assessment-and-certification" id="toc-assessment-and-certification" class="nav-link" data-scroll-target="#assessment-and-certification">Assessment and Certification</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  <li><a href="#download" id="toc-download" class="nav-link" data-scroll-target="#download">Download</a></li>
+  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
+<main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header">
-<h1 class="title display-7">Practical Cybersecurity</h1>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Practical Cybersecurity</h1>
 <p class="subtitle lead">Hands-on skills for real-world security challenges</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">cybersecurity</div>
+    <div class="quarto-category">network-security</div>
+    <div class="quarto-category">penetration-testing</div>
+    <div class="quarto-category">cryptography</div>
+    <div class="quarto-category">incident-response</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Hands-on cybersecurity course covering network security, penetration testing, cryptography, and incident response for real-world security challenges.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
 
 </header>
 
 
 <div class="m">
-
-<div class="m-hero">
-  <div class="container">
+<div class="m-hero" style="margin: -1em -1em 3rem; padding: 10rem 0 6rem;">
+  <div class="container" style="max-width: 700px;">
     <h1>Practical <span class="gr">Cybersecurity</span></h1>
     <p>Develop hands-on skills to protect systems and data in the digital age</p>
   </div>
 </div>
-
-<div class="container">
+</div>
 <section id="course-overview" class="level2">
-<h2 data-anchor-id="course-overview">Course Overview</h2>
+<h2 class="anchored" data-anchor-id="course-overview">Course Overview</h2>
 <p>A comprehensive introduction to cybersecurity concepts, tools, and practices, with a focus on hands-on exercises and real-world applications. This 12-week course provides practical skills to identify and mitigate security vulnerabilities, understand attack vectors, and implement effective security measures in various environments.</p>
 <section id="next-cohort" class="level3">
-<h3 data-anchor-id="next-cohort">Next Cohort</h3>
+<h3 class="anchored" data-anchor-id="next-cohort">Next Cohort</h3>
 <ul>
 <li><strong>Start Date:</strong> April 1, 2026</li>
 <li><strong>Format:</strong> Available in instructor-led online, self-paced, and in-person formats</li>
@@ -621,9 +676,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="course-curriculum" class="level2">
-<h2 data-anchor-id="course-curriculum">Course Curriculum</h2>
+<h2 class="anchored" data-anchor-id="course-curriculum">Course Curriculum</h2>
 <section id="module-1-cybersecurity-fundamentals-weeks-1-2" class="level3">
-<h3 data-anchor-id="module-1-cybersecurity-fundamentals-weeks-1-2">Module 1: Cybersecurity Fundamentals (Weeks 1-2)</h3>
+<h3 class="anchored" data-anchor-id="module-1-cybersecurity-fundamentals-weeks-1-2">Module 1: Cybersecurity Fundamentals (Weeks 1-2)</h3>
 <ul>
 <li>Introduction to cybersecurity concepts and terminology</li>
 <li>The cybersecurity landscape: threats, actors, and motivations</li>
@@ -633,7 +688,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="module-2-network-security-weeks-3-4" class="level3">
-<h3 data-anchor-id="module-2-network-security-weeks-3-4">Module 2: Network Security (Weeks 3-4)</h3>
+<h3 class="anchored" data-anchor-id="module-2-network-security-weeks-3-4">Module 2: Network Security (Weeks 3-4)</h3>
 <ul>
 <li>Network fundamentals and security architecture</li>
 <li>Firewalls, IDS/IPS, and network monitoring</li>
@@ -643,7 +698,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="module-3-web-application-security-weeks-5-6" class="level3">
-<h3 data-anchor-id="module-3-web-application-security-weeks-5-6">Module 3: Web Application Security (Weeks 5-6)</h3>
+<h3 class="anchored" data-anchor-id="module-3-web-application-security-weeks-5-6">Module 3: Web Application Security (Weeks 5-6)</h3>
 <ul>
 <li>Web application architecture and vulnerabilities</li>
 <li>OWASP Top 10 risks and mitigations</li>
@@ -653,7 +708,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="module-4-cryptography-and-secure-communications-week-7" class="level3">
-<h3 data-anchor-id="module-4-cryptography-and-secure-communications-week-7">Module 4: Cryptography and Secure Communications (Week 7)</h3>
+<h3 class="anchored" data-anchor-id="module-4-cryptography-and-secure-communications-week-7">Module 4: Cryptography and Secure Communications (Week 7)</h3>
 <ul>
 <li>Cryptographic concepts and algorithms</li>
 <li>Symmetric vs.&nbsp;asymmetric encryption</li>
@@ -663,7 +718,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="module-5-vulnerability-assessment-and-penetration-testing-weeks-8-9" class="level3">
-<h3 data-anchor-id="module-5-vulnerability-assessment-and-penetration-testing-weeks-8-9">Module 5: Vulnerability Assessment and Penetration Testing (Weeks 8-9)</h3>
+<h3 class="anchored" data-anchor-id="module-5-vulnerability-assessment-and-penetration-testing-weeks-8-9">Module 5: Vulnerability Assessment and Penetration Testing (Weeks 8-9)</h3>
 <ul>
 <li>Vulnerability assessment methodology</li>
 <li>Penetration testing frameworks and tools</li>
@@ -673,7 +728,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="module-6-security-operations-and-incident-response-weeks-10-11" class="level3">
-<h3 data-anchor-id="module-6-security-operations-and-incident-response-weeks-10-11">Module 6: Security Operations and Incident Response (Weeks 10-11)</h3>
+<h3 class="anchored" data-anchor-id="module-6-security-operations-and-incident-response-weeks-10-11">Module 6: Security Operations and Incident Response (Weeks 10-11)</h3>
 <ul>
 <li>Security monitoring and log analysis</li>
 <li>Building a SOC capability</li>
@@ -683,7 +738,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="module-7-advanced-topics-and-capstone-project-week-12" class="level3">
-<h3 data-anchor-id="module-7-advanced-topics-and-capstone-project-week-12">Module 7: Advanced Topics and Capstone Project (Week 12)</h3>
+<h3 class="anchored" data-anchor-id="module-7-advanced-topics-and-capstone-project-week-12">Module 7: Advanced Topics and Capstone Project (Week 12)</h3>
 <ul>
 <li>Cloud security considerations</li>
 <li>Mobile security fundamentals</li>
@@ -694,7 +749,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="learning-outcomes" class="level2">
-<h2 data-anchor-id="learning-outcomes">Learning Outcomes</h2>
+<h2 class="anchored" data-anchor-id="learning-outcomes">Learning Outcomes</h2>
 <p>By the end of this course, you will be able to:</p>
 <ul>
 <li>Identify and analyze security threats and vulnerabilities in various environments</li>
@@ -707,11 +762,11 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="instructors" class="level2">
-<h2 data-anchor-id="instructors">Instructors</h2>
+<h2 class="anchored" data-anchor-id="instructors">Instructors</h2>
 <p>Our instructors are experienced cybersecurity professionals with backgrounds in various sectors including finance, healthcare, government, and technology. They bring real-world experience and practical insights to the classroom.</p>
 </section>
 <section id="assessment-and-certification" class="level2">
-<h2 data-anchor-id="assessment-and-certification">Assessment and Certification</h2>
+<h2 class="anchored" data-anchor-id="assessment-and-certification">Assessment and Certification</h2>
 <ul>
 <li>Weekly hands-on labs and technical challenges</li>
 <li>Practical security assessments and documentation</li>
@@ -721,7 +776,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="resources" class="level2">
-<h2 data-anchor-id="resources">Resources</h2>
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
 <ul>
 <li>Dedicated virtual lab environment for hands-on practice</li>
 <li>Comprehensive course materials and reference guides</li>
@@ -729,21 +784,47 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>Community forum for discussion and collaboration</li>
 <li>Office hours with instructors for personalized support</li>
 </ul>
-</section></div>
-
+</section>
+<section id="download" class="level2">
+<h2 class="anchored" data-anchor-id="download">Download</h2>
+<div style="margin: 2rem 0; padding: 1.5rem 2rem; background: rgba(129,189,74,0.06); border: 1px solid rgba(129,189,74,0.15); border-radius: 12px;">
+<p style="margin: 0 0 0.5rem; font-weight: 600;">
+Download Course Details
+</p>
+<p style="margin: 0 0 1rem; font-size: 0.9rem; color: #86868b;">
+Get the full course outline, pricing, and contact information as a PDF.
+</p>
+<p><a href="index.pdf" class="m-b" style="font-size: 0.9rem; padding: 0.6rem 1.5rem;">Download PDF</a></p>
+</div>
+</section>
+<section id="contact" class="level2">
+<h2 class="anchored" data-anchor-id="contact">Contact</h2>
+<p>Interested in enrolling or have questions about this course?</p>
+<ul>
+<li><strong>Email:</strong> <a href="mailto:office@chen.ist">office@chen.ist</a></li>
+<li><strong>Phone:</strong> Schedule a call to discuss your goals</li>
+<li><strong>Web:</strong> <a href="../../../booking/">Book a free consultation</a></li>
+</ul>
+<div class="m">
 <div class="m-cta">
   <div class="container">
-    <h2>Ready to get started?</h2>
+    <div class="m-d"></div>
+    <h2 class="anchored">Ready to get started?</h2>
     <p>Book a call to discuss your goals and find the right program.</p>
+    <a href="../../../booking/" class="m-b">Book a Call</a>
+    <div class="m-sm">
+      <i class="bi bi-check-circle-fill"></i> Free consultation &nbsp;
+      <i class="bi bi-check-circle-fill"></i> No commitment &nbsp;
+      <i class="bi bi-check-circle-fill"></i> Custom team pricing
+    </div>
   </div>
 </div>
-
 </div>
 
 
+</section>
 
-
-
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-6cb3fdec3a604e15d7c32437517db040.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-398b749543a727f3b66e7cafba33b310.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-6cb3fdec3a604e15d7c32437517db040.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-73406dad87c631b3ff16adcaa0b1ab21.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-d670e99d9fdfed706f1502bc605e1805.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-73406dad87c631b3ff16adcaa0b1ab21.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:description" content="A comprehensive course on using NixOS to build secure, reproducible environments for cybersecurity operations.">
 <meta name="twitter:image" content="https://chen.ist/academy/courses/nixos-cybersecurity/assets/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-</head><body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+</head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -414,7 +414,10 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 }
 </script>
-<style>.m { --c: #F5A623; }</style>
+<style>
+.m { --c: #F5A623; }
+.quarto-title-block { display: none !important; }
+</style>
 
 
 <link rel="stylesheet" href="../../../assets/css/main.min.css">
@@ -428,8 +431,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
-    <img src="../../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
+    <img src="../../../assets/images/logo-light.svg" alt="" class="navbar-logo light-content">
+    <img src="../../../assets/images/logo-light.svg" alt="" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -585,31 +588,75 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#course-overview" id="toc-course-overview" class="nav-link active" data-scroll-target="#course-overview">Course Overview</a></li>
+  <li><a href="#course-objectives" id="toc-course-objectives" class="nav-link" data-scroll-target="#course-objectives">Course Objectives</a></li>
+  <li><a href="#course-structure" id="toc-course-structure" class="nav-link" data-scroll-target="#course-structure">Course Structure</a></li>
+  <li><a href="#practical-applications" id="toc-practical-applications" class="nav-link" data-scroll-target="#practical-applications">Practical Applications</a></li>
+  <li><a href="#what-sets-this-course-apart" id="toc-what-sets-this-course-apart" class="nav-link" data-scroll-target="#what-sets-this-course-apart">What Sets This Course Apart</a></li>
+  <li><a href="#who-should-attend" id="toc-who-should-attend" class="nav-link" data-scroll-target="#who-should-attend">Who Should Attend</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#instructors" id="toc-instructors" class="nav-link" data-scroll-target="#instructors">Instructors</a></li>
+  <li><a href="#student-testimonials" id="toc-student-testimonials" class="nav-link" data-scroll-target="#student-testimonials">Student Testimonials</a></li>
+  <li><a href="#frequently-asked-questions" id="toc-frequently-asked-questions" class="nav-link" data-scroll-target="#frequently-asked-questions">Frequently Asked Questions</a></li>
+  <li><a href="#download" id="toc-download" class="nav-link" data-scroll-target="#download">Download</a></li>
+  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
+<main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header">
-<h1 class="title display-7">NixOS for Cybersecurity</h1>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">NixOS for Cybersecurity</h1>
 <p class="subtitle lead">Secure, Reproducible Computing Environments</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">nixos</div>
+    <div class="quarto-category">linux</div>
+    <div class="quarto-category">cybersecurity</div>
+    <div class="quarto-category">infrastructure</div>
+    <div class="quarto-category">system-hardening</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    A comprehensive course on using NixOS to build secure, reproducible environments for cybersecurity operations.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
 
 </header>
 
 
 <div class="m">
-
-<div class="m-hero">
-  <div class="container">
+<div class="m-hero" style="margin: -1em -1em 3rem; padding: 10rem 0 6rem;">
+  <div class="container" style="max-width: 700px;">
     <h1>NixOS for <span class="gr">Cybersecurity</span></h1>
     <p>Building secure, reproducible computing environments</p>
   </div>
 </div>
-
-<div class="container">
+</div>
 <section id="course-overview" class="level2">
-<h2 data-anchor-id="course-overview">Course Overview</h2>
+<h2 class="anchored" data-anchor-id="course-overview">Course Overview</h2>
 <p>This 4-week course introduces cybersecurity professionals and enthusiasts to NixOS as a powerful platform for building secure, reproducible computing environments. Through hands-on exercises and real-world scenarios, you’ll learn how to leverage NixOS’s unique approach to system configuration to enhance security posture, create consistent testing environments, and implement robust security controls.</p>
 <div class="row">
   <div class="col-md-6 text-center mt-3 mb-3">
@@ -634,7 +681,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="col-md-6">
     <div class="card mb-4">
       <div class="card-header bg-primary text-white">
-        <h3 class="card-title mb-0">Course Details</h3>
+        <h3 class="card-title mb-0 anchored">Course Details</h3>
       </div>
       <div class="card-body">
         <p><strong>Duration:</strong> 4 weeks (8 sessions)</p>
@@ -650,7 +697,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="col-md-6">
     <div class="card mb-4">
       <div class="card-header bg-primary text-white">
-        <h3 class="card-title mb-0">Why NixOS for Security?</h3>
+        <h3 class="card-title mb-0 anchored">Why NixOS for Security?</h3>
       </div>
       <div class="card-body">
         <ul>
@@ -666,7 +713,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 </section>
 <section id="course-objectives" class="level2">
-<h2 data-anchor-id="course-objectives">Course Objectives</h2>
+<h2 class="anchored" data-anchor-id="course-objectives">Course Objectives</h2>
 <p>By the end of this course, participants will be able to:</p>
 <ul>
 <li>Understand and apply NixOS’s declarative approach to system configuration</li>
@@ -678,14 +725,14 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="course-structure" class="level2">
-<h2 data-anchor-id="course-structure">Course Structure</h2>
+<h2 class="anchored" data-anchor-id="course-structure">Course Structure</h2>
 <div class="row mt-4">
   <div class="col-md-12">
     <div class="timeline">
       <div class="timeline-item">
         <div class="timeline-marker bg-success"></div>
         <div class="timeline-content">
-          <h3>Week 1: NixOS Fundamentals for Security</h3>
+          <h3 class="anchored">Week 1: NixOS Fundamentals for Security</h3>
           <ul>
             <li>Introduction to NixOS and its security benefits</li>
             <li>The Nix package manager and store concepts</li>
@@ -699,7 +746,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="timeline-item">
         <div class="timeline-marker bg-success"></div>
         <div class="timeline-content">
-          <h3>Week 2: System Hardening with NixOS</h3>
+          <h3 class="anchored">Week 2: System Hardening with NixOS</h3>
           <ul>
             <li>Firewall configuration and network security</li>
             <li>User security settings and privilege management</li>
@@ -713,7 +760,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="timeline-item">
         <div class="timeline-marker bg-success"></div>
         <div class="timeline-content">
-          <h3>Week 3: Network Isolation and Sandboxing</h3>
+          <h3 class="anchored">Week 3: Network Isolation and Sandboxing</h3>
           <ul>
             <li>Container isolation and security</li>
             <li>Network namespaces for security testing</li>
@@ -727,7 +774,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="timeline-item">
         <div class="timeline-marker bg-success"></div>
         <div class="timeline-content">
-          <h3>Week 4: Deployment and Real-World Applications</h3>
+          <h3 class="anchored">Week 4: Deployment and Real-World Applications</h3>
           <ul>
             <li>Version-controlled security configurations</li>
             <li>Multi-system deployment with NixOps</li>
@@ -742,13 +789,13 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 </section>
 <section id="practical-applications" class="level2">
-<h2 data-anchor-id="practical-applications">Practical Applications</h2>
+<h2 class="anchored" data-anchor-id="practical-applications">Practical Applications</h2>
 <p>Learn how to apply NixOS in real-world cybersecurity scenarios:</p>
 <div class="row mt-4">
   <div class="col-md-6 mb-4">
     <div class="card h-100">
       <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0">Incident Response</h3>
+        <h3 class="card-title mb-0 anchored">Incident Response</h3>
       </div>
       <div class="card-body">
         <p>Create reproducible forensics environments that ensure consistent evidence analysis and documentation:</p>
@@ -765,7 +812,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="col-md-6 mb-4">
     <div class="card h-100">
       <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0">Penetration Testing</h3>
+        <h3 class="card-title mb-0 anchored">Penetration Testing</h3>
       </div>
       <div class="card-body">
         <p>Deploy consistent testing environments across engagements:</p>
@@ -782,7 +829,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="col-md-6 mb-4">
     <div class="card h-100">
       <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0">Security Research</h3>
+        <h3 class="card-title mb-0 anchored">Security Research</h3>
       </div>
       <div class="card-body">
         <p>Create environments for reproducible vulnerability research:</p>
@@ -799,7 +846,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="col-md-6 mb-4">
     <div class="card h-100">
       <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0">SOC Operations</h3>
+        <h3 class="card-title mb-0 anchored">SOC Operations</h3>
       </div>
       <div class="card-body">
         <p>Standardize security operations with consistent environments:</p>
@@ -815,14 +862,14 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 </section>
 <section id="what-sets-this-course-apart" class="level2">
-<h2 data-anchor-id="what-sets-this-course-apart">What Sets This Course Apart</h2>
+<h2 class="anchored" data-anchor-id="what-sets-this-course-apart">What Sets This Course Apart</h2>
 <div class="row mt-4">
   <div class="col-lg-4 col-md-6">
     <div class="feature-card text-center">
       <div class="feature-card-icon">
         <i class="bi bi-shield-check"></i>
       </div>
-      <h3>Practical Focus</h3>
+      <h3 class="anchored">Practical Focus</h3>
       <p>Hands-on exercises that apply directly to real-world security operations and challenges.</p>
     </div>
   </div>
@@ -832,7 +879,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="feature-card-icon">
         <i class="bi bi-code-square"></i>
       </div>
-      <h3>Infrastructure as Code</h3>
+      <h3 class="anchored">Infrastructure as Code</h3>
       <p>Learn to implement security as code with version-controlled, auditable system configurations.</p>
     </div>
   </div>
@@ -842,14 +889,14 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="feature-card-icon">
         <i class="bi bi-diagram-3"></i>
       </div>
-      <h3>Modern Approach</h3>
+      <h3 class="anchored">Modern Approach</h3>
       <p>Cutting-edge techniques that align with the latest in DevSecOps and secure infrastructure practices.</p>
     </div>
   </div>
 </div>
 </section>
 <section id="who-should-attend" class="level2">
-<h2 data-anchor-id="who-should-attend">Who Should Attend</h2>
+<h2 class="anchored" data-anchor-id="who-should-attend">Who Should Attend</h2>
 <p>This course is ideal for:</p>
 <ul>
 <li>Security professionals looking to enhance their infrastructure security skills</li>
@@ -860,7 +907,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="prerequisites" class="level2">
-<h2 data-anchor-id="prerequisites">Prerequisites</h2>
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
 <p>Participants should have:</p>
 <ul>
 <li>Basic Linux knowledge and command line experience</li>
@@ -871,7 +918,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>No prior NixOS experience is required.</p>
 </section>
 <section id="instructors" class="level2">
-<h2 data-anchor-id="instructors">Instructors</h2>
+<h2 class="anchored" data-anchor-id="instructors">Instructors</h2>
 <div class="row mt-4">
   <div class="col-md-6">
     <div class="card mb-4">
@@ -881,7 +928,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <i class="bi bi-person-circle fs-1"></i>
           </div>
           <div>
-            <h3 class="mb-0">Alin Mechenici</h3>
+            <h3 class="mb-0 anchored">Alin Mechenici</h3>
             <p class="text-muted">Lead Instructor</p>
           </div>
         </div>
@@ -898,7 +945,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <i class="bi bi-person-circle fs-1"></i>
           </div>
           <div>
-            <h3 class="mb-0">Guest Instructors</h3>
+            <h3 class="mb-0 anchored">Guest Instructors</h3>
             <p class="text-muted">Industry Experts</p>
           </div>
         </div>
@@ -909,7 +956,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 </section>
 <section id="student-testimonials" class="level2">
-<h2 data-anchor-id="student-testimonials">Student Testimonials</h2>
+<h2 class="anchored" data-anchor-id="student-testimonials">Student Testimonials</h2>
 <div class="row mt-4">
   <div class="col-md-6 mb-4">
     <div class="testimonial-card">
@@ -935,12 +982,12 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 </section>
 <section id="frequently-asked-questions" class="level2">
-<h2 data-anchor-id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h2 class="anchored" data-anchor-id="frequently-asked-questions">Frequently Asked Questions</h2>
 <div class="row mt-4">
   <div class="col-md-6 mb-4">
     <div class="card h-100">
       <div class="card-header">
-        <h3 class="card-title mb-0">Common Questions</h3>
+        <h3 class="card-title mb-0 anchored">Common Questions</h3>
       </div>
       <div class="card-body">
         <dl>
@@ -960,7 +1007,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="col-md-6 mb-4">
     <div class="card h-100">
       <div class="card-header">
-        <h3 class="card-title mb-0">Additional Information</h3>
+        <h3 class="card-title mb-0 anchored">Additional Information</h3>
       </div>
       <div class="card-body">
         <dl>
@@ -977,21 +1024,47 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   </div>
 </div>
-</section></div>
-
+</section>
+<section id="download" class="level2">
+<h2 class="anchored" data-anchor-id="download">Download</h2>
+<div style="margin: 2rem 0; padding: 1.5rem 2rem; background: rgba(129,189,74,0.06); border: 1px solid rgba(129,189,74,0.15); border-radius: 12px;">
+<p style="margin: 0 0 0.5rem; font-weight: 600;">
+Download Course Details
+</p>
+<p style="margin: 0 0 1rem; font-size: 0.9rem; color: #86868b;">
+Get the full course outline, pricing, and contact information as a PDF.
+</p>
+<p><a href="index.pdf" class="m-b" style="font-size: 0.9rem; padding: 0.6rem 1.5rem;">Download PDF</a></p>
+</div>
+</section>
+<section id="contact" class="level2">
+<h2 class="anchored" data-anchor-id="contact">Contact</h2>
+<p>Interested in enrolling or have questions about this course?</p>
+<ul>
+<li><strong>Email:</strong> <a href="mailto:office@chen.ist">office@chen.ist</a></li>
+<li><strong>Phone:</strong> Schedule a call to discuss your goals</li>
+<li><strong>Web:</strong> <a href="../../../booking/">Book a free consultation</a></li>
+</ul>
+<div class="m">
 <div class="m-cta">
   <div class="container">
-    <h2>Ready to get started?</h2>
+    <div class="m-d"></div>
+    <h2 class="anchored">Ready to get started?</h2>
     <p>Book a call to discuss your goals and find the right program.</p>
+    <a href="../../../booking/" class="m-b">Book a Call</a>
+    <div class="m-sm">
+      <i class="bi bi-check-circle-fill"></i> Free consultation &nbsp;
+      <i class="bi bi-check-circle-fill"></i> No commitment &nbsp;
+      <i class="bi bi-check-circle-fill"></i> Custom team pricing
+    </div>
   </div>
 </div>
-
 </div>
 
 
+</section>
 
-
-
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

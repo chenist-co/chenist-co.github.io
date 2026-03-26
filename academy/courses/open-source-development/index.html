@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-6cb3fdec3a604e15d7c32437517db040.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-398b749543a727f3b66e7cafba33b310.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-6cb3fdec3a604e15d7c32437517db040.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-73406dad87c631b3ff16adcaa0b1ab21.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-d670e99d9fdfed706f1502bc605e1805.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-73406dad87c631b3ff16adcaa0b1ab21.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:description" content="Learn to contribute to open source projects with hands-on training in Git workflows, collaboration practices, and community engagement.">
 <meta name="twitter:image" content="https://chen.ist/academy/courses/open-source-development/assets/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-</head><body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+</head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -414,7 +414,10 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 }
 </script>
-<style>.m { --c: #F5A623; }</style>
+<style>
+.m { --c: #F5A623; }
+.quarto-title-block { display: none !important; }
+</style>
 
 
 <link rel="stylesheet" href="../../../assets/css/main.min.css">
@@ -428,8 +431,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
-    <img src="../../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
+    <img src="../../../assets/images/logo-light.svg" alt="" class="navbar-logo light-content">
+    <img src="../../../assets/images/logo-light.svg" alt="" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -585,35 +588,87 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#course-overview" id="toc-course-overview" class="nav-link active" data-scroll-target="#course-overview">Course Overview</a>
+  <ul class="collapse">
+  <li><a href="#next-cohort" id="toc-next-cohort" class="nav-link" data-scroll-target="#next-cohort">Next Cohort</a></li>
+  </ul></li>
+  <li><a href="#course-curriculum" id="toc-course-curriculum" class="nav-link" data-scroll-target="#course-curriculum">Course Curriculum</a>
+  <ul class="collapse">
+  <li><a href="#week-1-introduction-to-open-source" id="toc-week-1-introduction-to-open-source" class="nav-link" data-scroll-target="#week-1-introduction-to-open-source">Week 1: Introduction to Open Source</a></li>
+  <li><a href="#week-2-git-and-version-control-fundamentals" id="toc-week-2-git-and-version-control-fundamentals" class="nav-link" data-scroll-target="#week-2-git-and-version-control-fundamentals">Week 2: Git and Version Control Fundamentals</a></li>
+  <li><a href="#week-3-open-source-licensing-and-legal-aspects" id="toc-week-3-open-source-licensing-and-legal-aspects" class="nav-link" data-scroll-target="#week-3-open-source-licensing-and-legal-aspects">Week 3: Open Source Licensing and Legal Aspects</a></li>
+  <li><a href="#week-4-github-and-collaborative-workflows" id="toc-week-4-github-and-collaborative-workflows" class="nav-link" data-scroll-target="#week-4-github-and-collaborative-workflows">Week 4: GitHub and Collaborative Workflows</a></li>
+  <li><a href="#week-5-contributing-to-existing-projects" id="toc-week-5-contributing-to-existing-projects" class="nav-link" data-scroll-target="#week-5-contributing-to-existing-projects">Week 5: Contributing to Existing Projects</a></li>
+  <li><a href="#week-6-documentation-and-community" id="toc-week-6-documentation-and-community" class="nav-link" data-scroll-target="#week-6-documentation-and-community">Week 6: Documentation and Community</a></li>
+  <li><a href="#week-7-continuous-integration-and-testing" id="toc-week-7-continuous-integration-and-testing" class="nav-link" data-scroll-target="#week-7-continuous-integration-and-testing">Week 7: Continuous Integration and Testing</a></li>
+  <li><a href="#week-8-maintaining-your-own-project" id="toc-week-8-maintaining-your-own-project" class="nav-link" data-scroll-target="#week-8-maintaining-your-own-project">Week 8: Maintaining Your Own Project</a></li>
+  </ul></li>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link" data-scroll-target="#learning-outcomes">Learning Outcomes</a></li>
+  <li><a href="#instructors" id="toc-instructors" class="nav-link" data-scroll-target="#instructors">Instructors</a></li>
+  <li><a href="#assessment-and-certification" id="toc-assessment-and-certification" class="nav-link" data-scroll-target="#assessment-and-certification">Assessment and Certification</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  <li><a href="#download" id="toc-download" class="nav-link" data-scroll-target="#download">Download</a></li>
+  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
+<main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header">
-<h1 class="title display-7">Open Source Development</h1>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Open Source Development</h1>
 <p class="subtitle lead">Learn how to effectively contribute to open source projects</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">open-source</div>
+    <div class="quarto-category">git</div>
+    <div class="quarto-category">collaboration</div>
+    <div class="quarto-category">development</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Learn to contribute to open source projects with hands-on training in Git workflows, collaboration practices, and community engagement.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
 
 </header>
 
 
 <div class="m">
-
-<div class="m-hero">
-  <div class="container">
+<div class="m-hero" style="margin: -1em -1em 3rem; padding: 10rem 0 6rem;">
+  <div class="container" style="max-width: 700px;">
     <h1>Open Source <span class="gr">Development</span></h1>
     <p>Master the skills needed to contribute effectively to open source projects</p>
   </div>
 </div>
-
-<div class="container">
+</div>
 <section id="course-overview" class="level2">
-<h2 data-anchor-id="course-overview">Course Overview</h2>
+<h2 class="anchored" data-anchor-id="course-overview">Course Overview</h2>
 <p>Learn how to effectively contribute to open source projects, understand licensing, community guidelines, version control workflows, and collaborative development practices.</p>
 <p>This 8-week course provides a comprehensive introduction to open source development, giving you the skills and knowledge needed to navigate complex open source projects, make meaningful contributions, and potentially maintain your own open source initiatives.</p>
 <section id="next-cohort" class="level3">
-<h3 data-anchor-id="next-cohort">Next Cohort</h3>
+<h3 class="anchored" data-anchor-id="next-cohort">Next Cohort</h3>
 <ul>
 <li><strong>Start Date:</strong> November 1st, 2025</li>
 <li><strong>Format:</strong> Available in instructor-led online, self-paced, and in-person formats</li>
@@ -622,9 +677,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="course-curriculum" class="level2">
-<h2 data-anchor-id="course-curriculum">Course Curriculum</h2>
+<h2 class="anchored" data-anchor-id="course-curriculum">Course Curriculum</h2>
 <section id="week-1-introduction-to-open-source" class="level3">
-<h3 data-anchor-id="week-1-introduction-to-open-source">Week 1: Introduction to Open Source</h3>
+<h3 class="anchored" data-anchor-id="week-1-introduction-to-open-source">Week 1: Introduction to Open Source</h3>
 <ul>
 <li>What is open source software?</li>
 <li>History and philosophy of open source</li>
@@ -634,7 +689,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="week-2-git-and-version-control-fundamentals" class="level3">
-<h3 data-anchor-id="week-2-git-and-version-control-fundamentals">Week 2: Git and Version Control Fundamentals</h3>
+<h3 class="anchored" data-anchor-id="week-2-git-and-version-control-fundamentals">Week 2: Git and Version Control Fundamentals</h3>
 <ul>
 <li>Introduction to Git and distributed version control</li>
 <li>Basic Git commands and workflows</li>
@@ -644,7 +699,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="week-3-open-source-licensing-and-legal-aspects" class="level3">
-<h3 data-anchor-id="week-3-open-source-licensing-and-legal-aspects">Week 3: Open Source Licensing and Legal Aspects</h3>
+<h3 class="anchored" data-anchor-id="week-3-open-source-licensing-and-legal-aspects">Week 3: Open Source Licensing and Legal Aspects</h3>
 <ul>
 <li>Understanding open source licenses</li>
 <li>Copyleft vs permissive licenses</li>
@@ -654,7 +709,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="week-4-github-and-collaborative-workflows" class="level3">
-<h3 data-anchor-id="week-4-github-and-collaborative-workflows">Week 4: GitHub and Collaborative Workflows</h3>
+<h3 class="anchored" data-anchor-id="week-4-github-and-collaborative-workflows">Week 4: GitHub and Collaborative Workflows</h3>
 <ul>
 <li>GitHub platform deep dive</li>
 <li>Issues, pull requests, and code reviews</li>
@@ -664,7 +719,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="week-5-contributing-to-existing-projects" class="level3">
-<h3 data-anchor-id="week-5-contributing-to-existing-projects">Week 5: Contributing to Existing Projects</h3>
+<h3 class="anchored" data-anchor-id="week-5-contributing-to-existing-projects">Week 5: Contributing to Existing Projects</h3>
 <ul>
 <li>Finding projects to contribute to</li>
 <li>Understanding project guidelines and conventions</li>
@@ -674,7 +729,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="week-6-documentation-and-community" class="level3">
-<h3 data-anchor-id="week-6-documentation-and-community">Week 6: Documentation and Community</h3>
+<h3 class="anchored" data-anchor-id="week-6-documentation-and-community">Week 6: Documentation and Community</h3>
 <ul>
 <li>Writing effective documentation</li>
 <li>README files and project wikis</li>
@@ -684,7 +739,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="week-7-continuous-integration-and-testing" class="level3">
-<h3 data-anchor-id="week-7-continuous-integration-and-testing">Week 7: Continuous Integration and Testing</h3>
+<h3 class="anchored" data-anchor-id="week-7-continuous-integration-and-testing">Week 7: Continuous Integration and Testing</h3>
 <ul>
 <li>CI/CD in open source projects</li>
 <li>Writing effective tests</li>
@@ -694,7 +749,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="week-8-maintaining-your-own-project" class="level3">
-<h3 data-anchor-id="week-8-maintaining-your-own-project">Week 8: Maintaining Your Own Project</h3>
+<h3 class="anchored" data-anchor-id="week-8-maintaining-your-own-project">Week 8: Maintaining Your Own Project</h3>
 <ul>
 <li>Starting an open source project</li>
 <li>Attracting contributors</li>
@@ -705,7 +760,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="learning-outcomes" class="level2">
-<h2 data-anchor-id="learning-outcomes">Learning Outcomes</h2>
+<h2 class="anchored" data-anchor-id="learning-outcomes">Learning Outcomes</h2>
 <p>By the end of this course, you will be able to:</p>
 <ul>
 <li>Effectively use Git for collaboration and version control</li>
@@ -719,11 +774,11 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="instructors" class="level2">
-<h2 data-anchor-id="instructors">Instructors</h2>
+<h2 class="anchored" data-anchor-id="instructors">Instructors</h2>
 <p>Our instructors are experienced open source contributors and maintainers with extensive experience in both technical and community aspects of open source development.</p>
 </section>
 <section id="assessment-and-certification" class="level2">
-<h2 data-anchor-id="assessment-and-certification">Assessment and Certification</h2>
+<h2 class="anchored" data-anchor-id="assessment-and-certification">Assessment and Certification</h2>
 <ul>
 <li>Weekly coding assignments and quizzes</li>
 <li>Open source contribution portfolio</li>
@@ -732,28 +787,54 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="resources" class="level2">
-<h2 data-anchor-id="resources">Resources</h2>
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
 <ul>
 <li>Course materials will be provided through our learning platform</li>
 <li>Access to a dedicated GitHub organization for course projects</li>
 <li>Community forum for discussion and collaboration</li>
 <li>Office hours with instructors for personalized support</li>
 </ul>
-</section></div>
-
+</section>
+<section id="download" class="level2">
+<h2 class="anchored" data-anchor-id="download">Download</h2>
+<div style="margin: 2rem 0; padding: 1.5rem 2rem; background: rgba(129,189,74,0.06); border: 1px solid rgba(129,189,74,0.15); border-radius: 12px;">
+<p style="margin: 0 0 0.5rem; font-weight: 600;">
+Download Course Details
+</p>
+<p style="margin: 0 0 1rem; font-size: 0.9rem; color: #86868b;">
+Get the full course outline, pricing, and contact information as a PDF.
+</p>
+<p><a href="index.pdf" class="m-b" style="font-size: 0.9rem; padding: 0.6rem 1.5rem;">Download PDF</a></p>
+</div>
+</section>
+<section id="contact" class="level2">
+<h2 class="anchored" data-anchor-id="contact">Contact</h2>
+<p>Interested in enrolling or have questions about this course?</p>
+<ul>
+<li><strong>Email:</strong> <a href="mailto:office@chen.ist">office@chen.ist</a></li>
+<li><strong>Phone:</strong> Schedule a call to discuss your goals</li>
+<li><strong>Web:</strong> <a href="../../../booking/">Book a free consultation</a></li>
+</ul>
+<div class="m">
 <div class="m-cta">
   <div class="container">
-    <h2>Ready to get started?</h2>
+    <div class="m-d"></div>
+    <h2 class="anchored">Ready to get started?</h2>
     <p>Book a call to discuss your goals and find the right program.</p>
+    <a href="../../../booking/" class="m-b">Book a Call</a>
+    <div class="m-sm">
+      <i class="bi bi-check-circle-fill"></i> Free consultation &nbsp;
+      <i class="bi bi-check-circle-fill"></i> No commitment &nbsp;
+      <i class="bi bi-check-circle-fill"></i> Custom team pricing
+    </div>
   </div>
 </div>
-
 </div>
 
 
+</section>
 
-
-
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
