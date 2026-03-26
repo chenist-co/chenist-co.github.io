@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-6cb3fdec3a604e15d7c32437517db040.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-398b749543a727f3b66e7cafba33b310.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-6cb3fdec3a604e15d7c32437517db040.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-b37f6c1b9a99d16252d3ddd2c7074628.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -409,6 +409,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="../manifest.json">
 <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
@@ -689,6 +690,47 @@ document.addEventListener('DOMContentLoaded', function() {
 </header>
 
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "chen.ist Academy",
+  "url": "https://chen.ist/academy/",
+  "description": "Hands-on courses, trainings, and programs in cybersecurity, open-source, and digital skills.",
+  "areaServed": "EU",
+  "hasCourse": [
+    {
+      "@type": "Course",
+      "name": "Cybersecurity Fundamentals",
+      "url": "https://chen.ist/academy/courses.html",
+      "description": "Multi-week program covering cybersecurity essentials for professionals.",
+      "provider": {"@type": "Organization", "name": "chen.ist Academy"}
+    },
+    {
+      "@type": "Course",
+      "name": "Linux & Open-Source Administration",
+      "url": "https://chen.ist/academy/courses.html",
+      "description": "Practical Linux systems administration and open-source tooling.",
+      "provider": {"@type": "Organization", "name": "chen.ist Academy"}
+    },
+    {
+      "@type": "Course",
+      "name": "NIS2 Compliance Training",
+      "url": "https://chen.ist/academy/trainings.html",
+      "description": "Intensive hands-on workshop on EU NIS2 directive compliance.",
+      "provider": {"@type": "Organization", "name": "chen.ist Academy"}
+    },
+    {
+      "@type": "Course",
+      "name": "Privacy & GDPR",
+      "url": "https://chen.ist/academy/courses.html",
+      "description": "Data protection and GDPR compliance for technical teams.",
+      "provider": {"@type": "Organization", "name": "chen.ist Academy"}
+    }
+  ]
+}
+</script>
+
 <div class="m">
 
 <!-- HERO -->
@@ -888,31 +930,31 @@ document.addEventListener('DOMContentLoaded', function() {
     <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:1.5rem;">
       <div style="padding:2.5rem 2rem; border-radius:20px; border:1.5px solid rgba(245,166,35,0.1); text-align:center;">
         <div style="font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:#F5A623; margin-bottom:1rem;">Courses</div>
-        <div style="font-size:2.5rem; font-weight:700; color:#F5A623; line-height:1;">from EUR 499</div>
-        <div style="font-size:0.85rem; color:#86868b; margin-top:0.5rem;">per participant</div>
-        <div style="font-size:0.82rem; color:#86868b; margin-top:1rem;">4-12 weeks · Certificate included</div>
+        <div style="font-size:2rem; font-weight:700; color:#F5A623; line-height:1;">4–12 weeks</div>
+        <div style="font-size:0.85rem; color:#86868b; margin-top:0.5rem;">Certificate included</div>
+        <div style="font-size:0.82rem; color:#86868b; margin-top:1rem;">Multi-week deep dives</div>
         <a href="../academy/courses.html" class="m-b" style="background:#F5A623; margin-top:1.5rem; font-size:0.9rem; padding:0.6rem 1.5rem; display:inline-block;">View courses</a>
       </div>
       <div style="padding:2.5rem 2rem; border-radius:20px; border:1.5px solid rgba(245,166,35,0.15); text-align:center; position:relative;">
         <div style="position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:#F5A623; color:#fff; font-size:0.65rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; padding:0.25rem 0.75rem; border-radius:980px;">Most popular</div>
         <div style="font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:#F5A623; margin-bottom:1rem;">Trainings</div>
-        <div style="font-size:2.5rem; font-weight:700; color:#F5A623; line-height:1;">from EUR 299</div>
-        <div style="font-size:0.85rem; color:#86868b; margin-top:0.5rem;">per participant</div>
-        <div style="font-size:0.82rem; color:#86868b; margin-top:1rem;">1-2 days · 80% hands-on</div>
+        <div style="font-size:2rem; font-weight:700; color:#F5A623; line-height:1;">1–2 days</div>
+        <div style="font-size:0.85rem; color:#86868b; margin-top:0.5rem;">80% hands-on</div>
+        <div style="font-size:0.82rem; color:#86868b; margin-top:1rem;">Intensive workshops</div>
         <a href="../academy/trainings.html" class="m-b" style="background:#F5A623; margin-top:1.5rem; font-size:0.9rem; padding:0.6rem 1.5rem; display:inline-block;">View trainings</a>
       </div>
       <div style="padding:2.5rem 2rem; border-radius:20px; border:1.5px solid rgba(245,166,35,0.1); text-align:center;">
         <div style="font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:#F5A623; margin-bottom:1rem;">Custom / Team</div>
-        <div style="font-size:2.5rem; font-weight:700; color:#F5A623; line-height:1;">Let's talk</div>
-        <div style="font-size:0.85rem; color:#86868b; margin-top:0.5rem;">tailored to your team</div>
-        <div style="font-size:0.82rem; color:#86868b; margin-top:1rem;">On-site or online · Custom scenarios</div>
+        <div style="font-size:2rem; font-weight:700; color:#F5A623; line-height:1;">Tailored</div>
+        <div style="font-size:0.85rem; color:#86868b; margin-top:0.5rem;">for your organization</div>
+        <div style="font-size:0.82rem; color:#86868b; margin-top:1rem;">On-site or online</div>
         <a href="../booking/" class="m-b" style="background:#F5A623; margin-top:1.5rem; font-size:0.9rem; padding:0.6rem 1.5rem; display:inline-block;">Book a call</a>
       </div>
     </div>
     <div style="text-align:center; margin-top:2rem; font-size:0.85rem; color:#86868b;">
-      <i class="bi bi-check-circle-fill" style="color:#F5A623;"></i> 10%+ group discount &nbsp;
-      <i class="bi bi-check-circle-fill" style="color:#F5A623;"></i> Early bird pricing &nbsp;
-      <i class="bi bi-check-circle-fill" style="color:#F5A623;"></i> Invoice payment available
+      <i class="bi bi-check-circle-fill" style="color:#F5A623;"></i> Group discounts &nbsp;
+      <i class="bi bi-check-circle-fill" style="color:#F5A623;"></i> Early bird available &nbsp;
+      <i class="bi bi-check-circle-fill" style="color:#F5A623;"></i> Invoice payment
     </div>
   </div>
 </div>

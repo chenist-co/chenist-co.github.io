@@ -43,9 +43,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-6cb3fdec3a604e15d7c32437517db040.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-398b749543a727f3b66e7cafba33b310.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-6cb3fdec3a604e15d7c32437517db040.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-b37f6c1b9a99d16252d3ddd2c7074628.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -406,6 +406,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="../manifest.json">
 <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
@@ -686,18 +687,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="m">
 
-<div class="m-hero" style="min-height:80vh;display:flex;align-items:center;">
-  <div class="container" style="text-align:center;">
-    <p style="font-size:8rem;font-weight:800;line-height:1;margin-bottom:0.25em;" class="gr">404</p>
-    <h1>Seite nicht gefunden</h1>
-    <p>Die Seite, die Sie suchen, wurde verschoben, entfernt oder hat nie existiert.<br>Hier sind einige Startpunkte.</p>
+<div class="ev-hero" style="min-height:80vh;display:flex;align-items:center;background:#000 !important;">
+  <div class="ev-hero-bg" style="background:linear-gradient(135deg,rgba(10,10,10,0.95),rgba(50,54,66,0.9));"></div>
+  <div class="ev-hero-content" style="text-align:center;">
+    <p style="font-size:8rem;font-weight:800;line-height:1;margin-bottom:0.25em;background:linear-gradient(135deg,var(--gr),#a8e063);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">404</p>
+    <h1 style="color:#fff !important;">Seite nicht gefunden</h1>
+    <p style="max-width:500px;margin:0 auto;">Die Seite, die Sie suchen, wurde verschoben, entfernt oder hat nie existiert.</p>
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:2.5rem;">
-      <a href="../de/" class="m-b">Startseite</a>
-      <a href="../de/services/" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Dienstleistungen</a>
-      <a href="../de/academy/" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Academy</a>
-      <a href="../de/contact.html" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Kontakt</a>
+      <a href="../de/" class="ev-btn">Startseite</a>
+      <a href="../de/services/" class="ev-btn-ghost" style="border-color:rgba(255,255,255,0.3);color:#fff !important;">Dienstleistungen</a>
+      <a href="../de/academy/" class="ev-btn-ghost" style="border-color:rgba(255,255,255,0.3);color:#fff !important;">Academy</a>
+      <a href="../de/contact.html" class="ev-btn-ghost" style="border-color:rgba(255,255,255,0.3);color:#fff !important;">Kontakt</a>
     </div>
-    <p style="margin-top:2rem;opacity:.7;">Oder <a href="../de/booking/" style="color:var(--gr);">buchen Sie ein Gespräch</a> und wir weisen Ihnen den richtigen Weg.</p>
+    <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.08);">
+      <p style="font-size:0.85rem;color:rgba(255,255,255,0.4) !important;margin-bottom:1rem;">Suchen Sie etwas Bestimmtes?</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.5rem;font-size:0.85rem;">
+        <a href="../de/services/nis2/" style="color:#81BD4A !important;">NIS2</a> ·
+        <a href="../de/security/" style="color:#81BD4A !important;">Sicherheit</a> ·
+        <a href="../de/services/cloud/" style="color:#81BD4A !important;">Cloud</a> ·
+        <a href="../de/digital/" style="color:#81BD4A !important;">Infrastruktur</a> ·
+        <a href="../de/booking/" style="color:#81BD4A !important;">Gespräch buchen</a>
+      </div>
+    </div>
   </div>
 </div>
 
