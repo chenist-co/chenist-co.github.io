@@ -5,8 +5,12 @@ html[data-bs-theme="dark"] body,body.quarto-dark{background-color:#0e0e10 !impor
 /* Make all structural containers transparent so body bg shows through */
 html[data-bs-theme="dark"] main,html[data-bs-theme="dark"] main.content,html[data-bs-theme="dark"] #quarto-content,html[data-bs-theme="dark"] .page-columns,html[data-bs-theme="dark"] .page-rows-contents,html[data-bs-theme="dark"] .container-fluid,html[data-bs-theme="dark"] .quarto-container,html[data-bs-theme="dark"] .m,html[data-bs-theme="dark"] .m-hero,html[data-bs-theme="dark"] .m-listing-hero,html[data-bs-theme="dark"] .m-listing-intro,html[data-bs-theme="dark"] .quarto-title-block,html[data-bs-theme="dark"] #title-block-header{background-color:transparent !important;}
 /* Sections: .m-s transparent (body bg), .m-bg slightly lighter with SVG pattern */
-html[data-bs-theme="dark"] .m-s{background-color:transparent !important;}
-html[data-bs-theme="dark"] .m-cta{background-color:transparent !important;}
+html[data-bs-theme="dark"] .m-s{background-color:transparent !important;color:#e5e5e5 !important;}
+html[data-bs-theme="dark"] .m-s h2,html[data-bs-theme="dark"] .m-s h3{color:#e5e5e5 !important;}
+html[data-bs-theme="dark"] .m-s p,html[data-bs-theme="dark"] .m-s .sub{color:rgba(255,255,255,0.5) !important;}
+html[data-bs-theme="dark"] .m-cta{background-color:transparent !important;color:#e5e5e5 !important;}
+html[data-bs-theme="dark"] .m-cta h2{color:#e5e5e5 !important;}
+html[data-bs-theme="dark"] .m-cta p{color:rgba(255,255,255,0.5) !important;}
 html[data-bs-theme="dark"] .m-bg{background-color:#151517 !important;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 200 200'%3E%3Crect fill='none' width='200' height='200'/%3E%3Cg fill='none' stroke='%2381BD4A' stroke-width='1' stroke-opacity='0.04'%3E%3Crect x='-40' y='40' width='75' height='75'/%3E%3Crect x='40' width='75' height='75'/%3E%3Crect x='80' y='80' width='75' height='75'/%3E%3Crect x='120' y='-40' width='75' height='75'/%3E%3Crect y='120' width='75' height='75'/%3E%3Crect x='160' y='40' width='75' height='75'/%3E%3C/g%3E%3C/svg%3E") !important;background-size:200px 200px !important;}
 /* Cards and Bootstrap components */
 html[data-bs-theme="dark"] .card,html[data-bs-theme="dark"] .card-body,html[data-bs-theme="dark"] .card-header,html[data-bs-theme="dark"] .card-footer{background-color:rgba(255,255,255,0.02) !important;border-color:rgba(255,255,255,0.06) !important;}
