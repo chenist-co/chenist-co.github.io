@@ -168,7 +168,7 @@ html[data-bs-theme="dark"] .page-layout-article .card{background:#1a1a1d !import
 .mb-blog{margin-bottom:10rem !important;}
 
 /* Breadcrumb + Language Bar */
-.path-bar{background:#1a1a1d;border-bottom:1px solid rgba(255,255,255,0.04);padding:0.4rem 0;font-size:0.75rem;position:sticky;top:56px;z-index:1030;}
+.path-bar{background:#1a1a1d;border-bottom:1px solid rgba(255,255,255,0.04);padding:0.4rem 0;font-size:0.75rem;position:fixed;top:56px;left:0;right:0;z-index:1030;}
 .path-bar-inner{max-width:1200px;margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;align-items:center;}
 .path-crumbs{display:flex;align-items:center;gap:0.4rem;color:rgba(255,255,255,0.35);}
 .path-crumbs a{color:rgba(255,255,255,0.45);text-decoration:none;transition:color 0.15s;}
@@ -183,3 +183,5 @@ html[data-bs-theme="dark"] .page-layout-article .card{background:#1a1a1d !import
 .path-bar{margin-top:0 !important;border-top:none !important;}
 #quarto-header{margin-bottom:0 !important;padding-bottom:0 !important;}
 .navbar{margin-bottom:0 !important;}
+body.nav-fixed #quarto-content{padding-top:88px !important;}
+.page-navbar.page-layout-custom #quarto-content{padding-top:0 !important;}
