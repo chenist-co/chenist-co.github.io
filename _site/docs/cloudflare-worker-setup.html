@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>cloudflare-worker-setup – chen.ist</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/images/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a592c5a32ddb2bbfd9fa55d2db6a7c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-29f4aea09a2439b849a9d23a02a83b44.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-a592c5a32ddb2bbfd9fa55d2db6a7c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<meta property="og:title" content="chen.ist">
+<meta property="og:description" content="Innovative technology &amp; education">
+<meta property="og:image" content="https://chen.ist/docs/assets/images/og-image.png">
+<meta property="og:site_name" content="chen.ist">
+<meta name="twitter:title" content="chen.ist">
+<meta name="twitter:description" content="Innovative technology &amp; education">
+<meta name="twitter:image" content="https://chen.ist/docs/assets/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+</head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script><a href="#main-content" class="skip-link">Skip to main content</a>
+<style>
+/* Corporate navbar — solid dark, structured, professional */
+.navbar {
+  background: #0a0a0a !important;
+  border-bottom: 1px solid rgba(129,189,74,0.15);
+  padding: 0 !important;
+  font-size: 0.82rem;
+  min-height: 56px;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  height: 56px;
+}
+.navbar-brand-container { display: flex; align-items: center; }
+.navbar-brand { display: flex; align-items: center; gap: 0.5rem; }
+.navbar-brand .navbar-title {
+  display: inline-block;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: 'Source Code Pro', monospace;
+}
+.navbar-brand .brand-dot { color: #81BD4A; }
+.navbar .nav-link {
+  color: rgba(255,255,255,0.65) !important;
+  font-size: 0.78rem !important;
+  font-weight: 500;
+  padding: 0.5rem 0.85rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: color 0.15s;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active { color: #81BD4A !important; }
+.navbar .dropdown-menu {
+  background: #0a0a0a;
+  border: 1px solid rgba(129,189,74,0.12);
+  border-radius: 8px;
+  padding: 0.4rem;
+  margin-top: 0;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+.navbar .dropdown-item {
+  color: rgba(255,255,255,0.65);
+  font-size: 0.78rem;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 0.45rem 0.85rem;
+  letter-spacing: 0.02em;
+}
+.navbar .dropdown-item:hover {
+  background: rgba(129,189,74,0.1);
+  color: #81BD4A;
+}
+.navbar .quarto-navigation-tool { color: rgba(255,255,255,0.5) !important; }
+.navbar .quarto-navigation-tool:hover { color: #81BD4A !important; }
+.navbar .quarto-color-scheme-toggle { color: rgba(255,255,255,0.5) !important; }
+.navbar .quarto-color-scheme-toggle:hover { color: #81BD4A !important; }
+
+@media (max-width: 991px) {
+  .navbar .nav-link { font-size: 0.75rem !important; padding: 0.4rem 0.6rem !important; }
+}
+@media (max-width: 767.98px) {
+  .navbar-brand .navbar-title { font-size: 0.9rem; }
+  .navbar .navbar-collapse {
+    background: #0a0a0a;
+    border: 1px solid rgba(129,189,74,0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+  }
+  .navbar .nav-link {
+    text-transform: none;
+    font-size: 0.85rem !important;
+    padding: 0.5rem 0.75rem !important;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var navbarBrand = document.querySelector('.navbar-brand');
+  if (navbarBrand) {
+    var titleSpan = document.createElement('span');
+    titleSpan.className = 'navbar-title';
+    titleSpan.textContent = 'CHEN';
+    var dot = document.createElement('span');
+    dot.className = 'brand-dot';
+    dot.textContent = '.';
+    var ist = document.createTextNode('IST');
+    titleSpan.appendChild(dot);
+    titleSpan.appendChild(ist);
+    navbarBrand.appendChild(titleSpan);
+  }
+});
+</script>
+<script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<link rel="preload" href="../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
+<meta name="view-transition" content="same-origin">
+<noscript><style>.m-s,.m-bg,.m-cta,.m-r,.m-n,.hp-sec,.hp-stats,.ev-card,.ev-past,.m-t{opacity:1!important;transform:none!important;}</style></noscript>
+<link rel="dns-prefetch" href="https://cal.com">
+<link rel="dns-prefetch" href="https://app.cal.com">
+<link rel="preconnect" href="https://cal.com" crossorigin="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "chen.ist",
+  "url": "https://chen.ist",
+  "logo": "https://chen.ist/assets/images/logo-light.svg",
+  "description": "Digital infrastructure, cybersecurity, cloud services, and technology education for modern organizations.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Str. Filantropiei, 1-3",
+    "addressLocality": "Craiova",
+    "postalCode": "200143",
+    "addressCountry": "RO"
+  },
+  "email": "office@chen.ist",
+  "sameAs": [
+    "https://github.com/chenist",
+    "https://linkedin.com/in/chenistsec",
+    "https://twitter.com/chenistsec"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Infrastructure", "url": "https://chen.ist/digital/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "NIS2 Compliance", "url": "https://chen.ist/services/nis2/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cybersecurity", "url": "https://chen.ist/services/cybersecurity/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cloud Services", "url": "https://chen.ist/services/cloud/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Resilience", "url": "https://chen.ist/services/digital-resilience/"}}
+    ]
+  }
+}
+</script>
+
+
+<link rel="stylesheet" href="../assets/css/main.min.css">
+<link rel="stylesheet" href="../assets/css/styles.css">
+<link rel="stylesheet" href="../assets/css/modern.css">
+
+
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-services" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Services</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-services">    
+        <li>
+    <a class="dropdown-item" href="../services/index.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../security/index.html">
+ <span class="dropdown-text">Security</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../digital/index.html">
+ <span class="dropdown-text">Digital Infrastructure</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../services/nis2/index.html">
+ <span class="dropdown-text">NIS2 Compliance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../services/cybersecurity/index.html">
+ <span class="dropdown-text">Cybersecurity</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../services/cloud/index.html">
+ <span class="dropdown-text">Cloud Services</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../services/digital-resilience/index.html">
+ <span class="dropdown-text">Digital Resilience</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-academy" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Academy</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-academy">    
+        <li>
+    <a class="dropdown-item" href="../academy/overview.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/courses.html">
+ <span class="dropdown-text">Courses</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/trainings.html">
+ <span class="dropdown-text">Trainings</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/microlearning.html">
+ <span class="dropdown-text">Microlearning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/programs/index.html">
+ <span class="dropdown-text">Programs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/events.html">
+ <span class="dropdown-text">Events</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/webinars.html">
+ <span class="dropdown-text">Webinars</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/computerclub.html">
+ <span class="dropdown-text">Computer Club</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/partnerships.html">
+ <span class="dropdown-text">Partnerships</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources/index.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../about/index.html">
+ <span class="dropdown-text">About</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/csr.html">
+ <span class="dropdown-text">CSR</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/community.html">
+ <span class="dropdown-text">Community</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">🌐</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-">    
+        <li>
+    <a class="dropdown-item" href="../#lang-en">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../#lang-ro">
+ <span class="dropdown-text">Română</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../#lang-sv">
+ <span class="dropdown-text">Svenska</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../#lang-de">
+ <span class="dropdown-text">Deutsch</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#cloudflare-worker-subdomain-based-language-routing-for-chen.ist" id="toc-cloudflare-worker-subdomain-based-language-routing-for-chen.ist" class="nav-link active" data-scroll-target="#cloudflare-worker-subdomain-based-language-routing-for-chen.ist">Cloudflare Worker: Subdomain-Based Language Routing for chen.ist</a>
+  <ul class="collapse">
+  <li><a href="#cloudflare-worker-script" id="toc-cloudflare-worker-script" class="nav-link" data-scroll-target="#cloudflare-worker-script">1. Cloudflare Worker Script</a></li>
+  <li><a href="#dns-setup-cloudflare-dashboard" id="toc-dns-setup-cloudflare-dashboard" class="nav-link" data-scroll-target="#dns-setup-cloudflare-dashboard">2. DNS Setup (Cloudflare Dashboard)</a>
+  <ul class="collapse">
+  <li><a href="#verify-dns-records" id="toc-verify-dns-records" class="nav-link" data-scroll-target="#verify-dns-records">Verify DNS records</a></li>
+  </ul></li>
+  <li><a href="#create-the-worker-cloudflare-dashboard" id="toc-create-the-worker-cloudflare-dashboard" class="nav-link" data-scroll-target="#create-the-worker-cloudflare-dashboard">3. Create the Worker (Cloudflare Dashboard)</a>
+  <ul class="collapse">
+  <li><a href="#step-1-navigate-to-workers" id="toc-step-1-navigate-to-workers" class="nav-link" data-scroll-target="#step-1-navigate-to-workers">Step 1: Navigate to Workers</a></li>
+  <li><a href="#step-2-configure-the-worker" id="toc-step-2-configure-the-worker" class="nav-link" data-scroll-target="#step-2-configure-the-worker">Step 2: Configure the Worker</a></li>
+  <li><a href="#step-3-alternatively-deploy-via-wrangler-cli" id="toc-step-3-alternatively-deploy-via-wrangler-cli" class="nav-link" data-scroll-target="#step-3-alternatively-deploy-via-wrangler-cli">Step 3: Alternatively, deploy via Wrangler CLI</a></li>
+  </ul></li>
+  <li><a href="#worker-route-configuration" id="toc-worker-route-configuration" class="nav-link" data-scroll-target="#worker-route-configuration">4. Worker Route Configuration</a>
+  <ul class="collapse">
+  <li><a href="#add-routes-via-dashboard" id="toc-add-routes-via-dashboard" class="nav-link" data-scroll-target="#add-routes-via-dashboard">Add routes via Dashboard</a></li>
+  <li><a href="#alternatively-add-routes-via-api" id="toc-alternatively-add-routes-via-api" class="nav-link" data-scroll-target="#alternatively-add-routes-via-api">Alternatively, add routes via API</a></li>
+  </ul></li>
+  <li><a href="#testing" id="toc-testing" class="nav-link" data-scroll-target="#testing">5. Testing</a>
+  <ul class="collapse">
+  <li><a href="#quick-smoke-test-with-curl" id="toc-quick-smoke-test-with-curl" class="nav-link" data-scroll-target="#quick-smoke-test-with-curl">Quick smoke test with curl</a></li>
+  <li><a href="#what-to-verify" id="toc-what-to-verify" class="nav-link" data-scroll-target="#what-to-verify">What to verify</a></li>
+  <li><a href="#browser-testing" id="toc-browser-testing" class="nav-link" data-scroll-target="#browser-testing">Browser testing</a></li>
+  <li><a href="#common-issues" id="toc-common-issues" class="nav-link" data-scroll-target="#common-issues">Common issues</a></li>
+  </ul></li>
+  <li><a href="#optional-asset-handling" id="toc-optional-asset-handling" class="nav-link" data-scroll-target="#optional-asset-handling">6. Optional: Asset Handling</a>
+  <ul class="collapse">
+  <li><a href="#relative-links-between-pages" id="toc-relative-links-between-pages" class="nav-link" data-scroll-target="#relative-links-between-pages">Relative links between pages</a></li>
+  </ul></li>
+  <li><a href="#github-pages-configuration" id="toc-github-pages-configuration" class="nav-link" data-scroll-target="#github-pages-configuration">7. GitHub Pages Configuration</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+
+<section id="cloudflare-worker-subdomain-based-language-routing-for-chen.ist" class="level1">
+<h1>Cloudflare Worker: Subdomain-Based Language Routing for chen.ist</h1>
+<p>This document describes how to set up subdomain-based language routing so that:</p>
+<ul>
+<li><code>chen.ist</code> serves English content (root <code>/</code>)</li>
+<li><code>ro.chen.ist</code> serves Romanian content from <code>/ro/*</code></li>
+<li><code>de.chen.ist</code> serves German content from <code>/de/*</code></li>
+<li><code>se.chen.ist</code> serves Swedish content from <code>/sv/*</code></li>
+</ul>
+<p>The site is hosted on GitHub Pages at <code>chenist-co.github.io</code> with custom domain <code>chen.ist</code>.</p>
+<hr>
+<section id="cloudflare-worker-script" class="level2">
+<h2 class="anchored" data-anchor-id="cloudflare-worker-script">1. Cloudflare Worker Script</h2>
+<p>Create a Worker named <code>lang-router</code> with the following script:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"> * Cloudflare Worker: Subdomain-based language routing for chen.ist</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"> * Routes language subdomains to the corresponding path prefix on the origin.</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"> *   ro.chen.ist  -&gt;  chen.ist/ro/</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"> *   de.chen.ist  -&gt;  chen.ist/de/</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"> *   se.chen.ist  -&gt;  chen.ist/sv/   (Swedish subdomain uses /sv/ path)</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"> * All other requests (including chen.ist itself) pass through unchanged.</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> SUBDOMAIN_TO_PATH <span class="op">=</span> {</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">'ro'</span><span class="op">:</span> <span class="st">'/ro'</span><span class="op">,</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">'de'</span><span class="op">:</span> <span class="st">'/de'</span><span class="op">,</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="st">'se'</span><span class="op">:</span> <span class="st">'/sv'</span><span class="op">,</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> ORIGIN <span class="op">=</span> <span class="st">'https://chen.ist'</span><span class="op">;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">addEventListener</span>(<span class="st">'fetch'</span><span class="op">,</span> (<span class="bu">event</span>) <span class="kw">=&gt;</span> {</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="bu">event</span><span class="op">.</span><span class="fu">respondWith</span>(<span class="fu">handleRequest</span>(<span class="bu">event</span><span class="op">.</span><span class="at">request</span>))<span class="op">;</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="kw">async</span> <span class="kw">function</span> <span class="fu">handleRequest</span>(request) {</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> url <span class="op">=</span> <span class="kw">new</span> <span class="fu">URL</span>(request<span class="op">.</span><span class="at">url</span>)<span class="op">;</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> hostname <span class="op">=</span> url<span class="op">.</span><span class="at">hostname</span><span class="op">;</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Extract subdomain: "ro.chen.ist" -&gt; "ro"</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> parts <span class="op">=</span> hostname<span class="op">.</span><span class="fu">split</span>(<span class="st">'.'</span>)<span class="op">;</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> subdomain <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (parts<span class="op">.</span><span class="at">length</span> <span class="op">===</span> <span class="dv">3</span> <span class="op">&amp;&amp;</span> parts[<span class="dv">1</span>] <span class="op">===</span> <span class="st">'chen'</span> <span class="op">&amp;&amp;</span> parts[<span class="dv">2</span>] <span class="op">===</span> <span class="st">'ist'</span>) {</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    subdomain <span class="op">=</span> parts[<span class="dv">0</span>]<span class="op">;</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  <span class="co">// If no language subdomain match, pass through unchanged</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> pathPrefix <span class="op">=</span> subdomain <span class="op">?</span> SUBDOMAIN_TO_PATH[subdomain] <span class="op">:</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>pathPrefix) {</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">fetch</span>(request)<span class="op">;</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Build the rewritten URL</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>  <span class="co">// e.g., ro.chen.ist/services.html -&gt; chen.ist/ro/services.html</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> path <span class="op">=</span> url<span class="op">.</span><span class="at">pathname</span><span class="op">;</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Prevent double-prefixing if someone visits ro.chen.ist/ro/something</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (path<span class="op">.</span><span class="fu">startsWith</span>(pathPrefix <span class="op">+</span> <span class="st">'/'</span>) <span class="op">||</span> path <span class="op">===</span> pathPrefix) {</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">fetch</span>(request)<span class="op">;</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Append path prefix to the origin</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> newPath <span class="op">=</span> pathPrefix <span class="op">+</span> (path <span class="op">===</span> <span class="st">'/'</span> <span class="op">?</span> <span class="st">'/index.html'</span> <span class="op">:</span> path)<span class="op">;</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> originUrl <span class="op">=</span> <span class="kw">new</span> <span class="fu">URL</span>(newPath<span class="op">,</span> ORIGIN)<span class="op">;</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>  originUrl<span class="op">.</span><span class="at">search</span> <span class="op">=</span> url<span class="op">.</span><span class="at">search</span><span class="op">;</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Fetch from origin with the rewritten URL</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> originRequest <span class="op">=</span> <span class="kw">new</span> <span class="fu">Request</span>(originUrl<span class="op">.</span><span class="fu">toString</span>()<span class="op">,</span> {</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>    <span class="dt">method</span><span class="op">:</span> request<span class="op">.</span><span class="at">method</span><span class="op">,</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>    <span class="dt">headers</span><span class="op">:</span> request<span class="op">.</span><span class="at">headers</span><span class="op">,</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>    <span class="dt">redirect</span><span class="op">:</span> <span class="st">'follow'</span><span class="op">,</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> response <span class="op">=</span> <span class="cf">await</span> <span class="fu">fetch</span>(originRequest<span class="op">,</span> {</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>    <span class="dt">cf</span><span class="op">:</span> {</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>      <span class="co">// Cache on Cloudflare edge</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>      <span class="dt">cacheTtl</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>      <span class="dt">cacheEverything</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>  <span class="co">// If the direct path fails, try appending /index.html for directory URLs</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (response<span class="op">.</span><span class="at">status</span> <span class="op">===</span> <span class="dv">404</span> <span class="op">&amp;&amp;</span> <span class="op">!</span>path<span class="op">.</span><span class="fu">includes</span>(<span class="st">'.'</span>) <span class="op">&amp;&amp;</span> <span class="op">!</span>path<span class="op">.</span><span class="fu">endsWith</span>(<span class="st">'/'</span>)) {</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> dirUrl <span class="op">=</span> <span class="kw">new</span> <span class="fu">URL</span>(pathPrefix <span class="op">+</span> path <span class="op">+</span> <span class="st">'/index.html'</span><span class="op">,</span> ORIGIN)<span class="op">;</span></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>    dirUrl<span class="op">.</span><span class="at">search</span> <span class="op">=</span> url<span class="op">.</span><span class="at">search</span><span class="op">;</span></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> dirRequest <span class="op">=</span> <span class="kw">new</span> <span class="fu">Request</span>(dirUrl<span class="op">.</span><span class="fu">toString</span>()<span class="op">,</span> {</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>      <span class="dt">method</span><span class="op">:</span> request<span class="op">.</span><span class="at">method</span><span class="op">,</span></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>      <span class="dt">headers</span><span class="op">:</span> request<span class="op">.</span><span class="at">headers</span><span class="op">,</span></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>      <span class="dt">redirect</span><span class="op">:</span> <span class="st">'follow'</span><span class="op">,</span></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> dirResponse <span class="op">=</span> <span class="cf">await</span> <span class="fu">fetch</span>(dirRequest<span class="op">,</span> {</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>      <span class="dt">cf</span><span class="op">:</span> { <span class="dt">cacheTtl</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">cacheEverything</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (dirResponse<span class="op">.</span><span class="at">status</span> <span class="op">===</span> <span class="dv">200</span>) {</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>      response <span class="op">=</span> dirResponse<span class="op">;</span></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Clone response and set headers for proper caching and CORS</span></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> newResponse <span class="op">=</span> <span class="kw">new</span> <span class="fu">Response</span>(response<span class="op">.</span><span class="at">body</span><span class="op">,</span> response)<span class="op">;</span></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Add canonical hint so search engines know the relationship</span></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (response<span class="op">.</span><span class="at">status</span> <span class="op">===</span> <span class="dv">200</span>) {</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>    newResponse<span class="op">.</span><span class="at">headers</span><span class="op">.</span><span class="fu">set</span>(<span class="st">'X-Robots-Tag'</span><span class="op">,</span> <span class="st">'noindex'</span>)<span class="op">;</span></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Optional: if you want search engines to index subdomains instead,</span></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>    <span class="co">// remove the line above and handle canonical tags in your HTML.</span></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> newResponse<span class="op">;</span></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<blockquote class="blockquote">
+<p><strong>Note on X-Robots-Tag</strong>: The script sets <code>X-Robots-Tag: noindex</code> on subdomain responses by default to avoid duplicate content issues with search engines (since the same content exists at both <code>chen.ist/ro/</code> and <code>ro.chen.ist/</code>). Remove this header if you want subdomains to be indexed instead and plan to add proper <code>&lt;link rel="canonical"&gt;</code> tags in your HTML.</p>
+</blockquote>
+<hr>
+</section>
+<section id="dns-setup-cloudflare-dashboard" class="level2">
+<h2 class="anchored" data-anchor-id="dns-setup-cloudflare-dashboard">2. DNS Setup (Cloudflare Dashboard)</h2>
+<p>Go to <strong>Cloudflare Dashboard &gt; chen.ist &gt; DNS &gt; Records</strong> and add these CNAME records:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Name</th>
+<th>Target</th>
+<th>Proxy status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CNAME</td>
+<td><code>ro</code></td>
+<td><code>chen.ist</code></td>
+<td>Proxied</td>
+</tr>
+<tr class="even">
+<td>CNAME</td>
+<td><code>de</code></td>
+<td><code>chen.ist</code></td>
+<td>Proxied</td>
+</tr>
+<tr class="odd">
+<td>CNAME</td>
+<td><code>se</code></td>
+<td><code>chen.ist</code></td>
+<td>Proxied</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Important</strong>: All three records must be set to <strong>Proxied</strong> (orange cloud icon), not DNS-only. The Worker only runs on proxied traffic.</p>
+<p>The existing DNS records for <code>chen.ist</code> itself (pointing to GitHub Pages) should remain unchanged.</p>
+<section id="verify-dns-records" class="level3">
+<h3 class="anchored" data-anchor-id="verify-dns-records">Verify DNS records</h3>
+<p>After adding, your DNS records should include at minimum:</p>
+<pre><code>chen.ist        CNAME   chenist-co.github.io    Proxied
+ro.chen.ist     CNAME   chen.ist                Proxied
+de.chen.ist     CNAME   chen.ist                Proxied
+se.chen.ist     CNAME   chen.ist                Proxied</code></pre>
+<hr>
+</section>
+</section>
+<section id="create-the-worker-cloudflare-dashboard" class="level2">
+<h2 class="anchored" data-anchor-id="create-the-worker-cloudflare-dashboard">3. Create the Worker (Cloudflare Dashboard)</h2>
+<section id="step-1-navigate-to-workers" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-navigate-to-workers">Step 1: Navigate to Workers</h3>
+<ol type="1">
+<li>Log in to the <a href="https://dash.cloudflare.com">Cloudflare Dashboard</a>.</li>
+<li>Select the <strong>chen.ist</strong> domain from your account.</li>
+<li>In the left sidebar, click <strong>Workers &amp; Pages</strong>.</li>
+<li>Click <strong>Create</strong>.</li>
+<li>Select <strong>“Create Worker”</strong>.</li>
+</ol>
+</section>
+<section id="step-2-configure-the-worker" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-configure-the-worker">Step 2: Configure the Worker</h3>
+<ol type="1">
+<li>Name the Worker: <code>lang-router</code></li>
+<li>Click <strong>Deploy</strong> to create it with the default “Hello World” code.</li>
+<li>After deployment, click <strong>Edit Code</strong>.</li>
+<li>Replace the entire contents with the Worker script from Section 1 above.</li>
+<li>Click <strong>Save and Deploy</strong>.</li>
+</ol>
+</section>
+<section id="step-3-alternatively-deploy-via-wrangler-cli" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-alternatively-deploy-via-wrangler-cli">Step 3: Alternatively, deploy via Wrangler CLI</h3>
+<p>If you prefer the command line:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install Wrangler if not already installed</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-g</span> wrangler</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Authenticate</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">wrangler</span> login</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the project directory</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> cloudflare-worker <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> cloudflare-worker</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Create wrangler.toml</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> <span class="op">&gt;</span> wrangler.toml <span class="op">&lt;&lt; 'EOF'</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="st">name = "lang-router"</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="st">main = "worker.js"</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="st">compatibility_date = "2024-01-01"</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="st"># Routes are configured per-zone</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="st"># These tell Cloudflare which requests should trigger this Worker</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="st">[[routes]]</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="st">pattern = "ro.chen.ist/*"</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="st">zone_name = "chen.ist"</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="st">[[routes]]</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="st">pattern = "de.chen.ist/*"</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="st">zone_name = "chen.ist"</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="st">[[routes]]</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="st">pattern = "se.chen.ist/*"</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="st">zone_name = "chen.ist"</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="op">EOF</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the Worker script as worker.js (copy from Section 1)</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Then deploy:</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="ex">wrangler</span> deploy</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="worker-route-configuration" class="level2">
+<h2 class="anchored" data-anchor-id="worker-route-configuration">4. Worker Route Configuration</h2>
+<p>If you created the Worker through the dashboard (not Wrangler), you need to add routes manually.</p>
+<section id="add-routes-via-dashboard" class="level3">
+<h3 class="anchored" data-anchor-id="add-routes-via-dashboard">Add routes via Dashboard</h3>
+<ol type="1">
+<li>Go to <strong>Cloudflare Dashboard &gt; chen.ist &gt; Workers Routes</strong>.</li>
+<li>Click <strong>Add Route</strong> and create these three routes:</li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Route Pattern</th>
+<th>Worker</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>ro.chen.ist/*</code></td>
+<td><code>lang-router</code></td>
+</tr>
+<tr class="even">
+<td><code>de.chen.ist/*</code></td>
+<td><code>lang-router</code></td>
+</tr>
+<tr class="odd">
+<td><code>se.chen.ist/*</code></td>
+<td><code>lang-router</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Do not</strong> add a route for <code>chen.ist/*</code> – the main domain should continue to serve directly from GitHub Pages without Worker intervention.</p>
+</section>
+<section id="alternatively-add-routes-via-api" class="level3">
+<h3 class="anchored" data-anchor-id="alternatively-add-routes-via-api">Alternatively, add routes via API</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get your Zone ID from the dashboard Overview page</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="va">ZONE_ID</span><span class="op">=</span><span class="st">"your-zone-id"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="va">API_TOKEN</span><span class="op">=</span><span class="st">"your-api-token"</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="va">WORKER_NAME</span><span class="op">=</span><span class="st">"lang-router"</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> pattern <span class="kw">in</span> <span class="st">"ro.chen.ist/*"</span> <span class="st">"de.chen.ist/*"</span> <span class="st">"se.chen.ist/*"</span><span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="ex">curl</span> <span class="at">-X</span> POST <span class="st">"https://api.cloudflare.com/client/v4/zones/</span><span class="va">$ZONE_ID</span><span class="st">/workers/routes"</span> <span class="dt">\</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">-H</span> <span class="st">"Authorization: Bearer </span><span class="va">$API_TOKEN</span><span class="st">"</span> <span class="dt">\</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">-H</span> <span class="st">"Content-Type: application/json"</span> <span class="dt">\</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">--data</span> <span class="st">"{</span><span class="dt">\"</span><span class="st">pattern</span><span class="dt">\"</span><span class="st">: </span><span class="dt">\"</span><span class="va">$pattern</span><span class="dt">\"</span><span class="st">, </span><span class="dt">\"</span><span class="st">script</span><span class="dt">\"</span><span class="st">: </span><span class="dt">\"</span><span class="va">$WORKER_NAME</span><span class="dt">\"</span><span class="st">}"</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="testing" class="level2">
+<h2 class="anchored" data-anchor-id="testing">5. Testing</h2>
+<section id="quick-smoke-test-with-curl" class="level3">
+<h3 class="anchored" data-anchor-id="quick-smoke-test-with-curl">Quick smoke test with curl</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Test Romanian subdomain</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-sI</span> https://ro.chen.ist/ <span class="kw">|</span> <span class="fu">head</span> <span class="at">-20</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Test that content comes from /ro/ path</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-s</span> https://ro.chen.ist/ <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-i</span> <span class="st">"&lt;title&gt;"</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Test German subdomain</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-sI</span> https://de.chen.ist/ <span class="kw">|</span> <span class="fu">head</span> <span class="at">-20</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Test Swedish subdomain</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-sI</span> https://se.chen.ist/ <span class="kw">|</span> <span class="fu">head</span> <span class="at">-20</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Test a subpage</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-sI</span> https://ro.chen.ist/services.html</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Test that the main domain still works</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-sI</span> https://chen.ist/ <span class="kw">|</span> <span class="fu">head</span> <span class="at">-20</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify query strings are preserved</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-sI</span> <span class="st">"https://ro.chen.ist/services.html?ref=test"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="what-to-verify" class="level3">
+<h3 class="anchored" data-anchor-id="what-to-verify">What to verify</h3>
+<ol type="1">
+<li><strong>Status codes</strong>: All subdomain requests should return <code>200 OK</code>.</li>
+<li><strong>Content correctness</strong>: <code>ro.chen.ist/</code> should return the same content as <code>chen.ist/ro/index.html</code>.</li>
+<li><strong>Subpages</strong>: <code>de.chen.ist/services.html</code> should match <code>chen.ist/de/services.html</code>.</li>
+<li><strong>Main domain</strong>: <code>chen.ist</code> should be unaffected and serve English content.</li>
+<li><strong>Query strings</strong>: <code>se.chen.ist/page?foo=bar</code> should forward the query string.</li>
+<li><strong>Assets</strong>: CSS, JS, and images should load correctly (check browser console for errors).</li>
+</ol>
+</section>
+<section id="browser-testing" class="level3">
+<h3 class="anchored" data-anchor-id="browser-testing">Browser testing</h3>
+<ol type="1">
+<li>Open <code>https://ro.chen.ist</code> in your browser.</li>
+<li>Open DevTools (F12) and check the Network tab for any failed requests.</li>
+<li>Verify that navigation links within the site work correctly.</li>
+<li>Check that all CSS/JS/images load properly.</li>
+</ol>
+</section>
+<section id="common-issues" class="level3">
+<h3 class="anchored" data-anchor-id="common-issues">Common issues</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 42%">
+<col style="width: 33%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symptom</th>
+<th>Cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>522</code> or <code>523</code> error</td>
+<td>DNS record not proxied</td>
+<td>Set CNAME to Proxied (orange cloud)</td>
+</tr>
+<tr class="even">
+<td><code>404</code> on subdomain</td>
+<td>Worker route not configured</td>
+<td>Add the route in Workers Routes</td>
+</tr>
+<tr class="odd">
+<td>Redirect loop</td>
+<td>GitHub Pages redirecting</td>
+<td>Ensure CNAME file only contains <code>chen.ist</code></td>
+</tr>
+<tr class="even">
+<td>Mixed content</td>
+<td>Assets loaded over HTTP</td>
+<td>Ensure all asset URLs are relative or protocol-relative</td>
+</tr>
+<tr class="odd">
+<td>CSS/JS missing</td>
+<td>Assets reference absolute paths to <code>chen.ist</code></td>
+<td>Use relative paths in your HTML templates</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="optional-asset-handling" class="level2">
+<h2 class="anchored" data-anchor-id="optional-asset-handling">6. Optional: Asset Handling</h2>
+<p>If your site uses absolute URLs for CSS, JS, or images (e.g., <code>/assets/style.css</code>), these will work correctly because the Worker only rewrites paths on the language subdomains and assets typically live at the root level.</p>
+<p>However, if language-specific pages reference assets with language-prefixed paths (e.g., <code>/ro/assets/style.css</code>), the Worker will correctly route these since it prepends the language path prefix to all requests on that subdomain.</p>
+<section id="relative-links-between-pages" class="level3">
+<h3 class="anchored" data-anchor-id="relative-links-between-pages">Relative links between pages</h3>
+<p>Internal links in your language pages should use relative paths. For example, in <code>/ro/services.html</code>, a link to the contact page should be:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- On ro.chen.ist, this works as-is --&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"contact.html"</span><span class="dt">&gt;</span>Contact<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Avoid absolute paths that include the language prefix --&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- This would break: &lt;a href="/ro/contact.html"&gt; --&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If your Quarto site generates absolute paths with the language prefix, the Worker handles this correctly because it passes through requests that already have the prefix (the double-prefix guard in the script).</p>
+<hr>
+</section>
+</section>
+<section id="github-pages-configuration" class="level2">
+<h2 class="anchored" data-anchor-id="github-pages-configuration">7. GitHub Pages Configuration</h2>
+<p>No changes are needed to your GitHub Pages setup. The existing <code>CNAME</code> file should remain as-is with <code>chen.ist</code> only. GitHub Pages does not need to know about the subdomains because Cloudflare’s Worker handles the routing before the request reaches GitHub Pages.</p>
+<p>Your current <code>CNAME</code> file:</p>
+<pre><code>chen.ist</code></pre>
+<p>This is correct. Do not add subdomains to this file.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/chen\.ist");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer style="background-color:#0a0a0a; background-image: url(&quot;data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2381BD4A' fill-opacity='0.08'%3E%3Ccircle cx='20' cy='20' r='1.5'/%3E%3C/g%3E%3C/svg%3E&quot;); background-repeat: repeat; background-size: 40px 40px; color:rgba(255,255,255,0.6); padding:4rem 0 2rem; font-size:0.82rem; line-height:1.8;">
+  <div style="max-width:1200px; margin:0 auto; padding:0 1.5rem;">
+    <div style="display:grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr; gap:2rem;">
+
+      <div>
+        <div style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:1rem; font-family:'Source Code Pro',monospace;">chen<span style="color:#81BD4A;">.ist</span></div>
+        <p style="margin-bottom:1rem;">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
+        <p style="color:rgba(255,255,255,0.25);">© 2026 chen.ist</p>
+      </div>
+
+      <div>
+        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Services</div>
+        <a href="../digital/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Digital Infrastructure</a>
+        <a href="../security/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Security</a>
+        <a href="../services/cloud/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Cloud</a>
+        <a href="../services/nis2/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">NIS2 Compliance</a>
+        <a href="../services/digital-resilience/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Digital Resilience</a>
+      </div>
+
+      <div>
+        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Academy</div>
+        <a href="../academy/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Overview</a>
+        <a href="../academy/courses.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Courses</a>
+        <a href="../academy/trainings.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Trainings</a>
+        <a href="../academy/events.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Events</a>
+        <a href="../academy/webinars.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Webinars</a>
+      </div>
+
+      <div>
+        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Company</div>
+        <a href="../about/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">About</a>
+        <a href="../blog.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Blog</a>
+        <a href="../contact.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Contact</a>
+        <a href="../privacy.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Privacy</a>
+        <a href="../terms.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Terms</a>
+      </div>
+
+      <div>
+        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Connect</div>
+        <a href="mailto:office@chen.ist" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">office@chen.ist</a>
+        <a href="https://github.com/chenist" target="_blank" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">GitHub</a>
+        <a href="https://alinmechenici.substack.com" target="_blank" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Newsletter</a>
+        <a href="https://linkedin.com/in/chenistsec" target="_blank" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">LinkedIn</a>
+        <div style="margin-top:1rem; color:rgba(255,255,255,0.2); font-size:0.72rem;">Craiova · Bucharest · Stockholm</div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<style>
+@media (max-width: 991px) {
+  footer > div > div { grid-template-columns: 2fr 1fr 1fr !important; }
+}
+@media (max-width: 767px) {
+  footer > div > div { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
+}
+@media (max-width: 480px) {
+  footer > div > div { grid-template-columns: 1fr !important; }
+}
+footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.m-s, .m-bg, .m-cta, .m-r, .m-n, .hp-sec, .hp-stats, .ev-card, .ev-past, .m-t').forEach(el => observer.observe(el));
+});
+</script>
+<!-- Cal.com floating button -->
+<script>
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", {origin:"https://cal.com"});
+  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Function to toggle dark/light mode
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-bs-theme') || 'light';
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-bs-theme', newTheme);
+      localStorage.setItem('quarto-color-scheme', newTheme);
+      
+      // Update icon if needed
+      const themeIcon = document.querySelector('.navbar-nav a[href="#"] i');
+      if (themeIcon) {
+        themeIcon.className = newTheme === 'light' ? 'bi bi-moon' : 'bi bi-sun';
+      }
+    }
+    
+    // Apply saved theme on load
+    const savedTheme = localStorage.getItem('quarto-color-scheme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      
+      // Update icon to match saved theme
+      const themeIcon = document.querySelector('.navbar-nav a[href="#"] i');
+      if (themeIcon && savedTheme === 'dark') {
+        themeIcon.className = 'bi bi-sun';
+      }
+    }
+    
+    // Set up toggle button
+    document.querySelectorAll('a[href="#"]').forEach(function(link) {
+      if (link.textContent.includes('Toggle Theme')) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          toggleTheme();
+        });
+      }
+    });
+    
+    // Enable Bootstrap tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      if (anchor.getAttribute('href') === '#') return;
+      
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 70,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

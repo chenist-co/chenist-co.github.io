@@ -92,16 +92,16 @@ website:
             text: Community
       - href: contact.qmd
         text: Contact
-      - text: "Lang"
+      - text: "🌐"
         menu:
-          - href: index.qmd
-            text: English
-          - href: ro/index.qmd
-            text: Romanian
-          - href: sv/index.qmd
-            text: Swedish
-          - href: de/index.qmd
-            text: German
+          - text: English
+            href: "#lang-en"
+          - text: Română
+            href: "#lang-ro"
+          - text: Svenska
+            href: "#lang-sv"
+          - text: Deutsch
+            href: "#lang-de"
         
   page-footer:
     border: false
@@ -235,6 +235,29 @@ format:
                 }
               });
               
+              // Language switcher — rewrites URL to same page in other language
+              document.querySelectorAll('a[href^="#lang-"]').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                  e.preventDefault();
+                  var lang = this.getAttribute('href').replace('#lang-', '');
+                  var path = window.location.pathname;
+
+                  // Strip existing language prefix
+                  var cleanPath = path.replace(/^\/(ro|de|sv)\//, '/').replace(/^\/(ro|de|sv)$/, '/');
+
+                  // Build new URL
+                  var newPath;
+                  if (lang === 'en') {
+                    newPath = cleanPath;
+                  } else {
+                    var prefix = lang === 'sv' ? '/sv' : '/' + lang;
+                    newPath = prefix + (cleanPath === '/' ? '/' : cleanPath);
+                  }
+
+                  window.location.href = newPath;
+                });
+              });
+
               // Enable Bootstrap tooltips
               var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
               var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
