@@ -4,63 +4,74 @@ page-layout: custom
 title-block-style: none
 toc: false
 description: "Browse technical guides and documentation on security, cloud architecture, and API development from chen.ist's expert team."
-listing:
-  contents:
-    - "security/*.qmd"
-    - "cloud/*.qmd"
-    - "api/*.qmd"
-  type: table
-  sort: "date desc"
-  categories: true
-  sort-ui: true
-  filter-ui: true
-  fields: [title, description, date, categories, reading-time]
-  date-format: "MMMM D, YYYY"
 ---
 
 ```{=html}
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>Technical <span class="gr">Guides</span></h1>
+<div class="ev-hero" style="min-height:50vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/code-screen.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag">Resources</div>
+    <h1>Technical Guides</h1>
     <p>Comprehensive documentation and how-to guides for security, cloud, and API development.</p>
   </div>
 </div>
 
-<div class="m-bg m-bg-stripes">
+<div class="m-s" style="padding:7rem 0;">
   <div class="container">
-    <h2>Browse by Category</h2>
+    <h2>Browse by category</h2>
     <p class="sub">Deep-dive guides written by practitioners, not marketers.</p>
-    <div class="row g-5">
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-shield-check"></i><h3>Security Guides</h3><p>Best practices, implementation guides, and security frameworks.</p><a href="security/" class="m-lk">Browse Security Guides</a></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-cloud"></i><h3>Cloud Guides</h3><p>Cloud migration, optimization, and management resources.</p><a href="cloud/" class="m-lk">Browse Cloud Guides</a></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-code-square"></i><h3>API Documentation</h3><p>API reference, integration guides, and developer resources.</p><a href="api/" class="m-lk">Browse API Docs</a></div></div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="security/implementation-guide.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/cybersecurity-monitor.webp" alt="Security"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Security</div><h3>Implementation Guide</h3><p>Best practices, frameworks, and step-by-step implementation.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="cloud/migration-handbook.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/network-closeup.webp" alt="Cloud"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Cloud</div><h3>Migration Handbook</h3><p>Cloud migration, optimization, and management resources.</p></div></div>
+        </a>
+      </div>
+      <!-- API guide hidden for now -->
     </div>
   </div>
 </div>
 
-<div class="m-s">
+<div class="m-bg" style="padding:7rem 0;">
   <div class="container">
-    <h2>Featured Guides</h2>
-    <p class="sub">Our most popular and comprehensive resources.</p>
-    <div class="row g-5">
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-shield-lock"></i><h3>Security Implementation Guide</h3><p>A comprehensive guide to implementing robust security practices in your organization, covering everything from risk assessment to incident response.</p><span class="m-tag">Security</span> <span class="m-tag">25 min read</span><br><a href="security/implementation-guide.html" class="m-lk">Read Guide</a></div></div>
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-cloud-arrow-up"></i><h3>Cloud Migration Handbook</h3><p>A step-by-step guide to migrating your applications and infrastructure to the cloud, with strategies for minimizing downtime and optimizing costs.</p><span class="m-tag">Cloud</span> <span class="m-tag">30 min read</span><br><a href="cloud/migration-handbook.html" class="m-lk">Read Guide</a></div></div>
+    <div class="m-r">
+      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/cybersecurity-monitor.webp" alt="Security guide"></div>
+      <div class="m-rt">
+        <h2>Security<br>Implementation Guide</h2>
+        <p>A comprehensive guide covering risk assessment, access control, encryption, monitoring, and incident response. Everything you need to build a robust security posture.</p>
+        <div class="lk"><a href="security/implementation-guide.html" class="m-lk">Read the guide</a></div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="m-bg m-bg-stripes">
+<div class="m-s" style="padding:7rem 0;">
   <div class="container">
-    <h2>All Guides</h2>
-    <p class="sub">Browse our complete collection of technical guides.</p>
+    <div class="m-r rv">
+      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/network-closeup.webp" alt="Cloud handbook"></div>
+      <div class="m-rt">
+        <h2>Cloud Migration<br>Handbook</h2>
+        <p>Step-by-step strategies for migrating your applications and infrastructure to the cloud, with strategies for minimizing downtime and optimizing costs.</p>
+        <div class="lk"><a href="cloud/migration-handbook.html" class="m-lk">Read the handbook</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Need a custom guide?</h2>
+    <p>We create bespoke documentation for organizations with specific requirements.</p>
+    <a href="/booking/" class="m-b">Book a call</a>
   </div>
 </div>
 
 </div>
 ```
-
-## All Guides
-
-Browse our complete collection of technical guides:

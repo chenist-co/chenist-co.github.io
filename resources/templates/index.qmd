@@ -4,68 +4,100 @@ page-layout: custom
 title-block-style: none
 toc: false
 description: "Download ready-to-use templates for security policies, cloud configurations, project documentation, and technical planning."
-listing:
-  contents: "*.qmd"
-  type: grid
-  sort: "date desc"
-  categories: true
-  sort-ui: true
-  filter-ui: true
-  fields: [title, description, date, categories, image]
-  date-format: "MMMM D, YYYY"
 ---
 
 ```{=html}
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>Document <span class="gr">Templates</span></h1>
+<div class="ev-hero" style="min-height:50vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/terminal-green.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag">Resources</div>
+    <h1>Templates</h1>
     <p>Ready-to-use templates for common business and technical documents.</p>
   </div>
 </div>
 
-<div class="m-bg m-bg-stripes">
+<div class="m-s" style="padding:7rem 0;">
   <div class="container">
-    <h2>Available Templates</h2>
-    <p class="sub">Create professional documents quickly and consistently.</p>
-    <div class="row g-5">
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-shield-check"></i><h3>Security Policy Template</h3><p>A comprehensive security policy template covering all major security domains in accordance with industry standards like ISO 27001.</p><span class="m-tag">Security</span> <span class="m-tag">Policy</span><br><small>Formats: Word, PDF, Markdown</small></div></div>
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-file-earmark-text"></i><h3>Project Documentation Template</h3><p>A structured template for technical project documentation, including requirements, architecture, testing, and deployment sections.</p><span class="m-tag">Project</span> <span class="m-tag">Documentation</span><br><small>Formats: Word, PDF, Markdown</small></div></div>
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-exclamation-triangle"></i><h3>Risk Assessment Template</h3><p>A structured template for conducting and documenting risk assessments, including risk identification, analysis, and treatment plans.</p><span class="m-tag">Security</span> <span class="m-tag">Risk</span><br><small>Formats: Excel, PDF</small></div></div>
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-bell"></i><h3>Incident Response Plan Template</h3><p>A comprehensive incident response plan template covering preparation, identification, containment, eradication, recovery, and lessons learned.</p><span class="m-tag">Security</span> <span class="m-tag">Incident Response</span><br><small>Formats: Word, PDF, Markdown</small></div></div>
+    <h2>Security & Compliance</h2>
+    <p class="sub">Professional templates for security documentation.</p>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="pg-card" style="position:relative;">
+          <img loading="lazy" src="/assets/images/stock/cybersecurity-monitor.webp" alt="Security Policy">
+          <div class="pg-card-body">
+            <div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Word &middot; PDF &middot; Markdown</div>
+            <h3>Security Policy Template</h3>
+            <p>Comprehensive security policy covering all major domains per ISO 27001.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="pg-card" style="position:relative;">
+          <img loading="lazy" src="/assets/images/stock/hacker-screens.webp" alt="Incident Response">
+          <div class="pg-card-body">
+            <div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Word &middot; PDF &middot; Markdown</div>
+            <h3>Incident Response Plan</h3>
+            <p>Preparation, identification, containment, eradication, recovery, and lessons learned.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="pg-card" style="position:relative;">
+          <img loading="lazy" src="/assets/images/stock/network-closeup.webp" alt="Risk Assessment">
+          <div class="pg-card-body">
+            <div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Excel &middot; PDF</div>
+            <h3>Risk Assessment Template</h3>
+            <p>Risk identification, analysis, and treatment plans in a structured format.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="pg-card" style="position:relative;">
+          <img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="Project Docs">
+          <div class="pg-card-body">
+            <div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Word &middot; PDF &middot; Markdown</div>
+            <h3>Project Documentation</h3>
+            <p>Requirements, architecture, testing, and deployment sections.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="m-s">
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
   <div class="container">
-    <h2>Quarto & Typst Templates</h2>
-    <p class="sub">Specialized templates for academic and technical writing.</p>
-    <div class="row g-5">
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-journal-text"></i><h3>Quarto Manuscript Template</h3><p>A ready-to-use template for creating technical papers and research manuscripts with Quarto, supporting multiple output formats including HTML, PDF, and MS Word.</p><ul><li>Professional academic styling</li><li>Citation and bibliography support</li><li>Code integration for data science</li><li>Multiple output formats</li></ul><a href="quarto-manuscript-template.zip" class="m-lk" download>Download Template</a></div></div>
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-file-earmark-code"></i><h3>Typst Technical Report Template</h3><p>A professionally designed Typst template for technical reports and documentation with modern typography and layout.</p><ul><li>Clean, modern design</li><li>Optimized for technical content</li><li>Customizable styling</li><li>Fast compilation</li></ul><span class="m-tag">Coming Soon</span></div></div>
+    <h2>Publishing templates</h2>
+    <p class="sub">For academic and technical writing.</p>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-5">
+        <div class="pg-card" style="position:relative;">
+          <img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="Quarto">
+          <div class="pg-card-body">
+            <h3>Quarto Manuscript</h3>
+            <p>Technical papers and research with citations, code, and multi-format output.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="pg-card" style="position:relative; opacity:0.6;">
+          <img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="Typst">
+          <div class="pg-card-body">
+            <h3>Typst Technical Report</h3>
+            <p>Modern typography and layout for technical reports. Coming soon.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="m-bg m-bg-stripes">
-  <div class="container">
-    <h2>Customization Tips</h2>
-    <p class="sub">Get the most out of our templates.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-palette"></i><h3>Branding</h3><p>Replace placeholder logos and colors with your organization's branding.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-pencil-square"></i><h3>Content</h3><p>Update sections to reflect your specific needs and requirements.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-briefcase"></i><h3>Legal Review</h3><p>Have legal counsel review policy templates before implementation.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-clock-history"></i><h3>Version Control</h3><p>Track changes and maintain version history for all documents.</p></div></div>
-    </div>
-  </div>
-</div>
-
-<div class="m-s">
-  <div class="container">
-    <h2>Template License</h2>
-    <p>All templates are provided under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, which means you can use, modify, and distribute them freely with attribution to chen.ist.</p>
+<div class="m-s" style="padding:5rem 0;">
+  <div class="container" style="max-width:650px; text-align:center;">
+    <h2>License</h2>
+    <p style="color:#86868b;">All templates are provided under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" class="m-lk" style="font-size:inherit;">Creative Commons Attribution 4.0</a> license. Use, modify, and distribute freely with attribution.</p>
   </div>
 </div>
 
@@ -73,12 +105,12 @@ listing:
   <div class="container">
     <div class="m-d"></div>
     <h2>Need a custom template?</h2>
-    <p>We can create templates tailored to your organization's needs.</p>
+    <p>We create templates tailored to your organization's needs and branding.</p>
     <a href="/booking/" class="m-b">Get in touch</a>
     <div class="m-sm">
-      <i class="bi bi-check-circle-fill"></i> Free consultation &nbsp;
       <i class="bi bi-check-circle-fill"></i> Custom branding &nbsp;
-      <i class="bi bi-check-circle-fill"></i> Multiple formats
+      <i class="bi bi-check-circle-fill"></i> Multiple formats &nbsp;
+      <i class="bi bi-check-circle-fill"></i> Free consultation
     </div>
   </div>
 </div>
