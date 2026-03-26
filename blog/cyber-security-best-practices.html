@@ -284,84 +284,90 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
   </script><a href="#main-content" class="skip-link">Skip to main content</a>
 <style>
-/* Corporate navbar — solid dark, structured, professional */
+/* Corporate navbar — inspired by CrowdStrike/SentinelOne */
 .navbar {
   background: #0a0a0a !important;
-  border-bottom: 1px solid rgba(129,189,74,0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
   padding: 0 !important;
-  font-size: 0.82rem;
-  min-height: 56px;
+  font-size: 0.85rem;
+  min-height: 60px;
 }
-.navbar-container {
-  display: flex;
-  align-items: center;
-  height: 56px;
-}
+.navbar-container { height: 60px; }
 .navbar-brand-container { display: flex; align-items: center; }
 .navbar-brand { display: flex; align-items: center; gap: 0.5rem; }
 .navbar-brand .navbar-title {
-  display: inline-block;
   color: #FFFFFF;
   font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: 0.08em;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   font-family: 'Source Code Pro', monospace;
 }
 .navbar-brand .brand-dot { color: #81BD4A; }
+
+/* Nav links — normal case like CrowdStrike, not uppercase */
 .navbar .nav-link {
-  color: rgba(255,255,255,0.65) !important;
-  font-size: 0.78rem !important;
-  font-weight: 500;
-  padding: 0.5rem 0.85rem !important;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.7) !important;
+  font-size: 0.85rem !important;
+  font-weight: 400;
+  padding: 0.5rem 0.9rem !important;
   transition: color 0.15s;
 }
-.navbar .nav-link:hover,
+.navbar .nav-link:hover { color: #fff !important; }
 .navbar .nav-link.active { color: #81BD4A !important; }
+
+/* CTA button in navbar — like SentinelOne "Get Started" */
+.navbar .navbar-cta {
+  display: inline-block;
+  padding: 0.4rem 1.25rem;
+  background: #81BD4A;
+  color: #fff !important;
+  border-radius: 980px;
+  font-size: 0.8rem !important;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s;
+  margin-left: 0.5rem;
+}
+.navbar .navbar-cta:hover { background: #6BA33A; color: #fff !important; text-decoration: none; }
+
+/* Dropdowns */
 .navbar .dropdown-menu {
   background: #0a0a0a;
-  border: 1px solid rgba(129,189,74,0.12);
-  border-radius: 8px;
-  padding: 0.4rem;
-  margin-top: 0;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 0.5rem;
   box-shadow: 0 12px 40px rgba(0,0,0,0.5);
 }
 .navbar .dropdown-item {
-  color: rgba(255,255,255,0.65);
-  font-size: 0.78rem;
-  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.83rem;
   border-radius: 6px;
   padding: 0.45rem 0.85rem;
-  letter-spacing: 0.02em;
 }
 .navbar .dropdown-item:hover {
-  background: rgba(129,189,74,0.1);
+  background: rgba(129,189,74,0.08);
   color: #81BD4A;
 }
-.navbar .quarto-navigation-tool { color: rgba(255,255,255,0.5) !important; }
-.navbar .quarto-navigation-tool:hover { color: #81BD4A !important; }
-.navbar .quarto-color-scheme-toggle { color: rgba(255,255,255,0.5) !important; }
-.navbar .quarto-color-scheme-toggle:hover { color: #81BD4A !important; }
 
+/* Search + theme toggle */
+.navbar .quarto-navigation-tool, .navbar .quarto-color-scheme-toggle { color: rgba(255,255,255,0.4) !important; }
+.navbar .quarto-navigation-tool:hover, .navbar .quarto-color-scheme-toggle:hover { color: #81BD4A !important; }
+
+/* Mobile */
 @media (max-width: 991px) {
-  .navbar .nav-link { font-size: 0.75rem !important; padding: 0.4rem 0.6rem !important; }
+  .navbar .nav-link { font-size: 0.82rem !important; }
 }
 @media (max-width: 767.98px) {
-  .navbar-brand .navbar-title { font-size: 0.9rem; }
+  .navbar-brand .navbar-title { font-size: 1rem; }
   .navbar .navbar-collapse {
     background: #0a0a0a;
-    border: 1px solid rgba(129,189,74,0.1);
-    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
     padding: 1rem;
     margin-top: 0.5rem;
   }
-  .navbar .nav-link {
-    text-transform: none;
-    font-size: 0.85rem !important;
-    padding: 0.5rem 0.75rem !important;
-  }
+  .navbar .navbar-cta { display: block; text-align: center; margin: 0.75rem 0 0; }
 }
 </style>
 
@@ -379,6 +385,20 @@ document.addEventListener('DOMContentLoaded', function() {
     titleSpan.appendChild(dot);
     titleSpan.appendChild(ist);
     navbarBrand.appendChild(titleSpan);
+  }
+
+  // Add CTA button to navbar
+  var navRight = document.querySelector('.navbar-nav.ms-auto');
+  if (navRight) {
+    var ctaLi = document.createElement('li');
+    ctaLi.className = 'nav-item';
+    var ctaLink = document.createElement('a');
+    ctaLink.className = 'nav-link navbar-cta';
+    ctaLink.href = '/booking/';
+    // internal link, no new tab
+    ctaLink.textContent = 'Book a Call';
+    ctaLi.appendChild(ctaLink);
+    navRight.appendChild(ctaLi);
   }
 });
 </script>
@@ -719,13 +739,13 @@ document.addEventListener('DOMContentLoaded', function() {
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>Cybersecurity is an ongoing process, not a one-time project. By implementing these best practices and staying vigilant, organizations can significantly reduce their security risks in today’s challenging threat environment.</p>
-<p>For more information or assistance with implementing these practices, <a href="https://cal.com/chenist" target="_blank">contact our security team</a>.</p>
+<p>For more information or assistance with implementing these practices, <a href="../booking/" target="_blank">contact our security team</a>.</p>
 <div class="card mt-5 mb-3">
 <section id="want-to-learn-more" class="level3 card-body">
 <h3 class="anchored" data-anchor-id="want-to-learn-more">Want to learn more?</h3>
 <p>Join our upcoming webinar on advanced cybersecurity strategies where we’ll dive deeper into these topics and provide actionable insights for your organization.</p>
 <div class="text-center mt-3">
-<p><a href="https://cal.com/chenist" class="btn btn-success" target="_blank">Register Now</a></p>
+<p><a href="../booking/" class="btn btn-success" target="_blank">Register Now</a></p>
 </div>
 </section>
 </div>
@@ -1155,66 +1175,64 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   </script>
 </div> <!-- /content -->
-<footer style="background-color:#0a0a0a; background-image: url(&quot;data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2381BD4A' fill-opacity='0.08'%3E%3Ccircle cx='20' cy='20' r='1.5'/%3E%3C/g%3E%3C/svg%3E&quot;); background-repeat: repeat; background-size: 40px 40px; color:rgba(255,255,255,0.6); padding:4rem 0 2rem; font-size:0.82rem; line-height:1.8;">
+<!-- Back to top -->
+<div style="text-align:center; padding:2rem 0; background:#0a0a0a; border-top:1px solid rgba(255,255,255,0.04);">
+  <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" style="color:rgba(255,255,255,0.3); text-decoration:none; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em;">
+    <i class="bi bi-chevron-up" style="display:block; font-size:1rem; margin-bottom:0.25rem;"></i>Back to top
+  </a>
+</div>
+
+<footer style="background-color:#050505; background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 200 200'%3E%3Crect fill='none' width='200' height='200'/%3E%3Cg fill='none' stroke='%2381BD4A' stroke-width='1' stroke-opacity='0.04'%3E%3Crect x='-40' y='40' width='75' height='75'/%3E%3Crect x='40' width='75' height='75'/%3E%3Crect x='80' y='80' width='75' height='75'/%3E%3Crect x='120' y='-40' width='75' height='75'/%3E%3Crect y='120' width='75' height='75'/%3E%3Crect x='160' y='40' width='75' height='75'/%3E%3C/g%3E%3C/svg%3E&quot;); background-repeat:repeat; background-size:200px 200px; color:rgba(255,255,255,0.5); padding:4rem 0 2rem; font-size:0.82rem; line-height:1.8;">
   <div style="max-width:1200px; margin:0 auto; padding:0 1.5rem;">
     <div style="display:grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr; gap:2rem;">
-
       <div>
-        <div style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:1rem; font-family:'Source Code Pro',monospace;">chen<span style="color:#81BD4A;">.ist</span></div>
-        <p style="margin-bottom:1rem;">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
-        <p style="color:rgba(255,255,255,0.25);">© 2026 chen.ist</p>
+        <div style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:1rem; font-family:'Source Code Pro',monospace;">chen<span style="color:#81BD4A;">.</span>ist</div>
+        <p style="margin-bottom:1rem; color:rgba(255,255,255,0.4);">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
+        <div style="display:flex; gap:0.75rem; margin-bottom:1rem;">
+          <a href="https://github.com/chenist" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-github"></i></a>
+          <a href="https://linkedin.com/in/chenistsec" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-linkedin"></i></a>
+          <a href="https://alinmechenici.substack.com" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-envelope"></i></a>
+        </div>
+        <p style="color:rgba(255,255,255,0.2); font-size:0.75rem;">© 2026 chen.ist</p>
       </div>
-
       <div>
-        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Services</div>
-        <a href="../digital/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Digital Infrastructure</a>
-        <a href="../security/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Security</a>
-        <a href="../services/cloud/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Cloud</a>
-        <a href="../services/nis2/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">NIS2 Compliance</a>
-        <a href="../services/digital-resilience/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Digital Resilience</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Services</div>
+        <a href="../digital/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Digital Infrastructure</a>
+        <a href="../security/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Security</a>
+        <a href="../services/cloud/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
+        <a href="../services/nis2/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">NIS2 Compliance</a>
+        <a href="../services/digital-resilience/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Digital Resilience</a>
       </div>
-
       <div>
-        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Academy</div>
-        <a href="../academy/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Overview</a>
-        <a href="../academy/courses.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Courses</a>
-        <a href="../academy/trainings.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Trainings</a>
-        <a href="../academy/events.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Events</a>
-        <a href="../academy/webinars.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Webinars</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Academy</div>
+        <a href="../academy/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Overview</a>
+        <a href="../academy/courses.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Courses</a>
+        <a href="../academy/trainings.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Trainings</a>
+        <a href="../academy/events.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Events</a>
+        <a href="../academy/webinars.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Webinars</a>
       </div>
-
       <div>
-        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Company</div>
-        <a href="../about/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">About</a>
-        <a href="../blog.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Blog</a>
-        <a href="../contact.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Contact</a>
-        <a href="../privacy.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Privacy</a>
-        <a href="../terms.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Terms</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Company</div>
+        <a href="../about/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">About</a>
+        <a href="../blog.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
+        <a href="../contact.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Contact</a>
+        <a href="../privacy.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Privacy</a>
+        <a href="../terms.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Terms</a>
       </div>
-
       <div>
-        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Connect</div>
-        <a href="mailto:office@chen.ist" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">office@chen.ist</a>
-        <a href="https://github.com/chenist" target="_blank" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">GitHub</a>
-        <a href="https://alinmechenici.substack.com" target="_blank" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Newsletter</a>
-        <a href="https://linkedin.com/in/chenistsec" target="_blank" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">LinkedIn</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Connect</div>
+        <a href="mailto:office@chen.ist" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">office@chen.ist</a>
+        <a href="../booking/" style="display:block; color:#81BD4A; text-decoration:none; padding:0.1rem 0; font-weight:500;">Book a Call</a>
         <div style="margin-top:1rem; color:rgba(255,255,255,0.2); font-size:0.72rem;">Craiova · Bucharest · Stockholm</div>
       </div>
-
     </div>
   </div>
 </footer>
 
 <style>
-@media (max-width: 991px) {
-  footer > div > div { grid-template-columns: 2fr 1fr 1fr !important; }
-}
-@media (max-width: 767px) {
-  footer > div > div { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
-}
-@media (max-width: 480px) {
-  footer > div > div { grid-template-columns: 1fr !important; }
-}
+@media (max-width:991px) { footer > div > div { grid-template-columns: 2fr 1fr 1fr !important; } }
+@media (max-width:767px) { footer > div > div { grid-template-columns: 1fr 1fr !important; gap:2rem !important; } }
+@media (max-width:480px) { footer > div > div { grid-template-columns: 1fr !important; } }
 footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
 </style>
 <script>
