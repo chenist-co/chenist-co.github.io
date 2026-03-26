@@ -3,74 +3,71 @@ title: "Tools"
 page-layout: custom
 title-block-style: none
 toc: false
-description: "Discover curated tools and utilities for cybersecurity, development, cloud management, and IT operations recommended by chen.ist."
+description: "Interactive security tools, assessments, and utilities from chen.ist. Free to use."
 ---
 
 ```{=html}
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>Interactive <span class="gr">Tools</span></h1>
-    <p>Utilities and calculators to assist with technical tasks.</p>
+<!-- HERO -->
+<div class="ev-hero" style="min-height:55vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/hacker-screens.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag">Resources</div>
+    <h1>Interactive Tools</h1>
+    <p>Security assessments, calculators, and utilities. Free to use.</p>
+    <a href="#tools" class="ev-btn">Browse tools</a>
   </div>
 </div>
 
-<div class="m-bg m-bg-stripes">
+<!-- AVAILABLE TOOLS -->
+<div class="m-s" id="tools" style="padding:7rem 0;">
   <div class="container">
     <h2>Security Tools</h2>
     <p class="sub">Evaluate and improve your security posture.</p>
-    <div class="row g-5">
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-key"></i><h3>Password Strength Checker</h3><p>Evaluate password strength against modern security standards and common attack techniques.</p><ul><li>Entropy calculation</li><li>Dictionary attack detection</li><li>Common pattern identification</li><li>Estimated cracking time</li></ul><a href="password-strength-checker.html" class="m-lk">Launch Tool</a></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-shield-exclamation"></i><h3>Zero Trust Assessment</h3><p>Evaluate your organization's Zero Trust security maturity across multiple domains.</p><ul><li>Comprehensive questionnaire</li><li>Domain-specific scoring</li><li>Maturity measurement</li><li>Actionable recommendations</li></ul><a href="zero-trust-assessment.html" class="m-lk">Launch Tool</a></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-clipboard2-check"></i><h3>NIS2 Self-Assessment</h3><p>Find out if the NIS2 Directive applies to your organization and assess your compliance readiness.</p><ul><li>Applicability check</li><li>Maturity scoring</li><li>Domain breakdown</li><li>Priority action plan</li></ul><a href="nis2-assessment.html" class="m-lk">Launch Tool</a></div></div>
-    </div>
-    <div class="row g-5" style="margin-top:2rem;">
-      <div class="col-md-4"><div class="m-t" style="opacity:0.5;"><i class="bi bi-lock"></i><h3>SSL/TLS Inspector</h3><p>Analyze SSL/TLS certificates for security issues and configuration problems.</p><p style="font-size:0.8rem; color:var(--c);">Coming soon</p></div></div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="nis2-assessment.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/cybersecurity-monitor.webp" alt="NIS2 Assessment"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;"><i class="bi bi-lightning me-1"></i>Interactive</div><h3>NIS2 Self-Assessment</h3><p>Find out if NIS2 applies to you and assess your compliance readiness in 5 minutes.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="password-strength-checker.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/hacker-screens.webp" alt="Password Checker"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;"><i class="bi bi-lightning me-1"></i>Interactive</div><h3>Password Strength Checker</h3><p>Evaluate password strength with entropy calculation and estimated cracking time.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="zero-trust-assessment.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/network-closeup.webp" alt="Zero Trust"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;"><i class="bi bi-lightning me-1"></i>Interactive</div><h3>Zero Trust Assessment</h3><p>Evaluate your organization's Zero Trust maturity with domain-specific scoring.</p></div></div>
+        </a>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="m-s">
+<!-- COMING SOON -->
+<div class="m-bg" style="padding:7rem 0;">
   <div class="container">
-    <h2>Development Tools</h2>
-    <p class="sub">Streamline your development workflow.</p>
-    <div class="row g-5">
-      <div class="col-md-4"><div class="m-t" style="opacity:0.5;"><i class="bi bi-cloud-arrow-up"></i><h3>Cloud Cost Calculator</h3><p>Estimate and compare costs across cloud providers.</p><p style="font-size:0.8rem; color:var(--c);">Coming soon</p></div></div>
-      <div class="col-md-4"><div class="m-t" style="opacity:0.5;"><i class="bi bi-braces"></i><h3>API Request Builder</h3><p>Construct and test REST and GraphQL API requests.</p><p style="font-size:0.8rem; color:var(--c);">Coming soon</p></div></div>
-      <div class="col-md-4"><div class="m-t" style="opacity:0.5;"><i class="bi bi-globe2"></i><h3>Security Headers Analyzer</h3><p>Check HTTP security headers and get recommendations.</p><p style="font-size:0.8rem; color:var(--c);">Coming soon</p></div></div>
+    <h2>Coming soon</h2>
+    <p class="sub">More tools in development.</p>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="pg-card" style="opacity:0.5;"><img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="SSL"><div class="pg-card-body"><h3>SSL/TLS Inspector</h3><p>Analyze certificates for security issues.</p></div></div></div>
+      <div class="col-md-4"><div class="pg-card" style="opacity:0.5;"><img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="Cloud Cost"><div class="pg-card-body"><h3>Cloud Cost Calculator</h3><p>Estimate and compare cloud provider costs.</p></div></div></div>
+      <div class="col-md-4"><div class="pg-card" style="opacity:0.5;"><img loading="lazy" src="/assets/images/stock/network-closeup.webp" alt="Headers"><div class="pg-card-body"><h3>Security Headers Analyzer</h3><p>Check HTTP security headers.</p></div></div></div>
+      <div class="col-md-4"><div class="pg-card" style="opacity:0.5;"><img loading="lazy" src="/assets/images/stock/hacker-screens.webp" alt="CIDR"><div class="pg-card-body"><h3>CIDR Subnet Calculator</h3><p>IP ranges and subnet masks.</p></div></div></div>
+      <div class="col-md-4"><div class="pg-card" style="opacity:0.5;"><img loading="lazy" src="/assets/images/stock/cybersecurity-monitor.webp" alt="Breach"><div class="pg-card-body"><h3>Data Breach Cost Estimator</h3><p>Estimate financial impact of a breach.</p></div></div></div>
+      <div class="col-md-4"><div class="pg-card" style="opacity:0.5;"><img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="CLI"><div class="pg-card-body"><h3>CloudScan CLI</h3><p>Scan cloud environments for misconfigurations.</p></div></div></div>
     </div>
   </div>
 </div>
 
-<div class="m-bg m-bg-stripes">
-  <div class="container">
-    <h2>Interactive Calculators</h2>
-    <p class="sub">Quick calculations for networking and risk analysis.</p>
-    <div class="row g-5">
-      <div class="col-md-6"><div class="m-t" style="opacity:0.5;"><i class="bi bi-diagram-3"></i><h3>CIDR Subnet Calculator</h3><p>Calculate IP ranges and subnet masks from CIDR notation.</p><p style="font-size:0.8rem; color:var(--c);">Coming soon</p></div></div>
-      <div class="col-md-6"><div class="m-t" style="opacity:0.5;"><i class="bi bi-currency-dollar"></i><h3>Data Breach Cost Estimator</h3><p>Estimate financial impact of a data breach.</p><p style="font-size:0.8rem; color:var(--c);">Coming soon</p></div></div>
-    </div>
-  </div>
-</div>
-
-<div class="m-s">
-  <div class="container">
-    <h2>Command-Line Tools</h2>
-    <p class="sub">Coming soon — download and install on your own infrastructure.</p>
-    <div class="row g-5">
-      <div class="col-md-6"><div class="m-t" style="opacity:0.5;"><i class="bi bi-terminal"></i><h3>CloudScan CLI</h3><p>Scan cloud environments for security misconfigurations. Multi-cloud support for AWS, Azure, and GCP.</p><p style="font-size:0.8rem; color:var(--c);">Coming soon</p></div></div>
-      <div class="col-md-6"><div class="m-t" style="opacity:0.5;"><i class="bi bi-eye"></i><h3>SecretScan</h3><p>Detect and prevent secrets in code repositories. Pre-commit hook and CI/CD integration.</p><p style="font-size:0.8rem; color:var(--c);">Coming soon</p></div></div>
-    </div>
-  </div>
-</div>
-
+<!-- CTA -->
 <div class="m-cta">
   <div class="container">
     <div class="m-d"></div>
     <h2>Need a custom tool?</h2>
     <p>We build bespoke security and infrastructure tools for organizations.</p>
-    <a href="/booking/" class="m-b">Talk to our team</a>
+    <a href="/booking/" class="m-b" style="color:#fff !important;">Talk to our team</a>
     <div class="m-sm">
       <i class="bi bi-check-circle-fill"></i> Open-source first &nbsp;
       <i class="bi bi-check-circle-fill"></i> Enterprise ready &nbsp;

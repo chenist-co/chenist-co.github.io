@@ -2,7 +2,7 @@
 title: "Hackathons"
 title-block-style: none
 subtitle: "Intensive collaborative events to solve real-world challenges"
-description: "Participate in our hackathons where you can collaborate with peers, learn from mentors, and develop innovative solutions to real-world problems in cybersecurity, AI ethics, and space technology."
+description: "Participate in hackathons on cybersecurity, AI ethics, and space technology. 48-hour challenges with real teams and real problems."
 page-layout: custom
 toc: false
 format:
@@ -11,301 +11,90 @@ format:
       text: |
         <style>.m { --c: #F5A623; }</style>
 from: markdown+raw_html
-categories:
-  - hackathons
-  - team-events
-  - problem-solving
 ---
 
 ```{=html}
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
+<div class="ev-hero" style="min-height:60vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/hacker-screens.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Academy Programs</div>
     <h1>Hackathons</h1>
-    <p>Intensive problem-solving events where innovation meets collaboration</p>
+    <p>48-hour challenges where innovation meets collaboration. Real problems, real teams, real deadlines.</p>
+    <a href="#hackathons" class="ev-btn" style="background:#F5A623;">See hackathons</a>
   </div>
 </div>
-```
 
-## About Our Hackathons
-
-Our hackathons are intensive, collaborative events where participants work in teams to develop innovative solutions to real-world challenges. Over the course of 48-72 hours, teams ideate, design, and prototype their solutions, guided by industry mentors and subject matter experts.
-
-Whether you're a developer, designer, data scientist, or domain expert, our hackathons provide an exciting opportunity to apply your skills, learn new technologies, and connect with like-minded innovators.
-
-## Upcoming Hackathons
-
-```{=html}
-<div class="row mt-5">
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <img loading="lazy" src="/assets/images/stock/hacker-screens.webp" class="card-img-top" alt="Cybersecurity Hackathon">
-      <div class="card-body">
-        <h3 class="card-title">Cybersecurity Hackathon</h3>
-        <p class="card-text">Develop innovative solutions to real-world cybersecurity challenges faced by organizations today.</p>
-        <div class="d-flex justify-content-between align-items-center">
-          <small class="text-muted">Fall 2025</small>
-          <span class="badge bg-secondary">Coming Soon</span>
-        </div>
-        <a href="/academy/programs/hackathons/cybersecurity-hackathon.html" class="m-b mt-3">Learn More</a>
-      </div>
+<div class="m-bg" style="padding:4rem 0;">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn" style="color:#F5A623;">9</div><div class="m-nl">Editions</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">48h</div><div class="m-nl">Per event</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">100+</div><div class="m-nl">Participants</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">3</div><div class="m-nl">Tracks</div></div>
     </div>
   </div>
+</div>
 
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <img loading="lazy" src="/assets/images/ai-ml-hackathon.jpg" class="card-img-top" alt="AI with Ethics - Hackathon">
-      <div class="card-body">
-        <h3 class="card-title">AI with Ethics - Hackathon</h3>
-        <p class="card-text">Create tools and frameworks that address ethical challenges in artificial intelligence applications.</p>
-        <div class="d-flex justify-content-between align-items-center">
-          <small class="text-muted">Spring 2026</small>
-          <span class="badge bg-secondary">Coming Soon</span>
-        </div>
-        <a href="/academy/programs/hackathons/ai-ethics-hackathon.html" class="m-b mt-3">Learn More</a>
+<div class="m-s" id="hackathons" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Our hackathons</h2>
+    <p class="sub">Three tracks, one mission: build something that matters.</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="/academy/programs/hackathons/spaceapps/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="SpaceApps"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Oct 2026 &middot; Craiova</div><h3>SpaceApps Challenge</h3><p>NASA's global 48-hour hackathon. Space exploration, satellite tech, and Earth observation.</p></div></div>
+        </a>
       </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <img loading="lazy" src="/assets/images/sac.jpg" class="card-img-top" alt="SpaceApps Challenge">
-      <div class="card-body">
-        <h3 class="card-title">SpaceApps Challenge</h3>
-        <p class="card-text">Build innovative solutions for space exploration, satellite technology, and Earth observation challenges.</p>
-        <div class="d-flex justify-content-between align-items-center">
-          <small class="text-muted">October 4-5, 2025</small>
-          <span class="badge bg-success">Registration Open</span>
-        </div>
-        <a href="/academy/programs/hackathons/spaceapps/" class="m-b mt-3">Learn More</a>
+      <div class="col-md-4">
+        <a href="/academy/events/pages/ai-ethics-hackathon.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/hacker-screens.webp" alt="AI Ethics"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">March 2026 &middot; Bucharest</div><h3>AI Ethics Hackathon</h3><p>Ethical AI, bias detection, responsible design, and AI that puts people first.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/events/pages/cybersecurity-hackathon.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/cybersecurity-monitor.webp" alt="Cybersecurity"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Nov 2026 &middot; Craiova</div><h3>Cybersecurity Hackathon</h3><p>CTF, incident response, defense strategies, and security tool development.</p></div></div>
+        </a>
       </div>
     </div>
   </div>
 </div>
-```
 
-## Why Participate in Our Hackathons?
-
-```{=html}
-<div class="row mt-5">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-primary text-white">
-        <h3 class="card-title mb-0">For Participants</h3>
-      </div>
-      <div class="card-body">
-        <ul class="list-unstyled">
-          <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Skill Development:</strong> Apply and enhance your technical skills in a high-pressure, real-world context</li>
-          <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Networking:</strong> Connect with industry professionals, mentors, and fellow participants</li>
-          <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Innovation:</strong> Develop creative solutions to challenging problems</li>
-          <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Prizes:</strong> Win awards, recognition, and potential funding for your ideas</li>
-          <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Career Opportunities:</strong> Showcase your talents to potential employers and collaborators</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0">For Organizations</h3>
-      </div>
-      <div class="card-body">
-        <ul class="list-unstyled">
-          <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> <strong>Fresh Perspectives:</strong> Gain innovative solutions to your organization's challenges</li>
-          <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> <strong>Talent Scouting:</strong> Identify potential hires with demonstrated skills and problem-solving abilities</li>
-          <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> <strong>Brand Visibility:</strong> Showcase your organization's commitment to innovation and community</li>
-          <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> <strong>Industry Leadership:</strong> Position your organization at the forefront of technological advancement</li>
-          <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> <strong>Community Building:</strong> Engage with the broader technical community</li>
-        </ul>
+<div class="m-bg" style="padding:7rem 0;">
+  <div class="container">
+    <div class="m-r">
+      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Hackathon teams"></div>
+      <div class="m-rt">
+        <h2>Build under pressure.<br>Learn faster.</h2>
+        <p>Our hackathons bring together developers, designers, scientists, and domain experts. Over 48 hours, teams ideate, design, and prototype solutions guided by industry mentors. The best ideas get funding and follow-on support.</p>
+        <div class="lk"><a href="/booking/" class="m-lk">Discuss sponsorship</a></div>
       </div>
     </div>
   </div>
 </div>
-```
 
-## Hackathon Format
-
-Our hackathons typically follow this structure to maximize learning, collaboration, and innovation:
-
-```{=html}
-<div class="row mt-5">
-  <div class="col-md-12">
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-marker bg-primary"></div>
-        <div class="timeline-content">
-          <h3>Kick-off & Team Formation</h3>
-          <p>Introduction to the hackathon theme, challenges, and rules. Participants form diverse teams with complementary skills.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-marker bg-primary"></div>
-        <div class="timeline-content">
-          <h3>Ideation & Planning</h3>
-          <p>Teams brainstorm solutions, define project scope, and create a development plan with clearly defined tasks and goals.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-marker bg-primary"></div>
-        <div class="timeline-content">
-          <h3>Development & Mentorship</h3>
-          <p>Teams work on implementing their solutions with guidance from industry mentors who provide technical advice and feedback.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-marker bg-primary"></div>
-        <div class="timeline-content">
-          <h3>Iteration & Refinement</h3>
-          <p>Teams refine their solutions based on mentor feedback, user testing, and technical challenges encountered.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-marker bg-primary"></div>
-        <div class="timeline-content">
-          <h3>Presentations & Judging</h3>
-          <p>Teams present their solutions to a panel of judges who evaluate based on innovation, technical implementation, usability, and potential impact.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-marker bg-primary"></div>
-        <div class="timeline-content">
-          <h3>Awards & Next Steps</h3>
-          <p>Winners are announced and teams receive guidance on how to further develop their solutions beyond the hackathon.</p>
-        </div>
-      </div>
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Get involved</h2>
+    <p class="sub">Three ways to be part of our hackathons.</p>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="pg-card"><img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="Participate"><div class="pg-card-body"><h3>Participate</h3><p>Join a team, build a prototype, and compete for prizes and recognition.</p></div></div></div>
+      <div class="col-md-4"><div class="pg-card"><img loading="lazy" src="/assets/images/stock/team-macbooks.webp" alt="Mentor"><div class="pg-card-body"><h3>Mentor</h3><p>Share your expertise and guide teams through technical challenges.</p></div></div></div>
+      <div class="col-md-4"><div class="pg-card"><img loading="lazy" src="/assets/images/stock/network-closeup.webp" alt="Sponsor"><div class="pg-card-body"><h3>Sponsor</h3><p>Support innovation by sponsoring events, challenges, or prizes.</p></div></div></div>
     </div>
   </div>
 </div>
-```
 
-
-## Frequently Asked Questions
-
-```{=html}
-<div class="row mt-5">
-  <div class="col-md-12">
-    <div class="accordion" id="hackathonFAQ">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Who can participate in your hackathons?
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#hackathonFAQ">
-          <div class="accordion-body">
-            Our hackathons are open to students, professionals, and enthusiasts with relevant skills and interests. Some hackathons may have specific eligibility requirements, which will be clearly stated on the event page.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Do I need to have a team before registering?
-          </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#hackathonFAQ">
-          <div class="accordion-body">
-            No, you can register as an individual and form a team during the hackathon. We provide team formation activities at the beginning of each event to help participants find teammates with complementary skills.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            What should I bring to a hackathon?
-          </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#hackathonFAQ">
-          <div class="accordion-body">
-            Participants should bring their laptops, chargers, and any specific hardware they might need for their projects. For in-person events, consider bringing personal items for comfort during the long hours (e.g., water bottle, snacks, etc.). All major meals are typically provided.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFour">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-            Are there any costs associated with participation?
-          </button>
-        </h2>
-        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#hackathonFAQ">
-          <div class="accordion-body">
-            Most of our hackathons are free to participate in, though some specialized events may have a nominal registration fee. Any associated costs will be clearly indicated on the event registration page.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFive">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-            How can organizations sponsor or propose challenges for hackathons?
-          </button>
-        </h2>
-        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#hackathonFAQ">
-          <div class="accordion-body">
-            Organizations interested in sponsoring hackathons or proposing specific challenges should contact our partnerships team. We offer various sponsorship packages and can work with you to design challenges that align with your organization's goals and interests.
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-```
-
-## Get Involved
-
-```{=html}
-<div class="row mt-5">
-  <div class="col-md-4">
-    <div class="card text-center h-100">
-      <div class="card-body">
-        <i class="bi bi-person-plus fs-1 text-primary mb-3"></i>
-        <h3>Participate</h3>
-        <p>Register for an upcoming hackathon to develop your skills, network, and create innovative solutions.</p>
-        <a href="#upcoming-hackathons" class="m-bo">View Hackathons</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card text-center h-100">
-      <div class="card-body">
-        <i class="bi bi-people fs-1 text-primary mb-3"></i>
-        <h3>Mentor</h3>
-        <p>Share your expertise by becoming a mentor and guide participants through technical and design challenges.</p>
-        <a href="/contact.html" class="m-bo">Apply as Mentor</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card text-center h-100">
-      <div class="card-body">
-        <i class="bi bi-building fs-1 text-primary mb-3"></i>
-        <h3>Sponsor</h3>
-        <p>Support innovation by sponsoring a hackathon, proposing challenges, or providing resources for participants.</p>
-        <a href="/contact.html" class="m-bo">Sponsorship Opportunities</a>
-      </div>
-    </div>
-  </div>
-</div>
-```
-
-```{=html}
 <div class="m-cta">
   <div class="container">
-    <h2>Hackathons</h2>
-    <p>Have questions about our hackathons? Get in touch.</p>
-    <a href="/contact.html" class="m-lk">Contact Us</a>
+    <div class="m-d"></div>
+    <h2>Ready to hack?</h2>
+    <p>Register for the next hackathon or discuss hosting one for your organization.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="/academy/events.html" class="m-b" style="background:#F5A623; color:#fff !important;">See all events</a>
+      <a href="/booking/" class="m-bo" style="border-color:#F5A623; color:#F5A623;">Book a call</a>
+    </div>
   </div>
 </div>
 

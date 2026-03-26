@@ -1,7 +1,7 @@
 ---
 title: "About"
 title-block-style: none
-description: "Learn about chen.ist, a technology consulting firm specializing in cybersecurity, software development, and cloud infrastructure solutions."
+description: "Learn about chen.ist, a European technology consulting firm specializing in cybersecurity, digital infrastructure, and cloud services."
 from: markdown+raw_html
 page-layout: custom
 format:
@@ -12,82 +12,129 @@ format:
 ```{=html}
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>About <span class="gr">chen.ist</span></h1>
-    <p>Technology consulting built on cybersecurity, software development, and cloud infrastructure.</p>
+<!-- HERO -->
+<div class="ev-hero" style="min-height:65vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/hackathon-team.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag">chen.ist</div>
+    <h1>About Us</h1>
+    <p>A European technology consultancy built on cybersecurity, open-source infrastructure, and education.</p>
   </div>
 </div>
 
-<div class="m-bg m-bg-mountains">
+<!-- STATS -->
+<div class="m-bg" style="padding:4rem 0;">
   <div class="container">
-    <h2>What drives us</h2>
-    <p class="sub">Four values at the core of everything we build.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-trophy"></i><h3>Excellence</h3><p>Solutions that exceed expectations in quality and reliability.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-shield-lock"></i><h3>Integrity</h3><p>Transparency, honesty, and ethical standards in every interaction.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-lightbulb"></i><h3>Innovation</h3><p>New ideas and emerging technologies explored and applied.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-people"></i><h3>Partnership</h3><p>Lasting relationships built on mutual trust and respect.</p></div></div>
+    <div class="m-n">
+      <div><div class="m-nn">15+</div><div class="m-nl">Years</div></div>
+      <div><div class="m-nn">EU</div><div class="m-nl">Headquartered</div></div>
+      <div><div class="m-nn">3</div><div class="m-nl">Countries</div></div>
+      <div><div class="m-nn">100%</div><div class="m-nl">Open-source</div></div>
     </div>
   </div>
 </div>
 
-<div class="m-s">
+<!-- MISSION -->
+<div class="m-s" style="padding:7rem 0;">
   <div class="container">
     <div class="m-r">
-      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/team-overhead.webp" alt="Team collaboration at chen.ist"></div>
+      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/team-macbooks.webp" alt="Team collaboration at chen.ist"></div>
       <div class="m-rt">
         <h2>Our mission.<br>Your potential.</h2>
-        <p>We provide high-quality, secure, and efficient technology solutions that empower organizations to reach their full potential in the digital world. From cybersecurity to cloud infrastructure, every engagement is tailored to your goals.</p>
+        <p>We provide secure, efficient technology solutions that empower European organizations to reach their full potential. From cybersecurity to cloud infrastructure, every engagement is tailored to your goals — built on open-source, hosted in the EU.</p>
         <div class="lk"><a href="/services/" class="m-lk">Explore our services</a></div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="m-bg m-bg-mountains">
+<!-- VALUES -->
+<div class="m-bg" style="padding:7rem 0;">
   <div class="container">
-    <div class="m-r rv">
-      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Modern software development"></div>
-      <div class="m-rt">
-        <h2>Built to last.<br>Designed to scale.</h2>
-        <p>We take a collaborative, holistic approach: understand your needs, plan precisely, implement with care, test rigorously, and support long-term. Every step is documented, every decision defensible.</p>
-        <div class="lk"><a href="/booking/" class="m-lk">Talk to our team</a></div>
+    <h2>What drives us</h2>
+    <p class="sub">Four values at the core of everything we build.</p>
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="pg-card"><img loading="lazy" src="/assets/images/stock/cybersecurity-monitor.webp" alt="Excellence"><div class="pg-card-body"><h3>Excellence</h3><p>Solutions that exceed expectations in quality and reliability.</p></div></div>
+      </div>
+      <div class="col-md-3">
+        <div class="pg-card"><img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="Integrity"><div class="pg-card-body"><h3>Integrity</h3><p>Transparency, honesty, and ethical standards in every interaction.</p></div></div>
+      </div>
+      <div class="col-md-3">
+        <div class="pg-card"><img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="Innovation"><div class="pg-card-body"><h3>Innovation</h3><p>New ideas and emerging technologies explored and applied.</p></div></div>
+      </div>
+      <div class="col-md-3">
+        <div class="pg-card"><img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Partnership"><div class="pg-card-body"><h3>Partnership</h3><p>Lasting relationships built on mutual trust and shared goals.</p></div></div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="m-s">
+<!-- APPROACH -->
+<div class="m-s" style="padding:7rem 0;">
   <div class="container">
-    <h2>Leading digital transformation</h2>
-    <p class="sub">We strive to be a technology partner known for excellence, innovation, and security.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-shield-check"></i><h3>Cybersecurity</h3><p>Blue team operations, threat hunting, and NIS2 compliance.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-code-slash"></i><h3>Software Development</h3><p>Full-stack engineering with modern frameworks and CI/CD.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-cloud"></i><h3>Cloud Infrastructure</h3><p>Architecture, migration, and optimization across providers.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-graph-up-arrow"></i><h3>Consulting</h3><p>Strategic guidance for technology transformation initiatives.</p></div></div>
+    <div class="m-r rv">
+      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Modern approach"></div>
+      <div class="m-rt">
+        <h2>Built to last.<br>Designed to scale.</h2>
+        <p>We take a collaborative, holistic approach: understand your needs, plan precisely, implement with care, test rigorously, and support long-term. Every step is documented, every decision defensible.</p>
+        <div class="lk"><a href="/about/team.html" class="m-lk">Meet our team</a></div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="m-bg m-bg-mountains">
+<!-- EXPERTISE -->
+<div class="m-bg" style="padding:7rem 0;">
   <div class="container">
-    <h2>Learn more</h2>
-    <p class="sub">Our commitment extends beyond technology.</p>
-    <div class="row g-5">
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-heart"></i><h3>Social Responsibility</h3><p>Sustainable practices, community development, and social impact through technology.</p><a href="/about/csr.html" class="m-lk">Our CSR initiatives</a></div></div>
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-people-fill"></i><h3>Community</h3><p>Open-source contributions, meetups, mentorship, and educational programs.</p><a href="/about/community.html" class="m-lk">Community involvement</a></div></div>
+    <h2>What we do</h2>
+    <p class="sub">Four domains of deep expertise.</p>
+    <div class="row g-4">
+      <div class="col-md-3"><a href="/security/" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="/assets/images/stock/cybersecurity-monitor.webp" alt="Cybersecurity"><div class="pg-card-body"><h3>Cybersecurity</h3><p>Blue team, threat hunting, NIS2, and CISO as a Service.</p></div></div></a></div>
+      <div class="col-md-3"><a href="/digital/" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="Infrastructure"><div class="pg-card-body"><h3>Infrastructure</h3><p>Open-source, UNIX, and Apple platforms for your business.</p></div></div></a></div>
+      <div class="col-md-3"><a href="/services/cloud/" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="/assets/images/stock/network-closeup.webp" alt="Cloud"><div class="pg-card-body"><h3>Cloud</h3><p>EU-first migration, DevOps, and multi-cloud security.</p></div></div></a></div>
+      <div class="col-md-3"><a href="/academy/" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="/assets/images/stock/hacker-screens.webp" alt="Education"><div class="pg-card-body"><h3>Education</h3><p>Courses, trainings, hackathons, and Computer Club.</p></div></div></a></div>
     </div>
   </div>
 </div>
 
+<!-- EUROPEAN -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <div class="m-r">
+      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/network-closeup.webp" alt="European roots"></div>
+      <div class="m-rt">
+        <h2>European roots.<br>Global expertise.</h2>
+        <p>Headquartered in Craiova, Romania with operations in Bucharest and Stockholm. Our infrastructure runs on EU soil, our data stays in the EU, and our solutions comply with European regulations by default.</p>
+        <div class="lk"><a href="/contact.html" class="m-lk">Our locations</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BEYOND TECH -->
+<div class="m-bg" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Beyond technology</h2>
+    <p class="sub">Our commitment extends to the communities we serve.</p>
+    <div class="row g-4">
+      <div class="col-md-4"><a href="/about/team.html" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="/assets/images/stock/team-macbooks.webp" alt="Team"><div class="pg-card-body"><h3>Our Team</h3><p>Meet the people behind chen.ist and our expertise areas.</p></div></div></a></div>
+      <div class="col-md-4"><a href="/about/csr.html" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="CSR"><div class="pg-card-body"><h3>Social Responsibility</h3><p>Sustainability, digital inclusion, and tech for good.</p></div></div></a></div>
+      <div class="col-md-4"><a href="/about/community.html" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="Community"><div class="pg-card-body"><h3>Community</h3><p>Open-source, meetups, mentorship, and education.</p></div></div></a></div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
 <div class="m-cta">
   <div class="container">
     <div class="m-d"></div>
     <h2>Ready to work<br>with us?</h2>
     <p>Let's discuss how we can help you achieve your technology goals.</p>
-    <a href="/booking/" class="m-b">Contact us</a>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="/booking/" class="m-b" style="color:#fff !important;">Book a call</a>
+      <a href="/about/team.html" class="m-bo">Meet the team</a>
+    </div>
   </div>
 </div>
 
