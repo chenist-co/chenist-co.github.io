@@ -533,25 +533,25 @@ document.addEventListener('DOMContentLoaded', function() {
 <span class="menu-text">Contact</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-lang" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Lang</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">🌐</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-lang">    
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-">    
         <li>
-    <a class="dropdown-item" href="./index.html">
+    <a class="dropdown-item" href="./#lang-en">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./ro/index.html">
- <span class="dropdown-text">Romanian</span></a>
+    <a class="dropdown-item" href="./#lang-ro">
+ <span class="dropdown-text">Română</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./sv/index.html">
- <span class="dropdown-text">Swedish</span></a>
+    <a class="dropdown-item" href="./#lang-sv">
+ <span class="dropdown-text">Svenska</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./de/index.html">
- <span class="dropdown-text">German</span></a>
+    <a class="dropdown-item" href="./#lang-de">
+ <span class="dropdown-text">Deutsch</span></a>
   </li>  
     </ul>
   </li>
@@ -1122,6 +1122,29 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     
+    // Language switcher — rewrites URL to same page in other language
+    document.querySelectorAll('a[href^="#lang-"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var lang = this.getAttribute('href').replace('#lang-', '');
+        var path = window.location.pathname;
+
+        // Strip existing language prefix
+        var cleanPath = path.replace(/^\/(ro|de|sv)\//, '/').replace(/^\/(ro|de|sv)$/, '/');
+
+        // Build new URL
+        var newPath;
+        if (lang === 'en') {
+          newPath = cleanPath;
+        } else {
+          var prefix = lang === 'sv' ? '/sv' : '/' + lang;
+          newPath = prefix + (cleanPath === '/' ? '/' : cleanPath);
+        }
+
+        window.location.href = newPath;
+      });
+    });
+
     // Enable Bootstrap tooltips
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
