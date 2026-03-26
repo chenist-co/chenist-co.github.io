@@ -1190,7 +1190,7 @@ Reading Time
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-categories="c2VjdXJpdHklMkNpbXBsZW1lbnRhdGlvbiUyQ2Jlc3QtcHJhY3RpY2Vz" data-listing-date-sort="1740787200000" data-listing-file-modified-sort="1774519173468" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1326" data-listing-title-sort="Security Implementation Guide" data-listing-filename-sort="implementation-guide.qmd">
+<tr data-index="0" data-categories="c2VjdXJpdHklMkNpbXBsZW1lbnRhdGlvbiUyQ2Jlc3QtcHJhY3RpY2Vz" data-listing-date-sort="1740787200000" data-listing-file-modified-sort="1774522815971" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1326" data-listing-title-sort="Security Implementation Guide" data-listing-filename-sort="implementation-guide.qmd">
 <td>
 <a href="../../resources/guides/security/implementation-guide.html" class="title listing-title">Security Implementation Guide</a>
 </td>
@@ -1209,7 +1209,7 @@ Reading Time
 
 </tr>
 
-<tr data-index="1" data-categories="Y2xvdWQlMkNtaWdyYXRpb24lMkNpbmZyYXN0cnVjdHVyZQ==" data-listing-date-sort="1739577600000" data-listing-file-modified-sort="1774519173468" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1234" data-listing-title-sort="Cloud Migration Handbook" data-listing-filename-sort="migration-handbook.qmd">
+<tr data-index="1" data-categories="Y2xvdWQlMkNtaWdyYXRpb24lMkNpbmZyYXN0cnVjdHVyZQ==" data-listing-date-sort="1739577600000" data-listing-file-modified-sort="1774522815971" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1234" data-listing-title-sort="Cloud Migration Handbook" data-listing-filename-sort="migration-handbook.qmd">
 <td>
 <a href="../../resources/guides/cloud/migration-handbook.html" class="title listing-title">Cloud Migration Handbook</a>
 </td>
@@ -1228,7 +1228,7 @@ Reading Time
 
 </tr>
 
-<tr data-index="2" data-categories="YXBpJTJDZG9jdW1lbnRhdGlvbiUyQ2RldmVsb3BtZW50" data-listing-date-sort="1737331200000" data-listing-file-modified-sort="1774519173468" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2092" data-listing-title-sort="API Endpoints Guide" data-listing-filename-sort="endpoints.qmd">
+<tr data-index="2" data-categories="YXBpJTJDZG9jdW1lbnRhdGlvbiUyQ2RldmVsb3BtZW50" data-listing-date-sort="1737331200000" data-listing-file-modified-sort="1774522815971" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2092" data-listing-title-sort="API Endpoints Guide" data-listing-filename-sort="endpoints.qmd">
 <td>
 <a href="../../resources/guides/api/endpoints.html" class="title listing-title">API Endpoints Guide</a>
 </td>
@@ -1322,7 +1322,12 @@ footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
   document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
     var href = a.getAttribute('href');
     if (href && href.startsWith('/') && !href.startsWith('//')) {
-      a.setAttribute('href', prefix + href);
+      // Swedish blog is at /sv/blogg.html, not /sv/blog.html
+      if (lang === 'sv' && href === '/blog.html') {
+        a.setAttribute('href', '/sv/blogg.html');
+      } else {
+        a.setAttribute('href', prefix + href);
+      }
     }
   });
 
