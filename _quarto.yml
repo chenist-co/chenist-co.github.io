@@ -95,13 +95,13 @@ website:
       - text: "🌐"
         menu:
           - text: English
-            href: "#lang-en"
+            href: index.qmd
           - text: Română
-            href: "#lang-ro"
+            href: ro/index.qmd
           - text: Svenska
-            href: "#lang-sv"
+            href: sv/index.qmd
           - text: Deutsch
-            href: "#lang-de"
+            href: de/index.qmd
         
   page-footer:
     border: false
@@ -235,23 +235,43 @@ format:
                 }
               });
               
-              // Language switcher — rewrites URL to same page in other language
-              document.querySelectorAll('a[href^="#lang-"]').forEach(function(link) {
+              // Language switcher — intercept lang dropdown and rewrite to same page
+              document.querySelectorAll('.dropdown-item').forEach(function(link) {
+                var href = link.getAttribute('href') || '';
+                var isLang = false;
+                var targetLang = '';
+
+                if (href.match(/^\/?index\.html$/) || href === '/' || href.match(/^\.\.\/?index\.html$/)) {
+                  isLang = true; targetLang = 'en';
+                } else if (href.match(/\/?ro\//) || href.match(/^\.\.\/ro\//)) {
+                  isLang = true; targetLang = 'ro';
+                } else if (href.match(/\/?sv\//) || href.match(/^\.\.\/sv\//)) {
+                  isLang = true; targetLang = 'sv';
+                } else if (href.match(/\/?de\//) || href.match(/^\.\.\/de\//)) {
+                  isLang = true; targetLang = 'de';
+                }
+
+                var text = (link.textContent || '').trim();
+                if (text === 'English' || text === 'Română' || text === 'Svenska' || text === 'Deutsch') {
+                  isLang = true;
+                  if (text === 'English') targetLang = 'en';
+                  if (text === 'Română') targetLang = 'ro';
+                  if (text === 'Svenska') targetLang = 'sv';
+                  if (text === 'Deutsch') targetLang = 'de';
+                }
+
+                if (!isLang) return;
+
                 link.addEventListener('click', function(e) {
                   e.preventDefault();
-                  var lang = this.getAttribute('href').replace('#lang-', '');
                   var path = window.location.pathname;
-
-                  // Strip existing language prefix
                   var cleanPath = path.replace(/^\/(ro|de|sv)\//, '/').replace(/^\/(ro|de|sv)$/, '/');
 
-                  // Build new URL
                   var newPath;
-                  if (lang === 'en') {
+                  if (targetLang === 'en') {
                     newPath = cleanPath;
                   } else {
-                    var prefix = lang === 'sv' ? '/sv' : '/' + lang;
-                    newPath = prefix + (cleanPath === '/' ? '/' : cleanPath);
+                    newPath = '/' + (targetLang === 'sv' ? 'sv' : targetLang) + (cleanPath === '/' ? '/' : cleanPath);
                   }
 
                   window.location.href = newPath;
