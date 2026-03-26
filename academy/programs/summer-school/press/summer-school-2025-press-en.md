@@ -4,7 +4,7 @@ subtitle: "Intensive Technology Program at Private Location in Craiova"
 author: "Chen.ist Academy"
 date: "June 2, 2026"
 format:
-  pdf:
+  typst:
     toc: false
     number-sections: false
     colorlinks: true

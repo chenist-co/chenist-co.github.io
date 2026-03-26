@@ -4,7 +4,7 @@ subtitle: "Program Intensiv de Tehnologie într-o Locație Privată din Craiova"
 author: "Academia Chen.ist"
 date: "2 Iunie 2026"
 format:
-  pdf:
+  typst:
     toc: false
     number-sections: false
     colorlinks: true
