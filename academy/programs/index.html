@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-b37f6c1b9a99d16252d3ddd2c7074628.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-6cb3fdec3a604e15d7c32437517db040.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-398b749543a727f3b66e7cafba33b310.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-6cb3fdec3a604e15d7c32437517db040.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -692,19 +692,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>Educational <span class="gr">Programs</span></h1>
+<!-- HERO -->
+<div class="ev-hero" style="min-height:60vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/hackathon-team.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Academy</div>
+    <h1>Programs</h1>
     <p>Hackathons, summer schools, and community meetups. Learn by building.</p>
+    <a href="#programs" class="ev-btn" style="background:#F5A623;">Explore</a>
   </div>
 </div>
 
-<!-- PROGRAM CARDS — dark image style like Events page -->
-<div class="m-bg m-bg-mountains">
+<!-- STATS -->
+<div class="m-bg" style="padding:4rem 0;">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn" style="color:#F5A623;">9+</div><div class="m-nl">Years</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">500+</div><div class="m-nl">Participants</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">3</div><div class="m-nl">Countries</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">Free</div><div class="m-nl">Computer Club</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PROGRAM CARDS -->
+<div class="m-s" id="programs" style="padding:7rem 0;">
   <div class="container">
     <h2>Our programs</h2>
     <p class="sub">Immersive experiences that go beyond traditional learning.</p>
-    <div class="row g-5">
+    <div class="row g-4">
       <div class="col-md-4">
         <a href="../../academy/programs/hackathons/" style="text-decoration:none;">
           <div class="pg-card">
@@ -746,7 +762,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <!-- FEATURE ROW -->
-<div class="m-s">
+<div class="m-bg" style="padding:7rem 0;">
   <div class="container">
     <div class="m-r">
       <div class="m-ri"><img loading="lazy" src="../../assets/images/stock/hackathon-team.webp" alt="Collaborative learning"></div>
@@ -759,63 +775,56 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<!-- UPCOMING PROGRAMS — clean list -->
-<div class="m-bg m-bg-mountains">
-  <div class="container" style="max-width: 750px;">
-    <h2>Upcoming</h2>
+<!-- UPCOMING PROGRAMS — image cards -->
+<div class="m-bg" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Upcoming 2026</h2>
     <p class="sub">Register early — spots fill fast.</p>
-
-    <div class="up-item">
-      <div style="flex-grow:1;">
-        <h4><a href="../../academy/programs/computerclub/">Computer Club</a></h4>
-        <div class="up-meta"><i class="bi bi-calendar3"></i> Monthly &nbsp; <i class="bi bi-geo-alt"></i> Craiova &amp; Online</div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="../../academy/programs/computerclub/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../../assets/images/stock/terminal-green.webp" alt="Computer Club"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;"><i class="bi bi-calendar3 me-1"></i>Monthly · Craiova &amp; Online</div><h3>Computer Club</h3><p>Open discussion, hacking, and tech exploration. All levels.</p></div></div>
+        </a>
       </div>
-      <div class="up-badge up-badge-open">Ongoing</div>
-    </div>
-
-    <div class="up-item">
-      <div style="flex-grow:1;">
-        <h4><a href="../../academy/programs/hackathons/ai-ethics-hackathon.html">AI Ethics Hackathon</a></h4>
-        <div class="up-meta"><i class="bi bi-calendar3"></i> March 5, 2026 &nbsp; <i class="bi bi-geo-alt"></i> Bucharest</div>
+      <div class="col-md-4">
+        <a href="../../academy/programs/hackathons/ai-ethics-hackathon.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../../assets/images/stock/hacker-screens.webp" alt="AI Ethics"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;"><i class="bi bi-calendar3 me-1"></i>March 5, 2026 · Bucharest</div><h3>AI Ethics Hackathon</h3><p>48-hour challenge on ethical AI and responsible design.</p></div></div>
+        </a>
       </div>
-      <div class="up-badge up-badge-open">Open</div>
-    </div>
-
-    <div class="up-item">
-      <div style="flex-grow:1;">
-        <h4><a href="../../academy/programs/summer-school/2025.html">Summer School 2026</a></h4>
-        <div class="up-meta"><i class="bi bi-calendar3"></i> Aug 1–15, 2026 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
+      <div class="col-md-4">
+        <a href="../../academy/programs/summer-school/2025.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../../assets/images/stock/hackathon-team.webp" alt="Summer School"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;"><i class="bi bi-calendar3 me-1"></i>Aug 1–15, 2026 · Craiova</div><h3>Summer School 2026</h3><p>Two weeks of cybersecurity, cloud, and AI.</p></div></div>
+        </a>
       </div>
-      <div class="up-badge up-badge-soon">Coming soon</div>
-    </div>
-
-    <div class="up-item">
-      <div style="flex-grow:1;">
-        <h4><a href="../../academy/programs/hackathons/spaceapps/challenge-2025.html">SpaceApps Challenge 2026</a></h4>
-        <div class="up-meta"><i class="bi bi-calendar3"></i> October 2026 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
+      <div class="col-md-4">
+        <a href="../../academy/programs/hackathons/spaceapps/challenge-2025.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../../assets/images/stock/code-screen.webp" alt="SpaceApps"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;"><i class="bi bi-calendar3 me-1"></i>October 2026 · Craiova</div><h3>SpaceApps Challenge</h3><p>NASA's global 48-hour hackathon. 9th edition.</p></div></div>
+        </a>
       </div>
-      <div class="up-badge up-badge-soon">Coming soon</div>
-    </div>
-
-    <div class="up-item">
-      <div style="flex-grow:1;">
-        <h4><a href="../../academy/programs/summer-school/junior.html">Junior Summer School</a></h4>
-        <div class="up-meta"><i class="bi bi-calendar3"></i> July 2026 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
+      <div class="col-md-4">
+        <a href="../../academy/programs/summer-school/junior.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../../assets/images/stock/team-macbooks.webp" alt="Junior"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;"><i class="bi bi-calendar3 me-1"></i>July 2026 · Craiova</div><h3>Junior Summer School</h3><p>Technology summer school for ages 14-18.</p></div></div>
+        </a>
       </div>
-      <div class="up-badge up-badge-soon">Coming soon</div>
     </div>
   </div>
 </div>
 
-<!-- BENEFITS — clean tiles -->
-<div class="m-s">
+<!-- BENEFITS -->
+<div class="m-s" style="padding:7rem 0;">
   <div class="container">
     <h2>Why join a program</h2>
-    <p class="sub"></p>
-    <div class="row g-5">
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-people"></i><h3>Collaborative</h3><p>Work alongside peers and experts to solve real problems together.</p></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-lightning"></i><h3>Accelerated</h3><p>Intensive formats that build practical skills in days, not months.</p></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-graph-up"></i><h3>Career-building</h3><p>Real projects for your portfolio and a network that opens doors.</p></div></div>
+    <p class="sub">What you get from every chen.ist program.</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="pg-card"><img loading="lazy" src="../../assets/images/stock/hackathon-team.webp" alt="Collaborative"><div class="pg-card-body"><h3>Collaborative</h3><p>Work alongside peers and experts to solve real problems together.</p></div></div>
+      </div>
+      <div class="col-md-4">
+        <div class="pg-card"><img loading="lazy" src="../../assets/images/stock/hacker-screens.webp" alt="Accelerated"><div class="pg-card-body"><h3>Accelerated</h3><p>Intensive formats that build practical skills in days, not months.</p></div></div>
+      </div>
+      <div class="col-md-4">
+        <div class="pg-card"><img loading="lazy" src="../../assets/images/stock/code-screen.webp" alt="Career"><div class="pg-card-body"><h3>Career-building</h3><p>Real projects for your portfolio and a network that opens doors.</p></div></div>
+      </div>
     </div>
   </div>
 </div>

@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-b37f6c1b9a99d16252d3ddd2c7074628.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6cb3fdec3a604e15d7c32437517db040.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-398b749543a727f3b66e7cafba33b310.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-6cb3fdec3a604e15d7c32437517db040.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -692,29 +692,59 @@ main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !imp
 
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>Digital <span class="gr">Infrastructure</span></h1>
+<!-- HERO -->
+<div class="ev-hero" style="min-height:65vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/terminal-green.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag">chen.ist</div>
+    <h1>Digital<br>Infrastructure</h1>
     <p>Open-source, UNIX, and Apple platforms. Deployed and managed for your business.</p>
+    <a href="#pillars" class="ev-btn">Explore</a>
   </div>
 </div>
 
-<div class="m-bg m-bg-squares">
+<!-- STATS -->
+<div class="m-bg" style="padding:4rem 0;">
   <div class="container">
-    <h2>Three pillars. One partner.</h2>
-    <p class="sub">Everything your business needs to run, secured and maintained by us.</p>
-    <div class="row g-5">
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-code-square"></i><h3>Open-Source Stack</h3><p>Productivity, communication, identity, and monitoring — no license fees.</p></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-terminal"></i><h3>UNIX Systems</h3><p>Linux and BSD servers, firewalls, storage, and declarative infrastructure.</p></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-apple"></i><h3>Apple Infrastructure</h3><p>Apple Business MDM, zero-touch deployment, email, and brand management.</p></div></div>
+    <div class="m-n">
+      <div><div class="m-nn">40–70%</div><div class="m-nl">IT cost savings</div></div>
+      <div><div class="m-nn">100%</div><div class="m-nl">Open-source</div></div>
+      <div><div class="m-nn">EU</div><div class="m-nl">Data sovereignty</div></div>
+      <div><div class="m-nn">24/7</div><div class="m-nl">Monitoring</div></div>
     </div>
   </div>
 </div>
 
-<div class="m-s">
+<!-- THREE PILLARS -->
+<div class="m-s" id="pillars" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Three pillars. One partner.</h2>
+    <p class="sub">Everything your business needs to run, secured and maintained by us.</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="#opensource" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/code-screen.webp" alt="Open Source"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Pillar 1</div><h3>Open-Source Stack</h3><p>Productivity, communication, identity, and monitoring — no license fees.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="#unix" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/terminal-green.webp" alt="UNIX"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Pillar 2</div><h3>UNIX Systems</h3><p>Linux and BSD servers, firewalls, storage, and declarative infrastructure.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="#apple" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/team-macbooks.webp" alt="Apple"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Pillar 3</div><h3>Apple Infrastructure</h3><p>Apple Business MDM, zero-touch deployment, email, and brand management.</p></div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OPEN SOURCE -->
+<div class="m-bg" id="opensource" style="padding:7rem 0;">
   <div class="container">
     <div class="m-r">
-      <div class="m-ri"><img loading="lazy" src="../assets/images/stock/terminal-green.webp" alt="Open-source development"></div>
+      <div class="m-ri"><img loading="lazy" src="../assets/images/stock/code-screen.webp" alt="Open-source development"></div>
       <div class="m-rt">
         <h2>Replace licenses.<br>Keep the functionality.</h2>
         <p>Nextcloud for files. Collabora for documents. Matrix for chat. Keycloak for SSO. Prometheus for monitoring. All open-source, all self-hosted, all yours.</p>
@@ -724,10 +754,11 @@ main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !imp
   </div>
 </div>
 
-<div class="m-bg m-bg-squares">
+<!-- UNIX -->
+<div class="m-s" id="unix" style="padding:7rem 0;">
   <div class="container">
     <div class="m-r rv">
-      <div class="m-ri"><img loading="lazy" src="../assets/images/stock/datacenter-blue.webp" alt="UNIX server infrastructure"></div>
+      <div class="m-ri"><img loading="lazy" src="../assets/images/stock/hacker-screens.webp" alt="UNIX server infrastructure"></div>
       <div class="m-rt">
         <h2>Servers that run<br>themselves.</h2>
         <p>NixOS for declarative, reproducible deployments. OpenBSD for firewalls. FreeBSD for ZFS storage. Debian for everything else. Hardened by default.</p>
@@ -737,7 +768,8 @@ main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !imp
   </div>
 </div>
 
-<div class="m-s">
+<!-- APPLE -->
+<div class="m-bg" id="apple" style="padding:7rem 0;">
   <div class="container">
     <div class="m-r">
       <div class="m-ri"><img loading="lazy" src="../assets/images/stock/team-macbooks.webp" alt="Apple Business deployment"></div>
@@ -750,18 +782,8 @@ main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !imp
   </div>
 </div>
 
-<div class="m-bg m-bg-squares">
-  <div class="container">
-    <div class="m-n">
-      <div><div class="m-nn">40–70%</div><div class="m-nl">IT cost savings</div></div>
-      <div><div class="m-nn">100%</div><div class="m-nl">Open-source</div></div>
-      <div><div class="m-nn">EU</div><div class="m-nl">Data sovereignty</div></div>
-      <div><div class="m-nn">24/7</div><div class="m-nl">Monitoring</div></div>
-    </div>
-  </div>
-</div>
-
-<div class="m-s">
+<!-- PACKAGES -->
+<div class="m-s" style="padding:7rem 0;">
   <div class="container">
     <h2>Pick your starting point</h2>
     <p class="sub">All packages include deployment, hardening, monitoring, and support.</p>
@@ -795,7 +817,7 @@ main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !imp
             <li>Collabora documents</li>
             <li>Prometheus + Grafana</li>
           </ul>
-          <a href="../booking/" class="m-b" style="font-size:0.9rem; padding:0.7rem 1.75rem;">Book consultation</a>
+          <a href="../booking/" class="m-b" style="font-size:0.9rem; padding:0.7rem 1.75rem; color:#fff !important;">Book consultation</a>
         </div>
       </div>
       <div class="col-md-4">
@@ -817,12 +839,26 @@ main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !imp
   </div>
 </div>
 
+<!-- RELATED -->
+<div class="m-bg" style="padding:5rem 0;">
+  <div class="container">
+    <h2>Related services</h2>
+    <p class="sub">Infrastructure works best with the right security and cloud strategy.</p>
+    <div class="row g-4">
+      <div class="col-md-4"><a href="../security/" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="../assets/images/stock/cybersecurity-monitor.webp" alt="Security"><div class="pg-card-body"><h3>Security</h3><p>24/7 SOC, threat hunting, and NIS2 compliance.</p></div></div></a></div>
+      <div class="col-md-4"><a href="../services/cloud/" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="../assets/images/stock/network-closeup.webp" alt="Cloud"><div class="pg-card-body"><h3>Cloud Services</h3><p>EU-first cloud migration and multi-cloud management.</p></div></div></a></div>
+      <div class="col-md-4"><a href="../compare.html" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="../assets/images/stock/terminal-green.webp" alt="Compare"><div class="pg-card-body"><h3>Why Open Source</h3><p>See how open-source stacks up against proprietary alternatives.</p></div></div></a></div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
 <div class="m-cta">
   <div class="container">
     <div class="m-d"></div>
     <h2>Your infrastructure,<br>built right</h2>
     <p>30 minutes. No pitch. Just an honest assessment of what we can build for you.</p>
-    <a href="../booking/" class="m-b">Book your free audit</a>
+    <a href="../booking/" class="m-b" style="color:#fff !important;">Book your free audit</a>
     <div class="m-sm">
       <i class="bi bi-check-circle-fill"></i> Free &nbsp;
       <i class="bi bi-check-circle-fill"></i> No lock-in &nbsp;
