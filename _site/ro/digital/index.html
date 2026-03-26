@@ -787,52 +787,67 @@ main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !imp
   <div class="container">
     <h2>Alegeți punctul de start</h2>
     <p class="sub">Toate pachetele includ implementare, securizare, monitorizare și suport.</p>
-    <div class="row g-4">
+    <div class="row g-4 justify-content-center">
       <div class="col-md-4">
-        <div class="m-pkg">
-          <h3>Starter</h3>
-          <div class="sz">1–10 angajați</div>
-          <ul>
-            <li>Configurare Apple Business</li>
-            <li>1 server Linux</li>
-            <li>Nextcloud + email</li>
-            <li>Firewall de bază</li>
-            <li>Backup-uri automate</li>
-            <li>Monitorizare disponibilitate</li>
-          </ul>
-          <a href="../../ro/booking/" class="m-lk">Solicitați o ofertă</a>
+        <div style="border:1.5px solid rgba(129,189,74,0.1); border-radius:20px; padding:2.5rem 2rem; height:100%; display:flex; flex-direction:column; transition:border-color 0.2s, transform 0.2s;" onmouseover="this.style.borderColor='rgba(129,189,74,0.3)';this.style.transform='translateY(-4px)';" onmouseout="this.style.borderColor='rgba(129,189,74,0.1)';this.style.transform='none';">
+          <div style="width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:rgba(129,189,74,0.08);border-radius:12px;margin-bottom:1.25rem;">
+            <i class="bi bi-rocket-takeoff" style="font-size:1.25rem;color:#81BD4A;"></i>
+          </div>
+          <h3 style="font-size:1.35rem;font-weight:700;margin-bottom:0.15rem;">Starter</h3>
+          <div style="font-size:0.85rem;color:#86868b;margin-bottom:1.5rem;">1–10 angajați</div>
+          <div style="flex-grow:1;">
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Configurare Apple Business</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>1 server Linux</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Nextcloud + email</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Firewall de bază</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Backup-uri automate</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Monitorizare disponibilitate</span></div>
+          </div>
+          <div style="margin-top:1.75rem;text-align:center;">
+            <a href="../../ro/booking/" class="m-bo" style="width:100%;display:block;text-align:center;">Solicitați o ofertă</a>
+          </div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="m-pkg ft">
-          <div class="m-badge">Cel mai popular</div>
-          <h3>Growth</h3>
-          <div class="sz">11–50 angajați</div>
-          <ul>
-            <li>Tot din Starter</li>
-            <li>Apple MDM complet</li>
-            <li>Firewall OpenBSD + VPN</li>
-            <li>Keycloak SSO</li>
-            <li>Mesagerie Matrix</li>
-            <li>Documente Collabora</li>
-            <li>Prometheus + Grafana</li>
-          </ul>
-          <a href="../../ro/booking/" class="m-b" style="font-size:0.9rem; padding:0.7rem 1.75rem; color:#fff !important;">Programați o consultanță</a>
+        <div style="border:2px solid #81BD4A; border-radius:20px; padding:2.5rem 2rem; height:100%; display:flex; flex-direction:column; position:relative; transition:transform 0.2s; box-shadow:0 8px 30px rgba(129,189,74,0.1);" onmouseover="this.style.transform='translateY(-4px)';" onmouseout="this.style.transform='none';">
+          <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:#81BD4A;color:#fff;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:0.3rem 1rem;border-radius:980px;">Cel mai popular</div>
+          <div style="width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:rgba(129,189,74,0.12);border-radius:12px;margin-bottom:1.25rem;">
+            <i class="bi bi-graph-up-arrow" style="font-size:1.25rem;color:#81BD4A;"></i>
+          </div>
+          <h3 style="font-size:1.35rem;font-weight:700;margin-bottom:0.15rem;">Growth</h3>
+          <div style="font-size:0.85rem;color:#86868b;margin-bottom:1.5rem;">11–50 angajați</div>
+          <div style="flex-grow:1;">
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Tot din Starter</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Apple MDM complet</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Firewall OpenBSD + VPN</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Keycloak SSO</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Mesagerie Matrix</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Documente Collabora</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Prometheus + Grafana</span></div>
+          </div>
+          <div style="margin-top:1.75rem;text-align:center;">
+            <a href="../../ro/booking/" class="m-b" style="width:100%;display:block;text-align:center;color:#fff !important;">Programați o consultanță</a>
+          </div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="m-pkg">
-          <h3>Enterprise</h3>
-          <div class="sz">50+ angajați</div>
-          <ul>
-            <li>Tot din Growth</li>
-            <li>Flotă multi-server NixOS</li>
-            <li>Stocare FreeBSD ZFS</li>
-            <li>VPN mesh multi-sediu</li>
-            <li>Referințe NIS2 + GDPR</li>
-            <li>Răspuns la incidente 24/7</li>
-          </ul>
-          <a href="../../ro/booking/" class="m-lk">Contactați-ne</a>
+        <div style="border:1.5px solid rgba(129,189,74,0.1); border-radius:20px; padding:2.5rem 2rem; height:100%; display:flex; flex-direction:column; transition:border-color 0.2s, transform 0.2s;" onmouseover="this.style.borderColor='rgba(129,189,74,0.3)';this.style.transform='translateY(-4px)';" onmouseout="this.style.borderColor='rgba(129,189,74,0.1)';this.style.transform='none';">
+          <div style="width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:rgba(129,189,74,0.08);border-radius:12px;margin-bottom:1.25rem;">
+            <i class="bi bi-building" style="font-size:1.25rem;color:#81BD4A;"></i>
+          </div>
+          <h3 style="font-size:1.35rem;font-weight:700;margin-bottom:0.15rem;">Enterprise</h3>
+          <div style="font-size:0.85rem;color:#86868b;margin-bottom:1.5rem;">50+ angajați</div>
+          <div style="flex-grow:1;">
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Tot din Growth</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Flotă multi-server NixOS</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Stocare FreeBSD ZFS</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>VPN mesh multi-sediu</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Referințe NIS2 + GDPR</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Răspuns la incidente 24/7</span></div>
+          </div>
+          <div style="margin-top:1.75rem;text-align:center;">
+            <a href="../../ro/booking/" class="m-bo" style="width:100%;display:block;text-align:center;">Contactați-ne</a>
+          </div>
         </div>
       </div>
     </div>
