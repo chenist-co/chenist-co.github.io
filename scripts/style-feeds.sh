@@ -8,6 +8,15 @@ for f in _site/blog.xml _site/ro/blog.xml _site/de/blog.xml _site/sv/blog.xml; d
 done
 
 # Create blog directory redirects (can't use .qmd or they pollute listings)
+# EN blog redirect
+mkdir -p "_site/blog"
+cat > "_site/blog/index.html" << REDIRECT
+<!DOCTYPE html>
+<html><head><meta http-equiv="refresh" content="0; url=/blog.html"><title>Redirecting...</title></head>
+<body>Redirecting to <a href="/blog.html">blog</a>...</body></html>
+REDIRECT
+echo "Redirect: _site/blog/index.html"
+
 for lang_path in "ro/blog" "de/blog" "sv/blog"; do
   lang=$(echo "$lang_path" | cut -d'/' -f1)
   blog_name=$(echo "$lang_path" | cut -d'/' -f2)
