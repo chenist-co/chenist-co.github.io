@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var ctaLink = document.createElement('a');
     ctaLink.className = 'nav-link navbar-cta';
     ctaLink.href = '/booking/';
-    ctaLink.target = '_blank';
+    // internal link, no new tab
     ctaLink.textContent = 'Book a Call';
     ctaLi.appendChild(ctaLink);
     navRight.appendChild(ctaLi);
@@ -670,7 +670,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="m-d"></div>
     <h2>Need something specific?</h2>
     <p>Our team can help you find the right resources for your project.</p>
-    <a href="https://cal.com/chenist" target="_blank" class="m-b">Book a call</a>
+    <a href="../booking/" class="m-b">Book a call</a>
   </div>
 </div>
 

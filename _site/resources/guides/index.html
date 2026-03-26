@@ -389,7 +389,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var ctaLink = document.createElement('a');
     ctaLink.className = 'nav-link navbar-cta';
     ctaLink.href = '/booking/';
-    ctaLink.target = '_blank';
+    // internal link, no new tab
     ctaLink.textContent = 'Book a Call';
     ctaLi.appendChild(ctaLink);
     navRight.appendChild(ctaLi);

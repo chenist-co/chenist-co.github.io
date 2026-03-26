@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var ctaLink = document.createElement('a');
     ctaLink.className = 'nav-link navbar-cta';
     ctaLink.href = '/booking/';
-    ctaLink.target = '_blank';
+    // internal link, no new tab
     ctaLink.textContent = 'Book a Call';
     ctaLi.appendChild(ctaLink);
     navRight.appendChild(ctaLi);
@@ -635,7 +635,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="m-rt">
         <h2>Built to last.<br>Designed to scale.</h2>
         <p>We take a collaborative, holistic approach: understand your needs, plan precisely, implement with care, test rigorously, and support long-term. Every step is documented, every decision defensible.</p>
-        <div class="lk"><a href="https://cal.com/chenist" target="_blank" class="m-lk">Talk to our team</a></div>
+        <div class="lk"><a href="../booking/" class="m-lk">Talk to our team</a></div>
       </div>
     </div>
   </div>
