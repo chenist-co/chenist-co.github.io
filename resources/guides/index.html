@@ -32,8 +32,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
 <link href="../../assets/images/favicon.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -46,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-b37f6c1b9a99d16252d3ddd2c7074628.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-6cb3fdec3a604e15d7c32437517db040.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-398b749543a727f3b66e7cafba33b310.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-6cb3fdec3a604e15d7c32437517db040.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -76,35 +74,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-description','listing-date','listing-categories','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <meta property="og:title" content="Guides &amp; Documentation – chen.ist">
 <meta property="og:description" content="Browse technical guides and documentation on security, cloud architecture, and API development from chen.ist’s expert team.">
@@ -467,49 +436,6 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 </script>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../assets/css/main.min.css">
 
@@ -693,51 +619,73 @@ window.Quarto = {
 
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>Technical <span class="gr">Guides</span></h1>
+<div class="ev-hero" style="min-height:50vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/code-screen.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag">Resources</div>
+    <h1>Technical Guides</h1>
     <p>Comprehensive documentation and how-to guides for security, cloud, and API development.</p>
   </div>
 </div>
 
-<div class="m-bg m-bg-stripes">
+<div class="m-s" style="padding:7rem 0;">
   <div class="container">
-    <h2>Browse by Category</h2>
+    <h2>Browse by category</h2>
     <p class="sub">Deep-dive guides written by practitioners, not marketers.</p>
-    <div class="row g-5">
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-shield-check"></i><h3>Security Guides</h3><p>Best practices, implementation guides, and security frameworks.</p><a href="security/" class="m-lk">Browse Security Guides</a></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-cloud"></i><h3>Cloud Guides</h3><p>Cloud migration, optimization, and management resources.</p><a href="cloud/" class="m-lk">Browse Cloud Guides</a></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-code-square"></i><h3>API Documentation</h3><p>API reference, integration guides, and developer resources.</p><a href="api/" class="m-lk">Browse API Docs</a></div></div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="security/implementation-guide.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../../assets/images/stock/cybersecurity-monitor.webp" alt="Security"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Security</div><h3>Implementation Guide</h3><p>Best practices, frameworks, and step-by-step implementation.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="cloud/migration-handbook.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../../assets/images/stock/network-closeup.webp" alt="Cloud"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Cloud</div><h3>Migration Handbook</h3><p>Cloud migration, optimization, and management resources.</p></div></div>
+        </a>
+      </div>
+      <!-- API guide hidden for now -->
     </div>
   </div>
 </div>
 
-<div class="m-s">
+<div class="m-bg" style="padding:7rem 0;">
   <div class="container">
-    <h2>Featured Guides</h2>
-    <p class="sub">Our most popular and comprehensive resources.</p>
-    <div class="row g-5">
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-shield-lock"></i><h3>Security Implementation Guide</h3><p>A comprehensive guide to implementing robust security practices in your organization, covering everything from risk assessment to incident response.</p><span class="m-tag">Security</span> <span class="m-tag">25 min read</span><br><a href="security/implementation-guide.html" class="m-lk">Read Guide</a></div></div>
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-cloud-arrow-up"></i><h3>Cloud Migration Handbook</h3><p>A step-by-step guide to migrating your applications and infrastructure to the cloud, with strategies for minimizing downtime and optimizing costs.</p><span class="m-tag">Cloud</span> <span class="m-tag">30 min read</span><br><a href="cloud/migration-handbook.html" class="m-lk">Read Guide</a></div></div>
+    <div class="m-r">
+      <div class="m-ri"><img loading="lazy" src="../../assets/images/stock/cybersecurity-monitor.webp" alt="Security guide"></div>
+      <div class="m-rt">
+        <h2>Security<br>Implementation Guide</h2>
+        <p>A comprehensive guide covering risk assessment, access control, encryption, monitoring, and incident response. Everything you need to build a robust security posture.</p>
+        <div class="lk"><a href="security/implementation-guide.html" class="m-lk">Read the guide</a></div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="m-bg m-bg-stripes">
+<div class="m-s" style="padding:7rem 0;">
   <div class="container">
-    <h2>All Guides</h2>
-    <p class="sub">Browse our complete collection of technical guides.</p>
+    <div class="m-r rv">
+      <div class="m-ri"><img loading="lazy" src="../../assets/images/stock/network-closeup.webp" alt="Cloud handbook"></div>
+      <div class="m-rt">
+        <h2>Cloud Migration<br>Handbook</h2>
+        <p>Step-by-step strategies for migrating your applications and infrastructure to the cloud, with strategies for minimizing downtime and optimizing costs.</p>
+        <div class="lk"><a href="cloud/migration-handbook.html" class="m-lk">Read the handbook</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Need a custom guide?</h2>
+    <p>We create bespoke documentation for organizations with specific requirements.</p>
+    <a href="../../booking/" class="m-b">Book a call</a>
   </div>
 </div>
 
 </div>
-<section id="all-guides" class="level2">
-<h2 data-anchor-id="all-guides">All Guides</h2>
-<p>Browse our complete collection of technical guides:</p>
 
 
-
-</section>
 
 
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1160,118 +1108,7 @@ window.Quarto = {
     }
   });
   </script>
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-title-sort" data-direction="asc">
-        Title
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
-
-<th>
-Description
-</th>
-
-<th>
-<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
-</th>
-
-<th>
-Categories
-</th>
-
-<th>
-Reading Time
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-categories="c2VjdXJpdHklMkNpbXBsZW1lbnRhdGlvbiUyQ2Jlc3QtcHJhY3RpY2Vz" data-listing-date-sort="1740787200000" data-listing-file-modified-sort="1774530137408" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1326" data-listing-title-sort="Security Implementation Guide" data-listing-filename-sort="implementation-guide.qmd">
-<td>
-<a href="../../resources/guides/security/implementation-guide.html" class="title listing-title">Security Implementation Guide</a>
-</td>
-<td>
-<span class="listing-description">A comprehensive guide to implementing robust security practices in your organization</span>
-</td>
-<td>
-<span class="listing-date">March 1, 2025</span>
-</td>
-<td>
-<span class="listing-categories">security, implementation, best-practices</span>
-</td>
-<td>
-<span class="listing-reading-time">7 min</span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-categories="Y2xvdWQlMkNtaWdyYXRpb24lMkNpbmZyYXN0cnVjdHVyZQ==" data-listing-date-sort="1739577600000" data-listing-file-modified-sort="1774530137408" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1234" data-listing-title-sort="Cloud Migration Handbook" data-listing-filename-sort="migration-handbook.qmd">
-<td>
-<a href="../../resources/guides/cloud/migration-handbook.html" class="title listing-title">Cloud Migration Handbook</a>
-</td>
-<td>
-<span class="listing-description">A step-by-step guide to migrating your applications and infrastructure to the cloud</span>
-</td>
-<td>
-<span class="listing-date">February 15, 2025</span>
-</td>
-<td>
-<span class="listing-categories">cloud, migration, infrastructure</span>
-</td>
-<td>
-<span class="listing-reading-time">7 min</span>
-</td>
-
-</tr>
-
-<tr data-index="2" data-categories="YXBpJTJDZG9jdW1lbnRhdGlvbiUyQ2RldmVsb3BtZW50" data-listing-date-sort="1737331200000" data-listing-file-modified-sort="1774530137408" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2092" data-listing-title-sort="API Endpoints Guide" data-listing-filename-sort="endpoints.qmd">
-<td>
-<a href="../../resources/guides/api/endpoints.html" class="title listing-title">API Endpoints Guide</a>
-</td>
-<td>
-<span class="listing-description">Comprehensive documentation of our API endpoints, parameters, and response formats</span>
-</td>
-<td>
-<span class="listing-date">January 20, 2025</span>
-</td>
-<td>
-<span class="listing-categories">api, documentation, development</span>
-</td>
-<td>
-<span class="listing-reading-time">11 min</span>
-</td>
-
-</tr>
-
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></div> <!-- /content -->
+</div> <!-- /content -->
 <!-- Back to top -->
 <div style="text-align:center; padding:2rem 0; background:#0a0a0a; border-top:1px solid rgba(255,255,255,0.04);">
   <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" style="color:rgba(255,255,255,0.3); text-decoration:none; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em;">

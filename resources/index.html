@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-b37f6c1b9a99d16252d3ddd2c7074628.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6cb3fdec3a604e15d7c32437517db040.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-398b749543a727f3b66e7cafba33b310.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-6cb3fdec3a604e15d7c32437517db040.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -619,44 +619,75 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>Helpful <span class="gr">Resources</span></h1>
+<!-- HERO -->
+<div class="ev-hero" style="min-height:55vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/cybersecurity-monitor.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag">chen.ist</div>
+    <h1>Resources</h1>
     <p>Tools, guides, templates, and presentations to help you build better infrastructure.</p>
+    <a href="#browse" class="ev-btn">Browse resources</a>
   </div>
 </div>
 
-<div class="m-bg m-bg-squares">
+<!-- BROWSE BY FORMAT — image cards -->
+<div class="m-s" id="browse" style="padding:7rem 0;">
   <div class="container">
     <h2>Browse by format</h2>
-    <p class="sub">Everything we publish, available in the format you prefer.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-book"></i><h3>Guides</h3><p>In-depth walkthroughs for security, cloud, and APIs.</p><a href="../resources/guides/" class="m-lk">Browse guides</a></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-easel"></i><h3>Presentations</h3><p>Interactive keynotes and slide decks.</p><a href="../keynotes/" class="m-lk">View presentations</a></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-file-earmark-text"></i><h3>Templates</h3><p>Ready-to-use security policies, IR plans, and project docs.</p><a href="../resources/templates/" class="m-lk">Download templates</a></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-tools"></i><h3>Tools</h3><p>Password checker, zero trust assessment, and more.</p><a href="../resources/tools/" class="m-lk">Access tools</a></div></div>
+    <p class="sub">Everything we publish, in the format you prefer.</p>
+    <div class="row g-4">
+      <div class="col-md-3">
+        <a href="../resources/guides/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/code-screen.webp" alt="Guides"><div class="pg-card-body"><h3>Guides</h3><p>In-depth walkthroughs for security, cloud, and APIs.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="../resources/keynotes/zero-trust-security/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/hackathon-team.webp" alt="Presentations"><div class="pg-card-body"><h3>Presentations</h3><p>Interactive keynotes and slide decks from our team.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="../resources/templates/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/terminal-green.webp" alt="Templates"><div class="pg-card-body"><h3>Templates</h3><p>Security policies, IR plans, and project documents.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="../resources/tools/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/hacker-screens.webp" alt="Tools"><div class="pg-card-body"><h3>Tools</h3><p>Password checker, zero trust assessment, and more.</p></div></div>
+        </a>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="m-s">
+<!-- BROWSE BY TOPIC -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
   <div class="container">
     <h2>Browse by topic</h2>
     <p class="sub">Find resources for your specific domain.</p>
-    <div class="row g-5">
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-shield-check"></i><h3>Security</h3><p>Implementation guides, best practices, and compliance checklists.</p><a href="../resources/guides/security/implementation-guide.html" class="m-lk">Explore</a></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-cloud"></i><h3>Cloud</h3><p>Migration handbooks, cost optimization, and architecture guides.</p><a href="../resources/guides/cloud/migration-handbook.html" class="m-lk">Explore</a></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-code-square"></i><h3>Development</h3><p>API references, endpoint documentation, and integration guides.</p><a href="../resources/guides/api/endpoints.html" class="m-lk">Explore</a></div></div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="../resources/guides/security/implementation-guide.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/cybersecurity-monitor.webp" alt="Security"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Security</div><h3>Implementation Guide</h3><p>Best practices, compliance checklists, and access control.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../resources/guides/cloud/migration-handbook.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/network-closeup.webp" alt="Cloud"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Cloud</div><h3>Migration Handbook</h3><p>Step-by-step strategies for successful cloud migration.</p></div></div>
+        </a>
+      </div>
+      <!-- API guide hidden for now -->
     </div>
   </div>
 </div>
 
-<div class="m-bg m-bg-squares">
+<!-- FEATURED: Security -->
+<div class="m-s" style="padding:7rem 0;">
   <div class="container">
     <div class="m-r">
-      <div class="m-ri"><img loading="lazy" src="../assets/images/stock/analyst-monitors.webp" alt="Security resources"></div>
+      <div class="m-ri"><img loading="lazy" src="../assets/images/stock/cybersecurity-monitor.webp" alt="Security resources"></div>
       <div class="m-rt">
-        <h2>Featured:<br>Security Best Practices</h2>
+        <h2>Security<br>Best Practices</h2>
         <p>A comprehensive guide to implementing robust security practices in your organization. Covers access control, encryption, monitoring, and incident response procedures.</p>
         <div class="lk"><a href="../resources/guides/security/implementation-guide.html" class="m-lk">Read the guide</a></div>
       </div>
@@ -664,12 +695,13 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<div class="m-s">
+<!-- FEATURED: Cloud -->
+<div class="m-bg" style="padding:7rem 0;">
   <div class="container">
     <div class="m-r rv">
-      <div class="m-ri"><img loading="lazy" src="../assets/images/stock/datacenter-blue.webp" alt="Cloud resources"></div>
+      <div class="m-ri"><img loading="lazy" src="../assets/images/stock/network-closeup.webp" alt="Cloud resources"></div>
       <div class="m-rt">
-        <h2>Featured:<br>Cloud Migration Handbook</h2>
+        <h2>Cloud Migration<br>Handbook</h2>
         <p>Step-by-step strategies for a successful cloud migration. Assessment, planning, execution, and optimization — with minimal disruption to your operations.</p>
         <div class="lk"><a href="../resources/guides/cloud/migration-handbook.html" class="m-lk">Read the handbook</a></div>
       </div>
@@ -677,24 +709,41 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<div class="m-bg m-bg-squares">
+<!-- PRESENTATIONS -->
+<div class="m-s" style="padding:7rem 0;">
   <div class="container">
-    <h2>Latest presentations</h2>
+    <h2>Presentations</h2>
     <p class="sub">Keynotes and talks from our team.</p>
-    <div class="row g-5">
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-shield-lock"></i><h3>Zero Trust Security</h3><p>Principles and implementation strategies for zero trust architecture.</p><a href="../resources/keynotes/zero-trust-security/" class="m-lk">View</a></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-cloud-check"></i><h3>Cloud Security</h3><p>Key strategies for securing cloud environments across major providers.</p><a href="../keynotes/cloud-security/" class="m-lk">View</a></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-shield-fill-check"></i><h3>Cyber Awareness</h3><p>Essential practices for digital protection and security hygiene.</p><a href="../keynotes/cyberawareness/" class="m-lk">View</a></div></div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="../resources/keynotes/zero-trust-security/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/hacker-screens.webp" alt="Zero Trust"><div class="pg-card-body"><h3>Zero Trust Security</h3><p>Principles and implementation strategies for zero trust architecture.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../keynotes/cloud-security/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/network-closeup.webp" alt="Cloud Security"><div class="pg-card-body"><h3>Cloud Security</h3><p>Key strategies for securing cloud environments across providers.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../keynotes/cyberawareness/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/team-macbooks.webp" alt="Cyber Awareness"><div class="pg-card-body"><h3>Cyber Awareness</h3><p>Essential practices for digital protection and security hygiene.</p></div></div>
+        </a>
+      </div>
     </div>
   </div>
 </div>
 
+<!-- CTA -->
 <div class="m-cta">
   <div class="container">
     <div class="m-d"></div>
     <h2>Need something specific?</h2>
-    <p>Our team can help you find the right resources for your project.</p>
-    <a href="../booking/" class="m-b">Book a call</a>
+    <p>Our team can help you find the right resources or create custom documentation for your project.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="../booking/" class="m-b">Book a call</a>
+      <a href="../blog.html" class="m-bo">Read our blog</a>
+    </div>
   </div>
 </div>
 

@@ -32,8 +32,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
 <link href="../../assets/images/favicon.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -46,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-b37f6c1b9a99d16252d3ddd2c7074628.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-6cb3fdec3a604e15d7c32437517db040.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-398b749543a727f3b66e7cafba33b310.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-6cb3fdec3a604e15d7c32437517db040.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -76,35 +74,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-description','listing-date','listing-categories','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <meta property="og:title" content="Templates – chen.ist">
 <meta property="og:description" content="Download ready-to-use templates for security policies, cloud configurations, project documentation, and technical planning.">
@@ -467,49 +436,6 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 </script>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../assets/css/main.min.css">
 
@@ -693,54 +619,95 @@ window.Quarto = {
 
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>Document <span class="gr">Templates</span></h1>
+<div class="ev-hero" style="min-height:50vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/terminal-green.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag">Resources</div>
+    <h1>Templates</h1>
     <p>Ready-to-use templates for common business and technical documents.</p>
   </div>
 </div>
 
-<div class="m-bg m-bg-stripes">
+<div class="m-s" style="padding:7rem 0;">
   <div class="container">
-    <h2>Available Templates</h2>
-    <p class="sub">Create professional documents quickly and consistently.</p>
-    <div class="row g-5">
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-shield-check"></i><h3>Security Policy Template</h3><p>A comprehensive security policy template covering all major security domains in accordance with industry standards like ISO 27001.</p><span class="m-tag">Security</span> <span class="m-tag">Policy</span><br><small>Formats: Word, PDF, Markdown</small></div></div>
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-file-earmark-text"></i><h3>Project Documentation Template</h3><p>A structured template for technical project documentation, including requirements, architecture, testing, and deployment sections.</p><span class="m-tag">Project</span> <span class="m-tag">Documentation</span><br><small>Formats: Word, PDF, Markdown</small></div></div>
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-exclamation-triangle"></i><h3>Risk Assessment Template</h3><p>A structured template for conducting and documenting risk assessments, including risk identification, analysis, and treatment plans.</p><span class="m-tag">Security</span> <span class="m-tag">Risk</span><br><small>Formats: Excel, PDF</small></div></div>
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-bell"></i><h3>Incident Response Plan Template</h3><p>A comprehensive incident response plan template covering preparation, identification, containment, eradication, recovery, and lessons learned.</p><span class="m-tag">Security</span> <span class="m-tag">Incident Response</span><br><small>Formats: Word, PDF, Markdown</small></div></div>
+    <h2>Security &amp; Compliance</h2>
+    <p class="sub">Professional templates for security documentation.</p>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="pg-card" style="position:relative;">
+          <img loading="lazy" src="../../assets/images/stock/cybersecurity-monitor.webp" alt="Security Policy">
+          <div class="pg-card-body">
+            <div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Word · PDF · Markdown</div>
+            <h3>Security Policy Template</h3>
+            <p>Comprehensive security policy covering all major domains per ISO 27001.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="pg-card" style="position:relative;">
+          <img loading="lazy" src="../../assets/images/stock/hacker-screens.webp" alt="Incident Response">
+          <div class="pg-card-body">
+            <div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Word · PDF · Markdown</div>
+            <h3>Incident Response Plan</h3>
+            <p>Preparation, identification, containment, eradication, recovery, and lessons learned.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="pg-card" style="position:relative;">
+          <img loading="lazy" src="../../assets/images/stock/network-closeup.webp" alt="Risk Assessment">
+          <div class="pg-card-body">
+            <div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Excel · PDF</div>
+            <h3>Risk Assessment Template</h3>
+            <p>Risk identification, analysis, and treatment plans in a structured format.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="pg-card" style="position:relative;">
+          <img loading="lazy" src="../../assets/images/stock/code-screen.webp" alt="Project Docs">
+          <div class="pg-card-body">
+            <div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Word · PDF · Markdown</div>
+            <h3>Project Documentation</h3>
+            <p>Requirements, architecture, testing, and deployment sections.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="m-s">
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
   <div class="container">
-    <h2>Quarto &amp; Typst Templates</h2>
-    <p class="sub">Specialized templates for academic and technical writing.</p>
-    <div class="row g-5">
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-journal-text"></i><h3>Quarto Manuscript Template</h3><p>A ready-to-use template for creating technical papers and research manuscripts with Quarto, supporting multiple output formats including HTML, PDF, and MS Word.</p><ul><li>Professional academic styling</li><li>Citation and bibliography support</li><li>Code integration for data science</li><li>Multiple output formats</li></ul><a href="quarto-manuscript-template.zip" class="m-lk" download="">Download Template</a></div></div>
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-file-earmark-code"></i><h3>Typst Technical Report Template</h3><p>A professionally designed Typst template for technical reports and documentation with modern typography and layout.</p><ul><li>Clean, modern design</li><li>Optimized for technical content</li><li>Customizable styling</li><li>Fast compilation</li></ul><span class="m-tag">Coming Soon</span></div></div>
+    <h2>Publishing templates</h2>
+    <p class="sub">For academic and technical writing.</p>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-5">
+        <div class="pg-card" style="position:relative;">
+          <img loading="lazy" src="../../assets/images/stock/terminal-green.webp" alt="Quarto">
+          <div class="pg-card-body">
+            <h3>Quarto Manuscript</h3>
+            <p>Technical papers and research with citations, code, and multi-format output.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="pg-card" style="position:relative; opacity:0.6;">
+          <img loading="lazy" src="../../assets/images/stock/code-screen.webp" alt="Typst">
+          <div class="pg-card-body">
+            <h3>Typst Technical Report</h3>
+            <p>Modern typography and layout for technical reports. Coming soon.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="m-bg m-bg-stripes">
-  <div class="container">
-    <h2>Customization Tips</h2>
-    <p class="sub">Get the most out of our templates.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-palette"></i><h3>Branding</h3><p>Replace placeholder logos and colors with your organization's branding.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-pencil-square"></i><h3>Content</h3><p>Update sections to reflect your specific needs and requirements.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-briefcase"></i><h3>Legal Review</h3><p>Have legal counsel review policy templates before implementation.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-clock-history"></i><h3>Version Control</h3><p>Track changes and maintain version history for all documents.</p></div></div>
-    </div>
-  </div>
-</div>
-
-<div class="m-s">
-  <div class="container">
-    <h2>Template License</h2>
-    <p>All templates are provided under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, which means you can use, modify, and distribute them freely with attribution to chen.ist.</p>
+<div class="m-s" style="padding:5rem 0;">
+  <div class="container" style="max-width:650px; text-align:center;">
+    <h2>License</h2>
+    <p style="color:#86868b;">All templates are provided under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" class="m-lk" style="font-size:inherit;">Creative Commons Attribution 4.0</a> license. Use, modify, and distribute freely with attribution.</p>
   </div>
 </div>
 
@@ -748,18 +715,17 @@ window.Quarto = {
   <div class="container">
     <div class="m-d"></div>
     <h2>Need a custom template?</h2>
-    <p>We can create templates tailored to your organization's needs.</p>
+    <p>We create templates tailored to your organization's needs and branding.</p>
     <a href="../../booking/" class="m-b">Get in touch</a>
     <div class="m-sm">
-      <i class="bi bi-check-circle-fill"></i> Free consultation &nbsp;
       <i class="bi bi-check-circle-fill"></i> Custom branding &nbsp;
-      <i class="bi bi-check-circle-fill"></i> Multiple formats
+      <i class="bi bi-check-circle-fill"></i> Multiple formats &nbsp;
+      <i class="bi bi-check-circle-fill"></i> Free consultation
     </div>
   </div>
 </div>
 
 </div>
-
 
 
 
@@ -1184,82 +1150,7 @@ window.Quarto = {
     }
   });
   </script>
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-date-sort="1774530137000" data-listing-file-modified-sort="1774530137414" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1108">
-<a href="../../resources/templates/revealjs-template.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Example Presentation
-</h5>
-<div class="card-text listing-description delink">
-
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-March 26, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="cHJlc2VudGF0aW9uJTJDdGVtcGxhdGUlMkNyZXZlYWxqcw==" data-listing-date-sort="1743811200000" data-listing-file-modified-sort="1774530137414" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="823">
-<a href="../../resources/templates/presentation-template.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../../assets/images/cyber-security.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-RevealJS Presentation Template
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJlc2VudGF0aW9u'); return false;">presentation</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGVtcGxhdGU='); return false;">template</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmV2ZWFsanM='); return false;">revealjs</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>A ready-to-use template for creating professional slide decks with Quarto and RevealJS</p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-April 5, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></div> <!-- /content -->
+</div> <!-- /content -->
 <!-- Back to top -->
 <div style="text-align:center; padding:2rem 0; background:#0a0a0a; border-top:1px solid rgba(255,255,255,0.04);">
   <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" style="color:rgba(255,255,255,0.3); text-decoration:none; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em;">
