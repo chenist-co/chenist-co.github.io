@@ -1,0 +1,780 @@
+---
+title: "NIS2 Self-Assessment Tool"
+title-block-style: none
+description: "Determine whether the NIS2 Directive applies to your organization, assess your compliance maturity, and identify priority actions."
+page-layout: custom
+format:
+  html:
+    toc: false
+---
+
+```{=html}
+<div class="m">
+
+<!-- Hero -->
+<div class="ev-hero">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/cybersecurity-monitor.webp');"></div>
+  <div class="ev-hero-content">
+    <span class="ev-hero-tag">Free Assessment</span>
+    <h1>NIS2 Compliance<br>Self-Assessment</h1>
+    <p>Answer 12 questions to find out if NIS2 applies to your organization, gauge your readiness, and get a prioritized action plan.</p>
+    <a href="#nis2-quiz" class="ev-btn">Start Assessment</a>
+  </div>
+</div>
+
+<!-- Intro -->
+<div class="m-s" id="nis2-quiz">
+  <div class="container" style="max-width:780px;">
+    <h2>How it works</h2>
+    <p class="sub">Three steps, five minutes, actionable results.</p>
+    <div class="row g-5">
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-pencil-square"></i><h3>Answer Questions</h3><p>12 questions covering scope, governance, and technical controls.</p></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-speedometer2"></i><h3>Get Your Score</h3><p>Instant maturity rating with a breakdown by compliance domain.</p></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-list-check"></i><h3>See Priority Actions</h3><p>Personalized recommendations you can act on today.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Quiz -->
+<div class="m-bg" id="assessment-section">
+  <div class="container" style="max-width:780px;">
+    <h2>Assessment Questionnaire</h2>
+    <p class="sub">Select the option that best describes your organization.</p>
+
+    <div id="quiz-container"></div>
+
+    <div style="text-align:center; margin-top:2.5rem;" id="quiz-nav"></div>
+  </div>
+</div>
+
+<!-- Results (hidden until submit) -->
+<div class="m-s" id="results-section" style="display:none;">
+  <div class="container" style="max-width:780px;">
+    <h2>Your Results</h2>
+    <p class="sub" id="results-subtitle"></p>
+
+    <!-- Score ring -->
+    <div style="text-align:center; margin-bottom:3rem;" id="score-visual"></div>
+
+    <!-- Applicability notice -->
+    <div id="applicability-box" style="border-radius:16px; padding:2rem 2.5rem; margin-bottom:3rem;"></div>
+
+    <!-- Domain breakdown -->
+    <div id="domain-breakdown" style="margin-bottom:3rem;"></div>
+
+    <!-- Priority actions -->
+    <div id="priority-actions" style="margin-bottom:3rem;"></div>
+  </div>
+</div>
+
+<!-- Lead capture -->
+<div class="m-bg" id="lead-section" style="display:none;">
+  <div class="container" style="max-width:540px;">
+    <h2>Download your results</h2>
+    <p class="sub">Enter your email to receive a detailed PDF summary.</p>
+    <div class="m-form">
+      <form action="https://formspree.io/f/mpwkaqev" method="POST" id="lead-form">
+        <div class="fg">
+          <label for="lead-name">Full Name</label>
+          <input type="text" id="lead-name" name="name" required placeholder="Your full name">
+        </div>
+        <div class="fg">
+          <label for="lead-email">Work Email</label>
+          <input type="email" id="lead-email" name="email" required placeholder="you@company.com">
+        </div>
+        <div class="fg">
+          <label for="lead-company">Company</label>
+          <input type="text" id="lead-company" name="company" placeholder="Company name">
+        </div>
+        <input type="hidden" name="_subject" value="NIS2 Self-Assessment Lead">
+        <input type="hidden" name="assessment-score" id="hidden-score" value="">
+        <input type="hidden" name="assessment-category" id="hidden-category" value="">
+        <input type="text" name="_gotcha" style="display:none">
+        <button type="submit">Send me the report</button>
+      </form>
+      <p style="text-align:center; margin-top:1.25rem;" class="m-sm">
+        <i class="bi bi-shield-check"></i> We respect your privacy. Unsubscribe any time.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="m-cta" id="cta-section" style="display:none;">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Ready for a professional<br>NIS2 assessment?</h2>
+    <p>Our compliance team delivers a full gap analysis with a remediation roadmap tailored to your sector.</p>
+    <a href="/booking/" class="m-b">Book a free consultation</a>
+    <div class="m-sm">
+      <i class="bi bi-check-circle-fill"></i> Free &nbsp;
+      <i class="bi bi-check-circle-fill"></i> 30 min &nbsp;
+      <i class="bi bi-check-circle-fill"></i> No commitment
+    </div>
+  </div>
+</div>
+
+</div>
+
+<style>
+/* Quiz-specific styles using design tokens */
+.q-card{border:1.5px solid rgba(0,0,0,0.08);border-radius:20px;padding:2.5rem;margin-bottom:1.5rem;transition:border-color .2s;}
+[data-bs-theme="dark"] .q-card{border-color:rgba(255,255,255,0.1);}
+.q-card.active{border-color:var(--c);}
+.q-num{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--c);margin-bottom:.75rem;}
+.q-text{font-size:1.15rem;font-weight:600;margin-bottom:1.5rem;line-height:1.35;}
+.q-opt{display:block;padding:.85rem 1.1rem;border:1.5px solid rgba(0,0,0,0.08);border-radius:12px;margin-bottom:.6rem;cursor:pointer;transition:all .15s;font-size:.95rem;line-height:1.4;position:relative;user-select:none;}
+[data-bs-theme="dark"] .q-opt{border-color:rgba(255,255,255,0.1);}
+.q-opt:hover{border-color:var(--c);background:rgba(129,189,74,0.04);}
+.q-opt.selected{border-color:var(--c);background:rgba(129,189,74,0.08);font-weight:500;}
+.q-opt input{position:absolute;opacity:0;width:0;height:0;}
+.q-progress{height:4px;background:rgba(0,0,0,0.06);border-radius:2px;margin-bottom:2.5rem;overflow:hidden;}
+[data-bs-theme="dark"] .q-progress{background:rgba(255,255,255,0.08);}
+.q-progress-bar{height:100%;background:var(--c);border-radius:2px;transition:width .4s ease;}
+.q-nav-btn{display:inline-block;padding:.85rem 2.25rem;border-radius:980px;font-weight:500;font-size:1rem;cursor:pointer;transition:all .15s;border:none;font-family:inherit;}
+.q-next{background:var(--c);color:#fff;}
+.q-next:hover{background:color-mix(in srgb,var(--c) 80%,black);}
+.q-next:disabled{opacity:.35;cursor:not-allowed;}
+.q-back{background:transparent;color:var(--c);border:1.5px solid var(--c);margin-right:.75rem;}
+.q-back:hover{background:var(--c);color:#fff;}
+.score-ring{width:160px;height:160px;margin:0 auto 1.5rem;}
+.score-ring svg{transform:rotate(-90deg);}
+.score-ring circle{fill:none;stroke-width:10;}
+.score-ring .bg{stroke:rgba(0,0,0,0.06);}
+[data-bs-theme="dark"] .score-ring .bg{stroke:rgba(255,255,255,0.08);}
+.score-ring .fg{stroke:var(--c);stroke-linecap:round;transition:stroke-dashoffset 1.2s ease;}
+.score-pct{font-size:2.5rem;font-weight:700;text-align:center;margin-bottom:.25rem;}
+.score-label{font-size:1.1rem;color:var(--g);text-align:center;margin-bottom:2rem;}
+.domain-row{display:flex;align-items:center;gap:1rem;padding:.85rem 0;border-bottom:1px solid rgba(0,0,0,0.06);}
+[data-bs-theme="dark"] .domain-row{border-color:rgba(255,255,255,0.06);}
+.domain-row:last-child{border-bottom:none;}
+.domain-name{flex:1;font-weight:500;font-size:.95rem;}
+.domain-bar-wrap{flex:2;height:8px;background:rgba(0,0,0,0.06);border-radius:4px;overflow:hidden;}
+[data-bs-theme="dark"] .domain-bar-wrap{background:rgba(255,255,255,0.08);}
+.domain-bar{height:100%;background:var(--c);border-radius:4px;transition:width 1s ease;}
+.domain-pct{width:3rem;text-align:right;font-weight:600;font-size:.9rem;color:var(--c);}
+.action-card{border:1.5px solid rgba(0,0,0,0.08);border-radius:16px;padding:1.5rem 1.75rem;margin-bottom:1rem;}
+[data-bs-theme="dark"] .action-card{border-color:rgba(255,255,255,0.1);}
+.action-card .ac-title{font-weight:600;font-size:1rem;margin-bottom:.35rem;}
+.action-card .ac-desc{font-size:.9rem;color:var(--g);line-height:1.55;margin:0;}
+.action-card .ac-priority{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:.2rem .75rem;border-radius:980px;margin-bottom:.65rem;}
+.ac-critical{background:#ff3b3014;color:#ff3b30;}
+.ac-high{background:#ff950014;color:#ff9500;}
+.ac-medium{background:#ffcc0014;color:#cc9900;}
+.ac-good{background:rgba(129,189,74,0.08);color:var(--c);}
+.app-box-yes{background:rgba(129,189,74,0.06);border:1.5px solid rgba(129,189,74,0.2);}
+.app-box-maybe{background:rgba(255,149,0,0.06);border:1.5px solid rgba(255,149,0,0.2);}
+.app-box-no{background:rgba(0,0,0,0.02);border:1.5px solid rgba(0,0,0,0.08);}
+[data-bs-theme="dark"] .app-box-no{background:rgba(255,255,255,0.02);border-color:rgba(255,255,255,0.08);}
+.app-box-title{font-weight:700;font-size:1.15rem;margin-bottom:.5rem;}
+.app-box-text{font-size:.95rem;color:var(--g);line-height:1.55;margin:0;}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  'use strict';
+
+  /* ── Question data ── */
+  var questions = [
+    {
+      id: 'employees',
+      num: '1 of 12',
+      text: 'How many employees does your organization have?',
+      domain: 'scope',
+      options: [
+        { label: 'Fewer than 50', value: 0, scope: 0 },
+        { label: '50 \u2013 249', value: 1, scope: 1 },
+        { label: '250 \u2013 999', value: 2, scope: 2 },
+        { label: '1,000 or more', value: 3, scope: 3 }
+      ]
+    },
+    {
+      id: 'revenue',
+      num: '2 of 12',
+      text: 'What is your organization\u2019s annual revenue (or balance sheet total)?',
+      domain: 'scope',
+      options: [
+        { label: 'Under \u20AC10 million', value: 0, scope: 0 },
+        { label: '\u20AC10 \u2013 49 million', value: 1, scope: 1 },
+        { label: '\u20AC50 \u2013 249 million', value: 2, scope: 2 },
+        { label: '\u20AC250 million or more', value: 3, scope: 3 }
+      ]
+    },
+    {
+      id: 'sector',
+      num: '3 of 12',
+      text: 'Which sector best describes your organization?',
+      domain: 'scope',
+      options: [
+        { label: 'Energy, Transport, Finance, or Health', value: 3, scope: 3 },
+        { label: 'Digital infrastructure, ICT service management, or Public administration', value: 3, scope: 3 },
+        { label: 'Manufacturing, Food, Chemicals, Waste, Postal, or Research', value: 2, scope: 2 },
+        { label: 'None of the above', value: 0, scope: 0 }
+      ]
+    },
+    {
+      id: 'eu_ops',
+      num: '4 of 12',
+      text: 'Does your organization operate within the European Union or provide services to EU customers?',
+      domain: 'scope',
+      options: [
+        { label: 'Yes \u2014 headquartered in the EU', value: 3, scope: 3 },
+        { label: 'Yes \u2014 we serve EU customers from outside the EU', value: 2, scope: 2 },
+        { label: 'Partially \u2014 limited EU presence', value: 1, scope: 1 },
+        { label: 'No EU operations or customers', value: 0, scope: 0 }
+      ]
+    },
+    {
+      id: 'policies',
+      num: '5 of 12',
+      text: 'Does your organization have formal, documented information-security policies?',
+      domain: 'governance',
+      options: [
+        { label: 'No formal policies exist', value: 0 },
+        { label: 'Some informal guidelines but not documented', value: 1 },
+        { label: 'Documented policies but not regularly reviewed', value: 2 },
+        { label: 'Comprehensive policies reviewed at least annually', value: 3 }
+      ]
+    },
+    {
+      id: 'incident',
+      num: '6 of 12',
+      text: 'Do you have an incident response plan with defined roles, escalation paths, and reporting timelines?',
+      domain: 'incident',
+      options: [
+        { label: 'No plan in place', value: 0 },
+        { label: 'Basic plan exists but untested', value: 1 },
+        { label: 'Documented plan tested occasionally', value: 2 },
+        { label: 'Tested plan aligned with NIS2 24-hour notification requirements', value: 3 }
+      ]
+    },
+    {
+      id: 'supply_chain',
+      num: '7 of 12',
+      text: 'How do you manage cybersecurity risks in your supply chain?',
+      domain: 'supply_chain',
+      options: [
+        { label: 'No formal supplier security assessments', value: 0 },
+        { label: 'Basic contractual clauses only', value: 1 },
+        { label: 'Regular assessments for critical suppliers', value: 2 },
+        { label: 'Comprehensive supply-chain risk program with continuous monitoring', value: 3 }
+      ]
+    },
+    {
+      id: 'risk_assessment',
+      num: '8 of 12',
+      text: 'How often does your organization conduct formal cybersecurity risk assessments?',
+      domain: 'risk',
+      options: [
+        { label: 'Never or only after an incident', value: 0 },
+        { label: 'Annually', value: 1 },
+        { label: 'Semi-annually', value: 2 },
+        { label: 'Quarterly or continuously', value: 3 }
+      ]
+    },
+    {
+      id: 'training',
+      num: '9 of 12',
+      text: 'Do employees receive regular cybersecurity awareness training?',
+      domain: 'training',
+      options: [
+        { label: 'No training program', value: 0 },
+        { label: 'Optional or ad-hoc training', value: 1 },
+        { label: 'Mandatory annual training for all staff', value: 2 },
+        { label: 'Ongoing program with phishing simulations and role-based modules', value: 3 }
+      ]
+    },
+    {
+      id: 'data_protection',
+      num: '10 of 12',
+      text: 'What data protection and encryption measures are in place?',
+      domain: 'technical',
+      options: [
+        { label: 'Minimal or no encryption', value: 0 },
+        { label: 'Encryption for data in transit only', value: 1 },
+        { label: 'Encryption for data in transit and at rest', value: 2 },
+        { label: 'End-to-end encryption, data classification, and DLP controls', value: 3 }
+      ]
+    },
+    {
+      id: 'access_control',
+      num: '11 of 12',
+      text: 'How is access to critical systems and data controlled?',
+      domain: 'technical',
+      options: [
+        { label: 'Shared accounts with no MFA', value: 0 },
+        { label: 'Individual accounts with passwords only', value: 1 },
+        { label: 'MFA for critical systems and role-based access', value: 2 },
+        { label: 'Zero Trust approach with MFA everywhere, PAM, and regular access reviews', value: 3 }
+      ]
+    },
+    {
+      id: 'bcdr',
+      num: '12 of 12',
+      text: 'Do you have business continuity and disaster recovery plans?',
+      domain: 'incident',
+      options: [
+        { label: 'No BC/DR plans', value: 0 },
+        { label: 'Basic backup strategy only', value: 1 },
+        { label: 'Documented BC/DR plans with annual testing', value: 2 },
+        { label: 'Comprehensive, tested BC/DR with defined RTOs/RPOs and regular drills', value: 3 }
+      ]
+    }
+  ];
+
+  var answers = {};
+  var currentQ = 0;
+
+  var quizContainer = document.getElementById('quiz-container');
+  var quizNav = document.getElementById('quiz-nav');
+
+  /* ── Render a question ── */
+  function renderQuestion(idx) {
+    var q = questions[idx];
+
+    /* Clear containers safely */
+    while (quizContainer.firstChild) quizContainer.removeChild(quizContainer.firstChild);
+    while (quizNav.firstChild) quizNav.removeChild(quizNav.firstChild);
+
+    /* Progress bar */
+    var progWrap = document.createElement('div');
+    progWrap.className = 'q-progress';
+    var progBar = document.createElement('div');
+    progBar.className = 'q-progress-bar';
+    progBar.style.width = ((idx / questions.length) * 100) + '%';
+    progWrap.appendChild(progBar);
+    quizContainer.appendChild(progWrap);
+
+    /* Card */
+    var card = document.createElement('div');
+    card.className = 'q-card active';
+
+    var num = document.createElement('div');
+    num.className = 'q-num';
+    num.textContent = 'Question ' + q.num;
+    card.appendChild(num);
+
+    var text = document.createElement('div');
+    text.className = 'q-text';
+    text.textContent = q.text;
+    card.appendChild(text);
+
+    q.options.forEach(function (opt, oi) {
+      var lbl = document.createElement('label');
+      lbl.className = 'q-opt';
+      if (answers[q.id] !== undefined && answers[q.id].index === oi) {
+        lbl.classList.add('selected');
+      }
+
+      var radio = document.createElement('input');
+      radio.type = 'radio';
+      radio.name = q.id;
+      radio.value = oi;
+      if (answers[q.id] !== undefined && answers[q.id].index === oi) {
+        radio.checked = true;
+      }
+      radio.addEventListener('change', function () {
+        answers[q.id] = { index: oi, value: opt.value, scope: opt.scope !== undefined ? opt.scope : null, domain: q.domain };
+        /* Highlight selected */
+        card.querySelectorAll('.q-opt').forEach(function (el) { el.classList.remove('selected'); });
+        lbl.classList.add('selected');
+        /* Enable next */
+        var nb = quizNav.querySelector('.q-next');
+        if (nb) nb.disabled = false;
+      });
+
+      lbl.appendChild(radio);
+      var span = document.createElement('span');
+      span.textContent = opt.label;
+      lbl.appendChild(span);
+      card.appendChild(lbl);
+    });
+
+    quizContainer.appendChild(card);
+
+    /* Nav buttons */
+    if (idx > 0) {
+      var backBtn = document.createElement('button');
+      backBtn.className = 'q-nav-btn q-back';
+      backBtn.type = 'button';
+      backBtn.textContent = 'Back';
+      backBtn.addEventListener('click', function () { currentQ--; renderQuestion(currentQ); });
+      quizNav.appendChild(backBtn);
+    }
+
+    var isLast = idx === questions.length - 1;
+    var nextBtn = document.createElement('button');
+    nextBtn.className = 'q-nav-btn q-next';
+    nextBtn.type = 'button';
+    nextBtn.textContent = isLast ? 'See my results' : 'Next';
+    nextBtn.disabled = answers[q.id] === undefined;
+    nextBtn.addEventListener('click', function () {
+      if (isLast) {
+        showResults();
+      } else {
+        currentQ++;
+        renderQuestion(currentQ);
+      }
+    });
+    quizNav.appendChild(nextBtn);
+  }
+
+  /* ── Scoring ── */
+  function computeResults() {
+    /* Scope score (questions 1-4) */
+    var scopeTotal = 0;
+    var scopeMax = 0;
+    var complianceTotal = 0;
+    var complianceMax = 0;
+
+    /* Domain buckets for compliance questions (5-12) */
+    var domains = {
+      governance: { score: 0, max: 0, label: 'Security Policies & Governance' },
+      incident: { score: 0, max: 0, label: 'Incident Response & BC/DR' },
+      supply_chain: { score: 0, max: 0, label: 'Supply Chain Security' },
+      risk: { score: 0, max: 0, label: 'Risk Assessments' },
+      training: { score: 0, max: 0, label: 'Security Training' },
+      technical: { score: 0, max: 0, label: 'Technical Controls' }
+    };
+
+    questions.forEach(function (q) {
+      var a = answers[q.id];
+      if (!a) return;
+      if (q.domain === 'scope') {
+        scopeTotal += (a.scope !== null ? a.scope : a.value);
+        scopeMax += 3;
+      } else {
+        complianceTotal += a.value;
+        complianceMax += 3;
+        if (domains[q.domain]) {
+          domains[q.domain].score += a.value;
+          domains[q.domain].max += 3;
+        }
+      }
+    });
+
+    var scopePct = scopeMax > 0 ? Math.round((scopeTotal / scopeMax) * 100) : 0;
+    var compPct = complianceMax > 0 ? Math.round((complianceTotal / complianceMax) * 100) : 0;
+
+    var nis2Applies = scopePct >= 42; /* at least medium-sized + relevant sector + EU ops */
+    var nis2Maybe = scopePct >= 25 && scopePct < 42;
+
+    var category;
+    if (!nis2Applies && !nis2Maybe) {
+      category = 'not-applicable';
+    } else if (compPct <= 30) {
+      category = 'critical';
+    } else if (compPct <= 60) {
+      category = 'moderate';
+    } else if (compPct <= 80) {
+      category = 'good';
+    } else {
+      category = 'strong';
+    }
+
+    return {
+      scopePct: scopePct,
+      compPct: compPct,
+      nis2Applies: nis2Applies,
+      nis2Maybe: nis2Maybe,
+      category: category,
+      domains: domains
+    };
+  }
+
+  /* ── Show results ── */
+  function showResults() {
+    var r = computeResults();
+
+    /* Hide quiz, show results */
+    document.getElementById('assessment-section').style.display = 'none';
+    var resultsEl = document.getElementById('results-section');
+    resultsEl.style.display = '';
+    document.getElementById('lead-section').style.display = '';
+    document.getElementById('cta-section').style.display = '';
+
+    /* Scroll to results */
+    resultsEl.scrollIntoView({ behavior: 'smooth' });
+
+    /* Subtitle */
+    var subtitleMap = {
+      'not-applicable': 'Based on your answers, NIS2 may not apply to your organization.',
+      'critical': 'NIS2 likely applies \u2014 Critical gaps identified.',
+      'moderate': 'NIS2 likely applies \u2014 Moderate readiness.',
+      'good': 'NIS2 likely applies \u2014 Good foundation in place.',
+      'strong': 'Strong compliance posture detected.'
+    };
+    document.getElementById('results-subtitle').textContent = subtitleMap[r.category] || '';
+
+    /* Hidden form fields */
+    document.getElementById('hidden-score').value = r.compPct + '%';
+    document.getElementById('hidden-category').value = subtitleMap[r.category] || '';
+
+    /* Score visual */
+    var svEl = document.getElementById('score-visual');
+    while (svEl.firstChild) svEl.removeChild(svEl.firstChild);
+
+    var ringDiv = document.createElement('div');
+    ringDiv.className = 'score-ring';
+    var svgNS = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(svgNS, 'svg');
+    svg.setAttribute('viewBox', '0 0 160 160');
+    svg.setAttribute('width', '160');
+    svg.setAttribute('height', '160');
+
+    var radius = 70;
+    var circumference = 2 * Math.PI * radius;
+
+    var bgCircle = document.createElementNS(svgNS, 'circle');
+    bgCircle.setAttribute('class', 'bg');
+    bgCircle.setAttribute('cx', '80');
+    bgCircle.setAttribute('cy', '80');
+    bgCircle.setAttribute('r', String(radius));
+    svg.appendChild(bgCircle);
+
+    var fgCircle = document.createElementNS(svgNS, 'circle');
+    fgCircle.setAttribute('class', 'fg');
+    fgCircle.setAttribute('cx', '80');
+    fgCircle.setAttribute('cy', '80');
+    fgCircle.setAttribute('r', String(radius));
+    fgCircle.setAttribute('stroke-dasharray', String(circumference));
+    fgCircle.setAttribute('stroke-dashoffset', String(circumference));
+    svg.appendChild(fgCircle);
+
+    ringDiv.appendChild(svg);
+    svEl.appendChild(ringDiv);
+
+    /* Animate ring */
+    var targetOffset = circumference - (circumference * r.compPct / 100);
+    requestAnimationFrame(function () {
+      fgCircle.setAttribute('stroke-dashoffset', String(targetOffset));
+    });
+
+    var pctDiv = document.createElement('div');
+    pctDiv.className = 'score-pct';
+    pctDiv.textContent = r.compPct + '%';
+    svEl.appendChild(pctDiv);
+
+    var lblDiv = document.createElement('div');
+    lblDiv.className = 'score-label';
+    lblDiv.textContent = 'Compliance Readiness Score';
+    svEl.appendChild(lblDiv);
+
+    /* Applicability box */
+    var appBox = document.getElementById('applicability-box');
+    while (appBox.firstChild) appBox.removeChild(appBox.firstChild);
+
+    var appTitle = document.createElement('div');
+    appTitle.className = 'app-box-title';
+    var appText = document.createElement('p');
+    appText.className = 'app-box-text';
+
+    if (r.nis2Applies) {
+      appBox.className = 'app-box-yes';
+      appBox.style.borderRadius = '16px';
+      appBox.style.padding = '2rem 2.5rem';
+      appBox.style.marginBottom = '3rem';
+      appTitle.textContent = 'NIS2 likely applies to your organization';
+      appText.textContent = 'Based on your sector, size, and EU operations, your organization likely falls within the scope of the NIS2 Directive. You should begin formal compliance activities if you have not already.';
+    } else if (r.nis2Maybe) {
+      appBox.className = 'app-box-maybe';
+      appBox.style.borderRadius = '16px';
+      appBox.style.padding = '2rem 2.5rem';
+      appBox.style.marginBottom = '3rem';
+      appTitle.textContent = 'NIS2 may apply to your organization';
+      appText.textContent = 'Your profile suggests NIS2 could apply depending on specific factors such as your exact sub-sector classification or member-state transposition rules. We recommend a professional scoping analysis.';
+    } else {
+      appBox.className = 'app-box-no';
+      appBox.style.borderRadius = '16px';
+      appBox.style.padding = '2rem 2.5rem';
+      appBox.style.marginBottom = '3rem';
+      appTitle.textContent = 'NIS2 may not apply to your organization';
+      appText.textContent = 'Based on your answers, your organization may fall outside the current NIS2 scope. However, best practices in cybersecurity are still recommended, and scope may change with future amendments.';
+    }
+    appBox.appendChild(appTitle);
+    appBox.appendChild(appText);
+
+    /* Domain breakdown */
+    var dbEl = document.getElementById('domain-breakdown');
+    while (dbEl.firstChild) dbEl.removeChild(dbEl.firstChild);
+
+    var dbTitle = document.createElement('h3');
+    dbTitle.style.fontSize = '1.25rem';
+    dbTitle.style.fontWeight = '600';
+    dbTitle.style.marginBottom = '1.5rem';
+    dbTitle.textContent = 'Breakdown by Domain';
+    dbEl.appendChild(dbTitle);
+
+    var domainKeys = ['governance', 'incident', 'supply_chain', 'risk', 'training', 'technical'];
+    domainKeys.forEach(function (key) {
+      var d = r.domains[key];
+      var pct = d.max > 0 ? Math.round((d.score / d.max) * 100) : 0;
+
+      var row = document.createElement('div');
+      row.className = 'domain-row';
+
+      var name = document.createElement('div');
+      name.className = 'domain-name';
+      name.textContent = d.label;
+      row.appendChild(name);
+
+      var barWrap = document.createElement('div');
+      barWrap.className = 'domain-bar-wrap';
+      var bar = document.createElement('div');
+      bar.className = 'domain-bar';
+      bar.style.width = '0%';
+      barWrap.appendChild(bar);
+      row.appendChild(barWrap);
+
+      var pctEl = document.createElement('div');
+      pctEl.className = 'domain-pct';
+      pctEl.textContent = pct + '%';
+      row.appendChild(pctEl);
+
+      dbEl.appendChild(row);
+
+      /* Animate bars */
+      requestAnimationFrame(function () {
+        bar.style.width = pct + '%';
+      });
+    });
+
+    /* Priority actions */
+    var paEl = document.getElementById('priority-actions');
+    while (paEl.firstChild) paEl.removeChild(paEl.firstChild);
+
+    var paTitle = document.createElement('h3');
+    paTitle.style.fontSize = '1.25rem';
+    paTitle.style.fontWeight = '600';
+    paTitle.style.marginBottom = '1.5rem';
+    paTitle.textContent = 'Priority Actions';
+    paEl.appendChild(paTitle);
+
+    var actions = buildActions(r);
+    actions.forEach(function (a) {
+      var card = document.createElement('div');
+      card.className = 'action-card';
+
+      var badge = document.createElement('div');
+      badge.className = 'ac-priority ' + a.priorityClass;
+      badge.textContent = a.priority;
+      card.appendChild(badge);
+
+      var title = document.createElement('div');
+      title.className = 'ac-title';
+      title.textContent = a.title;
+      card.appendChild(title);
+
+      var desc = document.createElement('p');
+      desc.className = 'ac-desc';
+      desc.textContent = a.desc;
+      card.appendChild(desc);
+
+      paEl.appendChild(card);
+    });
+
+    /* Trigger scroll-reveal for new sections */
+    if (typeof observeReveal === 'function') observeReveal();
+  }
+
+  /* ── Build prioritized action list ── */
+  function buildActions(r) {
+    var list = [];
+    var d = r.domains;
+
+    /* Governance */
+    if (d.governance.max > 0) {
+      var gPct = Math.round((d.governance.score / d.governance.max) * 100);
+      if (gPct <= 33) {
+        list.push({ priority: 'Critical', priorityClass: 'ac-critical', title: 'Develop information-security policies', desc: 'Create and formally approve documented security policies covering risk management, asset management, and acceptable use. NIS2 Article 21 mandates this as a baseline requirement.' });
+      } else if (gPct <= 66) {
+        list.push({ priority: 'High', priorityClass: 'ac-high', title: 'Formalize and review security policies annually', desc: 'Move from informal guidelines to board-approved policies with an annual review cycle. Ensure management body accountability as required by NIS2 Article 20.' });
+      }
+    }
+
+    /* Incident response */
+    if (d.incident.max > 0) {
+      var iPct = Math.round((d.incident.score / d.incident.max) * 100);
+      if (iPct <= 33) {
+        list.push({ priority: 'Critical', priorityClass: 'ac-critical', title: 'Establish an incident response plan', desc: 'NIS2 requires entities to report significant incidents within 24 hours. Build an IRP with clear roles, escalation paths, BC/DR procedures, and notification templates.' });
+      } else if (iPct <= 66) {
+        list.push({ priority: 'High', priorityClass: 'ac-high', title: 'Test and update your incident response plan', desc: 'Conduct tabletop exercises and align your notification workflow with the NIS2 24-hour early warning, 72-hour full notification, and one-month final report timelines.' });
+      }
+    }
+
+    /* Supply chain */
+    if (d.supply_chain.max > 0) {
+      var scPct = Math.round((d.supply_chain.score / d.supply_chain.max) * 100);
+      if (scPct <= 33) {
+        list.push({ priority: 'Critical', priorityClass: 'ac-critical', title: 'Implement supply-chain security assessments', desc: 'NIS2 explicitly requires managing ICT supply-chain risks. Start by identifying critical suppliers, adding security clauses to contracts, and conducting baseline assessments.' });
+      } else if (scPct <= 66) {
+        list.push({ priority: 'Medium', priorityClass: 'ac-medium', title: 'Expand supplier risk management', desc: 'Move beyond contractual clauses to regular security assessments of critical suppliers and establish continuous monitoring of third-party risk indicators.' });
+      }
+    }
+
+    /* Risk assessments */
+    if (d.risk.max > 0) {
+      var rPct = Math.round((d.risk.score / d.risk.max) * 100);
+      if (rPct <= 33) {
+        list.push({ priority: 'Critical', priorityClass: 'ac-critical', title: 'Conduct a formal risk assessment', desc: 'An all-hazards risk analysis is fundamental to NIS2 compliance. Identify, analyze, and evaluate risks to your network and information systems, then implement proportionate measures.' });
+      } else if (rPct <= 66) {
+        list.push({ priority: 'Medium', priorityClass: 'ac-medium', title: 'Increase risk-assessment frequency', desc: 'Move to at least semi-annual risk assessments and ensure findings are reported to management. Consider continuous risk monitoring tools.' });
+      }
+    }
+
+    /* Training */
+    if (d.training.max > 0) {
+      var tPct = Math.round((d.training.score / d.training.max) * 100);
+      if (tPct <= 33) {
+        list.push({ priority: 'High', priorityClass: 'ac-high', title: 'Launch a security awareness training program', desc: 'NIS2 Article 20 requires management bodies to undergo training and offer regular training to staff. Implement mandatory annual awareness training covering phishing, social engineering, and data handling.' });
+      } else if (tPct <= 66) {
+        list.push({ priority: 'Medium', priorityClass: 'ac-medium', title: 'Enhance training with simulations', desc: 'Add phishing simulations, role-based modules for technical teams, and track completion metrics. Board-level training is also explicitly required under NIS2.' });
+      }
+    }
+
+    /* Technical controls */
+    if (d.technical.max > 0) {
+      var techPct = Math.round((d.technical.score / d.technical.max) * 100);
+      if (techPct <= 33) {
+        list.push({ priority: 'Critical', priorityClass: 'ac-critical', title: 'Implement basic technical controls', desc: 'Deploy encryption for data in transit, enforce multi-factor authentication on critical systems, and establish role-based access controls. These are explicit NIS2 requirements under Article 21(2)(j).' });
+      } else if (techPct <= 66) {
+        list.push({ priority: 'High', priorityClass: 'ac-high', title: 'Strengthen technical security measures', desc: 'Extend encryption to data at rest, implement data classification, and move toward a Zero Trust access model with privileged access management and regular access reviews.' });
+      }
+    }
+
+    /* If everything is strong, add a positive action */
+    if (list.length === 0) {
+      list.push({ priority: 'Good', priorityClass: 'ac-good', title: 'Maintain and document your compliance posture', desc: 'Your organization shows strong readiness. Focus on maintaining documentation, conducting regular audits, and staying updated on member-state transposition rules and implementing acts.' });
+    }
+
+    /* Sort by severity */
+    var order = { 'Critical': 0, 'High': 1, 'Medium': 2, 'Good': 3 };
+    list.sort(function (a, b) { return (order[a.priority] || 9) - (order[b.priority] || 9); });
+
+    return list;
+  }
+
+  /* ── Scroll-reveal observer (reuse site pattern) ── */
+  function observeReveal() {
+    var targets = document.querySelectorAll('.m-s:not(.visible), .m-bg:not(.visible), .m-cta:not(.visible), .m-t:not(.visible)');
+    if (!('IntersectionObserver' in window)) {
+      targets.forEach(function (t) { t.classList.add('visible'); });
+      return;
+    }
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    targets.forEach(function (t) { obs.observe(t); });
+  }
+
+  /* ── Init ── */
+  renderQuestion(0);
+  observeReveal();
+});
+</script>
+```

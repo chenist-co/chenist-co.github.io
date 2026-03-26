@@ -79,28 +79,37 @@ format:
         .hp-stripes { background: #131315; background-image: repeating-linear-gradient(135deg, rgba(129,189,74,0) 0px, rgba(129,189,74,0) 20px, rgba(129,189,74,0.03) 20px, rgba(129,189,74,0.03) 22px, rgba(129,189,74,0) 22px, rgba(129,189,74,0) 40px, rgba(129,189,74,0.05) 40px, rgba(129,189,74,0.05) 43px, rgba(129,189,74,0) 43px, rgba(129,189,74,0) 60px, rgba(129,189,74,0.02) 60px, rgba(129,189,74,0.02) 61px); }
         .hp-mountains { background: #0e0e10; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Crect fill='%230e0e10' width='1600' height='900'/%3E%3Cpolygon fill='%23151517' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23131315' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23171719' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23141416' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%231a1a1d' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23161618' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%231c1c1f' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23181819' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%231e1e21' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%231a1a1c' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23202023' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%231c1c1e' points='943 900 1210 900 971 687'/%3E%3C/svg%3E"); background-size: cover; background-position: bottom; }
 
-        /* Light mode — alternate between white and soft grey, with subtle SVG patterns */
+        /* ===== LIGHT MODE ===== */
+        html:not([data-bs-theme="dark"]) .hp-hero-overlay { background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.65) 100%); }
         html:not([data-bs-theme="dark"]) .hp-sec { color: #1d1d1f; }
         html:not([data-bs-theme="dark"]) .hp-sec h2 { color: #1d1d1f; }
         html:not([data-bs-theme="dark"]) .hp-sec p { color: #6e6e73; }
         html:not([data-bs-theme="dark"]) .hp-icon h4 { color: #1d1d1f; }
         html:not([data-bs-theme="dark"]) .hp-icon p { color: #86868b; }
-        html:not([data-bs-theme="dark"]) .hp-pill { background: rgba(129,189,74,0.06); border-color: rgba(129,189,74,0.12); color: #424245; }
+        html:not([data-bs-theme="dark"]) .hp-icon-circle { background: rgba(129,189,74,0.07); }
+        html:not([data-bs-theme="dark"]) .hp-pill { background: rgba(129,189,74,0.05); border-color: rgba(129,189,74,0.1); color: #424245; }
         html:not([data-bs-theme="dark"]) .hp-sec-links .se { color: #86868b; }
-        html:not([data-bs-theme="dark"]) .hp-badge { background: rgba(129,189,74,0.08); color: #81BD4A; }
+        html:not([data-bs-theme="dark"]) .hp-badge { background: rgba(129,189,74,0.06); color: #5a9c25; }
         html:not([data-bs-theme="dark"]) .hp-blog-title { color: #1d1d1f; }
         html:not([data-bs-theme="dark"]) .hp-blog-date { color: #86868b; }
         html:not([data-bs-theme="dark"]) .hp-blog-item { border-color: rgba(0,0,0,0.06); }
-        /* Light SVG backgrounds — white and #f5f5f7 alternating */
+        html:not([data-bs-theme="dark"]) .hp-blog-item:hover { background: rgba(129,189,74,0.02); }
+        /* Stats bar — soft grey in light mode */
+        html:not([data-bs-theme="dark"]) .hp-stats { background: #f5f5f7; }
+        html:not([data-bs-theme="dark"]) .hp-sl { color: #86868b; }
+        /* Security visual numbers */
+        html:not([data-bs-theme="dark"]) .hp-sn { color: #81BD4A; }
+        html:not([data-bs-theme="dark"]) .hp-split-visual [style*="rgba(255,255,255,0.4)"] { color: #86868b !important; }
+        html:not([data-bs-theme="dark"]) .hp-split-visual [style*="font-size: 5rem"] { color: #1d1d1f !important; }
+        html:not([data-bs-theme="dark"]) .hp-split-visual [style*="color: #81BD4A"] { color: #81BD4A !important; }
+        /* Marquee stays green in both modes */
+        html:not([data-bs-theme="dark"]) .hp-mq { background: #81BD4A; }
+        /* Light SVG backgrounds — white (#fff) and soft grey (#f5f5f7) alternating */
         html:not([data-bs-theme="dark"]) .hp-squares { background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Crect fill='%23fff' width='200' height='200'/%3E%3Cg fill='%23f8f8fa' fill-opacity='1'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='%2381BD4A' fill-opacity='0.03' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='%2381BD4A' fill-opacity='0.02' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E"); }
         html:not([data-bs-theme="dark"]) .hp-triangles { background: #f5f5f7 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='540' height='450' viewBox='0 0 1080 900'%3E%3Crect fill='%23f5f5f7' width='1080' height='900'/%3E%3Cg fill-opacity='0.04'%3E%3Cpolygon fill='%2381BD4A' points='90 150 0 300 180 300'/%3E%3Cpolygon fill='%23ebebed' points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%2381BD4A' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23ebebed' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%2381BD4A' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23ebebed' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%2381BD4A' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23ebebed' points='90 450 0 600 180 600'/%3E%3Cpolygon fill='%2381BD4A' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23ebebed' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%2381BD4A' points='630 450 720 300 540 300'/%3E%3Cpolygon fill='%23ebebed' points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%2381BD4A' points='990 450 1080 300 900 300'/%3E%3C/g%3E%3C/svg%3E"); }
         html:not([data-bs-theme="dark"]) .hp-constellation { background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='692' height='692' viewBox='0 0 800 800'%3E%3Crect fill='none' width='800' height='800'/%3E%3Cg fill='none' stroke='%2381BD4A' stroke-width='1' stroke-opacity='0.07'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3C/g%3E%3Cg fill='%2381BD4A' fill-opacity='0.04'%3E%3Ccircle cx='769' cy='229' r='4'/%3E%3Ccircle cx='539' cy='269' r='4'/%3E%3Ccircle cx='603' cy='493' r='4'/%3E%3Ccircle cx='731' cy='737' r='4'/%3E%3Ccircle cx='295' cy='764' r='4'/%3E%3Ccircle cx='102' cy='382' r='4'/%3E%3C/g%3E%3C/svg%3E"); }
         html:not([data-bs-theme="dark"]) .hp-stripes { background: #f5f5f7; background-image: repeating-linear-gradient(135deg, rgba(129,189,74,0) 0px, rgba(129,189,74,0) 20px, rgba(129,189,74,0.02) 20px, rgba(129,189,74,0.02) 22px, rgba(129,189,74,0) 22px, rgba(129,189,74,0) 40px, rgba(129,189,74,0.035) 40px, rgba(129,189,74,0.035) 43px); }
         html:not([data-bs-theme="dark"]) .hp-mountains { background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Crect fill='%23fff' width='1600' height='900'/%3E%3Cpolygon fill='%23f8f8fa' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23f5f5f7' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23f0f0f2' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23ededef' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23eaeaec' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23e8e8ea' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23e5e5e7' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23e2e2e4' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23dfdfdf' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23dcdcdc' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23dadada' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23d7d7d7' points='943 900 1210 900 971 687'/%3E%3C/svg%3E"); background-size: cover; background-position: bottom; }
-        html:not([data-bs-theme="dark"]) .hp-stats { background: #f5f5f7; }
-        html:not([data-bs-theme="dark"]) .hp-sl { color: #86868b; }
-        /* Security visual numbers in light mode */
-        html:not([data-bs-theme="dark"]) .hp-split-visual [style*="rgba(255,255,255,0.4)"] { color: #86868b !important; }
 
         /* Stats */
         .hp-stats { display: flex; justify-content: center; gap: clamp(2rem, 5vw, 5rem); flex-wrap: wrap; padding: 5rem 1.5rem; background: #000; }
@@ -120,26 +129,38 @@ format:
           .hp-icons { grid-template-columns: 1fr; }
         }
         @media (max-width: 767px) {
-          .hp-hero { min-height: 85vh; padding: 6rem 1.5rem 4rem; }
-          .hp-hero h1 { font-size: clamp(2.5rem, 10vw, 4rem); }
-          .hp-hero p { font-size: 1rem; }
-          .hp-sec { min-height: auto; padding: 5rem 0; }
-          .hp-sec h2 { font-size: clamp(2rem, 6vw, 3rem); }
-          .hp-mq span { padding: 0 1.25rem; font-size: 0.65rem; }
-          .hp-stats { gap: 1.5rem; padding: 3.5rem 1.5rem; }
-          .hp-sec-content { padding: 0 1.5rem; }
+          .hp-hero { min-height: 80vh; padding: 5rem 1.25rem 3.5rem; }
+          .hp-hero h1 { font-size: clamp(2.5rem, 10vw, 3.5rem); }
+          .hp-hero p { font-size: 0.95rem; max-width: 340px; }
+          .hp-hero-btn { font-size: 0.95rem; padding: 0.85rem 2rem; border-radius: 14px; }
+          .hp-scroll { margin-top: 2rem; }
+          .hp-sec { min-height: auto; padding: 4.5rem 0; }
+          .hp-sec h2 { font-size: clamp(1.75rem, 6vw, 2.5rem); }
+          .hp-mq span { padding: 0 1rem; font-size: 0.6rem; }
+          .hp-stats { gap: 1.5rem; padding: 3rem 1.25rem; }
+          .hp-sec-content { padding: 0 1.25rem; }
           .hp-sec-links { display: flex; flex-direction: column; gap: 0.75rem; }
-          .hp-sec-links a { margin-right: 0; }
-          .hp-pill { font-size: 0.75rem; padding: 0.4rem 0.75rem; }
+          .hp-sec-links a { margin-right: 0; font-size: 0.95rem; }
+          .hp-pill { font-size: 0.72rem; padding: 0.4rem 0.7rem; margin: 0.15rem; }
           .hp-icon { gap: 0.75rem; }
-          .hp-blog-item { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+          .hp-icon-circle { width: 42px; height: 42px; border-radius: 10px; }
+          .hp-icon h4 { font-size: 0.9rem; }
+          .hp-icon p { font-size: 0.78rem; }
+          .hp-blog { max-width: 100%; }
+          .hp-blog-item { flex-direction: column; align-items: flex-start; gap: 0.2rem; padding: 1rem 0; }
+          .hp-blog-title { font-size: 0.95rem; }
           .hp-blog-arrow { display: none; }
+          .hp-badge { font-size: 0.65rem; }
         }
         @media (max-width: 480px) {
-          .hp-hero { min-height: 70vh; padding: 5rem 1.25rem 3rem; }
-          .hp-hero-btn { padding: 0.85rem 2rem; font-size: 0.95rem; }
-          .hp-stats { flex-direction: column; align-items: center; }
-          .hp-sec { padding: 4rem 0; }
+          .hp-hero { min-height: 70vh; padding: 4.5rem 1rem 3rem; }
+          .hp-hero h1 { font-size: clamp(2.25rem, 11vw, 3rem); }
+          .hp-hero-btn { padding: 0.8rem 1.75rem; font-size: 0.9rem; }
+          .hp-stats { flex-direction: column; align-items: center; gap: 1.25rem; padding: 2.5rem 1rem; }
+          .hp-sec { padding: 3.5rem 0; }
+          .hp-sec h2 { font-size: clamp(1.5rem, 7vw, 2rem); }
+          .hp-sec p { font-size: 0.9rem; }
+          .hp-sn { font-size: clamp(1.75rem, 5vw, 2.5rem); }
         }
         </style>
 ---
@@ -292,6 +313,31 @@ format:
     <div class="hp-sec-links" style="display:flex; gap:2rem; justify-content:center;">
       <a href="/services/cloud/" class="pr">Cloud services</a>
       <a href="/services/nis2/" class="se">NIS2 compliance</a>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="hp-sec hp-stripes" style="min-height:auto; padding:8rem 0; text-align:center;">
+  <div class="hp-sec-content" style="max-width:900px;">
+    <div class="hp-badge"><i class="bi bi-chat-quote me-1"></i> What clients say</div>
+    <h2 style="margin-bottom:3rem;">Trusted by organizations<br>across Europe.</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:2rem; text-align:left;">
+      <div style="padding:2rem; border-radius:16px; border:1px solid rgba(129,189,74,0.1); background:rgba(129,189,74,0.02);">
+        <div style="color:#81BD4A; font-size:1.5rem; margin-bottom:0.75rem;"><i class="bi bi-quote"></i></div>
+        <p style="font-size:0.92rem; line-height:1.6; margin-bottom:1rem; max-width:none;">chen.ist migrated our entire infrastructure to open-source in 3 months. Zero downtime, 40% cost reduction. The team understood our needs from day one.</p>
+        <div style="font-size:0.82rem;"><strong>CTO</strong> · Manufacturing company, Romania</div>
+      </div>
+      <div style="padding:2rem; border-radius:16px; border:1px solid rgba(129,189,74,0.1); background:rgba(129,189,74,0.02);">
+        <div style="color:#81BD4A; font-size:1.5rem; margin-bottom:0.75rem;"><i class="bi bi-quote"></i></div>
+        <p style="font-size:0.92rem; line-height:1.6; margin-bottom:1rem; max-width:none;">Their NIS2 gap analysis saved us months of confusion. Clear roadmap, no unnecessary complexity. We were compliant in 4 months.</p>
+        <div style="font-size:0.82rem;"><strong>CISO</strong> · Healthcare provider, EU</div>
+      </div>
+      <div style="padding:2rem; border-radius:16px; border:1px solid rgba(129,189,74,0.1); background:rgba(129,189,74,0.02);">
+        <div style="color:#81BD4A; font-size:1.5rem; margin-bottom:0.75rem;"><i class="bi bi-quote"></i></div>
+        <p style="font-size:0.92rem; line-height:1.6; margin-bottom:1rem; max-width:none;">The cybersecurity training was the best investment we made this year. Practical, no fluff, and our team actually uses what they learned.</p>
+        <div style="font-size:0.82rem;"><strong>IT Director</strong> · Education sector, Sweden</div>
+      </div>
     </div>
   </div>
 </div>

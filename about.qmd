@@ -2,6 +2,11 @@
 title: "About Redirect"
 page-layout: custom
 title-block-style: none
+format:
+  html:
+    include-in-header:
+      text: |
+        <meta name="robots" content="noindex">
 ---
 
 <meta http-equiv="refresh" content="0; url=/about/index.html">

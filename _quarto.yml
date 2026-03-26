@@ -53,6 +53,8 @@ website:
             text: Cloud Services
           - href: services/digital-resilience/index.qmd
             text: Digital Resilience
+          - href: services/gdpr/index.qmd
+            text: GDPR Compliance
       - text: Academy
         menu:
           - href: academy/overview.qmd
@@ -80,15 +82,24 @@ website:
             text: Partnerships
       - href: blog.qmd
         text: Blogs
-      - href: resources/index.qmd
-        text: Resources
-         
+      - text: Resources
+        menu:
+          - href: resources/index.qmd
+            text: All Resources
+          - href: resources/tools/index.qmd
+            text: Tools
+          - href: compare.qmd
+            text: Why Open Source
+          - href: faq.qmd
+            text: FAQ
 
     right:
       - text: "About"
         menu:
           - href: about/index.qmd
             text: About
+          - href: about/team.qmd
+            text: Team
           - href: about/csr.qmd
             text: CSR
           - href: about/community.qmd
@@ -132,6 +143,11 @@ format:
     from: markdown+raw_html
     include-in-header:
       - text: |
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+          <meta name="apple-mobile-web-app-capable" content="yes">
+          <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+          <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+          <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
           <script defer data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
           <script>
           (function() {
@@ -295,7 +311,9 @@ format:
           <!-- Cal.com embed (for booking page only, no floating button) -->
           <script>
             (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-            Cal("init", {origin:"https://cal.com"});
+            if (window.location.pathname.includes('/booking/')) {
+              Cal("init", {origin:"https://cal.com"});
+            }
           </script>
           <script>
             document.addEventListener('DOMContentLoaded', function() {

@@ -45,3 +45,13 @@ website:
       - text: "Växla tema"
         icon: moon
         href: "#"
+
+# Canonical/hreflang tags — point search engines to all language versions
+format:
+  html:
+    include-in-header:
+      text: |
+        <link rel="alternate" hreflang="en" href="https://chen.ist/">
+        <link rel="alternate" hreflang="ro" href="https://chen.ist/ro/">
+        <link rel="alternate" hreflang="sv" href="https://chen.ist/sv/">
+        <link rel="alternate" hreflang="de" href="https://chen.ist/de/">

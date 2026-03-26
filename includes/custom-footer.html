@@ -12,9 +12,9 @@
         <div style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:1rem; font-family:'Source Code Pro',monospace;">chen<span style="color:#81BD4A;">.</span>ist</div>
         <p style="margin-bottom:1rem; color:rgba(255,255,255,0.4);" class="footer-i18n" data-key="tagline">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
         <div style="display:flex; gap:0.75rem; margin-bottom:1rem;">
-          <a href="https://github.com/chenist" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-github"></i></a>
-          <a href="https://linkedin.com/in/chenistsec" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-linkedin"></i></a>
-          <a href="https://alinmechenici.substack.com" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-envelope"></i></a>
+          <a href="https://github.com/chenist" target="_blank" class="footer-social"><i class="bi bi-github"></i></a>
+          <a href="https://linkedin.com/in/chenistsec" target="_blank" class="footer-social"><i class="bi bi-linkedin"></i></a>
+          <a href="https://alinmechenici.substack.com" target="_blank" class="footer-social"><i class="bi bi-envelope"></i></a>
         </div>
         <p style="color:rgba(255,255,255,0.2); font-size:0.75rem;">&copy; 2026 chen.ist</p>
       </div>
@@ -25,6 +25,7 @@
         <a href="/services/cloud/" data-footer-link style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
         <a href="/services/nis2/" data-footer-link style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="nis2">NIS2 Compliance</a>
         <a href="/services/digital-resilience/" data-footer-link style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="resilience">Digital Resilience</a>
+        <a href="/services/gdpr/" data-footer-link style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">GDPR Compliance</a>
       </div>
       <div>
         <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="academy">Academy</div>
@@ -39,6 +40,7 @@
         <a href="/about/" data-footer-link style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="about">About</a>
         <a href="/blog.html" data-footer-link style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
         <a href="/contact.html" data-footer-link style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="contact">Contact</a>
+        <a href="/faq.html" data-footer-link style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">FAQ</a>
         <a href="/privacy.html" data-footer-link style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="privacy">Privacy</a>
         <a href="/terms.html" data-footer-link style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="terms">Terms</a>
       </div>
@@ -54,9 +56,19 @@
 
 <style>
 @media (max-width:991px) { footer > div > div { grid-template-columns: 2fr 1fr 1fr !important; } }
-@media (max-width:767px) { footer > div > div { grid-template-columns: 1fr 1fr !important; gap:2rem !important; } }
-@media (max-width:480px) { footer > div > div { grid-template-columns: 1fr !important; } }
+@media (max-width:767px) {
+  footer { padding: 3rem 0 2rem !important; font-size: 0.8rem !important; }
+  footer > div > div { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
+  footer a { padding: 0.3rem 0 !important; min-height: 36px; display: inline-flex; align-items: center; }
+}
+@media (max-width:480px) {
+  footer > div > div { grid-template-columns: 1fr !important; gap: 1.75rem !important; }
+  footer { padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px)) !important; }
+}
 footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
+footer a { -webkit-tap-highlight-color: transparent; }
+.footer-social { display:flex !important; align-items:center !important; justify-content:center !important; width:40px !important; height:40px !important; min-height:40px !important; border-radius:50% !important; background:rgba(255,255,255,0.06) !important; color:rgba(255,255,255,0.5) !important; text-decoration:none !important; font-size:1rem !important; padding:0 !important; }
+.footer-social:hover { background:rgba(129,189,74,0.15) !important; color:#81BD4A !important; }
 </style>
 
 <script>

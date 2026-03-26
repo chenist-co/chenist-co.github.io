@@ -1,0 +1,204 @@
+---
+title: "FAQ"
+title-block-style: none
+description: "Frequently asked questions about chen.ist services, pricing, open-source infrastructure, NIS2 compliance, and academy programs."
+from: markdown+raw_html
+page-layout: custom
+format:
+  html:
+    toc: false
+    include-in-header:
+      text: |
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How much do your services cost?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Every project is different. Digital infrastructure projects typically start from EUR 2,000/month for managed services. Security assessments start from EUR 3,000. NIS2 compliance programs are scoped individually. We always start with a free 30-minute consultation to understand your needs before quoting."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you offer free consultations?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Every engagement starts with a free 30-minute consultation. No pitch, no commitment — just an honest look at your situation and how we can help."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What's your engagement model?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We offer three models: project-based (fixed scope, fixed price), retainer (monthly hours for ongoing support), and managed services (we run your infrastructure). Most clients start with a project and move to a retainer once they see results."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is open-source software reliable enough for business?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely. Linux runs 96% of the world's top servers. Nextcloud, Keycloak, and the tools we deploy are used by governments, banks, and Fortune 500 companies. Open-source doesn't mean amateur — it means transparent, auditable, and free from vendor lock-in."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does NIS2 apply to my organization?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "If you operate in the EU and have 50+ employees or EUR 10M+ revenue in sectors like energy, transport, health, digital infrastructure, or ICT services — yes, NIS2 likely applies to you. We offer a free assessment to determine your status."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What are the penalties for non-compliance?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Up to EUR 10 million or 2% of global annual turnover (whichever is higher) for essential entities. Management can be held personally liable. The directive is enforceable now."
+              }
+            }
+          ]
+        }
+        </script>
+---
+
+```{=html}
+<div class="m">
+
+<div class="m-hero">
+  <div class="container">
+    <h1>Frequently Asked <span class="gr">Questions</span></h1>
+    <p>Everything you need to know about working with us.</p>
+  </div>
+</div>
+
+<div class="m-bg" style="padding:5rem 0;">
+  <div class="container" style="max-width:800px;">
+    <h2>Services & Pricing</h2>
+    <p class="sub">How we work and what it costs.</p>
+
+    <details style="border-bottom:1px solid rgba(255,255,255,0.06); padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">How much do your services cost?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">Every project is different. Digital infrastructure projects typically start from <strong>EUR 2,000/month</strong> for managed services. Security assessments start from <strong>EUR 3,000</strong>. NIS2 compliance programs are scoped individually. We always start with a free 30-minute consultation to understand your needs before quoting.</p>
+    </details>
+
+    <details style="border-bottom:1px solid rgba(255,255,255,0.06); padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Do you offer free consultations?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">Yes. Every engagement starts with a <strong>free 30-minute consultation</strong>. No pitch, no commitment — just an honest look at your situation and how we can help. <a href="/booking/" class="m-lk" style="font-size:inherit;">Book one now</a>.</p>
+    </details>
+
+    <details style="border-bottom:1px solid rgba(255,255,255,0.06); padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">What's your engagement model?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">We offer three models: <strong>project-based</strong> (fixed scope, fixed price), <strong>retainer</strong> (monthly hours for ongoing support), and <strong>managed services</strong> (we run your infrastructure). Most clients start with a project and move to a retainer once they see results.</p>
+    </details>
+
+    <details style="padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Do you work with SMBs or enterprises?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">Both. Our sweet spot is <strong>10-500 employee organizations</strong> in the EU. We've helped startups deploy their first infrastructure and mid-size companies migrate entire platforms. Our packages scale with your needs.</p>
+    </details>
+  </div>
+</div>
+
+<div class="m-s" style="padding:5rem 0;">
+  <div class="container" style="max-width:800px;">
+    <h2>Open Source & Technology</h2>
+    <p class="sub">Common questions about our tech stack.</p>
+
+    <details style="border-bottom:1px solid rgba(0,0,0,0.06); padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Is open-source software reliable enough for business?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">Absolutely. Linux runs 96% of the world's top servers. Nextcloud, Keycloak, and the tools we deploy are used by governments, banks, and Fortune 500 companies. Open-source doesn't mean amateur — it means transparent, auditable, and free from vendor lock-in.</p>
+    </details>
+
+    <details style="border-bottom:1px solid rgba(0,0,0,0.06); padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Who provides support if something breaks?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">We do. Our managed services include <strong>24/7 monitoring and incident response</strong>. You're never on your own. We also provide training so your team can handle day-to-day operations confidently.</p>
+    </details>
+
+    <details style="border-bottom:1px solid rgba(0,0,0,0.06); padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Can you migrate us from Microsoft 365 / Google Workspace?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">Yes. We've migrated organizations from both platforms to open-source alternatives (Nextcloud, Keycloak, Matrix). We run parallel systems during transition to ensure zero downtime and train your team on the new tools.</p>
+    </details>
+
+    <details style="padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Where is our data stored?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;"><strong>In the EU, always.</strong> We use European data centers and EU-based cloud providers. Your data never leaves European soil. This is not an option — it's our default.</p>
+    </details>
+  </div>
+</div>
+
+<div class="m-bg" style="padding:5rem 0;">
+  <div class="container" style="max-width:800px;">
+    <h2>NIS2 & Compliance</h2>
+    <p class="sub">Understanding your obligations.</p>
+
+    <details style="border-bottom:1px solid rgba(255,255,255,0.06); padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Does NIS2 apply to my organization?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">If you operate in the EU and have 50+ employees or EUR 10M+ revenue in sectors like energy, transport, health, digital infrastructure, or ICT services — <strong>yes, NIS2 likely applies to you</strong>. We offer a free assessment to determine your status. <a href="/services/nis2/" class="m-lk" style="font-size:inherit;">Learn more</a>.</p>
+    </details>
+
+    <details style="border-bottom:1px solid rgba(255,255,255,0.06); padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">What are the penalties for non-compliance?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">Up to <strong>EUR 10 million or 2% of global annual turnover</strong> (whichever is higher) for essential entities. Management can be held <strong>personally liable</strong>. The directive is enforceable now.</p>
+    </details>
+
+    <details style="padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">How long does NIS2 compliance take?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">Typically <strong>3-6 months</strong> depending on your current maturity level. We start with a gap analysis (2-3 weeks), then build a prioritized roadmap. Some organizations can reach baseline compliance in 8 weeks with focused effort.</p>
+    </details>
+  </div>
+</div>
+
+<div class="m-s" style="padding:5rem 0;">
+  <div class="container" style="max-width:800px;">
+    <h2>Academy</h2>
+    <p class="sub">About our courses and trainings.</p>
+
+    <details style="border-bottom:1px solid rgba(0,0,0,0.06); padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Are courses available in my language?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">Currently our courses and trainings are delivered in <strong>English and Romanian</strong>. We're expanding to German and Swedish through our partnership program. <a href="/academy/partnerships.html" class="m-lk" style="font-size:inherit;">Become a partner</a> to bring academy programs to your market.</p>
+    </details>
+
+    <details style="border-bottom:1px solid rgba(0,0,0,0.06); padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Do you offer team/corporate training?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">Yes. We offer custom cohorts with <strong>organization-specific scenarios, flexible scheduling, and group pricing</strong>. Trainings can be delivered on-site, virtual, or hybrid. <a href="/booking/" class="m-lk" style="font-size:inherit;">Book a call</a> to discuss your needs.</p>
+    </details>
+
+    <details style="padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Do I get a certificate?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">Yes. All courses and trainings include a <strong>completion certificate with detailed competencies</strong>. More importantly, you leave with practical skills you can apply immediately — not just a PDF.</p>
+    </details>
+  </div>
+</div>
+
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Still have questions?</h2>
+    <p>Book a free 30-minute consultation. No pitch, just answers.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="/booking/" class="m-b">Book a call</a>
+      <a href="/contact.html" class="m-bo">Send a message</a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<style>
+details summary::-webkit-details-marker { display: none; }
+details[open] summary i { transform: rotate(180deg); }
+details summary i { transition: transform 0.2s; }
+html:not([data-bs-theme="dark"]) details { border-color: rgba(0,0,0,0.06) !important; }
+details summary { -webkit-tap-highlight-color: transparent; }
+@media (max-width: 767px) {
+  details { padding: 1.25rem 0 !important; }
+  details summary { font-size: 0.95rem !important; min-height: 44px; gap: 1rem; }
+  details p { font-size: 0.88rem !important; line-height: 1.65 !important; }
+}
+</style>
+```

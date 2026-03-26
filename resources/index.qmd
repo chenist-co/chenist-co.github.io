@@ -127,6 +127,19 @@ format:
   </div>
 </div>
 
+<!-- Newsletter signup -->
+<div style="max-width:900px; margin:2rem auto; padding:2rem;">
+  <div style="background:rgba(129,189,74,0.04); border:1px solid rgba(129,189,74,0.15); border-radius:16px; padding:2rem 2.5rem; text-align:center;">
+    <div style="font-size:1.15rem; font-weight:700; margin-bottom:0.5rem;">Get cybersecurity insights delivered to your inbox</div>
+    <form action="https://formspree.io/f/mpwkaqev" method="POST" class="m-form" style="display:flex; gap:0.75rem; justify-content:center; align-items:center; flex-wrap:wrap; margin-top:1rem;">
+      <input type="hidden" name="_source" value="newsletter-signup">
+      <input type="email" name="email" placeholder="you@company.com" required style="flex:1; min-width:220px; max-width:360px; padding:0.6rem 1rem; border:1px solid rgba(0,0,0,0.12); border-radius:8px; font-size:0.9rem; background:transparent; color:inherit;">
+      <button type="submit" class="m-b" style="font-size:0.9rem; padding:0.6rem 1.5rem; white-space:nowrap;">Subscribe</button>
+    </form>
+    <div style="margin-top:0.75rem; font-size:0.72rem; color:#86868b;">No spam. Unsubscribe anytime. <a href="/privacy.html" style="color:#81BD4A; text-decoration:underline;">Privacy policy</a></div>
+  </div>
+</div>
+
 <!-- CTA -->
 <div class="m-cta">
   <div class="container">
