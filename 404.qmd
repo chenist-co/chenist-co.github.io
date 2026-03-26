@@ -10,18 +10,19 @@ format:
 ```{=html}
 <div class="m">
 
-<div class="m-hero" style="min-height:80vh;display:flex;align-items:center;">
-  <div class="container" style="text-align:center;">
-    <p style="font-size:8rem;font-weight:800;line-height:1;margin-bottom:0.25em;" class="gr">404</p>
-    <h1>Page not found</h1>
-    <p>The page you're looking for has moved, been removed, or never existed.<br>Here are some places to start instead.</p>
+<div class="ev-hero" style="min-height:80vh;display:flex;align-items:center;background:#000 !important;">
+  <div class="ev-hero-bg" style="background:linear-gradient(135deg,rgba(10,10,10,0.95),rgba(50,54,66,0.9));opacity:1;"></div>
+  <div class="ev-hero-content" style="text-align:center;">
+    <p style="font-size:8rem;font-weight:800;line-height:1;margin-bottom:0.25em;background:linear-gradient(135deg,#81BD4A,#a8e063);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">404</p>
+    <h1 style="color:#fff !important;">Page not found</h1>
+    <p style="max-width:500px;margin:0 auto;color:rgba(255,255,255,0.7) !important;">The page you're looking for has moved, been removed, or never existed.</p>
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:2.5rem;">
-      <a href="/" class="m-b">Home</a>
-      <a href="/services/" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Services</a>
-      <a href="/academy/" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Academy</a>
-      <a href="/contact.html" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Contact</a>
+      <a href="/" class="ev-btn" style="background:#81BD4A;color:#fff !important;">Home</a>
+      <a href="/services/" class="ev-btn-ghost" style="border-color:rgba(255,255,255,0.3);color:#fff !important;">Services</a>
+      <a href="/academy/" class="ev-btn-ghost" style="border-color:rgba(255,255,255,0.3);color:#fff !important;">Academy</a>
+      <a href="/contact.html" class="ev-btn-ghost" style="border-color:rgba(255,255,255,0.3);color:#fff !important;">Contact</a>
     </div>
-    <p style="margin-top:2rem;opacity:.7;">Or <a href="/booking/" style="color:var(--gr);">book a call</a> and we'll point you in the right direction.</p>
+    <p style="margin-top:2rem;color:rgba(255,255,255,0.5) !important;font-size:0.9rem;">Or <a href="/booking/" style="color:#81BD4A !important;">book a call</a> and we'll point you in the right direction.</p>
   </div>
 </div>
 

@@ -1,0 +1,196 @@
+---
+title: "Vanliga Frågor"
+title-block-style: none
+description: "Vanliga frågor om chen.ist:s tjänster, priser, open source-infrastruktur, NIS2-efterlevnad och academy-program."
+from: markdown+raw_html
+page-layout: custom
+format:
+  html:
+    toc: false
+    include-in-header:
+      text: |
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Vad kostar era tjänster?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Varje projekt är unikt. Projekt för digital infrastruktur börjar vanligtvis från 2 000 EUR/månad för hanterade tjänster. Säkerhetsbedömningar börjar från 3 000 EUR. NIS2-efterlevnadsprogram prissätts individuellt. Vi börjar alltid med en kostnadsfri 30-minuters konsultation för att förstå era behov innan vi ger en offert."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Erbjuder ni kostnadsfria konsultationer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja. Varje samarbete börjar med en kostnadsfri 30-minuters konsultation. Ingen säljpitch, inget åtagande — bara en ärlig genomgång av er situation och hur vi kan hjälpa."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Vilken är er samarbetsmodell?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Vi erbjuder tre modeller: projektbaserad (fast omfattning, fast pris), retainer (månatliga timmar för löpande support) och hanterade tjänster (vi driver er infrastruktur). De flesta kunder börjar med ett projekt och går över till en retainer när de ser resultat."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Gäller NIS2 för min organisation?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Om ni verkar inom EU och har 50+ anställda eller 10 miljoner EUR+ i omsättning inom sektorer som energi, transport, hälsa, digital infrastruktur eller ICT-tjänster — ja, NIS2 gäller sannolikt för er. Vi erbjuder en kostnadsfri bedömning för att fastställa er status."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Vilka är sanktionerna vid bristande efterlevnad?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Upp till 10 miljoner EUR eller 2% av den globala årsomsättningen (det som är högst) för väsentliga entiteter. Ledningen kan hållas personligt ansvarig. Direktivet är verkställbart nu."
+              }
+            }
+          ]
+        }
+        </script>
+---
+
+```{=html}
+<div class="m">
+
+<div class="m-hero">
+  <div class="container">
+    <h1>Vanliga <span class="gr">Frågor</span></h1>
+    <p>Allt du behöver veta om att arbeta med oss.</p>
+  </div>
+</div>
+
+<div class="m-bg" style="padding:5rem 0;">
+  <div class="container" style="max-width:800px;">
+    <h2>Tjänster och Priser</h2>
+    <p class="sub">Hur vi arbetar och vad det kostar.</p>
+
+    <details style="border-bottom:1px solid rgba(255,255,255,0.06); padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Vad kostar era tjänster?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">Varje projekt är unikt. Projekt för digital infrastruktur börjar vanligtvis från <strong>2 000 EUR/månad</strong> för hanterade tjänster. Säkerhetsbedömningar börjar från <strong>3 000 EUR</strong>. NIS2-efterlevnadsprogram prissätts individuellt. Vi börjar alltid med en kostnadsfri 30-minuters konsultation för att förstå era behov innan vi ger en offert.</p>
+    </details>
+
+    <details style="border-bottom:1px solid rgba(255,255,255,0.06); padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Erbjuder ni kostnadsfria konsultationer?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">Ja. Varje samarbete börjar med en <strong>kostnadsfri 30-minuters konsultation</strong>. Ingen säljpitch, inget åtagande — bara en ärlig genomgång av er situation och hur vi kan hjälpa. <a href="/sv/booking/" class="m-lk" style="font-size:inherit;">Boka en nu</a>.</p>
+    </details>
+
+    <details style="border-bottom:1px solid rgba(255,255,255,0.06); padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Vilken är er samarbetsmodell?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">Vi erbjuder tre modeller: <strong>projektbaserad</strong> (fast omfattning, fast pris), <strong>retainer</strong> (månatliga timmar för löpande support) och <strong>hanterade tjänster</strong> (vi driver er infrastruktur). De flesta kunder börjar med ett projekt och går över till en retainer när de ser resultat.</p>
+    </details>
+
+    <details style="padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Arbetar ni med SMF eller stora företag?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">Båda. Vår sweet spot är <strong>organisationer med 10-500 anställda</strong> inom EU. Vi har hjälpt startups att driftsätta sin första infrastruktur och medelstora företag att migrera hela plattformar. Våra paket skalas efter era behov.</p>
+    </details>
+  </div>
+</div>
+
+<div class="m-s" style="padding:5rem 0;">
+  <div class="container" style="max-width:800px;">
+    <h2>Open Source och Teknik</h2>
+    <p class="sub">Vanliga frågor om vår teknikstack.</p>
+
+    <details style="border-bottom:1px solid rgba(0,0,0,0.06); padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Är open source-programvara tillräckligt pålitlig för företag?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">Absolut. Linux driver 96% av världens viktigaste servrar. Nextcloud, Keycloak och de verktyg vi driftsätter används av regeringar, banker och Fortune 500-företag. Open source betyder inte amatörmässigt — det betyder transparent, granskningsbart och fritt från leverantörsinlåsning.</p>
+    </details>
+
+    <details style="border-bottom:1px solid rgba(0,0,0,0.06); padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Vem ger support om något går sönder?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">Det gör vi. Våra hanterade tjänster inkluderar <strong>24/7-övervakning och incidenthantering</strong>. Ni är aldrig ensamma. Vi erbjuder också utbildning så att ert team kan hantera dagliga operationer med tillförsikt.</p>
+    </details>
+
+    <details style="border-bottom:1px solid rgba(0,0,0,0.06); padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Kan ni migrera oss från Microsoft 365 / Google Workspace?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">Ja. Vi har migrerat organisationer från båda plattformarna till open source-alternativ (Nextcloud, Keycloak, Matrix). Vi kör parallella system under övergången för att säkerställa noll driftstopp och utbildar ert team på de nya verktygen.</p>
+    </details>
+
+    <details style="padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Var lagras vår data?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;"><strong>Inom EU, alltid.</strong> Vi använder europeiska datacenter och EU-baserade molnleverantörer. Er data lämnar aldrig europeisk mark. Detta är inte ett alternativ — det är vår standard.</p>
+    </details>
+  </div>
+</div>
+
+<div class="m-bg" style="padding:5rem 0;">
+  <div class="container" style="max-width:800px;">
+    <h2>NIS2 och Efterlevnad</h2>
+    <p class="sub">Förstå era skyldigheter.</p>
+
+    <details style="border-bottom:1px solid rgba(255,255,255,0.06); padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Gäller NIS2 för min organisation?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">Om ni verkar inom EU och har 50+ anställda eller 10 miljoner EUR+ i omsättning inom sektorer som energi, transport, hälsa, digital infrastruktur eller ICT-tjänster — <strong>ja, NIS2 gäller sannolikt för er</strong>. Vi erbjuder en kostnadsfri bedömning för att fastställa er status. <a href="/sv/services/nis2/" class="m-lk" style="font-size:inherit;">Läs mer</a>.</p>
+    </details>
+
+    <details style="border-bottom:1px solid rgba(255,255,255,0.06); padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Vilka är sanktionerna vid bristande efterlevnad?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">Upp till <strong>10 miljoner EUR eller 2% av den globala årsomsättningen</strong> (det som är högst) för väsentliga entiteter. Ledningen kan hållas <strong>personligt ansvarig</strong>. Direktivet är verkställbart nu.</p>
+    </details>
+
+    <details style="padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Hur lång tid tar NIS2-efterlevnad?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">Vanligtvis <strong>3-6 månader</strong> beroende på er nuvarande mognadsnivå. Vi börjar med en gapanalys (2-3 veckor) och bygger sedan en prioriterad handlingsplan. Vissa organisationer kan uppnå grundläggande efterlevnad på 8 veckor med fokuserad insats.</p>
+    </details>
+  </div>
+</div>
+
+<div class="m-s" style="padding:5rem 0;">
+  <div class="container" style="max-width:800px;">
+    <h2>Academy</h2>
+    <p class="sub">Om våra kurser och utbildningar.</p>
+
+    <details style="border-bottom:1px solid rgba(0,0,0,0.06); padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Finns kurserna tillgängliga på mitt språk?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">För närvarande levereras våra kurser och utbildningar på <strong>engelska och rumänska</strong>. Vi expanderar till tyska och svenska genom vårt partnerskapsprogram. <a href="/sv/academy/partnerships.html" class="m-lk" style="font-size:inherit;">Bli partner</a> för att föra academy-programmen till er marknad.</p>
+    </details>
+
+    <details style="border-bottom:1px solid rgba(0,0,0,0.06); padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Erbjuder ni team-/företagsutbildning?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">Ja. Vi erbjuder anpassade kohorter med <strong>organisationsspecifika scenarier, flexibel schemaläggning och grupppriser</strong>. Utbildningar kan levereras på plats, virtuellt eller i hybridform. <a href="/sv/booking/" class="m-lk" style="font-size:inherit;">Boka ett samtal</a> för att diskutera era behov.</p>
+    </details>
+
+    <details style="padding:1.5rem 0;">
+      <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Får jag ett certifikat?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">Ja. Alla kurser och utbildningar inkluderar ett <strong>slutförandecertifikat med detaljerade kompetenser</strong>. Ännu viktigare, ni lämnar med praktiska färdigheter som ni kan tillämpa direkt — inte bara en PDF.</p>
+    </details>
+  </div>
+</div>
+
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Har du fortfarande frågor?</h2>
+    <p>Boka en kostnadsfri 30-minuters konsultation. Ingen säljpitch, bara svar.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="/sv/booking/" class="m-b">Boka ett samtal</a>
+      <a href="/sv/contact.html" class="m-bo">Skicka ett meddelande</a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<style>
+details summary::-webkit-details-marker { display: none; }
+details[open] summary i { transform: rotate(180deg); }
+details summary i { transition: transform 0.2s; }
+html:not([data-bs-theme="dark"]) details { border-color: rgba(0,0,0,0.06) !important; }
+details summary { -webkit-tap-highlight-color: transparent; }
+@media (max-width: 767px) {
+  details { padding: 1.25rem 0 !important; }
+  details summary { font-size: 0.95rem !important; min-height: 44px; gap: 1rem; }
+  details p { font-size: 0.88rem !important; line-height: 1.65 !important; }
+}
+</style>
+```

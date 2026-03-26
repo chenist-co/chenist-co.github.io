@@ -10,6 +10,28 @@ format:
 ---
 
 ```{=html}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "chen.ist",
+  "url": "https://chen.ist/services/",
+  "description": "Digital infrastructure, cybersecurity, cloud services, and NIS2/GDPR compliance for European organizations.",
+  "areaServed": "EU",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cybersecurity", "url": "https://chen.ist/security/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "NIS2 Compliance", "url": "https://chen.ist/services/nis2/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "GDPR Compliance", "url": "https://chen.ist/services/gdpr/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cloud Services", "url": "https://chen.ist/services/cloud/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Infrastructure", "url": "https://chen.ist/digital/"}}
+    ]
+  }
+}
+</script>
+
 <div class="m">
 
 <div class="m-hero">

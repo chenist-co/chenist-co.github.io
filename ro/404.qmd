@@ -10,18 +10,28 @@ format:
 ```{=html}
 <div class="m">
 
-<div class="m-hero" style="min-height:80vh;display:flex;align-items:center;">
-  <div class="container" style="text-align:center;">
-    <p style="font-size:8rem;font-weight:800;line-height:1;margin-bottom:0.25em;" class="gr">404</p>
-    <h1>Pagina nu a fost găsită</h1>
-    <p>Pagina pe care o căutați a fost mutată, eliminată sau nu a existat niciodată.<br>Iată câteva locuri de unde puteți începe.</p>
+<div class="ev-hero" style="min-height:80vh;display:flex;align-items:center;background:#000 !important;">
+  <div class="ev-hero-bg" style="background:linear-gradient(135deg,rgba(10,10,10,0.95),rgba(50,54,66,0.9));opacity:1;"></div>
+  <div class="ev-hero-content" style="text-align:center;">
+    <p style="font-size:8rem;font-weight:800;line-height:1;margin-bottom:0.25em;background:linear-gradient(135deg,#81BD4A,#a8e063);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">404</p>
+    <h1 style="color:#fff !important;">Pagina nu a fost găsită</h1>
+    <p style="max-width:500px;margin:0 auto;color:rgba(255,255,255,0.7) !important;">Pagina pe care o căutați a fost mutată, eliminată sau nu a existat niciodată.</p>
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:2.5rem;">
-      <a href="/ro/" class="m-b">Acasă</a>
-      <a href="/ro/services/" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Servicii</a>
-      <a href="/ro/academy/" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Academy</a>
-      <a href="/ro/contact.html" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Contact</a>
+      <a href="/ro/" class="ev-btn" style="background:#81BD4A;color:#fff !important;">Acasă</a>
+      <a href="/ro/services/" class="ev-btn-ghost" style="border-color:rgba(255,255,255,0.3);color:#fff !important;">Servicii</a>
+      <a href="/ro/academy/" class="ev-btn-ghost" style="border-color:rgba(255,255,255,0.3);color:#fff !important;">Academie</a>
+      <a href="/ro/contact.html" class="ev-btn-ghost" style="border-color:rgba(255,255,255,0.3);color:#fff !important;">Contact</a>
     </div>
-    <p style="margin-top:2rem;opacity:.7;">Sau <a href="/ro/booking/" style="color:var(--gr);">programați un apel</a> și vă vom ghida în direcția potrivită.</p>
+    <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.08);">
+      <p style="font-size:0.85rem;color:rgba(255,255,255,0.4) !important;margin-bottom:1rem;">Căutați ceva anume?</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.5rem;font-size:0.85rem;">
+        <a href="/ro/services/nis2/" style="color:#81BD4A !important;">NIS2</a> &middot;
+        <a href="/ro/security/" style="color:#81BD4A !important;">Securitate</a> &middot;
+        <a href="/ro/services/cloud/" style="color:#81BD4A !important;">Cloud</a> &middot;
+        <a href="/ro/digital/" style="color:#81BD4A !important;">Infrastructură</a> &middot;
+        <a href="/ro/booking/" style="color:#81BD4A !important;">Programare</a>
+      </div>
+    </div>
   </div>
 </div>
 

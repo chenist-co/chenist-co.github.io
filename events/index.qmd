@@ -2,36 +2,130 @@
 title: "Events"
 page-layout: custom
 title-block-style: none
-subtitle: "Browse all our events"
 description: "Browse all upcoming and past chen.ist events including hackathons, workshops, conferences, summer school programs, and meetups."
-listing:
-  contents: "pages/*.qmd"
-  type: grid
-  sort: "date desc"
-  categories: true
-  sort-ui: true
-  filter-ui: true
-  fields: [image, date, title, subtitle, location, category]
-  date-format: "MMMM D, YYYY"
+format:
+  html:
+    toc: false
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
 ---
 
-Welcome to our events listing page. Here you can browse all upcoming and past events organized by chen.ist. Use the filters to find events by category, date, or location.
-
 ```{=html}
-<div class="alert alert-success mt-4 mb-4" role="alert">
-  <h4 class="alert-heading"><i class="bi bi-megaphone"></i> New Event Added!</h4>
-  <p>Check out our <a href="pages/ai-ethics-hackathon.html" class="alert-link">AI Ethics Hackathon</a> on July 20-21, 2025 - a weekend focusing on ethical AI development and responsible technology.</p>
+<div class="m">
+
+<div class="ev-hero" style="min-height:60vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/hackathon-team.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">chen.ist</div>
+    <h1>Events</h1>
+    <p>Hackathons, workshops, summer schools, and community gatherings. Build something real with people who care.</p>
+    <a href="#upcoming" class="ev-btn" style="background:#F5A623;">See what's next</a>
+  </div>
+</div>
+
+<!-- UPCOMING 2026 -->
+<div class="m-s" id="upcoming" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Upcoming 2026</h2>
+    <p class="sub">Spots are limited. Register early.</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="/academy/events/pages/ai-ethics-hackathon.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/hacker-screens.webp" alt="AI Ethics Hackathon"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;"><i class="bi bi-calendar3 me-1"></i>March 5, 2026</div><h3>AI Ethics Hackathon</h3><p>48-hour challenge on ethical AI, bias detection, and responsible design. Bucharest.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/events/pages/summer-school-2025.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Summer School"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;"><i class="bi bi-calendar3 me-1"></i>Aug 1–15, 2026</div><h3>Summer School 2026</h3><p>Two weeks of cybersecurity, cloud, and AI with hands-on projects. Craiova.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/events/pages/makers-workshop.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="Makers Workshop"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;"><i class="bi bi-calendar3 me-1"></i>Sep 15, 2026</div><h3>Makers Workshop</h3><p>Hardware, DIY, and hands-on building with real components. Bucharest.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/events/pages/space-hackathon.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="SpaceApps"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;"><i class="bi bi-calendar3 me-1"></i>Oct 2026</div><h3>SpaceApps Challenge</h3><p>NASA's global 48-hour hackathon. 9th edition. Craiova.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/events/pages/cybersecurity-hackathon.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/cybersecurity-monitor.webp" alt="Cybersecurity Hackathon"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;"><i class="bi bi-calendar3 me-1"></i>Nov 2026</div><h3>Cybersecurity Hackathon</h3><p>48-hour security challenge — CTF, incident response, and defense. Craiova.</p></div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RECURRING -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Every month</h2>
+    <p class="sub">Regular meetups you can count on.</p>
+    <div style="max-width:750px; margin:0 auto;">
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;"><i class="bi bi-terminal" style="font-size:1.2rem; color:#F5A623;"></i></div>
+        <div style="flex-grow:1;"><h4><a href="https://clubul.computer/" target="_blank">Computer Club</a></h4><div class="up-meta">Open discussion, hacking, and tech exploration. Last Thursday of every month.</div></div>
+        <div class="up-badge up-badge-open">Monthly</div>
+      </div>
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;"><i class="bi bi-mic" style="font-size:1.2rem; color:#F5A623;"></i></div>
+        <div style="flex-grow:1;"><h4><a href="https://lu.ma/chenistacademy" target="_blank">Tech Talks</a></h4><div class="up-meta">Industry experts on emerging tech and best practices. First Tuesday.</div></div>
+        <div class="up-badge up-badge-open">Monthly</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAST EVENTS -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Past events</h2>
+    <p class="sub">A track record of building together.</p>
+    <div class="row g-4" style="max-width:900px; margin:0 auto;">
+      <div class="col-md-4">
+        <a href="https://marca-ro.ca/2024/11/23/conferinta-igiena-digitala-la-copii-are-loc-la-craiova/" target="_blank" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/team-macbooks.webp" alt="Cyber Hygiene"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Nov 2024</div><h3>Cyber Hygiene for Kids</h3><p>Cybersecurity awareness conference. Craiova.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <div class="pg-card"><img loading="lazy" src="/assets/images/stock/hacker-screens.webp" alt="CTF"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Nov 2023</div><h3>Capture the Flag</h3><p>Cybersecurity competition. Craiova.</p></div></div>
+      </div>
+      <div class="col-md-4">
+        <a href="https://alinmechenici.substack.com/p/sac" target="_blank" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="SpaceApps"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2016–2024</div><h3>NASA SpaceApps · 9 Editions</h3><p>Sweden & Romania.</p></div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="m-bg" style="padding:4rem 0;">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn" style="color:#F5A623;">9+</div><div class="m-nl">Years of events</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">500+</div><div class="m-nl">Participants</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">3</div><div class="m-nl">Countries</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">20+</div><div class="m-nl">Events hosted</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Don't miss the next one</h2>
+    <p>Get event updates or discuss hosting a private event for your team.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="https://alinmechenici.substack.com" target="_blank" class="m-b" style="background:#F5A623;"><i class="bi bi-bell me-2"></i>Subscribe to updates</a>
+      <a href="/booking/" class="m-bo" style="border-color:#F5A623; color:#F5A623;">Book a call</a>
+    </div>
+  </div>
+</div>
+
 </div>
 ```
-
-## Event Categories
-
-- **Hackathons**: Intense problem-solving events focused on collaboration and innovation
-- **Workshops**: Hands-on learning sessions with expert guidance
-- **Conferences**: Industry gatherings featuring keynotes, panels, and networking
-- **Summer School**: Intensive multi-week educational programs
-- **Meetups**: Informal community gatherings focused on specific topics
-
-Our events are designed to foster learning, connection, and professional development within the tech community. Each event page provides detailed information about the agenda, speakers, venue, and registration process.
-
-Want to suggest an event or collaborate as a partner? [Contact us](/booking/) with your ideas.

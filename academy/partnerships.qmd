@@ -16,66 +16,141 @@ format:
 ```{=html}
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>Academy <span class="gr">Partnerships</span></h1>
+<!-- HERO -->
+<div class="ev-hero" style="min-height:60vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/hackathon-team.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Academy</div>
+    <h1>Partnerships</h1>
     <p>Building a stronger educational ecosystem through collaboration with academia, industry, and community organizations.</p>
+    <a href="#partner" class="ev-btn" style="background:#F5A623;">Become a partner</a>
   </div>
 </div>
 
-<div class="m-bg">
+<!-- STATS -->
+<div class="m-bg" style="padding:4rem 0;">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn" style="color:#F5A623;">4</div><div class="m-nl">Partnership models</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">3</div><div class="m-nl">Countries</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">15+</div><div class="m-nl">Years experience</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">EU</div><div class="m-nl">Focus</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PARTNERSHIP TYPES -->
+<div class="m-s" style="padding:7rem 0;">
   <div class="container">
     <h2>Partnership types</h2>
     <p class="sub">Four models designed for mutual impact.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-mortarboard"></i><h3>Academic</h3><p>Joint certifications, research collaborations, student projects, and specialized workshops with universities and schools.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-building"></i><h3>Industry</h3><p>Internship pipelines, sponsored projects, guest lectures, and technology access with companies and organizations.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-globe"></i><h3>Community</h3><p>Scholarships, digital literacy programs, community workshops, and mentorship for underrepresented groups.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-lightbulb"></i><h3>Research</h3><p>Joint research projects, access to advanced technologies, publications, and innovation incubation.</p></div></div>
+    <div class="row g-4">
+      <div class="col-md-3">
+        <a href="#partner" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Academic"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Academic</div><h3>Universities & Schools</h3><p>Joint certifications, research, student projects, and specialized workshops.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="#partner" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/team-macbooks.webp" alt="Industry"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Industry</div><h3>Companies & Orgs</h3><p>Internship pipelines, sponsored projects, guest lectures, and technology access.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="#partner" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="Community"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Community</div><h3>NGOs & Nonprofits</h3><p>Scholarships, digital literacy, community workshops, and mentorship.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="#partner" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="Research"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Research</div><h3>Labs & Innovation</h3><p>Joint research, advanced technologies, publications, and innovation incubation.</p></div></div>
+        </a>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="m-s">
+<!-- FEATURED PARTNERS -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
   <div class="container">
     <h2>Featured partners</h2>
     <p class="sub">Organizations we're proud to work with.</p>
-    <div class="row g-5">
-      <div class="col-md-4"><div class="m-t"><img loading="lazy" src="/assets/logo/ucv.jpg" alt="University of Craiova" style="width: 80px; height: auto; border-radius: 12px; margin-bottom: 1rem;"><h3>University of Craiova</h3><p>Joint research and curriculum development for the Open4tech Summer School program.</p></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-mortarboard" style="font-size: 3rem; color: var(--c); margin-bottom: 1rem;"></i><h3><a href="https://scoalabritanica.ro/" target="_blank" style="color:inherit;">Școala Britanică</a></h3><p>Educational partner collaborating on STEM programs, digital literacy workshops, and student technology projects.</p></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-heart" style="font-size: 3rem; color: var(--c); margin-bottom: 1rem;"></i><h3>Digital Futures Foundation</h3><p>Community partnership expanding technology access to underserved communities.</p></div></div>
-    </div>
-  </div>
-</div>
-
-<div class="m-bg">
-  <div class="container">
-    <h2>How it works</h2>
-    <p class="sub">From first conversation to launch.</p>
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="m-step">
-          <div class="m-step-num">1</div>
-          <div class="m-step-txt"><h3>Initial discussion</h3><p>We explore potential collaboration areas and alignment with your goals.</p></div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="pg-card" style="position:relative;">
+          <img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="University of Craiova">
+          <div class="pg-card-body">
+            <div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Academic</div>
+            <h3>University of Craiova</h3>
+            <p>Joint research and curriculum development for the Open4tech Summer School program.</p>
+          </div>
         </div>
-        <div class="m-step">
-          <div class="m-step-num">2</div>
-          <div class="m-step-txt"><h3>Proposal development</h3><p>Together we define partnership goals, structure, and deliverables.</p></div>
-        </div>
-        <div class="m-step">
-          <div class="m-step-num">3</div>
-          <div class="m-step-txt"><h3>Agreement</h3><p>We formalize terms, expectations, and a timeline for activities.</p></div>
-        </div>
-        <div class="m-step">
-          <div class="m-step-num">4</div>
-          <div class="m-step-txt"><h3>Implementation</h3><p>Launch partnership activities with ongoing management and regular reviews.</p></div>
+      </div>
+      <div class="col-md-4">
+        <a href="https://scoalabritanica.ro/" target="_blank" style="text-decoration:none;">
+          <div class="pg-card" style="position:relative;">
+            <img loading="lazy" src="/assets/images/stock/team-macbooks.webp" alt="Școala Britanică">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Education</div>
+              <h3>Școala Britanică</h3>
+              <p>STEM programs, digital literacy workshops, and student technology projects.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <div class="pg-card" style="position:relative;">
+          <img loading="lazy" src="/assets/images/stock/network-closeup.webp" alt="Digital Futures Foundation">
+          <div class="pg-card-body">
+            <div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Community</div>
+            <h3>Digital Futures Foundation</h3>
+            <p>Expanding technology access to underserved communities across Romania.</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="m-s">
+<!-- HOW IT WORKS -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <h2>How it works</h2>
+    <p class="sub">From first conversation to launch.</p>
+    <div style="max-width:700px; margin:0 auto;">
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:50%; font-size:1.1rem; font-weight:700; color:#F5A623;">1</div>
+        <div style="flex-grow:1;">
+          <h4><span style="color:inherit;">Initial discussion</span></h4>
+          <div class="up-meta">We explore potential collaboration areas and alignment with your goals.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:50%; font-size:1.1rem; font-weight:700; color:#F5A623;">2</div>
+        <div style="flex-grow:1;">
+          <h4><span style="color:inherit;">Proposal development</span></h4>
+          <div class="up-meta">Together we define partnership goals, structure, and deliverables.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:50%; font-size:1.1rem; font-weight:700; color:#F5A623;">3</div>
+        <div style="flex-grow:1;">
+          <h4><span style="color:inherit;">Agreement</span></h4>
+          <div class="up-meta">We formalize terms, expectations, and a timeline for activities.</div>
+        </div>
+      </div>
+      <div class="up-item" style="border-bottom:none;">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:50%; font-size:1.1rem; font-weight:700; color:#F5A623;">4</div>
+        <div style="flex-grow:1;">
+          <h4><span style="color:inherit;">Implementation</span></h4>
+          <div class="up-meta">Launch partnership activities with ongoing management and regular reviews.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY PARTNER -->
+<div class="m-bg" style="padding:7rem 0;">
   <div class="container">
     <h2>Why partner with us</h2>
     <p class="sub">What you bring, what you gain.</p>
@@ -90,16 +165,38 @@ format:
   </div>
 </div>
 
+<!-- LOOKING FOR PARTNERS -->
+<div class="m-s" id="partner" style="padding:7rem 0;">
+  <div class="container" style="max-width:800px;">
+    <div style="background:rgba(245,166,35,0.04); border:1.5px solid rgba(245,166,35,0.15); border-radius:20px; padding:3.5rem; text-align:center;">
+      <i class="bi bi-search" style="font-size:2.5rem; color:#F5A623; display:block; margin-bottom:1.25rem;"></i>
+      <h2 style="font-size:1.75rem; margin-bottom:0.75rem;">We're looking for partners</h2>
+      <p style="color:#86868b; max-width:550px; margin:0 auto 1.5rem; line-height:1.6;">We're actively expanding across the EU. If you're a school, university, company, or NGO interested in bringing chen.ist Academy programs to your community — let's talk.</p>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; max-width:400px; margin:0 auto 2rem; text-align:left;">
+        <div style="display:flex; align-items:center; gap:0.5rem;"><i class="bi bi-geo-alt" style="color:#F5A623;"></i><span style="font-size:0.9rem;">Romania</span></div>
+        <div style="display:flex; align-items:center; gap:0.5rem;"><i class="bi bi-geo-alt" style="color:#F5A623;"></i><span style="font-size:0.9rem;">Sweden</span></div>
+        <div style="display:flex; align-items:center; gap:0.5rem;"><i class="bi bi-geo-alt" style="color:#F5A623;"></i><span style="font-size:0.9rem;">Germany</span></div>
+        <div style="display:flex; align-items:center; gap:0.5rem;"><i class="bi bi-geo-alt" style="color:#F5A623;"></i><span style="font-size:0.9rem;">All EU countries</span></div>
+      </div>
+      <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+        <a href="/booking/" class="m-b" style="background:#F5A623;"><i class="bi bi-handshake me-2"></i>Start a conversation</a>
+        <a href="mailto:office@chen.ist" class="m-bo" style="border-color:#F5A623; color:#F5A623;"><i class="bi bi-envelope me-2"></i>office@chen.ist</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
 <div class="m-cta">
   <div class="container">
     <div class="m-d"></div>
     <h2>Stronger together</h2>
-    <p>Join our network of partners shaping the future of technology education.</p>
-    <a href="/booking/" class="m-b">Start a conversation</a>
+    <p>Join our network of partners shaping the future of technology education across Europe.</p>
+    <a href="/booking/" class="m-b" style="background:#F5A623;">Book a call</a>
     <div class="m-sm">
-      <i class="bi bi-check-circle-fill"></i> No commitment required &nbsp;
-      <i class="bi bi-check-circle-fill"></i> Flexible models &nbsp;
-      <i class="bi bi-check-circle-fill"></i> Mutual benefit
+      <i class="bi bi-check-circle-fill" style="color:#F5A623;"></i> No commitment required &nbsp;
+      <i class="bi bi-check-circle-fill" style="color:#F5A623;"></i> Flexible models &nbsp;
+      <i class="bi bi-check-circle-fill" style="color:#F5A623;"></i> Mutual benefit
     </div>
   </div>
 </div>

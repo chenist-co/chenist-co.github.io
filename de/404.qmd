@@ -10,18 +10,28 @@ format:
 ```{=html}
 <div class="m">
 
-<div class="m-hero" style="min-height:80vh;display:flex;align-items:center;">
-  <div class="container" style="text-align:center;">
-    <p style="font-size:8rem;font-weight:800;line-height:1;margin-bottom:0.25em;" class="gr">404</p>
-    <h1>Seite nicht gefunden</h1>
-    <p>Die Seite, die Sie suchen, wurde verschoben, entfernt oder hat nie existiert.<br>Hier sind einige Startpunkte.</p>
+<div class="ev-hero" style="min-height:80vh;display:flex;align-items:center;background:#000 !important;">
+  <div class="ev-hero-bg" style="background:linear-gradient(135deg,rgba(10,10,10,0.95),rgba(50,54,66,0.9));"></div>
+  <div class="ev-hero-content" style="text-align:center;">
+    <p style="font-size:8rem;font-weight:800;line-height:1;margin-bottom:0.25em;background:linear-gradient(135deg,var(--gr),#a8e063);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">404</p>
+    <h1 style="color:#fff !important;">Seite nicht gefunden</h1>
+    <p style="max-width:500px;margin:0 auto;">Die Seite, die Sie suchen, wurde verschoben, entfernt oder hat nie existiert.</p>
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:2.5rem;">
-      <a href="/de/" class="m-b">Startseite</a>
-      <a href="/de/services/" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Dienstleistungen</a>
-      <a href="/de/academy/" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Academy</a>
-      <a href="/de/contact.html" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Kontakt</a>
+      <a href="/de/" class="ev-btn">Startseite</a>
+      <a href="/de/services/" class="ev-btn-ghost" style="border-color:rgba(255,255,255,0.3);color:#fff !important;">Dienstleistungen</a>
+      <a href="/de/academy/" class="ev-btn-ghost" style="border-color:rgba(255,255,255,0.3);color:#fff !important;">Academy</a>
+      <a href="/de/contact.html" class="ev-btn-ghost" style="border-color:rgba(255,255,255,0.3);color:#fff !important;">Kontakt</a>
     </div>
-    <p style="margin-top:2rem;opacity:.7;">Oder <a href="/de/booking/" style="color:var(--gr);">buchen Sie ein Gespräch</a> und wir weisen Ihnen den richtigen Weg.</p>
+    <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.08);">
+      <p style="font-size:0.85rem;color:rgba(255,255,255,0.4) !important;margin-bottom:1rem;">Suchen Sie etwas Bestimmtes?</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.5rem;font-size:0.85rem;">
+        <a href="/de/services/nis2/" style="color:#81BD4A !important;">NIS2</a> &middot;
+        <a href="/de/security/" style="color:#81BD4A !important;">Sicherheit</a> &middot;
+        <a href="/de/services/cloud/" style="color:#81BD4A !important;">Cloud</a> &middot;
+        <a href="/de/digital/" style="color:#81BD4A !important;">Infrastruktur</a> &middot;
+        <a href="/de/booking/" style="color:#81BD4A !important;">Gespräch buchen</a>
+      </div>
+    </div>
   </div>
 </div>
 

@@ -413,6 +413,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="./manifest.json">
 <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
@@ -492,7 +493,7 @@ document.addEventListener('DOMContentLoaded', function() {
       "name": "How much do your services cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Every project is different. Digital infrastructure projects typically start from EUR 2,000/month for managed services. Security assessments start from EUR 3,000. NIS2 compliance programs are scoped individually. We always start with a free 30-minute consultation to understand your needs before quoting."
+        "text": "Every project is scoped individually based on your needs. We offer project-based, retainer, and managed service models. We always start with a free 30-minute consultation to understand your requirements before providing a tailored quote."
       }
     },
     {
@@ -763,7 +764,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <details style="border-bottom:1px solid rgba(255,255,255,0.06); padding:1.5rem 0;">
       <summary style="font-weight:600; font-size:1.05rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">How much do your services cost?<i class="bi bi-chevron-down" style="color:#81BD4A; font-size:0.85rem;"></i></summary>
-      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">Every project is different. Digital infrastructure projects typically start from <strong>EUR 2,000/month</strong> for managed services. Security assessments start from <strong>EUR 3,000</strong>. NIS2 compliance programs are scoped individually. We always start with a free 30-minute consultation to understand your needs before quoting.</p>
+      <p style="color:#86868b; margin-top:1rem; line-height:1.7;">Every project is scoped individually based on your needs. We offer <strong>project-based</strong> (fixed scope), <strong>retainer</strong> (monthly hours), and <strong>managed service</strong> models. We always start with a free 30-minute consultation to understand your requirements before providing a tailored quote. <a href="./booking/" class="m-lk" style="font-size:inherit;">Get a quote</a>.</p>
     </details>
 
     <details style="border-bottom:1px solid rgba(255,255,255,0.06); padding:1.5rem 0;">
@@ -1319,9 +1320,9 @@ details summary { -webkit-tap-highlight-color: transparent; }
         <div style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:1rem; font-family:'Source Code Pro',monospace;">chen<span style="color:#81BD4A;">.</span>ist</div>
         <p style="margin-bottom:1rem; color:rgba(255,255,255,0.4);" class="footer-i18n" data-key="tagline">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
         <div style="display:flex; gap:0.75rem; margin-bottom:1rem;">
-          <a href="https://github.com/chenist" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-github"></i></a>
-          <a href="https://linkedin.com/in/chenistsec" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-linkedin"></i></a>
-          <a href="https://alinmechenici.substack.com" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-envelope"></i></a>
+          <a href="https://github.com/chenist" target="_blank" class="footer-social"><i class="bi bi-github"></i></a>
+          <a href="https://linkedin.com/in/chenistsec" target="_blank" class="footer-social"><i class="bi bi-linkedin"></i></a>
+          <a href="https://alinmechenici.substack.com" target="_blank" class="footer-social"><i class="bi bi-envelope"></i></a>
         </div>
         <p style="color:rgba(255,255,255,0.2); font-size:0.75rem;">© 2026 chen.ist</p>
       </div>
@@ -1374,6 +1375,8 @@ details summary { -webkit-tap-highlight-color: transparent; }
 }
 footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
 footer a { -webkit-tap-highlight-color: transparent; }
+.footer-social { display:flex !important; align-items:center !important; justify-content:center !important; width:40px !important; height:40px !important; min-height:40px !important; border-radius:50% !important; background:rgba(255,255,255,0.06) !important; color:rgba(255,255,255,0.5) !important; text-decoration:none !important; font-size:1rem !important; padding:0 !important; }
+.footer-social:hover { background:rgba(129,189,74,0.15) !important; color:#81BD4A !important; }
 </style>
 
 <script>

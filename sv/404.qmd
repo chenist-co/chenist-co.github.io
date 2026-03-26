@@ -10,18 +10,28 @@ format:
 ```{=html}
 <div class="m">
 
-<div class="m-hero" style="min-height:80vh;display:flex;align-items:center;">
-  <div class="container" style="text-align:center;">
-    <p style="font-size:8rem;font-weight:800;line-height:1;margin-bottom:0.25em;" class="gr">404</p>
-    <h1>Sidan hittades inte</h1>
-    <p>Sidan du letar efter har flyttats, tagits bort eller har aldrig funnits.<br>Här är några ställen att börja istället.</p>
+<div class="ev-hero" style="min-height:80vh;display:flex;align-items:center;background:#000 !important;">
+  <div class="ev-hero-bg" style="background:linear-gradient(135deg,rgba(10,10,10,0.95),rgba(50,54,66,0.9));"></div>
+  <div class="ev-hero-content" style="text-align:center;">
+    <p style="font-size:8rem;font-weight:800;line-height:1;margin-bottom:0.25em;background:linear-gradient(135deg,var(--gr),#a8e063);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">404</p>
+    <h1 style="color:#fff !important;">Sidan hittades inte</h1>
+    <p style="max-width:500px;margin:0 auto;">Sidan du letar efter har flyttats, tagits bort eller har aldrig funnits.</p>
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:2.5rem;">
-      <a href="/sv/" class="m-b">Hem</a>
-      <a href="/sv/services/" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Tjänster</a>
-      <a href="/sv/academy/" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Academy</a>
-      <a href="/sv/contact.html" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Kontakt</a>
+      <a href="/sv/" class="ev-btn">Hem</a>
+      <a href="/sv/services/" class="ev-btn-ghost" style="border-color:rgba(255,255,255,0.3);color:#fff !important;">Tjänster</a>
+      <a href="/sv/academy/" class="ev-btn-ghost" style="border-color:rgba(255,255,255,0.3);color:#fff !important;">Academy</a>
+      <a href="/sv/contact.html" class="ev-btn-ghost" style="border-color:rgba(255,255,255,0.3);color:#fff !important;">Kontakt</a>
     </div>
-    <p style="margin-top:2rem;opacity:.7;">Eller <a href="/sv/booking/" style="color:var(--gr);">boka ett samtal</a> så pekar vi dig i rätt riktning.</p>
+    <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.08);">
+      <p style="font-size:0.85rem;color:rgba(255,255,255,0.4) !important;margin-bottom:1rem;">Letar du efter något specifikt?</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.5rem;font-size:0.85rem;">
+        <a href="/sv/services/nis2/" style="color:#81BD4A !important;">NIS2</a> &middot;
+        <a href="/sv/security/" style="color:#81BD4A !important;">Säkerhet</a> &middot;
+        <a href="/sv/services/cloud/" style="color:#81BD4A !important;">Moln</a> &middot;
+        <a href="/sv/digital/" style="color:#81BD4A !important;">Infrastruktur</a> &middot;
+        <a href="/sv/booking/" style="color:#81BD4A !important;">Boka samtal</a>
+      </div>
+    </div>
   </div>
 </div>
 

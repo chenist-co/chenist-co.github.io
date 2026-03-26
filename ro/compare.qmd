@@ -1,0 +1,159 @@
+---
+title: "De Ce Open Source"
+title-block-style: none
+description: "Compara infrastructura open-source cu alternativele proprietare. Diferente reale in cost, control, securitate si conformitate UE."
+from: markdown+raw_html
+page-layout: custom
+format:
+  html:
+    toc: false
+---
+
+```{=html}
+<div class="m">
+
+<div class="ev-hero" style="min-height:55vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/terminal-green.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag">chen.ist</div>
+    <h1>De Ce Open Source?</h1>
+    <p>Compara infrastructura open-source cu alternativele proprietare. Diferente reale, nu marketing.</p>
+  </div>
+</div>
+
+<!-- TABEL COMPARATIV -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container" style="max-width:900px;">
+    <h2>Open Source vs. Proprietar</h2>
+    <p class="sub">O comparatie practica pentru organizatiile europene.</p>
+
+    <div style="display:grid; grid-template-columns:2fr 1fr 1fr; gap:0; border-radius:16px; overflow:hidden; border:1px solid rgba(129,189,74,0.15);">
+      <!-- Antet -->
+      <div style="padding:1.25rem 1.5rem; font-weight:700; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.06em; color:#86868b;"></div>
+      <div style="padding:1.25rem 1rem; text-align:center; background:rgba(129,189,74,0.06); font-weight:700; font-size:0.85rem; color:#81BD4A;">Open Source</div>
+      <div style="padding:1.25rem 1rem; text-align:center; font-weight:700; font-size:0.85rem; color:#86868b;">Proprietary</div>
+
+      <!-- Randuri -->
+      <div style="padding:1rem 1.5rem; border-top:1px solid rgba(129,189,74,0.06); font-weight:600; font-size:0.9rem;">Cost licenta</div>
+      <div style="padding:1rem; border-top:1px solid rgba(129,189,74,0.06); text-align:center; background:rgba(129,189,74,0.03); color:#81BD4A; font-weight:600;">Gratuit</div>
+      <div style="padding:1rem; border-top:1px solid rgba(129,189,74,0.06); text-align:center; color:#86868b;">Per utilizator/luna</div>
+
+      <div style="padding:1rem 1.5rem; border-top:1px solid rgba(129,189,74,0.06); font-weight:600; font-size:0.9rem;">Locatia datelor</div>
+      <div style="padding:1rem; border-top:1px solid rgba(129,189,74,0.06); text-align:center; background:rgba(129,189,74,0.03); color:#81BD4A; font-weight:600;">Tu alegi (UE)</div>
+      <div style="padding:1rem; border-top:1px solid rgba(129,189,74,0.06); text-align:center; color:#86868b;">Decide furnizorul</div>
+
+      <div style="padding:1rem 1.5rem; border-top:1px solid rgba(129,189,74,0.06); font-weight:600; font-size:0.9rem;">Dependenta de furnizor</div>
+      <div style="padding:1rem; border-top:1px solid rgba(129,189,74,0.06); text-align:center; background:rgba(129,189,74,0.03); color:#81BD4A; font-weight:600;">Zero</div>
+      <div style="padding:1rem; border-top:1px solid rgba(129,189,74,0.06); text-align:center; color:#86868b;">Semnificativa</div>
+
+      <div style="padding:1rem 1.5rem; border-top:1px solid rgba(129,189,74,0.06); font-weight:600; font-size:0.9rem;">Acces la codul sursa</div>
+      <div style="padding:1rem; border-top:1px solid rgba(129,189,74,0.06); text-align:center; background:rgba(129,189,74,0.03); color:#81BD4A; font-weight:600;">Complet</div>
+      <div style="padding:1rem; border-top:1px solid rgba(129,189,74,0.06); text-align:center; color:#86868b;">Inchis</div>
+
+      <div style="padding:1rem 1.5rem; border-top:1px solid rgba(129,189,74,0.06); font-weight:600; font-size:0.9rem;">Conformitate GDPR</div>
+      <div style="padding:1rem; border-top:1px solid rgba(129,189,74,0.06); text-align:center; background:rgba(129,189,74,0.03); color:#81BD4A; font-weight:600;">Din proiectare</div>
+      <div style="padding:1rem; border-top:1px solid rgba(129,189,74,0.06); text-align:center; color:#86868b;">Depinde de furnizor</div>
+
+      <div style="padding:1rem 1.5rem; border-top:1px solid rgba(129,189,74,0.06); font-weight:600; font-size:0.9rem;">Audituri de securitate</div>
+      <div style="padding:1rem; border-top:1px solid rgba(129,189,74,0.06); text-align:center; background:rgba(129,189,74,0.03); color:#81BD4A; font-weight:600;">Comunitate + tu</div>
+      <div style="padding:1rem; border-top:1px solid rgba(129,189,74,0.06); text-align:center; color:#86868b;">Doar furnizorul</div>
+
+      <div style="padding:1rem 1.5rem; border-top:1px solid rgba(129,189,74,0.06); font-weight:600; font-size:0.9rem;">Personalizare</div>
+      <div style="padding:1rem; border-top:1px solid rgba(129,189,74,0.06); text-align:center; background:rgba(129,189,74,0.03); color:#81BD4A; font-weight:600;">Nelimitata</div>
+      <div style="padding:1rem; border-top:1px solid rgba(129,189,74,0.06); text-align:center; color:#86868b;">Limitata de furnizor</div>
+
+      <div style="padding:1rem 1.5rem; border-top:1px solid rgba(129,189,74,0.06); font-weight:600; font-size:0.9rem;">Strategie de iesire</div>
+      <div style="padding:1rem; border-top:1px solid rgba(129,189,74,0.06); text-align:center; background:rgba(129,189,74,0.03); color:#81BD4A; font-weight:600;">Datele tale, formatul tau</div>
+      <div style="padding:1rem; border-top:1px solid rgba(129,189,74,0.06); text-align:center; color:#86868b;">Migrare dificila</div>
+    </div>
+  </div>
+</div>
+
+<!-- ALTERNATIVE REALE -->
+<div class="m-bg" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Ce inlocuieste ce</h2>
+    <p class="sub">Alternative open-source gata de productie pe care le poti implementa astazi.</p>
+    <div style="max-width:750px; margin:0 auto;">
+      <div class="up-item">
+        <div style="flex-grow:1;">
+          <h4 style="margin:0 0 0.15rem;"><span style="color:#fff;">Microsoft 365</span> <span style="color:#81BD4A;">→</span> <span style="color:#81BD4A;">Nextcloud + Collabora</span></h4>
+          <div class="up-meta">Fisiere, email, calendar, contacte, editare documente in timp real. Gazduit intern, date in UE.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div style="flex-grow:1;">
+          <h4 style="margin:0 0 0.15rem;"><span style="color:#fff;">Azure AD</span> <span style="color:#81BD4A;">→</span> <span style="color:#81BD4A;">Keycloak + FreeIPA</span></h4>
+          <div class="up-meta">SSO, MFA, director LDAP, identitate federata. Nivel enterprise, zero licente.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div style="flex-grow:1;">
+          <h4 style="margin:0 0 0.15rem;"><span style="color:#fff;">Slack / Teams</span> <span style="color:#81BD4A;">→</span> <span style="color:#81BD4A;">Matrix / Mattermost</span></h4>
+          <div class="up-meta">Mesagerie criptata, federatie, canale, threaduri. Control total asupra datelor.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div style="flex-grow:1;">
+          <h4 style="margin:0 0 0.15rem;"><span style="color:#fff;">Zoom</span> <span style="color:#81BD4A;">→</span> <span style="color:#81BD4A;">Jitsi Meet</span></h4>
+          <div class="up-meta">Video in browser, fara conturi necesare. Partajare ecran, inregistrare, camere separate.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div style="flex-grow:1;">
+          <h4 style="margin:0 0 0.15rem;"><span style="color:#fff;">Datadog / Splunk</span> <span style="color:#81BD4A;">→</span> <span style="color:#81BD4A;">Prometheus + Grafana</span></h4>
+          <div class="up-meta">Metrici, dashboarduri, alerte. Scalabil de la 5 la 5.000 de servere.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div style="flex-grow:1;">
+          <h4 style="margin:0 0 0.15rem;"><span style="color:#fff;">Windows Server</span> <span style="color:#81BD4A;">→</span> <span style="color:#81BD4A;">NixOS / Debian</span></h4>
+          <div class="up-meta">Servere declarative, reproductibile. Fara licente per server.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ECONOMII -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <div class="m-r">
+      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="Economii de cost"></div>
+      <div class="m-rt">
+        <h2>Economii semnificative.<br>Reducere de 40-70%.</h2>
+        <p>Costurile licentelor SaaS comerciale cresc rapid pe masura ce echipa se extinde. Echivalentul open-source (Nextcloud, Keycloak, Matrix, Jitsi) nu costa nimic in licente — platesti doar gazduirea si administrarea.</p>
+        <p>Chiar si cu servicii gestionate profesional de la chen.ist, majoritatea organizatiilor economisesc semnificativ fata de licentele SaaS comerciale. <a href="/ro/booking/" class="m-lk" style="font-size:inherit;">Obtine o estimare personalizata</a>.</p>
+        <div class="lk"><a href="/ro/digital/" class="m-lk">Serviciile noastre de infrastructura</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STATISTICI UE -->
+<div class="m-bg" style="padding:5rem 0;">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn">0</div><div class="m-nl">Taxe per utilizator</div></div>
+      <div><div class="m-nn">UE</div><div class="m-nl">Datele raman aici</div></div>
+      <div><div class="m-nn">100%</div><div class="m-nl">Cod auditabil</div></div>
+      <div><div class="m-nn">40-70%</div><div class="m-nl">Economii de cost</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Pregatit sa preiei controlul<br>asupra infrastructurii tale?</h2>
+    <p>Consultatie gratuita de 30 de minute. Vom analiza stiva ta curenta si iti vom arata ce este posibil.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="/ro/booking/" class="m-b">Programeaza o consultatie</a>
+      <a href="/ro/digital/" class="m-bo">Serviciile noastre</a>
+    </div>
+  </div>
+</div>
+
+</div>
+```
