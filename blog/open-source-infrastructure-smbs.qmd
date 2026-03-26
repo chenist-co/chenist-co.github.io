@@ -23,12 +23,14 @@ format:
   typst:
     toc: true
     number-sections: false
-    include-before-body: blog/before-body.typ
+    include-before-body: before-body.typ
   epub:
     toc: true
 ---
 
+::: {.content-visible when-format="html"}
 ![](/assets/images/stock/code-screen.webp){.rounded .shadow width=100%}
+:::
 
 ## Why Open Source Makes Sense for SMBs
 
