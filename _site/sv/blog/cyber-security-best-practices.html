@@ -6,9 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Experthjälp med NIS2-direktivets efterlevnad inklusive bedömningar, CISO as a Service och gapanalys för väsentliga och viktiga entiteter inom EU.">
+<meta name="author" content="CHENIST Team">
+<meta name="dcterms.date" content="2025-04-01">
+<meta name="description" content="Viktiga cybersäkerhetspraxis som varje organisation bör implementera för att skydda sig mot de föränderliga hoten 2025.">
 
-<title>NIS2-efterlevnad – chen.ist</title>
+<title>Bästa praxis för cybersäkerhet 2025 – chen.ist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,32 +23,67 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<link href="../../../assets/images/favicon.png" rel="icon" type="image/png">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-8dd3dd159173adcf0f2e6467a4c7591f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-34a1d7218939eaee31c1f1ef031ca8da.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-8dd3dd159173adcf0f2e6467a4c7591f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/images/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-a592c5a32ddb2bbfd9fa55d2db6a7c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-29f4aea09a2439b849a9d23a02a83b44.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-a592c5a32ddb2bbfd9fa55d2db6a7c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -75,15 +112,15 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<meta property="og:title" content="NIS2-efterlevnad – chen.ist">
-<meta property="og:description" content="Experthjälp med NIS2-direktivets efterlevnad inklusive bedömningar, CISO as a Service och gapanalys för väsentliga och viktiga entiteter inom EU.">
-<meta property="og:image" content="https://chen.ist/sv/services/nis2/assets/images/og-image.png">
+<meta property="og:title" content="Bästa praxis för cybersäkerhet 2025 – chen.ist">
+<meta property="og:description" content="Viktiga cybersäkerhetspraxis som varje organisation bör implementera för att skydda sig mot de föränderliga hoten 2025.">
+<meta property="og:image" content="https://chen.ist/assets/images/stock/cybersecurity-monitor.webp">
 <meta property="og:site_name" content="chen.ist">
-<meta name="twitter:title" content="NIS2-efterlevnad – chen.ist">
-<meta name="twitter:description" content="Experthjälp med NIS2-direktivets efterlevnad inklusive bedömningar, CISO as a Service och gapanalys för väsentliga och viktiga entiteter inom EU.">
-<meta name="twitter:image" content="https://chen.ist/sv/services/nis2/assets/images/og-image.png">
+<meta name="twitter:title" content="Bästa praxis för cybersäkerhet 2025 – chen.ist">
+<meta name="twitter:description" content="Viktiga cybersäkerhetspraxis som varje organisation bör implementera för att skydda sig mot de föränderliga hoten 2025.">
+<meta name="twitter:image" content="https://chen.ist/assets/images/stock/cybersecurity-monitor.webp">
 <meta name="twitter:card" content="summary_large_image">
-</head><body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+</head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -409,7 +446,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<link rel="manifest" href="../../../manifest.json">
+<link rel="manifest" href="../../manifest.json">
 <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
@@ -434,7 +471,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 </script>
-<link rel="preload" href="../../../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
+<link rel="preload" href="../../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
 <meta name="view-transition" content="same-origin">
 <noscript><style>.m-s,.m-bg,.m-cta,.m-r,.m-n,.hp-sec,.hp-stats,.ev-card,.ev-past,.m-t{opacity:1!important;transform:none!important;}</style></noscript>
@@ -481,7 +518,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 
-<link rel="stylesheet" href="../../../assets/css/main.min.css">
+<link rel="stylesheet" href="../../assets/css/main.min.css">
 
 
 
@@ -491,9 +528,9 @@ document.addEventListener('DOMContentLoaded', function() {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
-    <img src="../../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -503,7 +540,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -512,35 +549,35 @@ document.addEventListener('DOMContentLoaded', function() {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-services">    
         <li>
-    <a class="dropdown-item" href="../../../services/index.html">
+    <a class="dropdown-item" href="../../services/index.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../security/index.html">
+    <a class="dropdown-item" href="../../security/index.html">
  <span class="dropdown-text">Security</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../digital/index.html">
+    <a class="dropdown-item" href="../../digital/index.html">
  <span class="dropdown-text">Digital Infrastructure</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../services/nis2/index.html">
+    <a class="dropdown-item" href="../../services/nis2/index.html">
  <span class="dropdown-text">NIS2 Compliance</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../services/cybersecurity/index.html">
+    <a class="dropdown-item" href="../../services/cybersecurity/index.html">
  <span class="dropdown-text">Cybersecurity</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../services/cloud/index.html">
+    <a class="dropdown-item" href="../../services/cloud/index.html">
  <span class="dropdown-text">Cloud Services</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../services/digital-resilience/index.html">
+    <a class="dropdown-item" href="../../services/digital-resilience/index.html">
  <span class="dropdown-text">Digital Resilience</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../services/gdpr/index.html">
+    <a class="dropdown-item" href="../../services/gdpr/index.html">
  <span class="dropdown-text">GDPR Compliance</span></a>
   </li>  
     </ul>
@@ -551,45 +588,45 @@ document.addEventListener('DOMContentLoaded', function() {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-academy">    
         <li>
-    <a class="dropdown-item" href="../../../academy/overview.html">
+    <a class="dropdown-item" href="../../academy/overview.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../academy/courses.html">
+    <a class="dropdown-item" href="../../academy/courses.html">
  <span class="dropdown-text">Courses</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../academy/trainings.html">
+    <a class="dropdown-item" href="../../academy/trainings.html">
  <span class="dropdown-text">Trainings</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../academy/microlearning.html">
+    <a class="dropdown-item" href="../../academy/microlearning.html">
  <span class="dropdown-text">Microlearning</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../academy/programs/index.html">
+    <a class="dropdown-item" href="../../academy/programs/index.html">
  <span class="dropdown-text">Programs</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../academy/events.html">
+    <a class="dropdown-item" href="../../academy/events.html">
  <span class="dropdown-text">Events</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../academy/webinars.html">
+    <a class="dropdown-item" href="../../academy/webinars.html">
  <span class="dropdown-text">Webinars</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../academy/computerclub.html">
+    <a class="dropdown-item" href="../../academy/computerclub.html">
  <span class="dropdown-text">Computer Club</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../academy/partnerships.html">
+    <a class="dropdown-item" href="../../academy/partnerships.html">
  <span class="dropdown-text">Partnerships</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../../blog.html"> 
+    <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blogs</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -598,19 +635,19 @@ document.addEventListener('DOMContentLoaded', function() {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
         <li>
-    <a class="dropdown-item" href="../../../resources/index.html">
+    <a class="dropdown-item" href="../../resources/index.html">
  <span class="dropdown-text">All Resources</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../resources/tools/index.html">
+    <a class="dropdown-item" href="../../resources/tools/index.html">
  <span class="dropdown-text">Tools</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../compare.html">
+    <a class="dropdown-item" href="../../compare.html">
  <span class="dropdown-text">Why Open Source</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../faq.html">
+    <a class="dropdown-item" href="../../faq.html">
  <span class="dropdown-text">FAQ</span></a>
   </li>  
     </ul>
@@ -623,25 +660,25 @@ document.addEventListener('DOMContentLoaded', function() {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
         <li>
-    <a class="dropdown-item" href="../../../about/index.html">
+    <a class="dropdown-item" href="../../about/index.html">
  <span class="dropdown-text">About</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../about/team.html">
+    <a class="dropdown-item" href="../../about/team.html">
  <span class="dropdown-text">Team</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../about/csr.html">
+    <a class="dropdown-item" href="../../about/csr.html">
  <span class="dropdown-text">CSR</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../about/community.html">
+    <a class="dropdown-item" href="../../about/community.html">
  <span class="dropdown-text">Community</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../../contact.html"> 
+    <a class="nav-link" href="../../contact.html"> 
 <span class="menu-text">Contact</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -650,19 +687,19 @@ document.addEventListener('DOMContentLoaded', function() {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-">    
         <li>
-    <a class="dropdown-item" href="../../../index.html">
+    <a class="dropdown-item" href="../../index.html">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../ro/index.html">
+    <a class="dropdown-item" href="../../ro/index.html">
  <span class="dropdown-text">Română</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../sv/index.html">
+    <a class="dropdown-item" href="../../sv/index.html">
  <span class="dropdown-text">Svenska</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../de/index.html">
+    <a class="dropdown-item" href="../../de/index.html">
  <span class="dropdown-text">Deutsch</span></a>
   </li>  
     </ul>
@@ -676,220 +713,144 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#det-föränderliga-hotlandskapet" id="toc-det-föränderliga-hotlandskapet" class="nav-link active" data-scroll-target="#det-föränderliga-hotlandskapet">Det föränderliga hotlandskapet</a>
+  <ul class="collapse">
+  <li><a href="#multifaktorautentisering-mfa" id="toc-multifaktorautentisering-mfa" class="nav-link" data-scroll-target="#multifaktorautentisering-mfa">Multifaktorautentisering (MFA)</a></li>
+  <li><a href="#zero-trust-arkitektur" id="toc-zero-trust-arkitektur" class="nav-link" data-scroll-target="#zero-trust-arkitektur">Zero Trust-arkitektur</a></li>
+  <li><a href="#regelbundna-säkerhetsuppdateringar" id="toc-regelbundna-säkerhetsuppdateringar" class="nav-link" data-scroll-target="#regelbundna-säkerhetsuppdateringar">Regelbundna säkerhetsuppdateringar</a></li>
+  <li><a href="#utbildning-i-säkerhetsmedvetenhet" id="toc-utbildning-i-säkerhetsmedvetenhet" class="nav-link" data-scroll-target="#utbildning-i-säkerhetsmedvetenhet">Utbildning i säkerhetsmedvetenhet</a></li>
+  <li><a href="#datakryptering" id="toc-datakryptering" class="nav-link" data-scroll-target="#datakryptering">Datakryptering</a></li>
+  </ul></li>
+  <li><a href="#implementera-en-omfattande-säkerhetsstrategi" id="toc-implementera-en-omfattande-säkerhetsstrategi" class="nav-link" data-scroll-target="#implementera-en-omfattande-säkerhetsstrategi">Implementera en omfattande säkerhetsstrategi</a></li>
+  <li><a href="#slutsats" id="toc-slutsats" class="nav-link" data-scroll-target="#slutsats">Slutsats</a>
+  <ul class="collapse">
+  <li><a href="#vill-du-veta-mer" id="toc-vill-du-veta-mer" class="nav-link" data-scroll-target="#vill-du-veta-mer">Vill du veta mer?</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
+<main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header">
-<h1 class="title display-7">NIS2-efterlevnad</h1>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Bästa praxis för cybersäkerhet 2025</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Cybersäkerhet</div>
+    <div class="quarto-category">Bästa Praxis</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Viktiga cybersäkerhetspraxis som varje organisation bör implementera för att skydda sig mot de föränderliga hoten 2025.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>CHENIST Team </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 1, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
 
 </header>
 
 
-<div class="m">
-
-<div class="m-hero">
-  <div class="container">
-    <h1>NIS2-<span class="gr">efterlevnad</span></h1>
-    <p>Navigera NIS2-direktivet med säkerhet och säkerställ robust cybersäkerhetsstyrning.</p>
-  </div>
+<div class="text-center mb-4">
+  <img loading="lazy" src="../../assets/images/stock/cybersecurity-monitor.webp" alt="Article cover" class="img-fluid rounded shadow" style="max-height: 400px; width: 100%; object-fit: cover;">
 </div>
-
-<div class="m-s">
-  <div class="container">
-    <div class="m-r">
-      <div class="m-ri"><img loading="lazy" src="../../../assets/images/stock/analyst-monitors.webp" alt="NIS2 compliance monitoring dashboard"></div>
-      <div class="m-rt">
-        <h2>Direktivet är här.<br>Är du redo?</h2>
-        <p>NIS2 inför stränga cybersäkerhetskrav för väsentliga och viktiga entiteter inom EU. Våra omfattande tjänster hjälper dig navigera efterlevnaden, stärka din säkerhetsställning och upprätthålla kontinuerlig regulatorisk anpassning.</p>
-        <div class="lk"><a href="../../../sv/booking/" class="m-lk">Kontrollera din NIS2-status</a></div>
-      </div>
-    </div>
-  </div>
+<section id="det-föränderliga-hotlandskapet" class="level2">
+<h2 class="anchored" data-anchor-id="det-föränderliga-hotlandskapet">Det föränderliga hotlandskapet</h2>
+<p>Under 2025 fortsätter cybersäkerhetslandskapet att utvecklas i snabb takt. Hotaktörer blir allt mer sofistikerade och attacker blir alltmer riktade och komplexa. I detta inlägg utforskar vi de viktigaste cybersäkerhetspraxis som varje organisation bör implementera för att skydda sig mot dessa föränderliga hot.</p>
+<section id="multifaktorautentisering-mfa" class="level3">
+<h3 class="anchored" data-anchor-id="multifaktorautentisering-mfa">Multifaktorautentisering (MFA)</h3>
+<p>Multifaktorautentisering förblir en av de mest effektiva säkerhetsåtgärderna för att förhindra obehörig åtkomst. Genom att kräva flera former av verifiering minskar MFA avsevärt risken för kontokompromittering.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exempel: Implementera MFA i en Python-applikation</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> login(username, password, second_factor):</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    user <span class="op">=</span> authenticate_credentials(username, password)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> user <span class="kw">and</span> verify_second_factor(user, second_factor):</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> generate_session(user)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">None</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="zero-trust-arkitektur" class="level3">
+<h3 class="anchored" data-anchor-id="zero-trust-arkitektur">Zero Trust-arkitektur</h3>
+<p>Den traditionella perimeterbaserade säkerhetsmodellen är inte längre tillräcklig. Zero Trust utgår från att hot existerar både inom och utanför nätverket, och kräver verifiering av alla som försöker komma åt resurser.</p>
+<p>Nyckelprinciper för Zero Trust inkluderar:</p>
+<ul>
+<li>Verifiera uttryckligen</li>
+<li>Använd åtkomst med lägsta behörighet</li>
+<li>Utgå från intrång</li>
+</ul>
+</section>
+<section id="regelbundna-säkerhetsuppdateringar" class="level3">
+<h3 class="anchored" data-anchor-id="regelbundna-säkerhetsuppdateringar">Regelbundna säkerhetsuppdateringar</h3>
+<p>Att hålla system och programvara uppdaterade är avgörande. Många framgångsrika attacker utnyttjar kända sårbarheter som redan har patchats.</p>
+<div class="security-feature">
+<p><strong>Snabbtips:</strong> Implementera automatiserad patchhantering för att säkerställa snabba uppdateringar i hela din organisation.</p>
 </div>
-
-<div class="m-bg m-bg-stripes">
-  <div class="container">
-    <h2>Tre tjänster, ett mål</h2>
-    <p class="sub">Allt du behöver för att uppnå och upprätthålla NIS2-efterlevnad.</p>
-    <div class="row g-5">
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-clipboard-check"></i><h3>NIS2-bedömningar</h3><p>Omfattande utvärdering av din efterlevnadsstatus: omfattningsbestämning, riskramverksbedömning, säkerhetskontroller, leveranskedjeöversikt, incidentrapportering och efterlevnadsfärdplan.</p></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-person-badge"></i><h3>CISO as a Service</h3><p>Strategiskt cybersäkerhetsledarskap utan heltidsanställning: efterlevnadsprogramhantering, styrelseapportering, policyutveckling, incidentkoordinering och leverantörsriskhantering.</p></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-graph-up"></i><h3>Gapanalys</h3><p>Identifiera och prioritera gap mellan din nuvarande ställning och NIS2-kraven: nulägedokumentation, riskbaserad prioritering, åtgärdsplanering och kostnads-nyttoanalys.</p></div></div>
-    </div>
-  </div>
+</section>
+<section id="utbildning-i-säkerhetsmedvetenhet" class="level3">
+<h3 class="anchored" data-anchor-id="utbildning-i-säkerhetsmedvetenhet">Utbildning i säkerhetsmedvetenhet</h3>
+<p>Mänskliga fel förblir en betydande faktor vid säkerhetsintrång. Regelbunden utbildning i säkerhetsmedvetenhet hjälper anställda att känna igen och reagera lämpligt på säkerhetshot som phishing.</p>
+</section>
+<section id="datakryptering" class="level3">
+<h3 class="anchored" data-anchor-id="datakryptering">Datakryptering</h3>
+<p>Kryptera känslig data både i vila och under överföring. Detta säkerställer att även om data komprometteras förblir den oläsbar utan rätt dekrypteringsnycklar.</p>
+</section>
+</section>
+<section id="implementera-en-omfattande-säkerhetsstrategi" class="level2">
+<h2 class="anchored" data-anchor-id="implementera-en-omfattande-säkerhetsstrategi">Implementera en omfattande säkerhetsstrategi</h2>
+<p>En holistisk säkerhetsmetod involverar flera lager av skydd:</p>
+<ol type="1">
+<li><strong>Riskbedömning</strong>: Utvärdera regelbundet er säkerhetsställning</li>
+<li><strong>Försvar på djupet</strong>: Implementera flera säkerhetskontroller</li>
+<li><strong>Incidentrespons</strong>: Förbered er för säkerhetsincidenter</li>
+<li><strong>Regelbunden testning</strong>: Genomför penetrationstester och säkerhetsbedömningar</li>
+</ol>
+</section>
+<section id="slutsats" class="level2">
+<h2 class="anchored" data-anchor-id="slutsats">Slutsats</h2>
+<p>Cybersäkerhet är en pågående process, inte ett engångsprojekt. Genom att implementera dessa bästa praxis och förbli vaksam kan organisationer avsevärt minska sina säkerhetsrisker i dagens utmanande hotmiljö.</p>
+<p>För mer information eller hjälp med att implementera dessa rutiner, <a href="../../sv/booking/" target="_blank">kontakta vårt säkerhetsteam</a>.</p>
+<div class="card mt-5 mb-3">
+<section id="vill-du-veta-mer" class="level3 card-body">
+<h3 class="anchored" data-anchor-id="vill-du-veta-mer">Vill du veta mer?</h3>
+<p>Delta i vårt kommande webbinarium om avancerade cybersäkerhetsstrategier där vi fördjupar oss i dessa ämnen och ger handlingsbara insikter för din organisation.</p>
+<div class="text-center mt-3">
+<p><a href="../../sv/booking/" class="m-b" target="_blank">Registrera dig nu</a></p>
 </div>
-
-<div class="m-s">
-  <div class="container">
-    <h2>Bedömningsprocess</h2>
-    <p class="sub">Från omfattningsanalys till efterlevnadsfärdplan i fyra strukturerade faser.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-search"></i><h3>Omfattningsanalys</h3><p>Fastställ om din organisation omfattas av NIS2-direktivets krav.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-list-check"></i><h3>Kontrollbedömning</h3><p>Utvärdera implementeringen av erforderliga säkerhetsåtgärder.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-exclamation-triangle"></i><h3>Gapidentifiering</h3><p>Identifiera avvikelser och områden som behöver förbättras.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-map"></i><h3>Efterlevnadsfärdplan</h3><p>Utveckla en handlingsbar plan för att uppnå och upprätthålla efterlevnad.</p></div></div>
-    </div>
-  </div>
-</div>
-
-<div class="m-bg m-bg-stripes">
-  <div class="container">
-    <h2>Vad NIS2 kräver</h2>
-    <p class="sub">Tekniska och organisatoriska åtgärder som din entitet måste implementera.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-lock"></i><h3>Riskanalys</h3><p>Informationssäkerhetspolicyer och ramverk för riskhantering.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-lightning-charge"></i><h3>Incidenthantering</h3><p>Verksamhetskontinuitet, 24-timmarsrapportering och krishanteringsprocedurer.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-link-45deg"></i><h3>Leveranskedja</h3><p>Säkerhet i leverantörsrelationer och hantering av tredjepartsrisker.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-key"></i><h3>Åtkomstkontroll</h3><p>Kryptografi, multifaktorautentisering och personalresurssäkerhet.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-diagram-3"></i><h3>Styrning</h3><p>Ramverk, säkerhetspolicyer och ledningsansvar.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-people"></i><h3>Utbildning</h3><p>Program för säkerhetsmedvetenhet och krav på personalutbildning.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-bug"></i><h3>Testning</h3><p>Sårbarhetsbedömningar och regelbundna säkerhetstestcykler.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-file-earmark-text"></i><h3>Dokumentation</h3><p>Styrelseredo rapportering och omfattande efterlevnadsregister.</p></div></div>
-    </div>
-  </div>
-</div>
-
-<div class="m-s">
-  <div class="container">
-    <h2>Gapanalysens faser</h2>
-    <p class="sub">En strukturerad femfasmetod för att stänga efterlevnadsgap.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-1-circle"></i><h3>Nulägesanalys</h3><p>Dokumentationsgranskning, intressentintervjuer, teknisk kontrollbedömning. 1–2 veckor.</p></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-2-circle"></i><h3>Gapidentifiering</h3><p>Kartlägg kontroller mot NIS2-krav, dokumentera avvikelser med bevisning. 1 vecka.</p></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-3-circle"></i><h3>Riskprioritering</h3><p>Riskbaserad prioritering av gap, konsekvensanalys, identifiering av snabba vinster. 1 vecka.</p></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-4-circle"></i><h3>Åtgärdsplanering</h3><p>Detaljerade rekommendationer, fasad färdplan, resurs- och budgetkrav. 1–2 veckor.</p></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-5-circle"></i><h3>Rapportleverans</h3><p>Omfattande rapport, sammanfattning för ledningen, tekniska bilagor och intressentpresentation. 1 vecka.</p></div></div>
-    </div>
-  </div>
-</div>
-
-<div class="m-bg m-bg-stripes">
-  <div class="container">
-    <h2>Vem behöver NIS2-efterlevnad?</h2>
-    <p class="sub">Direktivet gäller över flera sektorer och entitetstyper.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-lightning"></i><h3>Energi</h3><p>El-, olje-, gas- och vätgasleverantörer.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-truck"></i><h3>Transport</h3><p>Flyg-, tåg-, sjö- och vägoperatörer.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-bank"></i><h3>Finans</h3><p>Bank- och finansmarknadsinfrastrukturer.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-heart-pulse"></i><h3>Hälsa</h3><p>Vårdgivare och medicinska leveranskedjor.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-droplet"></i><h3>Vatten</h3><p>Dricksvatten och avloppsvattenhantering.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-hdd-network"></i><h3>Digital infrastruktur</h3><p>Moln, datacenter, CDN och DNS-leverantörer.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-gear"></i><h3>Tillverkning</h3><p>Medicintekniska produkter, elektronik, maskiner och fordon.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-globe"></i><h3>Digitala leverantörer</h3><p>Marknadsplatser, sökmotorer och sociala plattformar.</p></div></div>
-    </div>
-  </div>
-</div>
-
-<div class="m-s">
-  <div class="container">
-    <h2>Boka din bedömning</h2>
-    <p class="sub">Starta din NIS2-efterlevnadsresa med en kostnadsfri inledande konsultation.</p>
-    <div class="m-form">
-      <form action="https://formspree.io/f/mpwkaqev" method="POST">
-        <label for="name">Fullständigt namn *</label>
-        <input type="text" class="form-control" id="name" name="name" required="" placeholder="Ditt fullständiga namn">
-
-        <label for="email">E-postadress *</label>
-        <input type="email" class="form-control" id="email" name="email" required="" placeholder="din.email@foretag.se">
-
-        <label for="company">Företagsnamn *</label>
-        <input type="text" class="form-control" id="company" name="company" required="" placeholder="Ditt företagsnamn">
-
-        <label for="phone">Telefonnummer</label>
-        <input type="tel" class="form-control" id="phone" name="phone" placeholder="+46 70 123 45 67">
-
-        <label for="service">Tjänst av intresse *</label>
-        <select class="form-select" id="service" name="service" required="">
-          <option value="">Vänligen välj...</option>
-          <option value="nis2-assessment">NIS2-bedömning</option>
-          <option value="ciso-service">CISO as a Service</option>
-          <option value="gap-assessment">Gapbedömning</option>
-          <option value="multiple">Flera tjänster</option>
-          <option value="consultation">Inledande konsultation</option>
-        </select>
-
-        <label for="sector">Branschsektor *</label>
-        <select class="form-select" id="sector" name="sector" required="">
-          <option value="">Vänligen välj...</option>
-          <option value="energy">Energi</option>
-          <option value="transport">Transport</option>
-          <option value="banking">Bank &amp; Finans</option>
-          <option value="healthcare">Hälso- och sjukvård</option>
-          <option value="water">Vatten &amp; Avlopp</option>
-          <option value="digital">Digital infrastruktur</option>
-          <option value="public-admin">Offentlig förvaltning</option>
-          <option value="manufacturing">Tillverkning</option>
-          <option value="food">Livsmedelsproduktion/-distribution</option>
-          <option value="chemicals">Kemikalier</option>
-          <option value="digital-provider">Digital tjänsteleverantör</option>
-          <option value="other">Annat</option>
-        </select>
-
-        <label for="company-size">Företagsstorlek</label>
-        <select class="form-select" id="company-size" name="company-size">
-          <option value="">Vänligen välj...</option>
-          <option value="1-50">1–50 anställda</option>
-          <option value="51-250">51–250 anställda (Medelstort)</option>
-          <option value="251-1000">251–1000 anställda (Stort)</option>
-          <option value="1000+">1000+ anställda (Enterprise)</option>
-        </select>
-
-        <label for="timeline">Önskad tidslinje</label>
-        <select class="form-select" id="timeline" name="timeline">
-          <option value="">Vänligen välj...</option>
-          <option value="urgent">Brådskande (inom 1 månad)</option>
-          <option value="short-term">Kortsiktigt (1–3 månader)</option>
-          <option value="medium-term">Medellångt (3–6 månader)</option>
-          <option value="long-term">Långsiktigt (6+ månader)</option>
-          <option value="planning">Bara planerar/undersöker</option>
-        </select>
-
-        <label for="message">Ytterligare information</label>
-        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Berätta om dina specifika behov, utmaningar eller frågor angående NIS2-efterlevnad..."></textarea>
-
-        <div class="form-check" style="margin-bottom: 1.5rem;">
-          <input type="checkbox" class="form-check-input" id="privacy-consent" name="privacy-consent" required="">
-          <label class="form-check-label" for="privacy-consent">
-            Jag godkänner <a href="../../../sv/privacy.html" target="_blank">integritetspolicyn</a> och samtycker till att bli kontaktad angående min förfrågan *
-          </label>
-        </div>
-
-        <input type="hidden" name="_subject" value="New NIS2 Service Inquiry">
-        <input type="text" name="_gotcha" style="display:none">
-
-        <button type="submit" class="m-b" style="width: 100%; border: none; cursor: pointer; padding: 1rem; font-size: 1.05rem;">
-          Begär konsultation
-        </button>
-      </form>
-      <p style="text-align: center; margin-top: 1.5rem;" class="m-sm">
-        <i class="bi bi-shield-check"></i> Din information är säker och används endast för att besvara din förfrågan.
-      </p>
-    </div>
-  </div>
-</div>
-
-<div class="m-cta">
-  <div class="container">
-    <div class="m-d"></div>
-    <h2>Behöver du omedelbar<br>hjälp?</h2>
-    <p>Våra NIS2-efterlevnadsexperter är redo att hjälpa dig navigera kraven.</p>
-    <a href="../../../sv/booking/" class="m-b">Boka ett samtal</a>
-    <div class="m-sm">
-      <i class="bi bi-check-circle-fill"></i> Gratis konsultation &nbsp;
-      <i class="bi bi-check-circle-fill"></i> Ingen förbindelse &nbsp;
-      <i class="bi bi-check-circle-fill"></i> Expertvägledning
-    </div>
-  </div>
-</div>
-
+</section>
 </div>
 
 
+</section>
 
-
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1333,34 +1294,34 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
       <div>
         <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="services">Services</div>
-        <a href="../../../digital/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="digitalInfra">Digital Infrastructure</a>
-        <a href="../../../security/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="security">Security</a>
-        <a href="../../../services/cloud/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
-        <a href="../../../services/nis2/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="nis2">NIS2 Compliance</a>
-        <a href="../../../services/digital-resilience/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="resilience">Digital Resilience</a>
-        <a href="../../../services/gdpr/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">GDPR Compliance</a>
+        <a href="../../digital/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="digitalInfra">Digital Infrastructure</a>
+        <a href="../../security/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="security">Security</a>
+        <a href="../../services/cloud/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
+        <a href="../../services/nis2/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="nis2">NIS2 Compliance</a>
+        <a href="../../services/digital-resilience/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="resilience">Digital Resilience</a>
+        <a href="../../services/gdpr/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">GDPR Compliance</a>
       </div>
       <div>
         <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="academy">Academy</div>
-        <a href="../../../academy/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="overview">Overview</a>
-        <a href="../../../academy/courses.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="courses">Courses</a>
-        <a href="../../../academy/trainings.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="trainings">Trainings</a>
-        <a href="../../../academy/events.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="events">Events</a>
-        <a href="../../../academy/webinars.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="webinars">Webinars</a>
+        <a href="../../academy/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="overview">Overview</a>
+        <a href="../../academy/courses.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="courses">Courses</a>
+        <a href="../../academy/trainings.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="trainings">Trainings</a>
+        <a href="../../academy/events.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="events">Events</a>
+        <a href="../../academy/webinars.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="webinars">Webinars</a>
       </div>
       <div>
         <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="company">Company</div>
-        <a href="../../../about/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="about">About</a>
-        <a href="../../../blog.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
-        <a href="../../../contact.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="contact">Contact</a>
-        <a href="../../../faq.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">FAQ</a>
-        <a href="../../../privacy.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="privacy">Privacy</a>
-        <a href="../../../terms.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="terms">Terms</a>
+        <a href="../../about/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="about">About</a>
+        <a href="../../blog.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
+        <a href="../../contact.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="contact">Contact</a>
+        <a href="../../faq.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">FAQ</a>
+        <a href="../../privacy.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="privacy">Privacy</a>
+        <a href="../../terms.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="terms">Terms</a>
       </div>
       <div>
         <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="connect">Connect</div>
         <a href="mailto:office@chen.ist" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">office@chen.ist</a>
-        <a href="../../../booking/" data-footer-link="" style="display:block; color:#81BD4A; text-decoration:none; padding:0.1rem 0; font-weight:500;" class="footer-i18n" data-key="bookCall">Book a Call</a>
+        <a href="../../booking/" data-footer-link="" style="display:block; color:#81BD4A; text-decoration:none; padding:0.1rem 0; font-weight:500;" class="footer-i18n" data-key="bookCall">Book a Call</a>
         <div style="margin-top:1rem; color:rgba(255,255,255,0.2); font-size:0.72rem;">Craiova · Bucharest · Stockholm</div>
       </div>
     </div>
@@ -1639,5 +1600,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

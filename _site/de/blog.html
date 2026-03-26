@@ -772,7 +772,7 @@ window.Quarto = {
       <div class="blog-lang-switch">
         <a href="../blog.html">EN</a>
         <a href="../ro/blog.html">RO</a>
-        <a href="../sv/blogg.html">SV</a>
+        <a href="../sv/blog.html">SV</a>
         <a href="../de/blog.html" class="active">DE</a>
       </div>
     </div>
@@ -1473,10 +1473,9 @@ footer a { -webkit-tap-highlight-color: transparent; }
   document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
     var href = a.getAttribute('href');
     if (href && href.startsWith('/') && !href.startsWith('//')) {
-      // Swedish blog is at /sv/blogg.html, not /sv/blog.html
-      if (lang === 'sv' && href === '/blog.html') {
-        a.setAttribute('href', '/sv/blogg.html');
-      } else {
+
+
+
         a.setAttribute('href', prefix + href);
       }
     }
