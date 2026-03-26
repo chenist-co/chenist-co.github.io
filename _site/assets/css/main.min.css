@@ -144,3 +144,8 @@ html[data-bs-theme="dark"] .page-layout-article .card{background:#1a1a1d !import
 @media (prefers-reduced-motion:reduce){
 .m-s,.m-bg,.m-cta,.m-r,.m-n,.hp-sec,.hp-stats,.ev-card,.ev-past,.m-t{opacity:1 !important;transform:none !important;transition:none !important;}
 }
+
+/* Blog listing grid padding */
+.page-layout-custom .quarto-listing { padding: 0 2rem; }
+.page-layout-custom .list.quarto-listing-default { padding: 0 2rem; }
+.page-layout-custom .quarto-grid-item { margin: 0 0.5rem; }
