@@ -2,146 +2,171 @@
 title: "Makers Workshop"
 page-layout: custom
 title-block-style: none
-toc: false
 subtitle: "Hands-on Hardware Hacking"
-description: "Get hands-on with hardware hacking at the Makers Workshop on September 5, 2025 at Fab Lab in Brasov, Romania."
-date: "2025-09-05"
-enddate: "2025-09-05"
-location: "Fab Lab, Brașov"
+description: "Attend the hands-on Makers Workshop on September 5, 2026 at Fab Lab Brasov for a day of hardware hacking and prototyping."
+date: "2026-09-05"
+enddate: "2026-09-05"
+location: "Fab Lab, Brasov"
 category: "workshop"
 image: "/assets/images/makers-workshop.jpg"
-registration_date: "2025-07-15"
-include-in-header:
-  text: |
-    <style>.m { --c: #F5A623; }</style>
+registration_date: "2026-07-15"
+format:
+  html:
+    toc: false
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
 ---
 
 ```{=html}
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>Makers <span class="gr">Workshop</span></h1>
+<div class="ev-hero" style="min-height:50vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/terminal-green.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Workshop</div>
+    <h1>Makers Workshop</h1>
     <p>Hands-on Hardware Hacking</p>
+    <div style="display:flex; gap:0.75rem; flex-wrap:wrap; justify-content:center;">
+      <span style="background:rgba(255,255,255,0.15); padding:0.4rem 1rem; border-radius:99px; font-size:0.85rem;"><i class="bi bi-calendar3 me-1"></i>September 5, 2026</span>
+      <span style="background:rgba(255,255,255,0.15); padding:0.4rem 1rem; border-radius:99px; font-size:0.85rem;"><i class="bi bi-geo-alt me-1"></i>Fab Lab, Brasov</span>
+    </div>
+    <div style="margin-top:1.5rem;">
+      <a href="/booking/" class="m-b" style="color:#fff !important;">Register Now</a>
+    </div>
   </div>
 </div>
 
-<div class="m-s">
+<!-- STATS BAR -->
+<div class="m-bg" style="padding:4rem 0;">
   <div class="container">
-    <div class="event-dates">
-      <span class="badge bg-primary">September 5, 2025</span>
-      <div class="event-actions">
-        <a href="/events/ical/makers-workshop-2025.ics" class="m-bo btn-sm" download>
-          <i class="bi bi-calendar3"></i> Add to Calendar
+    <div class="m-n">
+      <div><div class="m-nn">75</div><div class="m-nl">Participants</div></div>
+      <div><div class="m-nn">1</div><div class="m-nl">Day</div></div>
+      <div><div class="m-nn">5</div><div class="m-nl">Tracks</div></div>
+      <div><div class="m-nn">8+</div><div class="m-nl">Equipment Types</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="m-s" style="padding:5rem 0;">
+  <div class="container" style="max-width:800px;">
+    <h2>Event Overview</h2>
+    <p>The Makers Workshop is a full-day, hands-on event for hardware enthusiasts, bringing together makers, DIY experts, and hardware hackers to build projects and share knowledge. Participants will have access to cutting-edge equipment, expert guidance, and a collaborative environment to turn ideas into working prototypes.</p>
+  </div>
+</div>
+
+<div class="m-bg" style="padding:5rem 0;">
+  <div class="container" style="max-width:800px;">
+    <h2>Workshop Tracks</h2>
+    <p class="sub">Choose from multiple hands-on tracks based on your interests and experience levels.</p>
+    <div class="row g-4">
+      <div class="col-md-6"><div class="pg-card"><div class="pg-card-body"><h3>Microcontroller Mastery</h3><p>Learn to program and integrate microcontrollers like Arduino and ESP32 for IoT projects. Create smart devices that sense, connect, and respond to their environment.</p></div></div></div>
+      <div class="col-md-6"><div class="pg-card"><div class="pg-card-body"><h3>3D Printing & Modeling</h3><p>Master the fundamentals of 3D design and printing. Create custom parts and learn optimization techniques for functional prints.</p></div></div></div>
+      <div class="col-md-6"><div class="pg-card"><div class="pg-card-body"><h3>Electronics Fundamentals</h3><p>Dive into circuits, components, and soldering. Build your own electronic gadgets from basic components to functional devices.</p></div></div></div>
+      <div class="col-md-6"><div class="pg-card"><div class="pg-card-body"><h3>Advanced Robotics</h3><p>Design and construct simple robotic systems. Explore mechanics, control systems, and autonomous behavior.</p></div></div></div>
+      <div class="col-md-6"><div class="pg-card"><div class="pg-card-body"><h3>Wearable Technology</h3><p>Combine electronics with textiles and fashion. Create interactive clothing and accessories with embedded technology.</p></div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="m-s" style="padding:5rem 0;">
+  <div class="container" style="max-width:800px;">
+    <h2>Schedule</h2>
+    <h3>Morning Session</h3>
+    <div style="max-width:700px; margin:0 auto 2rem;">
+      <div class="up-item"><div style="flex-grow:1;"><h4>08:30 - 09:00</h4><div class="up-meta">Registration and Coffee</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><h4>09:00 - 09:30</h4><div class="up-meta">Welcome and Introduction to Tracks</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><h4>09:30 - 10:30</h4><div class="up-meta">Workshop Session 1: Fundamentals</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><h4>10:45 - 12:30</h4><div class="up-meta">Workshop Session 2: Component Integration</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><h4>12:30 - 13:30</h4><div class="up-meta">Lunch and Maker Showcase</div></div></div>
+    </div>
+    <h3>Afternoon Session</h3>
+    <div style="max-width:700px; margin:0 auto;">
+      <div class="up-item"><div style="flex-grow:1;"><h4>13:30 - 15:30</h4><div class="up-meta">Workshop Session 3: Project Development</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><h4>15:45 - 17:00</h4><div class="up-meta">Workshop Session 4: Refinement and Testing</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><h4>17:00 - 18:00</h4><div class="up-meta">Project Showcase and Peer Feedback</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><h4>18:00 - 19:00</h4><div class="up-meta">Expert Panel: "The Future of Making"</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><h4>19:00 - 20:00</h4><div class="up-meta">Networking Reception and Community Building</div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="m-bg" style="padding:5rem 0;">
+  <div class="container" style="max-width:800px;">
+    <h2>Equipment and Resources</h2>
+    <div style="max-width:700px; margin:0 auto;">
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">3D printers (FDM and SLA)</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Laser cutters and CNC machines</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Electronics workstations with soldering equipment</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Microcontrollers and sensors library</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Basic components, materials, and textile workstation</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Tools and test equipment</div></div></div>
+    </div>
+
+    <h2 style="margin-top:3rem;">What You'll Take Away</h2>
+    <div style="max-width:700px; margin:0 auto;">
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">A completed project in your chosen track</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Comprehensive digital documentation of all workshop materials</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Certificate of participation</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">New connections with the maker community</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Knowledge of advanced fabrication techniques</div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="m-s" style="padding:5rem 0;">
+  <div class="container" style="max-width:800px;">
+    <h2>Who Should Attend</h2>
+    <div style="max-width:700px; margin:0 auto;">
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Electronics hobbyists and enthusiasts</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Students in engineering and design fields</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Educators interested in maker education</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Artists exploring technology integration</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Entrepreneurs developing hardware prototypes</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Anyone curious about making physical technology</div></div></div>
+    </div>
+
+    <h2 style="margin-top:3rem;">Registration Information</h2>
+    <p>Registration required. Space is limited to 75 participants to ensure quality instruction and equipment access. Early registration is recommended, as tracks fill quickly.</p>
+  </div>
+</div>
+
+<div class="m-bg" style="padding:5rem 0;">
+  <div class="container" style="max-width:800px;">
+    <h2>Frequently Asked Questions</h2>
+    <div style="max-width:700px; margin:0 auto;">
+      <div class="up-item"><div style="flex-grow:1;"><h4>What skill level is required?</h4><div class="up-meta">Workshops are designed for multiple skill levels, from beginners to advanced makers. Track descriptions indicate the recommended experience level, and instructors will adapt to participant needs.</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><h4>Do I need to bring my own equipment?</h4><div class="up-meta">Basic materials and equipment will be provided. You're welcome to bring your laptop and any special components for your project. A detailed prep list will be sent to registered participants.</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><h4>Can I work on my own project instead of the track projects?</h4><div class="up-meta">Yes! While we provide structured track projects, experienced makers are welcome to work on personal projects and use the event for guidance and access to equipment.</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><h4>What is the registration fee?</h4><div class="up-meta">A nominal registration fee covers all materials, equipment usage, meals, and refreshments during the event.</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><h4>Will there be take-home kits?</h4><div class="up-meta">Yes, each track includes components and materials that participants can take home to continue their projects. Additional kits will be available for purchase.</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Related Events -->
+<div class="m-s" style="padding:5rem 0;">
+  <div class="container" style="max-width:800px;">
+    <h2>Related Events</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <a href="/academy/events/pages/summer-school-2025.html" style="text-decoration:none;">
+          <div class="pg-card" style="overflow:hidden;">
+            <img src="/assets/images/stock/hackathon-team.webp" style="width:100%; height:160px; object-fit:cover;">
+            <div class="pg-card-body"><h3>Summer School 2026</h3><p>Intensive two-week technology program</p></div>
+          </div>
         </a>
-        <a href="/events/pdfs/makers-workshop.pdf" class="btn btn-outline-secondary btn-sm" download>
-          <i class="bi bi-file-pdf"></i> Download PDF
+      </div>
+      <div class="col-md-6">
+        <a href="/academy/events/pages/cybersecurity-hackathon.html" style="text-decoration:none;">
+          <div class="pg-card" style="overflow:hidden;">
+            <img src="/assets/images/stock/cybersecurity-monitor.webp" style="width:100%; height:160px; object-fit:cover;">
+            <div class="pg-card-body"><h3>Cybersecurity Hackathon</h3><p>48-hour challenge for security enthusiasts</p></div>
+          </div>
         </a>
       </div>
     </div>
-    <div class="event-location">
-      <i class="bi bi-geo-alt"></i> Fab Lab, Brașov
-    </div>
-  </div>
-</div>
-
-<div class="m-bg">
-  <div class="container">
-
-<h2>Event Overview</h2>
-
-<p>The Makers Workshop is a full-day, hands-on event for hardware enthusiasts, bringing together makers, DIY experts, and hardware hackers to build projects and share knowledge. Participants will have access to cutting-edge equipment, expert guidance, and a collaborative environment to turn ideas into working prototypes.</p>
-
-<h2>Workshop Tracks</h2>
-
-<p>Attendees can choose from multiple hands-on tracks based on their interests and experience levels:</p>
-
-<h3>1. Microcontroller Mastery</h3>
-<p>Learn to program and integrate microcontrollers like Arduino and ESP32 for IoT projects. Create smart devices that sense, connect, and respond to their environment.</p>
-
-<h3>2. 3D Printing &amp; Modeling</h3>
-<p>Master the fundamentals of 3D design and printing. Create custom parts and learn optimization techniques for functional prints.</p>
-
-<h3>3. Electronics Fundamentals</h3>
-<p>Dive into circuits, components, and soldering. Build your own electronic gadgets from basic components to functional devices.</p>
-
-<h3>4. Advanced Robotics</h3>
-<p>Design and construct simple robotic systems. Explore mechanics, control systems, and autonomous behavior.</p>
-
-<h3>5. Wearable Technology</h3>
-<p>Combine electronics with textiles and fashion. Create interactive clothing and accessories with embedded technology.</p>
-
-<h2>Schedule</h2>
-
-<h3>Morning Session</h3>
-
-<table class="table">
-<thead><tr><th>Time</th><th>Activity</th></tr></thead>
-<tbody>
-<tr><td>08:30 - 09:00</td><td>Registration and Coffee</td></tr>
-<tr><td>09:00 - 09:30</td><td>Welcome and Introduction to Tracks</td></tr>
-<tr><td>09:30 - 10:30</td><td>Workshop Session 1: Fundamentals</td></tr>
-<tr><td>10:30 - 10:45</td><td>Coffee Break</td></tr>
-<tr><td>10:45 - 12:30</td><td>Workshop Session 2: Component Integration</td></tr>
-<tr><td>12:30 - 13:30</td><td>Lunch and Maker Showcase</td></tr>
-</tbody>
-</table>
-
-<h3>Afternoon Session</h3>
-
-<table class="table">
-<thead><tr><th>Time</th><th>Activity</th></tr></thead>
-<tbody>
-<tr><td>13:30 - 15:30</td><td>Workshop Session 3: Project Development</td></tr>
-<tr><td>15:30 - 15:45</td><td>Refreshment Break</td></tr>
-<tr><td>15:45 - 17:00</td><td>Workshop Session 4: Refinement and Testing</td></tr>
-<tr><td>17:00 - 18:00</td><td>Project Showcase and Peer Feedback</td></tr>
-<tr><td>18:00 - 19:00</td><td>Expert Panel: "The Future of Making"</td></tr>
-<tr><td>19:00 - 20:00</td><td>Networking Reception and Community Building</td></tr>
-</tbody>
-</table>
-
-<h2>Equipment and Resources</h2>
-
-<p>Participants will have access to a wide range of equipment and materials:</p>
-
-<ul>
-<li>3D printers (FDM and SLA)</li>
-<li>Laser cutters</li>
-<li>CNC machines</li>
-<li>Electronics workstations with soldering equipment</li>
-<li>Microcontrollers and sensors library</li>
-<li>Basic components and materials</li>
-<li>Textile and soft materials workstation</li>
-<li>Tools and test equipment</li>
-</ul>
-
-<h2>What You'll Take Away</h2>
-
-<ul>
-<li>A completed project in your chosen track</li>
-<li>Comprehensive digital documentation of all workshop materials</li>
-<li>Certificate of participation</li>
-<li>New connections with the maker community</li>
-<li>Knowledge of advanced fabrication techniques</li>
-<li>Continuation resources for further development</li>
-</ul>
-
-<h2>Who Should Attend</h2>
-
-<ul>
-<li>Electronics hobbyists and enthusiasts</li>
-<li>Students in engineering and design fields</li>
-<li>Educators interested in maker education</li>
-<li>Artists exploring technology integration</li>
-<li>Entrepreneurs developing hardware prototypes</li>
-<li>Anyone curious about making physical technology</li>
-</ul>
-
-<h2>Registration Information</h2>
-
-<p>Registration opens on July 15, 2025. Space is limited to 75 participants to ensure quality instruction and equipment access. Early registration is recommended, as tracks fill quickly.</p>
-
   </div>
 </div>
 
@@ -150,30 +175,9 @@ include-in-header:
     <div class="m-d"></div>
     <h2>Turn Your Ideas Into Reality</h2>
     <p>Join us for a day of hands-on making, learning, and connecting with fellow hardware enthusiasts.</p>
-    <a href="/booking/" class="m-b">Register Interest</a>
-  </div>
-</div>
-
-<div class="m-bg">
-  <div class="container">
-
-<h2>Frequently Asked Questions</h2>
-
-<h3>What skill level is required?</h3>
-<p>Workshops are designed for multiple skill levels, from beginners to advanced makers. Track descriptions indicate the recommended experience level, and instructors will adapt to participant needs.</p>
-
-<h3>Do I need to bring my own equipment?</h3>
-<p>Basic materials and equipment will be provided. You're welcome to bring your laptop and any special components for your project. A detailed prep list will be sent to registered participants.</p>
-
-<h3>Can I work on my own project instead of the track projects?</h3>
-<p>Yes! While we provide structured track projects, experienced makers are welcome to work on personal projects and use the event for guidance and access to equipment.</p>
-
-<h3>What is the registration fee?</h3>
-<p>The workshop fee is &euro;120 per participant, with a reduced rate of &euro;60 for students. This covers all materials, equipment usage, meals, and refreshments during the event.</p>
-
-<h3>Will there be take-home kits?</h3>
-<p>Yes, each track includes components and materials that participants can take home to continue their projects. Additional kits will be available for purchase.</p>
-
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="/booking/" class="m-b" style="color:#fff !important;">Register Interest</a>
+    </div>
   </div>
 </div>
 

@@ -2,174 +2,197 @@
 title: "Space Hackathon"
 page-layout: custom
 title-block-style: none
-toc: false
 subtitle: "Innovating for Space Exploration"
-description: "Innovate for space exploration at the Space Hackathon on October 5-6, 2025 in Craiova, Romania with teams solving real space challenges."
-date: "2025-10-05"
-enddate: "2025-10-06"
+description: "Innovate for space exploration at the Space Hackathon on October 3-4, 2026 in Craiova, Romania with teams solving real space challenges."
+date: "2026-10-03"
+enddate: "2026-10-04"
 location: "Craiova, Romania"
 category: "hackathon"
 image: "/assets/images/space-hackathon.jpg"
-registration_date: "2025-07-01"
-include-in-header:
-  text: |
-    <style>.m { --c: #F5A623; }</style>
+registration_date: "2026-07-01"
+format:
+  html:
+    toc: false
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
 ---
 
 ```{=html}
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>Space <span class="gr">Hackathon</span></h1>
+<div class="ev-hero" style="min-height:50vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/team-macbooks.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Hackathon</div>
+    <h1>Space Hackathon</h1>
     <p>Innovating for Space Exploration</p>
+    <div style="display:flex; gap:0.75rem; flex-wrap:wrap; justify-content:center;">
+      <span style="background:rgba(255,255,255,0.15); padding:0.4rem 1rem; border-radius:99px; font-size:0.85rem;"><i class="bi bi-calendar3 me-1"></i>October 3-4, 2026</span>
+      <span style="background:rgba(255,255,255,0.15); padding:0.4rem 1rem; border-radius:99px; font-size:0.85rem;"><i class="bi bi-geo-alt me-1"></i>Craiova, Romania</span>
+    </div>
+    <div style="margin-top:1.5rem;">
+      <a href="https://www.spaceappschallenge.org/" class="m-b" style="color:#fff !important;" target="_blank">Register Now (RSVP)</a>
+    </div>
   </div>
 </div>
 
-<div class="m-s">
+<!-- STATS BAR -->
+<div class="m-bg" style="padding:4rem 0;">
   <div class="container">
-    <div class="event-dates">
-      <span class="badge bg-primary">October 5-6, 2025</span>
-      <div class="event-actions">
-        <a href="/events/ical/space-hackathon-2025.ics" class="m-bo btn-sm" download>
-          <i class="bi bi-calendar3"></i> Add to Calendar
+    <div class="m-n">
+      <div><div class="m-nn">48h</div><div class="m-nl">Duration</div></div>
+      <div><div class="m-nn">Global</div><div class="m-nl">Hackathon</div></div>
+      <div><div class="m-nn">3</div><div class="m-nl">BootCamps</div></div>
+      <div><div class="m-nn">9+</div><div class="m-nl">Partners</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="m-s" style="padding:5rem 0;">
+  <div class="container" style="max-width:800px;">
+    <h2>Event Overview</h2>
+    <p>Join the largest annual global hackathon on October 3-4, 2026.</p>
+    <p>Space Apps is a 48 hours global hackathon, engaging thousands of problem solvers each year across the globe. The event embraces collaborative problem solving with a goal of producing relevant open-source solutions to address global needs applicable to both life on Earth and life in space.</p>
+  </div>
+</div>
+
+<div class="m-bg" style="padding:5rem 0;">
+  <div class="container" style="max-width:800px;">
+    <h2>Pre-hackathon BootCamps</h2>
+    <div style="max-width:700px; margin:0 auto;">
+      <div class="up-item"><div style="flex-grow:1;"><h4>July 2026</h4><div class="up-meta">Location & hours to be announced</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><h4>August 2026</h4><div class="up-meta">Location & hours to be announced</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><h4>September 2026</h4><div class="up-meta">Location & hours to be announced</div></div></div>
+    </div>
+    <p style="margin-top:1rem;"><em>The pre-hackathon bootcamps will be held at our official Outpost locations.</em></p>
+  </div>
+</div>
+
+<div class="m-s" style="padding:5rem 0;">
+  <div class="container" style="max-width:800px;">
+    <h2>Schedule</h2>
+    <h3>Hackathon Day 1 (October 3)</h3>
+    <div style="max-width:700px; margin:0 auto 2rem;">
+      <div class="up-item"><div style="flex-grow:1;"><h4>Hacker Orientation</h4><div class="up-meta">Check in, grab dinner, set up required software accounts, learn about the challenges, hear from sponsors and mentors, form teams, and get ready for a weekend of hacking.</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><h4>Morning (09:00)</h4><div class="up-meta">Return to the hackathon space for breakfast and hackathon kickoff, then get hacking! Lunch and dinner will also be served.</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><h4>All Day</h4><div class="up-meta">Organizers and volunteers on hand. Technology and science mentors available in person and virtually to float between teams.</div></div></div>
+    </div>
+    <h3>Hackathon Day 2 (October 4)</h3>
+    <div style="max-width:700px; margin:0 auto;">
+      <div class="up-item"><div style="flex-grow:1;"><h4>Morning</h4><div class="up-meta">Breakfast and wrap up projects. Project submission at noon, followed by lunch.</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><h4>Afternoon</h4><div class="up-meta">Team demos (globally live-streamed, open for friends and family). Sponsor awards and judges announce the hackathon winners.</div></div></div>
+    </div>
+    <p style="margin-top:1rem;"><strong>Note:</strong> Participants under the age of 18 require adult supervision for the entirety of the hackathon.</p>
+  </div>
+</div>
+
+<div class="m-bg" style="padding:5rem 0;">
+  <div class="container" style="max-width:800px;">
+    <h2>Organizers & Sponsors</h2>
+    <div style="max-width:700px; margin:0 auto;">
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;"><i class="bi bi-building" style="font-size:1.2rem; color:#F5A623;"></i></div>
+        <div style="flex-grow:1;"><h4>Organized by</h4><div class="up-meta">Chenist Academy</div></div>
+      </div>
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;"><i class="bi bi-star" style="font-size:1.2rem; color:#F5A623;"></i></div>
+        <div style="flex-grow:1;"><h4>Main Sponsor</h4><div class="up-meta">Chenist Cybersecurity</div></div>
+      </div>
+    </div>
+    <p style="margin-top:1rem;">Contact us for sponsorships at <a href="/booking/">chen.ist/booking</a> or 0740303764.</p>
+  </div>
+</div>
+
+<div class="m-s" style="padding:5rem 0;">
+  <div class="container" style="max-width:800px;">
+    <h2>Partners</h2>
+    <div style="max-width:700px; margin:0 auto;">
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Scoala Romano-Britanica</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Chenist Digital</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Cluster EduTIC</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">University of Craiova</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">ARTI</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Roofs.Center</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Clubul.Computer</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Society for Computing Technologies</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Internet Oltenia</div></div></div>
+    </div>
+    <p style="margin-top:1rem;">Are you a representative of a company and want to be part of this journey? Contact us for partnerships at <a href="/booking/">chen.ist/booking</a> or 0740303764.</p>
+    <p><em>More will be announced soon!</em></p>
+  </div>
+</div>
+
+<div class="m-bg" style="padding:5rem 0;">
+  <div class="container" style="max-width:800px;">
+    <h2>Meet the Trainers</h2>
+    <div class="row g-4">
+      <div class="col-md-6"><div class="pg-card"><div class="pg-card-body"><h3>Alin Mechenici</h3><p>Founder PR Patrat & Chenist Cybersecurity</p></div></div></div>
+      <div class="col-md-6"><div class="pg-card"><div class="pg-card-body"><h3>Alin Burileanu</h3><p>Founder Prokinetic & Staff Medical @ Romanian Football Team</p></div></div></div>
+    </div>
+    <p style="margin-top:1rem;"><a href="/booking/">Apply as a trainer here.</a></p>
+
+    <h2 style="margin-top:3rem;">Meet the Judges</h2>
+    <div class="row g-4">
+      <div class="col-md-6"><div class="pg-card"><div class="pg-card-body"><h3>Mihai Gabroveanu</h3><p>Professor @ Craiova University, Department of Applied Mathematics (DAM)</p></div></div></div>
+      <div class="col-md-6"><div class="pg-card"><div class="pg-card-body"><h3>Mirel Cosulschi</h3><p>Professor @ Craiova University, Department of Applied Mathematics (DAM)</p></div></div></div>
+    </div>
+    <p style="margin-top:1rem;"><a href="/booking/">Apply as a judge here.</a></p>
+
+    <h2 style="margin-top:3rem;">Meet the Mentors</h2>
+    <p>Coming soon. <a href="/booking/">Apply as a mentor here.</a></p>
+  </div>
+</div>
+
+<div class="m-s" style="padding:5rem 0;">
+  <div class="container" style="max-width:800px;">
+    <h2>Educational Partners</h2>
+    <div style="max-width:700px; margin:0 auto;">
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">University of Craiova</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Romanian British School</div></div></div>
+    </div>
+
+    <h2 style="margin-top:3rem;">Media Partners</h2>
+    <div style="max-width:700px; margin:0 auto;">
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Gazeta De Sud</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Radio Sud</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Kiss FM</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">TVR Craiova</div></div></div>
+    </div>
+
+    <h2 style="margin-top:3rem;">Official Outposts</h2>
+    <div style="max-width:700px; margin:0 auto;">
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Barcicleta</div></div></div>
+      <div class="up-item"><div style="flex-grow:1;"><div class="up-meta">Snap Cafe 2A</div></div></div>
+    </div>
+    <p style="margin-top:1rem;"><em>Listed in alphabetical order</em></p>
+    <p>Thank you for promoting our event, don't forget to ping us with the link.</p>
+    <p>Check our latest editions here: <a href="/academy/programs/hackathons/spaceapps/archive.html">2016-2024 Archive</a>.</p>
+  </div>
+</div>
+
+<!-- Related Events -->
+<div class="m-bg" style="padding:5rem 0;">
+  <div class="container" style="max-width:800px;">
+    <h2>Related Events</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <a href="/academy/events/pages/ai-ethics-hackathon.html" style="text-decoration:none;">
+          <div class="pg-card" style="overflow:hidden;">
+            <img src="/assets/images/stock/hacker-screens.webp" style="width:100%; height:160px; object-fit:cover;">
+            <div class="pg-card-body"><h3>AI Ethics Hackathon</h3><p>Developing responsible AI systems</p></div>
+          </div>
         </a>
-        <a href="/events/pdfs/space-hackathon.pdf" class="btn btn-outline-secondary btn-sm" download>
-          <i class="bi bi-file-pdf"></i> Download PDF
+      </div>
+      <div class="col-md-6">
+        <a href="/academy/events/pages/cybersecurity-hackathon.html" style="text-decoration:none;">
+          <div class="pg-card" style="overflow:hidden;">
+            <img src="/assets/images/stock/cybersecurity-monitor.webp" style="width:100%; height:160px; object-fit:cover;">
+            <div class="pg-card-body"><h3>Cybersecurity Hackathon</h3><p>48-hour challenge for security enthusiasts</p></div>
+          </div>
         </a>
       </div>
     </div>
-    <div class="event-location">
-      <i class="bi bi-geo-alt"></i> Craiova, Romania
-    </div>
-  </div>
-</div>
-
-<div class="m-bg">
-  <div class="container">
-
-<h2>Event Overview</h2>
-
-<p>Join the largest annual global hackathon on October 5-6, 2025.</p>
-
-<p>Space Apps is a 48 hours global hackathon, engaging thousands of problem solvers each year across the globe. The event embraces collaborative problem solving with a goal of producing relevant open-source solutions to address global needs applicable to both life on Earth and life in space.</p>
-
-<h2>Pre-hackathon BootCamps</h2>
-
-<ul>
-<li>July 10th, location &amp; hours (to be announced)</li>
-<li>August 10th, location &amp; hours (to be announced)</li>
-<li>September 10th, location &amp; hours (to be announced)</li>
-</ul>
-
-<p><em>The pre-hackathon bootcamps will be held at our official Outpost locations.</em></p>
-
-<h2>Schedule</h2>
-
-<h3>Hackathon Day 1 (October 5)</h3>
-
-<p><strong>Mandatory Hacker Orientation</strong><br>
-Everyone participating in the hackathon will check in, grab dinner, set up all required software accounts, learn about the challenges, hear from our sponsors and mentors about the support available during the weekend, form teams, and get ready for a weekend of hacking.</p>
-
-<p><strong>Morning (Starting at 09:00)</strong><br>
-Everyone will return to the hackathon space for breakfast and our hackathon kickoff, and then get hacking!</p>
-
-<p>Lunch and dinner will also be served.</p>
-
-<p>Organizers and volunteers will be on hand to assist with any questions and help with team placement. Technology and science mentors will also be available in person and virtually to float between teams and answer any questions.</p>
-
-<h3>Hackathon Day 2 (October 6)</h3>
-
-<p>We have breakfast and wrap up our projects. Project submission is at noon, followed by lunch. Team demos will start shortly after lunch, will be globally live-streamed, and is open for friends and family to attend (we will send out a separate form for adding people to the guest list for demos).</p>
-
-<p>Around 5pm we will conclude the demos, select sponsors will present their specially branded awards, and our judges will announce the hackathon winners!</p>
-
-<p><strong>Note:</strong> Participants under the age of 18 require adult supervision for the entirety of the hackathon.</p>
-
-<h2>Organizers</h2>
-
-<p>Chenist Academy</p>
-
-<h2>Sponsors</h2>
-
-<h3>Main Sponsor:</h3>
-<ul><li>Chenist Cybersecurity</li></ul>
-
-<h3>Other sponsors:</h3>
-<p>Contact us for sponsorships at <a href="/booking/">chen.ist/booking</a> or 0740303764.</p>
-
-<h2>Partners</h2>
-
-<ul>
-<li>Scoala Romano-Britanica</li>
-<li>Chenist Digital</li>
-<li>Cluster EduTIC</li>
-<li>University of Craiova</li>
-<li>ARTI</li>
-<li>Roofs.Center</li>
-<li>Clubul.Computer</li>
-<li>Society for Computing Technologies</li>
-<li>Internet Oltenia</li>
-</ul>
-
-<p>Are you a representative of a company and want to be part of this journey?<br>
-Contact us for partnerships at <a href="/booking/">chen.ist/booking</a> or 0740303764.</p>
-
-<p><em>More will be announced soon!</em></p>
-
-<h2>Meet the Mentors</h2>
-
-<p>Coming soon.</p>
-
-<p><a href="/booking/">Apply as a mentor here.</a></p>
-
-<h2>Meet the Trainers</h2>
-
-<ul>
-<li><strong>Alin Mechenici</strong> - Founder PR Patrat &amp; Chenist Cybersecurity</li>
-<li><strong>Alin Burileanu</strong> - Founder Prokinetic &amp; Staff Medical @ Romanian Football Team</li>
-</ul>
-
-<p><a href="/booking/">Apply as a trainer here.</a></p>
-
-<h2>Meet the Judges</h2>
-
-<ul>
-<li><strong>Mihai Gabroveanu</strong> - Professor @ Craiova University, Department of Applied Mathematics (DAM)</li>
-<li><strong>Mirel Cosulschi</strong> - Professor @ Craiova University, Department of Applied Mathematics (DAM)</li>
-</ul>
-
-<p><a href="/booking/">Apply as a judge here.</a></p>
-
-<h2>Educational Partners</h2>
-
-<ul>
-<li>University of Craiova</li>
-<li>Romanian British School</li>
-</ul>
-
-<h2>Media Partners</h2>
-
-<ul>
-<li>Gazeta De Sud</li>
-<li>Radio Sud</li>
-<li>Kiss FM</li>
-<li>TVR Craiova</li>
-</ul>
-
-<h2>Official Outposts</h2>
-
-<ul>
-<li>Barcicleta</li>
-<li>Snap Cafe 2A</li>
-</ul>
-
-<p><em>Listed in alphabetical order</em></p>
-
-<p>Thank you for promoting our event, don't forget to ping us with the link.</p>
-
-<p>Check our latest editions here: <a href="/academy/programs/hackathons/spaceapps/archive.html">2016-2024 Archive</a>.</p>
-
   </div>
 </div>
 
@@ -178,18 +201,17 @@ Contact us for partnerships at <a href="/booking/">chen.ist/booking</a> or 07403
     <div class="m-d"></div>
     <h2>Join the Next Generation of Space Innovators</h2>
     <p>Be part of a weekend that could launch groundbreaking ideas for space exploration and technology.</p>
-    <p><strong>Note:</strong> This event runs under the <a href="https://berlincodeofconduct.org/" target="_blank">Berlin Code of Conduct</a></p>
-    <a href="https://www.spaceappschallenge.org/2025/local-events/Craiova/" class="m-b" target="_blank">Register Now (RSVP)</a>
+    <p><strong>Note:</strong> This event runs under the <a href="https://berlincodeofconduct.org/" target="_blank" style="color:#fff !important;">Berlin Code of Conduct</a></p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="https://www.spaceappschallenge.org/" class="m-b" style="color:#fff !important;" target="_blank">Register Now (RSVP)</a>
+    </div>
   </div>
 </div>
 
-<div class="m-bg">
-  <div class="container">
-
-<h2>Stay Updated</h2>
-
-<p>For updates, follow and subscribe to our newsletter: <a href="https://alinmechenici.substack.com" target="_blank">Subscribe</a></p>
-
+<div class="m-s" style="padding:3rem 0;">
+  <div class="container" style="max-width:800px; text-align:center;">
+    <h2>Stay Updated</h2>
+    <p>For updates, follow and subscribe to our newsletter: <a href="https://alinmechenici.substack.com" target="_blank">Subscribe</a></p>
   </div>
 </div>
 
