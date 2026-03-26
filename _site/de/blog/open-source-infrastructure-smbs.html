@@ -46,9 +46,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-8dd3dd159173adcf0f2e6467a4c7591f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-34a1d7218939eaee31c1f1ef031ca8da.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-8dd3dd159173adcf0f2e6467a4c7591f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-a592c5a32ddb2bbfd9fa55d2db6a7c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-29f4aea09a2439b849a9d23a02a83b44.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-a592c5a32ddb2bbfd9fa55d2db6a7c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -565,91 +565,128 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-<!-- main -->
-
-
-<header id="title-block-header">
-<h1 class="title display-7">Open-Source-Infrastruktur für KMU: Ein praktischer Leitfaden</h1>
-<p class="author">CHENIST Team</p>
-
-<p class="date">2026-03-20</p>
-</header>
-
-<nav id="TOC" role="doc-toc">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#warum-open-source-für-kmu-sinnvoll-ist" id="toc-warum-open-source-für-kmu-sinnvoll-ist">Warum Open Source für KMU sinnvoll ist</a></li>
-  <li><a href="#produktivität-und-zusammenarbeit" id="toc-produktivität-und-zusammenarbeit">Produktivität und Zusammenarbeit</a>
-  <ul>
-  <li><a href="#dokumentbearbeitung-und-bürowerkzeuge" id="toc-dokumentbearbeitung-und-bürowerkzeuge">Dokumentbearbeitung und Bürowerkzeuge</a></li>
-  <li><a href="#dateispeicherung-und-synchronisierung" id="toc-dateispeicherung-und-synchronisierung">Dateispeicherung und Synchronisierung</a></li>
+  <li><a href="#warum-open-source-für-kmu-sinnvoll-ist" id="toc-warum-open-source-für-kmu-sinnvoll-ist" class="nav-link active" data-scroll-target="#warum-open-source-für-kmu-sinnvoll-ist">Warum Open Source für KMU sinnvoll ist</a></li>
+  <li><a href="#produktivität-und-zusammenarbeit" id="toc-produktivität-und-zusammenarbeit" class="nav-link" data-scroll-target="#produktivität-und-zusammenarbeit">Produktivität und Zusammenarbeit</a>
+  <ul class="collapse">
+  <li><a href="#dokumentbearbeitung-und-bürowerkzeuge" id="toc-dokumentbearbeitung-und-bürowerkzeuge" class="nav-link" data-scroll-target="#dokumentbearbeitung-und-bürowerkzeuge">Dokumentbearbeitung und Bürowerkzeuge</a></li>
+  <li><a href="#dateispeicherung-und-synchronisierung" id="toc-dateispeicherung-und-synchronisierung" class="nav-link" data-scroll-target="#dateispeicherung-und-synchronisierung">Dateispeicherung und Synchronisierung</a></li>
   </ul></li>
-  <li><a href="#kommunikation" id="toc-kommunikation">Kommunikation</a>
-  <ul>
-  <li><a href="#messaging-und-chat" id="toc-messaging-und-chat">Messaging und Chat</a></li>
-  <li><a href="#videokonferenzen" id="toc-videokonferenzen">Videokonferenzen</a></li>
+  <li><a href="#kommunikation" id="toc-kommunikation" class="nav-link" data-scroll-target="#kommunikation">Kommunikation</a>
+  <ul class="collapse">
+  <li><a href="#messaging-und-chat" id="toc-messaging-und-chat" class="nav-link" data-scroll-target="#messaging-und-chat">Messaging und Chat</a></li>
+  <li><a href="#videokonferenzen" id="toc-videokonferenzen" class="nav-link" data-scroll-target="#videokonferenzen">Videokonferenzen</a></li>
   </ul></li>
-  <li><a href="#identität-und-single-sign-on" id="toc-identität-und-single-sign-on">Identität und Single Sign-On</a>
-  <ul>
-  <li><a href="#zentralisierte-authentifizierung" id="toc-zentralisierte-authentifizierung">Zentralisierte Authentifizierung</a></li>
+  <li><a href="#identität-und-single-sign-on" id="toc-identität-und-single-sign-on" class="nav-link" data-scroll-target="#identität-und-single-sign-on">Identität und Single Sign-On</a>
+  <ul class="collapse">
+  <li><a href="#zentralisierte-authentifizierung" id="toc-zentralisierte-authentifizierung" class="nav-link" data-scroll-target="#zentralisierte-authentifizierung">Zentralisierte Authentifizierung</a></li>
   </ul></li>
-  <li><a href="#überwachung-und-observierbarkeit" id="toc-überwachung-und-observierbarkeit">Überwachung und Observierbarkeit</a></li>
-  <li><a href="#unix-grundlagen" id="toc-unix-grundlagen">UNIX-Grundlagen</a>
-  <ul>
-  <li><a href="#linux-distributionen" id="toc-linux-distributionen">Linux-Distributionen</a></li>
-  <li><a href="#bsd-systeme" id="toc-bsd-systeme">BSD-Systeme</a></li>
+  <li><a href="#überwachung-und-observierbarkeit" id="toc-überwachung-und-observierbarkeit" class="nav-link" data-scroll-target="#überwachung-und-observierbarkeit">Überwachung und Observierbarkeit</a></li>
+  <li><a href="#unix-grundlagen" id="toc-unix-grundlagen" class="nav-link" data-scroll-target="#unix-grundlagen">UNIX-Grundlagen</a>
+  <ul class="collapse">
+  <li><a href="#linux-distributionen" id="toc-linux-distributionen" class="nav-link" data-scroll-target="#linux-distributionen">Linux-Distributionen</a></li>
+  <li><a href="#bsd-systeme" id="toc-bsd-systeme" class="nav-link" data-scroll-target="#bsd-systeme">BSD-Systeme</a></li>
   </ul></li>
-  <li><a href="#praxisbeispiele-für-bereitstellungen" id="toc-praxisbeispiele-für-bereitstellungen">Praxisbeispiele für Bereitstellungen</a></li>
-  <li><a href="#antworten-auf-häufige-bedenken" id="toc-antworten-auf-häufige-bedenken">Antworten auf häufige Bedenken</a></li>
-  <li><a href="#erste-schritte" id="toc-erste-schritte">Erste Schritte</a>
-  <ul>
-  <li><a href="#bereit-open-source-infrastruktur-zu-erkunden" id="toc-bereit-open-source-infrastruktur-zu-erkunden">Bereit, Open-Source-Infrastruktur zu erkunden?</a></li>
+  <li><a href="#praxisbeispiele-für-bereitstellungen" id="toc-praxisbeispiele-für-bereitstellungen" class="nav-link" data-scroll-target="#praxisbeispiele-für-bereitstellungen">Praxisbeispiele für Bereitstellungen</a></li>
+  <li><a href="#antworten-auf-häufige-bedenken" id="toc-antworten-auf-häufige-bedenken" class="nav-link" data-scroll-target="#antworten-auf-häufige-bedenken">Antworten auf häufige Bedenken</a></li>
+  <li><a href="#erste-schritte" id="toc-erste-schritte" class="nav-link" data-scroll-target="#erste-schritte">Erste Schritte</a>
+  <ul class="collapse">
+  <li><a href="#bereit-open-source-infrastruktur-zu-erkunden" id="toc-bereit-open-source-infrastruktur-zu-erkunden" class="nav-link" data-scroll-target="#bereit-open-source-infrastruktur-zu-erkunden">Bereit, Open-Source-Infrastruktur zu erkunden?</a></li>
   </ul></li>
   </ul>
 </nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Open-Source-Infrastruktur für KMU: Ein praktischer Leitfaden</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Open Source</div>
+    <div class="quarto-category">Digital Infrastructure</div>
+    <div class="quarto-category">SMB</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Ein praktischer Leitfaden zum Aufbau von KMU-Infrastruktur mit Open-Source-Werkzeugen — von Produktivität und Kommunikation bis hin zu Identität, Überwachung und UNIX-Grundlagen.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>CHENIST Team </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 20, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 <div class="text-center mb-4">
   <img loading="lazy" src="../../assets/images/stock/code-screen.webp" alt="Article cover" class="img-fluid rounded shadow" style="max-height: 400px; width: 100%; object-fit: cover;">
 </div>
 <section id="warum-open-source-für-kmu-sinnvoll-ist" class="level2">
-<h2 data-anchor-id="warum-open-source-für-kmu-sinnvoll-ist">Warum Open Source für KMU sinnvoll ist</h2>
+<h2 class="anchored" data-anchor-id="warum-open-source-für-kmu-sinnvoll-ist">Warum Open Source für KMU sinnvoll ist</h2>
 <p>Kleine und mittelständische Unternehmen stehen vor einer bekannten Spannung: Sie benötigen Infrastruktur auf Enterprise-Niveau, können aber oft die Lizenzkosten auf Enterprise-Niveau nicht rechtfertigen. Open-Source-Software löst dieses Problem, indem sie produktionsreife Werkzeuge ohne Lizenzgebühren pro Benutzer, vollständige Datenhoheit und Freiheit von Herstellerabhängigkeit bietet.</p>
 <p>Es geht nicht um Ideologie. Es geht darum, eine Infrastruktur aufzubauen, die Sie tatsächlich besitzen. Wenn Ihre E-Mail, Ihr Identitätssystem oder Ihr Monitoring-Stack von einem Anbieter abhängt, der Preise, Bedingungen oder Funktionen jederzeit ändern kann, tragen Sie ein Risiko, das schwer zu quantifizieren ist, bis es sich materialisiert. Open-Source-Alternativen geben Ihnen die Kontrolle über dieses Risiko.</p>
 <p>Hier ist eine praktische Aufschlüsselung des Open-Source-Stacks, den wir für KMU empfehlen, organisiert nach Funktion.</p>
 </section>
 <section id="produktivität-und-zusammenarbeit" class="level2">
-<h2 data-anchor-id="produktivität-und-zusammenarbeit">Produktivität und Zusammenarbeit</h2>
+<h2 class="anchored" data-anchor-id="produktivität-und-zusammenarbeit">Produktivität und Zusammenarbeit</h2>
 <p>Die Produktivitätssuite ist der Bereich, in dem die meisten Unternehmen beginnen und in dem Open-Source-Optionen erheblich gereift sind.</p>
 <section id="dokumentbearbeitung-und-bürowerkzeuge" class="level3">
-<h3 data-anchor-id="dokumentbearbeitung-und-bürowerkzeuge">Dokumentbearbeitung und Bürowerkzeuge</h3>
+<h3 class="anchored" data-anchor-id="dokumentbearbeitung-und-bürowerkzeuge">Dokumentbearbeitung und Bürowerkzeuge</h3>
 <p><strong>LibreOffice</strong> bleibt die Standard-Desktop-Bürosuite und bewältigt Textverarbeitung, Tabellenkalkulation und Präsentationen mit starker Kompatibilität zu Microsoft Office-Formaten. Für Teams, die kollaborative Echtzeit-Bearbeitung im Browser benötigen, bietet <strong>Collabora Online</strong> einen LibreOffice-basierten Web-Editor, der sich direkt mit Dateispeicherplattformen integriert.</p>
 <p><strong>CryptPad</strong> bietet eine datenschutzorientierte Alternative für kollaborative Dokumente, Tabellenkalkulationen und Präsentationen. Alle Inhalte sind Ende-zu-Ende-verschlüsselt, was bedeutet, dass selbst der Serveradministrator Ihre Dokumente nicht lesen kann. Dies ist besonders relevant für Unternehmen, die sensible Kundendaten verarbeiten.</p>
 </section>
 <section id="dateispeicherung-und-synchronisierung" class="level3">
-<h3 data-anchor-id="dateispeicherung-und-synchronisierung">Dateispeicherung und Synchronisierung</h3>
+<h3 class="anchored" data-anchor-id="dateispeicherung-und-synchronisierung">Dateispeicherung und Synchronisierung</h3>
 <p><strong>Nextcloud</strong> ist das Herzstück der meisten Open-Source-Produktivitätsinstallationen. Es bietet Dateisynchronisierung, gemeinsame Kalender, Kontakte, Aufgabenverwaltung und ein App-Ökosystem, das seine Fähigkeiten auf Projektmanagement, Dokumentensignierung und mehr erweitert. Selbst gehostet oder verwaltet, ersetzt Nextcloud einen erheblichen Teil dessen, was Unternehmen normalerweise von Cloud-Produktivitätsanbietern kaufen.</p>
 </section>
 </section>
 <section id="kommunikation" class="level2">
-<h2 data-anchor-id="kommunikation">Kommunikation</h2>
+<h2 class="anchored" data-anchor-id="kommunikation">Kommunikation</h2>
 <section id="messaging-und-chat" class="level3">
-<h3 data-anchor-id="messaging-und-chat">Messaging und Chat</h3>
+<h3 class="anchored" data-anchor-id="messaging-und-chat">Messaging und Chat</h3>
 <p><strong>Matrix</strong> (über den <strong>Element</strong>-Client) bietet föderiertes, Ende-zu-Ende-verschlüsseltes Messaging. Föderation bedeutet, dass der Chat-Server Ihrer Organisation mit anderen Matrix-Servern kommunizieren kann, was nützlich ist für die organisationsübergreifende Zusammenarbeit, ohne Konten auf Drittanbieterplattformen erstellen zu müssen.</p>
 <p><strong>Mattermost</strong> ist eine starke Wahl für Teams, die eine Slack-ähnliche Erfahrung mit selbst gehosteter Kontrolle bevorzugen. Es unterstützt Kanäle, Threads, Integrationen und hat eine gut dokumentierte API für Automatisierung.</p>
 </section>
 <section id="videokonferenzen" class="level3">
-<h3 data-anchor-id="videokonferenzen">Videokonferenzen</h3>
+<h3 class="anchored" data-anchor-id="videokonferenzen">Videokonferenzen</h3>
 <p><strong>Jitsi Meet</strong> bietet browserbasierte Videokonferenzen, bei denen Teilnehmer kein Konto benötigen. Es unterstützt Bildschirmfreigabe, Aufzeichnung und Breakout-Räume. Für KMU, die zuverlässige Videoanrufe ohne Lizenzierung pro Benutzer benötigen, ist Jitsi die unkomplizierteste Option.</p>
 </section>
 </section>
 <section id="identität-und-single-sign-on" class="level2">
-<h2 data-anchor-id="identität-und-single-sign-on">Identität und Single Sign-On</h2>
+<h2 class="anchored" data-anchor-id="identität-und-single-sign-on">Identität und Single Sign-On</h2>
 <p>Identitätsmanagement ist oft das am meisten übersehene Element der KMU-Infrastruktur, aber es ist auch eines der wirkungsvollsten.</p>
 <section id="zentralisierte-authentifizierung" class="level3">
-<h3 data-anchor-id="zentralisierte-authentifizierung">Zentralisierte Authentifizierung</h3>
+<h3 class="anchored" data-anchor-id="zentralisierte-authentifizierung">Zentralisierte Authentifizierung</h3>
 <p><strong>Keycloak</strong> bietet Identitäts- und Zugriffsmanagement auf Enterprise-Niveau, einschließlich Single Sign-On (SSO), Multifaktor-Authentifizierung, Social Login und Integration mit SAML- und OpenID Connect-Anwendungen. Es ist das Open-Source-Äquivalent kommerzieller Identitätsplattformen und integriert sich gut mit dem Rest des Stacks.</p>
 <p><strong>FreeIPA</strong> kombiniert LDAP-Verzeichnisdienste, Kerberos-Authentifizierung, DNS-Verwaltung und Zertifizierungsstellenfunktionen in einer einzigen Plattform. Es eignet sich besonders gut für Linux-lastige Umgebungen, in denen Sie eine zentralisierte Benutzerverwaltung über Server, Workstations und Anwendungen hinweg benötigen.</p>
 <p><strong>OpenLDAP</strong> bleibt relevant für Organisationen, die einen leichtgewichtigen, flexiblen Verzeichnisdienst ohne den vollständigen FreeIPA-Stack benötigen.</p>
@@ -669,16 +706,16 @@ Tip
 </section>
 </section>
 <section id="überwachung-und-observierbarkeit" class="level2">
-<h2 data-anchor-id="überwachung-und-observierbarkeit">Überwachung und Observierbarkeit</h2>
+<h2 class="anchored" data-anchor-id="überwachung-und-observierbarkeit">Überwachung und Observierbarkeit</h2>
 <p>Sie können nicht verwalten, was Sie nicht sehen können. Überwachungsinfrastruktur ist nicht verhandelbar, auch für kleine Teams nicht.</p>
 <p><strong>Prometheus</strong> sammelt Metriken von Ihren Servern, Anwendungen und Netzwerkgeräten unter Verwendung eines Pull-basierten Modells. Kombinieren Sie es mit <strong>Grafana</strong> für Dashboards und Alarmierung, und Sie haben einen Überwachungsstack, der von einer Handvoll Server bis zu Tausenden skaliert.</p>
 <p><strong>Uptime Kuma</strong> ist ein leichtgewichtiger, selbst gehosteter Uptime-Monitor mit einem sauberen Webinterface. Es unterstützt HTTP-, TCP-, DNS- und Ping-Checks mit Benachrichtigungen per E-Mail, Slack, Matrix und Dutzenden anderer Kanäle. Für KMU, die grundlegende Uptime-Überwachung ohne die Komplexität einer vollständigen Observierbarkeitsplattform benötigen, ist Uptime Kuma ein ausgezeichneter Startpunkt.</p>
 </section>
 <section id="unix-grundlagen" class="level2">
-<h2 data-anchor-id="unix-grundlagen">UNIX-Grundlagen</h2>
+<h2 class="anchored" data-anchor-id="unix-grundlagen">UNIX-Grundlagen</h2>
 <p>Die Betriebssystemschicht ist der Ausgangspunkt der Open-Source-Infrastruktur, und die Wahl des Betriebssystems bestimmt alles darüber.</p>
 <section id="linux-distributionen" class="level3">
-<h3 data-anchor-id="linux-distributionen">Linux-Distributionen</h3>
+<h3 class="anchored" data-anchor-id="linux-distributionen">Linux-Distributionen</h3>
 <ul>
 <li><strong>NixOS</strong> verwendet ein deklaratives Konfigurationsmodell, bei dem der gesamte Systemzustand in Konfigurationsdateien definiert wird. Dies macht Bereitstellungen reproduzierbar und Rollbacks trivial. Es hat eine steile Lernkurve, zahlt sich aber in Konsistenz über Umgebungen hinweg aus.</li>
 <li><strong>Debian</strong> ist die konservative Wahl: stabil, gut dokumentiert und breit unterstützt. Es ist die Standardempfehlung für Organisationen, die Zuverlässigkeit ohne Überraschungen wünschen.</li>
@@ -686,7 +723,7 @@ Tip
 </ul>
 </section>
 <section id="bsd-systeme" class="level3">
-<h3 data-anchor-id="bsd-systeme">BSD-Systeme</h3>
+<h3 class="anchored" data-anchor-id="bsd-systeme">BSD-Systeme</h3>
 <ul>
 <li><strong>OpenBSD</strong> ist speziell für Sicherheit entwickelt und eine ausgezeichnete Wahl für Firewalls, VPN-Gateways und jede netzwerkzugewandte Rolle, bei der die Minimierung der Angriffsfläche Priorität hat. Sein <code>pf</code>-Paketfilter gehört zu den elegantesten verfügbaren Firewall-Systemen.</li>
 <li><strong>FreeBSD</strong> glänzt bei Speicher- und Netzwerkarbeitslasten. Mit ZFS als erstklassigem Dateisystem und dem <code>jail</code>-System für leichtgewichtige Containerisierung ist FreeBSD ein starkes Fundament für Dateiserver, Backup-Ziele und Netzwerkgeräte.</li>
@@ -694,24 +731,24 @@ Tip
 </section>
 </section>
 <section id="praxisbeispiele-für-bereitstellungen" class="level2">
-<h2 data-anchor-id="praxisbeispiele-für-bereitstellungen">Praxisbeispiele für Bereitstellungen</h2>
+<h2 class="anchored" data-anchor-id="praxisbeispiele-für-bereitstellungen">Praxisbeispiele für Bereitstellungen</h2>
 <p><strong>Anwaltskanzlei (15 Mitarbeiter):</strong> Nextcloud für Dateispeicherung mit Collabora Online für Dokumentbearbeitung, Keycloak für SSO, Matrix/Element für verschlüsselte Mandantenkommunikation, OpenBSD-Firewall am Netzwerkrand. Gesamte Lizenzkosten: null.</p>
 <p><strong>Marketingagentur (30 Mitarbeiter):</strong> Mattermost für internen Chat, Jitsi für Videotelefonate mit Kunden, Nextcloud für Projektdateiaustausch, Prometheus und Grafana für die Überwachung ihrer Webhosting-Infrastruktur, durchgängig Debian-Server.</p>
 <p><strong>Fertigungsunternehmen (50 Mitarbeiter):</strong> FreeIPA für zentralisierte Identität über Linux-Workstations in der Produktion, Uptime Kuma für die Überwachung kritischer interner Anwendungen, FreeBSD mit ZFS für die Dateispeicherung der Ingenieure, CryptPad für sensible F&amp;E-Zusammenarbeit.</p>
 </section>
 <section id="antworten-auf-häufige-bedenken" class="level2">
-<h2 data-anchor-id="antworten-auf-häufige-bedenken">Antworten auf häufige Bedenken</h2>
+<h2 class="anchored" data-anchor-id="antworten-auf-häufige-bedenken">Antworten auf häufige Bedenken</h2>
 <p><strong>„Wen rufen wir für Support an?“</strong> Die meisten ausgereiften Open-Source-Projekte bieten kommerzielle Support-Abonnements an. Red Hat, Collabora, Nextcloud GmbH, Element (Matrix) und Mattermost verkaufen alle Enterprise-Support. Sie können auch mit Beratungsunternehmen wie chen.ist zusammenarbeiten, die auf Open-Source-Bereitstellungen spezialisiert sind.</p>
 <p><strong>„Wie schulen wir unser Team?“</strong> Die Lernkurve variiert je nach Werkzeug, aber die meiste der oben aufgeführten Software hat umfangreiche Dokumentation und aktive Community-Foren. Wir schließen Schulungen typischerweise als Teil unserer Bereitstellungsengagements ein.</p>
 <p><strong>„Was ist mit der Migration von bestehenden Tools?“</strong> Migration ist projektspezifisch, aber der allgemeine Ansatz ist: Betreiben Sie den Open-Source-Stack parallel, migrieren Sie Daten schrittweise und wechseln Sie, sobald das Team sich wohl fühlt. Wir haben Unternehmen bei der Migration von Microsoft 365, Google Workspace und verschiedenen proprietären Tools unterstützt.</p>
 </section>
 <section id="erste-schritte" class="level2">
-<h2 data-anchor-id="erste-schritte">Erste Schritte</h2>
+<h2 class="anchored" data-anchor-id="erste-schritte">Erste Schritte</h2>
 <p>Der Aufbau eines Open-Source-Infrastruktur-Stacks ist keine Alles-oder-Nichts-Entscheidung. Beginnen Sie mit einem Bereich, in dem Sie die größten Probleme haben — ob Produktivität, Kommunikation oder Überwachung — setzen Sie ihn ein und erweitern Sie von dort aus.</p>
 <p>Für einen tieferen Einblick in unseren Ansatz für digitale Infrastruktur besuchen Sie unsere Seite für <a href="../../digital/">Digitale Infrastruktur-Dienstleistungen</a>.</p>
 <div class="card mt-5 mb-3">
 <section id="bereit-open-source-infrastruktur-zu-erkunden" class="level3 card-body">
-<h3 data-anchor-id="bereit-open-source-infrastruktur-zu-erkunden">Bereit, Open-Source-Infrastruktur zu erkunden?</h3>
+<h3 class="anchored" data-anchor-id="bereit-open-source-infrastruktur-zu-erkunden">Bereit, Open-Source-Infrastruktur zu erkunden?</h3>
 <p>Buchen Sie eine kostenlose Beratung, um zu besprechen, welche Werkzeuge zu Ihrer Organisation passen und wie Sie eine praktische Migration planen können.</p>
 <div class="text-center mt-3">
 <p><a href="https://cal.com/chenist" target="_blank">Beratung buchen</a>{.btn .btn-success}</p>
@@ -722,7 +759,7 @@ Tip
 
 </section>
 
-
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

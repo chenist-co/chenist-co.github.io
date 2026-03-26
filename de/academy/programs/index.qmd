@@ -1,0 +1,161 @@
+---
+title: "Bildungsprogramme"
+title-block-style: none
+subtitle: "Immersive Lernerfahrungen für Technologie-Begeisterte"
+description: "Entdecken Sie unsere Bildungsprogramme, darunter Hackathons, Sommerschulen und spezialisierte Schulungsveranstaltungen für praxisnahes Lernen und Kompetenzentwicklung."
+from: markdown+raw_html
+page-layout: custom
+format:
+  html:
+    toc: false
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
+---
+
+```{=html}
+<div class="m">
+
+<div class="m-hero">
+  <div class="container">
+    <h1>Bildungs<span class="gr">programme</span></h1>
+    <p>Hackathons, Sommerschulen und Community-Treffen. Lernen durch Bauen.</p>
+  </div>
+</div>
+
+<!-- PROGRAM CARDS — dark image style like Events page -->
+<div class="m-bg m-bg-mountains">
+  <div class="container">
+    <h2>Unsere Programme</h2>
+    <p class="sub">Immersive Erfahrungen, die über traditionelles Lernen hinausgehen.</p>
+    <div class="row g-5">
+      <div class="col-md-4">
+        <a href="/academy/programs/hackathons/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/hacker-screens.webp" alt="Hackathons">
+            <div class="pg-card-body">
+              <h3>Hackathons</h3>
+              <p>48-Stunden-Herausforderungen in Cybersicherheit, KI-Ethik und Raumfahrttechnologie. Echte Probleme, echte Teams.</p>
+              <span class="m-lk">Hackathons entdecken</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/programs/summer-school/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Sommerschule">
+            <div class="pg-card-body">
+              <h3>Sommerschule</h3>
+              <p>Mehrwöchige Intensivprogramme, die Vorlesungen, Workshops und Projektarbeit kombinieren.</p>
+              <span class="m-lk">Sommerschule entdecken</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/programs/computerclub/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="Computer Club">
+            <div class="pg-card-body">
+              <h3>Computer Club</h3>
+              <p>Monatliche Treffen zum Programmieren, Hacken und gemeinsamen Bauen. Alle Erfahrungsstufen willkommen.</p>
+              <span class="m-lk">Dem Club beitreten</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE ROW -->
+<div class="m-s">
+  <div class="container">
+    <div class="m-r">
+      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Kollaboratives Lernen"></div>
+      <div class="m-rt">
+        <h2>Schneller lernen<br>durch gemeinsames Bauen.</h2>
+        <p>Unsere Programme bringen Sie in Teams mit Gleichgesinnten und Mentoren zusammen, die an echten Herausforderungen unter realen Deadlines arbeiten. Es ist der schnellste Weg, Fähigkeiten aufzubauen, die bleiben — und ein Netzwerk, das hält.</p>
+        <div class="lk"><a href="/academy/events.html" class="m-lk">Kommende Veranstaltungen ansehen</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- UPCOMING PROGRAMS — clean list -->
+<div class="m-bg m-bg-mountains">
+  <div class="container" style="max-width: 750px;">
+    <h2>Demnächst</h2>
+    <p class="sub">Registrieren Sie sich frühzeitig — die Plätze füllen sich schnell.</p>
+
+    <div class="up-item">
+      <div style="flex-grow:1;">
+        <h4><a href="/academy/programs/computerclub/">Computer Club</a></h4>
+        <div class="up-meta"><i class="bi bi-calendar3"></i> Monatlich &nbsp; <i class="bi bi-geo-alt"></i> Craiova & Online</div>
+      </div>
+      <div class="up-badge up-badge-open">Laufend</div>
+    </div>
+
+    <div class="up-item">
+      <div style="flex-grow:1;">
+        <h4><a href="/academy/programs/hackathons/ai-ethics-hackathon.html">AI Ethics Hackathon</a></h4>
+        <div class="up-meta"><i class="bi bi-calendar3"></i> 5. März 2026 &nbsp; <i class="bi bi-geo-alt"></i> Bukarest</div>
+      </div>
+      <div class="up-badge up-badge-open">Offen</div>
+    </div>
+
+    <div class="up-item">
+      <div style="flex-grow:1;">
+        <h4><a href="/academy/programs/summer-school/2025.html">Sommerschule 2026</a></h4>
+        <div class="up-meta"><i class="bi bi-calendar3"></i> 1.–15. Aug. 2026 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
+      </div>
+      <div class="up-badge up-badge-soon">Demnächst</div>
+    </div>
+
+    <div class="up-item">
+      <div style="flex-grow:1;">
+        <h4><a href="/academy/programs/hackathons/spaceapps/challenge-2025.html">SpaceApps Challenge 2026</a></h4>
+        <div class="up-meta"><i class="bi bi-calendar3"></i> Oktober 2026 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
+      </div>
+      <div class="up-badge up-badge-soon">Demnächst</div>
+    </div>
+
+    <div class="up-item">
+      <div style="flex-grow:1;">
+        <h4><a href="/academy/programs/summer-school/junior.html">Junior-Sommerschule</a></h4>
+        <div class="up-meta"><i class="bi bi-calendar3"></i> Juli 2026 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
+      </div>
+      <div class="up-badge up-badge-soon">Demnächst</div>
+    </div>
+  </div>
+</div>
+
+<!-- BENEFITS — clean tiles -->
+<div class="m-s">
+  <div class="container">
+    <h2>Warum an einem Programm teilnehmen</h2>
+    <p class="sub"></p>
+    <div class="row g-5">
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-people"></i><h3>Kollaborativ</h3><p>Arbeiten Sie mit Gleichgesinnten und Experten zusammen, um echte Probleme gemeinsam zu lösen.</p></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-lightning"></i><h3>Beschleunigt</h3><p>Intensive Formate, die praktische Fähigkeiten in Tagen statt Monaten aufbauen.</p></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-graph-up"></i><h3>Karrierefördernd</h3><p>Echte Projekte für Ihr Portfolio und ein Netzwerk, das Türen öffnet.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Bereit teilzunehmen?</h2>
+    <p>Durchsuchen Sie Programme oder buchen Sie ein Gespräch, um maßgeschneiderte Veranstaltungen für Ihr Team zu besprechen.</p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <a href="/academy/events.html" class="m-b">Alle Veranstaltungen ansehen</a>
+      <a href="https://cal.com/chenist" target="_blank" class="m-bo">Beratung buchen</a>
+    </div>
+  </div>
+</div>
+
+</div>
+```

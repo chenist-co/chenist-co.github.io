@@ -1,0 +1,161 @@
+---
+title: "Programe Educaționale"
+title-block-style: none
+subtitle: "Experiențe de învățare imersive pentru pasionații de tehnologie"
+description: "Explorați programele noastre educaționale, inclusiv hackathon-uri, școli de vară și evenimente de formare specializate, concepute pentru învățare practică și dezvoltarea competențelor."
+from: markdown+raw_html
+page-layout: custom
+format:
+  html:
+    toc: false
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
+---
+
+```{=html}
+<div class="m">
+
+<div class="m-hero">
+  <div class="container">
+    <h1>Programe <span class="gr">Educaționale</span></h1>
+    <p>Hackathon-uri, școli de vară și întâlniri comunitare. Învățați construind.</p>
+  </div>
+</div>
+
+<!-- PROGRAM CARDS — dark image style like Events page -->
+<div class="m-bg m-bg-mountains">
+  <div class="container">
+    <h2>Programele noastre</h2>
+    <p class="sub">Experiențe imersive care depășesc învățarea tradițională.</p>
+    <div class="row g-5">
+      <div class="col-md-4">
+        <a href="/academy/programs/hackathons/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/hacker-screens.webp" alt="Hackathon-uri">
+            <div class="pg-card-body">
+              <h3>Hackathon-uri</h3>
+              <p>Provocări de 48 de ore în securitate cibernetică, etică AI și tehnologie spațială. Probleme reale, echipe reale.</p>
+              <span class="m-lk">Explorați hackathon-urile</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/programs/summer-school/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Școala de Vară">
+            <div class="pg-card-body">
+              <h3>Școala de Vară</h3>
+              <p>Programe intensive de mai multe săptămâni care combină prelegeri, workshop-uri și lucru pe proiecte.</p>
+              <span class="m-lk">Descoperiți școala de vară</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/programs/computerclub/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="Computer Club">
+            <div class="pg-card-body">
+              <h3>Computer Club</h3>
+              <p>Întâlniri lunare pentru programare, hacking și construire împreună. Toate nivelurile sunt binevenite.</p>
+              <span class="m-lk">Alăturați-vă clubului</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE ROW -->
+<div class="m-s">
+  <div class="container">
+    <div class="m-r">
+      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Învățare colaborativă"></div>
+      <div class="m-rt">
+        <h2>Învățați mai repede<br>construind împreună.</h2>
+        <p>Programele noastre vă integrează în echipe cu colegi și mentori, lucrând la provocări reale sub termene reale. Este cel mai rapid mod de a construi competențe durabile — și o rețea care rezistă.</p>
+        <div class="lk"><a href="/academy/events.html" class="m-lk">Vedeți evenimentele viitoare</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- UPCOMING PROGRAMS — clean list -->
+<div class="m-bg m-bg-mountains">
+  <div class="container" style="max-width: 750px;">
+    <h2>În curând</h2>
+    <p class="sub">Înregistrați-vă devreme — locurile se ocupă repede.</p>
+
+    <div class="up-item">
+      <div style="flex-grow:1;">
+        <h4><a href="/academy/programs/computerclub/">Computer Club</a></h4>
+        <div class="up-meta"><i class="bi bi-calendar3"></i> Lunar &nbsp; <i class="bi bi-geo-alt"></i> Craiova & Online</div>
+      </div>
+      <div class="up-badge up-badge-open">În desfășurare</div>
+    </div>
+
+    <div class="up-item">
+      <div style="flex-grow:1;">
+        <h4><a href="/academy/programs/hackathons/ai-ethics-hackathon.html">AI Ethics Hackathon</a></h4>
+        <div class="up-meta"><i class="bi bi-calendar3"></i> 5 martie 2026 &nbsp; <i class="bi bi-geo-alt"></i> București</div>
+      </div>
+      <div class="up-badge up-badge-open">Deschis</div>
+    </div>
+
+    <div class="up-item">
+      <div style="flex-grow:1;">
+        <h4><a href="/academy/programs/summer-school/2025.html">Școala de Vară 2026</a></h4>
+        <div class="up-meta"><i class="bi bi-calendar3"></i> 1–15 aug 2026 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
+      </div>
+      <div class="up-badge up-badge-soon">În curând</div>
+    </div>
+
+    <div class="up-item">
+      <div style="flex-grow:1;">
+        <h4><a href="/academy/programs/hackathons/spaceapps/challenge-2025.html">SpaceApps Challenge 2026</a></h4>
+        <div class="up-meta"><i class="bi bi-calendar3"></i> Octombrie 2026 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
+      </div>
+      <div class="up-badge up-badge-soon">În curând</div>
+    </div>
+
+    <div class="up-item">
+      <div style="flex-grow:1;">
+        <h4><a href="/academy/programs/summer-school/junior.html">Școala de Vară Junior</a></h4>
+        <div class="up-meta"><i class="bi bi-calendar3"></i> Iulie 2026 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
+      </div>
+      <div class="up-badge up-badge-soon">În curând</div>
+    </div>
+  </div>
+</div>
+
+<!-- BENEFITS — clean tiles -->
+<div class="m-s">
+  <div class="container">
+    <h2>De ce să participați la un program</h2>
+    <p class="sub"></p>
+    <div class="row g-5">
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-people"></i><h3>Colaborativ</h3><p>Lucrați alături de colegi și experți pentru a rezolva probleme reale împreună.</p></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-lightning"></i><h3>Accelerat</h3><p>Formate intensive care construiesc competențe practice în zile, nu în luni.</p></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-graph-up"></i><h3>Dezvoltare de carieră</h3><p>Proiecte reale pentru portofoliul dvs. și o rețea care deschide uși.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Gata să vă alăturați?</h2>
+    <p>Explorați programele sau programați un apel pentru a discuta despre evenimente personalizate pentru echipa dvs.</p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <a href="/academy/events.html" class="m-b">Vedeți toate evenimentele</a>
+      <a href="https://cal.com/chenist" target="_blank" class="m-bo">Programați o consultație</a>
+    </div>
+  </div>
+</div>
+
+</div>
+```

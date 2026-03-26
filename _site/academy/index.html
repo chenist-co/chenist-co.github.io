@@ -1220,8 +1220,8 @@ document.addEventListener('DOMContentLoaded', function() {
     bar.appendChild(inner);
 
     var header = document.getElementById('quarto-header');
-    if (header && header.nextSibling) {
-      header.parentNode.insertBefore(bar, header.nextSibling);
+    if (header) {
+      header.appendChild(bar);
     }
   })();
 });
