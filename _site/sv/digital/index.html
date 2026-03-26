@@ -8,7 +8,7 @@
 
 <meta name="description" content="Produktionsgrad open-source, Linux, BSD och Apple Business-infrastruktur för SMF. NixOS, OpenBSD, FreeBSD, Nextcloud och zero-touch Apple-enhetsdistribution.">
 
-<title>Digital Infrastruktur – chen.ist</title>
+<title>Digital Infrastruktur — chen.ist – chen.ist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,11 +75,11 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<meta property="og:title" content="Digital Infrastruktur – chen.ist">
+<meta property="og:title" content="Digital Infrastruktur — chen.ist">
 <meta property="og:description" content="Produktionsgrad open-source, Linux, BSD och Apple Business-infrastruktur för SMF. NixOS, OpenBSD, FreeBSD, Nextcloud och zero-touch Apple-enhetsdistribution.">
 <meta property="og:image" content="https://chen.ist/sv/digital/assets/images/og-image.png">
 <meta property="og:site_name" content="chen.ist">
-<meta name="twitter:title" content="Digital Infrastruktur – chen.ist">
+<meta name="twitter:title" content="Digital Infrastruktur — chen.ist">
 <meta name="twitter:description" content="Produktionsgrad open-source, Linux, BSD och Apple Business-infrastruktur för SMF. NixOS, OpenBSD, FreeBSD, Nextcloud och zero-touch Apple-enhetsdistribution.">
 <meta name="twitter:image" content="https://chen.ist/sv/digital/assets/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -322,15 +322,53 @@ ul.task-list li input[type="checkbox"] {
   .navbar .nav-link { font-size: 0.82rem !important; }
 }
 @media (max-width: 767.98px) {
-  .navbar-brand .navbar-title { font-size: 1rem; }
+  .navbar { min-height: 54px !important; }
+  .navbar-brand .navbar-title { font-size: 0.95rem; }
   .navbar .navbar-collapse {
     background: #0a0a0a;
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 10px;
-    padding: 1rem;
-    margin-top: 0.5rem;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 1.25rem;
+    margin-top: 0.75rem;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    max-height: 75vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
-  .navbar .navbar-cta { display: block; text-align: center; margin: 0.75rem 0 0; }
+  .navbar .nav-link {
+    font-size: 0.9rem !important;
+    padding: 0.65rem 0.75rem !important;
+    border-radius: 10px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .navbar .nav-link:active { background: rgba(129,189,74,0.08); }
+  .navbar .dropdown-menu {
+    border: none !important;
+    padding: 0 0 0 1rem !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+  .navbar .dropdown-item {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+  }
+  .navbar .navbar-cta {
+    display: block;
+    text-align: center;
+    margin: 0.75rem 0 0;
+    padding: 0.75rem 1.5rem;
+    border-radius: 14px;
+    min-height: 44px;
+  }
+  .navbar-toggler { border: none !important; padding: 0.5rem; }
+  .navbar-toggler:focus { box-shadow: none !important; }
 }
 </style>
 
@@ -368,7 +406,34 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="../../manifest.json">
+<meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<script>
+(function() {
+  var path = window.location.pathname;
+  // Only redirect on English pages (no language prefix)
+  if (path.match(/^\/(ro|sv|de)\//)) return;
+  // Don't redirect if user explicitly chose English
+  if (localStorage.getItem('chen-lang-choice') === 'en') return;
+  // Don't redirect if already redirected this session
+  if (sessionStorage.getItem('chen-lang-redirected')) return;
+  // Detect browser language
+  var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  var target = null;
+  if (lang.startsWith('ro')) target = 'ro';
+  else if (lang.startsWith('sv')) target = 'sv';
+  else if (lang.startsWith('de')) target = 'de';
+  if (target) {
+    sessionStorage.setItem('chen-lang-redirected', '1');
+    window.location.href = '/' + target + path;
+  }
+})();
+</script>
 <link rel="preload" href="../../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
 <meta name="view-transition" content="same-origin">
@@ -418,18 +483,6 @@ document.addEventListener('DOMContentLoaded', function() {
 .quarto-title-block, #title-block-header { display: none !important; }
 #quarto-content > * { margin-top: 0 !important; padding-top: 0 !important; }
 main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
-.platform-badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 2rem; font-size: 0.8rem; font-weight: 600; margin: 0.15rem; }
-.badge-linux { background: rgba(255, 193, 7, 0.15); color: #FFC107; }
-.badge-bsd { background: rgba(220, 53, 69, 0.15); color: #DC3545; }
-.badge-apple { background: rgba(108, 117, 125, 0.15); color: #6C757D; }
-.badge-opensource { background: rgba(129, 189, 74, 0.15); color: #81BD4A; }
-.badge-free { background: rgba(25, 135, 84, 0.15); color: #198754; font-weight: 700; }
-.pricing-card { border: 2px solid transparent; transition: all 0.3s ease; }
-.pricing-card:hover { border-color: #81BD4A; transform: translateY(-4px); }
-.pricing-card .card-header { font-size: 1.1rem; }
-.pricing-featured { border-color: #81BD4A; }
-.pricing-featured .card-header { background-color: #81BD4A !important; }
-.m-highlight { background: linear-gradient(135deg, rgba(108,117,125,0.08) 0%, rgba(129,189,74,0.08) 100%); border-left: 4px solid #6C757D; padding: 1.5rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1rem 0; }
 </style>
 
 
@@ -444,8 +497,8 @@ main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !imp
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
-    <img src="../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
+    <img src="../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -490,6 +543,10 @@ main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !imp
         <li>
     <a class="dropdown-item" href="../../services/digital-resilience/index.html">
  <span class="dropdown-text">Digital Resilience</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../services/gdpr/index.html">
+ <span class="dropdown-text">GDPR Compliance</span></a>
   </li>  
     </ul>
   </li>
@@ -540,10 +597,29 @@ main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !imp
     <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blogs</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../resources/index.html"> 
-<span class="menu-text">Resources</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Resources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
+        <li>
+    <a class="dropdown-item" href="../../resources/index.html">
+ <span class="dropdown-text">All Resources</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../../resources/tools/index.html">
+ <span class="dropdown-text">Tools</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../compare.html">
+ <span class="dropdown-text">Why Open Source</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../faq.html">
+ <span class="dropdown-text">FAQ</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item dropdown ">
@@ -554,6 +630,10 @@ main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !imp
         <li>
     <a class="dropdown-item" href="../../about/index.html">
  <span class="dropdown-text">About</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../about/team.html">
+ <span class="dropdown-text">Team</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../about/csr.html">
@@ -607,236 +687,183 @@ main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !imp
 <!-- main -->
 
 
-<header id="title-block-header">
-<h1 class="title display-7">Digital Infrastruktur</h1>
-<p class="subtitle lead">Open-Source, UNIX och Apple-infrastruktur för företag i alla storlekar</p>
 
-</header>
 
 
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>Digital <span class="gr">Infrastruktur</span></h1>
-    <p>Open-Source, UNIX och Apple-plattformar anpassade för SMF i alla branscher</p>
+<!-- HERO -->
+<div class="ev-hero" style="min-height:65vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/terminal-green.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag">chen.ist</div>
+    <h1>Digital<br>Infrastruktur</h1>
+    <p>Open-source, UNIX och Apple-plattformar. Driftsatta och hanterade för ditt företag.</p>
+    <a href="#pillars" class="ev-btn">Utforska</a>
   </div>
 </div>
 
-<div class="m-bg">
+<!-- STATS -->
+<div class="m-bg" style="padding:4rem 0;">
   <div class="container">
-    <h2>Infrastruktur som fungerar för ditt företag</h2>
-    <p class="sub">Vi designar, driftsätter och hanterar produktionsgrad digital infrastruktur byggd på open-source-programvara, UNIX-operativsystem och Apple-plattformar.</p>
-    <div class="row g-5">
-      <div class="col-md-4"><div class="m-t">
-        <i class="bi bi-code-square"></i>
-        <h3>Open-Source-stack</h3>
-        <p>Produktionsklara open-source-verktyg som ersätter dyr proprietär programvara utan att offra funktionalitet.</p>
-        <span class="platform-badge badge-opensource">Self-Hosted</span>
-        <span class="platform-badge badge-opensource">Ingen leverantörsinlåsning</span>
-        <a href="#open-source" class="m-lk" style="display:block;margin-top:0.5rem;">Läs mer</a>
-      </div></div>
-      <div class="col-md-4"><div class="m-t">
-        <i class="bi bi-terminal"></i>
-        <h3>UNIX-system</h3>
-        <p>BSD- och Linux-infrastruktur i enterpriseklass för servrar, brandväggar, lagring och nätverk.</p>
-        <span class="platform-badge badge-linux">Linux</span>
-        <span class="platform-badge badge-bsd">BSD</span>
-        <span class="platform-badge badge-linux">NixOS</span>
-        <a href="#unix" class="m-lk" style="display:block;margin-top:0.5rem;">Läs mer</a>
-      </div></div>
-      <div class="col-md-4"><div class="m-t">
-        <i class="bi bi-apple"></i>
-        <h3>Apple-infrastruktur</h3>
-        <p>Komplett Apple-ekosystemhantering med den nya Apple Business-plattformen och macOS-flottutrullning.</p>
-        <span class="platform-badge badge-apple">macOS</span>
-        <span class="platform-badge badge-apple">iOS/iPadOS</span>
-        <span class="platform-badge badge-free">Gratis MDM</span>
-        <a href="#apple" class="m-lk" style="display:block;margin-top:0.5rem;">Läs mer</a>
-      </div></div>
+    <div class="m-n">
+      <div><div class="m-nn">40–70%</div><div class="m-nl">IT-kostnadsbesparingar</div></div>
+      <div><div class="m-nn">100%</div><div class="m-nl">Open-source</div></div>
+      <div><div class="m-nn">EU</div><div class="m-nl">Datasuveränitet</div></div>
+      <div><div class="m-nn">24/7</div><div class="m-nl">Övervakning</div></div>
     </div>
   </div>
 </div>
 
-<div class="m-s" id="open-source">
+<!-- THREE PILLARS -->
+<div class="m-s" id="pillars" style="padding:7rem 0;">
   <div class="container">
-    <h2>Open-Source-stack för företag</h2>
-    <p class="sub">Ersätt dyra proprietära licenser med stridsbeprövade open-source-alternativ.</p>
-    <div class="row g-5">
-      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-file-earmark-richtext"></i><h3>Produktivitet och Samarbete</h3><p>Komplett kontorssvit, molnlagring och dokumentsamarbete i realtid för hela teamet.</p><small class="text-muted">LibreOffice | Nextcloud | Collabora Online | CryptPad | OnlyOffice</small></div></div>
-      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-chat-dots"></i><h3>Kommunikation</h3><p>Säker meddelanden, videokonferenser och teamkanaler med fullständig datasuveränitet.</p><small class="text-muted">Matrix/Element | Mattermost | Jitsi Meet | Rocket.Chat</small></div></div>
-      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-person-badge"></i><h3>Identitet och Åtkomst</h3><p>Enkel inloggning, katalogtjänster och multifaktorautentisering på alla dina system.</p><small class="text-muted">Keycloak | OpenLDAP | FreeIPA | Authelia</small></div></div>
-      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-graph-up"></i><h3>Övervakning och Observerbarhet</h3><p>Instrumentpaneler i realtid, larm och drifttidsövervakning för hela din infrastruktur.</p><small class="text-muted">Prometheus | Grafana | Uptime Kuma | Zabbix | Loki</small></div></div>
-      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-git"></i><h3>DevOps och Versionshantering</h3><p>Egenvärdade kodarkiv, CI/CD-pipelines och containerorkestrering.</p><small class="text-muted">Gitea/Forgejo | Woodpecker CI | Docker | Podman</small></div></div>
-      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-database"></i><h3>Databaser och Lagring</h3><p>Pålitlig datalagring, automatiserade backuper och databaskluster med hög tillgänglighet.</p><small class="text-muted">PostgreSQL | MariaDB | Redis | MinIO | Restic</small></div></div>
-    </div>
-  </div>
-</div>
-
-<div class="m-bg" id="unix">
-  <div class="container">
-    <h2>UNIX-infrastruktur</h2>
-    <p class="sub">Servrar, brandväggar och nätverksenheter på beprövade UNIX-operativsystem.</p>
-    <h3>Linux-distributioner</h3>
-    <div class="row g-5 mt-2">
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-snow"></i><h3>NixOS</h3><p>Deklarativ, reproducerbar infrastruktur. Definiera hela ditt system som kod.</p><ul><li>Oföränderlig systemkonfiguration</li><li>Atomiska uppgraderingar och tillbakarullningar</li><li>Reproducerbara byggen över miljöer</li><li>Flake-baserade multi-maskindistributioner</li></ul></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-ubuntu"></i><h3>Debian/Ubuntu</h3><p>Den mest stödda Linux-familjen. Idealisk för applikationsservrar och webbhotell.</p><ul><li>LTS-versioner med 5+ års support</li><li>Massivt paketekosystem</li><li>Oövervakade säkerhetsuppdateringar</li><li>Beprövad i produktion i alla skalor</li></ul></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-building"></i><h3>RHEL/AlmaLinux</h3><p>Stabilitet i enterpriseklass för arbetsbelastningar som kräver certifiering eller efterlevnad.</p><ul><li>10 års livscykelsupport</li><li>SELinux obligatorisk åtkomstkontroll</li><li>FIPS och Common Criteria-certifierad</li><li>Leverantörscertifierade applikationsstackar</li></ul></div></div>
-    </div>
-    <h3 style="margin-top:3rem;">BSD-system</h3>
-    <div class="row g-5 mt-2">
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-shield-lock"></i><h3>OpenBSD</h3><p>Det säkraste operativsystemet för allmänt bruk. Idealiskt för brandväggar och VPN-gateways.</p><ul><li>pf-paketfilter (branschstandardbrandvägg)</li><li>Säker som standard-filosofi</li><li>Inbyggt VPN (WireGuard, IKEv2)</li><li>Minimal attackyta</li></ul></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-hdd-stack"></i><h3>FreeBSD</h3><p>Högpresterande lagring och nätverk. Grunden för Netflix CDN, WhatsApp och Sony PlayStation Network.</p><ul><li>ZFS enterprise-filsystem</li><li>Jails-containerisering</li><li>bhyve hypervisor</li><li>Avancerat nätverk (VNET, CARP)</li></ul></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-cpu"></i><h3>NetBSD</h3><p>Körs på i princip vilken hårdvara som helst. Perfekt för inbyggda system och IoT-gateways.</p><ul><li>Stödjer 60+ hårdvaruplattformar</li><li>Lättviktig och effektiv</li><li>pkgsrc cross-platform-paket</li><li>Idealisk för edge- och IoT-distributioner</li></ul></div></div>
-    </div>
-    <h3 style="margin-top:3rem;">Hybridmiljöintegration</h3>
-    <div class="row g-5 mt-2">
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-people"></i><h3>Katalogbrygga</h3><p>Samba/AD-integration som kopplar UNIX-system med befintliga Windows-miljöer</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-key"></i><h3>Cross-Platform SSO</h3><p>En identitet på Linux, BSD, macOS och Windows-system</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-share"></i><h3>Fildelning</h3><p>Enhetlig filåtkomst på alla plattformar via NFS, SMB och WebDAV</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-printer"></i><h3>Skrivare och Kringutrustning</h3><p>CUPS-baserad skrivarhantering och kringutrustningsdelning i blandade miljöer</p></div></div>
-    </div>
-  </div>
-</div>
-
-<div class="m-s" id="apple">
-  <div class="container">
-    <h2>Apple-infrastruktur</h2>
-    <p class="sub">Tidiga användare och distributionspartner för den nya Apple Business-plattformen.</p>
-    <div class="m-highlight">
-      <div class="row align-items-center">
-        <div class="col-md-8">
-          <h3 class="mb-2"><i class="bi bi-apple me-2"></i>Apple Business <span class="platform-badge badge-free">Gratis Plattform</span></h3>
-          <p class="mb-1">En ny allt-i-ett-plattform för företag i alla storlekar. Hantera personer och enheter, nå kunder, utrusta ditt team med viktiga verktyg.</p>
-          <p class="mb-0 text-muted"><small>Tillgänglig 14 april 2026 i 200+ länder och regioner</small></p>
-        </div>
-        <div class="col-md-4 text-center">
-          <a href="https://business.apple.com/preview" target="_blank" class="m-b">Apple Business Förhandsvisning</a>
-        </div>
+    <h2>Tre pelare. En partner.</h2>
+    <p class="sub">Allt ditt företag behöver för att fungera, säkrat och underhållet av oss.</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="#opensource" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../../assets/images/stock/code-screen.webp" alt="Open Source"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Pelare 1</div><h3>Open-Source-stack</h3><p>Produktivitet, kommunikation, identitet och övervakning — inga licensavgifter.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="#unix" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../../assets/images/stock/terminal-green.webp" alt="UNIX"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Pelare 2</div><h3>UNIX-system</h3><p>Linux- och BSD-servrar, brandväggar, lagring och deklarativ infrastruktur.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="#apple" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../../assets/images/stock/team-macbooks.webp" alt="Apple"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Pelare 3</div><h3>Apple-infrastruktur</h3><p>Apple Business MDM, zero-touch-distribution, e-post och varumärkeshantering.</p></div></div>
+        </a>
       </div>
     </div>
-    <h3 style="margin-top:3rem;">Enhetshantering och Distribution</h3>
-    <div class="row g-5 mt-2">
-      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-phone"></i><h3>Inbyggt MDM</h3><p>Omfattande hantering av mobila enheter med fullständig organisatorisk synlighet.</p></div></div>
-      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-layers"></i><h3>Blueprints</h3><p>Förkonfigurerade enhetsinställningar för zero-touch-distribution.</p></div></div>
-      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-shield-lock"></i><h3>Hanterade Apple-konton</h3><p>Kryptografisk separation mellan arbets- och personlig data.</p></div></div>
-      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-people"></i><h3>Teamhantering</h3><p>Gruppera anställda efter funktion eller team. Tilldela appar, roller och behörigheter.</p></div></div>
-      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-bag-check"></i><h3>Appdistribution</h3><p>Distribuera företagsappar från App Store till valfritt antal enheter.</p></div></div>
-      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-code-slash"></i><h3>Admin API</h3><p>Programmatisk enhetshantering för storskaliga distributioner.</p></div></div>
-    </div>
-    <h3 style="margin-top:3rem;">Kommunikations- och Samarbetsverktyg</h3>
-    <div class="row g-5 mt-2">
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-envelope"></i><h3>Företags-e-post och Kalender</h3><ul><li><strong>E-post med egen domän:</strong> Professionell e-post på din egen domän</li><li><strong>Kalenderdelegering:</strong> Delade kalendrar och schemaläggningsverktyg</li><li><strong>Företagskatalog:</strong> Inbyggd katalog med personliga kontaktkort</li><li><strong>iCloud-lagring:</strong> Automatisk backup och filsynkronisering (från $0,99/användare/månad)</li></ul><small class="text-muted">Kräver iOS 26, iPadOS 26 eller macOS 26</small></div></div>
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-geo-alt"></i><h3>Varumärke och Kundupptäckt</h3><ul><li><strong>Varumärkesprofiler:</strong> Hantera ditt varumärke på Apple Maps, Wallet och Mail</li><li><strong>Rika Platskort:</strong> Foton, öppettider, platsdetaljer på Apple Maps</li><li><strong>Platsinsikter:</strong> Analys av hur kunder upptäcker ditt företag</li><li><strong>Anpassade Åtgärder:</strong> Beställ, reservera eller boka direkt från Apple Maps</li><li><strong>Tap to Pay:</strong> Acceptera betalningar på iPhone med märkta betalningsskärmar</li></ul></div></div>
-    </div>
-    <h3 style="margin-top:3rem;">Apple Business Prissättning</h3>
-    <div class="row g-5 mt-2">
-      <div class="col-md-4"><div class="m-t" style="text-align:center;"><i class="bi bi-check-circle"></i><h3>Basplattform</h3><h2 style="color:#81BD4A;">Gratis</h2><p>MDM, Blueprints, Hanterade Konton, Varumärkeshantering, Appdistribution, Admin API</p></div></div>
-      <div class="col-md-4"><div class="m-t" style="text-align:center;"><i class="bi bi-cloud"></i><h3>iCloud-lagring</h3><h2>$0,99+</h2><p>Per användare/månad. Upp till 2TB per användare för backup, filsynk och samarbete.</p></div></div>
-      <div class="col-md-4"><div class="m-t" style="text-align:center;"><i class="bi bi-wrench"></i><h3>AppleCare+ for Business</h3><h2>$6,99-$13,99</h2><p>Per enhet/månad. Expertteknisk support och hårdvarureparationstäckning.</p></div></div>
+  </div>
+</div>
+
+<!-- OPEN SOURCE -->
+<div class="m-bg" id="opensource" style="padding:7rem 0;">
+  <div class="container">
+    <div class="m-r">
+      <div class="m-ri"><img loading="lazy" src="../../assets/images/stock/code-screen.webp" alt="Open-source-utveckling"></div>
+      <div class="m-rt">
+        <h2>Ersätt licenser.<br>Behåll funktionaliteten.</h2>
+        <p>Nextcloud för filer. Collabora för dokument. Matrix för chatt. Keycloak för SSO. Prometheus för övervakning. Allt open-source, allt egenvärt, allt ditt.</p>
+        <div class="lk"><a href="../../sv/booking/" class="m-lk">Planera din stack</a></div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="m-bg" id="packages">
+<!-- UNIX -->
+<div class="m-s" id="unix" style="padding:7rem 0;">
   <div class="container">
-    <h2>SMF-paket</h2>
-    <p class="sub">Skräddarsydda paket som kombinerar Open-Source, UNIX och Apple-infrastruktur för ditt företag.</p>
-    <div class="row g-5">
+    <div class="m-r rv">
+      <div class="m-ri"><img loading="lazy" src="../../assets/images/stock/hacker-screens.webp" alt="UNIX-serverinfrastruktur"></div>
+      <div class="m-rt">
+        <h2>Servrar som sköter<br>sig själva.</h2>
+        <p>NixOS för deklarativa, reproducerbara driftsättningar. OpenBSD för brandväggar. FreeBSD för ZFS-lagring. Debian för allt annat. Härdade som standard.</p>
+        <div class="lk"><a href="../../sv/booking/" class="m-lk">Designa din infrastruktur</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- APPLE -->
+<div class="m-bg" id="apple" style="padding:7rem 0;">
+  <div class="container">
+    <div class="m-r">
+      <div class="m-ri"><img loading="lazy" src="../../assets/images/stock/team-macbooks.webp" alt="Apple Business-distribution"></div>
+      <div class="m-rt">
+        <h2>Apple Business.<br>Gratis. Inbyggt. Klart.</h2>
+        <p>Den nya enhetliga plattformen lanseras 14 april 2026. Gratis MDM, Blueprints för zero-touch-konfiguration, företags-e-post på din domän och varumärkeshantering på Maps, Wallet och Mail.</p>
+        <div class="lk"><a href="../../sv/booking/" class="m-lk">Konfigurera Apple Business</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PACKAGES -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Välj din startpunkt</h2>
+    <p class="sub">Alla paket inkluderar driftsättning, härdning, övervakning och support.</p>
+    <div class="row g-4">
       <div class="col-md-4">
-        <div class="card pricing-card mb-4 h-100">
-          <div class="card-header bg-primary text-white text-center"><h3 class="mb-0">Starter</h3><small>1-10 anställda</small></div>
-          <div class="card-body">
-            <h4 class="text-center mb-4">För små team som kommer igång</h4>
-            <ul>
-              <li><i class="bi bi-check-circle text-success me-2"></i>Apple Business-installation och Blueprints</li>
-              <li><i class="bi bi-check-circle text-success me-2"></i>1 Linux-server (Debian/Ubuntu)</li>
-              <li><i class="bi bi-check-circle text-success me-2"></i>Nextcloud (filer, kontakter, kalender)</li>
-              <li><i class="bi bi-check-circle text-success me-2"></i>Företags-e-post på egen domän</li>
-              <li><i class="bi bi-check-circle text-success me-2"></i>Grundläggande brandvägg (OpenBSD pf eller UFW)</li>
-              <li><i class="bi bi-check-circle text-success me-2"></i>Automatiserade backuper (Restic)</li>
-              <li><i class="bi bi-check-circle text-success me-2"></i>Drifttidsövervakning</li>
-            </ul>
-            <div class="text-center mt-auto"><a href="../../booking/" class="m-b">Boka Konsultation</a></div>
-          </div>
+        <div class="m-pkg">
+          <h3>Starter</h3>
+          <div class="sz">1–10 anställda</div>
+          <ul>
+            <li>Apple Business-installation</li>
+            <li>1 Linux-server</li>
+            <li>Nextcloud + e-post</li>
+            <li>Grundläggande brandvägg</li>
+            <li>Automatiserade backuper</li>
+            <li>Drifttidsövervakning</li>
+          </ul>
+          <a href="../../sv/booking/" class="m-lk">Begär en offert</a>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card pricing-card pricing-featured mb-4 h-100">
-          <div class="card-header text-white text-center"><h3 class="mb-0">Growth</h3><small>11-50 anställda</small></div>
-          <div class="card-body">
-            <h4 class="text-center mb-4">För växande företag</h4>
-            <ul>
-              <li><i class="bi bi-check-circle text-success me-2"></i>Allt i Starter, plus:</li>
-              <li><i class="bi bi-check-circle text-success me-2"></i>Fullständigt Apple MDM med teamgruppering</li>
-              <li><i class="bi bi-check-circle text-success me-2"></i>Dedikerad OpenBSD-brandvägg/VPN</li>
-              <li><i class="bi bi-check-circle text-success me-2"></i>Keycloak SSO på alla system</li>
-              <li><i class="bi bi-check-circle text-success me-2"></i>Matrix/Element teammeddelanden</li>
-              <li><i class="bi bi-check-circle text-success me-2"></i>Collabora Online (dokumentredigering)</li>
-              <li><i class="bi bi-check-circle text-success me-2"></i>Prometheus + Grafana-övervakning</li>
-              <li><i class="bi bi-check-circle text-success me-2"></i>Samba/AD-brygga (vid behov)</li>
-            </ul>
-            <div class="text-center mt-auto"><a href="../../booking/" class="m-b">Boka Konsultation</a></div>
-          </div>
+        <div class="m-pkg ft">
+          <div class="m-badge">Mest populär</div>
+          <h3>Growth</h3>
+          <div class="sz">11–50 anställda</div>
+          <ul>
+            <li>Allt i Starter</li>
+            <li>Fullständigt Apple MDM</li>
+            <li>OpenBSD-brandvägg + VPN</li>
+            <li>Keycloak SSO</li>
+            <li>Matrix-meddelanden</li>
+            <li>Collabora-dokument</li>
+            <li>Prometheus + Grafana</li>
+          </ul>
+          <a href="../../sv/booking/" class="m-b" style="font-size:0.9rem; padding:0.7rem 1.75rem; color:#fff !important;">Boka konsultation</a>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card pricing-card mb-4 h-100">
-          <div class="card-header bg-warning text-dark text-center"><h3 class="mb-0">Enterprise</h3><small>50+ anställda</small></div>
-          <div class="card-body">
-            <h4 class="text-center mb-4">För komplexa flersitesverksamheter</h4>
-            <ul>
-              <li><i class="bi bi-check-circle text-success me-2"></i>Allt i Growth, plus:</li>
-              <li><i class="bi bi-check-circle text-success me-2"></i>Apple Business Admin API-integration</li>
-              <li><i class="bi bi-check-circle text-success me-2"></i>NixOS deklarativ flerserverflotta</li>
-              <li><i class="bi bi-check-circle text-success me-2"></i>FreeBSD ZFS-lagringskluster</li>
-              <li><i class="bi bi-check-circle text-success me-2"></i>Högtillgänglighetskonfigurationer</li>
-              <li><i class="bi bi-check-circle text-success me-2"></i>VPN-mesh för flera platser</li>
-              <li><i class="bi bi-check-circle text-success me-2"></i>Efterlevnadsbaslinjer (NIS2, GDPR)</li>
-              <li><i class="bi bi-check-circle text-success me-2"></i>24/7-övervakning och incidenthantering</li>
-            </ul>
-            <div class="text-center mt-auto"><a href="../../booking/" class="m-b">Boka Konsultation</a></div>
-          </div>
+        <div class="m-pkg">
+          <h3>Enterprise</h3>
+          <div class="sz">50+ anställda</div>
+          <ul>
+            <li>Allt i Growth</li>
+            <li>NixOS flerserverflotta</li>
+            <li>FreeBSD ZFS-lagring</li>
+            <li>VPN-mesh för flera platser</li>
+            <li>NIS2 + GDPR-baslinjer</li>
+            <li>24/7 incidenthantering</li>
+          </ul>
+          <a href="../../sv/booking/" class="m-lk">Kontakta oss</a>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="m-s">
+<!-- RELATED -->
+<div class="m-bg" style="padding:5rem 0;">
   <div class="container">
-    <h2>Branscher vi betjänar</h2>
-    <p class="sub">Våra digitala infrastrukturlösningar är utformade för alla verksamhetsområden.</p>
-    <div class="row g-5">
-      <div class="col-md-3 col-6"><div class="m-t"><i class="bi bi-building"></i><h3>Juridik och Konsulting</h3></div></div>
-      <div class="col-md-3 col-6"><div class="m-t"><i class="bi bi-heart-pulse"></i><h3>Sjukvård och Kliniker</h3></div></div>
-      <div class="col-md-3 col-6"><div class="m-t"><i class="bi bi-gear"></i><h3>Tillverkning</h3></div></div>
-      <div class="col-md-3 col-6"><div class="m-t"><i class="bi bi-shop"></i><h3>Detaljhandel och Besöksnäring</h3></div></div>
-      <div class="col-md-3 col-6"><div class="m-t"><i class="bi bi-truck"></i><h3>Logistik och Transport</h3></div></div>
-      <div class="col-md-3 col-6"><div class="m-t"><i class="bi bi-palette"></i><h3>Kreativa Branscher och Media</h3></div></div>
-      <div class="col-md-3 col-6"><div class="m-t"><i class="bi bi-mortarboard"></i><h3>Utbildning</h3></div></div>
-      <div class="col-md-3 col-6"><div class="m-t"><i class="bi bi-bank"></i><h3>Finans och Försäkring</h3></div></div>
+    <h2>Relaterade tjänster</h2>
+    <p class="sub">Infrastruktur fungerar bäst med rätt säkerhets- och molnstrategi.</p>
+    <div class="row g-4">
+      <div class="col-md-4"><a href="../../sv/security/" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="../../assets/images/stock/cybersecurity-monitor.webp" alt="Säkerhet"><div class="pg-card-body"><h3>Säkerhet</h3><p>24/7 SOC, hotjakt och NIS2-efterlevnad.</p></div></div></a></div>
+      <div class="col-md-4"><a href="../../sv/services/cloud/" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="../../assets/images/stock/network-closeup.webp" alt="Moln"><div class="pg-card-body"><h3>Molntjänster</h3><p>EU-först molnmigrering och multi-molnhantering.</p></div></div></a></div>
+      <div class="col-md-4"><a href="../../sv/compare.html" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="../../assets/images/stock/terminal-green.webp" alt="Jämför"><div class="pg-card-body"><h3>Varför Open Source</h3><p>Se hur open-source-stackar står sig mot proprietära alternativ.</p></div></div></a></div>
     </div>
   </div>
 </div>
 
-<div class="m-bg">
-  <div class="container">
-    <h2>Varför välja chen.ist</h2>
-    <p class="sub">Vår expertis och vårt tillvägagångssätt för Digital Infrastruktur.</p>
-    <div class="row g-5">
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-award"></i><h3>Vår Expertis</h3><ul><li><strong>UNIX-veteraner:</strong> Djup expertis inom BSD, Linux och macOS-administration</li><li><strong>Open-Source-bidragsgivare:</strong> Vi bidrar till verktygen vi driftsätter</li><li><strong>Tidiga Apple Business-användare:</strong> Redo från dag ett (14 april 2026)</li><li><strong>Säkerhet först-tänk:</strong> Varje distribution härdas som standard</li><li><strong>Cross-Platform-flyt:</strong> Sömlös integration mellan UNIX, Apple och Windows</li></ul></div></div>
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-compass"></i><h3>Vårt Tillvägagångssätt</h3><ul><li><strong>Ingen leverantörsinlåsning:</strong> Open-source och standardprotokoll</li><li><strong>Rätt Dimensionerade Lösningar:</strong> Vi matchar komplexitet med faktiska behov</li><li><strong>Transparent Prissättning:</strong> Du betalar för vår expertis, inte för licenser</li><li><strong>Kunskapsöverföring:</strong> Vi dokumenterar allt och utbildar ditt team</li><li><strong>Långsiktigt Partnerskap:</strong> Löpande support och utveckling</li></ul></div></div>
-    </div>
-  </div>
-</div>
-
+<!-- CTA -->
 <div class="m-cta">
   <div class="container">
     <div class="m-d"></div>
-    <h2>Redo att bygga din<br>digitala infrastruktur?</h2>
-    <p>Boka en gratis konsultation för att diskutera dina affärsbehov och få ett skräddarsytt infrastrukturförslag.</p>
-    <a href="../../booking/" class="m-b">Boka en Konsultation</a>
+    <h2>Din infrastruktur,<br>byggd rätt</h2>
+    <p>30 minuter. Ingen pitch. Bara en ärlig bedömning av vad vi kan bygga åt dig.</p>
+    <a href="../../sv/booking/" class="m-b" style="color:#fff !important;">Boka din gratis granskning</a>
+    <div class="m-sm">
+      <i class="bi bi-check-circle-fill"></i> Gratis &nbsp;
+      <i class="bi bi-check-circle-fill"></i> Ingen inlåsning &nbsp;
+      <i class="bi bi-check-circle-fill"></i> Förslag inom 48h
+    </div>
   </div>
 </div>
 
@@ -1280,9 +1307,9 @@ main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !imp
         <div style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:1rem; font-family:'Source Code Pro',monospace;">chen<span style="color:#81BD4A;">.</span>ist</div>
         <p style="margin-bottom:1rem; color:rgba(255,255,255,0.4);" class="footer-i18n" data-key="tagline">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
         <div style="display:flex; gap:0.75rem; margin-bottom:1rem;">
-          <a href="https://github.com/chenist" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-github"></i></a>
-          <a href="https://linkedin.com/in/chenistsec" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-linkedin"></i></a>
-          <a href="https://alinmechenici.substack.com" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-envelope"></i></a>
+          <a href="https://github.com/chenist" target="_blank" class="footer-social"><i class="bi bi-github"></i></a>
+          <a href="https://linkedin.com/in/chenistsec" target="_blank" class="footer-social"><i class="bi bi-linkedin"></i></a>
+          <a href="https://alinmechenici.substack.com" target="_blank" class="footer-social"><i class="bi bi-envelope"></i></a>
         </div>
         <p style="color:rgba(255,255,255,0.2); font-size:0.75rem;">© 2026 chen.ist</p>
       </div>
@@ -1293,6 +1320,7 @@ main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !imp
         <a href="../../services/cloud/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
         <a href="../../services/nis2/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="nis2">NIS2 Compliance</a>
         <a href="../../services/digital-resilience/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="resilience">Digital Resilience</a>
+        <a href="../../services/gdpr/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">GDPR Compliance</a>
       </div>
       <div>
         <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="academy">Academy</div>
@@ -1307,6 +1335,7 @@ main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !imp
         <a href="../../about/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="about">About</a>
         <a href="../../blog.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
         <a href="../../contact.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="contact">Contact</a>
+        <a href="../../faq.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">FAQ</a>
         <a href="../../privacy.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="privacy">Privacy</a>
         <a href="../../terms.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="terms">Terms</a>
       </div>
@@ -1322,9 +1351,19 @@ main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !imp
 
 <style>
 @media (max-width:991px) { footer > div > div { grid-template-columns: 2fr 1fr 1fr !important; } }
-@media (max-width:767px) { footer > div > div { grid-template-columns: 1fr 1fr !important; gap:2rem !important; } }
-@media (max-width:480px) { footer > div > div { grid-template-columns: 1fr !important; } }
+@media (max-width:767px) {
+  footer { padding: 3rem 0 2rem !important; font-size: 0.8rem !important; }
+  footer > div > div { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
+  footer a { padding: 0.3rem 0 !important; min-height: 36px; display: inline-flex; align-items: center; }
+}
+@media (max-width:480px) {
+  footer > div > div { grid-template-columns: 1fr !important; gap: 1.75rem !important; }
+  footer { padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px)) !important; }
+}
 footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
+footer a { -webkit-tap-highlight-color: transparent; }
+.footer-social { display:flex !important; align-items:center !important; justify-content:center !important; width:40px !important; height:40px !important; min-height:40px !important; border-radius:50% !important; background:rgba(255,255,255,0.06) !important; color:rgba(255,255,255,0.5) !important; text-decoration:none !important; font-size:1rem !important; padding:0 !important; }
+.footer-social:hover { background:rgba(129,189,74,0.15) !important; color:#81BD4A !important; }
 </style>
 
 <script>
@@ -1337,7 +1376,12 @@ footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
   document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
     var href = a.getAttribute('href');
     if (href && href.startsWith('/') && !href.startsWith('//')) {
-      a.setAttribute('href', prefix + href);
+      // Swedish blog is at /sv/blogg.html, not /sv/blog.html
+      if (lang === 'sv' && href === '/blog.html') {
+        a.setAttribute('href', '/sv/blogg.html');
+      } else {
+        a.setAttribute('href', prefix + href);
+      }
     }
   });
 
@@ -1448,6 +1492,7 @@ document.addEventListener('DOMContentLoaded', function() {
       a.href = l.prefix + (cleanPath || '/');
       a.textContent = l.label;
       if (l.code === currentLang) a.className = 'active';
+      a.addEventListener('click', function(e) { localStorage.setItem('chen-lang-choice', this.textContent.toLowerCase() === 'en' ? 'en' : ''); });
       langsDiv.appendChild(a);
     }
 
@@ -1462,11 +1507,12 @@ document.addEventListener('DOMContentLoaded', function() {
   })();
 });
 </script>
-<!-- Cal.com floating button -->
+<!-- Cal.com embed (for booking page only, no floating button) -->
 <script>
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-  Cal("init", {origin:"https://cal.com"});
-  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
+  if (window.location.pathname.includes('/booking/')) {
+    Cal("init", {origin:"https://cal.com"});
+  }
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
