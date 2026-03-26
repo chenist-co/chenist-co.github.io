@@ -1,17 +1,40 @@
 ---
 title: "Security Implementation Guide"
-page-layout: custom
-title-block-style: none
+page-layout: article
+toc: true
+    toc-depth: 3
 description: "A comprehensive guide to implementing robust security practices in your organization"
 date: "2025-03-01"
 categories: [security, implementation, best-practices]
 ---
 
-# Security Implementation Guide
+```{=html}
+<div class="m">
 
-## Introduction
+<div class="m-hero">
+  <div class="container">
+    <h1>Security <span class="gr">Implementation</span> Guide</h1>
+    <p>A comprehensive approach to implementing robust security practices in your organization.</p>
+  </div>
+</div>
 
-This guide provides a comprehensive approach to implementing robust security practices in your organization. It covers everything from risk assessment and governance to technical controls and incident response.
+<div class="m-bg m-bg-stripes">
+  <div class="container">
+    <h2>What This Guide Covers</h2>
+    <p class="sub">End-to-end security from governance to incident response.</p>
+    <div class="row g-5">
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-building"></i><h3>Security Governance</h3><p>Establish programs, policies, and leadership structures.</p></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-exclamation-triangle"></i><h3>Risk Management</h3><p>Identify, assess, and treat risks systematically.</p></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-person-lock"></i><h3>Identity & Access</h3><p>Least privilege, MFA, and privileged access management.</p></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-hdd-network"></i><h3>Network Security</h3><p>Segmentation, defense in depth, and monitoring.</p></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-database-lock"></i><h3>Data Security</h3><p>Classification, encryption, and lifecycle protection.</p></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-bell"></i><h3>Incident Response</h3><p>Preparation, detection, containment, and recovery.</p></div></div>
+    </div>
+  </div>
+</div>
+
+</div>
+```
 
 ## Security Governance
 
@@ -39,8 +62,6 @@ Develop and implement the following key security policies:
 
 ### Risk Assessment Process
 
-Implement a structured risk assessment process:
-
 1. **Asset Identification**: Catalog critical systems, applications, and data
 2. **Threat Identification**: Identify potential threats to assets
 3. **Vulnerability Assessment**: Evaluate weaknesses that could be exploited
@@ -65,8 +86,6 @@ Maintain a risk register documenting:
 
 ### Access Control Principles
 
-Implement these fundamental access control principles:
-
 - **Least Privilege**: Grant minimum access needed for job functions
 - **Separation of Duties**: Divide critical functions among multiple people
 - **Need-to-Know**: Restrict access to information based on business need
@@ -85,8 +104,6 @@ Implement these fundamental access control principles:
 
 ### Network Architecture
 
-Design a secure network architecture:
-
 1. **Network Segmentation**: Divide network into security zones
 2. **Defense in Depth**: Implement multiple layers of security controls
 3. **Perimeter Security**: Deploy firewalls, IDS/IPS, and proxies at network boundaries
@@ -94,8 +111,6 @@ Design a secure network architecture:
 5. **Remote Access**: Secure VPN and remote access solutions
 
 ### Network Security Controls
-
-Implement these network security measures:
 
 - **Next-Generation Firewalls**: Application-aware filtering and inspection
 - **Network Monitoring**: Continuous monitoring for anomalous traffic
@@ -107,8 +122,6 @@ Implement these network security measures:
 
 ### Endpoint Protection Strategy
 
-Develop a comprehensive endpoint protection strategy:
-
 1. **Endpoint Protection Platform**: Anti-malware, host firewall, device control
 2. **Endpoint Detection and Response**: Advanced threat detection and response
 3. **Patch Management**: Timely application of security updates
@@ -117,8 +130,6 @@ Develop a comprehensive endpoint protection strategy:
 6. **Data Loss Prevention**: Prevent unauthorized data exfiltration
 
 ### Secure Configuration
-
-Implement secure baseline configurations:
 
 - **Operating System Hardening**: Remove unnecessary services and applications
 - **Security Settings**: Apply secure configuration templates (CIS Benchmarks)
@@ -130,8 +141,6 @@ Implement secure baseline configurations:
 
 ### Cloud Security Framework
 
-Develop a cloud security framework addressing:
-
 1. **Shared Responsibility**: Understand provider versus customer responsibilities
 2. **Identity and Access**: Secure cloud IAM implementation
 3. **Data Protection**: Encryption and data security controls
@@ -140,8 +149,6 @@ Develop a cloud security framework addressing:
 6. **Security Monitoring**: Visibility into cloud environments
 
 ### Cloud Security Implementation
-
-For each cloud platform, implement:
 
 - **Identity Federation**: Integrate with enterprise identity systems
 - **Privileged Access Management**: Secure administrative access
@@ -154,8 +161,6 @@ For each cloud platform, implement:
 
 ### Secure Development Lifecycle
 
-Implement security throughout the development lifecycle:
-
 1. **Security Requirements**: Define security requirements early
 2. **Threat Modeling**: Identify potential threats during design
 3. **Secure Coding**: Follow secure coding standards
@@ -164,8 +169,6 @@ Implement security throughout the development lifecycle:
 6. **Secure Deployment**: Implement secure deployment practices
 
 ### Application Security Controls
-
-Implement these application security controls:
 
 - **Input Validation**: Validate all user input
 - **Output Encoding**: Encode output to prevent injection attacks
@@ -180,8 +183,6 @@ Implement these application security controls:
 
 ### Data Protection Strategy
 
-Develop a comprehensive data protection strategy:
-
 1. **Data Classification**: Categorize data based on sensitivity
 2. **Data Inventory**: Maintain inventory of sensitive data locations
 3. **Data Protection Controls**: Apply controls based on classification
@@ -189,8 +190,6 @@ Develop a comprehensive data protection strategy:
 5. **Data Loss Prevention**: Prevent unauthorized data disclosure
 
 ### Data Security Implementation
-
-Implement these data security measures:
 
 - **Encryption**: Protect data in transit and at rest
 - **Database Security**: Secure database configurations and access controls
@@ -203,8 +202,6 @@ Implement these data security measures:
 
 ### Security Operations Center
 
-Establish a Security Operations Center with these capabilities:
-
 1. **Log Collection**: Centralized collection of security logs
 2. **Security Monitoring**: Real-time analysis of security events
 3. **Threat Detection**: Identification of potential security threats
@@ -213,8 +210,6 @@ Establish a Security Operations Center with these capabilities:
 6. **Security Analytics**: Advanced analysis of security data
 
 ### Security Monitoring Implementation
-
-Implement these security monitoring components:
 
 - **Security Information and Event Management (SIEM)**: Centralized log management and correlation
 - **Network Traffic Analysis**: Monitoring network traffic for threats
@@ -227,8 +222,6 @@ Implement these security monitoring components:
 
 ### Incident Response Plan
 
-Develop an incident response plan covering:
-
 1. **Preparation**: Resources, tools, and training
 2. **Identification**: Detection and initial assessment
 3. **Containment**: Limiting the impact of incidents
@@ -237,8 +230,6 @@ Develop an incident response plan covering:
 6. **Lessons Learned**: Post-incident review and improvement
 
 ### Incident Response Capabilities
-
-Build these incident response capabilities:
 
 - **Incident Response Team**: Skilled personnel with defined roles
 - **Incident Response Procedures**: Documented procedures for different incident types
@@ -251,8 +242,6 @@ Build these incident response capabilities:
 
 ### Security Awareness Program
 
-Establish a comprehensive security awareness program:
-
 1. **Baseline Assessment**: Evaluate current security awareness levels
 2. **Training Curriculum**: Develop role-based security training
 3. **Delivery Methods**: Utilize diverse training delivery methods
@@ -262,20 +251,12 @@ Establish a comprehensive security awareness program:
 
 ### Security Culture
 
-Foster a positive security culture through:
-
 - **Leadership Support**: Visible commitment from leadership
 - **Clear Expectations**: Defined security responsibilities
 - **Positive Reinforcement**: Recognition of good security practices
 - **Transparent Communication**: Open discussion of security issues
 - **Learning Environment**: Emphasis on learning rather than punishment
 - **Empowerment**: Enabling employees to make security-conscious decisions
-
-## Conclusion
-
-Implementing a robust security program is a continuous journey. Begin with a risk-based approach, focusing on the most critical assets and significant risks. Build a solid foundation with governance structures, basic controls, and security awareness. Gradually enhance security capabilities over time, prioritizing improvements based on evolving threats and business needs.
-
-Remember that security is not solely a technical challenge—it requires alignment with business objectives, executive support, and a positive security culture. By taking a comprehensive and balanced approach, organizations can effectively manage security risks while enabling business growth and innovation.
 
 ## References and Resources
 
@@ -284,3 +265,21 @@ Remember that security is not solely a technical challenge—it requires alignme
 - CIS Critical Security Controls
 - OWASP Application Security Verification Standard
 - Cloud Security Alliance Cloud Controls Matrix
+
+```{=html}
+<div class="m">
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Need help implementing security?</h2>
+    <p>Our team can help you build a security program tailored to your organization.</p>
+    <a href="https://cal.com/chenist" target="_blank" class="m-b">Book a free consultation</a>
+    <div class="m-sm">
+      <i class="bi bi-check-circle-fill"></i> Free &nbsp;
+      <i class="bi bi-check-circle-fill"></i> 30 min &nbsp;
+      <i class="bi bi-check-circle-fill"></i> No commitment
+    </div>
+  </div>
+</div>
+</div>
+```
