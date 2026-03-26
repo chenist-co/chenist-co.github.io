@@ -787,52 +787,67 @@ main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !imp
   <div class="container">
     <h2>Pick your starting point</h2>
     <p class="sub">All packages include deployment, hardening, monitoring, and support.</p>
-    <div class="row g-4">
+    <div class="row g-4 justify-content-center">
       <div class="col-md-4">
-        <div class="m-pkg">
-          <h3>Starter</h3>
-          <div class="sz">1–10 employees</div>
-          <ul>
-            <li>Apple Business setup</li>
-            <li>1 Linux server</li>
-            <li>Nextcloud + email</li>
-            <li>Basic firewall</li>
-            <li>Automated backups</li>
-            <li>Uptime monitoring</li>
-          </ul>
-          <a href="../booking/" class="m-lk">Get a quote</a>
+        <div style="border:1.5px solid rgba(129,189,74,0.1); border-radius:20px; padding:2.5rem 2rem; height:100%; display:flex; flex-direction:column; transition:border-color 0.2s, transform 0.2s;" onmouseover="this.style.borderColor='rgba(129,189,74,0.3)';this.style.transform='translateY(-4px)';" onmouseout="this.style.borderColor='rgba(129,189,74,0.1)';this.style.transform='none';">
+          <div style="width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:rgba(129,189,74,0.08);border-radius:12px;margin-bottom:1.25rem;">
+            <i class="bi bi-rocket-takeoff" style="font-size:1.25rem;color:#81BD4A;"></i>
+          </div>
+          <h3 style="font-size:1.35rem;font-weight:700;margin-bottom:0.15rem;">Starter</h3>
+          <div style="font-size:0.85rem;color:#86868b;margin-bottom:1.5rem;">1–10 employees</div>
+          <div style="flex-grow:1;">
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Apple Business setup</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>1 Linux server</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Nextcloud + email</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Basic firewall</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Automated backups</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Uptime monitoring</span></div>
+          </div>
+          <div style="margin-top:1.75rem;text-align:center;">
+            <a href="../booking/" class="m-bo" style="width:100%;display:block;text-align:center;">Get a quote</a>
+          </div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="m-pkg ft">
-          <div class="m-badge">Most popular</div>
-          <h3>Growth</h3>
-          <div class="sz">11–50 employees</div>
-          <ul>
-            <li>Everything in Starter</li>
-            <li>Full Apple MDM</li>
-            <li>OpenBSD firewall + VPN</li>
-            <li>Keycloak SSO</li>
-            <li>Matrix messaging</li>
-            <li>Collabora documents</li>
-            <li>Prometheus + Grafana</li>
-          </ul>
-          <a href="../booking/" class="m-b" style="font-size:0.9rem; padding:0.7rem 1.75rem; color:#fff !important;">Book consultation</a>
+        <div style="border:2px solid #81BD4A; border-radius:20px; padding:2.5rem 2rem; height:100%; display:flex; flex-direction:column; position:relative; transition:transform 0.2s; box-shadow:0 8px 30px rgba(129,189,74,0.1);" onmouseover="this.style.transform='translateY(-4px)';" onmouseout="this.style.transform='none';">
+          <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:#81BD4A;color:#fff;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:0.3rem 1rem;border-radius:980px;">Most popular</div>
+          <div style="width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:rgba(129,189,74,0.12);border-radius:12px;margin-bottom:1.25rem;">
+            <i class="bi bi-graph-up-arrow" style="font-size:1.25rem;color:#81BD4A;"></i>
+          </div>
+          <h3 style="font-size:1.35rem;font-weight:700;margin-bottom:0.15rem;">Growth</h3>
+          <div style="font-size:0.85rem;color:#86868b;margin-bottom:1.5rem;">11–50 employees</div>
+          <div style="flex-grow:1;">
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Everything in Starter</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Full Apple MDM</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>OpenBSD firewall + VPN</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Keycloak SSO</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Matrix messaging</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Collabora documents</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Prometheus + Grafana</span></div>
+          </div>
+          <div style="margin-top:1.75rem;text-align:center;">
+            <a href="../booking/" class="m-b" style="width:100%;display:block;text-align:center;color:#fff !important;">Book consultation</a>
+          </div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="m-pkg">
-          <h3>Enterprise</h3>
-          <div class="sz">50+ employees</div>
-          <ul>
-            <li>Everything in Growth</li>
-            <li>NixOS multi-server fleet</li>
-            <li>FreeBSD ZFS storage</li>
-            <li>Multi-site VPN mesh</li>
-            <li>NIS2 + GDPR baselines</li>
-            <li>24/7 incident response</li>
-          </ul>
-          <a href="../booking/" class="m-lk">Contact us</a>
+        <div style="border:1.5px solid rgba(129,189,74,0.1); border-radius:20px; padding:2.5rem 2rem; height:100%; display:flex; flex-direction:column; transition:border-color 0.2s, transform 0.2s;" onmouseover="this.style.borderColor='rgba(129,189,74,0.3)';this.style.transform='translateY(-4px)';" onmouseout="this.style.borderColor='rgba(129,189,74,0.1)';this.style.transform='none';">
+          <div style="width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:rgba(129,189,74,0.08);border-radius:12px;margin-bottom:1.25rem;">
+            <i class="bi bi-building" style="font-size:1.25rem;color:#81BD4A;"></i>
+          </div>
+          <h3 style="font-size:1.35rem;font-weight:700;margin-bottom:0.15rem;">Enterprise</h3>
+          <div style="font-size:0.85rem;color:#86868b;margin-bottom:1.5rem;">50+ employees</div>
+          <div style="flex-grow:1;">
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Everything in Growth</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>NixOS multi-server fleet</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>FreeBSD ZFS storage</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>Multi-site VPN mesh</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>NIS2 + GDPR baselines</span></div>
+            <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.4rem 0;font-size:0.88rem;"><i class="bi bi-check2" style="color:#81BD4A;margin-top:0.15rem;flex-shrink:0;"></i><span>24/7 incident response</span></div>
+          </div>
+          <div style="margin-top:1.75rem;text-align:center;">
+            <a href="../booking/" class="m-bo" style="width:100%;display:block;text-align:center;">Contact us</a>
+          </div>
         </div>
       </div>
     </div>
