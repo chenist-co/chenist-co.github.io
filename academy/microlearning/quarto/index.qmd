@@ -1,0 +1,113 @@
+---
+title: "Quarto Publishing"
+title-block-style: none
+subtitle: "Build websites, documents, and presentations with Quarto in just 2 hours"
+description: "Learn Quarto, the next-generation open-source publishing system for creating reproducible documents, presentations, dashboards, websites, and books using Markdown."
+page-layout: custom
+toc: false
+format:
+  html:
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
+date-modified: last-modified
+categories:
+  - publishing
+  - documentation
+  - open-source
+  - markdown
+---
+
+```{=html}
+<div class="m">
+
+<div class="m-hero">
+  <div class="container">
+    <h1>Quarto Publishing</h1>
+    <p>Build websites, documents, and presentations with the modern open-source publishing system</p>
+  </div>
+</div>
+```
+
+# Session Overview
+
+This 2-hour microlearning session introduces Quarto, a next-generation open-source scientific and technical publishing system built on Pandoc. Quarto lets you create reproducible documents, presentations, dashboards, websites, and books from plain text Markdown files. It supports Python, R, Julia, and Observable JS for executable code, and outputs to HTML, PDF (via Typst or LaTeX), Word, and more.
+
+## What You'll Learn
+
+- Install and configure Quarto on your system
+- Understand YAML frontmatter and project configuration
+- Create documents with Markdown, code blocks, and cross-references
+- Build multi-page websites with navigation and theming
+- Generate PDF output via Typst
+- Publish to GitHub Pages, Netlify, or Quarto Pub
+- Use layouts, callouts, and tabsets for rich content
+
+# Session Curriculum
+
+## Part 1: Getting Started (30 minutes)
+
+- Installing Quarto (CLI and VS Code / RStudio integration)
+- Creating your first `.qmd` document
+- Understanding YAML frontmatter options
+- Rendering to HTML and PDF
+- Markdown syntax refresher (headers, lists, links, images)
+- Callout blocks, tabsets, and layout columns
+
+## Part 2: Documents and Presentations (30 minutes)
+
+- Multi-format output (HTML, PDF via Typst, DOCX, RevealJS slides)
+- Code execution with Python, R, or Julia
+- Figure and table cross-references
+- Citations and bibliography management
+- Custom styling with CSS and SCSS
+- Parameterized documents
+
+## Part 3: Websites and Books (30 minutes)
+
+- Setting up a `_quarto.yml` project
+- Website navigation (navbar, sidebar, footer)
+- Blog listings and RSS feeds
+- Theming with Bootstrap and custom SCSS
+- Multi-language support
+- Book projects with chapters and appendices
+
+## Part 4: Publishing and Deployment (30 minutes)
+
+- Publishing to GitHub Pages via GitHub Actions
+- Deploying to Netlify and Quarto Pub
+- Custom domains and HTTPS
+- Continuous integration workflows
+- Performance optimization (freeze, cache)
+- Hands-on: Build and deploy a personal site
+
+# Prerequisites
+
+- Basic familiarity with Markdown
+- A text editor (VS Code recommended)
+- Command line basics
+- No programming experience required (but helpful for executable documents)
+
+# Resources
+
+- [Quarto Documentation](https://quarto.org)
+- [Quarto GitHub Repository](https://github.com/quarto-dev/quarto-cli)
+- Practice exercises and starter templates provided during session
+
+```{=html}
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Ready to publish?</h2>
+    <p>Join our next microlearning session and start building with Quarto.</p>
+    <a href="/booking/" class="m-b">Book a Call</a>
+    <div class="m-sm">
+      <i class="bi bi-check-circle-fill"></i> 2-hour session &nbsp;
+      <i class="bi bi-check-circle-fill"></i> Hands-on &nbsp;
+      <i class="bi bi-check-circle-fill"></i> All levels
+    </div>
+  </div>
+</div>
+
+</div>
+```
