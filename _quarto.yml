@@ -259,9 +259,9 @@ format:
               inner.appendChild(langsDiv);
               bar.appendChild(inner);
 
-              var content = document.getElementById('quarto-content');
-              if (content) {
-                content.insertBefore(bar, content.firstChild);
+              var header = document.getElementById('quarto-header');
+              if (header) {
+                header.appendChild(bar);
               }
             })();
           });
