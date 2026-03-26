@@ -427,8 +427,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
-    <img src="../../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
+    <img src="../../../assets/images/logo-light.svg" alt="" class="navbar-logo light-content">
+    <img src="../../../assets/images/logo-light.svg" alt="" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -626,7 +626,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="m-rt">
         <h2>Immer wachsam.<br>Immer bereit.</h2>
         <p>Unser Blue Team arbeitet rund um die Uhr mit Open-Source-Tools, die Sie prüfen können. Wir erkennen, untersuchen und reagieren auf Bedrohungen, bevor sie zu Vorfällen werden. Von der SIEM-Optimierung bis zur aktiven Bedrohungsjagd wird Ihre Umgebung kontinuierlich verteidigt.</p>
-        <div class="lk"><a href="../../../security/" class="m-lk">Unseren gesamten Sicherheitsbereich entdecken</a></div>
+        <div class="lk"><a href="../../../de/security/" class="m-lk">Unseren gesamten Sicherheitsbereich entdecken</a></div>
       </div>
     </div>
   </div>
@@ -639,7 +639,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="m-rt">
         <h2>Überwachung &amp;<br>Forensik.</h2>
         <p>Zentralisierte Log-Erfassung, Echtzeit-Korrelation und automatisierte Alarmierung in Ihrer gesamten Umgebung. Wenn Vorfälle auftreten, liefern unsere forensischen Fähigkeiten das vollständige Bild — was kompromittiert wurde, wie und was als Nächstes zu tun ist.</p>
-        <div class="lk"><a href="../../../booking/" class="m-lk">Sprechen Sie mit unserem Team</a></div>
+        <div class="lk"><a href="../../../de/booking/" class="m-lk">Sprechen Sie mit unserem Team</a></div>
       </div>
     </div>
   </div>
@@ -650,7 +650,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="m-d"></div>
     <h2>Stärken Sie Ihre<br>Sicherheitslage</h2>
     <p>30 Minuten. Kein Verkaufsgespräch. Nur ein ehrlicher Blick auf Ihren aktuellen Stand.</p>
-    <a href="../../../booking/" class="m-b">Beratung buchen</a>
+    <a href="../../../de/booking/" class="m-b">Beratung buchen</a>
     <div class="m-sm">
       <i class="bi bi-check-circle-fill"></i> Kostenlos &nbsp;
       <i class="bi bi-check-circle-fill"></i> 30 Min. &nbsp;
@@ -1156,7 +1156,12 @@ footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
   document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
     var href = a.getAttribute('href');
     if (href && href.startsWith('/') && !href.startsWith('//')) {
-      a.setAttribute('href', prefix + href);
+      // Swedish blog is at /sv/blogg.html, not /sv/blog.html
+      if (lang === 'sv' && href === '/blog.html') {
+        a.setAttribute('href', '/sv/blogg.html');
+      } else {
+        a.setAttribute('href', prefix + href);
+      }
     }
   });
 

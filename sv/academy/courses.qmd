@@ -1,8 +1,7 @@
 ---
 title: "Academy Kurser"
 title-block-style: none
-subtitle: "Omfattande tekniska utbildningsprogram"
-description: "Utforska omfattande kurser inom cybersäkerhet, open source-utveckling, Linux-administration, dataskydd och säkerhetsmedvetenhet."
+description: "chen.ist Academy-kurser genomförs på engelska och rumänska. Bli partner för att erbjuda utbildningar i ditt företag."
 from: markdown+raw_html
 page-layout: custom
 format:
@@ -16,49 +15,61 @@ format:
 ```{=html}
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>Academy <span class="gr">Kurser</span></h1>
-    <p>Omfattande flerveckorsprogram som bygger djup expertis genom praktiska projekt och expertundervisning.</p>
+<div class="ev-hero" style="min-height:50vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/code-screen.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Academy</div>
+    <h1>Kurser</h1>
+    <p>Flerveckorsprogram som bygger djup expertis genom praktiska projekt och expertinstruktion.</p>
   </div>
 </div>
 
-<div class="m-bg m-bg-squares">
-  <div class="container">
-    <h2>Sju kurser, ett mål</h2>
-    <p class="sub">Praktiska färdigheter undervisade av utövare, inte läroböcker.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-code-slash"></i><h3>Open Source-utveckling</h3><p>Git-arbetsflöden, licensiering och bidrag till riktiga projekt. 8 veckor.</p><a href="/sv/academy/courses/open-source-development/" class="m-lk">Kursdetaljer</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-shield-lock"></i><h3>Praktisk cybersäkerhet</h3><p>Nätverkssäkerhet, penetrationstestning och incidenthantering. 12 veckor.</p><a href="/sv/academy/courses/practical-cybersecurity/" class="m-lk">Kursdetaljer</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-terminal"></i><h3>Unix/Linux-administration</h3><p>Skriptning, tjänstehantering och prestandaoptimering. 10 veckor.</p><a href="/sv/academy/courses/unix-linux-administration/" class="m-lk">Kursdetaljer</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-file-earmark-lock"></i><h3>Dataskydd & Integritet</h3><p>GDPR, CCPA, privacy-by-design och incidenthantering vid dataintrång. 6 veckor.</p><a href="/sv/academy/courses/data-protection-privacy/" class="m-lk">Kursdetaljer</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-people"></i><h3>Human Firewall</h3><p>Säkerhetsmedvetenhet, försvar mot social engineering och kulturbyggande. 4 veckor.</p><a href="/sv/academy/courses/human-firewall-security-awareness/" class="m-lk">Kursdetaljer</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-bug"></i><h3>Cyberhygien Essentials</h3><p>Digital hotmedvetenhet, enhetsskydd och säkra rutiner. 6 veckor.</p><a href="/sv/academy/courses/cyberhygiene-essentials/" class="m-lk">Kursdetaljer</a></div></div>
-    </div>
-    <div class="row g-5 mt-2 justify-content-center">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-snow"></i><h3>NixOS för cybersäkerhet</h3><p>Deklarativ säkerhet, reproducerbara miljöer och systemhärdning. 4 veckor.</p><a href="/sv/academy/courses/nixos-cybersecurity/" class="m-lk">Kursdetaljer</a></div></div>
+<div class="m-bg" style="padding:5rem 0;">
+  <div class="container" style="max-width:750px;">
+    <div style="background:rgba(245,166,35,0.06); border:1px solid rgba(245,166,35,0.15); border-radius:16px; padding:2.5rem; text-align:center;">
+      <i class="bi bi-translate" style="font-size:2rem; color:#F5A623; display:block; margin-bottom:1rem;"></i>
+      <h2 style="font-size:1.5rem; margin-bottom:0.75rem;">Kurser på engelska & rumänska</h2>
+      <p style="color:rgba(255,255,255,0.6); max-width:500px; margin:0 auto 1.5rem;">Våra kurser genomförs för närvarande på engelska och rumänska. Klicka på valfri kurs nedan för fullständig information.</p>
+      <a href="/academy/courses.html" class="m-b" style="background:#F5A623;">Se alla kurser (EN)</a>
     </div>
   </div>
 </div>
 
-<div class="m-s">
+<div class="m-s" style="padding:6rem 0;">
   <div class="container">
-    <h2>Tre sätt att lära dig</h2>
-    <p class="sub">Välj det format som passar ditt schema.</p>
-    <div class="row g-5">
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-camera-video"></i><h3>Lärarledd online</h3><p>Live virtuella sessioner med interaktion i realtid, guidade övningar och inspelade repriser.</p></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-play-circle"></i><h3>I egen takt online</h3><p>On-demand-videolektioner, nedladdningsbara resurser och forumstöd i din egen takt.</p></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-building"></i><h3>Workshops på plats</h3><p>Intensiva praktiska sessioner i våra lokaler eller på plats hos din organisation.</p></div></div>
-    </div>
-  </div>
-</div>
-
-<div class="m-bg m-bg-squares">
-  <div class="container">
-    <div class="m-n">
-      <div><div class="m-nn">7</div><div class="m-nl">Kurser</div></div>
-      <div><div class="m-nn">4–12</div><div class="m-nl">Veckor per kurs</div></div>
-      <div><div class="m-nn">80%</div><div class="m-nl">Praktiskt</div></div>
+    <h2>Sju kurser</h2>
+    <p class="sub">Praktiska färdigheter undervisade av yrkesverksamma, inte läroböcker.</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="/academy/courses/practical-cybersecurity/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/cybersecurity-monitor.webp" alt="Cybersäkerhet"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">12 veckor</div><h3>Practical Cybersecurity</h3><p>Nätverkssäkerhet, pentesting och incidenthantering.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/courses/open-source-development/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="Open Source"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">8 veckor</div><h3>Open Source Development</h3><p>Git-arbetsflöden, licensiering och bidrag till riktiga projekt.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/courses/unix-linux-administration/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="Linux"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">10 veckor</div><h3>Unix/Linux Administration</h3><p>Shell-skriptning, tjänstehantering och prestandaoptimering.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/courses/data-protection-privacy/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/network-closeup.webp" alt="Dataskydd"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">6 veckor</div><h3>Data Protection & Privacy</h3><p>GDPR, CCPA, privacy-by-design och incidenthantering.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/courses/cyberhygiene-essentials/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/hacker-screens.webp" alt="Cyberhygien"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">6 veckor</div><h3>Cyberhygiene Essentials</h3><p>Digitalt hotmedvetande, enhetsskydd och säkra vanor.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/courses/human-firewall-security-awareness/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/team-macbooks.webp" alt="Human Firewall"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">4 veckor</div><h3>Human Firewall</h3><p>Säkerhetsmedvetenhet, social engineering-försvar och kulturbyggande.</p></div></div>
+        </a>
+      </div>
     </div>
   </div>
 </div>
@@ -66,13 +77,11 @@ format:
 <div class="m-cta">
   <div class="container">
     <div class="m-d"></div>
-    <h2>Hitta rätt kurs<br>för ditt team</h2>
-    <p>Anpassade grupper, flexibel schemaläggning och grupprabatter tillgängliga för organisationer.</p>
-    <a href="/sv/booking/" class="m-b">Boka ett samtal</a>
-    <div class="m-sm">
-      <i class="bi bi-check-circle-fill"></i> Expertinstruktörer &nbsp;
-      <i class="bi bi-check-circle-fill"></i> Certifiering ingår &nbsp;
-      <i class="bi bi-check-circle-fill"></i> Uppdateras kvartalsvis
+    <h2>Vill du erbjuda kurser<br>i ditt företag?</h2>
+    <p>Bli partner med vår academy. Vi hjälper dig organisera anpassade kurser och utbildningar på plats eller online.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="/sv/booking/" class="m-b" style="background:#F5A623;"><i class="bi bi-handshake me-2"></i>Bli partner</a>
+      <a href="/sv/academy/partnerships.html" class="m-bo" style="border-color:#F5A623; color:#F5A623;">Läs mer om partnerskap</a>
     </div>
   </div>
 </div>

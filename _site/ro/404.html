@@ -424,8 +424,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
-    <img src="../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
+    <img src="../assets/images/logo-light.svg" alt="" class="navbar-logo light-content">
+    <img src="../assets/images/logo-light.svg" alt="" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -601,12 +601,12 @@ document.addEventListener('DOMContentLoaded', function() {
     <h1>Pagina nu a fost găsită</h1>
     <p>Pagina pe care o căutați a fost mutată, eliminată sau nu a existat niciodată.<br>Iată câteva locuri de unde puteți începe.</p>
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:2.5rem;">
-      <a href="../" class="m-b">Acasă</a>
-      <a href="../services/" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Servicii</a>
-      <a href="../academy/" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Academy</a>
-      <a href="../contact.html" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Contact</a>
+      <a href="../ro/" class="m-b">Acasă</a>
+      <a href="../ro/services/" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Servicii</a>
+      <a href="../ro/academy/" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Academy</a>
+      <a href="../ro/contact.html" class="m-b" style="background:transparent;border:1px solid var(--gr);color:var(--gr);">Contact</a>
     </div>
-    <p style="margin-top:2rem;opacity:.7;">Sau <a href="../booking/" style="color:var(--gr);">programați un apel</a> și vă vom ghida în direcția potrivită.</p>
+    <p style="margin-top:2rem;opacity:.7;">Sau <a href="../ro/booking/" style="color:var(--gr);">programați un apel</a> și vă vom ghida în direcția potrivită.</p>
   </div>
 </div>
 
@@ -1107,7 +1107,12 @@ footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
   document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
     var href = a.getAttribute('href');
     if (href && href.startsWith('/') && !href.startsWith('//')) {
-      a.setAttribute('href', prefix + href);
+      // Swedish blog is at /sv/blogg.html, not /sv/blog.html
+      if (lang === 'sv' && href === '/blog.html') {
+        a.setAttribute('href', '/sv/blogg.html');
+      } else {
+        a.setAttribute('href', prefix + href);
+      }
     }
   });
 

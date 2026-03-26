@@ -457,8 +457,8 @@ main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !imp
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
-    <img src="../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
+    <img src="../../assets/images/logo-light.svg" alt="" class="navbar-logo light-content">
+    <img src="../../assets/images/logo-light.svg" alt="" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -801,7 +801,7 @@ main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !imp
               <li><i class="bi bi-check-circle text-success me-2"></i>Monitorizare disponibilitate</li>
             </ul>
             <div class="text-center mt-auto">
-              <a href="../../booking/" class="m-b">Programează Consultație</a>
+              <a href="../../ro/booking/" class="m-b">Programează Consultanță</a>
             </div>
           </div>
         </div>
@@ -825,7 +825,7 @@ main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !imp
               <li><i class="bi bi-check-circle text-success me-2"></i>Integrare Samba/AD (dacă este necesar)</li>
             </ul>
             <div class="text-center mt-auto">
-              <a href="../../booking/" class="m-b">Programează Consultație</a>
+              <a href="../../ro/booking/" class="m-b">Programează Consultanță</a>
             </div>
           </div>
         </div>
@@ -849,7 +849,7 @@ main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !imp
               <li><i class="bi bi-check-circle text-success me-2"></i>Monitorizare 24/7 și răspuns la incidente</li>
             </ul>
             <div class="text-center mt-auto">
-              <a href="../../booking/" class="m-b">Programează Consultație</a>
+              <a href="../../ro/booking/" class="m-b">Programează Consultanță</a>
             </div>
           </div>
         </div>
@@ -910,8 +910,8 @@ main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !imp
   <div class="container">
     <div class="m-d"></div>
     <h2>Sunteți gata să vă construiți<br>infrastructura digitală?</h2>
-    <p>Programați o consultație gratuită pentru a discuta nevoile afacerii dvs. și a primi o propunere personalizată.</p>
-    <a href="../../booking/" class="m-b">Programează o Consultație</a>
+    <p>Programați o consultanță gratuită pentru a discuta nevoile afacerii dvs. și a primi o propunere personalizată.</p>
+    <a href="../../ro/booking/" class="m-b">Programează o Consultanță</a>
   </div>
 </div>
 
@@ -1412,7 +1412,12 @@ footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
   document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
     var href = a.getAttribute('href');
     if (href && href.startsWith('/') && !href.startsWith('//')) {
-      a.setAttribute('href', prefix + href);
+      // Swedish blog is at /sv/blogg.html, not /sv/blog.html
+      if (lang === 'sv' && href === '/blog.html') {
+        a.setAttribute('href', '/sv/blogg.html');
+      } else {
+        a.setAttribute('href', prefix + href);
+      }
     }
   });
 

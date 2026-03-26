@@ -350,16 +350,19 @@ document.addEventListener('DOMContentLoaded', function() {
     navbarBrand.appendChild(titleSpan);
   }
 
-  // Add CTA button to navbar
+  // Add CTA button to navbar (language-aware)
   var navRight = document.querySelector('.navbar-nav.ms-auto');
   if (navRight) {
+    var langPrefix = '';
+    var langMatch = window.location.pathname.match(/^\/(ro|sv|de)\//);
+    if (langMatch) langPrefix = '/' + langMatch[1];
     var ctaLi = document.createElement('li');
     ctaLi.className = 'nav-item';
     var ctaLink = document.createElement('a');
     ctaLink.className = 'nav-link navbar-cta';
-    ctaLink.href = '/booking/';
-    // internal link, no new tab
-    ctaLink.textContent = 'Book a Call';
+    ctaLink.href = langPrefix + '/booking/';
+    var ctaLabels = { ro: 'Programează', sv: 'Boka Samtal', de: 'Gespräch Buchen' };
+    ctaLink.textContent = langMatch ? (ctaLabels[langMatch[1]] || 'Book a Call') : 'Book a Call';
     ctaLi.appendChild(ctaLink);
     navRight.appendChild(ctaLi);
   }
@@ -425,8 +428,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
-    <img src="../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -597,63 +600,85 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="m">
 
-<!-- HERO -->
-<div class="m-hero">
-  <div class="container">
-    <h1>Academy <span class="gr">Events</span></h1>
-    <p>Upcoming and recurring events hosted by chen.ist</p>
+<!-- HERO — full-screen dark with image -->
+<div class="ev-hero">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/hackathon-team.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag">chen.ist Academy</div>
+    <h1>Events &amp; <br>Meetups</h1>
+    <p>Hackathons, workshops, and community gatherings. Build something real with people who care.</p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <a href="#upcoming" class="ev-btn">See what's next</a>
+      <a href="https://alinmechenici.substack.com" target="_blank" class="ev-btn-ghost"><i class="bi bi-bell me-1"></i> Get notified</a>
+    </div>
   </div>
 </div>
 
-<!-- FEATURED EVENT -->
-<div class="m-bg">
-  <div class="container" style="text-align:center;">
-    <div class="m-t" style="max-width:700px; margin:0 auto;">
-      <div style="margin-bottom:0.5rem;"><span style="background:var(--c);color:#000;padding:0.25rem 0.75rem;border-radius:4px;font-size:0.85rem;font-weight:600;">Next Event</span></div>
-      <h2>AI Ethics Hackathon</h2>
-      <div style="opacity:0.7; margin-bottom:1rem;">
-        <i class="bi bi-calendar3"></i> March 5, 2026 &nbsp;&nbsp;
-        <i class="bi bi-geo-alt"></i> Bucharest
-      </div>
-      <p>A weekend hackathon on ethical AI — bias detection, responsible design, and AI that puts people first.</p>
-      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-        <a href="../academy/events/pages/ai-ethics-hackathon.html" class="m-b">Register now</a>
-        <a href="../academy/events/ical/ai-ethics-hackathon-2025.ics" class="m-b-ghost" download="">Add to calendar</a>
+<!-- FEATURED EVENT — spotlight card -->
+<div class="m-bg" style="padding:6rem 0;">
+  <div class="container">
+    <div style="max-width:900px; margin:0 auto;">
+      <div class="blog-featured-card" style="border-color:rgba(245,166,35,0.15); background:rgba(245,166,35,0.03);">
+        <div class="blog-featured-img">
+          <img src="../assets/images/stock/hacker-screens.webp" alt="AI Ethics Hackathon" loading="lazy">
+        </div>
+        <div>
+          <div class="blog-featured-tag" style="background:rgba(245,166,35,0.12); color:#F5A623;">Next Event</div>
+          <div class="blog-featured-title">AI Ethics Hackathon</div>
+          <div class="blog-featured-desc">A weekend hackathon on ethical AI — bias detection, responsible design, and AI that puts people first. 48 hours to build something meaningful.</div>
+          <div class="blog-featured-meta">
+            <span><i class="bi bi-calendar3"></i> March 5, 2026</span>
+            <span><i class="bi bi-geo-alt"></i> Bucharest</span>
+          </div>
+          <div style="margin-top:1.25rem; display:flex; gap:0.75rem; flex-wrap:wrap;">
+            <a href="../academy/events/pages/ai-ethics-hackathon.html" class="m-b" style="font-size:0.9rem; padding:0.6rem 1.5rem;">Register</a>
+            <a href="../academy/events/ical/ai-ethics-hackathon-2025.ics" class="m-bo" style="font-size:0.9rem; padding:0.6rem 1.5rem;" download=""><i class="bi bi-calendar-plus me-1"></i> Add to calendar</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- UPCOMING -->
-<div class="m-s">
+<!-- UPCOMING — image cards -->
+<div class="m-s" id="upcoming" style="padding:7rem 0;">
   <div class="container">
     <h2>Coming up</h2>
     <p class="sub">Spots are limited. Register early.</p>
-    <div class="row g-5">
+    <div class="row g-4">
       <div class="col-md-4">
         <a href="../academy/events/pages/summer-school-2025.html" style="text-decoration:none;">
-          <div class="m-t">
-            <h3>Summer School 2026</h3>
-            <div style="opacity:0.7;font-size:0.9rem;"><i class="bi bi-calendar3"></i> Aug 1-15 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
-            <p>Two weeks of cybersecurity, cloud, and AI.</p>
+          <div class="pg-card">
+            <img loading="lazy" src="../assets/images/stock/hackathon-team.webp" alt="Summer School">
+            <div class="pg-card-body">
+              <div style="font-size:0.75rem; color:rgba(255,255,255,0.5); margin-bottom:0.35rem;"><i class="bi bi-calendar3" style="color:#F5A623;"></i> Aug 1–15, 2026 &nbsp; <i class="bi bi-geo-alt" style="color:#F5A623;"></i> Craiova</div>
+              <h3>Summer School 2026</h3>
+              <p>Two weeks of cybersecurity, cloud, and AI with hands-on projects.</p>
+            </div>
           </div>
         </a>
       </div>
       <div class="col-md-4">
         <a href="../academy/events/pages/makers-workshop.html" style="text-decoration:none;">
-          <div class="m-t">
-            <h3>Makers Workshop</h3>
-            <div style="opacity:0.7;font-size:0.9rem;"><i class="bi bi-calendar3"></i> Sep 15 &nbsp; <i class="bi bi-geo-alt"></i> Bucharest</div>
-            <p>Hardware, DIY, and hands-on building.</p>
+          <div class="pg-card">
+            <img loading="lazy" src="../assets/images/stock/terminal-green.webp" alt="Makers Workshop">
+            <div class="pg-card-body">
+              <div style="font-size:0.75rem; color:rgba(255,255,255,0.5); margin-bottom:0.35rem;"><i class="bi bi-calendar3" style="color:#F5A623;"></i> Sep 15, 2026 &nbsp; <i class="bi bi-geo-alt" style="color:#F5A623;"></i> Bucharest</div>
+              <h3>Makers Workshop</h3>
+              <p>Hardware, DIY, and hands-on building with real components.</p>
+            </div>
           </div>
         </a>
       </div>
       <div class="col-md-4">
         <a href="../academy/events/pages/space-hackathon.html" style="text-decoration:none;">
-          <div class="m-t">
-            <h3>SpaceApps Challenge</h3>
-            <div style="opacity:0.7;font-size:0.9rem;"><i class="bi bi-calendar3"></i> Oct 2026 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
-            <p>NASA's 48-hour global hackathon.</p>
+          <div class="pg-card">
+            <img loading="lazy" src="../assets/images/stock/code-screen.webp" alt="SpaceApps Challenge">
+            <div class="pg-card-body">
+              <div style="font-size:0.75rem; color:rgba(255,255,255,0.5); margin-bottom:0.35rem;"><i class="bi bi-calendar3" style="color:#F5A623;"></i> Oct 2026 &nbsp; <i class="bi bi-geo-alt" style="color:#F5A623;"></i> Craiova</div>
+              <h3>SpaceApps Challenge</h3>
+              <p>NASA's global 48-hour hackathon. Solve real space challenges.</p>
+            </div>
           </div>
         </a>
       </div>
@@ -661,47 +686,99 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<!-- RECURRING -->
-<div class="m-bg">
+<!-- RECURRING — clean schedule -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
   <div class="container">
     <h2>Every month</h2>
     <p class="sub">Regular meetups you can count on.</p>
-    <div class="row g-5">
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-calendar-event"></i><h3>Computer Club</h3><p>Open discussion, hacking, and tech exploration.</p><div style="opacity:0.7;font-size:0.9rem;">Last Thursday</div><a href="https://clubul.computer/" class="m-lk">Schedule</a></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-mic"></i><h3>Tech Talks</h3><p>Industry experts on emerging tech and best practices.</p><div style="opacity:0.7;font-size:0.9rem;">First Tuesday</div><a href="https://lu.ma/chenistacademy" class="m-lk">Next talk</a></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-code-slash"></i><h3>Workshops</h3><p>Coding sessions, open-source projects, collaborative learning.</p><div style="opacity:0.7;font-size:0.9rem;">See calendar</div><a href="https://lu.ma/chenistacademy" class="m-lk">Join</a></div></div>
+    <div style="max-width:750px; margin:0 auto;">
+
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-terminal" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4><a href="https://clubul.computer/" target="_blank">Computer Club</a></h4>
+          <div class="up-meta"><i class="bi bi-calendar3"></i> Last Thursday &nbsp; <i class="bi bi-geo-alt"></i> Craiova &amp; Online</div>
+        </div>
+        <div class="up-badge up-badge-open">Ongoing</div>
+      </div>
+
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-mic" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4><a href="https://lu.ma/chenistacademy" target="_blank">Tech Talks</a></h4>
+          <div class="up-meta"><i class="bi bi-calendar3"></i> First Tuesday &nbsp; <i class="bi bi-geo-alt"></i> Online</div>
+        </div>
+        <div class="up-badge up-badge-open">Ongoing</div>
+      </div>
+
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-code-slash" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4><a href="https://lu.ma/chenistacademy" target="_blank">Workshops</a></h4>
+          <div class="up-meta"><i class="bi bi-calendar3"></i> See calendar &nbsp; <i class="bi bi-geo-alt"></i> Craiova &amp; Online</div>
+        </div>
+        <div class="up-badge up-badge-open">Ongoing</div>
+      </div>
+
     </div>
   </div>
 </div>
 
-<!-- PAST EVENTS -->
-<div class="m-s">
+<!-- PAST EVENTS — timeline style -->
+<div class="m-s" style="padding:7rem 0;">
   <div class="container">
     <h2>Past events</h2>
-    <p class="sub"></p>
-    <div class="row g-5">
-      <div class="col-md-4">
-        <a href="https://marca-ro.ca/2024/11/23/conferinta-igiena-digitala-la-copii-are-loc-la-craiova/" target="_blank" style="text-decoration:none;">
-          <div class="m-t">
-            <h4>Cyber Hygiene for Kids</h4>
-            <div style="opacity:0.7;font-size:0.9rem;">Craiova · November 2024</div>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-4">
-        <div class="m-t">
-          <h4>Capture the Flag</h4>
-          <div style="opacity:0.7;font-size:0.9rem;">Craiova · November 2023</div>
+    <p class="sub">A track record of building together.</p>
+    <div style="max-width:750px; margin:0 auto;">
+
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(129,189,74,0.08); border-radius:12px;">
+          <i class="bi bi-shield-check" style="font-size:1.2rem; color:#81BD4A;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4><a href="https://marca-ro.ca/2024/11/23/conferinta-igiena-digitala-la-copii-are-loc-la-craiova/" target="_blank">Cyber Hygiene for Kids</a></h4>
+          <div class="up-meta"><i class="bi bi-calendar3"></i> November 2024 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
         </div>
       </div>
-      <div class="col-md-4">
-        <a href="https://alinmechenici.substack.com/p/sac" target="_blank" style="text-decoration:none;">
-          <div class="m-t">
-            <h4>SpaceApps · 9 Editions</h4>
-            <div style="opacity:0.7;font-size:0.9rem;">Sweden &amp; Romania · 2016-2024</div>
-          </div>
-        </a>
+
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(129,189,74,0.08); border-radius:12px;">
+          <i class="bi bi-flag" style="font-size:1.2rem; color:#81BD4A;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4>Capture the Flag</h4>
+          <div class="up-meta"><i class="bi bi-calendar3"></i> November 2023 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
+        </div>
       </div>
+
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(129,189,74,0.08); border-radius:12px;">
+          <i class="bi bi-rocket-takeoff" style="font-size:1.2rem; color:#81BD4A;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4><a href="https://alinmechenici.substack.com/p/sac" target="_blank">NASA SpaceApps · 9 Editions</a></h4>
+          <div class="up-meta"><i class="bi bi-calendar3"></i> 2016–2024 &nbsp; <i class="bi bi-geo-alt"></i> Sweden &amp; Romania</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="m-bg" style="padding:5rem 0;">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn" style="color:#F5A623;">9+</div><div class="m-nl">Years of events</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">500+</div><div class="m-nl">Participants</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">3</div><div class="m-nl">Countries</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">20+</div><div class="m-nl">Events hosted</div></div>
     </div>
   </div>
 </div>
@@ -712,9 +789,9 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="m-d"></div>
     <h2>Don't miss the next one</h2>
     <p>Get event updates or discuss hosting a private event for your team.</p>
-    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-      <a href="https://alinmechenici.substack.com" target="_blank" class="m-b">Subscribe to updates</a>
-      <a href="../booking/" class="m-b-ghost">Book a call</a>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="https://alinmechenici.substack.com" target="_blank" class="m-b" style="background:#F5A623;"><i class="bi bi-bell me-2"></i>Subscribe to updates</a>
+      <a href="../booking/" class="m-bo" style="border-color:#F5A623; color:#F5A623;">Book a call</a>
     </div>
   </div>
 </div>
@@ -1148,7 +1225,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- Back to top -->
 <div style="text-align:center; padding:2rem 0; background:#0a0a0a; border-top:1px solid rgba(255,255,255,0.04);">
   <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" style="color:rgba(255,255,255,0.3); text-decoration:none; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em;">
-    <i class="bi bi-chevron-up" style="display:block; font-size:1rem; margin-bottom:0.25rem;"></i>Back to top
+    <i class="bi bi-chevron-up" style="display:block; font-size:1rem; margin-bottom:0.25rem;"></i><span class="footer-i18n" data-key="backToTop">Back to top</span>
   </a>
 </div>
 
@@ -1157,7 +1234,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div style="display:grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr; gap:2rem;">
       <div>
         <div style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:1rem; font-family:'Source Code Pro',monospace;">chen<span style="color:#81BD4A;">.</span>ist</div>
-        <p style="margin-bottom:1rem; color:rgba(255,255,255,0.4);">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
+        <p style="margin-bottom:1rem; color:rgba(255,255,255,0.4);" class="footer-i18n" data-key="tagline">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
         <div style="display:flex; gap:0.75rem; margin-bottom:1rem;">
           <a href="https://github.com/chenist" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-github"></i></a>
           <a href="https://linkedin.com/in/chenistsec" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-linkedin"></i></a>
@@ -1166,33 +1243,33 @@ document.addEventListener('DOMContentLoaded', function() {
         <p style="color:rgba(255,255,255,0.2); font-size:0.75rem;">© 2026 chen.ist</p>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Services</div>
-        <a href="../digital/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Digital Infrastructure</a>
-        <a href="../security/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Security</a>
-        <a href="../services/cloud/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
-        <a href="../services/nis2/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">NIS2 Compliance</a>
-        <a href="../services/digital-resilience/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Digital Resilience</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="services">Services</div>
+        <a href="../digital/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="digitalInfra">Digital Infrastructure</a>
+        <a href="../security/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="security">Security</a>
+        <a href="../services/cloud/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
+        <a href="../services/nis2/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="nis2">NIS2 Compliance</a>
+        <a href="../services/digital-resilience/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="resilience">Digital Resilience</a>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Academy</div>
-        <a href="../academy/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Overview</a>
-        <a href="../academy/courses.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Courses</a>
-        <a href="../academy/trainings.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Trainings</a>
-        <a href="../academy/events.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Events</a>
-        <a href="../academy/webinars.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Webinars</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="academy">Academy</div>
+        <a href="../academy/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="overview">Overview</a>
+        <a href="../academy/courses.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="courses">Courses</a>
+        <a href="../academy/trainings.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="trainings">Trainings</a>
+        <a href="../academy/events.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="events">Events</a>
+        <a href="../academy/webinars.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="webinars">Webinars</a>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Company</div>
-        <a href="../about/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">About</a>
-        <a href="../blog.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
-        <a href="../contact.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Contact</a>
-        <a href="../privacy.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Privacy</a>
-        <a href="../terms.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Terms</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="company">Company</div>
+        <a href="../about/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="about">About</a>
+        <a href="../blog.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
+        <a href="../contact.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="contact">Contact</a>
+        <a href="../privacy.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="privacy">Privacy</a>
+        <a href="../terms.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="terms">Terms</a>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Connect</div>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="connect">Connect</div>
         <a href="mailto:office@chen.ist" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">office@chen.ist</a>
-        <a href="../booking/" style="display:block; color:#81BD4A; text-decoration:none; padding:0.1rem 0; font-weight:500;">Book a Call</a>
+        <a href="../booking/" data-footer-link="" style="display:block; color:#81BD4A; text-decoration:none; padding:0.1rem 0; font-weight:500;" class="footer-i18n" data-key="bookCall">Book a Call</a>
         <div style="margin-top:1rem; color:rgba(255,255,255,0.2); font-size:0.72rem;">Craiova · Bucharest · Stockholm</div>
       </div>
     </div>
@@ -1205,6 +1282,59 @@ document.addEventListener('DOMContentLoaded', function() {
 @media (max-width:480px) { footer > div > div { grid-template-columns: 1fr !important; } }
 footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
 </style>
+
+<script>
+(function() {
+  var langMatch = window.location.pathname.match(/^\/(ro|sv|de)\//);
+  var lang = langMatch ? langMatch[1] : 'en';
+  var prefix = lang === 'en' ? '' : '/' + lang;
+
+  // Rewrite all internal footer links to include language prefix
+  document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
+    var href = a.getAttribute('href');
+    if (href && href.startsWith('/') && !href.startsWith('//')) {
+      // Swedish blog is at /sv/blogg.html, not /sv/blog.html
+      if (lang === 'sv' && href === '/blog.html') {
+        a.setAttribute('href', '/sv/blogg.html');
+      } else {
+        a.setAttribute('href', prefix + href);
+      }
+    }
+  });
+
+  // Translate labels if not English
+  if (lang === 'en') return;
+  var i18n = {
+    ro: {
+      backToTop: 'Înapoi sus', tagline: 'Infrastructură digitală, securitate cibernetică și educație. Construit pe open-source.',
+      services: 'Servicii', digitalInfra: 'Infrastructură Digitală', security: 'Securitate', nis2: 'Conformitate NIS2', resilience: 'Reziliență Digitală',
+      academy: 'Academie', overview: 'Prezentare', courses: 'Cursuri', trainings: 'Training-uri', events: 'Evenimente', webinars: 'Webinarii',
+      company: 'Companie', about: 'Despre noi', contact: 'Contact', privacy: 'Confidențialitate', terms: 'Termeni',
+      connect: 'Conectare', bookCall: 'Programează'
+    },
+    sv: {
+      backToTop: 'Tillbaka upp', tagline: 'Digital infrastruktur, cybersäkerhet och utbildning. Byggt på öppen källkod.',
+      services: 'Tjänster', digitalInfra: 'Digital Infrastruktur', security: 'Säkerhet', nis2: 'NIS2-efterlevnad', resilience: 'Digital Resiliens',
+      academy: 'Akademi', overview: 'Översikt', courses: 'Kurser', trainings: 'Utbildningar', events: 'Evenemang', webinars: 'Webbinarier',
+      company: 'Företag', about: 'Om oss', contact: 'Kontakt', privacy: 'Integritet', terms: 'Villkor',
+      connect: 'Kontakta', bookCall: 'Boka Samtal'
+    },
+    de: {
+      backToTop: 'Nach oben', tagline: 'Digitale Infrastruktur, Cybersicherheit und Bildung. Auf Open-Source aufgebaut.',
+      services: 'Dienstleistungen', digitalInfra: 'Digitale Infrastruktur', security: 'Sicherheit', nis2: 'NIS2-Konformität', resilience: 'Digitale Resilienz',
+      academy: 'Akademie', overview: 'Übersicht', courses: 'Kurse', trainings: 'Schulungen', events: 'Veranstaltungen', webinars: 'Webinare',
+      company: 'Unternehmen', about: 'Über uns', contact: 'Kontakt', privacy: 'Datenschutz', terms: 'AGB',
+      connect: 'Verbinden', bookCall: 'Gespräch Buchen'
+    }
+  };
+  var t = i18n[lang];
+  if (!t) return;
+  document.querySelectorAll('.footer-i18n').forEach(function(el) {
+    var key = el.getAttribute('data-key');
+    if (key && t[key]) el.textContent = t[key];
+  });
+})();
+</script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const observer = new IntersectionObserver((entries) => {

@@ -427,8 +427,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
-    <img src="../../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
+    <img src="../../../assets/images/logo-light.svg" alt="" class="navbar-logo light-content">
+    <img src="../../../assets/images/logo-light.svg" alt="" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -626,7 +626,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="m-rt">
         <h2>Mereu vigilenți.<br>Mereu pregătiți.</h2>
         <p>Echipa noastră Blue Team funcționează non-stop cu instrumente open-source pe care le puteți audita. Detectăm, investigăm și răspundem la amenințări înainte ca acestea să devină incidente. De la configurarea SIEM la threat hunting activ, mediul dvs. este apărat continuu.</p>
-        <div class="lk"><a href="../../../security/" class="m-lk">Explorați practica noastră completă de securitate</a></div>
+        <div class="lk"><a href="../../../ro/security/" class="m-lk">Explorați practica noastră completă de securitate</a></div>
       </div>
     </div>
   </div>
@@ -639,7 +639,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="m-rt">
         <h2>Monitorizare &amp;<br>analiză forensică.</h2>
         <p>Colectare centralizată a logurilor, corelație în timp real și alerte automatizate în întregul mediu. Când apar incidente, capabilitățile noastre forensice vă oferă imaginea completă — ce a fost compromis, cum și ce trebuie făcut în continuare.</p>
-        <div class="lk"><a href="../../../booking/" class="m-lk">Discutați cu echipa noastră</a></div>
+        <div class="lk"><a href="../../../ro/booking/" class="m-lk">Discutați cu echipa noastră</a></div>
       </div>
     </div>
   </div>
@@ -650,7 +650,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="m-d"></div>
     <h2>Consolidați-vă<br>postura de securitate</h2>
     <p>30 de minute. Fără prezentare comercială. Doar o analiză sinceră a situației dvs.</p>
-    <a href="../../../booking/" class="m-b">Programați o consultație</a>
+    <a href="../../../ro/booking/" class="m-b">Programați o consultanță</a>
     <div class="m-sm">
       <i class="bi bi-check-circle-fill"></i> Gratuit &nbsp;
       <i class="bi bi-check-circle-fill"></i> 30 min &nbsp;
@@ -1156,7 +1156,12 @@ footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
   document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
     var href = a.getAttribute('href');
     if (href && href.startsWith('/') && !href.startsWith('//')) {
-      a.setAttribute('href', prefix + href);
+      // Swedish blog is at /sv/blogg.html, not /sv/blog.html
+      if (lang === 'sv' && href === '/blog.html') {
+        a.setAttribute('href', '/sv/blogg.html');
+      } else {
+        a.setAttribute('href', prefix + href);
+      }
     }
   });
 

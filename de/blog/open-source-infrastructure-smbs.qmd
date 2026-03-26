@@ -7,6 +7,15 @@ image: /assets/images/stock/code-screen.webp
 lang-code: de
 categories: [Open Source, Digital Infrastructure, SMB]
 description: "Ein praktischer Leitfaden zum Aufbau von KMU-Infrastruktur mit Open-Source-Werkzeugen — von Produktivität und Kommunikation bis hin zu Identität, Überwachung und UNIX-Grundlagen."
+format:
+  html:
+    format-links: false
+    toc: true
+    toc-depth: 3
+  typst:
+    toc: true
+    number-sections: false
+    include-before-body: before-body.typ
 ---
 
 ```{=html}
@@ -117,7 +126,7 @@ Für einen tieferen Einblick in unseren Ansatz für digitale Infrastruktur besuc
 Buchen Sie eine kostenlose Beratung, um zu besprechen, welche Werkzeuge zu Ihrer Organisation passen und wie Sie eine praktische Migration planen können.
 
 ::: {.text-center .mt-3}
-[Beratung buchen](/de/booking/){target="_blank"}{.btn .btn-success}
+[Beratung buchen](/de/booking/){.btn .btn-success target="_blank"}
 :::
 :::
 :::

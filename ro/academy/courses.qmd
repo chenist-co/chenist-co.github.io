@@ -2,7 +2,7 @@
 title: "Cursuri Academy"
 title-block-style: none
 subtitle: "Programe complete de formare tehnică"
-description: "Explorați cursuri complete în securitate cibernetică, dezvoltare open-source, administrare Linux, confidențialitatea datelor și conștientizare în securitate."
+description: "Explorați cursuri complete de securitate cibernetică, dezvoltare open-source, administrare Linux, protecția datelor și conștientizare securitate."
 from: markdown+raw_html
 page-layout: custom
 format:
@@ -16,63 +16,173 @@ format:
 ```{=html}
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>Academy <span class="gr">Cursuri</span></h1>
-    <p>Programe cuprinzătoare de mai multe săptămâni care construiesc expertiză profundă prin proiecte practice și instruire de specialitate.</p>
+<!-- HERO -->
+<div class="ev-hero" style="min-height:60vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/code-screen.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Academy</div>
+    <h1>Cursuri</h1>
+    <p>Programe de mai multe săptămâni care construiesc expertiză profundă prin proiecte practice și instrucțiuni de specialitate.</p>
+    <a href="#cursuri" class="ev-btn" style="background:#F5A623;">Explorează cursurile</a>
   </div>
 </div>
 
-<div class="m-bg m-bg-squares">
+<!-- STATS -->
+<div class="m-bg" style="padding:4rem 0;">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn" style="color:#F5A623;">7</div><div class="m-nl">Cursuri</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">4–12</div><div class="m-nl">Săptămâni fiecare</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">80%</div><div class="m-nl">Practică</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">100%</div><div class="m-nl">Certificare</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- COURSE GRID -->
+<div class="m-s" id="cursuri" style="padding:7rem 0;">
   <div class="container">
     <h2>Șapte cursuri, un singur obiectiv</h2>
     <p class="sub">Competențe practice predate de practicieni, nu din manuale.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-code-slash"></i><h3>Dezvoltare Open Source</h3><p>Fluxuri de lucru Git, licențiere și contribuție la proiecte reale. 8 săptămâni.</p><a href="/ro/academy/courses/open-source-development/" class="m-lk">Detalii curs</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-shield-lock"></i><h3>Securitate Cibernetică Practică</h3><p>Securitate rețea, pentesting și răspuns la incidente. 12 săptămâni.</p><a href="/ro/academy/courses/practical-cybersecurity/" class="m-lk">Detalii curs</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-terminal"></i><h3>Administrare Unix/Linux</h3><p>Scripting shell, management servicii și optimizare performanță. 10 săptămâni.</p><a href="/ro/academy/courses/unix-linux-administration/" class="m-lk">Detalii curs</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-file-earmark-lock"></i><h3>Protecția Datelor și Confidențialitate</h3><p>GDPR, CCPA, privacy-by-design și răspuns la breșe. 6 săptămâni.</p><a href="/ro/academy/courses/data-protection-privacy/" class="m-lk">Detalii curs</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-people"></i><h3>Human Firewall</h3><p>Conștientizare în securitate, apărare împotriva ingineriei sociale și construirea culturii. 4 săptămâni.</p><a href="/ro/academy/courses/human-firewall-security-awareness/" class="m-lk">Detalii curs</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-bug"></i><h3>Igienă Cibernetică Esențială</h3><p>Conștientizarea amenințărilor digitale, protecția dispozitivelor și practici sigure. 6 săptămâni.</p><a href="/ro/academy/courses/cyberhygiene-essentials/" class="m-lk">Detalii curs</a></div></div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="/academy/courses/practical-cybersecurity/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/cybersecurity-monitor.webp" alt="Securitate cibernetică practică">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">12 săptămâni</div>
+              <h3>Practical Cybersecurity</h3>
+              <p>Securitate rețea, pentesting și răspuns la incidente.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/courses/open-source-development/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="Dezvoltare Open Source">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">8 săptămâni</div>
+              <h3>Open Source Development</h3>
+              <p>Fluxuri de lucru Git, licențiere și contribuții la proiecte reale.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/courses/unix-linux-administration/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="Administrare Unix/Linux">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">10 săptămâni</div>
+              <h3>Unix/Linux Administration</h3>
+              <p>Scripting shell, gestionare servicii și optimizare performanță.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/courses/data-protection-privacy/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/network-closeup.webp" alt="Protecția datelor">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">6 săptămâni</div>
+              <h3>Data Protection & Privacy</h3>
+              <p>GDPR, CCPA, privacy-by-design și răspuns la breșe.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/courses/cyberhygiene-essentials/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/hacker-screens.webp" alt="Igienă cibernetică">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">6 săptămâni</div>
+              <h3>Cyberhygiene Essentials</h3>
+              <p>Conștientizare amenințări digitale, protecția dispozitivelor și practici sigure.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/courses/human-firewall-security-awareness/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/team-macbooks.webp" alt="Human Firewall">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">4 săptămâni</div>
+              <h3>Human Firewall</h3>
+              <p>Conștientizare securitate, apărare contra ingineriei sociale și construirea culturii.</p>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
-    <div class="row g-5 mt-2 justify-content-center">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-snow"></i><h3>NixOS pentru Securitate Cibernetică</h3><p>Securitate declarativă, medii reproductibile și întărirea sistemelor. 4 săptămâni.</p><a href="/ro/academy/courses/nixos-cybersecurity/" class="m-lk">Detalii curs</a></div></div>
+    <div class="row g-4 mt-1 justify-content-center">
+      <div class="col-md-4">
+        <a href="/academy/courses/nixos-cybersecurity/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="NixOS">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">4 săptămâni</div>
+              <h3>NixOS for Cybersecurity</h3>
+              <p>Securitate declarativă, medii reproductibile și întărirea sistemului.</p>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="m-s">
+<!-- DELIVERY FORMATS -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
   <div class="container">
     <h2>Trei moduri de a învăța</h2>
-    <p class="sub">Alegeți formatul care se potrivește programului dvs.</p>
-    <div class="row g-5">
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-camera-video"></i><h3>Online cu instructor</h3><p>Sesiuni virtuale live cu interacțiune în timp real, exerciții ghidate și înregistrări.</p></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-play-circle"></i><h3>Online în ritm propriu</h3><p>Lecții video la cerere, resurse descărcabile și suport pe forum în ritmul dvs.</p></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-building"></i><h3>Workshop-uri în persoană</h3><p>Sesiuni practice imersive la sediul nostru sau la sediul organizației dvs.</p></div></div>
+    <p class="sub">Alege formatul care se potrivește programului tău.</p>
+    <div style="max-width:750px; margin:0 auto;">
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-camera-video" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4 style="margin:0 0 0.15rem;"><span style="color:#fff;">Online cu instructor</span></h4>
+          <div class="up-meta">Sesiuni live virtuale cu interacțiune în timp real, exerciții ghidate și înregistrări disponibile.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-play-circle" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4 style="margin:0 0 0.15rem;"><span style="color:#fff;">Online în ritm propriu</span></h4>
+          <div class="up-meta">Lecții video la cerere, resurse descărcabile și suport pe forum în ritmul tău.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-building" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4 style="margin:0 0 0.15rem;"><span style="color:#fff;">Workshop-uri în persoană</span></h4>
+          <div class="up-meta">Sesiuni practice imersive la sediul nostru sau la sediul organizației tale.</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="m-bg m-bg-squares">
-  <div class="container">
-    <div class="m-n">
-      <div><div class="m-nn">7</div><div class="m-nl">Cursuri</div></div>
-      <div><div class="m-nn">4–12</div><div class="m-nl">Săptămâni fiecare</div></div>
-      <div><div class="m-nn">80%</div><div class="m-nl">Practică</div></div>
-    </div>
-  </div>
-</div>
-
+<!-- CTA -->
 <div class="m-cta">
   <div class="container">
     <div class="m-d"></div>
-    <h2>Găsiți cursul potrivit<br>pentru echipa dvs.</h2>
+    <h2>Găsește cursul potrivit<br>pentru echipa ta</h2>
     <p>Cohorte personalizate, programare flexibilă și prețuri de grup disponibile pentru organizații.</p>
-    <a href="/ro/booking/" class="m-b">Programați un apel</a>
+    <a href="/ro/booking/" class="m-b" style="background:#F5A623;">Programează un apel</a>
     <div class="m-sm">
-      <i class="bi bi-check-circle-fill"></i> Instructori experți &nbsp;
-      <i class="bi bi-check-circle-fill"></i> Certificare inclusă &nbsp;
-      <i class="bi bi-check-circle-fill"></i> Actualizat trimestrial
+      <i class="bi bi-check-circle-fill" style="color:#F5A623;"></i> Instructori experți &nbsp;
+      <i class="bi bi-check-circle-fill" style="color:#F5A623;"></i> Certificare inclusă &nbsp;
+      <i class="bi bi-check-circle-fill" style="color:#F5A623;"></i> Actualizat trimestrial
     </div>
   </div>
 </div>

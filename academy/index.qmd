@@ -1,8 +1,8 @@
 ---
 title: "Academy"
 title-block-style: none
-subtitle: "Learn, collaborate, and grow with our educational programs"
-description: "Browse chen.ist Academy's courses, webinars, events, and training programs in cybersecurity, open source, cloud, and software development."
+subtitle: "Courses, trainings, and hands-on programs in cybersecurity, open-source, and digital skills"
+description: "chen.ist Academy offers courses, intensive trainings, microlearning, hackathons, webinars, and community programs. Learn by building."
 from: markdown+raw_html
 page-layout: custom
 format:
@@ -16,29 +16,129 @@ format:
 ```{=html}
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>chen.ist <span class="gr">Academy</span></h1>
-    <p>Hands-on courses, trainings, and programs in cybersecurity, open-source, and digital skills.</p>
-  </div>
-</div>
-
-<div class="m-bg m-bg-squares">
-  <div class="container">
-    <h2>Learn by doing</h2>
-    <p class="sub">Six ways to build real-world technical skills.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-book"></i><h3>Courses</h3><p>Multi-week programs in cybersecurity, privacy, and open-source development.</p><a href="/academy/courses.html" class="m-lk">Browse courses</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-lightning"></i><h3>Trainings</h3><p>Intensive 1-2 day workshops on focused topics with hands-on labs.</p><a href="/academy/trainings.html" class="m-lk">Browse trainings</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-clock-history"></i><h3>Microlearning</h3><p>1-2 hour sessions on specific tools — CLI, NixOS, Emacs, tmux, and more.</p><a href="/academy/microlearning.html" class="m-lk">Browse sessions</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-trophy"></i><h3>Hackathons</h3><p>Cybersecurity, AI ethics, and SpaceApps challenges. Build under pressure.</p><a href="/academy/events.html" class="m-lk">See events</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-camera-video"></i><h3>Webinars</h3><p>Live online sessions on zero trust, cloud security, and digital transformation.</p><a href="/academy/webinars.html" class="m-lk">View schedule</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-people"></i><h3>Computer Club</h3><p>Weekly meetups for coding, hacking, and building together.</p><a href="/academy/programs/computerclub/" class="m-lk">Join the club</a></div></div>
+<!-- HERO -->
+<div class="ev-hero" style="min-height:70vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/hackathon-team.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">chen.ist</div>
+    <h1>Academy</h1>
+    <p>Hands-on courses, trainings, and programs in cybersecurity, open-source, and digital skills. Learn by building.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="#programs" class="ev-btn" style="background:#F5A623;">Explore programs</a>
+      <a href="/booking/" class="ev-btn-ghost">Book a consultation</a>
     </div>
   </div>
 </div>
 
-<div class="m-s">
+<!-- STATS -->
+<div class="m-bg" style="padding:4rem 0;">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn" style="color:#F5A623;">7</div><div class="m-nl">Courses</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">7</div><div class="m-nl">Trainings</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">14</div><div class="m-nl">Microlearning</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">9+</div><div class="m-nl">Years of events</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ALL PROGRAMS GRID -->
+<div class="m-s" id="programs" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Everything we offer</h2>
+    <p class="sub">Nine ways to build real-world technical skills.</p>
+    <div class="row g-4">
+
+      <!-- Courses -->
+      <div class="col-md-4">
+        <a href="/academy/courses.html" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="Courses">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">7 courses &middot; 4–12 weeks</div>
+              <h3>Courses</h3>
+              <p>Multi-week programs in cybersecurity, privacy, Linux, and open-source development.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Trainings -->
+      <div class="col-md-4">
+        <a href="/academy/trainings.html" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/hacker-screens.webp" alt="Trainings">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">7 workshops &middot; 1–2 days</div>
+              <h3>Intensive Trainings</h3>
+              <p>Focused hands-on workshops. 80% practical. Walk out with skills you use on Monday.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Microlearning -->
+      <div class="col-md-4">
+        <a href="/academy/microlearning.html" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="Microlearning">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">14 sessions &middot; 1–2 hours</div>
+              <h3>Microlearning</h3>
+              <p>Bite-sized sessions on CLI, NixOS, Emacs, tmux, Typst, FreeBSD, and more.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Programs / Hackathons -->
+      <div class="col-md-4">
+        <a href="/academy/programs/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Programs">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">Hackathons &middot; Summer School</div>
+              <h3>Programs</h3>
+              <p>Immersive experiences — hackathons, summer school, and Computer Club.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Events -->
+      <div class="col-md-4">
+        <a href="/academy/events.html" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/cybersecurity-monitor.webp" alt="Events">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">Upcoming &middot; Monthly</div>
+              <h3>Events</h3>
+              <p>Conferences, meetups, and community gatherings. In person and online.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Webinars -->
+      <div class="col-md-4">
+        <a href="/academy/webinars.html" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/network-closeup.webp" alt="Webinars">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">Live &middot; Recorded</div>
+              <h3>Webinars</h3>
+              <p>Zero trust, cloud security, digital transformation, and more.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE ROW 1 -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
   <div class="container">
     <div class="m-r">
       <div class="m-ri"><img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Academy training session"></div>
@@ -51,7 +151,37 @@ format:
   </div>
 </div>
 
-<div class="m-bg m-bg-squares">
+<!-- COMMUNITY -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Community</h2>
+    <p class="sub">Learning doesn't stop when the session ends.</p>
+    <div style="max-width:750px; margin:0 auto;">
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-terminal" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4><a href="/academy/computerclub.html">Computer Club</a></h4>
+          <div class="up-meta">Monthly meetups for coding, hacking, and building together. All levels welcome.</div>
+        </div>
+        <div class="up-badge up-badge-open">Monthly</div>
+      </div>
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-handshake" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4><a href="/academy/partnerships.html">Partnerships</a></h4>
+          <div class="up-meta">Collaborate with us — bring academy programs to your organization or city.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE ROW 2 -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
   <div class="container">
     <div class="m-r rv">
       <div class="m-ri"><img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="Hackathon coding"></div>
@@ -64,24 +194,15 @@ format:
   </div>
 </div>
 
-<div class="m-s">
-  <div class="container">
-    <div class="m-n">
-      <div><div class="m-nn">6</div><div class="m-nl">Full courses</div></div>
-      <div><div class="m-nn">7</div><div class="m-nl">Intensive trainings</div></div>
-      <div><div class="m-nn">14</div><div class="m-nl">Microlearning sessions</div></div>
-      <div><div class="m-nn">4</div><div class="m-nl">Languages</div></div>
-    </div>
-  </div>
-</div>
-
+<!-- CTA -->
 <div class="m-cta">
   <div class="container">
     <div class="m-d"></div>
     <h2>Start learning</h2>
     <p>Browse our catalog or book a call to discuss custom training for your team.</p>
-    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-      <a href="/academy/courses.html" class="m-b">Browse courses</a>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="/academy/courses.html" class="m-b" style="background:#F5A623;">Browse courses</a>
+      <a href="/academy/trainings.html" class="m-bo" style="border-color:#F5A623; color:#F5A623;">Browse trainings</a>
       <a href="/booking/" class="m-bo">Book a consultation</a>
     </div>
   </div>

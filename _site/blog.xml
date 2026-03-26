@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/feed.xsl"?>
 <rss  xmlns:atom="http://www.w3.org/2005/Atom" 
       xmlns:media="http://search.yahoo.com/mrss/" 
       xmlns:content="http://purl.org/rss/1.0/modules/content/" 
@@ -267,181 +267,19 @@ Tip
   <dc:creator>CHENIST Team</dc:creator>
   <link>https://chen.ist/blog/cyber-security-best-practices.html</link>
   <description><![CDATA[ 
-<script id="quarto-html-before-body" type="application/javascript">
-    const toggleBodyColorMode = (bsSheetEl) => {
-      const mode = bsSheetEl.getAttribute("data-mode");
-      const bodyEl = window.document.querySelector("body");
-      if (mode === "dark") {
-        bodyEl.classList.add("quarto-dark");
-        bodyEl.classList.remove("quarto-light");
-      } else {
-        bodyEl.classList.add("quarto-light");
-        bodyEl.classList.remove("quarto-dark");
-      }
-    }
-    const toggleBodyColorPrimary = () => {
-      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
-      if (bsSheetEl) {
-        toggleBodyColorMode(bsSheetEl);
-      }
-    }
-    const setColorSchemeToggle = (alternate) => {
-      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-      for (let i=0; i < toggles.length; i++) {
-        const toggle = toggles[i];
-        if (toggle) {
-          if (alternate) {
-            toggle.classList.add("alternate");
-          } else {
-            toggle.classList.remove("alternate");
-          }
-        }
-      }
-    };
-    const toggleColorMode = (alternate) => {
-      // Switch the stylesheets
-      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
-      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-      manageTransitions('#quarto-margin-sidebar .nav-link', false);
-      if (alternate) {
-        // note: dark is layered on light, we don't disable primary!
-        enableStylesheet(alternateStylesheets);
-        for (const sheetNode of alternateStylesheets) {
-          if (sheetNode.id === "quarto-bootstrap") {
-            toggleBodyColorMode(sheetNode);
-          }
-        }
-      } else {
-        disableStylesheet(alternateStylesheets);
-        enableStylesheet(primaryStylesheets)
-        toggleBodyColorPrimary();
-      }
-      manageTransitions('#quarto-margin-sidebar .nav-link', true);
-      // Switch the toggles
-      setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
-      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-        manageTransitions("body", false);
-        window.scrollTo(0, 1);
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-          manageTransitions("body", true);
-        }, 40);
-      }
-    }
-    const disableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        stylesheet.rel = 'disabled-stylesheet';
-      }
-    }
-    const enableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
-          stylesheet.rel = 'stylesheet';
-        }
-      }
-    }
-    const manageTransitions = (selector, allowTransitions) => {
-      const els = window.document.querySelectorAll(selector);
-      for (let i=0; i < els.length; i++) {
-        const el = els[i];
-        if (allowTransitions) {
-          el.classList.remove('notransition');
-        } else {
-          el.classList.add('notransition');
-        }
-      }
-    }
-    const isFileUrl = () => {
-      return window.location.protocol === 'file:';
-    }
-    const hasAlternateSentinel = () => {
-      let styleSentinel = getColorSchemeSentinel();
-      if (styleSentinel !== null) {
-        return styleSentinel === "alternate";
-      } else {
-        return false;
-      }
-    }
-    const setStyleSentinel = (alternate) => {
-      const value = alternate ? "alternate" : "default";
-      if (!isFileUrl()) {
-        window.localStorage.setItem("quarto-color-scheme", value);
-      } else {
-        localAlternateSentinel = value;
-      }
-    }
-    const getColorSchemeSentinel = () => {
-      if (!isFileUrl()) {
-        const storageValue = window.localStorage.getItem("quarto-color-scheme");
-        return storageValue != null ? storageValue : localAlternateSentinel;
-      } else {
-        return localAlternateSentinel;
-      }
-    }
-    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-      let newTheme = '';
-      if(authorPrefersDark) {
-        newTheme = isAlternate ? baseTheme : alternateTheme;
-      } else {
-        newTheme = isAlternate ? alternateTheme : baseTheme;
-      }
-      const changeGiscusTheme = () => {
-        // From: https://github.com/giscus/giscus/issues/336
-        const sendMessage = (message) => {
-          const iframe = document.querySelector('iframe.giscus-frame');
-          if (!iframe) return;
-          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-        }
-        sendMessage({
-          setConfig: {
-            theme: newTheme
-          }
-        });
-      }
-      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-      if (isGiscussLoaded) {
-        changeGiscusTheme();
-      }
-    };
-    const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
-      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-    // Dark / light mode switch
-    window.quartoToggleColorScheme = () => {
-      // Read the current dark / light value
-      let toAlternate = !hasAlternateSentinel();
-      toggleColorMode(toAlternate);
-      setStyleSentinel(toAlternate);
-      toggleGiscusIfUsed(toAlternate, darkModeDefault);
-      window.dispatchEvent(new Event('resize'));
-    };
-    // Switch to dark mode if need be
-    if (hasAlternateSentinel()) {
-      toggleColorMode(true);
-    } else {
-      toggleColorMode(false);
-    }
-  </script>
+
 
 
 
 
 <p><img src="https://chen.ist/assets/images/stock/cybersecurity-monitor.webp" class="rounded shadow img-fluid" style="width:100.0%"></p>
 <section id="the-evolving-threat-landscape" class="level2">
-<h2>The Evolving Threat Landscape</h2>
+<h2 class="anchored" data-anchor-id="the-evolving-threat-landscape">The Evolving Threat Landscape</h2>
 <p>As we move through 2025, the cybersecurity landscape continues to evolve at a rapid pace. Threat actors are becoming more sophisticated, and attacks are increasingly targeted and complex. In this post, we’ll explore the essential cybersecurity best practices that every organization should implement to protect against these evolving threats.</p>
 <section id="multi-factor-authentication-mfa" class="level3">
-<h3>Multi-Factor Authentication (MFA)</h3>
+<h3 class="anchored" data-anchor-id="multi-factor-authentication-mfa">Multi-Factor Authentication (MFA)</h3>
 <p>Multi-factor authentication remains one of the most effective security measures to prevent unauthorized access. By requiring multiple forms of verification, MFA significantly reduces the risk of account compromise.</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Example: Implementing MFA in a Python application</span></span>
 <span id="cb1-2"><span class="kw" style="color: #003B4F;
@@ -467,10 +305,10 @@ background-color: null;
 font-weight: bold;
 font-style: inherit;">return</span> <span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">None</span></span></code></pre></div>
+font-style: inherit;">None</span></span></code></pre></div></div>
 </section>
 <section id="zero-trust-architecture" class="level3">
-<h3>Zero Trust Architecture</h3>
+<h3 class="anchored" data-anchor-id="zero-trust-architecture">Zero Trust Architecture</h3>
 <p>The traditional perimeter-based security model is no longer sufficient. Zero Trust assumes that threats exist both inside and outside the network, requiring verification from everyone trying to access resources.</p>
 <p>Key principles of Zero Trust include:</p>
 <ul>
@@ -480,23 +318,23 @@ font-style: inherit;">None</span></span></code></pre></div>
 </ul>
 </section>
 <section id="regular-security-updates" class="level3">
-<h3>Regular Security Updates</h3>
+<h3 class="anchored" data-anchor-id="regular-security-updates">Regular Security Updates</h3>
 <p>Keeping systems and software up to date is crucial. Many successful attacks exploit known vulnerabilities that have already been patched.</p>
 <div class="security-feature">
 <p><strong>Quick Tip:</strong> Implement automated patch management to ensure timely updates across your organization.</p>
 </div>
 </section>
 <section id="security-awareness-training" class="level3">
-<h3>Security Awareness Training</h3>
+<h3 class="anchored" data-anchor-id="security-awareness-training">Security Awareness Training</h3>
 <p>Human error remains a significant factor in security breaches. Regular security awareness training helps employees recognize and respond appropriately to security threats like phishing.</p>
 </section>
 <section id="data-encryption" class="level3">
-<h3>Data Encryption</h3>
+<h3 class="anchored" data-anchor-id="data-encryption">Data Encryption</h3>
 <p>Encrypt sensitive data both at rest and in transit. This ensures that even if data is compromised, it remains unreadable without the appropriate decryption keys.</p>
 </section>
 </section>
 <section id="implementing-a-comprehensive-security-strategy" class="level2">
-<h2>Implementing a Comprehensive Security Strategy</h2>
+<h2 class="anchored" data-anchor-id="implementing-a-comprehensive-security-strategy">Implementing a Comprehensive Security Strategy</h2>
 <p>A holistic approach to security involves multiple layers of protection:</p>
 <ol type="1">
 <li><strong>Risk Assessment</strong>: Regularly evaluate your security posture</li>
@@ -506,24 +344,20 @@ font-style: inherit;">None</span></span></code></pre></div>
 </ol>
 </section>
 <section id="conclusion" class="level2">
-<h2>Conclusion</h2>
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>Cybersecurity is an ongoing process, not a one-time project. By implementing these best practices and staying vigilant, organizations can significantly reduce their security risks in today’s challenging threat environment.</p>
-<p>For more information or assistance with implementing these practices, <a href="https://cal.com/chenist" target="_blank">contact our security team</a>.</p>
+<p>For more information or assistance with implementing these practices, <a href="../booking/" target="_blank">contact our security team</a>.</p>
 <div class="card mt-5 mb-3">
 <section id="want-to-learn-more" class="level3 card-body">
-<h3>Want to learn more?</h3>
+<h3 class="anchored" data-anchor-id="want-to-learn-more">Want to learn more?</h3>
 <p>Join our upcoming webinar on advanced cybersecurity strategies where we’ll dive deeper into these topics and provide actionable insights for your organization.</p>
 <div class="text-center mt-3">
-<p><a href="https://cal.com/chenist" class="btn btn-success" target="_blank">Register Now</a></p>
+<p><a href="../booking/" class="btn btn-success" target="_blank">Register Now</a></p>
 </div>
 </section>
 </div>
-<div id="quarto-navigation-envelope" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyLXRpdGxl">chen.ist</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXItdGl0bGU=">chen.ist</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6SG9tZQ==">Home</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2luZGV4Lmh0bWw=">/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6U2VydmljZXM=">Services</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6T3ZlcnZpZXc=">Overview</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3NlcnZpY2VzL2luZGV4Lmh0bWw=">/services/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6U2VjdXJpdHk=">Security</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3NlY3VyaXR5L2luZGV4Lmh0bWw=">/security/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6RGlnaXRhbCBJbmZyYXN0cnVjdHVyZQ==">Digital Infrastructure</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2RpZ2l0YWwvaW5kZXguaHRtbA==">/digital/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6TklTMiBDb21wbGlhbmNl">NIS2 Compliance</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3NlcnZpY2VzL25pczIvaW5kZXguaHRtbA==">/services/nis2/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6Q3liZXJzZWN1cml0eQ==">Cybersecurity</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3NlcnZpY2VzL2N5YmVyc2VjdXJpdHkvaW5kZXguaHRtbA==">/services/cybersecurity/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6Q2xvdWQgU2VydmljZXM=">Cloud Services</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3NlcnZpY2VzL2Nsb3VkL2luZGV4Lmh0bWw=">/services/cloud/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6RGlnaXRhbCBSZXNpbGllbmNl">Digital Resilience</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3NlcnZpY2VzL2RpZ2l0YWwtcmVzaWxpZW5jZS9pbmRleC5odG1s">/services/digital-resilience/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6QWNhZGVteQ==">Academy</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2FjYWRlbXkvb3ZlcnZpZXcuaHRtbA==">/academy/overview.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6Q291cnNlcw==">Courses</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2FjYWRlbXkvY291cnNlcy5odG1s">/academy/courses.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6VHJhaW5pbmdz">Trainings</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2FjYWRlbXkvdHJhaW5pbmdzLmh0bWw=">/academy/trainings.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6TWljcm9sZWFybmluZw==">Microlearning</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2FjYWRlbXkvbWljcm9sZWFybmluZy5odG1s">/academy/microlearning.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6UHJvZ3JhbXM=">Programs</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2FjYWRlbXkvcHJvZ3JhbXMvaW5kZXguaHRtbA==">/academy/programs/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6SGFja2F0aG9ucw==">Hackathons</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6YWNhZGVteS9wcm9ncmFtcy9oYWNrYXRob25zL2luZGV4LnFtZA==">academy/programs/hackathons/index.qmd</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6U3VtbWVyIFNjaG9vbA==">Summer School</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6YWNhZGVteS9wcm9ncmFtcy9zdW1tZXItc2Nob29sL2luZGV4LnFtZA==">academy/programs/summer-school/index.qmd</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6RXZlbnRz">Events</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2FjYWRlbXkvZXZlbnRzLmh0bWw=">/academy/events.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6V2ViaW5hcnM=">Webinars</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2FjYWRlbXkvd2ViaW5hcnMuaHRtbA==">/academy/webinars.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6Q29tcHV0ZXIgQ2x1Yg==">Computer Club</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2FjYWRlbXkvY29tcHV0ZXJjbHViLmh0bWw=">/academy/computerclub.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6UGFydG5lcnNoaXBz">Partnerships</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2FjYWRlbXkvcGFydG5lcnNoaXBzLmh0bWw=">/academy/partnerships.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6QmxvZ3M=">Blogs</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2Jsb2cuaHRtbA==">/blog.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6UmVzb3VyY2Vz">Resources</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3Jlc291cmNlcy9pbmRleC5odG1s">/resources/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6QWJvdXQ=">About</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2Fib3V0L2luZGV4Lmh0bWw=">/about/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6Q1NS">CSR</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2Fib3V0L2Nzci5odG1s">/about/csr.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6Q29tbXVuaXR5">Community</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2Fib3V0L2NvbW11bml0eS5odG1s">/about/community.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6Q29udGFjdA==">Contact</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2NvbnRhY3QuaHRtbA==">/contact.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI68J+MkA==">🌐</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6RW5nbGlzaA==">English</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6Um9tw6JuxIM=">Română</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3JvL2luZGV4Lmh0bWw=">/ro/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6U3ZlbnNrYQ==">Svenska</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3N2L2luZGV4Lmh0bWw=">/sv/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6RGV1dHNjaA==">Deutsch</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2RlL2luZGV4Lmh0bWw=">/de/index.html</span></p>
-</div>
-<div id="quarto-meta-markdown" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGF0aXRsZQ==">Cybersecurity Best Practices for 2025 – chen.ist</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkdGl0bGU=">Cybersecurity Best Practices for 2025 – chen.ist</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZHRpdGxl">Cybersecurity Best Practices for 2025 – chen.ist</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGFzaXRlbmFtZQ==">chen.ist</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkZGVzYw==">Essential cybersecurity best practices that every organization should implement to protect against evolving threats in 2025.</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZGRkZXNj">Essential cybersecurity best practices that every organization should implement to protect against evolving threats in 2025.</span></p>
-</div>
+
+
 </section>
 
  ]]></description>

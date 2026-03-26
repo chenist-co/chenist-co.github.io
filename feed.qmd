@@ -1,0 +1,178 @@
+---
+pagetitle: "RSS Feed — chen.ist Blog"
+title-block-style: none
+page-layout: custom
+format:
+  html:
+    toc: false
+    include-in-header:
+      text: |
+        <style>
+        .feed-hero { padding: 10rem 0 3rem; text-align: center; }
+        .feed-hero h1 { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 700; letter-spacing: -0.04em; }
+        .feed-hero .gr { color: #81BD4A; }
+        .feed-hero p { font-size: 1.1rem; color: #86868b; max-width: 460px; margin: 1rem auto 0; }
+        .feed-subscribe { display: flex; justify-content: center; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
+        .feed-url { display: flex; align-items: center; gap: 0.5rem; background: rgba(129,189,74,0.04); border: 1px solid rgba(129,189,74,0.15); border-radius: 12px; padding: 0.6rem 1.25rem; font-family: 'Source Code Pro', monospace; font-size: 0.85rem; color: #86868b; cursor: pointer; transition: border-color 0.15s; }
+        .feed-url:hover { border-color: #81BD4A; }
+        .feed-url .rss-icon { color: #f26522; }
+        .feed-copied { color: #81BD4A; font-size: 0.78rem; font-weight: 600; display: none; margin-top: 0.5rem; }
+        .feed-list { max-width: 800px; margin: 3rem auto 6rem; padding: 0 2rem; }
+        .feed-item { padding: 2rem 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+        [data-bs-theme="dark"] .feed-item { border-color: rgba(255,255,255,0.06); }
+        .feed-item:first-child { padding-top: 0; }
+        .feed-item:last-child { border-bottom: none; }
+        .feed-item-date { font-size: 0.78rem; color: #86868b; margin-bottom: 0.35rem; }
+        .feed-item-title { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.3; margin-bottom: 0.5rem; }
+        .feed-item-title a { color: inherit; text-decoration: none; }
+        .feed-item-title a:hover { color: #81BD4A; }
+        .feed-item-desc { font-size: 0.92rem; color: #86868b; line-height: 1.6; margin-bottom: 0.75rem; }
+        .feed-item-cats { display: flex; gap: 0.35rem; flex-wrap: wrap; }
+        .feed-item-cat { display: inline-block; padding: 0.15rem 0.6rem; border-radius: 980px; font-size: 0.7rem; font-weight: 600; background: rgba(129,189,74,0.08); color: #81BD4A; }
+        .feed-readers { max-width: 800px; margin: 0 auto 6rem; padding: 0 2rem; }
+        .feed-readers h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem; text-align: center; }
+        .feed-readers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+        .feed-reader { display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.25rem; border-radius: 12px; border: 1px solid rgba(0,0,0,0.06); text-decoration: none !important; color: inherit; transition: border-color 0.15s, transform 0.15s; }
+        .feed-reader:hover { border-color: #81BD4A; transform: translateY(-2px); }
+        [data-bs-theme="dark"] .feed-reader { border-color: rgba(255,255,255,0.08); }
+        .feed-reader i { font-size: 1.25rem; color: #81BD4A; }
+        .feed-reader span { font-size: 0.9rem; font-weight: 500; }
+        </style>
+---
+
+```{=html}
+<div class="m">
+
+<div class="feed-hero">
+  <div class="container">
+    <h1><i class="bi bi-rss" style="color:#f26522;"></i> RSS <span class="gr">Feed</span></h1>
+    <p>Subscribe to get our latest articles delivered to your favorite feed reader.</p>
+    <div class="feed-subscribe">
+      <div class="feed-url" id="feed-url-box">
+        <i class="bi bi-rss rss-icon"></i> https://chen.ist/blog.xml <i class="bi bi-clipboard" style="color:#86868b; margin-left:0.5rem;"></i>
+      </div>
+    </div>
+    <div class="feed-copied" id="copied"><i class="bi bi-check-circle-fill"></i> Copied to clipboard</div>
+  </div>
+</div>
+
+<div class="feed-list" id="feed-items">
+  <div style="text-align:center; padding:3rem 0; color:#86868b;">
+    <i class="bi bi-arrow-repeat" style="font-size:1.5rem; display:block; margin-bottom:0.5rem;"></i>
+    Loading articles...
+  </div>
+</div>
+
+<div class="feed-readers">
+  <h2>Add to your reader</h2>
+  <div class="feed-readers-grid">
+    <a href="https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Fchen.ist%2Fblog.xml" target="_blank" class="feed-reader"><i class="bi bi-journal-text"></i><span>Feedly</span></a>
+    <a href="https://www.inoreader.com/?add_feed=https://chen.ist/blog.xml" target="_blank" class="feed-reader"><i class="bi bi-inbox"></i><span>Inoreader</span></a>
+    <a href="https://newsblur.com/?url=https://chen.ist/blog.xml" target="_blank" class="feed-reader"><i class="bi bi-newspaper"></i><span>NewsBlur</span></a>
+    <a href="/blog.xml" target="_blank" class="feed-reader"><i class="bi bi-file-earmark-code"></i><span>Raw XML</span></a>
+  </div>
+</div>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Copy to clipboard
+  document.getElementById('feed-url-box').addEventListener('click', function() {
+    navigator.clipboard.writeText('https://chen.ist/blog.xml').then(function() {
+      var el = document.getElementById('copied');
+      el.style.display = 'block';
+      setTimeout(function() { el.style.display = 'none'; }, 2000);
+    });
+  });
+
+  // Fetch and render feed
+  fetch('/blog.xml')
+    .then(function(r) { return r.text(); })
+    .then(function(xml) {
+      var parser = new DOMParser();
+      var doc = parser.parseFromString(xml, 'text/xml');
+      var items = doc.querySelectorAll('item');
+      var container = document.getElementById('feed-items');
+      container.textContent = '';
+
+      items.forEach(function(item) {
+        var title = item.querySelector('title') ? item.querySelector('title').textContent : '';
+        var link = item.querySelector('link') ? item.querySelector('link').textContent : '#';
+        var desc = item.querySelector('description') ? item.querySelector('description').textContent : '';
+        var pubDate = item.querySelector('pubDate') ? item.querySelector('pubDate').textContent : '';
+        var cats = item.querySelectorAll('category');
+
+        // Clean description
+        var tmp = document.createElement('div');
+        tmp.textContent = desc.replace(/<[^>]*>/g, '').substring(0, 200);
+        var cleanDesc = tmp.textContent;
+        if (cleanDesc.length >= 200) cleanDesc += '...';
+
+        // Format date
+        var dateStr = '';
+        if (pubDate) {
+          var d = new Date(pubDate);
+          dateStr = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        }
+
+        var div = document.createElement('div');
+        div.className = 'feed-item';
+
+        var dateEl = document.createElement('div');
+        dateEl.className = 'feed-item-date';
+        dateEl.textContent = dateStr;
+        div.appendChild(dateEl);
+
+        var titleEl = document.createElement('div');
+        titleEl.className = 'feed-item-title';
+        var titleLink = document.createElement('a');
+        titleLink.href = link;
+        titleLink.textContent = title;
+        titleEl.appendChild(titleLink);
+        div.appendChild(titleEl);
+
+        var descEl = document.createElement('div');
+        descEl.className = 'feed-item-desc';
+        descEl.textContent = cleanDesc;
+        div.appendChild(descEl);
+
+        if (cats.length) {
+          var catsEl = document.createElement('div');
+          catsEl.className = 'feed-item-cats';
+          cats.forEach(function(c) {
+            var catSpan = document.createElement('span');
+            catSpan.className = 'feed-item-cat';
+            catSpan.textContent = c.textContent;
+            catsEl.appendChild(catSpan);
+          });
+          div.appendChild(catsEl);
+        }
+
+        container.appendChild(div);
+      });
+
+      if (!items.length) {
+        var noItems = document.createElement('p');
+        noItems.style.textAlign = 'center';
+        noItems.style.color = '#86868b';
+        noItems.textContent = 'No articles found.';
+        container.appendChild(noItems);
+      }
+    })
+    .catch(function() {
+      var container = document.getElementById('feed-items');
+      container.textContent = '';
+      var errP = document.createElement('p');
+      errP.style.textAlign = 'center';
+      errP.style.color = '#86868b';
+      errP.textContent = 'Could not load feed.';
+      var errLink = document.createElement('a');
+      errLink.href = '/blog.xml';
+      errLink.textContent = ' View raw XML';
+      errP.appendChild(errLink);
+      container.appendChild(errP);
+    });
+});
+</script>
+```

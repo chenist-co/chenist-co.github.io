@@ -427,8 +427,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
-    <img src="../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
+    <img src="../../assets/images/logo-light.svg" alt="" class="navbar-logo light-content">
+    <img src="../../assets/images/logo-light.svg" alt="" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -625,7 +625,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="m-rt">
         <h2>Unsere Mission.<br>Ihr Potenzial.</h2>
         <p>Wir bieten hochwertige, sichere und effiziente Technologielösungen, die Organisationen befähigen, ihr volles Potenzial in der digitalen Welt auszuschöpfen. Von Cybersicherheit bis Cloud-Infrastruktur, jedes Engagement ist auf Ihre Ziele zugeschnitten.</p>
-        <div class="lk"><a href="../../services/" class="m-lk">Unsere Dienstleistungen entdecken</a></div>
+        <div class="lk"><a href="../../de/services/" class="m-lk">Unsere Dienstleistungen entdecken</a></div>
       </div>
     </div>
   </div>
@@ -638,7 +638,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="m-rt">
         <h2>Gebaut für Beständigkeit.<br>Designed für Skalierung.</h2>
         <p>Wir verfolgen einen kollaborativen und ganzheitlichen Ansatz: Ihre Bedürfnisse verstehen, präzise planen, sorgfältig umsetzen, rigoros testen und langfristig unterstützen. Jeder Schritt wird dokumentiert, jede Entscheidung ist begründbar.</p>
-        <div class="lk"><a href="../../booking/" class="m-lk">Mit unserem Team sprechen</a></div>
+        <div class="lk"><a href="../../de/booking/" class="m-lk">Mit unserem Team sprechen</a></div>
       </div>
     </div>
   </div>
@@ -649,8 +649,8 @@ document.addEventListener('DOMContentLoaded', function() {
     <h2>Erfahren Sie mehr</h2>
     <p class="sub">Unser Engagement geht über Technologie hinaus.</p>
     <div class="row g-5">
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-heart"></i><h3>Gesellschaftliche Verantwortung</h3><p>Nachhaltige Praktiken, Gemeinschaftsentwicklung und sozialer Einfluss durch Technologie.</p><a href="../../about/csr.html" class="m-lk">Unsere CSR-Initiativen</a></div></div>
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-people-fill"></i><h3>Gemeinschaftsengagement</h3><p>Open-Source-Beiträge, Meetups, Mentoring und Bildungsprogramme.</p><a href="../../about/community.html" class="m-lk">Unser Gemeinschaftsarbeit</a></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-heart"></i><h3>Gesellschaftliche Verantwortung</h3><p>Nachhaltige Praktiken, Gemeinschaftsentwicklung und sozialer Einfluss durch Technologie.</p><a href="../../de/about/csr.html" class="m-lk">Unsere CSR-Initiativen</a></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-people-fill"></i><h3>Gemeinschaftsengagement</h3><p>Open-Source-Beiträge, Meetups, Mentoring und Bildungsprogramme.</p><a href="../../de/about/community.html" class="m-lk">Unser Gemeinschaftsarbeit</a></div></div>
     </div>
   </div>
 </div>
@@ -660,7 +660,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="m-d"></div>
     <h2>Bereit, mit uns<br>zu arbeiten?</h2>
     <p>Lassen Sie uns besprechen, wie wir Ihnen helfen können, Ihre Technologieziele zu erreichen.</p>
-    <a href="../../contact.html" class="m-b">Kontakt</a>
+    <a href="../../de/contact.html" class="m-b">Kontakt</a>
   </div>
 </div>
 
@@ -1161,7 +1161,12 @@ footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
   document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
     var href = a.getAttribute('href');
     if (href && href.startsWith('/') && !href.startsWith('//')) {
-      a.setAttribute('href', prefix + href);
+      // Swedish blog is at /sv/blogg.html, not /sv/blog.html
+      if (lang === 'sv' && href === '/blog.html') {
+        a.setAttribute('href', '/sv/blogg.html');
+      } else {
+        a.setAttribute('href', prefix + href);
+      }
     }
   });
 

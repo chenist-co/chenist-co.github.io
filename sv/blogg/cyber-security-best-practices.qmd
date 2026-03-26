@@ -7,6 +7,15 @@ image: /assets/images/stock/cybersecurity-monitor.webp
 lang-code: sv
 categories: [Cybersäkerhet, Bästa Praxis]
 description: "Viktiga cybersäkerhetspraxis som varje organisation bör implementera för att skydda sig mot de föränderliga hoten 2025."
+format:
+  html:
+    format-links: false
+    toc: true
+    toc-depth: 3
+  typst:
+    toc: true
+    number-sections: false
+    include-before-body: before-body.typ
 ---
 
 ```{=html}
@@ -80,7 +89,7 @@ För mer information eller hjälp med att implementera dessa rutiner, [kontakta 
 Delta i vårt kommande webbinarium om avancerade cybersäkerhetsstrategier där vi fördjupar oss i dessa ämnen och ger handlingsbara insikter för din organisation.
 
 ::: {.text-center .mt-3}
-[Registrera dig nu](/sv/booking/){target="_blank"}{.btn .btn-success}
+[Registrera dig nu](/sv/booking/){.btn .btn-success target="_blank"}
 :::
 :::
 :::

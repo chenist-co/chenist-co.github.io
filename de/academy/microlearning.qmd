@@ -1,0 +1,157 @@
+---
+title: "Microlearning"
+title-block-style: none
+subtitle: "Kompakte 1-2 Stunden Skill-Sessions"
+description: "Fokussierte 1-2 Stunden Microlearning-Sessions für spezifische Tools und Technologien. Perfekt für vielbeschäftigte Fachleute, die schnell eine neue Fähigkeit erlernen möchten."
+from: markdown+raw_html
+page-layout: custom
+format:
+  html:
+    toc: false
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
+---
+
+```{=html}
+<div class="m">
+
+<!-- HERO -->
+<div class="ev-hero" style="min-height:55vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/terminal-green.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Academy</div>
+    <h1>Micro<span style="color:#F5A623;">learning</span></h1>
+    <p>Meistern Sie ein neues Tool in 1-2 Stunden. Fokussierte Sessions für vielbeschäftigte Fachleute, die ihre Zeit schätzen.</p>
+  </div>
+</div>
+
+<!-- LANGUAGE NOTICE -->
+<div class="m-bg" style="padding:5rem 0;">
+  <div class="container" style="max-width:750px;">
+    <div style="background:rgba(245,166,35,0.06); border:1px solid rgba(245,166,35,0.15); border-radius:16px; padding:2.5rem; text-align:center;">
+      <i class="bi bi-translate" style="font-size:2rem; color:#F5A623; display:block; margin-bottom:1rem;"></i>
+      <h2 style="font-size:1.5rem; margin-bottom:0.75rem;">Sessions auf Englisch & Rumänisch</h2>
+      <p style="color:rgba(255,255,255,0.6); max-width:500px; margin:0 auto 1.5rem;">Unsere Microlearning-Sessions finden derzeit auf Englisch und Rumänisch statt. Entdecken Sie das vollständige Programm unten.</p>
+      <a href="/academy/microlearning.html" class="m-b" style="background:#F5A623;">Alle Sessions ansehen (EN)</a>
+    </div>
+  </div>
+</div>
+
+<!-- TOOLS & SYSTEMS -->
+<div class="m-s" id="sessions" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Tools & Systeme</h2>
+    <p class="sub">Klicken Sie für vollständige Informationen auf Englisch.</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="/academy/microlearning/cli-intro/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="Unix CLI"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 Stunden</div><h3>Unix-Kommandozeile</h3><p>Grundlegende Befehle, Navigation und Shell-Scripting.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/microlearning/tmux/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="Tmux"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">1 Stunde</div><h3>Tmux</h3><p>Session-Management, Panes, Fenster und Produktivitäts-Shortcuts.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/microlearning/emacs/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/hacker-screens.webp" alt="Emacs"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 Stunden</div><h3>Emacs Essentials</h3><p>Navigation, Bearbeitung, Buffer und erste Schritte mit Paketen.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/microlearning/sc-im/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="SC-IM"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">1 Stunde</div><h3>SC-IM Tabellenkalkulation</h3><p>Terminal-basierte Tabellenkalkulation mit Formeln und Datenimport.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/microlearning/syncthing/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/network-closeup.webp" alt="Syncthing"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 Stunden</div><h3>Syncthing</h3><p>Private Peer-to-Peer-Dateisynchronisation und Konfiguration.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/microlearning/libreoffice-calc/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="LibreOffice Calc"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 Stunden</div><h3>LibreOffice Calc</h3><p>Erweiterte Formeln, Datenanalyse, Diagramme und Makros.</p></div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PUBLISHING & WRITING -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Publizieren & Schreiben</h2>
+    <p class="sub">Moderne Dokumententools für technische Fachleute.</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="/academy/microlearning/quarto/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="Quarto"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 Stunden</div><h3>Quarto Publishing</h3><p>YAML, Markdown, Code-Chunks und Multi-Format-Ausgabe.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/microlearning/org-mode/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/hacker-screens.webp" alt="Org-mode"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 Stunden</div><h3>Org-mode Grundlagen</h3><p>Notizen, Aufgabenverwaltung, Agenda und Literate Programming.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/microlearning/latex/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="LaTeX"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 Stunden</div><h3>LaTeX für akademisches Schreiben</h3><p>Dokumentstruktur, Gleichungen, Bibliographien und Pakete.</p></div></div>
+        </a>
+      </div>
+    </div>
+    <div class="row g-4 mt-1 justify-content-center">
+      <div class="col-md-4">
+        <a href="/academy/microlearning/typst/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="Typst"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">1 Stunde</div><h3>Typst Markup Language</h3><p>Moderner Schriftsatz mit einfacher Syntax, Mathematik und Vorlagen.</p></div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OPERATING SYSTEMS -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Betriebssysteme</h2>
+    <p class="sub">Praktische Einführungen in sicherheitsorientierte Plattformen.</p>
+    <div class="row g-4">
+      <div class="col-md-3">
+        <a href="/academy/microlearning/nixos/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="NixOS"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 Stunden</div><h3>NixOS</h3><p>Deklarative Konfiguration, Pakete und Rollbacks.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="/academy/microlearning/freebsd/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/hacker-screens.webp" alt="FreeBSD"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 Stunden</div><h3>FreeBSD</h3><p>Architektur, pkg und Ports-Collection.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="/academy/microlearning/openbsd/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/cybersecurity-monitor.webp" alt="OpenBSD"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 Stunden</div><h3>OpenBSD</h3><p>Sicherheit, Pledge, PF-Firewall und Schutzmaßnahmen.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="/academy/microlearning/qubesos/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/network-closeup.webp" alt="QubesOS"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 Stunden</div><h3>QubesOS</h3><p>Compartments, Domänen und sichere Workflows.</p></div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Möchten Sie in Ihrer Organisation organisieren?</h2>
+    <p>Perfekt für Lunch-and-Learn-Sessions, Teambuilding oder persönliche Weiterbildung.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="/de/booking/" class="m-b" style="background:#F5A623;"><i class="bi bi-handshake me-2"></i>Partner werden</a>
+      <a href="/de/academy/partnerships.html" class="m-bo" style="border-color:#F5A623; color:#F5A623;">Mehr über Partnerschaften</a>
+    </div>
+  </div>
+</div>
+
+</div>
+```

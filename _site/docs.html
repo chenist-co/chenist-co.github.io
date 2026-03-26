@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Technical documentation, guides, and references for chen.ist services and tools.">
 
 <title>Documentation – chen.ist</title>
 <style>
@@ -75,11 +76,13 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <meta property="og:title" content="Documentation – chen.ist">
+<meta property="og:description" content="Technical documentation, guides, and references for chen.ist services and tools.">
 <meta property="og:image" content="https://chen.ist/assets/images/og-image.png">
 <meta property="og:site_name" content="chen.ist">
 <meta property="og:image:height" content="630">
 <meta property="og:image:width" content="1200">
 <meta name="twitter:title" content="Documentation – chen.ist">
+<meta name="twitter:description" content="Technical documentation, guides, and references for chen.ist services and tools.">
 <meta name="twitter:image" content="https://chen.ist/assets/images/og-image.png">
 <meta name="twitter:image-height" content="630">
 <meta name="twitter:image-width" content="1200">
@@ -351,22 +354,46 @@ document.addEventListener('DOMContentLoaded', function() {
     navbarBrand.appendChild(titleSpan);
   }
 
-  // Add CTA button to navbar
+  // Add CTA button to navbar (language-aware)
   var navRight = document.querySelector('.navbar-nav.ms-auto');
   if (navRight) {
+    var langPrefix = '';
+    var langMatch = window.location.pathname.match(/^\/(ro|sv|de)\//);
+    if (langMatch) langPrefix = '/' + langMatch[1];
     var ctaLi = document.createElement('li');
     ctaLi.className = 'nav-item';
     var ctaLink = document.createElement('a');
     ctaLink.className = 'nav-link navbar-cta';
-    ctaLink.href = '/booking/';
-    // internal link, no new tab
-    ctaLink.textContent = 'Book a Call';
+    ctaLink.href = langPrefix + '/booking/';
+    var ctaLabels = { ro: 'Programează', sv: 'Boka Samtal', de: 'Gespräch Buchen' };
+    ctaLink.textContent = langMatch ? (ctaLabels[langMatch[1]] || 'Book a Call') : 'Book a Call';
     ctaLi.appendChild(ctaLink);
     navRight.appendChild(ctaLi);
   }
 });
 </script>
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<script>
+(function() {
+  var path = window.location.pathname;
+  // Only redirect on English pages (no language prefix)
+  if (path.match(/^\/(ro|sv|de)\//)) return;
+  // Don't redirect if user explicitly chose English
+  if (localStorage.getItem('chen-lang-choice') === 'en') return;
+  // Don't redirect if already redirected this session
+  if (sessionStorage.getItem('chen-lang-redirected')) return;
+  // Detect browser language
+  var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  var target = null;
+  if (lang.startsWith('ro')) target = 'ro';
+  else if (lang.startsWith('sv')) target = 'sv';
+  else if (lang.startsWith('de')) target = 'de';
+  if (target) {
+    sessionStorage.setItem('chen-lang-redirected', '1');
+    window.location.href = '/' + target + path;
+  }
+})();
+</script>
 <link rel="preload" href="./assets/images/stock/network-closeup.webp" as="image" type="image/webp">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
 <meta name="view-transition" content="same-origin">
@@ -425,8 +452,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
-    <img src="./assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
+    <img src="./assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="./assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -594,127 +621,60 @@ document.addEventListener('DOMContentLoaded', function() {
 </header>
 
 
+<div class="m">
+
 <div class="m-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-8 offset-md-2 text-center">
-        <h1>Technical <span class="text-green">Documentation</span></h1>
-        <p>Comprehensive guides, references, and resources</p>
-      </div>
-    </div>
+    <h1>Technical <span class="gr">Documentation</span></h1>
+    <p>Guides, references, and resources to help you implement and maintain our solutions.</p>
   </div>
 </div>
-<div class="container page-section">
-<section id="technical-resources" class="level2">
-<h2 data-anchor-id="technical-resources">Technical Resources</h2>
-<p>Welcome to our documentation hub. Here you’ll find comprehensive guides, references, and resources to help you understand and implement our solutions effectively.</p>
-<section id="documentation-formats" class="level3">
-<h3 data-anchor-id="documentation-formats">Documentation Formats</h3>
-<p>Our documentation is available in multiple formats to suit your needs:</p>
-<div class="row mt-4">
-  <div class="col-md-3">
-    <div class="security-feature">
-      <h3>HTML</h3>
-      <p>Interactive web-based documentation.</p>
-      <a href="../docs/_output/html/index.html" class="btn btn-primary btn-sm">View Online</a>
-    </div>
-  </div>
-  <div class="col-md-3">
-    <div class="security-feature">
-      <h3>PDF</h3>
-      <p>Downloadable PDF documents.</p>
-      <span class="btn btn-secondary btn-sm disabled">PDF — Coming Soon</span>
-    </div>
-  </div>
-  <div class="col-md-3">
-    <div class="security-feature">
-      <h3>Word</h3>
-      <p>Microsoft Word format.</p>
-      <span class="btn btn-secondary btn-sm disabled">Word — Coming Soon</span>
-    </div>
-  </div>
-  <div class="col-md-3">
-    <div class="security-feature">
-      <h3>Typst</h3>
-      <p>Modern typesetting format.</p>
-      <span class="btn btn-secondary btn-sm disabled">Typst — Coming Soon</span>
-    </div>
-  </div>
-</div>
-</section>
-<section id="categories" class="level3">
-<h3 data-anchor-id="categories">Categories</h3>
-<div class="row mt-5">
-  <div class="col-md-4">
-    <div class="feature-card">
-      <div class="feature-card-icon">
-        <i class="bi bi-shield-check"></i>
-      </div>
-      <h3>Security Guides</h3>
-      <p>Detailed documentation on implementing and maintaining security solutions.</p>
-      <a href="../docs/_output/html/security/index.html" class="btn btn-outline-primary">View Guides</a>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="feature-card">
-      <div class="feature-card-icon">
-        <i class="bi bi-cloud"></i>
-      </div>
-      <h3>Cloud Infrastructure</h3>
-      <p>Resources for setting up and optimizing cloud environments.</p>
-      <a href="../docs/_output/html/cloud/index.html" class="btn btn-outline-primary">View Guides</a>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="feature-card">
-      <div class="feature-card-icon">
-        <i class="bi bi-code-square"></i>
-      </div>
-      <h3>API Reference</h3>
-      <p>Comprehensive API documentation for developers.</p>
-      <a href="../docs/_output/html/api/index.html" class="btn btn-outline-primary">View Reference</a>
-    </div>
-  </div>
-</div>
-</section>
-</section>
-<section id="latest-documentation" class="level2">
-<h2 data-anchor-id="latest-documentation">Latest Documentation</h2>
-<div class="row mt-5">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header">
-        <h3 class="card-title mb-0">Security Implementation Guide</h3>
-      </div>
-      <div class="card-body">
-        <p>A comprehensive guide to implementing our security solutions in your environment.</p>
-        <p><strong>Updated:</strong> April 1, 2025</p>
-        <a href="../docs/_output/html/security/implementation-guide.html" class="btn btn-primary">Read Guide</a>
-      </div>
-    </div>
-  </div>
 
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header">
-        <h3 class="card-title mb-0">Cloud Migration Handbook</h3>
+<div class="m-bg">
+  <div class="container">
+    <h2>Documentation</h2>
+    <p class="sub">Comprehensive resources organized by topic.</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="./resources/guides/security/implementation-guide.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="./assets/images/stock/cybersecurity-monitor.webp" alt="Security"><div class="pg-card-body"><h3>Security Implementation Guide</h3><p>Implementing and maintaining security solutions in your environment.</p></div></div>
+        </a>
       </div>
-      <div class="card-body">
-        <p>Step-by-step instructions for migrating your infrastructure to the cloud.</p>
-        <p><strong>Updated:</strong> March 15, 2025</p>
-        <a href="../docs/_output/html/cloud/migration-handbook.html" class="btn btn-primary">Read Guide</a>
+      <div class="col-md-4">
+        <a href="./resources/guides/cloud/migration-handbook.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="./assets/images/stock/network-closeup.webp" alt="Cloud"><div class="pg-card-body"><h3>Cloud Migration Handbook</h3><p>Step-by-step instructions for migrating your infrastructure to the cloud.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="./resources/guides/api/endpoints.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="./assets/images/stock/code-screen.webp" alt="API"><div class="pg-card-body"><h3>API Reference</h3><p>Comprehensive API documentation for developers and integrators.</p></div></div>
+        </a>
       </div>
     </div>
   </div>
 </div>
-</section>
-</div>
-<div class="cta-section">
-  <div class="container text-center">
-    <h2>Need more help?</h2>
-    <p class="mb-4">Our support team is ready to assist you with any questions or challenges.</p>
-    <a href="./booking/" class="cta-button">Contact Support</a>
+
+<div class="m-s">
+  <div class="container">
+    <h2>More resources</h2>
+    <p class="sub">Tools, templates, and keynotes from our team.</p>
+    <div class="row g-5">
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-tools"></i><h3>Interactive Tools</h3><p>Security assessments, calculators, and utilities.</p><a href="./resources/tools/" class="m-lk">Browse tools</a></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-file-earmark-text"></i><h3>Templates</h3><p>Security policies, risk assessments, and compliance documents.</p><a href="./resources/templates/" class="m-lk">Browse templates</a></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-easel"></i><h3>Keynotes</h3><p>Presentations on security, cloud, and digital transformation.</p><a href="./resources/keynotes/zero-trust-security/" class="m-lk">View keynotes</a></div></div>
+    </div>
   </div>
+</div>
+
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Need help?</h2>
+    <p>Our team is ready to assist with implementation questions and technical challenges.</p>
+    <a href="./booking/" class="m-b">Book a consultation</a>
+  </div>
+</div>
+
 </div>
 
 
@@ -1144,7 +1104,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- Back to top -->
 <div style="text-align:center; padding:2rem 0; background:#0a0a0a; border-top:1px solid rgba(255,255,255,0.04);">
   <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" style="color:rgba(255,255,255,0.3); text-decoration:none; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em;">
-    <i class="bi bi-chevron-up" style="display:block; font-size:1rem; margin-bottom:0.25rem;"></i>Back to top
+    <i class="bi bi-chevron-up" style="display:block; font-size:1rem; margin-bottom:0.25rem;"></i><span class="footer-i18n" data-key="backToTop">Back to top</span>
   </a>
 </div>
 
@@ -1153,7 +1113,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div style="display:grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr; gap:2rem;">
       <div>
         <div style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:1rem; font-family:'Source Code Pro',monospace;">chen<span style="color:#81BD4A;">.</span>ist</div>
-        <p style="margin-bottom:1rem; color:rgba(255,255,255,0.4);">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
+        <p style="margin-bottom:1rem; color:rgba(255,255,255,0.4);" class="footer-i18n" data-key="tagline">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
         <div style="display:flex; gap:0.75rem; margin-bottom:1rem;">
           <a href="https://github.com/chenist" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-github"></i></a>
           <a href="https://linkedin.com/in/chenistsec" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-linkedin"></i></a>
@@ -1162,33 +1122,33 @@ document.addEventListener('DOMContentLoaded', function() {
         <p style="color:rgba(255,255,255,0.2); font-size:0.75rem;">© 2026 chen.ist</p>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Services</div>
-        <a href="./digital/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Digital Infrastructure</a>
-        <a href="./security/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Security</a>
-        <a href="./services/cloud/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
-        <a href="./services/nis2/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">NIS2 Compliance</a>
-        <a href="./services/digital-resilience/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Digital Resilience</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="services">Services</div>
+        <a href="./digital/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="digitalInfra">Digital Infrastructure</a>
+        <a href="./security/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="security">Security</a>
+        <a href="./services/cloud/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
+        <a href="./services/nis2/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="nis2">NIS2 Compliance</a>
+        <a href="./services/digital-resilience/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="resilience">Digital Resilience</a>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Academy</div>
-        <a href="./academy/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Overview</a>
-        <a href="./academy/courses.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Courses</a>
-        <a href="./academy/trainings.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Trainings</a>
-        <a href="./academy/events.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Events</a>
-        <a href="./academy/webinars.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Webinars</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="academy">Academy</div>
+        <a href="./academy/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="overview">Overview</a>
+        <a href="./academy/courses.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="courses">Courses</a>
+        <a href="./academy/trainings.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="trainings">Trainings</a>
+        <a href="./academy/events.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="events">Events</a>
+        <a href="./academy/webinars.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="webinars">Webinars</a>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Company</div>
-        <a href="./about/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">About</a>
-        <a href="./blog.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
-        <a href="./contact.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Contact</a>
-        <a href="./privacy.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Privacy</a>
-        <a href="./terms.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Terms</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="company">Company</div>
+        <a href="./about/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="about">About</a>
+        <a href="./blog.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
+        <a href="./contact.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="contact">Contact</a>
+        <a href="./privacy.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="privacy">Privacy</a>
+        <a href="./terms.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="terms">Terms</a>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Connect</div>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="connect">Connect</div>
         <a href="mailto:office@chen.ist" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">office@chen.ist</a>
-        <a href="./booking/" style="display:block; color:#81BD4A; text-decoration:none; padding:0.1rem 0; font-weight:500;">Book a Call</a>
+        <a href="./booking/" data-footer-link="" style="display:block; color:#81BD4A; text-decoration:none; padding:0.1rem 0; font-weight:500;" class="footer-i18n" data-key="bookCall">Book a Call</a>
         <div style="margin-top:1rem; color:rgba(255,255,255,0.2); font-size:0.72rem;">Craiova · Bucharest · Stockholm</div>
       </div>
     </div>
@@ -1201,6 +1161,59 @@ document.addEventListener('DOMContentLoaded', function() {
 @media (max-width:480px) { footer > div > div { grid-template-columns: 1fr !important; } }
 footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
 </style>
+
+<script>
+(function() {
+  var langMatch = window.location.pathname.match(/^\/(ro|sv|de)\//);
+  var lang = langMatch ? langMatch[1] : 'en';
+  var prefix = lang === 'en' ? '' : '/' + lang;
+
+  // Rewrite all internal footer links to include language prefix
+  document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
+    var href = a.getAttribute('href');
+    if (href && href.startsWith('/') && !href.startsWith('//')) {
+      // Swedish blog is at /sv/blogg.html, not /sv/blog.html
+      if (lang === 'sv' && href === '/blog.html') {
+        a.setAttribute('href', '/sv/blogg.html');
+      } else {
+        a.setAttribute('href', prefix + href);
+      }
+    }
+  });
+
+  // Translate labels if not English
+  if (lang === 'en') return;
+  var i18n = {
+    ro: {
+      backToTop: 'Înapoi sus', tagline: 'Infrastructură digitală, securitate cibernetică și educație. Construit pe open-source.',
+      services: 'Servicii', digitalInfra: 'Infrastructură Digitală', security: 'Securitate', nis2: 'Conformitate NIS2', resilience: 'Reziliență Digitală',
+      academy: 'Academie', overview: 'Prezentare', courses: 'Cursuri', trainings: 'Training-uri', events: 'Evenimente', webinars: 'Webinarii',
+      company: 'Companie', about: 'Despre noi', contact: 'Contact', privacy: 'Confidențialitate', terms: 'Termeni',
+      connect: 'Conectare', bookCall: 'Programează'
+    },
+    sv: {
+      backToTop: 'Tillbaka upp', tagline: 'Digital infrastruktur, cybersäkerhet och utbildning. Byggt på öppen källkod.',
+      services: 'Tjänster', digitalInfra: 'Digital Infrastruktur', security: 'Säkerhet', nis2: 'NIS2-efterlevnad', resilience: 'Digital Resiliens',
+      academy: 'Akademi', overview: 'Översikt', courses: 'Kurser', trainings: 'Utbildningar', events: 'Evenemang', webinars: 'Webbinarier',
+      company: 'Företag', about: 'Om oss', contact: 'Kontakt', privacy: 'Integritet', terms: 'Villkor',
+      connect: 'Kontakta', bookCall: 'Boka Samtal'
+    },
+    de: {
+      backToTop: 'Nach oben', tagline: 'Digitale Infrastruktur, Cybersicherheit und Bildung. Auf Open-Source aufgebaut.',
+      services: 'Dienstleistungen', digitalInfra: 'Digitale Infrastruktur', security: 'Sicherheit', nis2: 'NIS2-Konformität', resilience: 'Digitale Resilienz',
+      academy: 'Akademie', overview: 'Übersicht', courses: 'Kurse', trainings: 'Schulungen', events: 'Veranstaltungen', webinars: 'Webinare',
+      company: 'Unternehmen', about: 'Über uns', contact: 'Kontakt', privacy: 'Datenschutz', terms: 'AGB',
+      connect: 'Verbinden', bookCall: 'Gespräch Buchen'
+    }
+  };
+  var t = i18n[lang];
+  if (!t) return;
+  document.querySelectorAll('.footer-i18n').forEach(function(el) {
+    var key = el.getAttribute('data-key');
+    if (key && t[key]) el.textContent = t[key];
+  });
+})();
+</script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const observer = new IntersectionObserver((entries) => {
@@ -1275,6 +1288,7 @@ document.addEventListener('DOMContentLoaded', function() {
       a.href = l.prefix + (cleanPath || '/');
       a.textContent = l.label;
       if (l.code === currentLang) a.className = 'active';
+      a.addEventListener('click', function(e) { localStorage.setItem('chen-lang-choice', this.textContent.toLowerCase() === 'en' ? 'en' : ''); });
       langsDiv.appendChild(a);
     }
 
@@ -1289,11 +1303,10 @@ document.addEventListener('DOMContentLoaded', function() {
   })();
 });
 </script>
-<!-- Cal.com floating button -->
+<!-- Cal.com embed (for booking page only, no floating button) -->
 <script>
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", {origin:"https://cal.com"});
-  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {

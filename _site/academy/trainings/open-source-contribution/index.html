@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-8dd3dd159173adcf0f2e6467a4c7591f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-34a1d7218939eaee31c1f1ef031ca8da.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-8dd3dd159173adcf0f2e6467a4c7591f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-a592c5a32ddb2bbfd9fa55d2db6a7c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-29f4aea09a2439b849a9d23a02a83b44.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-a592c5a32ddb2bbfd9fa55d2db6a7c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:description" content="Intensive 2-day hands-on workshop for developers to learn practical workflows, tools, and best practices for effective collaboration in open source projects, including Git workflows and meaningful contributions.">
 <meta name="twitter:image" content="https://chen.ist/academy/trainings/open-source-contribution/assets/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-</head><body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+</head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -350,22 +350,46 @@ document.addEventListener('DOMContentLoaded', function() {
     navbarBrand.appendChild(titleSpan);
   }
 
-  // Add CTA button to navbar
+  // Add CTA button to navbar (language-aware)
   var navRight = document.querySelector('.navbar-nav.ms-auto');
   if (navRight) {
+    var langPrefix = '';
+    var langMatch = window.location.pathname.match(/^\/(ro|sv|de)\//);
+    if (langMatch) langPrefix = '/' + langMatch[1];
     var ctaLi = document.createElement('li');
     ctaLi.className = 'nav-item';
     var ctaLink = document.createElement('a');
     ctaLink.className = 'nav-link navbar-cta';
-    ctaLink.href = '/booking/';
-    // internal link, no new tab
-    ctaLink.textContent = 'Book a Call';
+    ctaLink.href = langPrefix + '/booking/';
+    var ctaLabels = { ro: 'Programează', sv: 'Boka Samtal', de: 'Gespräch Buchen' };
+    ctaLink.textContent = langMatch ? (ctaLabels[langMatch[1]] || 'Book a Call') : 'Book a Call';
     ctaLi.appendChild(ctaLink);
     navRight.appendChild(ctaLi);
   }
 });
 </script>
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<script>
+(function() {
+  var path = window.location.pathname;
+  // Only redirect on English pages (no language prefix)
+  if (path.match(/^\/(ro|sv|de)\//)) return;
+  // Don't redirect if user explicitly chose English
+  if (localStorage.getItem('chen-lang-choice') === 'en') return;
+  // Don't redirect if already redirected this session
+  if (sessionStorage.getItem('chen-lang-redirected')) return;
+  // Detect browser language
+  var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  var target = null;
+  if (lang.startsWith('ro')) target = 'ro';
+  else if (lang.startsWith('sv')) target = 'sv';
+  else if (lang.startsWith('de')) target = 'de';
+  if (target) {
+    sessionStorage.setItem('chen-lang-redirected', '1');
+    window.location.href = '/' + target + path;
+  }
+})();
+</script>
 <link rel="preload" href="../../../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
 <meta name="view-transition" content="same-origin">
@@ -411,7 +435,10 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 }
 </script>
-<style>.m { --c: #F5A623; }</style>
+<style>
+.m { --c: #F5A623; }
+.quarto-title-block { display: none !important; }
+</style>
 
 
 <link rel="stylesheet" href="../../../assets/css/main.min.css">
@@ -425,8 +452,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
-    <img src="../../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
+    <img src="../../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="../../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -582,34 +609,82 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#training-overview" id="toc-training-overview" class="nav-link active" data-scroll-target="#training-overview">Training Overview</a>
+  <ul class="collapse">
+  <li><a href="#next-session" id="toc-next-session" class="nav-link" data-scroll-target="#next-session">Next Session</a></li>
+  </ul></li>
+  <li><a href="#training-curriculum" id="toc-training-curriculum" class="nav-link" data-scroll-target="#training-curriculum">Training Curriculum</a>
+  <ul class="collapse">
+  <li><a href="#day-1-open-source-fundamentals-and-git-workflows" id="toc-day-1-open-source-fundamentals-and-git-workflows" class="nav-link" data-scroll-target="#day-1-open-source-fundamentals-and-git-workflows">Day 1: Open Source Fundamentals and Git Workflows</a></li>
+  <li><a href="#day-2-making-meaningful-contributions" id="toc-day-2-making-meaningful-contributions" class="nav-link" data-scroll-target="#day-2-making-meaningful-contributions">Day 2: Making Meaningful Contributions</a></li>
+  </ul></li>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link" data-scroll-target="#learning-outcomes">Learning Outcomes</a></li>
+  <li><a href="#training-methods" id="toc-training-methods" class="nav-link" data-scroll-target="#training-methods">Training Methods</a></li>
+  <li><a href="#who-should-attend" id="toc-who-should-attend" class="nav-link" data-scroll-target="#who-should-attend">Who Should Attend</a></li>
+  <li><a href="#materials-and-resources" id="toc-materials-and-resources" class="nav-link" data-scroll-target="#materials-and-resources">Materials and Resources</a></li>
+  <li><a href="#instructor" id="toc-instructor" class="nav-link" data-scroll-target="#instructor">Instructor</a></li>
+  <li><a href="#testimonials" id="toc-testimonials" class="nav-link" data-scroll-target="#testimonials">Testimonials</a></li>
+  <li><a href="#related-offerings" id="toc-related-offerings" class="nav-link" data-scroll-target="#related-offerings">Related Offerings</a></li>
+  <li><a href="#download" id="toc-download" class="nav-link" data-scroll-target="#download">Download</a></li>
+  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
+<main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header">
-<h1 class="title display-7">Open Source Contribution Workshop</h1>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Open Source Contribution Workshop</h1>
 <p class="subtitle lead">A 2-day intensive workshop on contributing to open source projects</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">open-source</div>
+    <div class="quarto-category">git</div>
+    <div class="quarto-category">collaboration</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Intensive 2-day hands-on workshop for developers to learn practical workflows, tools, and best practices for effective collaboration in open source projects, including Git workflows and meaningful contributions.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
 
 </header>
 
 
 <div class="m">
-
-<div class="m-hero">
-  <div class="container">
+<div class="m-hero" style="margin: -1em -1em 3rem; padding: 10rem 0 6rem;">
+  <div class="container" style="max-width: 700px;">
     <h1>Open Source <span class="gr">Contribution</span></h1>
     <p>Learn to make meaningful contributions to open source projects</p>
   </div>
 </div>
-
-<div class="container">
+</div>
 <section id="training-overview" class="level2">
-<h2 data-anchor-id="training-overview">Training Overview</h2>
+<h2 class="anchored" data-anchor-id="training-overview">Training Overview</h2>
 <p>This intensive 2-day workshop provides hands-on experience with contributing to open source projects. Designed for developers who want to start or improve their open source contributions, this training focuses on practical workflows, tools, and best practices for effective collaboration in the open source ecosystem.</p>
 <section id="next-session" class="level3">
-<h3 data-anchor-id="next-session">Next Session</h3>
+<h3 class="anchored" data-anchor-id="next-session">Next Session</h3>
 <ul>
 <li><strong>Dates:</strong> June 15-16, 2025</li>
 <li><strong>Times:</strong> 9:00 AM - 5:00 PM each day</li>
@@ -620,20 +695,20 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="training-curriculum" class="level2">
-<h2 data-anchor-id="training-curriculum">Training Curriculum</h2>
+<h2 class="anchored" data-anchor-id="training-curriculum">Training Curriculum</h2>
 <section id="day-1-open-source-fundamentals-and-git-workflows" class="level3">
-<h3 data-anchor-id="day-1-open-source-fundamentals-and-git-workflows">Day 1: Open Source Fundamentals and Git Workflows</h3>
+<h3 class="anchored" data-anchor-id="day-1-open-source-fundamentals-and-git-workflows">Day 1: Open Source Fundamentals and Git Workflows</h3>
 <p><strong>Morning Session: Open Source Ecosystem</strong> - Understanding open source culture and philosophy - Types of open source projects and communities - Open source licenses and legal considerations - Finding projects that match your interests and skills - Hands-on exercise: Exploring open source projects</p>
 <p><strong>Afternoon Session: Git and GitHub Essentials</strong> - Advanced Git commands for collaboration - GitHub workflow for contributions - Forking, branching, and pull request strategies - Code review best practices - Hands-on exercise: Setting up your contribution environment</p>
 </section>
 <section id="day-2-making-meaningful-contributions" class="level3">
-<h3 data-anchor-id="day-2-making-meaningful-contributions">Day 2: Making Meaningful Contributions</h3>
+<h3 class="anchored" data-anchor-id="day-2-making-meaningful-contributions">Day 2: Making Meaningful Contributions</h3>
 <p><strong>Morning Session: First Contributions</strong> - Finding good first issues - Understanding project guidelines and conventions - Documentation contributions - Code improvements and bug fixes - Hands-on exercise: Making your first pull request</p>
 <p><strong>Afternoon Session: Becoming an Effective Contributor</strong> - Communication with maintainers and community - Long-term contribution strategies - Managing rejections and feedback - Building your open source reputation - Hands-on exercise: Contributing to a real open source project</p>
 </section>
 </section>
 <section id="learning-outcomes" class="level2">
-<h2 data-anchor-id="learning-outcomes">Learning Outcomes</h2>
+<h2 class="anchored" data-anchor-id="learning-outcomes">Learning Outcomes</h2>
 <p>By completing this training, participants will be able to:</p>
 <ul>
 <li>Navigate and understand open source project structures</li>
@@ -645,12 +720,12 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="training-methods" class="level2">
-<h2 data-anchor-id="training-methods">Training Methods</h2>
+<h2 class="anchored" data-anchor-id="training-methods">Training Methods</h2>
 <div class="row mt-4">
   <div class="col-md-6">
     <div class="card mb-4">
       <div class="card-header bg-primary text-white">
-        <h3 class="card-title mb-0">Hands-On Learning</h3>
+        <h3 class="card-title mb-0 anchored">Hands-On Learning</h3>
       </div>
       <div class="card-body">
         <p>This training emphasizes practical application with over 70% of course time dedicated to hands-on exercises and activities:</p>
@@ -664,11 +739,11 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     </div>
   </div>
-  
+
   <div class="col-md-6">
     <div class="card mb-4">
       <div class="card-header bg-primary text-white">
-        <h3 class="card-title mb-0">Expert Instruction</h3>
+        <h3 class="card-title mb-0 anchored">Expert Instruction</h3>
       </div>
       <div class="card-body">
         <p>Our instructors are active open source contributors and maintainers:</p>
@@ -685,7 +760,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 </section>
 <section id="who-should-attend" class="level2">
-<h2 data-anchor-id="who-should-attend">Who Should Attend</h2>
+<h2 class="anchored" data-anchor-id="who-should-attend">Who Should Attend</h2>
 <p>This training is ideal for:</p>
 <ul>
 <li>Software developers looking to start contributing to open source</li>
@@ -697,7 +772,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>Basic Git knowledge and programming skills are required.</p>
 </section>
 <section id="materials-and-resources" class="level2">
-<h2 data-anchor-id="materials-and-resources">Materials and Resources</h2>
+<h2 class="anchored" data-anchor-id="materials-and-resources">Materials and Resources</h2>
 <p>Participants will receive:</p>
 <ul>
 <li>Comprehensive digital training manual</li>
@@ -708,22 +783,12 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>30 days of post-training email support</li>
 </ul>
 </section>
-<section id="lead-instructor" class="level2">
-<h2 data-anchor-id="lead-instructor">Lead Instructor</h2>
-<div class="row mt-4 mb-5">
-  <div class="col-md-3">
-    <img loading="lazy" src="../../../assets/images/stock/hackathon-team.webp" alt="Instructor Photo" class="img-fluid rounded">
-  </div>
-  <div class="col-md-9">
-    <h3>CHENIST Team</h3>
-    <p><strong>Open Source Program Manager, chen.ist</strong></p>
-    <p>Maria has over 10 years of experience in open source development, having contributed to numerous projects including major web frameworks and developer tools. She currently maintains several open source libraries and has helped hundreds of developers make their first contributions.</p>
-    <p>Maria is passionate about making open source more accessible and inclusive for developers of all backgrounds and skill levels.</p>
-  </div>
-</div>
+<section id="instructor" class="level2">
+<h2 class="anchored" data-anchor-id="instructor">Instructor</h2>
+<p>This training is delivered by the <strong>CHENIST Team</strong> — experienced practitioners who combine deep technical expertise with practical, real-world teaching. Our trainers work on live engagements and bring current industry knowledge directly into the classroom.</p>
 </section>
 <section id="testimonials" class="level2">
-<h2 data-anchor-id="testimonials">Testimonials</h2>
+<h2 class="anchored" data-anchor-id="testimonials">Testimonials</h2>
 <div class="row mt-5">
   <div class="col-md-6">
     <div class="card mb-4">
@@ -733,7 +798,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     </div>
   </div>
-  
+
   <div class="col-md-6">
     <div class="card mb-4">
       <div class="card-body">
@@ -745,28 +810,53 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 </section>
 <section id="related-offerings" class="level2">
-<h2 data-anchor-id="related-offerings">Related Offerings</h2>
+<h2 class="anchored" data-anchor-id="related-offerings">Related Offerings</h2>
 <p>If you’re interested in this training, you might also consider:</p>
 <ul>
 <li><a href="../../../academy/courses/open-source-development/">Open Source Development Course</a> - Our comprehensive 8-week course for in-depth learning</li>
 <li><a href="../../../academy/trainings/linux-admin-fundamentals/">Linux Administration Fundamentals Training</a> - A complementary 2-day workshop on Linux systems</li>
 <li><a href="../../../academy/events/">Git for Teams Workshop</a> - A half-day introduction to Git collaboration</li>
 </ul>
-</section></div>
-
+</section>
+<section id="download" class="level2">
+<h2 class="anchored" data-anchor-id="download">Download</h2>
+<div style="margin: 2rem 0; padding: 2rem 2.5rem; background: rgba(245,166,35,0.06); border: 1.5px solid rgba(245,166,35,0.2); border-radius: 16px;">
+<p style="margin: 0 0 0.5rem; font-weight: 600;">
+Download Training Details
+</p>
+<p style="margin: 0 0 1rem; font-size: 0.9rem; color: #86868b;">
+Get the full training outline, pricing, and contact information as a PDF.
+</p>
+<p><a href="index.pdf" class="m-b" style="font-size: 0.95rem; padding: 0.7rem 2rem; background: #F5A623;"><i class="bi bi-file-earmark-pdf me-2"></i>Download PDF</a></p>
+</div>
+</section>
+<section id="contact" class="level2">
+<h2 class="anchored" data-anchor-id="contact">Contact</h2>
+<p>Interested in this training?</p>
+<ul>
+<li><strong>Email:</strong> <a href="mailto:office@chen.ist">office@chen.ist</a></li>
+<li><strong>Web:</strong> <a href="../../../booking/">Book a free consultation</a></li>
+</ul>
+<div class="m">
 <div class="m-cta">
   <div class="container">
-    <h2>Ready to get started?</h2>
-    <p>Book a call to discuss your goals and find the right program.</p>
+    <div class="m-d"></div>
+    <h2 class="anchored">Book this training<br>for your team</h2>
+    <p>Custom workshops with organization-specific scenarios and flexible scheduling.</p>
+    <a href="../../../booking/" class="m-b">Book a Call</a>
+    <div class="m-sm">
+      <i class="bi bi-check-circle-fill"></i> Expert trainers &nbsp;
+      <i class="bi bi-check-circle-fill"></i> Practical focus &nbsp;
+      <i class="bi bi-check-circle-fill"></i> Team pricing
+    </div>
   </div>
 </div>
-
 </div>
 
 
+</section>
 
-
-
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1191,7 +1281,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- Back to top -->
 <div style="text-align:center; padding:2rem 0; background:#0a0a0a; border-top:1px solid rgba(255,255,255,0.04);">
   <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" style="color:rgba(255,255,255,0.3); text-decoration:none; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em;">
-    <i class="bi bi-chevron-up" style="display:block; font-size:1rem; margin-bottom:0.25rem;"></i>Back to top
+    <i class="bi bi-chevron-up" style="display:block; font-size:1rem; margin-bottom:0.25rem;"></i><span class="footer-i18n" data-key="backToTop">Back to top</span>
   </a>
 </div>
 
@@ -1200,7 +1290,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div style="display:grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr; gap:2rem;">
       <div>
         <div style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:1rem; font-family:'Source Code Pro',monospace;">chen<span style="color:#81BD4A;">.</span>ist</div>
-        <p style="margin-bottom:1rem; color:rgba(255,255,255,0.4);">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
+        <p style="margin-bottom:1rem; color:rgba(255,255,255,0.4);" class="footer-i18n" data-key="tagline">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
         <div style="display:flex; gap:0.75rem; margin-bottom:1rem;">
           <a href="https://github.com/chenist" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-github"></i></a>
           <a href="https://linkedin.com/in/chenistsec" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-linkedin"></i></a>
@@ -1209,33 +1299,33 @@ document.addEventListener('DOMContentLoaded', function() {
         <p style="color:rgba(255,255,255,0.2); font-size:0.75rem;">© 2026 chen.ist</p>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Services</div>
-        <a href="../../../digital/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Digital Infrastructure</a>
-        <a href="../../../security/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Security</a>
-        <a href="../../../services/cloud/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
-        <a href="../../../services/nis2/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">NIS2 Compliance</a>
-        <a href="../../../services/digital-resilience/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Digital Resilience</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="services">Services</div>
+        <a href="../../../digital/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="digitalInfra">Digital Infrastructure</a>
+        <a href="../../../security/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="security">Security</a>
+        <a href="../../../services/cloud/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
+        <a href="../../../services/nis2/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="nis2">NIS2 Compliance</a>
+        <a href="../../../services/digital-resilience/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="resilience">Digital Resilience</a>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Academy</div>
-        <a href="../../../academy/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Overview</a>
-        <a href="../../../academy/courses.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Courses</a>
-        <a href="../../../academy/trainings.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Trainings</a>
-        <a href="../../../academy/events.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Events</a>
-        <a href="../../../academy/webinars.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Webinars</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="academy">Academy</div>
+        <a href="../../../academy/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="overview">Overview</a>
+        <a href="../../../academy/courses.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="courses">Courses</a>
+        <a href="../../../academy/trainings.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="trainings">Trainings</a>
+        <a href="../../../academy/events.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="events">Events</a>
+        <a href="../../../academy/webinars.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="webinars">Webinars</a>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Company</div>
-        <a href="../../../about/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">About</a>
-        <a href="../../../blog.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
-        <a href="../../../contact.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Contact</a>
-        <a href="../../../privacy.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Privacy</a>
-        <a href="../../../terms.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Terms</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="company">Company</div>
+        <a href="../../../about/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="about">About</a>
+        <a href="../../../blog.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
+        <a href="../../../contact.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="contact">Contact</a>
+        <a href="../../../privacy.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="privacy">Privacy</a>
+        <a href="../../../terms.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="terms">Terms</a>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Connect</div>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="connect">Connect</div>
         <a href="mailto:office@chen.ist" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">office@chen.ist</a>
-        <a href="../../../booking/" style="display:block; color:#81BD4A; text-decoration:none; padding:0.1rem 0; font-weight:500;">Book a Call</a>
+        <a href="../../../booking/" data-footer-link="" style="display:block; color:#81BD4A; text-decoration:none; padding:0.1rem 0; font-weight:500;" class="footer-i18n" data-key="bookCall">Book a Call</a>
         <div style="margin-top:1rem; color:rgba(255,255,255,0.2); font-size:0.72rem;">Craiova · Bucharest · Stockholm</div>
       </div>
     </div>
@@ -1248,6 +1338,59 @@ document.addEventListener('DOMContentLoaded', function() {
 @media (max-width:480px) { footer > div > div { grid-template-columns: 1fr !important; } }
 footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
 </style>
+
+<script>
+(function() {
+  var langMatch = window.location.pathname.match(/^\/(ro|sv|de)\//);
+  var lang = langMatch ? langMatch[1] : 'en';
+  var prefix = lang === 'en' ? '' : '/' + lang;
+
+  // Rewrite all internal footer links to include language prefix
+  document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
+    var href = a.getAttribute('href');
+    if (href && href.startsWith('/') && !href.startsWith('//')) {
+      // Swedish blog is at /sv/blogg.html, not /sv/blog.html
+      if (lang === 'sv' && href === '/blog.html') {
+        a.setAttribute('href', '/sv/blogg.html');
+      } else {
+        a.setAttribute('href', prefix + href);
+      }
+    }
+  });
+
+  // Translate labels if not English
+  if (lang === 'en') return;
+  var i18n = {
+    ro: {
+      backToTop: 'Înapoi sus', tagline: 'Infrastructură digitală, securitate cibernetică și educație. Construit pe open-source.',
+      services: 'Servicii', digitalInfra: 'Infrastructură Digitală', security: 'Securitate', nis2: 'Conformitate NIS2', resilience: 'Reziliență Digitală',
+      academy: 'Academie', overview: 'Prezentare', courses: 'Cursuri', trainings: 'Training-uri', events: 'Evenimente', webinars: 'Webinarii',
+      company: 'Companie', about: 'Despre noi', contact: 'Contact', privacy: 'Confidențialitate', terms: 'Termeni',
+      connect: 'Conectare', bookCall: 'Programează'
+    },
+    sv: {
+      backToTop: 'Tillbaka upp', tagline: 'Digital infrastruktur, cybersäkerhet och utbildning. Byggt på öppen källkod.',
+      services: 'Tjänster', digitalInfra: 'Digital Infrastruktur', security: 'Säkerhet', nis2: 'NIS2-efterlevnad', resilience: 'Digital Resiliens',
+      academy: 'Akademi', overview: 'Översikt', courses: 'Kurser', trainings: 'Utbildningar', events: 'Evenemang', webinars: 'Webbinarier',
+      company: 'Företag', about: 'Om oss', contact: 'Kontakt', privacy: 'Integritet', terms: 'Villkor',
+      connect: 'Kontakta', bookCall: 'Boka Samtal'
+    },
+    de: {
+      backToTop: 'Nach oben', tagline: 'Digitale Infrastruktur, Cybersicherheit und Bildung. Auf Open-Source aufgebaut.',
+      services: 'Dienstleistungen', digitalInfra: 'Digitale Infrastruktur', security: 'Sicherheit', nis2: 'NIS2-Konformität', resilience: 'Digitale Resilienz',
+      academy: 'Akademie', overview: 'Übersicht', courses: 'Kurse', trainings: 'Schulungen', events: 'Veranstaltungen', webinars: 'Webinare',
+      company: 'Unternehmen', about: 'Über uns', contact: 'Kontakt', privacy: 'Datenschutz', terms: 'AGB',
+      connect: 'Verbinden', bookCall: 'Gespräch Buchen'
+    }
+  };
+  var t = i18n[lang];
+  if (!t) return;
+  document.querySelectorAll('.footer-i18n').forEach(function(el) {
+    var key = el.getAttribute('data-key');
+    if (key && t[key]) el.textContent = t[key];
+  });
+})();
+</script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const observer = new IntersectionObserver((entries) => {
@@ -1322,6 +1465,7 @@ document.addEventListener('DOMContentLoaded', function() {
       a.href = l.prefix + (cleanPath || '/');
       a.textContent = l.label;
       if (l.code === currentLang) a.className = 'active';
+      a.addEventListener('click', function(e) { localStorage.setItem('chen-lang-choice', this.textContent.toLowerCase() === 'en' ? 'en' : ''); });
       langsDiv.appendChild(a);
     }
 
@@ -1336,11 +1480,10 @@ document.addEventListener('DOMContentLoaded', function() {
   })();
 });
 </script>
-<!-- Cal.com floating button -->
+<!-- Cal.com embed (for booking page only, no floating button) -->
 <script>
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", {origin:"https://cal.com"});
-  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {

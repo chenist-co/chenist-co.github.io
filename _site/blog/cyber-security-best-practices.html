@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
 
-<meta charset="utf-8" />
-<meta name="generator" content="quarto-1.8.26" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-
-<meta name="author" content="CHENIST Team" />
-<meta name="dcterms.date" content="2025-04-01" />
-<meta name="description" content="Essential cybersecurity best practices that every organization should implement to protect against evolving threats in 2025." />
+<meta name="author" content="CHENIST Team">
+<meta name="dcterms.date" content="2025-04-01">
+<meta name="description" content="Essential cybersecurity best practices that every organization should implement to protect against evolving threats in 2025.">
 
 <title>Cybersecurity Best Practices for 2025 – chen.ist</title>
 <style>
@@ -62,7 +60,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-<!-- htmldependencies:E3FAD763 -->
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/images/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a592c5a32ddb2bbfd9fa55d2db6a7c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-29f4aea09a2439b849a9d23a02a83b44.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-a592c5a32ddb2bbfd9fa55d2db6a7c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -91,353 +112,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<a href="#main-content" class="skip-link">Skip to main content</a>
-<style>
-/* Corporate navbar — inspired by CrowdStrike/SentinelOne */
-.navbar {
-  background: #0a0a0a !important;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  padding: 0 !important;
-  font-size: 0.85rem;
-  min-height: 60px;
-}
-.navbar-container { height: 60px; }
-.navbar-brand-container { display: flex; align-items: center; }
-.navbar-brand { display: flex; align-items: center; gap: 0.5rem; }
-.navbar-brand .navbar-title {
-  color: #FFFFFF;
-  font-weight: 700;
-  font-size: 1.15rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  font-family: 'Source Code Pro', monospace;
-}
-.navbar-brand .brand-dot { color: #81BD4A; }
-
-/* Nav links — normal case like CrowdStrike, not uppercase */
-.navbar .nav-link {
-  color: rgba(255,255,255,0.7) !important;
-  font-size: 0.85rem !important;
-  font-weight: 400;
-  padding: 0.5rem 0.9rem !important;
-  transition: color 0.15s;
-}
-.navbar .nav-link:hover { color: #fff !important; }
-.navbar .nav-link.active { color: #81BD4A !important; }
-
-/* CTA button in navbar — like SentinelOne "Get Started" */
-.navbar .navbar-cta {
-  display: inline-block;
-  padding: 0.4rem 1.25rem;
-  background: #81BD4A;
-  color: #fff !important;
-  border-radius: 980px;
-  font-size: 0.8rem !important;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.15s;
-  margin-left: 0.5rem;
-}
-.navbar .navbar-cta:hover { background: #6BA33A; color: #fff !important; text-decoration: none; }
-
-/* Dropdowns */
-.navbar .dropdown-menu {
-  background: #0a0a0a;
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 10px;
-  padding: 0.5rem;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
-}
-.navbar .dropdown-item {
-  color: rgba(255,255,255,0.7);
-  font-size: 0.83rem;
-  border-radius: 6px;
-  padding: 0.45rem 0.85rem;
-}
-.navbar .dropdown-item:hover {
-  background: rgba(129,189,74,0.08);
-  color: #81BD4A;
-}
-
-/* Search + theme toggle */
-.navbar .quarto-navigation-tool, .navbar .quarto-color-scheme-toggle { color: rgba(255,255,255,0.4) !important; }
-.navbar .quarto-navigation-tool:hover, .navbar .quarto-color-scheme-toggle:hover { color: #81BD4A !important; }
-
-/* Mobile */
-@media (max-width: 991px) {
-  .navbar .nav-link { font-size: 0.82rem !important; }
-}
-@media (max-width: 767.98px) {
-  .navbar-brand .navbar-title { font-size: 1rem; }
-  .navbar .navbar-collapse {
-    background: #0a0a0a;
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 10px;
-    padding: 1rem;
-    margin-top: 0.5rem;
-  }
-  .navbar .navbar-cta { display: block; text-align: center; margin: 0.75rem 0 0; }
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  var navbarBrand = document.querySelector('.navbar-brand');
-  if (navbarBrand) {
-    var titleSpan = document.createElement('span');
-    titleSpan.className = 'navbar-title';
-    titleSpan.textContent = 'CHEN';
-    var dot = document.createElement('span');
-    dot.className = 'brand-dot';
-    dot.textContent = '.';
-    var ist = document.createTextNode('IST');
-    titleSpan.appendChild(dot);
-    titleSpan.appendChild(ist);
-    navbarBrand.appendChild(titleSpan);
-  }
-
-  // Add CTA button to navbar
-  var navRight = document.querySelector('.navbar-nav.ms-auto');
-  if (navRight) {
-    var ctaLi = document.createElement('li');
-    ctaLi.className = 'nav-item';
-    var ctaLink = document.createElement('a');
-    ctaLink.className = 'nav-link navbar-cta';
-    ctaLink.href = '/booking/';
-    ctaLink.target = '_blank';
-    ctaLink.textContent = 'Book a Call';
-    ctaLi.appendChild(ctaLink);
-    navRight.appendChild(ctaLi);
-  }
-});
-</script>
-<script defer data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
-<link rel="preload" href="/assets/images/stock/network-closeup.webp" as="image" type="image/webp">
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Source+Code+Pro&display=swap" as="style">
-<meta name="view-transition" content="same-origin">
-<noscript><style>.m-s,.m-bg,.m-cta,.m-r,.m-n,.hp-sec,.hp-stats,.ev-card,.ev-past,.m-t{opacity:1!important;transform:none!important;}</style></noscript>
-<link rel="dns-prefetch" href="https://cal.com">
-<link rel="dns-prefetch" href="https://app.cal.com">
-<link rel="preconnect" href="https://cal.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Source+Code+Pro&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "chen.ist",
-  "url": "https://chen.ist",
-  "logo": "https://chen.ist/assets/images/logo-light.svg",
-  "description": "Digital infrastructure, cybersecurity, cloud services, and technology education for modern organizations.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Str. Filantropiei, 1-3",
-    "addressLocality": "Craiova",
-    "postalCode": "200143",
-    "addressCountry": "RO"
-  },
-  "email": "office@chen.ist",
-  "sameAs": [
-    "https://github.com/chenist",
-    "https://linkedin.com/in/chenistsec",
-    "https://twitter.com/chenistsec"
-  ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Services",
-    "itemListElement": [
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Infrastructure", "url": "https://chen.ist/digital/"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "NIS2 Compliance", "url": "https://chen.ist/services/nis2/"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cybersecurity", "url": "https://chen.ist/services/cybersecurity/"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cloud Services", "url": "https://chen.ist/services/cloud/"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Resilience", "url": "https://chen.ist/services/digital-resilience/"}}
-    ]
-  }
-}
-</script>
-
-
-<link rel="stylesheet" href="../assets/css/main.min.css" />
-</head>
-
-<body>
-
-<div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a href="/index.html" class="navbar-brand navbar-brand-logo">
-    <img src="/assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content" />
-    <img src="/assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content" />
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-  aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation"
-  onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="/index.html"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-services" role="link" data-bs-toggle="dropdown" aria-expanded="false" >
- <span class="menu-text">Services</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-services">    
-        <li>
-    <a class="dropdown-item" href="/services/index.html">
- <span class="dropdown-text">Overview</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="/security/index.html">
- <span class="dropdown-text">Security</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="/digital/index.html">
- <span class="dropdown-text">Digital Infrastructure</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="/services/nis2/index.html">
- <span class="dropdown-text">NIS2 Compliance</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="/services/cybersecurity/index.html">
- <span class="dropdown-text">Cybersecurity</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="/services/cloud/index.html">
- <span class="dropdown-text">Cloud Services</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="/services/digital-resilience/index.html">
- <span class="dropdown-text">Digital Resilience</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-academy" role="link" data-bs-toggle="dropdown" aria-expanded="false" >
- <span class="menu-text">Academy</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-academy">    
-        <li>
-    <a class="dropdown-item" href="/academy/overview.html">
- <span class="dropdown-text">Overview</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="/academy/courses.html">
- <span class="dropdown-text">Courses</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="/academy/trainings.html">
- <span class="dropdown-text">Trainings</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="/academy/microlearning.html">
- <span class="dropdown-text">Microlearning</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="/academy/programs/index.html">
- <span class="dropdown-text">Programs</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="/academy/events.html">
- <span class="dropdown-text">Events</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="/academy/webinars.html">
- <span class="dropdown-text">Webinars</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="/academy/computerclub.html">
- <span class="dropdown-text">Computer Club</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="/academy/partnerships.html">
- <span class="dropdown-text">Partnerships</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/blog.html"> 
-<span class="menu-text">Blogs</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="/resources/index.html"> 
-<span class="menu-text">Resources</span></a>
-  </li>  
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false" >
- <span class="menu-text">About</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
-        <li>
-    <a class="dropdown-item" href="/about/index.html">
- <span class="dropdown-text">About</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="/about/csr.html">
- <span class="dropdown-text">CSR</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="/about/community.html">
- <span class="dropdown-text">Community</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/contact.html"> 
-<span class="menu-text">Contact</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-" role="link" data-bs-toggle="dropdown" aria-expanded="false" >
- <span class="menu-text">🌐</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-">    
-        <li>
-    <a class="dropdown-item" href="/index.html">
- <span class="dropdown-text">English</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="/ro/index.html">
- <span class="dropdown-text">Română</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="/sv/index.html">
- <span class="dropdown-text">Svenska</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="/de/index.html">
- <span class="dropdown-text">Deutsch</span></a>
-  </li>  
-    </ul>
-  </li>
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
-<!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <div id="quarto-toc-target"></div>
-    </div>
-<!-- main -->
-<main class="content" id="quarto-document-content">
-<script id = "quarto-html-before-body" type="application/javascript">
+<meta property="og:title" content="Cybersecurity Best Practices for 2025 – chen.ist">
+<meta property="og:description" content="Essential cybersecurity best practices that every organization should implement to protect against evolving threats in 2025.">
+<meta property="og:image" content="https://chen.ist/assets/images/stock/cybersecurity-monitor.webp">
+<meta property="og:site_name" content="chen.ist">
+<meta name="twitter:title" content="Cybersecurity Best Practices for 2025 – chen.ist">
+<meta name="twitter:description" content="Essential cybersecurity best practices that every organization should implement to protect against evolving threats in 2025.">
+<meta name="twitter:image" content="https://chen.ist/assets/images/stock/cybersecurity-monitor.webp">
+<meta name="twitter:card" content="summary_large_image">
+</head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -599,7 +282,372 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       toggleColorMode(false);
     }
-  </script>
+  </script><a href="#main-content" class="skip-link">Skip to main content</a>
+<style>
+/* Corporate navbar — inspired by CrowdStrike/SentinelOne */
+.navbar {
+  background: #0a0a0a !important;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 0 !important;
+  font-size: 0.85rem;
+  min-height: 60px;
+}
+.navbar-container { height: 60px; }
+.navbar-brand-container { display: flex; align-items: center; }
+.navbar-brand { display: flex; align-items: center; gap: 0.5rem; }
+.navbar-brand .navbar-title {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-family: 'Source Code Pro', monospace;
+}
+.navbar-brand .brand-dot { color: #81BD4A; }
+
+/* Nav links — normal case like CrowdStrike, not uppercase */
+.navbar .nav-link {
+  color: rgba(255,255,255,0.7) !important;
+  font-size: 0.85rem !important;
+  font-weight: 400;
+  padding: 0.5rem 0.9rem !important;
+  transition: color 0.15s;
+}
+.navbar .nav-link:hover { color: #fff !important; }
+.navbar .nav-link.active { color: #81BD4A !important; }
+
+/* CTA button in navbar — like SentinelOne "Get Started" */
+.navbar .navbar-cta {
+  display: inline-block;
+  padding: 0.4rem 1.25rem;
+  background: #81BD4A;
+  color: #fff !important;
+  border-radius: 980px;
+  font-size: 0.8rem !important;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s;
+  margin-left: 0.5rem;
+}
+.navbar .navbar-cta:hover { background: #6BA33A; color: #fff !important; text-decoration: none; }
+
+/* Dropdowns */
+.navbar .dropdown-menu {
+  background: #0a0a0a;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 0.5rem;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+.navbar .dropdown-item {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.83rem;
+  border-radius: 6px;
+  padding: 0.45rem 0.85rem;
+}
+.navbar .dropdown-item:hover {
+  background: rgba(129,189,74,0.08);
+  color: #81BD4A;
+}
+
+/* Search + theme toggle */
+.navbar .quarto-navigation-tool, .navbar .quarto-color-scheme-toggle { color: rgba(255,255,255,0.4) !important; }
+.navbar .quarto-navigation-tool:hover, .navbar .quarto-color-scheme-toggle:hover { color: #81BD4A !important; }
+
+/* Mobile */
+@media (max-width: 991px) {
+  .navbar .nav-link { font-size: 0.82rem !important; }
+}
+@media (max-width: 767.98px) {
+  .navbar-brand .navbar-title { font-size: 1rem; }
+  .navbar .navbar-collapse {
+    background: #0a0a0a;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+  }
+  .navbar .navbar-cta { display: block; text-align: center; margin: 0.75rem 0 0; }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var navbarBrand = document.querySelector('.navbar-brand');
+  if (navbarBrand) {
+    var titleSpan = document.createElement('span');
+    titleSpan.className = 'navbar-title';
+    titleSpan.textContent = 'CHEN';
+    var dot = document.createElement('span');
+    dot.className = 'brand-dot';
+    dot.textContent = '.';
+    var ist = document.createTextNode('IST');
+    titleSpan.appendChild(dot);
+    titleSpan.appendChild(ist);
+    navbarBrand.appendChild(titleSpan);
+  }
+
+  // Add CTA button to navbar (language-aware)
+  var navRight = document.querySelector('.navbar-nav.ms-auto');
+  if (navRight) {
+    var langPrefix = '';
+    var langMatch = window.location.pathname.match(/^\/(ro|sv|de)\//);
+    if (langMatch) langPrefix = '/' + langMatch[1];
+    var ctaLi = document.createElement('li');
+    ctaLi.className = 'nav-item';
+    var ctaLink = document.createElement('a');
+    ctaLink.className = 'nav-link navbar-cta';
+    ctaLink.href = langPrefix + '/booking/';
+    var ctaLabels = { ro: 'Programează', sv: 'Boka Samtal', de: 'Gespräch Buchen' };
+    ctaLink.textContent = langMatch ? (ctaLabels[langMatch[1]] || 'Book a Call') : 'Book a Call';
+    ctaLi.appendChild(ctaLink);
+    navRight.appendChild(ctaLi);
+  }
+});
+</script>
+<script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<link rel="preload" href="../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
+<meta name="view-transition" content="same-origin">
+<noscript><style>.m-s,.m-bg,.m-cta,.m-r,.m-n,.hp-sec,.hp-stats,.ev-card,.ev-past,.m-t{opacity:1!important;transform:none!important;}</style></noscript>
+<link rel="dns-prefetch" href="https://cal.com">
+<link rel="dns-prefetch" href="https://app.cal.com">
+<link rel="preconnect" href="https://cal.com" crossorigin="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "chen.ist",
+  "url": "https://chen.ist",
+  "logo": "https://chen.ist/assets/images/logo-light.svg",
+  "description": "Digital infrastructure, cybersecurity, cloud services, and technology education for modern organizations.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Str. Filantropiei, 1-3",
+    "addressLocality": "Craiova",
+    "postalCode": "200143",
+    "addressCountry": "RO"
+  },
+  "email": "office@chen.ist",
+  "sameAs": [
+    "https://github.com/chenist",
+    "https://linkedin.com/in/chenistsec",
+    "https://twitter.com/chenistsec"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Infrastructure", "url": "https://chen.ist/digital/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "NIS2 Compliance", "url": "https://chen.ist/services/nis2/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cybersecurity", "url": "https://chen.ist/services/cybersecurity/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cloud Services", "url": "https://chen.ist/services/cloud/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Resilience", "url": "https://chen.ist/services/digital-resilience/"}}
+    ]
+  }
+}
+</script>
+
+
+<link rel="stylesheet" href="../assets/css/main.min.css">
+
+
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-services" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Services</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-services">    
+        <li>
+    <a class="dropdown-item" href="../services/index.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../security/index.html">
+ <span class="dropdown-text">Security</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../digital/index.html">
+ <span class="dropdown-text">Digital Infrastructure</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../services/nis2/index.html">
+ <span class="dropdown-text">NIS2 Compliance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../services/cybersecurity/index.html">
+ <span class="dropdown-text">Cybersecurity</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../services/cloud/index.html">
+ <span class="dropdown-text">Cloud Services</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../services/digital-resilience/index.html">
+ <span class="dropdown-text">Digital Resilience</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-academy" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Academy</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-academy">    
+        <li>
+    <a class="dropdown-item" href="../academy/overview.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/courses.html">
+ <span class="dropdown-text">Courses</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/trainings.html">
+ <span class="dropdown-text">Trainings</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/microlearning.html">
+ <span class="dropdown-text">Microlearning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/programs/index.html">
+ <span class="dropdown-text">Programs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/events.html">
+ <span class="dropdown-text">Events</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/webinars.html">
+ <span class="dropdown-text">Webinars</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/computerclub.html">
+ <span class="dropdown-text">Computer Club</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/partnerships.html">
+ <span class="dropdown-text">Partnerships</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources/index.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../about/index.html">
+ <span class="dropdown-text">About</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/csr.html">
+ <span class="dropdown-text">CSR</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/community.html">
+ <span class="dropdown-text">Community</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">🌐</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-">    
+        <li>
+    <a class="dropdown-item" href="../index.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ro/index.html">
+ <span class="dropdown-text">Română</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../sv/index.html">
+ <span class="dropdown-text">Svenska</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../de/index.html">
+ <span class="dropdown-text">Deutsch</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-evolving-threat-landscape" id="toc-the-evolving-threat-landscape" class="nav-link active" data-scroll-target="#the-evolving-threat-landscape">The Evolving Threat Landscape</a>
+  <ul class="collapse">
+  <li><a href="#multi-factor-authentication-mfa" id="toc-multi-factor-authentication-mfa" class="nav-link" data-scroll-target="#multi-factor-authentication-mfa">Multi-Factor Authentication (MFA)</a></li>
+  <li><a href="#zero-trust-architecture" id="toc-zero-trust-architecture" class="nav-link" data-scroll-target="#zero-trust-architecture">Zero Trust Architecture</a></li>
+  <li><a href="#regular-security-updates" id="toc-regular-security-updates" class="nav-link" data-scroll-target="#regular-security-updates">Regular Security Updates</a></li>
+  <li><a href="#security-awareness-training" id="toc-security-awareness-training" class="nav-link" data-scroll-target="#security-awareness-training">Security Awareness Training</a></li>
+  <li><a href="#data-encryption" id="toc-data-encryption" class="nav-link" data-scroll-target="#data-encryption">Data Encryption</a></li>
+  </ul></li>
+  <li><a href="#implementing-a-comprehensive-security-strategy" id="toc-implementing-a-comprehensive-security-strategy" class="nav-link" data-scroll-target="#implementing-a-comprehensive-security-strategy">Implementing a Comprehensive Security Strategy</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a>
+  <ul class="collapse">
+  <li><a href="#want-to-learn-more" id="toc-want-to-learn-more" class="nav-link" data-scroll-target="#want-to-learn-more">Want to learn more?</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="cyber-security-best-practices.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="cyber-security-best-practices.epub"><i class="bi bi-book"></i>Download ePub</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -640,41 +688,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </header>
 
-<nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#the-evolving-threat-landscape" id="toc-the-evolving-threat-landscape">The Evolving Threat Landscape</a>
-  <ul>
-  <li><a href="#multi-factor-authentication-mfa" id="toc-multi-factor-authentication-mfa">Multi-Factor Authentication (MFA)</a></li>
-  <li><a href="#zero-trust-architecture" id="toc-zero-trust-architecture">Zero Trust Architecture</a></li>
-  <li><a href="#regular-security-updates" id="toc-regular-security-updates">Regular Security Updates</a></li>
-  <li><a href="#security-awareness-training" id="toc-security-awareness-training">Security Awareness Training</a></li>
-  <li><a href="#data-encryption" id="toc-data-encryption">Data Encryption</a></li>
-  </ul></li>
-  <li><a href="#implementing-a-comprehensive-security-strategy" id="toc-implementing-a-comprehensive-security-strategy">Implementing a Comprehensive Security Strategy</a></li>
-  <li><a href="#conclusion" id="toc-conclusion">Conclusion</a>
-  <ul>
-  <li><a href="#want-to-learn-more" id="toc-want-to-learn-more">Want to learn more?</a></li>
-  </ul></li>
-  </ul>
-</nav>
-<p><img src="../assets/images/stock/cybersecurity-monitor.webp" class="rounded shadow img-fluid" style="width:100.0%" /></p>
+
+<p><img src="../assets/images/stock/cybersecurity-monitor.webp" class="rounded shadow img-fluid" style="width:100.0%"></p>
 <section id="the-evolving-threat-landscape" class="level2">
-<h2>The Evolving Threat Landscape</h2>
+<h2 class="anchored" data-anchor-id="the-evolving-threat-landscape">The Evolving Threat Landscape</h2>
 <p>As we move through 2025, the cybersecurity landscape continues to evolve at a rapid pace. Threat actors are becoming more sophisticated, and attacks are increasingly targeted and complex. In this post, we’ll explore the essential cybersecurity best practices that every organization should implement to protect against these evolving threats.</p>
 <section id="multi-factor-authentication-mfa" class="level3">
-<h3>Multi-Factor Authentication (MFA)</h3>
+<h3 class="anchored" data-anchor-id="multi-factor-authentication-mfa">Multi-Factor Authentication (MFA)</h3>
 <p>Multi-factor authentication remains one of the most effective security measures to prevent unauthorized access. By requiring multiple forms of verification, MFA significantly reduces the risk of account compromise.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example: Implementing MFA in a Python application</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example: Implementing MFA in a Python application</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> login(username, password, second_factor):</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    user <span class="op">=</span> authenticate_credentials(username, password)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> user <span class="kw">and</span> verify_second_factor(user, second_factor):</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> generate_session(user)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">None</span></span></code></pre></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">None</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="zero-trust-architecture" class="level3">
-<h3>Zero Trust Architecture</h3>
+<h3 class="anchored" data-anchor-id="zero-trust-architecture">Zero Trust Architecture</h3>
 <p>The traditional perimeter-based security model is no longer sufficient. Zero Trust assumes that threats exist both inside and outside the network, requiring verification from everyone trying to access resources.</p>
 <p>Key principles of Zero Trust include:</p>
 <ul>
@@ -684,23 +714,23 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="regular-security-updates" class="level3">
-<h3>Regular Security Updates</h3>
+<h3 class="anchored" data-anchor-id="regular-security-updates">Regular Security Updates</h3>
 <p>Keeping systems and software up to date is crucial. Many successful attacks exploit known vulnerabilities that have already been patched.</p>
 <div class="security-feature">
 <p><strong>Quick Tip:</strong> Implement automated patch management to ensure timely updates across your organization.</p>
 </div>
 </section>
 <section id="security-awareness-training" class="level3">
-<h3>Security Awareness Training</h3>
+<h3 class="anchored" data-anchor-id="security-awareness-training">Security Awareness Training</h3>
 <p>Human error remains a significant factor in security breaches. Regular security awareness training helps employees recognize and respond appropriately to security threats like phishing.</p>
 </section>
 <section id="data-encryption" class="level3">
-<h3>Data Encryption</h3>
+<h3 class="anchored" data-anchor-id="data-encryption">Data Encryption</h3>
 <p>Encrypt sensitive data both at rest and in transit. This ensures that even if data is compromised, it remains unreadable without the appropriate decryption keys.</p>
 </section>
 </section>
 <section id="implementing-a-comprehensive-security-strategy" class="level2">
-<h2>Implementing a Comprehensive Security Strategy</h2>
+<h2 class="anchored" data-anchor-id="implementing-a-comprehensive-security-strategy">Implementing a Comprehensive Security Strategy</h2>
 <p>A holistic approach to security involves multiple layers of protection:</p>
 <ol type="1">
 <li><strong>Risk Assessment</strong>: Regularly evaluate your security posture</li>
@@ -710,28 +740,24 @@ document.addEventListener('DOMContentLoaded', function() {
 </ol>
 </section>
 <section id="conclusion" class="level2">
-<h2>Conclusion</h2>
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>Cybersecurity is an ongoing process, not a one-time project. By implementing these best practices and staying vigilant, organizations can significantly reduce their security risks in today’s challenging threat environment.</p>
-<p>For more information or assistance with implementing these practices, <a href="https://cal.com/chenist" target="_blank">contact our security team</a>.</p>
+<p>For more information or assistance with implementing these practices, <a href="../booking/" target="_blank">contact our security team</a>.</p>
 <div class="card mt-5 mb-3">
 <section id="want-to-learn-more" class="level3 card-body">
-<h3>Want to learn more?</h3>
+<h3 class="anchored" data-anchor-id="want-to-learn-more">Want to learn more?</h3>
 <p>Join our upcoming webinar on advanced cybersecurity strategies where we’ll dive deeper into these topics and provide actionable insights for your organization.</p>
 <div class="text-center mt-3">
-<p><a href="https://cal.com/chenist" class="btn btn-success" target="_blank">Register Now</a></p>
+<p><a href="../booking/" class="btn btn-success" target="_blank">Register Now</a></p>
 </div>
 </section>
 </div>
-<div id="quarto-navigation-envelope" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyLXRpdGxl">chen.ist</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXItdGl0bGU=">chen.ist</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6SG9tZQ==">Home</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2luZGV4Lmh0bWw=">/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6U2VydmljZXM=">Services</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6T3ZlcnZpZXc=">Overview</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3NlcnZpY2VzL2luZGV4Lmh0bWw=">/services/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6U2VjdXJpdHk=">Security</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3NlY3VyaXR5L2luZGV4Lmh0bWw=">/security/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6RGlnaXRhbCBJbmZyYXN0cnVjdHVyZQ==">Digital Infrastructure</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2RpZ2l0YWwvaW5kZXguaHRtbA==">/digital/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6TklTMiBDb21wbGlhbmNl">NIS2 Compliance</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3NlcnZpY2VzL25pczIvaW5kZXguaHRtbA==">/services/nis2/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6Q3liZXJzZWN1cml0eQ==">Cybersecurity</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3NlcnZpY2VzL2N5YmVyc2VjdXJpdHkvaW5kZXguaHRtbA==">/services/cybersecurity/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6Q2xvdWQgU2VydmljZXM=">Cloud Services</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3NlcnZpY2VzL2Nsb3VkL2luZGV4Lmh0bWw=">/services/cloud/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6RGlnaXRhbCBSZXNpbGllbmNl">Digital Resilience</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3NlcnZpY2VzL2RpZ2l0YWwtcmVzaWxpZW5jZS9pbmRleC5odG1s">/services/digital-resilience/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6QWNhZGVteQ==">Academy</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2FjYWRlbXkvb3ZlcnZpZXcuaHRtbA==">/academy/overview.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6Q291cnNlcw==">Courses</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2FjYWRlbXkvY291cnNlcy5odG1s">/academy/courses.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6VHJhaW5pbmdz">Trainings</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2FjYWRlbXkvdHJhaW5pbmdzLmh0bWw=">/academy/trainings.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6TWljcm9sZWFybmluZw==">Microlearning</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2FjYWRlbXkvbWljcm9sZWFybmluZy5odG1s">/academy/microlearning.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6UHJvZ3JhbXM=">Programs</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2FjYWRlbXkvcHJvZ3JhbXMvaW5kZXguaHRtbA==">/academy/programs/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6SGFja2F0aG9ucw==">Hackathons</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6YWNhZGVteS9wcm9ncmFtcy9oYWNrYXRob25zL2luZGV4LnFtZA==">academy/programs/hackathons/index.qmd</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6U3VtbWVyIFNjaG9vbA==">Summer School</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6YWNhZGVteS9wcm9ncmFtcy9zdW1tZXItc2Nob29sL2luZGV4LnFtZA==">academy/programs/summer-school/index.qmd</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6RXZlbnRz">Events</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2FjYWRlbXkvZXZlbnRzLmh0bWw=">/academy/events.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6V2ViaW5hcnM=">Webinars</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2FjYWRlbXkvd2ViaW5hcnMuaHRtbA==">/academy/webinars.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6Q29tcHV0ZXIgQ2x1Yg==">Computer Club</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2FjYWRlbXkvY29tcHV0ZXJjbHViLmh0bWw=">/academy/computerclub.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6UGFydG5lcnNoaXBz">Partnerships</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2FjYWRlbXkvcGFydG5lcnNoaXBzLmh0bWw=">/academy/partnerships.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6QmxvZ3M=">Blogs</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2Jsb2cuaHRtbA==">/blog.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6UmVzb3VyY2Vz">Resources</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3Jlc291cmNlcy9pbmRleC5odG1s">/resources/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6QWJvdXQ=">About</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2Fib3V0L2luZGV4Lmh0bWw=">/about/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6Q1NS">CSR</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2Fib3V0L2Nzci5odG1s">/about/csr.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6Q29tbXVuaXR5">Community</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2Fib3V0L2NvbW11bml0eS5odG1s">/about/community.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6Q29udGFjdA==">Contact</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2NvbnRhY3QuaHRtbA==">/contact.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI68J+MkA==">🌐</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6RW5nbGlzaA==">English</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6Um9tw6JuxIM=">Română</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3JvL2luZGV4Lmh0bWw=">/ro/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6U3ZlbnNrYQ==">Svenska</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L3N2L2luZGV4Lmh0bWw=">/sv/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6RGV1dHNjaA==">Deutsch</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXI6L2RlL2luZGV4Lmh0bWw=">/de/index.html</span></p>
-</div>
-<div id="quarto-meta-markdown" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGF0aXRsZQ==">Cybersecurity Best Practices for 2025 – chen.ist</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkdGl0bGU=">Cybersecurity Best Practices for 2025 – chen.ist</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZHRpdGxl">Cybersecurity Best Practices for 2025 – chen.ist</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGFzaXRlbmFtZQ==">chen.ist</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkZGVzYw==">Essential cybersecurity best practices that every organization should implement to protect against evolving threats in 2025.</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZGRkZXNj">Essential cybersecurity best practices that every organization should implement to protect against evolving threats in 2025.</span></p>
-</div>
+
+
 </section>
 
 </main> <!-- /main -->
-<script id = "quarto-html-after-body" type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
     if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1155,7 +1181,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- Back to top -->
 <div style="text-align:center; padding:2rem 0; background:#0a0a0a; border-top:1px solid rgba(255,255,255,0.04);">
   <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" style="color:rgba(255,255,255,0.3); text-decoration:none; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em;">
-    <i class="bi bi-chevron-up" style="display:block; font-size:1rem; margin-bottom:0.25rem;"></i>Back to top
+    <i class="bi bi-chevron-up" style="display:block; font-size:1rem; margin-bottom:0.25rem;"></i><span class="footer-i18n" data-key="backToTop">Back to top</span>
   </a>
 </div>
 
@@ -1164,43 +1190,43 @@ document.addEventListener('DOMContentLoaded', function() {
     <div style="display:grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr; gap:2rem;">
       <div>
         <div style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:1rem; font-family:'Source Code Pro',monospace;">chen<span style="color:#81BD4A;">.</span>ist</div>
-        <p style="margin-bottom:1rem; color:rgba(255,255,255,0.4);">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
+        <p style="margin-bottom:1rem; color:rgba(255,255,255,0.4);" class="footer-i18n" data-key="tagline">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
         <div style="display:flex; gap:0.75rem; margin-bottom:1rem;">
           <a href="https://github.com/chenist" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-github"></i></a>
           <a href="https://linkedin.com/in/chenistsec" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-linkedin"></i></a>
           <a href="https://alinmechenici.substack.com" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-envelope"></i></a>
         </div>
-        <p style="color:rgba(255,255,255,0.2); font-size:0.75rem;">&copy; 2026 chen.ist</p>
+        <p style="color:rgba(255,255,255,0.2); font-size:0.75rem;">© 2026 chen.ist</p>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Services</div>
-        <a href="/digital/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Digital Infrastructure</a>
-        <a href="/security/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Security</a>
-        <a href="/services/cloud/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
-        <a href="/services/nis2/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">NIS2 Compliance</a>
-        <a href="/services/digital-resilience/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Digital Resilience</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="services">Services</div>
+        <a href="../digital/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="digitalInfra">Digital Infrastructure</a>
+        <a href="../security/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="security">Security</a>
+        <a href="../services/cloud/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
+        <a href="../services/nis2/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="nis2">NIS2 Compliance</a>
+        <a href="../services/digital-resilience/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="resilience">Digital Resilience</a>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Academy</div>
-        <a href="/academy/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Overview</a>
-        <a href="/academy/courses.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Courses</a>
-        <a href="/academy/trainings.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Trainings</a>
-        <a href="/academy/events.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Events</a>
-        <a href="/academy/webinars.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Webinars</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="academy">Academy</div>
+        <a href="../academy/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="overview">Overview</a>
+        <a href="../academy/courses.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="courses">Courses</a>
+        <a href="../academy/trainings.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="trainings">Trainings</a>
+        <a href="../academy/events.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="events">Events</a>
+        <a href="../academy/webinars.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="webinars">Webinars</a>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Company</div>
-        <a href="/about/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">About</a>
-        <a href="/blog.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
-        <a href="/contact.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Contact</a>
-        <a href="/privacy.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Privacy</a>
-        <a href="/terms.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Terms</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="company">Company</div>
+        <a href="../about/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="about">About</a>
+        <a href="../blog.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
+        <a href="../contact.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="contact">Contact</a>
+        <a href="../privacy.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="privacy">Privacy</a>
+        <a href="../terms.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="terms">Terms</a>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Connect</div>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="connect">Connect</div>
         <a href="mailto:office@chen.ist" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">office@chen.ist</a>
-        <a href="/booking/" style="display:block; color:#81BD4A; text-decoration:none; padding:0.1rem 0; font-weight:500;">Book a Call</a>
-        <div style="margin-top:1rem; color:rgba(255,255,255,0.2); font-size:0.72rem;">Craiova &middot; Bucharest &middot; Stockholm</div>
+        <a href="../booking/" data-footer-link="" style="display:block; color:#81BD4A; text-decoration:none; padding:0.1rem 0; font-weight:500;" class="footer-i18n" data-key="bookCall">Book a Call</a>
+        <div style="margin-top:1rem; color:rgba(255,255,255,0.2); font-size:0.72rem;">Craiova · Bucharest · Stockholm</div>
       </div>
     </div>
   </div>
@@ -1212,6 +1238,59 @@ document.addEventListener('DOMContentLoaded', function() {
 @media (max-width:480px) { footer > div > div { grid-template-columns: 1fr !important; } }
 footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
 </style>
+
+<script>
+(function() {
+  var langMatch = window.location.pathname.match(/^\/(ro|sv|de)\//);
+  var lang = langMatch ? langMatch[1] : 'en';
+  var prefix = lang === 'en' ? '' : '/' + lang;
+
+  // Rewrite all internal footer links to include language prefix
+  document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
+    var href = a.getAttribute('href');
+    if (href && href.startsWith('/') && !href.startsWith('//')) {
+      // Swedish blog is at /sv/blogg.html, not /sv/blog.html
+      if (lang === 'sv' && href === '/blog.html') {
+        a.setAttribute('href', '/sv/blogg.html');
+      } else {
+        a.setAttribute('href', prefix + href);
+      }
+    }
+  });
+
+  // Translate labels if not English
+  if (lang === 'en') return;
+  var i18n = {
+    ro: {
+      backToTop: 'Înapoi sus', tagline: 'Infrastructură digitală, securitate cibernetică și educație. Construit pe open-source.',
+      services: 'Servicii', digitalInfra: 'Infrastructură Digitală', security: 'Securitate', nis2: 'Conformitate NIS2', resilience: 'Reziliență Digitală',
+      academy: 'Academie', overview: 'Prezentare', courses: 'Cursuri', trainings: 'Training-uri', events: 'Evenimente', webinars: 'Webinarii',
+      company: 'Companie', about: 'Despre noi', contact: 'Contact', privacy: 'Confidențialitate', terms: 'Termeni',
+      connect: 'Conectare', bookCall: 'Programează'
+    },
+    sv: {
+      backToTop: 'Tillbaka upp', tagline: 'Digital infrastruktur, cybersäkerhet och utbildning. Byggt på öppen källkod.',
+      services: 'Tjänster', digitalInfra: 'Digital Infrastruktur', security: 'Säkerhet', nis2: 'NIS2-efterlevnad', resilience: 'Digital Resiliens',
+      academy: 'Akademi', overview: 'Översikt', courses: 'Kurser', trainings: 'Utbildningar', events: 'Evenemang', webinars: 'Webbinarier',
+      company: 'Företag', about: 'Om oss', contact: 'Kontakt', privacy: 'Integritet', terms: 'Villkor',
+      connect: 'Kontakta', bookCall: 'Boka Samtal'
+    },
+    de: {
+      backToTop: 'Nach oben', tagline: 'Digitale Infrastruktur, Cybersicherheit und Bildung. Auf Open-Source aufgebaut.',
+      services: 'Dienstleistungen', digitalInfra: 'Digitale Infrastruktur', security: 'Sicherheit', nis2: 'NIS2-Konformität', resilience: 'Digitale Resilienz',
+      academy: 'Akademie', overview: 'Übersicht', courses: 'Kurse', trainings: 'Schulungen', events: 'Veranstaltungen', webinars: 'Webinare',
+      company: 'Unternehmen', about: 'Über uns', contact: 'Kontakt', privacy: 'Datenschutz', terms: 'AGB',
+      connect: 'Verbinden', bookCall: 'Gespräch Buchen'
+    }
+  };
+  var t = i18n[lang];
+  if (!t) return;
+  document.querySelectorAll('.footer-i18n').forEach(function(el) {
+    var key = el.getAttribute('data-key');
+    if (key && t[key]) el.textContent = t[key];
+  });
+})();
+</script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const observer = new IntersectionObserver((entries) => {
@@ -1411,6 +1490,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 </script>
 
-</body>
 
-</html>
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

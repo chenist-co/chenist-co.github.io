@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Durchsuchen Sie die Kurse, Webinare, Veranstaltungen und Schulungsprogramme der chen.ist Academy in den Bereichen Cybersicherheit, Open Source, Cloud und Softwareentwicklung.">
+<meta name="description" content="chen.ist Academy bietet Kurse, intensive Schulungen, Microlearning, Hackathons, Webinare und Gemeinschaftsprogramme. Lernen durch Praxis.">
 
 <title>Academy – chen.ist</title>
 <style>
@@ -76,11 +76,11 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <meta property="og:title" content="Academy – chen.ist">
-<meta property="og:description" content="Durchsuchen Sie die Kurse, Webinare, Veranstaltungen und Schulungsprogramme der chen.ist Academy in den Bereichen Cybersicherheit, Open Source, Cloud und Softwareentwicklung.">
+<meta property="og:description" content="chen.ist Academy bietet Kurse, intensive Schulungen, Microlearning, Hackathons, Webinare und Gemeinschaftsprogramme. Lernen durch Praxis.">
 <meta property="og:image" content="https://chen.ist/de/academy/assets/images/og-image.png">
 <meta property="og:site_name" content="chen.ist">
 <meta name="twitter:title" content="Academy – chen.ist">
-<meta name="twitter:description" content="Durchsuchen Sie die Kurse, Webinare, Veranstaltungen und Schulungsprogramme der chen.ist Academy in den Bereichen Cybersicherheit, Open Source, Cloud und Softwareentwicklung.">
+<meta name="twitter:description" content="chen.ist Academy bietet Kurse, intensive Schulungen, Microlearning, Hackathons, Webinare und Gemeinschaftsprogramme. Lernen durch Praxis.">
 <meta name="twitter:image" content="https://chen.ist/de/academy/assets/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 </head><body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -369,6 +369,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<script>
+(function() {
+  var path = window.location.pathname;
+  // Only redirect on English pages (no language prefix)
+  if (path.match(/^\/(ro|sv|de)\//)) return;
+  // Don't redirect if user explicitly chose English
+  if (localStorage.getItem('chen-lang-choice') === 'en') return;
+  // Don't redirect if already redirected this session
+  if (sessionStorage.getItem('chen-lang-redirected')) return;
+  // Detect browser language
+  var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  var target = null;
+  if (lang.startsWith('ro')) target = 'ro';
+  else if (lang.startsWith('sv')) target = 'sv';
+  else if (lang.startsWith('de')) target = 'de';
+  if (target) {
+    sessionStorage.setItem('chen-lang-redirected', '1');
+    window.location.href = '/' + target + path;
+  }
+})();
+</script>
 <link rel="preload" href="../../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
 <meta name="view-transition" content="same-origin">
@@ -428,8 +449,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
-    <img src="../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
+    <img src="../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -593,80 +614,204 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <header id="title-block-header">
 <h1 class="title display-7">Academy</h1>
-<p class="subtitle lead">Lernen, zusammenarbeiten und wachsen mit unseren Bildungsprogrammen</p>
+<p class="subtitle lead">Kurse, Schulungen und praxisnahe Programme in Cybersicherheit, Open Source und digitalen Kompetenzen</p>
 
 </header>
 
 
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>chen.ist <span class="gr">Academy</span></h1>
-    <p>Praxisnahe Kurse, Schulungen und Programme in Cybersicherheit, Open Source und digitalen Kompetenzen.</p>
-  </div>
-</div>
-
-<div class="m-bg m-bg-squares">
-  <div class="container">
-    <h2>Lernen durch Praxis</h2>
-    <p class="sub">Sechs Wege, um praxisnahe technische Fähigkeiten aufzubauen.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-book"></i><h3>Kurse</h3><p>Mehrwöchige Programme in Cybersicherheit, Datenschutz und Open-Source-Entwicklung.</p><a href="../../academy/courses.html" class="m-lk">Kurse durchsuchen</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-lightning"></i><h3>Trainings</h3><p>Intensive 1-2-tägige Workshops zu fokussierten Themen mit praktischen Übungen.</p><a href="../../academy/trainings.html" class="m-lk">Trainings durchsuchen</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-clock-history"></i><h3>Microlearning</h3><p>1-2-stündige Sessions zu bestimmten Tools — CLI, NixOS, Emacs, tmux und mehr.</p><a href="../../academy/microlearning.html" class="m-lk">Sessions durchsuchen</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-trophy"></i><h3>Hackathons</h3><p>Cybersicherheit, KI-Ethik und SpaceApps-Herausforderungen. Bauen unter Druck.</p><a href="../../academy/events.html" class="m-lk">Veranstaltungen ansehen</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-camera-video"></i><h3>Webinare</h3><p>Live-Online-Sessions zu Zero Trust, Cloud-Sicherheit und digitaler Transformation.</p><a href="../../academy/webinars.html" class="m-lk">Programm ansehen</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-people"></i><h3>Computer Club</h3><p>Wöchentliche Treffen zum Programmieren, Hacken und gemeinsamen Bauen.</p><a href="../../academy/programs/computerclub/" class="m-lk">Dem Club beitreten</a></div></div>
+<!-- HERO -->
+<div class="ev-hero" style="min-height:70vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/hackathon-team.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">chen.ist</div>
+    <h1>Academy</h1>
+    <p>Praxisnahe Kurse, Schulungen und Programme in Cybersicherheit, Open Source und digitalen Kompetenzen. Lernen durch Praxis.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="#programs" class="ev-btn" style="background:#F5A623;">Programme entdecken</a>
+      <a href="../../de/booking/" class="ev-btn-ghost">Beratung buchen</a>
     </div>
   </div>
 </div>
 
-<div class="m-s">
+<!-- STATS -->
+<div class="m-bg" style="padding:4rem 0;">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn" style="color:#F5A623;">7</div><div class="m-nl">Kurse</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">7</div><div class="m-nl">Schulungen</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">14</div><div class="m-nl">Microlearning</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">9+</div><div class="m-nl">Jahre Veranstaltungen</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ALL PROGRAMS GRID -->
+<div class="m-s" id="programs" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Alles, was wir anbieten</h2>
+    <p class="sub">Neun Wege, um praxisnahe technische Fahigkeiten aufzubauen.</p>
+    <div style="background:rgba(245,166,35,0.08); border:1px solid rgba(245,166,35,0.25); border-radius:12px; padding:1.25rem 1.5rem; margin-bottom:2.5rem; max-width:750px; margin-left:auto; margin-right:auto; text-align:center;">
+      <p style="margin:0; color:rgba(255,255,255,0.85); font-size:0.95rem;"><strong style="color:#F5A623;">Sprachhinweis:</strong> Die meisten Kurse und Schulungen werden auf Englisch und Rumanisch angeboten. Auf jeder Seite ist angegeben, welche Sprachen verfugbar sind. <a href="../../de/academy/partnerships.html" style="color:#F5A623;">Kontaktieren Sie uns</a>, wenn Sie Schulungen auf Deutsch benotigen.</p>
+    </div>
+    <div class="row g-4">
+
+      <!-- Courses -->
+      <div class="col-md-4">
+        <a href="../../de/academy/courses.html" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../../assets/images/stock/code-screen.webp" alt="Kurse">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">7 Kurse · 4-12 Wochen</div>
+              <h3>Kurse</h3>
+              <p>Mehrwochige Programme in Cybersicherheit, Datenschutz, Linux und Open-Source-Entwicklung.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Trainings -->
+      <div class="col-md-4">
+        <a href="../../de/academy/trainings.html" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../../assets/images/stock/hacker-screens.webp" alt="Schulungen">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">7 Workshops · 1-2 Tage</div>
+              <h3>Intensive Schulungen</h3>
+              <p>Fokussierte Praxis-Workshops. 80% praktisch. Verlassen Sie den Kurs mit Fahigkeiten, die Sie am Montag einsetzen.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Microlearning -->
+      <div class="col-md-4">
+        <a href="../../de/academy/microlearning.html" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../../assets/images/stock/terminal-green.webp" alt="Microlearning">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">14 Sessions · 1-2 Stunden</div>
+              <h3>Microlearning</h3>
+              <p>Kurze Sessions zu CLI, NixOS, Emacs, tmux, Typst, FreeBSD und mehr.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Programs / Hackathons -->
+      <div class="col-md-4">
+        <a href="../../de/academy/programs/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../../assets/images/stock/hackathon-team.webp" alt="Programme">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">Hackathons · Sommerschule</div>
+              <h3>Programme</h3>
+              <p>Immersive Erfahrungen — Hackathons, Sommerschule und Computer Club.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Events -->
+      <div class="col-md-4">
+        <a href="../../de/academy/events.html" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../../assets/images/stock/cybersecurity-monitor.webp" alt="Veranstaltungen">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">Kommende · Monatlich</div>
+              <h3>Veranstaltungen</h3>
+              <p>Konferenzen, Meetups und Gemeinschaftstreffen. Vor Ort und online.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Webinars -->
+      <div class="col-md-4">
+        <a href="../../de/academy/webinars.html" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../../assets/images/stock/network-closeup.webp" alt="Webinare">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">Live · Aufgezeichnet</div>
+              <h3>Webinare</h3>
+              <p>Zero Trust, Cloud-Sicherheit, digitale Transformation und mehr.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE ROW 1 -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
   <div class="container">
     <div class="m-r">
       <div class="m-ri"><img loading="lazy" src="../../assets/images/stock/hackathon-team.webp" alt="Academy-Schulung"></div>
       <div class="m-rt">
-        <h2>Echte Fähigkeiten.<br>Keine Zertifikate.</h2>
-        <p>Jeder Kurs basiert auf praktischen Übungen, echten Tools und Szenarien aus realen Projekten. Sie verlassen den Kurs mit Fähigkeiten, die Sie am Montagmorgen einsetzen können — nicht mit einem PDF, das Sie nie öffnen werden.</p>
-        <div class="lk"><a href="../../academy/courses.html" class="m-lk">Curriculum entdecken</a></div>
+        <h2>Echte Fahigkeiten.<br>Keine Zertifikate.</h2>
+        <p>Jeder Kurs basiert auf praktischen Ubungen, echten Tools und Szenarien aus realen Projekten. Sie verlassen den Kurs mit Fahigkeiten, die Sie am Montagmorgen einsetzen konnen — nicht mit einem PDF, das Sie nie offnen werden.</p>
+        <div class="lk"><a href="../../de/academy/courses.html" class="m-lk">Curriculum entdecken</a></div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="m-bg m-bg-squares">
+<!-- COMMUNITY -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Gemeinschaft</h2>
+    <p class="sub">Das Lernen hort nicht auf, wenn die Sitzung endet.</p>
+    <div style="max-width:750px; margin:0 auto;">
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-terminal" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4><a href="../../de/academy/computerclub.html">Computer Club</a></h4>
+          <div class="up-meta">Monatliche Treffen zum Programmieren, Hacken und gemeinsamen Bauen. Alle Niveaus willkommen.</div>
+        </div>
+        <div class="up-badge up-badge-open">Monatlich</div>
+      </div>
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-handshake" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4><a href="../../de/academy/partnerships.html">Partnerschaften</a></h4>
+          <div class="up-meta">Arbeiten Sie mit uns zusammen — bringen Sie Academy-Programme in Ihre Organisation oder Stadt.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE ROW 2 -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
   <div class="container">
     <div class="m-r rv">
       <div class="m-ri"><img loading="lazy" src="../../assets/images/stock/terminal-green.webp" alt="Hackathon-Programmierung"></div>
       <div class="m-rt">
         <h2>Bauen unter Druck.<br>Schneller lernen.</h2>
-        <p>Unsere Hackathons und Sommerschul-Programme tauchen Sie in 24-48-stündige Herausforderungen ein. SpaceApps, Cybersicherheit, KI-Ethik — echte Probleme, echte Teams, echte Deadlines.</p>
-        <div class="lk"><a href="../../academy/events.html" class="m-lk">Kommende Programme ansehen</a></div>
+        <p>Unsere Hackathons und Sommerschul-Programme tauchen Sie in 24-48-stundige Herausforderungen ein. SpaceApps, Cybersicherheit, KI-Ethik — echte Probleme, echte Teams, echte Deadlines.</p>
+        <div class="lk"><a href="../../de/academy/events.html" class="m-lk">Kommende Programme ansehen</a></div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="m-s">
-  <div class="container">
-    <div class="m-n">
-      <div><div class="m-nn">6</div><div class="m-nl">Vollständige Kurse</div></div>
-      <div><div class="m-nn">7</div><div class="m-nl">Intensive Trainings</div></div>
-      <div><div class="m-nn">14</div><div class="m-nl">Microlearning-Sessions</div></div>
-      <div><div class="m-nn">4</div><div class="m-nl">Sprachen</div></div>
-    </div>
-  </div>
-</div>
-
+<!-- CTA -->
 <div class="m-cta">
   <div class="container">
     <div class="m-d"></div>
     <h2>Jetzt lernen</h2>
-    <p>Durchsuchen Sie unseren Katalog oder buchen Sie ein Gespräch, um maßgeschneiderte Schulungen für Ihr Team zu besprechen.</p>
-    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-      <a href="../../academy/courses.html" class="m-b">Kurse durchsuchen</a>
-      <a href="../../booking/" class="m-bo">Beratung buchen</a>
+    <p>Durchsuchen Sie unseren Katalog oder buchen Sie ein Gesprach, um massgeschneiderte Schulungen fur Ihr Team zu besprechen.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="../../de/academy/courses.html" class="m-b" style="background:#F5A623;">Kurse durchsuchen</a>
+      <a href="../../de/academy/trainings.html" class="m-bo" style="border-color:#F5A623; color:#F5A623;">Schulungen durchsuchen</a>
+      <a href="../../de/booking/" class="m-bo">Beratung buchen</a>
     </div>
   </div>
 </div>
@@ -1168,7 +1313,12 @@ footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
   document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
     var href = a.getAttribute('href');
     if (href && href.startsWith('/') && !href.startsWith('//')) {
-      a.setAttribute('href', prefix + href);
+      // Swedish blog is at /sv/blogg.html, not /sv/blog.html
+      if (lang === 'sv' && href === '/blog.html') {
+        a.setAttribute('href', '/sv/blogg.html');
+      } else {
+        a.setAttribute('href', prefix + href);
+      }
     }
   });
 
@@ -1279,6 +1429,7 @@ document.addEventListener('DOMContentLoaded', function() {
       a.href = l.prefix + (cleanPath || '/');
       a.textContent = l.label;
       if (l.code === currentLang) a.className = 'active';
+      a.addEventListener('click', function(e) { localStorage.setItem('chen-lang-choice', this.textContent.toLowerCase() === 'en' ? 'en' : ''); });
       langsDiv.appendChild(a);
     }
 
@@ -1293,11 +1444,10 @@ document.addEventListener('DOMContentLoaded', function() {
   })();
 });
 </script>
-<!-- Cal.com floating button -->
+<!-- Cal.com embed (for booking page only, no floating button) -->
 <script>
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", {origin:"https://cal.com"});
-  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {

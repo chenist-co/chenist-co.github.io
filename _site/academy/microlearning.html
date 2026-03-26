@@ -350,16 +350,19 @@ document.addEventListener('DOMContentLoaded', function() {
     navbarBrand.appendChild(titleSpan);
   }
 
-  // Add CTA button to navbar
+  // Add CTA button to navbar (language-aware)
   var navRight = document.querySelector('.navbar-nav.ms-auto');
   if (navRight) {
+    var langPrefix = '';
+    var langMatch = window.location.pathname.match(/^\/(ro|sv|de)\//);
+    if (langMatch) langPrefix = '/' + langMatch[1];
     var ctaLi = document.createElement('li');
     ctaLi.className = 'nav-item';
     var ctaLink = document.createElement('a');
     ctaLink.className = 'nav-link navbar-cta';
-    ctaLink.href = '/booking/';
-    // internal link, no new tab
-    ctaLink.textContent = 'Book a Call';
+    ctaLink.href = langPrefix + '/booking/';
+    var ctaLabels = { ro: 'Programează', sv: 'Boka Samtal', de: 'Gespräch Buchen' };
+    ctaLink.textContent = langMatch ? (ctaLabels[langMatch[1]] || 'Book a Call') : 'Book a Call';
     ctaLi.appendChild(ctaLink);
     navRight.appendChild(ctaLi);
   }
@@ -425,8 +428,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
-    <img src="../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -597,78 +600,142 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1><span class="gr">Micro</span>learning</h1>
+<!-- HERO -->
+<div class="ev-hero" style="min-height:55vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/terminal-green.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Academy</div>
+    <h1>Micro<span style="color:#F5A623;">learning</span></h1>
     <p>Master a new tool in 1-2 hours. Focused sessions designed for busy professionals who value their time.</p>
+    <a href="#sessions" class="ev-btn" style="background:#F5A623;">Browse sessions</a>
   </div>
 </div>
 
-<div class="m-bg">
-  <div class="container">
-    <h2>Tools &amp; systems</h2>
-    <p class="sub">Pick a session, show up, leave with a new skill.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-terminal"></i><h3>Unix Command Line</h3><p>Essential commands, navigation, and shell scripting basics. 2 hours.</p><a href="../academy/microlearning/cli-intro/" class="m-lk">Session details</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-table"></i><h3>SC-IM Spreadsheets</h3><p>Terminal-based spreadsheets with formulas, formatting, and data import. 1 hour.</p><a href="../academy/microlearning/sc-im/" class="m-lk">Session details</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-layout-split"></i><h3>Tmux</h3><p>Session management, panes, windows, and productivity shortcuts. 1 hour.</p><a href="../academy/microlearning/tmux/" class="m-lk">Session details</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-arrow-repeat"></i><h3>Syncthing</h3><p>Private, peer-to-peer file sync setup and configuration. 2 hours.</p><a href="../academy/microlearning/syncthing/" class="m-lk">Session details</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-code-square"></i><h3>Emacs Essentials</h3><p>Navigation, editing, buffers, and getting started with packages. 2 hours.</p><a href="../academy/microlearning/emacs/" class="m-lk">Session details</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-file-spreadsheet"></i><h3>LibreOffice Calc</h3><p>Advanced formulas, data analysis, charts, and macros. 2 hours.</p><a href="../academy/microlearning/libreoffice-calc/" class="m-lk">Session details</a></div></div>
-    </div>
-  </div>
-</div>
-
-<div class="m-s">
-  <div class="container">
-    <h2>Publishing &amp; writing</h2>
-    <p class="sub">Modern document tools for technical professionals.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-journal-code"></i><h3>Quarto Publishing</h3><p>YAML frontmatter, Markdown, code chunks, and multi-format output. 2 hours.</p><a href="../academy/microlearning/quarto/" class="m-lk">Session details</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-list-task"></i><h3>Org-mode Fundamentals</h3><p>Note-taking, task management, agenda views, and literate programming. 2 hours.</p><a href="../academy/microlearning/org-mode/" class="m-lk">Session details</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-file-earmark-text"></i><h3>LaTeX for Academic Writing</h3><p>Document structure, equations, bibliographies, and common packages. 2 hours.</p><a href="../academy/microlearning/latex/" class="m-lk">Session details</a></div></div>
-    </div>
-    <div class="row g-5 mt-2 justify-content-center">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-type"></i><h3>Typst Markup Language</h3><p>Modern typesetting with simple syntax, math notation, and templates. 1 hour.</p><a href="../academy/microlearning/typst/" class="m-lk">Session details</a></div></div>
-    </div>
-  </div>
-</div>
-
-<div class="m-bg">
-  <div class="container">
-    <h2>Operating systems</h2>
-    <p class="sub">Hands-on introductions to security-focused OS platforms.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-snow"></i><h3>NixOS Introduction</h3><p>Declarative configuration, package management, and rollbacks. 2 hours.</p><a href="../academy/microlearning/nixos/" class="m-lk">Session details</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-hdd-rack"></i><h3>FreeBSD Basics</h3><p>System architecture, pkg management, and ports collection. 2 hours.</p><a href="../academy/microlearning/freebsd/" class="m-lk">Session details</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-lock"></i><h3>OpenBSD Security</h3><p>Security philosophy, pledge, PF firewall, and mitigations. 2 hours.</p><a href="../academy/microlearning/openbsd/" class="m-lk">Session details</a></div></div>
-    </div>
-    <div class="row g-5 mt-2 justify-content-center">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-shield-check"></i><h3>QubesOS Security Model</h3><p>Compartmentalization, domains, templates, and secure workflows. 2 hours.</p><a href="../academy/microlearning/qubesos/" class="m-lk">Session details</a></div></div>
-    </div>
-  </div>
-</div>
-
-<div class="m-s">
+<!-- STATS -->
+<div class="m-bg" style="padding:4rem 0;">
   <div class="container">
     <div class="m-n">
-      <div><div class="m-nn">13</div><div class="m-nl">Sessions available</div></div>
-      <div><div class="m-nn">1–2h</div><div class="m-nl">Per session</div></div>
-      <div><div class="m-nn">100%</div><div class="m-nl">Practical</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">14</div><div class="m-nl">Sessions</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">1–2h</div><div class="m-nl">Per session</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">100%</div><div class="m-nl">Practical</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">3</div><div class="m-nl">Categories</div></div>
     </div>
   </div>
 </div>
 
+<!-- TOOLS & SYSTEMS -->
+<div class="m-s" id="sessions" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Tools &amp; Systems</h2>
+    <p class="sub">Pick a session, show up, leave with a new skill.</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="../academy/microlearning/cli-intro/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/terminal-green.webp" alt="Unix CLI"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 hours</div><h3>Unix Command Line</h3><p>Essential commands, navigation, and shell scripting basics.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../academy/microlearning/tmux/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/code-screen.webp" alt="Tmux"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">1 hour</div><h3>Tmux</h3><p>Session management, panes, windows, and productivity shortcuts.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../academy/microlearning/emacs/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/hacker-screens.webp" alt="Emacs"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 hours</div><h3>Emacs Essentials</h3><p>Navigation, editing, buffers, and getting started with packages.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../academy/microlearning/sc-im/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/terminal-green.webp" alt="SC-IM"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">1 hour</div><h3>SC-IM Spreadsheets</h3><p>Terminal-based spreadsheets with formulas and data import.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../academy/microlearning/syncthing/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/network-closeup.webp" alt="Syncthing"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 hours</div><h3>Syncthing</h3><p>Private, peer-to-peer file sync setup and configuration.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../academy/microlearning/libreoffice-calc/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/code-screen.webp" alt="LibreOffice Calc"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 hours</div><h3>LibreOffice Calc</h3><p>Advanced formulas, data analysis, charts, and macros.</p></div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PUBLISHING & WRITING -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Publishing &amp; Writing</h2>
+    <p class="sub">Modern document tools for technical professionals.</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="../academy/microlearning/quarto/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/code-screen.webp" alt="Quarto"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 hours</div><h3>Quarto Publishing</h3><p>YAML, Markdown, code chunks, and multi-format output.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../academy/microlearning/org-mode/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/hacker-screens.webp" alt="Org-mode"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 hours</div><h3>Org-mode Fundamentals</h3><p>Note-taking, task management, agenda, and literate programming.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../academy/microlearning/latex/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/terminal-green.webp" alt="LaTeX"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 hours</div><h3>LaTeX for Academic Writing</h3><p>Document structure, equations, bibliographies, and packages.</p></div></div>
+        </a>
+      </div>
+    </div>
+    <div class="row g-4 mt-1 justify-content-center">
+      <div class="col-md-4">
+        <a href="../academy/microlearning/typst/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/code-screen.webp" alt="Typst"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">1 hour</div><h3>Typst Markup Language</h3><p>Modern typesetting with simple syntax, math, and templates.</p></div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OPERATING SYSTEMS -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Operating Systems</h2>
+    <p class="sub">Hands-on introductions to security-focused platforms.</p>
+    <div class="row g-4">
+      <div class="col-md-3">
+        <a href="../academy/microlearning/nixos/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/terminal-green.webp" alt="NixOS"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 hours</div><h3>NixOS</h3><p>Declarative config, packages, and rollbacks.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="../academy/microlearning/freebsd/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/hacker-screens.webp" alt="FreeBSD"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 hours</div><h3>FreeBSD</h3><p>Architecture, pkg, and ports collection.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="../academy/microlearning/openbsd/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/cybersecurity-monitor.webp" alt="OpenBSD"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 hours</div><h3>OpenBSD</h3><p>Security, pledge, PF firewall, and mitigations.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="../academy/microlearning/qubesos/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/network-closeup.webp" alt="QubesOS"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 hours</div><h3>QubesOS</h3><p>Compartments, domains, and secure workflows.</p></div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
 <div class="m-cta">
   <div class="container">
     <div class="m-d"></div>
     <h2>Learn something new<br>over lunch</h2>
     <p>Perfect for lunch-and-learn sessions, team building, or personal skill upgrades.</p>
-    <a href="../booking/" class="m-b">Book a session</a>
+    <a href="../booking/" class="m-b" style="background:#F5A623;">Book a session</a>
     <div class="m-sm">
-      <i class="bi bi-check-circle-fill"></i> Quick reference guides &nbsp;
-      <i class="bi bi-check-circle-fill"></i> Cheat sheets included &nbsp;
-      <i class="bi bi-check-circle-fill"></i> Group packages
+      <i class="bi bi-check-circle-fill" style="color:#F5A623;"></i> Quick reference guides &nbsp;
+      <i class="bi bi-check-circle-fill" style="color:#F5A623;"></i> Cheat sheets included &nbsp;
+      <i class="bi bi-check-circle-fill" style="color:#F5A623;"></i> Group packages
     </div>
   </div>
 </div>
@@ -1102,7 +1169,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- Back to top -->
 <div style="text-align:center; padding:2rem 0; background:#0a0a0a; border-top:1px solid rgba(255,255,255,0.04);">
   <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" style="color:rgba(255,255,255,0.3); text-decoration:none; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em;">
-    <i class="bi bi-chevron-up" style="display:block; font-size:1rem; margin-bottom:0.25rem;"></i>Back to top
+    <i class="bi bi-chevron-up" style="display:block; font-size:1rem; margin-bottom:0.25rem;"></i><span class="footer-i18n" data-key="backToTop">Back to top</span>
   </a>
 </div>
 
@@ -1111,7 +1178,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div style="display:grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr; gap:2rem;">
       <div>
         <div style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:1rem; font-family:'Source Code Pro',monospace;">chen<span style="color:#81BD4A;">.</span>ist</div>
-        <p style="margin-bottom:1rem; color:rgba(255,255,255,0.4);">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
+        <p style="margin-bottom:1rem; color:rgba(255,255,255,0.4);" class="footer-i18n" data-key="tagline">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
         <div style="display:flex; gap:0.75rem; margin-bottom:1rem;">
           <a href="https://github.com/chenist" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-github"></i></a>
           <a href="https://linkedin.com/in/chenistsec" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-linkedin"></i></a>
@@ -1120,33 +1187,33 @@ document.addEventListener('DOMContentLoaded', function() {
         <p style="color:rgba(255,255,255,0.2); font-size:0.75rem;">© 2026 chen.ist</p>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Services</div>
-        <a href="../digital/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Digital Infrastructure</a>
-        <a href="../security/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Security</a>
-        <a href="../services/cloud/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
-        <a href="../services/nis2/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">NIS2 Compliance</a>
-        <a href="../services/digital-resilience/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Digital Resilience</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="services">Services</div>
+        <a href="../digital/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="digitalInfra">Digital Infrastructure</a>
+        <a href="../security/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="security">Security</a>
+        <a href="../services/cloud/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
+        <a href="../services/nis2/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="nis2">NIS2 Compliance</a>
+        <a href="../services/digital-resilience/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="resilience">Digital Resilience</a>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Academy</div>
-        <a href="../academy/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Overview</a>
-        <a href="../academy/courses.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Courses</a>
-        <a href="../academy/trainings.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Trainings</a>
-        <a href="../academy/events.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Events</a>
-        <a href="../academy/webinars.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Webinars</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="academy">Academy</div>
+        <a href="../academy/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="overview">Overview</a>
+        <a href="../academy/courses.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="courses">Courses</a>
+        <a href="../academy/trainings.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="trainings">Trainings</a>
+        <a href="../academy/events.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="events">Events</a>
+        <a href="../academy/webinars.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="webinars">Webinars</a>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Company</div>
-        <a href="../about/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">About</a>
-        <a href="../blog.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
-        <a href="../contact.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Contact</a>
-        <a href="../privacy.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Privacy</a>
-        <a href="../terms.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Terms</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="company">Company</div>
+        <a href="../about/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="about">About</a>
+        <a href="../blog.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
+        <a href="../contact.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="contact">Contact</a>
+        <a href="../privacy.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="privacy">Privacy</a>
+        <a href="../terms.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="terms">Terms</a>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Connect</div>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="connect">Connect</div>
         <a href="mailto:office@chen.ist" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">office@chen.ist</a>
-        <a href="../booking/" style="display:block; color:#81BD4A; text-decoration:none; padding:0.1rem 0; font-weight:500;">Book a Call</a>
+        <a href="../booking/" data-footer-link="" style="display:block; color:#81BD4A; text-decoration:none; padding:0.1rem 0; font-weight:500;" class="footer-i18n" data-key="bookCall">Book a Call</a>
         <div style="margin-top:1rem; color:rgba(255,255,255,0.2); font-size:0.72rem;">Craiova · Bucharest · Stockholm</div>
       </div>
     </div>
@@ -1159,6 +1226,59 @@ document.addEventListener('DOMContentLoaded', function() {
 @media (max-width:480px) { footer > div > div { grid-template-columns: 1fr !important; } }
 footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
 </style>
+
+<script>
+(function() {
+  var langMatch = window.location.pathname.match(/^\/(ro|sv|de)\//);
+  var lang = langMatch ? langMatch[1] : 'en';
+  var prefix = lang === 'en' ? '' : '/' + lang;
+
+  // Rewrite all internal footer links to include language prefix
+  document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
+    var href = a.getAttribute('href');
+    if (href && href.startsWith('/') && !href.startsWith('//')) {
+      // Swedish blog is at /sv/blogg.html, not /sv/blog.html
+      if (lang === 'sv' && href === '/blog.html') {
+        a.setAttribute('href', '/sv/blogg.html');
+      } else {
+        a.setAttribute('href', prefix + href);
+      }
+    }
+  });
+
+  // Translate labels if not English
+  if (lang === 'en') return;
+  var i18n = {
+    ro: {
+      backToTop: 'Înapoi sus', tagline: 'Infrastructură digitală, securitate cibernetică și educație. Construit pe open-source.',
+      services: 'Servicii', digitalInfra: 'Infrastructură Digitală', security: 'Securitate', nis2: 'Conformitate NIS2', resilience: 'Reziliență Digitală',
+      academy: 'Academie', overview: 'Prezentare', courses: 'Cursuri', trainings: 'Training-uri', events: 'Evenimente', webinars: 'Webinarii',
+      company: 'Companie', about: 'Despre noi', contact: 'Contact', privacy: 'Confidențialitate', terms: 'Termeni',
+      connect: 'Conectare', bookCall: 'Programează'
+    },
+    sv: {
+      backToTop: 'Tillbaka upp', tagline: 'Digital infrastruktur, cybersäkerhet och utbildning. Byggt på öppen källkod.',
+      services: 'Tjänster', digitalInfra: 'Digital Infrastruktur', security: 'Säkerhet', nis2: 'NIS2-efterlevnad', resilience: 'Digital Resiliens',
+      academy: 'Akademi', overview: 'Översikt', courses: 'Kurser', trainings: 'Utbildningar', events: 'Evenemang', webinars: 'Webbinarier',
+      company: 'Företag', about: 'Om oss', contact: 'Kontakt', privacy: 'Integritet', terms: 'Villkor',
+      connect: 'Kontakta', bookCall: 'Boka Samtal'
+    },
+    de: {
+      backToTop: 'Nach oben', tagline: 'Digitale Infrastruktur, Cybersicherheit und Bildung. Auf Open-Source aufgebaut.',
+      services: 'Dienstleistungen', digitalInfra: 'Digitale Infrastruktur', security: 'Sicherheit', nis2: 'NIS2-Konformität', resilience: 'Digitale Resilienz',
+      academy: 'Akademie', overview: 'Übersicht', courses: 'Kurse', trainings: 'Schulungen', events: 'Veranstaltungen', webinars: 'Webinare',
+      company: 'Unternehmen', about: 'Über uns', contact: 'Kontakt', privacy: 'Datenschutz', terms: 'AGB',
+      connect: 'Verbinden', bookCall: 'Gespräch Buchen'
+    }
+  };
+  var t = i18n[lang];
+  if (!t) return;
+  document.querySelectorAll('.footer-i18n').forEach(function(el) {
+    var key = el.getAttribute('data-key');
+    if (key && t[key]) el.textContent = t[key];
+  });
+})();
+</script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const observer = new IntersectionObserver((entries) => {

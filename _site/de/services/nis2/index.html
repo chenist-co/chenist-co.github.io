@@ -427,8 +427,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
-    <img src="../../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
+    <img src="../../../assets/images/logo-light.svg" alt="" class="navbar-logo light-content">
+    <img src="../../../assets/images/logo-light.svg" alt="" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -612,7 +612,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="m-rt">
         <h2>Die Richtlinie ist da.<br>Sind Sie bereit?</h2>
         <p>NIS2 führt strenge Cybersicherheitsanforderungen für wesentliche und wichtige Einrichtungen in der EU ein. Unsere umfassenden Dienste helfen Ihnen, die Compliance zu navigieren, Ihre Sicherheitslage zu stärken und eine kontinuierliche regulatorische Ausrichtung aufrechtzuerhalten.</p>
-        <div class="lk"><a href="../../../booking/" class="m-lk">Prüfen Sie Ihren NIS2-Status</a></div>
+        <div class="lk"><a href="../../../de/booking/" class="m-lk">Prüfen Sie Ihren NIS2-Status</a></div>
       </div>
     </div>
   </div>
@@ -761,7 +761,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="form-check" style="margin-bottom: 1.5rem;">
           <input type="checkbox" class="form-check-input" id="privacy-consent" name="privacy-consent" required="">
           <label class="form-check-label" for="privacy-consent">
-            Ich stimme der <a href="../../../privacy.html" target="_blank">Datenschutzerklärung</a> zu und willige ein, bezüglich meiner Anfrage kontaktiert zu werden *
+            Ich stimme der <a href="../../../de/privacy.html" target="_blank">Datenschutzerklärung</a> zu und willige ein, bezüglich meiner Anfrage kontaktiert zu werden *
           </label>
         </div>
 
@@ -784,7 +784,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="m-d"></div>
     <h2>Sofortige Hilfe<br>benötigt?</h2>
     <p>Unsere NIS2-Compliance-Experten sind bereit, Ihnen bei der Navigation durch die Anforderungen zu helfen.</p>
-    <a href="../../../booking/" class="m-b">Gespräch vereinbaren</a>
+    <a href="../../../de/booking/" class="m-b">Gespräch vereinbaren</a>
     <div class="m-sm">
       <i class="bi bi-check-circle-fill"></i> Kostenlose Beratung &nbsp;
       <i class="bi bi-check-circle-fill"></i> Unverbindlich &nbsp;
@@ -1290,7 +1290,12 @@ footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
   document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
     var href = a.getAttribute('href');
     if (href && href.startsWith('/') && !href.startsWith('//')) {
-      a.setAttribute('href', prefix + href);
+      // Swedish blog is at /sv/blogg.html, not /sv/blog.html
+      if (lang === 'sv' && href === '/blog.html') {
+        a.setAttribute('href', '/sv/blogg.html');
+      } else {
+        a.setAttribute('href', prefix + href);
+      }
     }
   });
 

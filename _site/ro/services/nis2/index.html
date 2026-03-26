@@ -427,8 +427,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
-    <img src="../../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
+    <img src="../../../assets/images/logo-light.svg" alt="" class="navbar-logo light-content">
+    <img src="../../../assets/images/logo-light.svg" alt="" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -612,7 +612,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="m-rt">
         <h2>Directiva este aici.<br>Sunteți pregătiți?</h2>
         <p>NIS2 introduce cerințe stricte de securitate cibernetică pentru entitățile esențiale și importante din UE. Serviciile noastre cuprinzătoare vă ajută să navigați conformitatea, să vă consolidați postura de securitate și să mențineți o aliniere regulatorie continuă.</p>
-        <div class="lk"><a href="../../../booking/" class="m-lk">Verificați statusul dvs. NIS2</a></div>
+        <div class="lk"><a href="../../../ro/booking/" class="m-lk">Verificați statusul dvs. NIS2</a></div>
       </div>
     </div>
   </div>
@@ -694,7 +694,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="m-s">
   <div class="container">
     <h2>Programați evaluarea</h2>
-    <p class="sub">Începeți parcursul de conformitate NIS2 cu o consultație inițială gratuită.</p>
+    <p class="sub">Începeți parcursul de conformitate NIS2 cu o consultanță inițială gratuită.</p>
     <div class="m-form">
       <form action="https://formspree.io/f/mpwkaqev" method="POST">
         <label for="name">Nume complet *</label>
@@ -716,7 +716,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <option value="ciso-service">CISO as a Service</option>
           <option value="gap-assessment">Analiză de Decalaj</option>
           <option value="multiple">Servicii multiple</option>
-          <option value="consultation">Consultație inițială</option>
+          <option value="consultation">Consultanță inițială</option>
         </select>
 
         <label for="sector">Sectorul de activitate *</label>
@@ -761,7 +761,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="form-check" style="margin-bottom: 1.5rem;">
           <input type="checkbox" class="form-check-input" id="privacy-consent" name="privacy-consent" required="">
           <label class="form-check-label" for="privacy-consent">
-            Sunt de acord cu <a href="../../../privacy.html" target="_blank">politica de confidențialitate</a> și consimt să fiu contactat(ă) cu privire la solicitarea mea *
+            Sunt de acord cu <a href="../../../ro/privacy.html" target="_blank">politica de confidențialitate</a> și consimt să fiu contactat(ă) cu privire la solicitarea mea *
           </label>
         </div>
 
@@ -769,7 +769,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <input type="text" name="_gotcha" style="display:none">
 
         <button type="submit" class="m-b" style="width: 100%; border: none; cursor: pointer; padding: 1rem; font-size: 1.05rem;">
-          Solicitați consultația
+          Solicitați consultanța
         </button>
       </form>
       <p style="text-align: center; margin-top: 1.5rem;" class="m-sm">
@@ -784,9 +784,9 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="m-d"></div>
     <h2>Aveți nevoie de<br>asistență imediată?</h2>
     <p>Experții noștri în conformitate NIS2 sunt pregătiți să vă ajute să navigați cerințele.</p>
-    <a href="../../../booking/" class="m-b">Programați un apel</a>
+    <a href="../../../ro/booking/" class="m-b">Programați un apel</a>
     <div class="m-sm">
-      <i class="bi bi-check-circle-fill"></i> Consultație gratuită &nbsp;
+      <i class="bi bi-check-circle-fill"></i> Consultanță gratuită &nbsp;
       <i class="bi bi-check-circle-fill"></i> Fără obligații &nbsp;
       <i class="bi bi-check-circle-fill"></i> Ghidare de specialitate
     </div>
@@ -1290,7 +1290,12 @@ footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
   document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
     var href = a.getAttribute('href');
     if (href && href.startsWith('/') && !href.startsWith('//')) {
-      a.setAttribute('href', prefix + href);
+      // Swedish blog is at /sv/blogg.html, not /sv/blog.html
+      if (lang === 'sv' && href === '/blog.html') {
+        a.setAttribute('href', '/sv/blogg.html');
+      } else {
+        a.setAttribute('href', prefix + href);
+      }
     }
   });
 

@@ -7,6 +7,15 @@ image: /assets/images/stock/cybersecurity-monitor.webp
 lang-code: ro
 categories: [Cybersecurity, Best Practices]
 description: "Practici esențiale de securitate cibernetică pe care fiecare organizație ar trebui să le implementeze pentru a se proteja împotriva amenințărilor în evoluție din 2025."
+format:
+  html:
+    format-links: false
+    toc: true
+    toc-depth: 3
+  typst:
+    toc: true
+    number-sections: false
+    include-before-body: before-body.typ
 ---
 
 ```{=html}
@@ -80,7 +89,7 @@ Pentru mai multe informații sau asistență în implementarea acestor practici,
 Participați la webinarul nostru viitor despre strategii avansate de securitate cibernetică, unde vom aprofunda aceste subiecte și vom oferi informații acționabile pentru organizația dumneavoastră.
 
 ::: {.text-center .mt-3}
-[Înregistrați-vă acum](/ro/booking/){target="_blank"}{.btn .btn-success}
+[Înregistrați-vă acum](/ro/booking/){.btn .btn-success target="_blank"}
 :::
 :::
 :::

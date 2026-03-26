@@ -428,8 +428,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
-    <img src="../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
+    <img src="../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -620,8 +620,8 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
       <p>Un hackathon de weekend despre AI etic — detectarea prejudecăților, design responsabil și AI care pune oamenii pe primul loc.</p>
       <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-        <a href="../../academy/events/pages/ai-ethics-hackathon.html" class="m-b">Înregistrați-vă acum</a>
-        <a href="../../academy/events/ical/ai-ethics-hackathon-2025.ics" class="m-b-ghost" download="">Adăugați în calendar</a>
+        <a href="../../ro/academy/events/pages/ai-ethics-hackathon.html" class="m-b">Înregistrați-vă acum</a>
+        <a href="../../ro/academy/events/ical/ai-ethics-hackathon-2025.ics" class="m-b-ghost" download="">Adăugați în calendar</a>
       </div>
     </div>
   </div>
@@ -634,7 +634,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <p class="sub">Locurile sunt limitate. Înregistrați-vă din timp.</p>
     <div class="row g-5">
       <div class="col-md-4">
-        <a href="../../academy/events/pages/summer-school-2025.html" style="text-decoration:none;">
+        <a href="../../ro/academy/events/pages/summer-school-2025.html" style="text-decoration:none;">
           <div class="m-t">
             <h3>Școala de Vară 2026</h3>
             <div style="opacity:0.7;font-size:0.9rem;"><i class="bi bi-calendar3"></i> 1-15 aug &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
@@ -643,7 +643,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </a>
       </div>
       <div class="col-md-4">
-        <a href="../../academy/events/pages/makers-workshop.html" style="text-decoration:none;">
+        <a href="../../ro/academy/events/pages/makers-workshop.html" style="text-decoration:none;">
           <div class="m-t">
             <h3>Makers Workshop</h3>
             <div style="opacity:0.7;font-size:0.9rem;"><i class="bi bi-calendar3"></i> 15 sep &nbsp; <i class="bi bi-geo-alt"></i> București</div>
@@ -652,7 +652,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </a>
       </div>
       <div class="col-md-4">
-        <a href="../../academy/events/pages/space-hackathon.html" style="text-decoration:none;">
+        <a href="../../ro/academy/events/pages/space-hackathon.html" style="text-decoration:none;">
           <div class="m-t">
             <h3>SpaceApps Challenge</h3>
             <div style="opacity:0.7;font-size:0.9rem;"><i class="bi bi-calendar3"></i> oct 2026 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
@@ -717,7 +717,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <p>Primiți actualizări despre evenimente sau discutați despre organizarea unui eveniment privat pentru echipa dvs.</p>
     <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
       <a href="https://alinmechenici.substack.com" target="_blank" class="m-b">Abonați-vă la actualizări</a>
-      <a href="../../booking/" class="m-b-ghost">Programați un apel</a>
+      <a href="../../ro/booking/" class="m-b-ghost">Programați un apel</a>
     </div>
   </div>
 </div>
@@ -1219,7 +1219,12 @@ footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
   document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
     var href = a.getAttribute('href');
     if (href && href.startsWith('/') && !href.startsWith('//')) {
-      a.setAttribute('href', prefix + href);
+      // Swedish blog is at /sv/blogg.html, not /sv/blog.html
+      if (lang === 'sv' && href === '/blog.html') {
+        a.setAttribute('href', '/sv/blogg.html');
+      } else {
+        a.setAttribute('href', prefix + href);
+      }
     }
   });
 

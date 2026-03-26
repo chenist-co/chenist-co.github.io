@@ -1,0 +1,93 @@
+---
+title: "Clubul Computer"
+title-block-style: none
+description: "Alătură-te Clubului Computer, un club de tehnologie pentru toate vârstele."
+from: markdown+raw_html
+page-layout: custom
+format:
+  html:
+    toc: false
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
+---
+
+```{=html}
+<div class="m">
+
+<div class="ev-hero" style="min-height:55vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/hackathon-team.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Academy</div>
+    <h1>Clubul<br>Computer</h1>
+    <p>Un club de tehnologie condus de comunitate. Învață, construiește și împărtășește — toate vârstele, toate nivelurile, zero taxe.</p>
+    <a href="https://clubul.computer" target="_blank" class="ev-btn" style="background:#F5A623;">Vizitează clubul.computer</a>
+  </div>
+</div>
+
+<div class="m-bg" style="padding:4rem 0;">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn" style="color:#F5A623;">150+</div><div class="m-nl">Școli implicate</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">5000+</div><div class="m-nl">Elevi</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">25</div><div class="m-nl">Senzori IoT instalați</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">Gratuit</div><div class="m-nl">Mereu</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="m-s" style="padding:6rem 0;">
+  <div class="container">
+    <div class="m-r">
+      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Club meetup"></div>
+      <div class="m-rt">
+        <h2>Tehnologie pentru<br>toată lumea.</h2>
+        <p>Fără taxe. Fără cerințe. Vino pur și simplu. Fie că ai 8 sau 80 de ani, începător complet sau dezvoltator senior — Clubul Computer este spațiul tău de învățare și conectare.</p>
+        <div class="lk"><a href="https://clubul.computer" target="_blank" class="m-lk">Vizitează clubul.computer</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- APPLY FORM -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
+  <div class="container" style="max-width:700px;">
+    <div class="m-form">
+      <div style="text-align:center; margin-bottom:2.5rem;">
+        <i class="bi bi-handshake" style="font-size:2rem; color:#F5A623; display:block; margin-bottom:0.75rem;"></i>
+        <h2 style="font-size:1.5rem;">Deschide un Club Computer<br>în organizația ta</h2>
+        <p style="color:#86868b; max-width:500px; margin:0.5rem auto 0;">Ajutăm companii, școli, universități și ONG-uri să lanseze propriile capitole de Computer Club.</p>
+      </div>
+      <form action="https://formspree.io/f/mpwkaqev" method="POST">
+        <div class="fr">
+          <div class="fg"><label>Numele tău *</label><input type="text" name="name" required placeholder="Nume complet"></div>
+          <div class="fg"><label>Email *</label><input type="email" name="email" required placeholder="email@exemplu.ro"></div>
+        </div>
+        <div class="fg"><label>Organizație *</label><input type="text" name="organization" required placeholder="Companie, școală sau organizație"></div>
+        <div class="fr">
+          <div class="fg"><label>Tip *</label><select name="org_type" required><option value="">Selectează...</option><option value="company">Companie</option><option value="school">Școală</option><option value="university">Universitate</option><option value="ngo">ONG</option><option value="community">Grup comunitar</option><option value="other">Altul</option></select></div>
+          <div class="fg"><label>Oraș *</label><input type="text" name="location" required placeholder="ex. București, România"></div>
+        </div>
+        <div class="fg"><label>Viziunea ta *</label><textarea name="message" rows="3" required placeholder="Pe ce ai vrea să se concentreze clubul? Cine sunt participanții?"></textarea></div>
+        <input type="hidden" name="_subject" value="Aplicație Club Computer"><input type="hidden" name="_source" value="computerclub-apply-ro"><input type="text" name="_gotcha" style="display:none">
+        <div class="fc"><input type="checkbox" required><span>Sunt de acord cu <a href="/ro/privacy.html" target="_blank">politica de confidențialitate</a> *</span></div>
+        <button type="submit" style="background:#F5A623;"><i class="bi bi-send me-2"></i>Trimite aplicația</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Alătură-te clubului</h2>
+    <p>Vino la un meetup sau contactează-ne online. Atât.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="https://clubul.computer" target="_blank" class="m-b" style="background:#F5A623;">Vizitează clubul.computer</a>
+      <a href="/ro/booking/" class="m-bo" style="border-color:#F5A623; color:#F5A623;">Programează un apel</a>
+    </div>
+  </div>
+</div>
+
+</div>
+```

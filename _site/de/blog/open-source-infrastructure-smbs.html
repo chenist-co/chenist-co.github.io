@@ -371,6 +371,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<script>
+(function() {
+  var path = window.location.pathname;
+  // Only redirect on English pages (no language prefix)
+  if (path.match(/^\/(ro|sv|de)\//)) return;
+  // Don't redirect if user explicitly chose English
+  if (localStorage.getItem('chen-lang-choice') === 'en') return;
+  // Don't redirect if already redirected this session
+  if (sessionStorage.getItem('chen-lang-redirected')) return;
+  // Detect browser language
+  var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  var target = null;
+  if (lang.startsWith('ro')) target = 'ro';
+  else if (lang.startsWith('sv')) target = 'sv';
+  else if (lang.startsWith('de')) target = 'de';
+  if (target) {
+    sessionStorage.setItem('chen-lang-redirected', '1');
+    window.location.href = '/' + target + path;
+  }
+})();
+</script>
 <link rel="preload" href="../../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
 <meta name="view-transition" content="same-origin">
@@ -429,8 +450,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
-    <img src="../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
+    <img src="../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -766,13 +787,13 @@ Tip
 <section id="erste-schritte" class="level2">
 <h2 class="anchored" data-anchor-id="erste-schritte">Erste Schritte</h2>
 <p>Der Aufbau eines Open-Source-Infrastruktur-Stacks ist keine Alles-oder-Nichts-Entscheidung. Beginnen Sie mit einem Bereich, in dem Sie die größten Probleme haben — ob Produktivität, Kommunikation oder Überwachung — setzen Sie ihn ein und erweitern Sie von dort aus.</p>
-<p>Für einen tieferen Einblick in unseren Ansatz für digitale Infrastruktur besuchen Sie unsere Seite für <a href="../../digital/">Digitale Infrastruktur-Dienstleistungen</a>.</p>
+<p>Für einen tieferen Einblick in unseren Ansatz für digitale Infrastruktur besuchen Sie unsere Seite für <a href="../../de/digital/">Digitale Infrastruktur-Dienstleistungen</a>.</p>
 <div class="card mt-5 mb-3">
 <section id="bereit-open-source-infrastruktur-zu-erkunden" class="level3 card-body">
 <h3 class="anchored" data-anchor-id="bereit-open-source-infrastruktur-zu-erkunden">Bereit, Open-Source-Infrastruktur zu erkunden?</h3>
 <p>Buchen Sie eine kostenlose Beratung, um zu besprechen, welche Werkzeuge zu Ihrer Organisation passen und wie Sie eine praktische Migration planen können.</p>
 <div class="text-center mt-3">
-<p><a href="../../booking/" target="_blank">Beratung buchen</a>{.btn .btn-success}</p>
+<p><a href="../../de/booking/" class="btn btn-success" target="_blank">Beratung buchen</a></p>
 </div>
 </section>
 </div>
@@ -1273,7 +1294,12 @@ footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
   document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
     var href = a.getAttribute('href');
     if (href && href.startsWith('/') && !href.startsWith('//')) {
-      a.setAttribute('href', prefix + href);
+      // Swedish blog is at /sv/blogg.html, not /sv/blog.html
+      if (lang === 'sv' && href === '/blog.html') {
+        a.setAttribute('href', '/sv/blogg.html');
+      } else {
+        a.setAttribute('href', prefix + href);
+      }
     }
   });
 
@@ -1384,6 +1410,7 @@ document.addEventListener('DOMContentLoaded', function() {
       a.href = l.prefix + (cleanPath || '/');
       a.textContent = l.label;
       if (l.code === currentLang) a.className = 'active';
+      a.addEventListener('click', function(e) { localStorage.setItem('chen-lang-choice', this.textContent.toLowerCase() === 'en' ? 'en' : ''); });
       langsDiv.appendChild(a);
     }
 
@@ -1398,11 +1425,10 @@ document.addEventListener('DOMContentLoaded', function() {
   })();
 });
 </script>
-<!-- Cal.com floating button -->
+<!-- Cal.com embed (for booking page only, no floating button) -->
 <script>
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", {origin:"https://cal.com"});
-  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {

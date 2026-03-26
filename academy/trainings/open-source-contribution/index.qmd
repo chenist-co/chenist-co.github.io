@@ -1,15 +1,25 @@
 ---
 title: "Open Source Contribution Workshop"
-title-block-style: none
 subtitle: "A 2-day intensive workshop on contributing to open source projects"
 description: "Intensive 2-day hands-on workshop for developers to learn practical workflows, tools, and best practices for effective collaboration in open source projects, including Git workflows and meaningful contributions."
-page-layout: custom
+page-layout: article
 format:
   html:
-    toc: false
+    toc: true
+    toc-depth: 3
     include-in-header:
       text: |
-        <style>.m { --c: #F5A623; }</style>
+        <style>
+        .m { --c: #F5A623; }
+        .quarto-title-block { display: none !important; }
+        </style>
+  typst:
+    toc: true
+    number-sections: false
+    margin:
+      x: 2cm
+      y: 2.5cm
+format-links: false
 categories:
   - open-source
   - git
@@ -18,15 +28,13 @@ categories:
 
 ```{=html}
 <div class="m">
-
-<div class="m-hero">
-  <div class="container">
+<div class="m-hero" style="margin: -1em -1em 3rem; padding: 10rem 0 6rem;">
+  <div class="container" style="max-width: 700px;">
     <h1>Open Source <span class="gr">Contribution</span></h1>
     <p>Learn to make meaningful contributions to open source projects</p>
   </div>
 </div>
-
-<div class="container">
+</div>
 ```
 
 ## Training Overview
@@ -107,7 +115,7 @@ By completing this training, participants will be able to:
       </div>
     </div>
   </div>
-  
+
   <div class="col-md-6">
     <div class="card mb-4">
       <div class="card-header bg-primary text-white">
@@ -151,21 +159,10 @@ Participants will receive:
 - Certificate of completion
 - 30 days of post-training email support
 
-## Lead Instructor
+## Instructor
 
-```{=html}
-<div class="row mt-4 mb-5">
-  <div class="col-md-3">
-    <img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Instructor Photo" class="img-fluid rounded">
-  </div>
-  <div class="col-md-9">
-    <h3>CHENIST Team</h3>
-    <p><strong>Open Source Program Manager, chen.ist</strong></p>
-    <p>Maria has over 10 years of experience in open source development, having contributed to numerous projects including major web frameworks and developer tools. She currently maintains several open source libraries and has helped hundreds of developers make their first contributions.</p>
-    <p>Maria is passionate about making open source more accessible and inclusive for developers of all backgrounds and skill levels.</p>
-  </div>
-</div>
-```
+This training is delivered by the **CHENIST Team** — experienced practitioners who combine deep technical expertise with practical, real-world teaching. Our trainers work on live engagements and bring current industry knowledge directly into the classroom.
+
 
 ## Testimonials
 
@@ -179,7 +176,7 @@ Participants will receive:
       </div>
     </div>
   </div>
-  
+
   <div class="col-md-6">
     <div class="card mb-4">
       <div class="card-body">
@@ -199,15 +196,37 @@ If you're interested in this training, you might also consider:
 - [Linux Administration Fundamentals Training](/academy/trainings/linux-admin-fundamentals/) - A complementary 2-day workshop on Linux systems
 - [Git for Teams Workshop](/academy/events/) - A half-day introduction to Git collaboration
 
-```{=html}
-</div>
+## Download
 
+::: {.content-visible when-format="html"}
+<div style="margin: 2rem 0; padding: 2rem 2.5rem; background: rgba(245,166,35,0.06); border: 1.5px solid rgba(245,166,35,0.2); border-radius: 16px;">
+<p style="margin: 0 0 0.5rem; font-weight: 600;">Download Training Details</p>
+<p style="margin: 0 0 1rem; font-size: 0.9rem; color: #86868b;">Get the full training outline, pricing, and contact information as a PDF.</p>
+<a href="index.pdf" class="m-b" style="font-size: 0.95rem; padding: 0.7rem 2rem; background: #F5A623;"><i class="bi bi-file-earmark-pdf me-2"></i>Download PDF</a>
+</div>
+:::
+
+## Contact
+
+Interested in this training?
+
+- **Email:** [office@chen.ist](mailto:office@chen.ist)
+- **Web:** [Book a free consultation](/booking/)
+
+```{=html}
+<div class="m">
 <div class="m-cta">
   <div class="container">
-    <h2>Ready to get started?</h2>
-    <p>Book a call to discuss your goals and find the right program.</p>
+    <div class="m-d"></div>
+    <h2>Book this training<br>for your team</h2>
+    <p>Custom workshops with organization-specific scenarios and flexible scheduling.</p>
+    <a href="/booking/" class="m-b">Book a Call</a>
+    <div class="m-sm">
+      <i class="bi bi-check-circle-fill"></i> Expert trainers &nbsp;
+      <i class="bi bi-check-circle-fill"></i> Practical focus &nbsp;
+      <i class="bi bi-check-circle-fill"></i> Team pricing
+    </div>
   </div>
 </div>
-
 </div>
 ```

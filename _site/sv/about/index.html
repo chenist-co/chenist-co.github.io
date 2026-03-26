@@ -427,8 +427,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
-    <img src="../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
+    <img src="../../assets/images/logo-light.svg" alt="" class="navbar-logo light-content">
+    <img src="../../assets/images/logo-light.svg" alt="" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -625,7 +625,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="m-rt">
         <h2>Vårt uppdrag.<br>Din potential.</h2>
         <p>Vi levererar högkvalitativa, säkra och effektiva tekniklösningar som ger organisationer möjlighet att nå sin fulla potential i den digitala världen. Från cybersäkerhet till molninfrastruktur, varje uppdrag skräddarsys efter dina mål.</p>
-        <div class="lk"><a href="../../services/" class="m-lk">Utforska våra tjänster</a></div>
+        <div class="lk"><a href="../../sv/services/" class="m-lk">Utforska våra tjänster</a></div>
       </div>
     </div>
   </div>
@@ -638,7 +638,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="m-rt">
         <h2>Byggt för att hålla.<br>Designat för att skala.</h2>
         <p>Vi tar ett samarbetsinriktat och holistiskt tillvägagångssätt: förstår dina behov, planerar med precision, implementerar med omsorg, testar noggrant och stödjer långsiktigt. Varje steg dokumenteras, varje beslut kan försvaras.</p>
-        <div class="lk"><a href="../../booking/" class="m-lk">Prata med vårt team</a></div>
+        <div class="lk"><a href="../../sv/booking/" class="m-lk">Prata med vårt team</a></div>
       </div>
     </div>
   </div>
@@ -649,8 +649,8 @@ document.addEventListener('DOMContentLoaded', function() {
     <h2>Lär dig mer</h2>
     <p class="sub">Vårt engagemang sträcker sig bortom teknik.</p>
     <div class="row g-5">
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-heart"></i><h3>Företagens Sociala Ansvar</h3><p>Hållbara metoder, samhällsutveckling och social påverkan genom teknik.</p><a href="../../about/csr.html" class="m-lk">Våra CSR-initiativ</a></div></div>
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-people-fill"></i><h3>Samhällsengagemang</h3><p>Open source-bidrag, meetups, mentorskap och utbildningsprogram.</p><a href="../../about/community.html" class="m-lk">Vårt samhällsarbete</a></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-heart"></i><h3>Företagens Sociala Ansvar</h3><p>Hållbara metoder, samhällsutveckling och social påverkan genom teknik.</p><a href="../../sv/about/csr.html" class="m-lk">Våra CSR-initiativ</a></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-people-fill"></i><h3>Samhällsengagemang</h3><p>Open source-bidrag, meetups, mentorskap och utbildningsprogram.</p><a href="../../sv/about/community.html" class="m-lk">Vårt samhällsarbete</a></div></div>
     </div>
   </div>
 </div>
@@ -660,7 +660,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="m-d"></div>
     <h2>Redo att arbeta<br>med oss?</h2>
     <p>Låt oss diskutera hur vi kan hjälpa dig att uppnå dina teknikmål.</p>
-    <a href="../../contact.html" class="m-b">Kontakta oss</a>
+    <a href="../../sv/contact.html" class="m-b">Kontakta oss</a>
   </div>
 </div>
 
@@ -1161,7 +1161,12 @@ footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
   document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
     var href = a.getAttribute('href');
     if (href && href.startsWith('/') && !href.startsWith('//')) {
-      a.setAttribute('href', prefix + href);
+      // Swedish blog is at /sv/blogg.html, not /sv/blog.html
+      if (lang === 'sv' && href === '/blog.html') {
+        a.setAttribute('href', '/sv/blogg.html');
+      } else {
+        a.setAttribute('href', prefix + href);
+      }
     }
   });
 

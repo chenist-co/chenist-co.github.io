@@ -7,10 +7,11 @@ listing:
   sort: "date desc"
   type: grid
   categories: true
-  sort-ui: true
+  sort-ui: false
   filter-ui: true
   page-size: 12
   feed: true
+  grid-columns: 3
 page-layout: custom
 toc: false
 site-url: https://chen.ist/ro
@@ -18,20 +19,66 @@ site-url: https://chen.ist/ro
 
 ```{=html}
 <div class="m">
-<div class="m-listing-hero">
+
+<div class="blog-hero">
   <div class="container">
     <h1>Blogul <span class="gr">Nostru</span></h1>
-    <p>Perspective, tutoriale și noutăți de la echipa noastră</p>
-    <div class="blog-lang-switch">
-      <a href="/blog.html">EN</a>
-      <a href="/ro/blog.html" class="active">RO</a>
-      <a href="/sv/blogg.html">SV</a>
-      <a href="/de/blog.html">DE</a>
+    <p>Perspective asupra securității cibernetice, ghiduri open-source și analize de infrastructură de la echipa noastră.</p>
+    <div class="blog-bar">
+      <div class="blog-lang-switch">
+        <a href="/blog.html">EN</a>
+        <a href="/ro/blog.html" class="active">RO</a>
+        <a href="/sv/blogg.html">SV</a>
+        <a href="/de/blog.html">DE</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="blog-featured">
+  <a href="/ro/blog/apple-business-smb-guide.html" class="blog-featured-card" style="text-decoration:none; color:inherit;">
+    <div class="blog-featured-img">
+      <img src="/assets/images/stock/team-macbooks.webp" alt="Apple Business pentru IMM-uri" loading="lazy">
+    </div>
+    <div>
+      <div class="blog-featured-tag"><i class="bi bi-star-fill" style="font-size:0.6rem;"></i> Cel mai recent</div>
+      <div class="blog-featured-title">Apple Business: Ce trebuie să știe IMM-urile</div>
+      <div class="blog-featured-desc">Tot ce trebuie să știe IMM-urile despre lansarea Apple Business pe 14 aprilie 2026 — de la MDM gratuit și Blueprints la suplimente plătite și migrare.</div>
+      <div class="blog-featured-meta">
+        <span><i class="bi bi-calendar3"></i> 25 martie 2026</span>
+        <span><i class="bi bi-tag"></i> Apple, Infrastructură Digitală</span>
+      </div>
+      <span class="blog-featured-link">Citește articolul</span>
+    </div>
+  </a>
+</div>
+
+<div style="max-width:1200px; margin:2rem auto 0; padding:0 2rem;">
+  <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(0,0,0,0.06); padding-bottom:0.75rem;">
+    <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#86868b;">Toate Articolele</span>
+    <a href="/ro/blog.xml" style="display:inline-flex; align-items:center; gap:0.3rem; font-size:0.78rem; font-weight:500; color:#f26522; text-decoration:none;"><i class="bi bi-rss"></i> RSS</a>
+  </div>
+</div>
+
+</div>
+```
+
+::: {.container style="margin-bottom:3rem;"}
+:::
+
+```{=html}
+<div class="m">
+<div class="blog-cta" style="padding:5rem 2rem;">
+  <div class="container">
+    <div style="width:36px;height:3px;background:#81BD4A;margin:0 auto 2rem;border-radius:2px;opacity:0.6;"></div>
+    <h2>Rămâi informat</h2>
+    <p>Abonează-te la fluxul nostru RSS, newsletter sau urmărește-ne pentru cele mai noi articole.</p>
+    <div style="display:flex; justify-content:center; gap:0.75rem; flex-wrap:wrap;">
+      <a href="/ro/blog.xml" class="m-b" style="background:#f26522;"><i class="bi bi-rss me-2"></i>Abonare RSS</a>
+      <a href="https://alinmechenici.substack.com" target="_blank" class="m-b" style="background:#ff6719;"><i class="bi bi-envelope me-2"></i>Substack</a>
+      <a href="https://linkedin.com/in/chenistsec" target="_blank" class="m-bo"><i class="bi bi-linkedin me-2"></i>Urmărește-ne</a>
     </div>
   </div>
 </div>
 </div>
 ```
-
-::: {.container}
-:::

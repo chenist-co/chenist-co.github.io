@@ -1,8 +1,7 @@
 ---
 title: "Academy-Kurse"
 title-block-style: none
-subtitle: "Umfassende technische Schulungsprogramme"
-description: "Entdecken Sie umfassende Kurse in Cybersicherheit, Open-Source-Entwicklung, Linux-Administration, Datenschutz und Security-Awareness-Training."
+description: "chen.ist Academy-Kurse finden auf Englisch und Rumänisch statt. Werden Sie Partner, um Schulungen in Ihrem Unternehmen anzubieten."
 from: markdown+raw_html
 page-layout: custom
 format:
@@ -16,49 +15,61 @@ format:
 ```{=html}
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>Academy <span class="gr">Kurse</span></h1>
-    <p>Umfassende, mehrwöchige Programme, die durch praxisnahe Projekte und Expertenanleitung tiefgreifendes Fachwissen aufbauen.</p>
+<div class="ev-hero" style="min-height:50vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/code-screen.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Academy</div>
+    <h1>Kurse</h1>
+    <p>Mehrwöchige Programme, die durch praktische Projekte und Expertenanleitung tiefgehende Expertise aufbauen.</p>
   </div>
 </div>
 
-<div class="m-bg m-bg-squares">
-  <div class="container">
-    <h2>Sieben Kurse, ein Ziel</h2>
-    <p class="sub">Praktische Fähigkeiten, vermittelt von Praktikern, nicht aus Lehrbüchern.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-code-slash"></i><h3>Open-Source-Entwicklung</h3><p>Git-Workflows, Lizenzierung und Beiträge zu realen Projekten. 8 Wochen.</p><a href="/de/academy/courses/open-source-development/" class="m-lk">Kursdetails</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-shield-lock"></i><h3>Praktische Cybersicherheit</h3><p>Netzwerksicherheit, Pentesting und Incident Response. 12 Wochen.</p><a href="/de/academy/courses/practical-cybersecurity/" class="m-lk">Kursdetails</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-terminal"></i><h3>Unix/Linux-Administration</h3><p>Shell-Scripting, Dienstverwaltung und Performance-Tuning. 10 Wochen.</p><a href="/de/academy/courses/unix-linux-administration/" class="m-lk">Kursdetails</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-file-earmark-lock"></i><h3>Datenschutz & Privatsphäre</h3><p>DSGVO, CCPA, Privacy-by-Design und Reaktion auf Datenschutzverletzungen. 6 Wochen.</p><a href="/de/academy/courses/data-protection-privacy/" class="m-lk">Kursdetails</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-people"></i><h3>Human Firewall</h3><p>Security Awareness, Social-Engineering-Abwehr und Kulturaufbau. 4 Wochen.</p><a href="/de/academy/courses/human-firewall-security-awareness/" class="m-lk">Kursdetails</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-bug"></i><h3>Cyberhygiene-Grundlagen</h3><p>Digitale Bedrohungserkennung, Geräteschutz und sichere Praktiken. 6 Wochen.</p><a href="/de/academy/courses/cyberhygiene-essentials/" class="m-lk">Kursdetails</a></div></div>
-    </div>
-    <div class="row g-5 mt-2 justify-content-center">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-snow"></i><h3>NixOS für Cybersicherheit</h3><p>Deklarative Sicherheit, reproduzierbare Umgebungen und Systemhärtung. 4 Wochen.</p><a href="/de/academy/courses/nixos-cybersecurity/" class="m-lk">Kursdetails</a></div></div>
+<div class="m-bg" style="padding:5rem 0;">
+  <div class="container" style="max-width:750px;">
+    <div style="background:rgba(245,166,35,0.06); border:1px solid rgba(245,166,35,0.15); border-radius:16px; padding:2.5rem; text-align:center;">
+      <i class="bi bi-translate" style="font-size:2rem; color:#F5A623; display:block; margin-bottom:1rem;"></i>
+      <h2 style="font-size:1.5rem; margin-bottom:0.75rem;">Kurse auf Englisch & Rumänisch</h2>
+      <p style="color:rgba(255,255,255,0.6); max-width:500px; margin:0 auto 1.5rem;">Unsere Kurse werden derzeit auf Englisch und Rumänisch durchgeführt. Klicken Sie auf einen Kurs für vollständige Informationen.</p>
+      <a href="/academy/courses.html" class="m-b" style="background:#F5A623;">Alle Kurse ansehen (EN)</a>
     </div>
   </div>
 </div>
 
-<div class="m-s">
+<div class="m-s" style="padding:6rem 0;">
   <div class="container">
-    <h2>Drei Lernformate</h2>
-    <p class="sub">Wählen Sie das Format, das zu Ihrem Zeitplan passt.</p>
-    <div class="row g-5">
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-camera-video"></i><h3>Online mit Dozent</h3><p>Live-Virtual-Sessions mit Echtzeit-Interaktion, geführten Übungen und aufgezeichneten Wiederholungen.</p></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-play-circle"></i><h3>Selbstbestimmtes Online-Lernen</h3><p>On-Demand-Videolektionen, herunterladbare Materialien und Forum-Support in Ihrem eigenen Tempo.</p></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-building"></i><h3>Präsenz-Workshops</h3><p>Intensive Praxis-Sessions in unseren Räumlichkeiten oder vor Ort in Ihrer Organisation.</p></div></div>
-    </div>
-  </div>
-</div>
-
-<div class="m-bg m-bg-squares">
-  <div class="container">
-    <div class="m-n">
-      <div><div class="m-nn">7</div><div class="m-nl">Kurse</div></div>
-      <div><div class="m-nn">4–12</div><div class="m-nl">Wochen pro Kurs</div></div>
-      <div><div class="m-nn">80%</div><div class="m-nl">Praxisanteil</div></div>
+    <h2>Sieben Kurse</h2>
+    <p class="sub">Praxiswissen, vermittelt von Praktikern, nicht aus Lehrbüchern.</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="/academy/courses/practical-cybersecurity/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/cybersecurity-monitor.webp" alt="Cybersicherheit"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">12 Wochen</div><h3>Practical Cybersecurity</h3><p>Netzwerksicherheit, Pentesting und Incident Response.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/courses/open-source-development/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="Open Source"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">8 Wochen</div><h3>Open Source Development</h3><p>Git-Workflows, Lizenzierung und Beiträge zu echten Projekten.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/courses/unix-linux-administration/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="Linux"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">10 Wochen</div><h3>Unix/Linux Administration</h3><p>Shell-Scripting, Dienstverwaltung und Performance-Tuning.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/courses/data-protection-privacy/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/network-closeup.webp" alt="Datenschutz"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">6 Wochen</div><h3>Data Protection & Privacy</h3><p>DSGVO, CCPA, Privacy-by-Design und Breach Response.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/courses/cyberhygiene-essentials/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/hacker-screens.webp" alt="Cyberhygiene"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">6 Wochen</div><h3>Cyberhygiene Essentials</h3><p>Digitales Bedrohungsbewusstsein, Geräteschutz und sichere Gewohnheiten.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="/academy/courses/human-firewall-security-awareness/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/team-macbooks.webp" alt="Human Firewall"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">4 Wochen</div><h3>Human Firewall</h3><p>Security Awareness, Social-Engineering-Abwehr und Kulturaufbau.</p></div></div>
+        </a>
+      </div>
     </div>
   </div>
 </div>
@@ -66,13 +77,11 @@ format:
 <div class="m-cta">
   <div class="container">
     <div class="m-d"></div>
-    <h2>Finden Sie den richtigen Kurs<br>für Ihr Team</h2>
-    <p>Individuelle Kohorten, flexible Terminplanung und Gruppenpreise für Organisationen verfügbar.</p>
-    <a href="/de/booking/" class="m-b">Gespräch buchen</a>
-    <div class="m-sm">
-      <i class="bi bi-check-circle-fill"></i> Experten-Dozenten &nbsp;
-      <i class="bi bi-check-circle-fill"></i> Zertifizierung inklusive &nbsp;
-      <i class="bi bi-check-circle-fill"></i> Vierteljährlich aktualisiert
+    <h2>Möchten Sie Kurse in<br>Ihrem Unternehmen anbieten?</h2>
+    <p>Werden Sie Partner unserer Academy. Wir helfen Ihnen, maßgeschneiderte Kurse und Schulungen vor Ort oder online zu organisieren.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="/de/booking/" class="m-b" style="background:#F5A623;"><i class="bi bi-handshake me-2"></i>Partner werden</a>
+      <a href="/de/academy/partnerships.html" class="m-bo" style="border-color:#F5A623; color:#F5A623;">Mehr über Partnerschaften</a>
     </div>
   </div>
 </div>

@@ -373,6 +373,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<script>
+(function() {
+  var path = window.location.pathname;
+  // Only redirect on English pages (no language prefix)
+  if (path.match(/^\/(ro|sv|de)\//)) return;
+  // Don't redirect if user explicitly chose English
+  if (localStorage.getItem('chen-lang-choice') === 'en') return;
+  // Don't redirect if already redirected this session
+  if (sessionStorage.getItem('chen-lang-redirected')) return;
+  // Detect browser language
+  var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  var target = null;
+  if (lang.startsWith('ro')) target = 'ro';
+  else if (lang.startsWith('sv')) target = 'sv';
+  else if (lang.startsWith('de')) target = 'de';
+  if (target) {
+    sessionStorage.setItem('chen-lang-redirected', '1');
+    window.location.href = '/' + target + path;
+  }
+})();
+</script>
 <link rel="preload" href="./assets/images/stock/network-closeup.webp" as="image" type="image/webp">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
 <meta name="view-transition" content="same-origin">
@@ -507,14 +528,25 @@ footer { margin-top: 0 !important; }
 }
 @media (max-width: 767px) {
   .hp-hero { min-height: 85vh; padding: 6rem 1.5rem 4rem; }
-  .hp-sec { min-height: auto; padding: 6rem 0; }
+  .hp-hero h1 { font-size: clamp(2.5rem, 10vw, 4rem); }
+  .hp-hero p { font-size: 1rem; }
+  .hp-sec { min-height: auto; padding: 5rem 0; }
+  .hp-sec h2 { font-size: clamp(2rem, 6vw, 3rem); }
   .hp-mq span { padding: 0 1.25rem; font-size: 0.65rem; }
   .hp-stats { gap: 1.5rem; padding: 3.5rem 1.5rem; }
   .hp-sec-content { padding: 0 1.5rem; }
+  .hp-sec-links { display: flex; flex-direction: column; gap: 0.75rem; }
+  .hp-sec-links a { margin-right: 0; }
+  .hp-pill { font-size: 0.75rem; padding: 0.4rem 0.75rem; }
+  .hp-icon { gap: 0.75rem; }
+  .hp-blog-item { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+  .hp-blog-arrow { display: none; }
 }
 @media (max-width: 480px) {
-  .hp-hero { min-height: 75vh; }
+  .hp-hero { min-height: 70vh; padding: 5rem 1.25rem 3rem; }
+  .hp-hero-btn { padding: 0.85rem 2rem; font-size: 0.95rem; }
   .hp-stats { flex-direction: column; align-items: center; }
+  .hp-sec { padding: 4rem 0; }
 }
 </style>
 
@@ -530,8 +562,8 @@ footer { margin-top: 0 !important; }
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
-    <img src="./assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
+    <img src="./assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="./assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -828,6 +860,25 @@ footer { margin-top: 0 !important; }
   </div>
 </div>
 
+<!-- EUROPEAN -->
+<div class="hp-sec hp-constellation" style="min-height: 60vh; text-align: center;">
+  <div class="hp-sec-content" style="max-width: 650px;">
+    <div class="hp-badge"><i class="bi bi-flag me-1"></i> European Company</div>
+    <h2>Built in Europe.<br>For Europe.</h2>
+    <p style="margin: 0 auto 1.5rem;">We are a European company focused on the European market. Our infrastructure runs on EU soil, our data stays in the EU, and our solutions comply with European regulations by default — not as an afterthought.</p>
+    <div style="margin-bottom: 2rem;">
+      <span class="hp-pill"><i class="bi bi-shield-check"></i> GDPR native</span>
+      <span class="hp-pill"><i class="bi bi-geo-alt"></i> EU data residency</span>
+      <span class="hp-pill"><i class="bi bi-clipboard-check"></i> NIS2 ready</span>
+      <span class="hp-pill"><i class="bi bi-lock"></i> European security</span>
+    </div>
+    <div class="hp-sec-links" style="display:flex; gap:2rem; justify-content:center;">
+      <a href="./services/cloud/" class="pr">Cloud services</a>
+      <a href="./services/nis2/" class="se">NIS2 compliance</a>
+    </div>
+  </div>
+</div>
+
 <!-- STATS -->
 <div class="hp-stats">
   <div style="text-align:center;"><div class="hp-sn">15+</div><div class="hp-sl">Years</div></div>
@@ -857,8 +908,8 @@ footer { margin-top: 0 !important; }
       </a>
       <a href="./blog/cyber-security-best-practices.html" class="hp-blog-item">
         <div>
-          <div class="hp-blog-title">Cybersecurity Best Practices</div>
-          <div class="hp-blog-date">April 1, 2025</div>
+          <div class="hp-blog-title">Cybersecurity Best Practices for 2025</div>
+          <div class="hp-blog-date">Updated March 2026</div>
         </div>
         <span class="hp-blog-arrow"><i class="bi bi-arrow-right"></i></span>
       </a>
@@ -870,7 +921,7 @@ footer { margin-top: 0 !important; }
 </div>
 
 <!-- CTA -->
-<div class="hp-sec" style="min-height: 70vh; background: #000; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='856' height='102.7' viewBox='0 0 1000 120'%3E%3Crect fill='%23000' width='1000' height='120'/%3E%3Cg fill='none' stroke='%2381BD4A' stroke-width='2' stroke-opacity='0.15'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E&quot;); background-size: 100% auto; background-repeat: repeat-y; text-align: center;">
+<div class="hp-sec hp-cta-dark" style="min-height: 70vh; background: #000 !important; color: #fff !important; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='856' height='102.7' viewBox='0 0 1000 120'%3E%3Crect fill='%23000' width='1000' height='120'/%3E%3Cg fill='none' stroke='%2381BD4A' stroke-width='2' stroke-opacity='0.15'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E&quot;); background-size: 100% auto; background-repeat: repeat-y; text-align: center;">
   <div class="hp-sec-content" style="max-width: 600px;">
     <div style="width: 36px; height: 3px; background: #81BD4A; margin: 0 auto 3rem; border-radius: 2px; opacity: 0.6;"></div>
     <h2>Ready to take control?</h2>
@@ -1381,7 +1432,12 @@ footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
   document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
     var href = a.getAttribute('href');
     if (href && href.startsWith('/') && !href.startsWith('//')) {
-      a.setAttribute('href', prefix + href);
+      // Swedish blog is at /sv/blogg.html, not /sv/blog.html
+      if (lang === 'sv' && href === '/blog.html') {
+        a.setAttribute('href', '/sv/blogg.html');
+      } else {
+        a.setAttribute('href', prefix + href);
+      }
     }
   });
 
@@ -1492,6 +1548,7 @@ document.addEventListener('DOMContentLoaded', function() {
       a.href = l.prefix + (cleanPath || '/');
       a.textContent = l.label;
       if (l.code === currentLang) a.className = 'active';
+      a.addEventListener('click', function(e) { localStorage.setItem('chen-lang-choice', this.textContent.toLowerCase() === 'en' ? 'en' : ''); });
       langsDiv.appendChild(a);
     }
 
@@ -1506,11 +1563,10 @@ document.addEventListener('DOMContentLoaded', function() {
   })();
 });
 </script>
-<!-- Cal.com floating button -->
+<!-- Cal.com embed (for booking page only, no floating button) -->
 <script>
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", {origin:"https://cal.com"});
-  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {

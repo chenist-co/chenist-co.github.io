@@ -1,8 +1,8 @@
 ---
 title: "Academy"
 title-block-style: none
-subtitle: "Lär dig, samarbeta och väx med våra utbildningsprogram"
-description: "Utforska chen.ist Academys kurser, webbinarier, evenemang och utbildningsprogram inom cybersäkerhet, open source, moln och mjukvaruutveckling."
+subtitle: "Kurser, utbildningar och praktiska program inom cybersäkerhet, open source och digitala färdigheter"
+description: "chen.ist Academy erbjuder kurser, intensiva utbildningar, microlearning, hackathons, webbinarier och gemenskapsprogram. Lär dig genom att bygga."
 from: markdown+raw_html
 page-layout: custom
 format:
@@ -16,72 +16,196 @@ format:
 ```{=html}
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>chen.ist <span class="gr">Academy</span></h1>
-    <p>Praktiska kurser, utbildningar och program inom cybersäkerhet, open source och digitala färdigheter.</p>
-  </div>
-</div>
-
-<div class="m-bg m-bg-squares">
-  <div class="container">
-    <h2>Lär dig genom att göra</h2>
-    <p class="sub">Sex sätt att bygga praktiska tekniska färdigheter.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-book"></i><h3>Kurser</h3><p>Flerveckorsprogram inom cybersäkerhet, integritet och open source-utveckling.</p><a href="/sv/academy/courses.html" class="m-lk">Utforska kurser</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-lightning"></i><h3>Utbildningar</h3><p>Intensiva 1–2-dagarsworkshops med fokuserade ämnen och praktiska labbar.</p><a href="/sv/academy/trainings.html" class="m-lk">Utforska utbildningar</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-clock-history"></i><h3>Microlearning</h3><p>1–2-timmarspass om specifika verktyg — CLI, NixOS, Emacs, tmux med mera.</p><a href="/sv/academy/microlearning.html" class="m-lk">Utforska sessioner</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-trophy"></i><h3>Hackathons</h3><p>Cybersäkerhet, AI-etik och SpaceApps-utmaningar. Bygg under press.</p><a href="/sv/academy/events.html" class="m-lk">Se evenemang</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-camera-video"></i><h3>Webbinarier</h3><p>Livesessioner online om zero trust, molnsäkerhet och digital transformation.</p><a href="/sv/academy/webinars.html" class="m-lk">Se schema</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-people"></i><h3>Computer Club</h3><p>Veckovisa träffar för kodning, hacking och att bygga tillsammans.</p><a href="/sv/academy/programs/computerclub/" class="m-lk">Gå med i klubben</a></div></div>
+<!-- HERO -->
+<div class="ev-hero" style="min-height:70vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/hackathon-team.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">chen.ist</div>
+    <h1>Academy</h1>
+    <p>Praktiska kurser, utbildningar och program inom cybersäkerhet, open source och digitala färdigheter. Lär dig genom att bygga.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="#programs" class="ev-btn" style="background:#F5A623;">Utforska program</a>
+      <a href="/sv/booking/" class="ev-btn-ghost">Boka en konsultation</a>
     </div>
   </div>
 </div>
 
-<div class="m-s">
+<!-- STATS -->
+<div class="m-bg" style="padding:4rem 0;">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn" style="color:#F5A623;">7</div><div class="m-nl">Kurser</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">7</div><div class="m-nl">Utbildningar</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">14</div><div class="m-nl">Microlearning</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">9+</div><div class="m-nl">Ar av evenemang</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- LANGUAGE NOTICE -->
+<div class="m-s" id="programs" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Allt vi erbjuder</h2>
+    <p class="sub">Nio satt att bygga praktiska tekniska fardigheter.</p>
+    <div style="background:rgba(245,166,35,0.08); border:1px solid rgba(245,166,35,0.25); border-radius:12px; padding:1.25rem 1.5rem; margin-bottom:2.5rem; max-width:750px; margin-left:auto; margin-right:auto; text-align:center;">
+      <p style="margin:0; color:rgba(255,255,255,0.85); font-size:0.95rem;"><strong style="color:#F5A623;">Sprakmeddelande:</strong> De flesta kurser och utbildningar ges pa engelska och rumanska. Varje sida visar vilka sprak som ar tillgangliga. <a href="/sv/academy/partnerships.html" style="color:#F5A623;">Kontakta oss</a> om du behover utbildning pa svenska.</p>
+    </div>
+    <div class="row g-4">
+
+      <!-- Courses -->
+      <div class="col-md-4">
+        <a href="/sv/academy/courses.html" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="Kurser">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">7 kurser &middot; 4-12 veckor</div>
+              <h3>Kurser</h3>
+              <p>Flerveckorsprogram inom cybersäkerhet, integritet, Linux och open source-utveckling.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Trainings -->
+      <div class="col-md-4">
+        <a href="/sv/academy/trainings.html" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/hacker-screens.webp" alt="Utbildningar">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">7 workshops &middot; 1-2 dagar</div>
+              <h3>Intensiva utbildningar</h3>
+              <p>Fokuserade praktiska workshops. 80% praktik. Ga harifran med fardigheter du anvander pa mandag.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Microlearning -->
+      <div class="col-md-4">
+        <a href="/sv/academy/microlearning.html" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="Microlearning">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">14 sessioner &middot; 1-2 timmar</div>
+              <h3>Microlearning</h3>
+              <p>Korta sessioner om CLI, NixOS, Emacs, tmux, Typst, FreeBSD och mer.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Programs / Hackathons -->
+      <div class="col-md-4">
+        <a href="/sv/academy/programs/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Program">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">Hackathons &middot; Sommarskola</div>
+              <h3>Program</h3>
+              <p>Fordjupande upplevelser — hackathons, sommarskola och Computer Club.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Events -->
+      <div class="col-md-4">
+        <a href="/sv/academy/events.html" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/cybersecurity-monitor.webp" alt="Evenemang">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">Kommande &middot; Manatliga</div>
+              <h3>Evenemang</h3>
+              <p>Konferenser, traffar och gemenskapssammankomster. Pa plats och online.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Webinars -->
+      <div class="col-md-4">
+        <a href="/sv/academy/webinars.html" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="/assets/images/stock/network-closeup.webp" alt="Webbinarier">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">Live &middot; Inspelade</div>
+              <h3>Webbinarier</h3>
+              <p>Zero trust, molnsakerhet, digital transformation och mer.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE ROW 1 -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
   <div class="container">
     <div class="m-r">
-      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Academy training session"></div>
+      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Academy-utbildning"></div>
       <div class="m-rt">
-        <h2>Riktiga färdigheter.<br>Inte certifikat.</h2>
-        <p>Varje kurs är uppbyggd kring praktiska övningar, riktiga verktyg och scenarier från faktiska uppdrag. Du går därifrån med kunskaper du kan använda på måndag morgon — inte en PDF du aldrig öppnar.</p>
+        <h2>Riktiga fardigheter.<br>Inte certifikat.</h2>
+        <p>Varje kurs ar uppbyggd kring praktiska ovningar, riktiga verktyg och scenarier fran faktiska uppdrag. Du gar harifran med kunskaper du kan anvanda pa mandag morgon — inte en PDF du aldrig oppnar.</p>
         <div class="lk"><a href="/sv/academy/courses.html" class="m-lk">Utforska kursplanen</a></div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="m-bg m-bg-squares">
+<!-- COMMUNITY -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Gemenskap</h2>
+    <p class="sub">Larandet slutar inte nar sessionen ar over.</p>
+    <div style="max-width:750px; margin:0 auto;">
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-terminal" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4><a href="/sv/academy/computerclub.html">Computer Club</a></h4>
+          <div class="up-meta">Manatliga traffar for kodning, hacking och att bygga tillsammans. Alla nivaer valkommen.</div>
+        </div>
+        <div class="up-badge up-badge-open">Manatlig</div>
+      </div>
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-handshake" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4><a href="/sv/academy/partnerships.html">Partnerskap</a></h4>
+          <div class="up-meta">Samarbeta med oss — ta Academy-programmen till din organisation eller stad.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE ROW 2 -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
   <div class="container">
     <div class="m-r rv">
-      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="Hackathon coding"></div>
+      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="Hackathon-kodning"></div>
       <div class="m-rt">
-        <h2>Bygg under press.<br>Lär dig snabbare.</h2>
-        <p>Våra hackathons och sommarskoleprogram kastar in dig i 24–48-timmarsutmaningar. SpaceApps, cybersäkerhet, AI-etik — riktiga problem, riktiga team, riktiga deadlines.</p>
+        <h2>Bygg under press.<br>Lar dig snabbare.</h2>
+        <p>Vara hackathons och sommarskoleprogram kastar in dig i 24-48-timmarsutmaningar. SpaceApps, cybersakerhet, AI-etik — riktiga problem, riktiga team, riktiga deadlines.</p>
         <div class="lk"><a href="/sv/academy/events.html" class="m-lk">Se kommande program</a></div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="m-s">
-  <div class="container">
-    <div class="m-n">
-      <div><div class="m-nn">6</div><div class="m-nl">Kompletta kurser</div></div>
-      <div><div class="m-nn">7</div><div class="m-nl">Intensiva utbildningar</div></div>
-      <div><div class="m-nn">14</div><div class="m-nl">Microlearning-sessioner</div></div>
-      <div><div class="m-nn">4</div><div class="m-nl">Språk</div></div>
-    </div>
-  </div>
-</div>
-
+<!-- CTA -->
 <div class="m-cta">
   <div class="container">
     <div class="m-d"></div>
-    <h2>Börja lära dig</h2>
-    <p>Bläddra i vår katalog eller boka ett samtal för att diskutera anpassad utbildning för ditt team.</p>
-    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-      <a href="/sv/academy/courses.html" class="m-b">Utforska kurser</a>
+    <h2>Borja lara dig</h2>
+    <p>Bladdra i var katalog eller boka ett samtal for att diskutera anpassad utbildning for ditt team.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="/sv/academy/courses.html" class="m-b" style="background:#F5A623;">Utforska kurser</a>
+      <a href="/sv/academy/trainings.html" class="m-bo" style="border-color:#F5A623; color:#F5A623;">Utforska utbildningar</a>
       <a href="/sv/booking/" class="m-bo">Boka en konsultation</a>
     </div>
   </div>

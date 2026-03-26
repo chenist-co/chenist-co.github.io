@@ -7,6 +7,15 @@ image: /assets/images/stock/cybersecurity-monitor.webp
 lang-code: de
 categories: [Cybersicherheit, Best Practices]
 description: "Wesentliche Best Practices für Cybersicherheit, die jede Organisation implementieren sollte, um sich gegen die sich entwickelnden Bedrohungen im Jahr 2025 zu schützen."
+format:
+  html:
+    format-links: false
+    toc: true
+    toc-depth: 3
+  typst:
+    toc: true
+    number-sections: false
+    include-before-body: before-body.typ
 ---
 
 ```{=html}
@@ -80,7 +89,7 @@ Für weitere Informationen oder Unterstützung bei der Implementierung dieser Pr
 Nehmen Sie an unserem kommenden Webinar über fortgeschrittene Cybersicherheitsstrategien teil, in dem wir diese Themen vertiefen und umsetzbare Erkenntnisse für Ihre Organisation liefern.
 
 ::: {.text-center .mt-3}
-[Jetzt registrieren](/de/booking/){target="_blank"}{.btn .btn-success}
+[Jetzt registrieren](/de/booking/){.btn .btn-success target="_blank"}
 :::
 :::
 :::
