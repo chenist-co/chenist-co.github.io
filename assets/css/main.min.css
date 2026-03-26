@@ -492,8 +492,10 @@ html:not([data-bs-theme="dark"]) .m-s [style*="rgba(255,255,255"]{color:#86868b 
 html:not([data-bs-theme="dark"]) .m-bg [style*="rgba(255,255,255,0.6)"]{color:#86868b !important;}
 html:not([data-bs-theme="dark"]) .m-bg [style*="rgba(255,255,255,0.7)"]{color:#86868b !important;}
 /* Package cards */
-html:not([data-bs-theme="dark"]) .m-pkg{border-color:rgba(0,0,0,0.08);}
+html:not([data-bs-theme="dark"]) .m-pkg{border-color:rgba(0,0,0,0.08);background:#fff;}
 html:not([data-bs-theme="dark"]) .m-pkg h3{color:#1d1d1f;}
+html:not([data-bs-theme="dark"]) .m-pkg .sz{color:#86868b;}
+html:not([data-bs-theme="dark"]) .m-pkg ul li{color:#6e6e73;}
 /* Blog items */
 html:not([data-bs-theme="dark"]) .m-brd{border-color:rgba(0,0,0,0.06);}
 /* Form */
@@ -554,8 +556,11 @@ html[data-bs-theme="dark"] .up-meta{color:rgba(255,255,255,0.4) !important;}
 html[data-bs-theme="dark"] .up-item{border-color:rgba(255,255,255,0.06) !important;}
 html[data-bs-theme="dark"] .m-step{border-color:rgba(255,255,255,0.06) !important;}
 html[data-bs-theme="dark"] .m-step-txt h3{color:#e5e5e5 !important;}
+html[data-bs-theme="dark"] .m-pkg{border-color:rgba(255,255,255,0.08) !important;background:rgba(255,255,255,0.02) !important;}
 html[data-bs-theme="dark"] .m-pkg h3{color:#e5e5e5 !important;}
-html[data-bs-theme="dark"] .m-pkg .sz{color:rgba(255,255,255,0.45);}
+html[data-bs-theme="dark"] .m-pkg .sz{color:rgba(255,255,255,0.4) !important;}
+html[data-bs-theme="dark"] .m-pkg ul li{color:rgba(255,255,255,0.55) !important;}
+html[data-bs-theme="dark"] .m-pkg.ft{border-color:var(--c) !important;}
 html[data-bs-theme="dark"] .m-contact-info h3{color:#e5e5e5 !important;}
 html[data-bs-theme="dark"] .m-contact-info p{color:rgba(255,255,255,0.5);}
 html[data-bs-theme="dark"] .m-form label{color:#e5e5e5 !important;}
