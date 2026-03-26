@@ -1,0 +1,95 @@
+---
+title: "Microlearning"
+title-block-style: none
+subtitle: "Sesiuni de 1-2 ore pentru competențe specifice"
+description: "Sesiuni de microlearning de 1-2 ore pentru instrumente și tehnologii specifice. Perfecte pentru profesioniști ocupați."
+from: markdown+raw_html
+page-layout: custom
+format:
+  html:
+    toc: false
+    include-in-header:
+      text: |
+        <style>.m { --c: #F5A623; }</style>
+---
+
+```{=html}
+<div class="m">
+
+<div class="ev-hero" style="min-height:55vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/terminal-green.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Academy</div>
+    <h1>Micro<span style="color:#F5A623;">learning</span></h1>
+    <p>Învață un instrument nou în 1-2 ore. Sesiuni concentrate concepute pentru profesioniști ocupați.</p>
+    <a href="#sesiuni" class="ev-btn" style="background:#F5A623;">Explorează sesiunile</a>
+  </div>
+</div>
+
+<div class="m-bg" style="padding:4rem 0;">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn" style="color:#F5A623;">14</div><div class="m-nl">Sesiuni</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">1–2h</div><div class="m-nl">Per sesiune</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">100%</div><div class="m-nl">Practică</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">3</div><div class="m-nl">Categorii</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="m-s" id="sesiuni" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Instrumente & Sisteme</h2>
+    <p class="sub">Alege o sesiune, participă, pleacă cu o competență nouă.</p>
+    <div class="row g-4">
+      <div class="col-md-4"><a href="/academy/microlearning/cli-intro/" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="Unix CLI"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 ore</div><h3>Linia de Comandă Unix</h3><p>Comenzi esențiale, navigare și bazele scripting-ului shell.</p></div></div></a></div>
+      <div class="col-md-4"><a href="/academy/microlearning/tmux/" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="Tmux"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">1 oră</div><h3>Tmux</h3><p>Gestionare sesiuni, panouri, ferestre și scurtături productive.</p></div></div></a></div>
+      <div class="col-md-4"><a href="/academy/microlearning/emacs/" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="/assets/images/stock/hacker-screens.webp" alt="Emacs"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 ore</div><h3>Emacs Essentials</h3><p>Navigare, editare, buffere și primii pași cu pachetele.</p></div></div></a></div>
+      <div class="col-md-4"><a href="/academy/microlearning/syncthing/" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="/assets/images/stock/network-closeup.webp" alt="Syncthing"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 ore</div><h3>Syncthing</h3><p>Sincronizare privată peer-to-peer și configurare.</p></div></div></a></div>
+      <div class="col-md-4"><a href="/academy/microlearning/sc-im/" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="SC-IM"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">1 oră</div><h3>SC-IM</h3><p>Foi de calcul în terminal cu formule și import date.</p></div></div></a></div>
+      <div class="col-md-4"><a href="/academy/microlearning/libreoffice-calc/" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="LibreOffice"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 ore</div><h3>LibreOffice Calc</h3><p>Formule avansate, analiză date, grafice și macro-uri.</p></div></div></a></div>
+    </div>
+  </div>
+</div>
+
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Publicare & Scriere</h2>
+    <p class="sub">Instrumente moderne de documente pentru profesioniști tehnici.</p>
+    <div class="row g-4">
+      <div class="col-md-4"><a href="/academy/microlearning/quarto/" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="Quarto"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 ore</div><h3>Quarto Publishing</h3><p>YAML, Markdown, blocuri de cod și output multi-format.</p></div></div></a></div>
+      <div class="col-md-4"><a href="/academy/microlearning/org-mode/" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="/assets/images/stock/hacker-screens.webp" alt="Org-mode"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 ore</div><h3>Org-mode</h3><p>Note, gestionare sarcini, agendă și programare literată.</p></div></div></a></div>
+      <div class="col-md-4"><a href="/academy/microlearning/latex/" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="LaTeX"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 ore</div><h3>LaTeX</h3><p>Structură documente, ecuații, bibliografii și pachete.</p></div></div></a></div>
+    </div>
+  </div>
+</div>
+
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Sisteme de Operare</h2>
+    <p class="sub">Introduceri practice în platforme de securitate.</p>
+    <div class="row g-4">
+      <div class="col-md-3"><a href="/academy/microlearning/nixos/" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="NixOS"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 ore</div><h3>NixOS</h3><p>Config declarativă, pachete și rollback-uri.</p></div></div></a></div>
+      <div class="col-md-3"><a href="/academy/microlearning/freebsd/" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="/assets/images/stock/hacker-screens.webp" alt="FreeBSD"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 ore</div><h3>FreeBSD</h3><p>Arhitectură, pkg și colecția de porturi.</p></div></div></a></div>
+      <div class="col-md-3"><a href="/academy/microlearning/openbsd/" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="/assets/images/stock/cybersecurity-monitor.webp" alt="OpenBSD"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 ore</div><h3>OpenBSD</h3><p>Securitate, pledge, firewall PF și mitigări.</p></div></div></a></div>
+      <div class="col-md-3"><a href="/academy/microlearning/qubesos/" style="text-decoration:none;"><div class="pg-card"><img loading="lazy" src="/assets/images/stock/network-closeup.webp" alt="QubesOS"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">2 ore</div><h3>QubesOS</h3><p>Compartimente, domenii și fluxuri securizate.</p></div></div></a></div>
+    </div>
+  </div>
+</div>
+
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Învață ceva nou<br>la prânz</h2>
+    <p>Perfect pentru sesiuni lunch-and-learn, team building sau dezvoltare personală.</p>
+    <a href="/ro/booking/" class="m-b" style="background:#F5A623;">Rezervă o sesiune</a>
+    <div class="m-sm">
+      <i class="bi bi-check-circle-fill" style="color:#F5A623;"></i> Ghiduri rapide &nbsp;
+      <i class="bi bi-check-circle-fill" style="color:#F5A623;"></i> Cheat sheets incluse &nbsp;
+      <i class="bi bi-check-circle-fill" style="color:#F5A623;"></i> Pachete de grup
+    </div>
+  </div>
+</div>
+
+</div>
+```

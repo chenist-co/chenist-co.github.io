@@ -369,6 +369,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<script>
+(function() {
+  var path = window.location.pathname;
+  // Only redirect on English pages (no language prefix)
+  if (path.match(/^\/(ro|sv|de)\//)) return;
+  // Don't redirect if user explicitly chose English
+  if (localStorage.getItem('chen-lang-choice') === 'en') return;
+  // Don't redirect if already redirected this session
+  if (sessionStorage.getItem('chen-lang-redirected')) return;
+  // Detect browser language
+  var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  var target = null;
+  if (lang.startsWith('ro')) target = 'ro';
+  else if (lang.startsWith('sv')) target = 'sv';
+  else if (lang.startsWith('de')) target = 'de';
+  if (target) {
+    sessionStorage.setItem('chen-lang-redirected', '1');
+    window.location.href = '/' + target + path;
+  }
+})();
+</script>
 <link rel="preload" href="../../../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
 <meta name="view-transition" content="same-origin">
@@ -688,7 +709,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <p><strong>Level:</strong> Intermediate</p>
         <p><strong>Prerequisites:</strong> Basic Linux knowledge, familiarity with command line interfaces, and understanding of fundamental security concepts</p>
         <p><strong>Format:</strong> Online instructor-led with hands-on labs</p>
-        <p><strong>Next Start Date:</strong> September 5th, 2025</p>
+        <p><strong>Next Start Date:</strong> September 5th, 2026</p>
         <p><strong>Cost:</strong> 1,200 EUR (Early bird discount: 950 EUR until August 1st)</p>
       </div>
     </div>
@@ -863,37 +884,11 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 <section id="what-sets-this-course-apart" class="level2">
 <h2 class="anchored" data-anchor-id="what-sets-this-course-apart">What Sets This Course Apart</h2>
-<div class="row mt-4">
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center">
-      <div class="feature-card-icon">
-        <i class="bi bi-shield-check"></i>
-      </div>
-      <h3 class="anchored">Practical Focus</h3>
-      <p>Hands-on exercises that apply directly to real-world security operations and challenges.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center">
-      <div class="feature-card-icon">
-        <i class="bi bi-code-square"></i>
-      </div>
-      <h3 class="anchored">Infrastructure as Code</h3>
-      <p>Learn to implement security as code with version-controlled, auditable system configurations.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center">
-      <div class="feature-card-icon">
-        <i class="bi bi-diagram-3"></i>
-      </div>
-      <h3 class="anchored">Modern Approach</h3>
-      <p>Cutting-edge techniques that align with the latest in DevSecOps and secure infrastructure practices.</p>
-    </div>
-  </div>
-</div>
+<ul>
+<li><strong>Practical Focus</strong> — Hands-on exercises that apply directly to real-world security operations and challenges</li>
+<li><strong>Infrastructure as Code</strong> — Implement security as code with version-controlled, auditable system configurations</li>
+<li><strong>Modern Approach</strong> — Cutting-edge techniques aligned with the latest in DevSecOps and secure infrastructure practices</li>
+</ul>
 </section>
 <section id="who-should-attend" class="level2">
 <h2 class="anchored" data-anchor-id="who-should-attend">Who Should Attend</h2>
@@ -1673,6 +1668,7 @@ document.addEventListener('DOMContentLoaded', function() {
       a.href = l.prefix + (cleanPath || '/');
       a.textContent = l.label;
       if (l.code === currentLang) a.className = 'active';
+      a.addEventListener('click', function(e) { localStorage.setItem('chen-lang-choice', this.textContent.toLowerCase() === 'en' ? 'en' : ''); });
       langsDiv.appendChild(a);
     }
 
@@ -1687,11 +1683,10 @@ document.addEventListener('DOMContentLoaded', function() {
   })();
 });
 </script>
-<!-- Cal.com floating button -->
+<!-- Cal.com embed (for booking page only, no floating button) -->
 <script>
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", {origin:"https://cal.com"});
-  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {

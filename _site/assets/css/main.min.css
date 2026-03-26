@@ -348,6 +348,31 @@ html:not([data-bs-theme="dark"]) .m-bg-mountains p, html:not([data-bs-theme="dar
 /* No bullet points on landing pages */
 .m ul,.m ol{list-style:none;padding-left:0;}
 .m li::before{content:none !important;}
+
+/* Step indicators (partnerships page) */
+.m-step{display:flex;align-items:flex-start;gap:1.25rem;padding:1.25rem 0;border-bottom:1px solid rgba(255,255,255,0.06);}
+.m-step:last-child{border-bottom:none;}
+.m-step-num{flex-shrink:0;width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:rgba(245,166,35,0.1);border-radius:50%;font-size:1rem;font-weight:700;color:#F5A623;}
+.m-step-txt h3{font-size:1.05rem;font-weight:600;margin:0 0 0.25rem;text-align:left;}
+.m-step-txt p{font-size:0.88rem;color:#86868b;margin:0;}
+html:not([data-bs-theme="dark"]) .m-step{border-color:rgba(0,0,0,0.06);}
+html:not([data-bs-theme="dark"]) .m-step-txt h3{color:#1d1d1f;}
+
+/* === NUCLEAR: green-on-green fix for ALL button/link components === */
+/* These must override Bootstrap's link color on article pages */
+a.m-b,a.m-b:link,a.m-b:visited,a.m-b:active,a.m-b:focus,.page-layout-article a.m-b,.page-layout-article .m-b,#quarto-content a.m-b,main a.m-b,.content a.m-b{color:#fff !important;text-decoration:none !important;}
+a.m-b:hover,.page-layout-article a.m-b:hover,#quarto-content a.m-b:hover{color:#fff !important;text-decoration:none !important;}
+a.ev-btn,a.ev-btn:link,a.ev-btn:visited,.page-layout-article a.ev-btn{color:#fff !important;text-decoration:none !important;}
+a.ev-btn:hover{color:#fff !important;}
+a.m-bo,a.m-bo:link,a.m-bo:visited,.page-layout-article a.m-bo{color:var(--c) !important;text-decoration:none !important;}
+a.m-bo:hover,.page-layout-article a.m-bo:hover{color:#fff !important;background:var(--c) !important;}
+a.m-lk,a.m-lk:link,a.m-lk:visited,.page-layout-article a.m-lk,#quarto-content a.m-lk{color:var(--c) !important;text-decoration:none !important;}
+a.m-lk:hover,.page-layout-article a.m-lk:hover{text-decoration:underline !important;}
+/* Download PDF button override */
+a.m-b[style*="F5A623"],a.m-b[style*="f26522"]{color:#fff !important;}
+/* Outline buttons with inline border-color */
+a.m-bo[style*="F5A623"]{color:#F5A623 !important;}
+a.m-bo[style*="F5A623"]:hover{color:#fff !important;background:#F5A623 !important;}
 .m-hero ul,.m-s ul,.m-bg ul,.m-cta ul{list-style:none;padding-left:0;}
 
 /* Sticky TOC — stays visible while scrolling article */
