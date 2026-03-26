@@ -1,0 +1,161 @@
+---
+title: "Open-Source in Europe: How Nextcloud and LibreOffice Are Replacing Proprietary Software"
+page-layout: article
+author: "CHENIST Team"
+date: "2026-03-26"
+image: /assets/images/stock/code-screen.webp
+lang-code: en
+categories: [Open Source, Europe, Digital Sovereignty, Nextcloud, LibreOffice]
+description: "Real case studies of European governments and organizations adopting Nextcloud and LibreOffice. Why the EU is moving to open-source, who's leading, and what it means for your business."
+format:
+  html:
+    format-links: false
+    toc: true
+    toc-depth: 3
+  typst:
+    toc: true
+    number-sections: false
+    margin:
+      x: 2cm
+      y: 2.5cm
+---
+
+::: {.content-visible when-format="html"}
+![](/assets/images/stock/code-screen.webp){.rounded .shadow width=100%}
+:::
+
+## Why Europe Is Moving to Open Source
+
+Something significant is happening across European governments and public institutions. After decades of defaulting to proprietary software from US-based vendors, a growing number of countries are making deliberate, policy-driven shifts toward open-source alternatives. This is not a fringe movement — it is happening at the level of federal governments, defence ministries, and the European Commission itself.
+
+The motivations are concrete and overlapping.
+
+### Digital Sovereignty
+
+The concept of digital sovereignty — the ability of a government or organization to control its own digital infrastructure — has become a central policy concern in Europe. When critical government operations depend on software controlled by companies subject to foreign jurisdictions, there is an inherent risk. The US CLOUD Act, for example, can compel American companies to hand over data stored anywhere in the world. For European institutions handling sensitive citizen data, this is not a theoretical concern.
+
+Open-source software eliminates this dependency. The code is auditable, the hosting can be local, and no single vendor holds the keys.
+
+### GDPR Compliance
+
+The General Data Protection Regulation requires that personal data of EU citizens is handled with specific protections. When data flows through cloud services operated by non-EU companies, compliance becomes complicated. Self-hosted open-source solutions allow organizations to keep data on EU soil, under EU jurisdiction, with full visibility into how it is processed.
+
+### Cost at Scale
+
+Public sector organizations operate at enormous scale. The German federal government alone employs over 300,000 people. At that scale, per-user licensing fees for office suites, cloud storage, and collaboration tools represent a substantial recurring cost. Open-source alternatives carry no per-seat licensing fees. The costs shift to deployment, customization, and support — areas where European IT companies can compete and where spending stays within the EU economy.
+
+### Security Through Transparency
+
+Proprietary software operates as a black box. Users trust that the vendor has no vulnerabilities, no backdoors, and no undisclosed data collection. Open-source software allows independent security audits. Governments can — and do — inspect the code that runs on their infrastructure. This is not about distrusting vendors; it is about verifiable trust rather than assumed trust.
+
+### EU Policy: Open Source Strategy
+
+The European Commission adopted its [Open Source Software Strategy 2020-2023](https://commission.europa.eu/about-european-commission/departments-and-executive-agencies/informatics/open-source-software-strategy_en), explicitly encouraging the use of open-source solutions across EU institutions. The strategy set the principle of "Think Open" as a default approach for new IT solutions and committed the Commission to contributing back to the open-source ecosystem. This strategy has since been extended and reinforced, with open source becoming an integral part of EU digital policy rather than an afterthought.
+
+## Nextcloud: The European Cloud Alternative
+
+[Nextcloud](https://nextcloud.com) is a self-hosted file sync, collaboration, and communication platform. It is headquartered in Stuttgart, Germany, and developed primarily by a European team. It offers functionality comparable to Google Workspace or Microsoft 365 — file storage, calendar, contacts, video calls, document collaboration, project management — but the data stays on infrastructure you control.
+
+What makes Nextcloud particularly relevant in the European context is not just its feature set, but its deployment model. It is designed from the ground up for on-premises or private cloud hosting, making GDPR compliance straightforward by design rather than by contract.
+
+### Germany: The Bundescloud
+
+The German federal administration deployed Nextcloud as the foundation of its "Bundescloud" — a secure cloud platform for over 300,000 federal employees. This is one of the largest Nextcloud deployments in the world and represents a deliberate decision at the highest level of government to move away from US cloud providers for internal collaboration and file sharing. The deployment is managed by the German Federal Information Technology Centre (ITZBund), giving the government full control over its data and infrastructure.
+
+Source: [Nextcloud — German Federal Administration](https://nextcloud.com/blog/german-federal-administration-relies-on-nextcloud/)
+
+### France: Government Cloud "Nubo"
+
+The French government selected Nextcloud as the basis for its interministerial cloud platform, enabling secure file sharing and collaboration across government ministries. France has been particularly aggressive in its pursuit of digital sovereignty, with the Direction Interministérielle du Numérique (DINUM) leading efforts to reduce dependence on foreign cloud services. The choice of Nextcloud fits into a broader strategy that includes open-source messaging, identity management, and collaborative tools across the French state.
+
+Source: [Nextcloud — French Government](https://nextcloud.com/blog/french-government-chooses-nextcloud/)
+
+### Sweden and the Netherlands
+
+Several Swedish municipalities have adopted Nextcloud for internal collaboration, driven by data protection requirements and the desire to keep citizen data under local control. In the Netherlands, government agencies have similarly turned to Nextcloud as part of broader efforts to comply with privacy regulations and reduce reliance on US-based cloud services. These are not experimental pilot programs — they are production deployments serving thousands of civil servants.
+
+### Why Nextcloud Specifically
+
+Nextcloud's appeal in the European public sector comes down to a few factors: it is a European company, subject to EU law. It is fully self-hosted, so data residency is guaranteed. It has an active enterprise support model, so organizations are not left without professional backing. And its functionality is broad enough to replace multiple proprietary tools with a single platform.
+
+## LibreOffice: The Open Document Standard
+
+[LibreOffice](https://www.libreoffice.org) is the leading open-source office suite, developed by [The Document Foundation](https://www.documentfoundation.org), a non-profit based in Berlin. It includes a word processor, spreadsheet application, presentation software, and more. It reads and writes Microsoft Office formats and natively supports the Open Document Format (ODF), which is an ISO-standardized file format and the default document format for several EU member states.
+
+The adoption of LibreOffice across European institutions is driven by the same factors as Nextcloud — sovereignty, cost, and interoperability — but with an additional dimension: document format independence. When a government standardizes on ODF, it is no longer locked into any particular vendor's software to read its own documents.
+
+### Italy: Ministry of Defence and Municipal Governments
+
+The Italian Ministry of Defence migrated approximately 150,000 workstations to LibreOffice, making it one of the largest single-organization migrations in Europe. The decision was driven by cost savings and the desire to adopt open standards. Beyond the national level, Italian municipalities including the City of Bari and the City of Pesaro have also migrated to LibreOffice, demonstrating that the approach scales from large ministries down to local government.
+
+### Germany: Munich and Schleswig-Holstein
+
+The City of Munich's LiMux project is perhaps the most studied — and most debated — open-source migration in history. Munich migrated approximately 15,000 workstations from Windows and Microsoft Office to Linux and LibreOffice in the 2000s, then controversially reversed course in 2017 under a new city administration. The reversal was widely attributed to political rather than technical factors, and Munich has since revisited its open-source strategy.
+
+More recently, the state government of Schleswig-Holstein announced a comprehensive migration to LibreOffice and other open-source tools across its 25,000 workstations. This migration, announced in 2024, is being executed systematically with a multi-year timeline and represents a new generation of open-source adoption that has learned from Munich's experience.
+
+### France: The Gendarmerie
+
+The French National Gendarmerie, the military police force with over 100,000 personnel, migrated more than 70,000 workstations to Linux and LibreOffice beginning in 2005. This is one of the longest-running and most successful large-scale open-source deployments in any government worldwide. The Gendarmerie has reported significant cost savings and improved operational independence, and the migration has been sustained across multiple changes of government — a strong indicator of institutional satisfaction.
+
+### Spain: Regional Governments
+
+The Region of Valencia and the Autonomous Community of Extremadura in Spain were early adopters of open-source software in education and government. Extremadura developed its own Linux distribution (LinEx) for schools and government offices, and Valencia has maintained a strong commitment to open-source tools including LibreOffice across its regional administration.
+
+### The ODF Standard
+
+A key enabler of LibreOffice adoption is the Open Document Format (ODF). As an ISO/IEC standard (26300), ODF ensures that documents are not tied to any single vendor's implementation. Several EU member states have adopted ODF as a recommended or mandatory format for government documents. This standardization is critical: it means that even if an organization does not use LibreOffice, it can still exchange documents freely with those that do.
+
+## Who Is Leading the Shift
+
+The move to open source in Europe is not happening in isolation. It is supported by a growing institutional framework.
+
+### European Commission OSPO
+
+The European Commission established an Open Source Programme Office (OSPO) to coordinate its open-source activities, contribute to upstream projects, and advise EU institutions on open-source adoption. The OSPO represents an institutional commitment that goes beyond individual procurement decisions.
+
+### GAIA-X
+
+[GAIA-X](https://gaia-x.eu) is a European initiative to develop a federated data infrastructure based on open standards and European values. While not exclusively open-source, GAIA-X prioritizes interoperability, transparency, and data sovereignty — principles that align closely with open-source approaches. It aims to create a European alternative to hyperscale cloud providers that respects European data protection norms.
+
+### Public Money, Public Code
+
+The [Free Software Foundation Europe](https://fsfe.org) (FSFE) runs the [Public Money, Public Code](https://publiccode.eu) campaign, which advocates a straightforward principle: software funded by public money should be publicly available as open source. The campaign has gathered support from over 200 organizations and numerous public administrations. The logic is simple — when taxpayers fund software development, the results should benefit everyone, not be locked away as proprietary code.
+
+### National Strategies
+
+Individual EU member states have developed their own open-source strategies. Germany's Sovereign Tech Fund provides direct funding for critical open-source infrastructure projects. France's DINUM coordinates digital strategy across the French state with a strong open-source mandate. These national efforts complement EU-level policy and create a multi-layered support structure for open-source adoption.
+
+## What This Means for Your Business
+
+If national governments with hundreds of thousands of users are running their operations on Nextcloud and LibreOffice, the tools are mature enough for a business of any size. The question is no longer whether open-source alternatives are production-ready — they are. The question is whether your organization has a practical migration path.
+
+### The Ecosystem Is Ready
+
+Both Nextcloud and LibreOffice offer enterprise support options, either directly or through certified partners. Professional deployment, migration assistance, and ongoing support are available across Europe. This is not a community-only ecosystem — it is a commercial ecosystem built around open-source foundations.
+
+### Migration Is Practical
+
+Moving from proprietary tools does not need to happen overnight. Most successful migrations follow a phased approach: start with new projects on open-source tools, maintain compatibility with existing formats during a transition period, and migrate historical data on a practical timeline. The organizations referenced in this article — from the French Gendarmerie to the German federal government — all followed this pattern.
+
+### It Is About Risk Management, Not Ideology
+
+The European shift to open source is driven by practical risk management: reducing vendor lock-in, controlling costs, ensuring compliance, and maintaining operational independence. The same logic applies to businesses. If your organization depends on tools where a single vendor can change pricing, discontinue features, or modify terms of service unilaterally, you carry a risk. Open-source alternatives give you options.
+
+For a detailed comparison of open-source and proprietary tools, see our [comparison page](/compare.html). To explore what a migration might look like for your organization, visit our [digital services](/digital/) page.
+
+## Resources
+
+- [Nextcloud](https://nextcloud.com) — Self-hosted file sync and collaboration platform
+- [LibreOffice](https://www.libreoffice.org) — Open-source office suite
+- [The Document Foundation](https://www.documentfoundation.org) — Non-profit behind LibreOffice
+- [European Commission Open Source Strategy](https://commission.europa.eu/about-european-commission/departments-and-executive-agencies/informatics/open-source-software-strategy_en)
+- [Public Money, Public Code](https://publiccode.eu) — Campaign for publicly funded open-source software
+- [GAIA-X](https://gaia-x.eu) — European data infrastructure initiative
+- [Free Software Foundation Europe](https://fsfe.org)
+
+<div style="margin:3rem 0; padding:2rem 2.5rem; background:rgba(129,189,74,0.04); border:1.5px solid rgba(129,189,74,0.15); border-radius:16px; text-align:center;">
+  <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:0.5rem;">Ready to explore open-source for your organization?</h3>
+  <p style="color:#86868b; margin-bottom:1.25rem;">Book a free consultation to discuss which tools fit your needs and how to plan a practical migration.</p>
+  <a href="/booking/" class="m-b" style="font-size:0.9rem; padding:0.65rem 1.5rem; color:#fff !important;">Book a Consultation</a>
+</div>
