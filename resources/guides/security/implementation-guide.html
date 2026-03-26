@@ -45,9 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-b37f6c1b9a99d16252d3ddd2c7074628.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-73406dad87c631b3ff16adcaa0b1ab21.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-d670e99d9fdfed706f1502bc605e1805.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-73406dad87c631b3ff16adcaa0b1ab21.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -395,8 +395,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <link rel="stylesheet" href="../../../assets/css/main.min.css">
-<link rel="stylesheet" href="../../../assets/css/styles.css">
-<link rel="stylesheet" href="../../../assets/css/modern.css">
 
 
 
@@ -538,19 +536,19 @@ document.addEventListener('DOMContentLoaded', function() {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-">    
         <li>
-    <a class="dropdown-item" href="../../../#lang-en">
+    <a class="dropdown-item" href="../../../index.html">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../#lang-ro">
+    <a class="dropdown-item" href="../../../ro/index.html">
  <span class="dropdown-text">Română</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../#lang-sv">
+    <a class="dropdown-item" href="../../../sv/index.html">
  <span class="dropdown-text">Svenska</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../#lang-de">
+    <a class="dropdown-item" href="../../../de/index.html">
  <span class="dropdown-text">Deutsch</span></a>
   </li>  
     </ul>
@@ -564,95 +562,141 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-<!-- main -->
-
-
-<header id="title-block-header">
-<h1 class="title display-7">Security Implementation Guide</h1>
-
-<p class="date">2025-03-01</p>
-</header>
-
-<nav id="TOC" role="doc-toc">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#security-implementation-guide" id="toc-security-implementation-guide">Security Implementation Guide</a>
-  <ul>
-  <li><a href="#introduction" id="toc-introduction">Introduction</a></li>
-  <li><a href="#security-governance" id="toc-security-governance">Security Governance</a>
-  <ul>
-  <li><a href="#establishing-a-security-program" id="toc-establishing-a-security-program">Establishing a Security Program</a></li>
-  <li><a href="#security-policies" id="toc-security-policies">Security Policies</a></li>
+  <li><a href="#security-governance" id="toc-security-governance" class="nav-link active" data-scroll-target="#security-governance">Security Governance</a>
+  <ul class="collapse">
+  <li><a href="#establishing-a-security-program" id="toc-establishing-a-security-program" class="nav-link" data-scroll-target="#establishing-a-security-program">Establishing a Security Program</a></li>
+  <li><a href="#security-policies" id="toc-security-policies" class="nav-link" data-scroll-target="#security-policies">Security Policies</a></li>
   </ul></li>
-  <li><a href="#risk-assessment-and-management" id="toc-risk-assessment-and-management">Risk Assessment and Management</a>
-  <ul>
-  <li><a href="#risk-assessment-process" id="toc-risk-assessment-process">Risk Assessment Process</a></li>
-  <li><a href="#risk-register" id="toc-risk-register">Risk Register</a></li>
+  <li><a href="#risk-assessment-and-management" id="toc-risk-assessment-and-management" class="nav-link" data-scroll-target="#risk-assessment-and-management">Risk Assessment and Management</a>
+  <ul class="collapse">
+  <li><a href="#risk-assessment-process" id="toc-risk-assessment-process" class="nav-link" data-scroll-target="#risk-assessment-process">Risk Assessment Process</a></li>
+  <li><a href="#risk-register" id="toc-risk-register" class="nav-link" data-scroll-target="#risk-register">Risk Register</a></li>
   </ul></li>
-  <li><a href="#identity-and-access-management" id="toc-identity-and-access-management">Identity and Access Management</a>
-  <ul>
-  <li><a href="#access-control-principles" id="toc-access-control-principles">Access Control Principles</a></li>
-  <li><a href="#iam-implementation-steps" id="toc-iam-implementation-steps">IAM Implementation Steps</a></li>
+  <li><a href="#identity-and-access-management" id="toc-identity-and-access-management" class="nav-link" data-scroll-target="#identity-and-access-management">Identity and Access Management</a>
+  <ul class="collapse">
+  <li><a href="#access-control-principles" id="toc-access-control-principles" class="nav-link" data-scroll-target="#access-control-principles">Access Control Principles</a></li>
+  <li><a href="#iam-implementation-steps" id="toc-iam-implementation-steps" class="nav-link" data-scroll-target="#iam-implementation-steps">IAM Implementation Steps</a></li>
   </ul></li>
-  <li><a href="#network-security" id="toc-network-security">Network Security</a>
-  <ul>
-  <li><a href="#network-architecture" id="toc-network-architecture">Network Architecture</a></li>
-  <li><a href="#network-security-controls" id="toc-network-security-controls">Network Security Controls</a></li>
+  <li><a href="#network-security" id="toc-network-security" class="nav-link" data-scroll-target="#network-security">Network Security</a>
+  <ul class="collapse">
+  <li><a href="#network-architecture" id="toc-network-architecture" class="nav-link" data-scroll-target="#network-architecture">Network Architecture</a></li>
+  <li><a href="#network-security-controls" id="toc-network-security-controls" class="nav-link" data-scroll-target="#network-security-controls">Network Security Controls</a></li>
   </ul></li>
-  <li><a href="#endpoint-security" id="toc-endpoint-security">Endpoint Security</a>
-  <ul>
-  <li><a href="#endpoint-protection-strategy" id="toc-endpoint-protection-strategy">Endpoint Protection Strategy</a></li>
-  <li><a href="#secure-configuration" id="toc-secure-configuration">Secure Configuration</a></li>
+  <li><a href="#endpoint-security" id="toc-endpoint-security" class="nav-link" data-scroll-target="#endpoint-security">Endpoint Security</a>
+  <ul class="collapse">
+  <li><a href="#endpoint-protection-strategy" id="toc-endpoint-protection-strategy" class="nav-link" data-scroll-target="#endpoint-protection-strategy">Endpoint Protection Strategy</a></li>
+  <li><a href="#secure-configuration" id="toc-secure-configuration" class="nav-link" data-scroll-target="#secure-configuration">Secure Configuration</a></li>
   </ul></li>
-  <li><a href="#cloud-security" id="toc-cloud-security">Cloud Security</a>
-  <ul>
-  <li><a href="#cloud-security-framework" id="toc-cloud-security-framework">Cloud Security Framework</a></li>
-  <li><a href="#cloud-security-implementation" id="toc-cloud-security-implementation">Cloud Security Implementation</a></li>
+  <li><a href="#cloud-security" id="toc-cloud-security" class="nav-link" data-scroll-target="#cloud-security">Cloud Security</a>
+  <ul class="collapse">
+  <li><a href="#cloud-security-framework" id="toc-cloud-security-framework" class="nav-link" data-scroll-target="#cloud-security-framework">Cloud Security Framework</a></li>
+  <li><a href="#cloud-security-implementation" id="toc-cloud-security-implementation" class="nav-link" data-scroll-target="#cloud-security-implementation">Cloud Security Implementation</a></li>
   </ul></li>
-  <li><a href="#application-security" id="toc-application-security">Application Security</a>
-  <ul>
-  <li><a href="#secure-development-lifecycle" id="toc-secure-development-lifecycle">Secure Development Lifecycle</a></li>
-  <li><a href="#application-security-controls" id="toc-application-security-controls">Application Security Controls</a></li>
+  <li><a href="#application-security" id="toc-application-security" class="nav-link" data-scroll-target="#application-security">Application Security</a>
+  <ul class="collapse">
+  <li><a href="#secure-development-lifecycle" id="toc-secure-development-lifecycle" class="nav-link" data-scroll-target="#secure-development-lifecycle">Secure Development Lifecycle</a></li>
+  <li><a href="#application-security-controls" id="toc-application-security-controls" class="nav-link" data-scroll-target="#application-security-controls">Application Security Controls</a></li>
   </ul></li>
-  <li><a href="#data-security" id="toc-data-security">Data Security</a>
-  <ul>
-  <li><a href="#data-protection-strategy" id="toc-data-protection-strategy">Data Protection Strategy</a></li>
-  <li><a href="#data-security-implementation" id="toc-data-security-implementation">Data Security Implementation</a></li>
+  <li><a href="#data-security" id="toc-data-security" class="nav-link" data-scroll-target="#data-security">Data Security</a>
+  <ul class="collapse">
+  <li><a href="#data-protection-strategy" id="toc-data-protection-strategy" class="nav-link" data-scroll-target="#data-protection-strategy">Data Protection Strategy</a></li>
+  <li><a href="#data-security-implementation" id="toc-data-security-implementation" class="nav-link" data-scroll-target="#data-security-implementation">Data Security Implementation</a></li>
   </ul></li>
-  <li><a href="#security-monitoring-and-operations" id="toc-security-monitoring-and-operations">Security Monitoring and Operations</a>
-  <ul>
-  <li><a href="#security-operations-center" id="toc-security-operations-center">Security Operations Center</a></li>
-  <li><a href="#security-monitoring-implementation" id="toc-security-monitoring-implementation">Security Monitoring Implementation</a></li>
+  <li><a href="#security-monitoring-and-operations" id="toc-security-monitoring-and-operations" class="nav-link" data-scroll-target="#security-monitoring-and-operations">Security Monitoring and Operations</a>
+  <ul class="collapse">
+  <li><a href="#security-operations-center" id="toc-security-operations-center" class="nav-link" data-scroll-target="#security-operations-center">Security Operations Center</a></li>
+  <li><a href="#security-monitoring-implementation" id="toc-security-monitoring-implementation" class="nav-link" data-scroll-target="#security-monitoring-implementation">Security Monitoring Implementation</a></li>
   </ul></li>
-  <li><a href="#incident-response" id="toc-incident-response">Incident Response</a>
-  <ul>
-  <li><a href="#incident-response-plan" id="toc-incident-response-plan">Incident Response Plan</a></li>
-  <li><a href="#incident-response-capabilities" id="toc-incident-response-capabilities">Incident Response Capabilities</a></li>
+  <li><a href="#incident-response" id="toc-incident-response" class="nav-link" data-scroll-target="#incident-response">Incident Response</a>
+  <ul class="collapse">
+  <li><a href="#incident-response-plan" id="toc-incident-response-plan" class="nav-link" data-scroll-target="#incident-response-plan">Incident Response Plan</a></li>
+  <li><a href="#incident-response-capabilities" id="toc-incident-response-capabilities" class="nav-link" data-scroll-target="#incident-response-capabilities">Incident Response Capabilities</a></li>
   </ul></li>
-  <li><a href="#security-awareness-and-training" id="toc-security-awareness-and-training">Security Awareness and Training</a>
-  <ul>
-  <li><a href="#security-awareness-program" id="toc-security-awareness-program">Security Awareness Program</a></li>
-  <li><a href="#security-culture" id="toc-security-culture">Security Culture</a></li>
+  <li><a href="#security-awareness-and-training" id="toc-security-awareness-and-training" class="nav-link" data-scroll-target="#security-awareness-and-training">Security Awareness and Training</a>
+  <ul class="collapse">
+  <li><a href="#security-awareness-program" id="toc-security-awareness-program" class="nav-link" data-scroll-target="#security-awareness-program">Security Awareness Program</a></li>
+  <li><a href="#security-culture" id="toc-security-culture" class="nav-link" data-scroll-target="#security-culture">Security Culture</a></li>
   </ul></li>
-  <li><a href="#conclusion" id="toc-conclusion">Conclusion</a></li>
-  <li><a href="#references-and-resources" id="toc-references-and-resources">References and Resources</a></li>
-  </ul></li>
+  <li><a href="#references-and-resources" id="toc-references-and-resources" class="nav-link" data-scroll-target="#references-and-resources">References and Resources</a></li>
   </ul>
 </nav>
-<section id="security-implementation-guide" class="level1">
-<h1>Security Implementation Guide</h1>
-<section id="introduction" class="level2">
-<h2 data-anchor-id="introduction">Introduction</h2>
-<p>This guide provides a comprehensive approach to implementing robust security practices in your organization. It covers everything from risk assessment and governance to technical controls and incident response.</p>
-</section>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Security Implementation Guide</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">security</div>
+    <div class="quarto-category">implementation</div>
+    <div class="quarto-category">best-practices</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    A comprehensive guide to implementing robust security practices in your organization
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 1, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="m">
+
+<div class="m-hero">
+  <div class="container">
+    <h1>Security <span class="gr">Implementation</span> Guide</h1>
+    <p>A comprehensive approach to implementing robust security practices in your organization.</p>
+  </div>
+</div>
+
+<div class="m-bg m-bg-stripes">
+  <div class="container">
+    <h2 class="anchored">What This Guide Covers</h2>
+    <p class="sub">End-to-end security from governance to incident response.</p>
+    <div class="row g-5">
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-building"></i><h3 class="anchored">Security Governance</h3><p>Establish programs, policies, and leadership structures.</p></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-exclamation-triangle"></i><h3 class="anchored">Risk Management</h3><p>Identify, assess, and treat risks systematically.</p></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-person-lock"></i><h3 class="anchored">Identity &amp; Access</h3><p>Least privilege, MFA, and privileged access management.</p></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-hdd-network"></i><h3 class="anchored">Network Security</h3><p>Segmentation, defense in depth, and monitoring.</p></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-database-lock"></i><h3 class="anchored">Data Security</h3><p>Classification, encryption, and lifecycle protection.</p></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-bell"></i><h3 class="anchored">Incident Response</h3><p>Preparation, detection, containment, and recovery.</p></div></div>
+    </div>
+  </div>
+</div>
+
+</div>
 <section id="security-governance" class="level2">
-<h2 data-anchor-id="security-governance">Security Governance</h2>
+<h2 class="anchored" data-anchor-id="security-governance">Security Governance</h2>
 <section id="establishing-a-security-program" class="level3">
-<h3 data-anchor-id="establishing-a-security-program">Establishing a Security Program</h3>
+<h3 class="anchored" data-anchor-id="establishing-a-security-program">Establishing a Security Program</h3>
 <p>An effective security program requires executive sponsorship, clear governance structures, and defined roles and responsibilities. Key elements include:</p>
 <ul>
 <li><strong>Security Steering Committee</strong>: Cross-functional leadership team that provides oversight</li>
@@ -662,7 +706,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="security-policies" class="level3">
-<h3 data-anchor-id="security-policies">Security Policies</h3>
+<h3 class="anchored" data-anchor-id="security-policies">Security Policies</h3>
 <p>Develop and implement the following key security policies:</p>
 <ol type="1">
 <li><strong>Information Security Policy</strong>: Overarching policy defining security principles</li>
@@ -675,10 +719,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="risk-assessment-and-management" class="level2">
-<h2 data-anchor-id="risk-assessment-and-management">Risk Assessment and Management</h2>
+<h2 class="anchored" data-anchor-id="risk-assessment-and-management">Risk Assessment and Management</h2>
 <section id="risk-assessment-process" class="level3">
-<h3 data-anchor-id="risk-assessment-process">Risk Assessment Process</h3>
-<p>Implement a structured risk assessment process:</p>
+<h3 class="anchored" data-anchor-id="risk-assessment-process">Risk Assessment Process</h3>
 <ol type="1">
 <li><strong>Asset Identification</strong>: Catalog critical systems, applications, and data</li>
 <li><strong>Threat Identification</strong>: Identify potential threats to assets</li>
@@ -689,7 +732,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ol>
 </section>
 <section id="risk-register" class="level3">
-<h3 data-anchor-id="risk-register">Risk Register</h3>
+<h3 class="anchored" data-anchor-id="risk-register">Risk Register</h3>
 <p>Maintain a risk register documenting:</p>
 <ul>
 <li>Risk ID and description</li>
@@ -704,10 +747,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="identity-and-access-management" class="level2">
-<h2 data-anchor-id="identity-and-access-management">Identity and Access Management</h2>
+<h2 class="anchored" data-anchor-id="identity-and-access-management">Identity and Access Management</h2>
 <section id="access-control-principles" class="level3">
-<h3 data-anchor-id="access-control-principles">Access Control Principles</h3>
-<p>Implement these fundamental access control principles:</p>
+<h3 class="anchored" data-anchor-id="access-control-principles">Access Control Principles</h3>
 <ul>
 <li><strong>Least Privilege</strong>: Grant minimum access needed for job functions</li>
 <li><strong>Separation of Duties</strong>: Divide critical functions among multiple people</li>
@@ -716,7 +758,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="iam-implementation-steps" class="level3">
-<h3 data-anchor-id="iam-implementation-steps">IAM Implementation Steps</h3>
+<h3 class="anchored" data-anchor-id="iam-implementation-steps">IAM Implementation Steps</h3>
 <ol type="1">
 <li><strong>Identity Lifecycle Management</strong>: Define processes for onboarding, changes, and offboarding</li>
 <li><strong>Role-Based Access Control</strong>: Create role templates for common job functions</li>
@@ -728,10 +770,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="network-security" class="level2">
-<h2 data-anchor-id="network-security">Network Security</h2>
+<h2 class="anchored" data-anchor-id="network-security">Network Security</h2>
 <section id="network-architecture" class="level3">
-<h3 data-anchor-id="network-architecture">Network Architecture</h3>
-<p>Design a secure network architecture:</p>
+<h3 class="anchored" data-anchor-id="network-architecture">Network Architecture</h3>
 <ol type="1">
 <li><strong>Network Segmentation</strong>: Divide network into security zones</li>
 <li><strong>Defense in Depth</strong>: Implement multiple layers of security controls</li>
@@ -741,8 +782,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ol>
 </section>
 <section id="network-security-controls" class="level3">
-<h3 data-anchor-id="network-security-controls">Network Security Controls</h3>
-<p>Implement these network security measures:</p>
+<h3 class="anchored" data-anchor-id="network-security-controls">Network Security Controls</h3>
 <ul>
 <li><strong>Next-Generation Firewalls</strong>: Application-aware filtering and inspection</li>
 <li><strong>Network Monitoring</strong>: Continuous monitoring for anomalous traffic</li>
@@ -753,10 +793,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="endpoint-security" class="level2">
-<h2 data-anchor-id="endpoint-security">Endpoint Security</h2>
+<h2 class="anchored" data-anchor-id="endpoint-security">Endpoint Security</h2>
 <section id="endpoint-protection-strategy" class="level3">
-<h3 data-anchor-id="endpoint-protection-strategy">Endpoint Protection Strategy</h3>
-<p>Develop a comprehensive endpoint protection strategy:</p>
+<h3 class="anchored" data-anchor-id="endpoint-protection-strategy">Endpoint Protection Strategy</h3>
 <ol type="1">
 <li><strong>Endpoint Protection Platform</strong>: Anti-malware, host firewall, device control</li>
 <li><strong>Endpoint Detection and Response</strong>: Advanced threat detection and response</li>
@@ -767,8 +806,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ol>
 </section>
 <section id="secure-configuration" class="level3">
-<h3 data-anchor-id="secure-configuration">Secure Configuration</h3>
-<p>Implement secure baseline configurations:</p>
+<h3 class="anchored" data-anchor-id="secure-configuration">Secure Configuration</h3>
 <ul>
 <li><strong>Operating System Hardening</strong>: Remove unnecessary services and applications</li>
 <li><strong>Security Settings</strong>: Apply secure configuration templates (CIS Benchmarks)</li>
@@ -779,10 +817,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="cloud-security" class="level2">
-<h2 data-anchor-id="cloud-security">Cloud Security</h2>
+<h2 class="anchored" data-anchor-id="cloud-security">Cloud Security</h2>
 <section id="cloud-security-framework" class="level3">
-<h3 data-anchor-id="cloud-security-framework">Cloud Security Framework</h3>
-<p>Develop a cloud security framework addressing:</p>
+<h3 class="anchored" data-anchor-id="cloud-security-framework">Cloud Security Framework</h3>
 <ol type="1">
 <li><strong>Shared Responsibility</strong>: Understand provider versus customer responsibilities</li>
 <li><strong>Identity and Access</strong>: Secure cloud IAM implementation</li>
@@ -793,8 +830,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ol>
 </section>
 <section id="cloud-security-implementation" class="level3">
-<h3 data-anchor-id="cloud-security-implementation">Cloud Security Implementation</h3>
-<p>For each cloud platform, implement:</p>
+<h3 class="anchored" data-anchor-id="cloud-security-implementation">Cloud Security Implementation</h3>
 <ul>
 <li><strong>Identity Federation</strong>: Integrate with enterprise identity systems</li>
 <li><strong>Privileged Access Management</strong>: Secure administrative access</li>
@@ -806,10 +842,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="application-security" class="level2">
-<h2 data-anchor-id="application-security">Application Security</h2>
+<h2 class="anchored" data-anchor-id="application-security">Application Security</h2>
 <section id="secure-development-lifecycle" class="level3">
-<h3 data-anchor-id="secure-development-lifecycle">Secure Development Lifecycle</h3>
-<p>Implement security throughout the development lifecycle:</p>
+<h3 class="anchored" data-anchor-id="secure-development-lifecycle">Secure Development Lifecycle</h3>
 <ol type="1">
 <li><strong>Security Requirements</strong>: Define security requirements early</li>
 <li><strong>Threat Modeling</strong>: Identify potential threats during design</li>
@@ -820,8 +855,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ol>
 </section>
 <section id="application-security-controls" class="level3">
-<h3 data-anchor-id="application-security-controls">Application Security Controls</h3>
-<p>Implement these application security controls:</p>
+<h3 class="anchored" data-anchor-id="application-security-controls">Application Security Controls</h3>
 <ul>
 <li><strong>Input Validation</strong>: Validate all user input</li>
 <li><strong>Output Encoding</strong>: Encode output to prevent injection attacks</li>
@@ -835,10 +869,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="data-security" class="level2">
-<h2 data-anchor-id="data-security">Data Security</h2>
+<h2 class="anchored" data-anchor-id="data-security">Data Security</h2>
 <section id="data-protection-strategy" class="level3">
-<h3 data-anchor-id="data-protection-strategy">Data Protection Strategy</h3>
-<p>Develop a comprehensive data protection strategy:</p>
+<h3 class="anchored" data-anchor-id="data-protection-strategy">Data Protection Strategy</h3>
 <ol type="1">
 <li><strong>Data Classification</strong>: Categorize data based on sensitivity</li>
 <li><strong>Data Inventory</strong>: Maintain inventory of sensitive data locations</li>
@@ -848,8 +881,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ol>
 </section>
 <section id="data-security-implementation" class="level3">
-<h3 data-anchor-id="data-security-implementation">Data Security Implementation</h3>
-<p>Implement these data security measures:</p>
+<h3 class="anchored" data-anchor-id="data-security-implementation">Data Security Implementation</h3>
 <ul>
 <li><strong>Encryption</strong>: Protect data in transit and at rest</li>
 <li><strong>Database Security</strong>: Secure database configurations and access controls</li>
@@ -861,10 +893,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="security-monitoring-and-operations" class="level2">
-<h2 data-anchor-id="security-monitoring-and-operations">Security Monitoring and Operations</h2>
+<h2 class="anchored" data-anchor-id="security-monitoring-and-operations">Security Monitoring and Operations</h2>
 <section id="security-operations-center" class="level3">
-<h3 data-anchor-id="security-operations-center">Security Operations Center</h3>
-<p>Establish a Security Operations Center with these capabilities:</p>
+<h3 class="anchored" data-anchor-id="security-operations-center">Security Operations Center</h3>
 <ol type="1">
 <li><strong>Log Collection</strong>: Centralized collection of security logs</li>
 <li><strong>Security Monitoring</strong>: Real-time analysis of security events</li>
@@ -875,8 +906,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ol>
 </section>
 <section id="security-monitoring-implementation" class="level3">
-<h3 data-anchor-id="security-monitoring-implementation">Security Monitoring Implementation</h3>
-<p>Implement these security monitoring components:</p>
+<h3 class="anchored" data-anchor-id="security-monitoring-implementation">Security Monitoring Implementation</h3>
 <ul>
 <li><strong>Security Information and Event Management (SIEM)</strong>: Centralized log management and correlation</li>
 <li><strong>Network Traffic Analysis</strong>: Monitoring network traffic for threats</li>
@@ -888,10 +918,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="incident-response" class="level2">
-<h2 data-anchor-id="incident-response">Incident Response</h2>
+<h2 class="anchored" data-anchor-id="incident-response">Incident Response</h2>
 <section id="incident-response-plan" class="level3">
-<h3 data-anchor-id="incident-response-plan">Incident Response Plan</h3>
-<p>Develop an incident response plan covering:</p>
+<h3 class="anchored" data-anchor-id="incident-response-plan">Incident Response Plan</h3>
 <ol type="1">
 <li><strong>Preparation</strong>: Resources, tools, and training</li>
 <li><strong>Identification</strong>: Detection and initial assessment</li>
@@ -902,8 +931,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ol>
 </section>
 <section id="incident-response-capabilities" class="level3">
-<h3 data-anchor-id="incident-response-capabilities">Incident Response Capabilities</h3>
-<p>Build these incident response capabilities:</p>
+<h3 class="anchored" data-anchor-id="incident-response-capabilities">Incident Response Capabilities</h3>
 <ul>
 <li><strong>Incident Response Team</strong>: Skilled personnel with defined roles</li>
 <li><strong>Incident Response Procedures</strong>: Documented procedures for different incident types</li>
@@ -915,10 +943,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="security-awareness-and-training" class="level2">
-<h2 data-anchor-id="security-awareness-and-training">Security Awareness and Training</h2>
+<h2 class="anchored" data-anchor-id="security-awareness-and-training">Security Awareness and Training</h2>
 <section id="security-awareness-program" class="level3">
-<h3 data-anchor-id="security-awareness-program">Security Awareness Program</h3>
-<p>Establish a comprehensive security awareness program:</p>
+<h3 class="anchored" data-anchor-id="security-awareness-program">Security Awareness Program</h3>
 <ol type="1">
 <li><strong>Baseline Assessment</strong>: Evaluate current security awareness levels</li>
 <li><strong>Training Curriculum</strong>: Develop role-based security training</li>
@@ -929,8 +956,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ol>
 </section>
 <section id="security-culture" class="level3">
-<h3 data-anchor-id="security-culture">Security Culture</h3>
-<p>Foster a positive security culture through:</p>
+<h3 class="anchored" data-anchor-id="security-culture">Security Culture</h3>
 <ul>
 <li><strong>Leadership Support</strong>: Visible commitment from leadership</li>
 <li><strong>Clear Expectations</strong>: Defined security responsibilities</li>
@@ -941,13 +967,8 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 </section>
-<section id="conclusion" class="level2">
-<h2 data-anchor-id="conclusion">Conclusion</h2>
-<p>Implementing a robust security program is a continuous journey. Begin with a risk-based approach, focusing on the most critical assets and significant risks. Build a solid foundation with governance structures, basic controls, and security awareness. Gradually enhance security capabilities over time, prioritizing improvements based on evolving threats and business needs.</p>
-<p>Remember that security is not solely a technical challenge—it requires alignment with business objectives, executive support, and a positive security culture. By taking a comprehensive and balanced approach, organizations can effectively manage security risks while enabling business growth and innovation.</p>
-</section>
 <section id="references-and-resources" class="level2">
-<h2 data-anchor-id="references-and-resources">References and Resources</h2>
+<h2 class="anchored" data-anchor-id="references-and-resources">References and Resources</h2>
 <ul>
 <li>NIST Cybersecurity Framework</li>
 <li>ISO/IEC 27001 Information Security Management</li>
@@ -955,12 +976,26 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>OWASP Application Security Verification Standard</li>
 <li>Cloud Security Alliance Cloud Controls Matrix</li>
 </ul>
+<div class="m">
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2 class="anchored">Need help implementing security?</h2>
+    <p>Our team can help you build a security program tailored to your organization.</p>
+    <a href="https://cal.com/chenist" target="_blank" class="m-b">Book a free consultation</a>
+    <div class="m-sm">
+      <i class="bi bi-check-circle-fill"></i> Free &nbsp;
+      <i class="bi bi-check-circle-fill"></i> 30 min &nbsp;
+      <i class="bi bi-check-circle-fill"></i> No commitment
+    </div>
+  </div>
+</div>
+</div>
 
 
 </section>
-</section>
 
-
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1454,6 +1489,82 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
   document.querySelectorAll('.m-s, .m-bg, .m-cta, .m-r, .m-n, .hp-sec, .hp-stats, .ev-card, .ev-past, .m-t').forEach(el => observer.observe(el));
+
+  // Breadcrumb + Language bar
+  (function() {
+    var path = window.location.pathname;
+    var currentLang = 'en';
+    var cleanPath = path;
+
+    if (path.match(/^\/(ro|de|sv)\//)) {
+      currentLang = path.split('/')[1];
+      cleanPath = path.replace(/^\/(ro|de|sv)/, '');
+    }
+
+    var parts = cleanPath.split('/').filter(function(p) { return p && p !== 'index.html'; });
+
+    var bar = document.createElement('div');
+    bar.className = 'path-bar';
+    var inner = document.createElement('div');
+    inner.className = 'path-bar-inner';
+
+    // Breadcrumbs
+    var crumbs = document.createElement('div');
+    crumbs.className = 'path-crumbs';
+    var homeLink = document.createElement('a');
+    homeLink.href = currentLang === 'en' ? '/' : '/' + currentLang + '/';
+    homeLink.textContent = 'Home';
+    crumbs.appendChild(homeLink);
+
+    var accumulated = currentLang === 'en' ? '' : '/' + currentLang;
+    for (var i = 0; i < parts.length; i++) {
+      var sep = document.createElement('span');
+      sep.className = 'sep';
+      sep.textContent = ' \u203A ';
+      crumbs.appendChild(sep);
+      var name = parts[i].replace('.html', '').replace(/-/g, ' ');
+      name = name.charAt(0).toUpperCase() + name.slice(1);
+      accumulated += '/' + parts[i];
+      if (i === parts.length - 1) {
+        var cur = document.createElement('span');
+        cur.className = 'current';
+        cur.textContent = name;
+        crumbs.appendChild(cur);
+      } else {
+        var link = document.createElement('a');
+        link.href = accumulated + '/';
+        link.textContent = name;
+        crumbs.appendChild(link);
+      }
+    }
+
+    // Language buttons
+    var langsDiv = document.createElement('div');
+    langsDiv.className = 'path-langs';
+    var langs = [
+      { code: 'en', label: 'EN', prefix: '' },
+      { code: 'ro', label: 'RO', prefix: '/ro' },
+      { code: 'sv', label: 'SV', prefix: '/sv' },
+      { code: 'de', label: 'DE', prefix: '/de' }
+    ];
+    for (var j = 0; j < langs.length; j++) {
+      var l = langs[j];
+      var a = document.createElement('a');
+      a.href = l.prefix + (cleanPath || '/');
+      a.textContent = l.label;
+      if (l.code === currentLang) a.className = 'active';
+      langsDiv.appendChild(a);
+    }
+
+    inner.appendChild(crumbs);
+    inner.appendChild(langsDiv);
+    bar.appendChild(inner);
+
+    var header = document.getElementById('quarto-header');
+    if (header) {
+      header.appendChild(bar);
+    }
+  })();
 });
 </script>
 <!-- Cal.com floating button -->
@@ -1500,23 +1611,43 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     
-    // Language switcher — rewrites URL to same page in other language
-    document.querySelectorAll('a[href^="#lang-"]').forEach(function(link) {
+    // Language switcher — intercept lang dropdown and rewrite to same page
+    document.querySelectorAll('.dropdown-item').forEach(function(link) {
+      var href = link.getAttribute('href') || '';
+      var isLang = false;
+      var targetLang = '';
+
+      if (href.match(/^\/?index\.html$/) || href === '/' || href.match(/^\.\.\/?index\.html$/)) {
+        isLang = true; targetLang = 'en';
+      } else if (href.match(/\/?ro\//) || href.match(/^\.\.\/ro\//)) {
+        isLang = true; targetLang = 'ro';
+      } else if (href.match(/\/?sv\//) || href.match(/^\.\.\/sv\//)) {
+        isLang = true; targetLang = 'sv';
+      } else if (href.match(/\/?de\//) || href.match(/^\.\.\/de\//)) {
+        isLang = true; targetLang = 'de';
+      }
+
+      var text = (link.textContent || '').trim();
+      if (text === 'English' || text === 'Română' || text === 'Svenska' || text === 'Deutsch') {
+        isLang = true;
+        if (text === 'English') targetLang = 'en';
+        if (text === 'Română') targetLang = 'ro';
+        if (text === 'Svenska') targetLang = 'sv';
+        if (text === 'Deutsch') targetLang = 'de';
+      }
+
+      if (!isLang) return;
+
       link.addEventListener('click', function(e) {
         e.preventDefault();
-        var lang = this.getAttribute('href').replace('#lang-', '');
         var path = window.location.pathname;
-
-        // Strip existing language prefix
         var cleanPath = path.replace(/^\/(ro|de|sv)\//, '/').replace(/^\/(ro|de|sv)$/, '/');
 
-        // Build new URL
         var newPath;
-        if (lang === 'en') {
+        if (targetLang === 'en') {
           newPath = cleanPath;
         } else {
-          var prefix = lang === 'sv' ? '/sv' : '/' + lang;
-          newPath = prefix + (cleanPath === '/' ? '/' : cleanPath);
+          newPath = '/' + (targetLang === 'sv' ? 'sv' : targetLang) + (cleanPath === '/' ? '/' : cleanPath);
         }
 
         window.location.href = newPath;

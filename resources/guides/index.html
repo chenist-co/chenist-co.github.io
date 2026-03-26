@@ -114,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:description" content="Browse technical guides and documentation on security, cloud architecture, and API development from chen.ist’s expert team.">
 <meta name="twitter:image" content="https://chen.ist/resources/guides/assets/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-</head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+</head><body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -468,8 +468,6 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../../assets/css/main.min.css">
-<link rel="stylesheet" href="../../assets/css/styles.css">
-<link rel="stylesheet" href="../../assets/css/modern.css">
 
 
 
@@ -611,19 +609,19 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-">    
         <li>
-    <a class="dropdown-item" href="../../#lang-en">
+    <a class="dropdown-item" href="../../index.html">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../#lang-ro">
+    <a class="dropdown-item" href="../../ro/index.html">
  <span class="dropdown-text">Română</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../#lang-sv">
+    <a class="dropdown-item" href="../../sv/index.html">
  <span class="dropdown-text">Svenska</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../#lang-de">
+    <a class="dropdown-item" href="../../de/index.html">
  <span class="dropdown-text">Deutsch</span></a>
   </li>  
     </ul>
@@ -648,108 +646,47 @@ window.Quarto = {
 
 </header>
 
-<nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#about-our-guides" id="toc-about-our-guides">About Our Guides</a>
-  <ul>
-  <li><a href="#categories" id="toc-categories">Categories</a></li>
-  </ul></li>
-  <li><a href="#featured-guides" id="toc-featured-guides">Featured Guides</a></li>
-  <li><a href="#all-guides" id="toc-all-guides">All Guides</a></li>
-  </ul>
-</nav>
+
+<div class="m">
 
 <div class="m-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-8 offset-md-2 text-center">
-        <h1>Technical <span class="text-green">Guides</span></h1>
-        <p>Comprehensive documentation and how-to guides</p>
-      </div>
+    <h1>Technical <span class="gr">Guides</span></h1>
+    <p>Comprehensive documentation and how-to guides for security, cloud, and API development.</p>
+  </div>
+</div>
+
+<div class="m-bg m-bg-stripes">
+  <div class="container">
+    <h2>Browse by Category</h2>
+    <p class="sub">Deep-dive guides written by practitioners, not marketers.</p>
+    <div class="row g-5">
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-shield-check"></i><h3>Security Guides</h3><p>Best practices, implementation guides, and security frameworks.</p><a href="security/" class="m-lk">Browse Security Guides</a></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-cloud"></i><h3>Cloud Guides</h3><p>Cloud migration, optimization, and management resources.</p><a href="cloud/" class="m-lk">Browse Cloud Guides</a></div></div>
+      <div class="col-md-4"><div class="m-t"><i class="bi bi-code-square"></i><h3>API Documentation</h3><p>API reference, integration guides, and developer resources.</p><a href="api/" class="m-lk">Browse API Docs</a></div></div>
     </div>
   </div>
 </div>
-<section id="about-our-guides" class="level2">
-<h2 data-anchor-id="about-our-guides">About Our Guides</h2>
-<p>Our technical guides provide comprehensive information on implementing, configuring, and optimizing various technologies. They are designed to be practical and actionable, with step-by-step instructions, best practices, and real-world examples.</p>
-<section id="categories" class="level3">
-<h3 data-anchor-id="categories">Categories</h3>
-<div class="row mt-4">
-  <div class="col-md-4">
-    <div class="feature-card">
-      <div class="feature-card-icon">
-        <i class="bi bi-shield-check"></i>
-      </div>
-      <h3>Security Guides</h3>
-      <p>Best practices, implementation guides, and security frameworks.</p>
-      <a href="security/" class="btn btn-outline-primary">Browse Security Guides</a>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="feature-card">
-      <div class="feature-card-icon">
-        <i class="bi bi-cloud"></i>
-      </div>
-      <h3>Cloud Guides</h3>
-      <p>Cloud migration, optimization, and management resources.</p>
-      <a href="cloud/" class="btn btn-outline-primary">Browse Cloud Guides</a>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="feature-card">
-      <div class="feature-card-icon">
-        <i class="bi bi-code-square"></i>
-      </div>
-      <h3>API Documentation</h3>
-      <p>API reference, integration guides, and developer resources.</p>
-      <a href="api/" class="btn btn-outline-primary">Browse API Docs</a>
+
+<div class="m-s">
+  <div class="container">
+    <h2>Featured Guides</h2>
+    <p class="sub">Our most popular and comprehensive resources.</p>
+    <div class="row g-5">
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-shield-lock"></i><h3>Security Implementation Guide</h3><p>A comprehensive guide to implementing robust security practices in your organization, covering everything from risk assessment to incident response.</p><span class="m-tag">Security</span> <span class="m-tag">25 min read</span><br><a href="security/implementation-guide.html" class="m-lk">Read Guide</a></div></div>
+      <div class="col-md-6"><div class="m-t"><i class="bi bi-cloud-arrow-up"></i><h3>Cloud Migration Handbook</h3><p>A step-by-step guide to migrating your applications and infrastructure to the cloud, with strategies for minimizing downtime and optimizing costs.</p><span class="m-tag">Cloud</span> <span class="m-tag">30 min read</span><br><a href="cloud/migration-handbook.html" class="m-lk">Read Guide</a></div></div>
     </div>
   </div>
 </div>
-</section>
-</section>
-<section id="featured-guides" class="level2">
-<h2 data-anchor-id="featured-guides">Featured Guides</h2>
-<div class="row mt-5">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header">
-        <h3 class="card-title mb-0">Security Implementation Guide</h3>
-      </div>
-      <div class="card-body">
-        <p>A comprehensive guide to implementing robust security practices in your organization, covering everything from risk assessment to incident response.</p>
-        <div class="d-flex justify-content-between align-items-center">
-          <span class="badge bg-primary">Security</span>
-          <span><i class="bi bi-clock"></i> 25 min read</span>
-        </div>
-      </div>
-      <div class="card-footer">
-        <a href="security/implementation-guide.html" class="btn btn-primary">Read Guide</a>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header">
-        <h3 class="card-title mb-0">Cloud Migration Handbook</h3>
-      </div>
-      <div class="card-body">
-        <p>A step-by-step guide to migrating your applications and infrastructure to the cloud, with strategies for minimizing downtime and optimizing costs.</p>
-        <div class="d-flex justify-content-between align-items-center">
-          <span class="badge bg-primary">Cloud</span>
-          <span><i class="bi bi-clock"></i> 30 min read</span>
-        </div>
-      </div>
-      <div class="card-footer">
-        <a href="cloud/migration-handbook.html" class="btn btn-primary">Read Guide</a>
-      </div>
-    </div>
+
+<div class="m-bg m-bg-stripes">
+  <div class="container">
+    <h2>All Guides</h2>
+    <p class="sub">Browse our complete collection of technical guides.</p>
   </div>
 </div>
-</section>
+
+</div>
 <section id="all-guides" class="level2">
 <h2 data-anchor-id="all-guides">All Guides</h2>
 <p>Browse our complete collection of technical guides:</p>
@@ -1230,7 +1167,7 @@ Reading Time
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-categories="c2VjdXJpdHklMkNpbXBsZW1lbnRhdGlvbiUyQ2Jlc3QtcHJhY3RpY2Vz" data-listing-date-sort="1740787200000" data-listing-file-modified-sort="1774510980378" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1279" data-listing-title-sort="Security Implementation Guide" data-listing-filename-sort="implementation-guide.qmd">
+<tr data-index="0" data-categories="c2VjdXJpdHklMkNpbXBsZW1lbnRhdGlvbiUyQ2Jlc3QtcHJhY3RpY2Vz" data-listing-date-sort="1740787200000" data-listing-file-modified-sort="1774515535582" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1327" data-listing-title-sort="Security Implementation Guide" data-listing-filename-sort="implementation-guide.qmd">
 <td>
 <a href="../../resources/guides/security/implementation-guide.html" class="title listing-title">Security Implementation Guide</a>
 </td>
@@ -1249,7 +1186,7 @@ Reading Time
 
 </tr>
 
-<tr data-index="1" data-categories="Y2xvdWQlMkNtaWdyYXRpb24lMkNpbmZyYXN0cnVjdHVyZQ==" data-listing-date-sort="1739577600000" data-listing-file-modified-sort="1774510980378" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1399" data-listing-title-sort="Cloud Migration Handbook" data-listing-filename-sort="migration-handbook.qmd">
+<tr data-index="1" data-categories="Y2xvdWQlMkNtaWdyYXRpb24lMkNpbmZyYXN0cnVjdHVyZQ==" data-listing-date-sort="1739577600000" data-listing-file-modified-sort="1774515535582" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1235" data-listing-title-sort="Cloud Migration Handbook" data-listing-filename-sort="migration-handbook.qmd">
 <td>
 <a href="../../resources/guides/cloud/migration-handbook.html" class="title listing-title">Cloud Migration Handbook</a>
 </td>
@@ -1268,7 +1205,7 @@ Reading Time
 
 </tr>
 
-<tr data-index="2" data-categories="YXBpJTJDZG9jdW1lbnRhdGlvbiUyQ2RldmVsb3BtZW50" data-listing-date-sort="1737331200000" data-listing-file-modified-sort="1774510980378" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2545" data-listing-title-sort="API Endpoints Guide" data-listing-filename-sort="endpoints.qmd">
+<tr data-index="2" data-categories="YXBpJTJDZG9jdW1lbnRhdGlvbiUyQ2RldmVsb3BtZW50" data-listing-date-sort="1737331200000" data-listing-file-modified-sort="1774515535582" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2092" data-listing-title-sort="API Endpoints Guide" data-listing-filename-sort="endpoints.qmd">
 <td>
 <a href="../../resources/guides/api/endpoints.html" class="title listing-title">API Endpoints Guide</a>
 </td>
@@ -1282,7 +1219,7 @@ Reading Time
 <span class="listing-categories">api, documentation, development</span>
 </td>
 <td>
-<span class="listing-reading-time">13 min</span>
+<span class="listing-reading-time">11 min</span>
 </td>
 
 </tr>
@@ -1363,6 +1300,82 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
   document.querySelectorAll('.m-s, .m-bg, .m-cta, .m-r, .m-n, .hp-sec, .hp-stats, .ev-card, .ev-past, .m-t').forEach(el => observer.observe(el));
+
+  // Breadcrumb + Language bar
+  (function() {
+    var path = window.location.pathname;
+    var currentLang = 'en';
+    var cleanPath = path;
+
+    if (path.match(/^\/(ro|de|sv)\//)) {
+      currentLang = path.split('/')[1];
+      cleanPath = path.replace(/^\/(ro|de|sv)/, '');
+    }
+
+    var parts = cleanPath.split('/').filter(function(p) { return p && p !== 'index.html'; });
+
+    var bar = document.createElement('div');
+    bar.className = 'path-bar';
+    var inner = document.createElement('div');
+    inner.className = 'path-bar-inner';
+
+    // Breadcrumbs
+    var crumbs = document.createElement('div');
+    crumbs.className = 'path-crumbs';
+    var homeLink = document.createElement('a');
+    homeLink.href = currentLang === 'en' ? '/' : '/' + currentLang + '/';
+    homeLink.textContent = 'Home';
+    crumbs.appendChild(homeLink);
+
+    var accumulated = currentLang === 'en' ? '' : '/' + currentLang;
+    for (var i = 0; i < parts.length; i++) {
+      var sep = document.createElement('span');
+      sep.className = 'sep';
+      sep.textContent = ' \u203A ';
+      crumbs.appendChild(sep);
+      var name = parts[i].replace('.html', '').replace(/-/g, ' ');
+      name = name.charAt(0).toUpperCase() + name.slice(1);
+      accumulated += '/' + parts[i];
+      if (i === parts.length - 1) {
+        var cur = document.createElement('span');
+        cur.className = 'current';
+        cur.textContent = name;
+        crumbs.appendChild(cur);
+      } else {
+        var link = document.createElement('a');
+        link.href = accumulated + '/';
+        link.textContent = name;
+        crumbs.appendChild(link);
+      }
+    }
+
+    // Language buttons
+    var langsDiv = document.createElement('div');
+    langsDiv.className = 'path-langs';
+    var langs = [
+      { code: 'en', label: 'EN', prefix: '' },
+      { code: 'ro', label: 'RO', prefix: '/ro' },
+      { code: 'sv', label: 'SV', prefix: '/sv' },
+      { code: 'de', label: 'DE', prefix: '/de' }
+    ];
+    for (var j = 0; j < langs.length; j++) {
+      var l = langs[j];
+      var a = document.createElement('a');
+      a.href = l.prefix + (cleanPath || '/');
+      a.textContent = l.label;
+      if (l.code === currentLang) a.className = 'active';
+      langsDiv.appendChild(a);
+    }
+
+    inner.appendChild(crumbs);
+    inner.appendChild(langsDiv);
+    bar.appendChild(inner);
+
+    var header = document.getElementById('quarto-header');
+    if (header) {
+      header.appendChild(bar);
+    }
+  })();
 });
 </script>
 <!-- Cal.com floating button -->
@@ -1409,23 +1422,43 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     
-    // Language switcher — rewrites URL to same page in other language
-    document.querySelectorAll('a[href^="#lang-"]').forEach(function(link) {
+    // Language switcher — intercept lang dropdown and rewrite to same page
+    document.querySelectorAll('.dropdown-item').forEach(function(link) {
+      var href = link.getAttribute('href') || '';
+      var isLang = false;
+      var targetLang = '';
+
+      if (href.match(/^\/?index\.html$/) || href === '/' || href.match(/^\.\.\/?index\.html$/)) {
+        isLang = true; targetLang = 'en';
+      } else if (href.match(/\/?ro\//) || href.match(/^\.\.\/ro\//)) {
+        isLang = true; targetLang = 'ro';
+      } else if (href.match(/\/?sv\//) || href.match(/^\.\.\/sv\//)) {
+        isLang = true; targetLang = 'sv';
+      } else if (href.match(/\/?de\//) || href.match(/^\.\.\/de\//)) {
+        isLang = true; targetLang = 'de';
+      }
+
+      var text = (link.textContent || '').trim();
+      if (text === 'English' || text === 'Română' || text === 'Svenska' || text === 'Deutsch') {
+        isLang = true;
+        if (text === 'English') targetLang = 'en';
+        if (text === 'Română') targetLang = 'ro';
+        if (text === 'Svenska') targetLang = 'sv';
+        if (text === 'Deutsch') targetLang = 'de';
+      }
+
+      if (!isLang) return;
+
       link.addEventListener('click', function(e) {
         e.preventDefault();
-        var lang = this.getAttribute('href').replace('#lang-', '');
         var path = window.location.pathname;
-
-        // Strip existing language prefix
         var cleanPath = path.replace(/^\/(ro|de|sv)\//, '/').replace(/^\/(ro|de|sv)$/, '/');
 
-        // Build new URL
         var newPath;
-        if (lang === 'en') {
+        if (targetLang === 'en') {
           newPath = cleanPath;
         } else {
-          var prefix = lang === 'sv' ? '/sv' : '/' + lang;
-          newPath = prefix + (cleanPath === '/' ? '/' : cleanPath);
+          newPath = '/' + (targetLang === 'sv' ? 'sv' : targetLang) + (cleanPath === '/' ? '/' : cleanPath);
         }
 
         window.location.href = newPath;

@@ -46,9 +46,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-b37f6c1b9a99d16252d3ddd2c7074628.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-73406dad87c631b3ff16adcaa0b1ab21.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-d670e99d9fdfed706f1502bc605e1805.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-73406dad87c631b3ff16adcaa0b1ab21.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -396,8 +396,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <link rel="stylesheet" href="../../assets/css/main.min.css">
-<link rel="stylesheet" href="../../assets/css/styles.css">
-<link rel="stylesheet" href="../../assets/css/modern.css">
 
 
 
@@ -539,19 +537,19 @@ document.addEventListener('DOMContentLoaded', function() {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-">    
         <li>
-    <a class="dropdown-item" href="../../#lang-en">
+    <a class="dropdown-item" href="../../index.html">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../#lang-ro">
+    <a class="dropdown-item" href="../../ro/index.html">
  <span class="dropdown-text">Română</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../#lang-sv">
+    <a class="dropdown-item" href="../../sv/index.html">
  <span class="dropdown-text">Svenska</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../#lang-de">
+    <a class="dropdown-item" href="../../de/index.html">
  <span class="dropdown-text">Deutsch</span></a>
   </li>  
     </ul>
@@ -565,91 +563,128 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-<!-- main -->
-
-
-<header id="title-block-header">
-<h1 class="title display-7">Infrastructură Open-Source pentru IMM-uri: Un ghid practic</h1>
-<p class="author">CHENIST Team</p>
-
-<p class="date">2026-03-20</p>
-</header>
-
-<nav id="TOC" role="doc-toc">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#de-ce-open-source-are-sens-pentru-imm-uri" id="toc-de-ce-open-source-are-sens-pentru-imm-uri">De ce Open Source are sens pentru IMM-uri</a></li>
-  <li><a href="#productivitate-și-colaborare" id="toc-productivitate-și-colaborare">Productivitate și colaborare</a>
-  <ul>
-  <li><a href="#editare-de-documente-și-instrumente-de-birou" id="toc-editare-de-documente-și-instrumente-de-birou">Editare de documente și instrumente de birou</a></li>
-  <li><a href="#stocare-și-sincronizare-de-fișiere" id="toc-stocare-și-sincronizare-de-fișiere">Stocare și sincronizare de fișiere</a></li>
+  <li><a href="#de-ce-open-source-are-sens-pentru-imm-uri" id="toc-de-ce-open-source-are-sens-pentru-imm-uri" class="nav-link active" data-scroll-target="#de-ce-open-source-are-sens-pentru-imm-uri">De ce Open Source are sens pentru IMM-uri</a></li>
+  <li><a href="#productivitate-și-colaborare" id="toc-productivitate-și-colaborare" class="nav-link" data-scroll-target="#productivitate-și-colaborare">Productivitate și colaborare</a>
+  <ul class="collapse">
+  <li><a href="#editare-de-documente-și-instrumente-de-birou" id="toc-editare-de-documente-și-instrumente-de-birou" class="nav-link" data-scroll-target="#editare-de-documente-și-instrumente-de-birou">Editare de documente și instrumente de birou</a></li>
+  <li><a href="#stocare-și-sincronizare-de-fișiere" id="toc-stocare-și-sincronizare-de-fișiere" class="nav-link" data-scroll-target="#stocare-și-sincronizare-de-fișiere">Stocare și sincronizare de fișiere</a></li>
   </ul></li>
-  <li><a href="#comunicare" id="toc-comunicare">Comunicare</a>
-  <ul>
-  <li><a href="#mesagerie-și-chat" id="toc-mesagerie-și-chat">Mesagerie și chat</a></li>
-  <li><a href="#videoconferințe" id="toc-videoconferințe">Videoconferințe</a></li>
+  <li><a href="#comunicare" id="toc-comunicare" class="nav-link" data-scroll-target="#comunicare">Comunicare</a>
+  <ul class="collapse">
+  <li><a href="#mesagerie-și-chat" id="toc-mesagerie-și-chat" class="nav-link" data-scroll-target="#mesagerie-și-chat">Mesagerie și chat</a></li>
+  <li><a href="#videoconferințe" id="toc-videoconferințe" class="nav-link" data-scroll-target="#videoconferințe">Videoconferințe</a></li>
   </ul></li>
-  <li><a href="#identitate-și-single-sign-on" id="toc-identitate-și-single-sign-on">Identitate și Single Sign-On</a>
-  <ul>
-  <li><a href="#autentificare-centralizată" id="toc-autentificare-centralizată">Autentificare centralizată</a></li>
+  <li><a href="#identitate-și-single-sign-on" id="toc-identitate-și-single-sign-on" class="nav-link" data-scroll-target="#identitate-și-single-sign-on">Identitate și Single Sign-On</a>
+  <ul class="collapse">
+  <li><a href="#autentificare-centralizată" id="toc-autentificare-centralizată" class="nav-link" data-scroll-target="#autentificare-centralizată">Autentificare centralizată</a></li>
   </ul></li>
-  <li><a href="#monitorizare-și-observabilitate" id="toc-monitorizare-și-observabilitate">Monitorizare și observabilitate</a></li>
-  <li><a href="#fundamente-unix" id="toc-fundamente-unix">Fundamente UNIX</a>
-  <ul>
-  <li><a href="#distribuții-linux" id="toc-distribuții-linux">Distribuții Linux</a></li>
-  <li><a href="#sisteme-bsd" id="toc-sisteme-bsd">Sisteme BSD</a></li>
+  <li><a href="#monitorizare-și-observabilitate" id="toc-monitorizare-și-observabilitate" class="nav-link" data-scroll-target="#monitorizare-și-observabilitate">Monitorizare și observabilitate</a></li>
+  <li><a href="#fundamente-unix" id="toc-fundamente-unix" class="nav-link" data-scroll-target="#fundamente-unix">Fundamente UNIX</a>
+  <ul class="collapse">
+  <li><a href="#distribuții-linux" id="toc-distribuții-linux" class="nav-link" data-scroll-target="#distribuții-linux">Distribuții Linux</a></li>
+  <li><a href="#sisteme-bsd" id="toc-sisteme-bsd" class="nav-link" data-scroll-target="#sisteme-bsd">Sisteme BSD</a></li>
   </ul></li>
-  <li><a href="#exemple-de-implementare-din-lumea-reală" id="toc-exemple-de-implementare-din-lumea-reală">Exemple de implementare din lumea reală</a></li>
-  <li><a href="#răspunsuri-la-preocupări-frecvente" id="toc-răspunsuri-la-preocupări-frecvente">Răspunsuri la preocupări frecvente</a></li>
-  <li><a href="#primii-pași" id="toc-primii-pași">Primii pași</a>
-  <ul>
-  <li><a href="#sunteți-gata-să-explorați-infrastructura-open-source" id="toc-sunteți-gata-să-explorați-infrastructura-open-source">Sunteți gata să explorați infrastructura open-source?</a></li>
+  <li><a href="#exemple-de-implementare-din-lumea-reală" id="toc-exemple-de-implementare-din-lumea-reală" class="nav-link" data-scroll-target="#exemple-de-implementare-din-lumea-reală">Exemple de implementare din lumea reală</a></li>
+  <li><a href="#răspunsuri-la-preocupări-frecvente" id="toc-răspunsuri-la-preocupări-frecvente" class="nav-link" data-scroll-target="#răspunsuri-la-preocupări-frecvente">Răspunsuri la preocupări frecvente</a></li>
+  <li><a href="#primii-pași" id="toc-primii-pași" class="nav-link" data-scroll-target="#primii-pași">Primii pași</a>
+  <ul class="collapse">
+  <li><a href="#sunteți-gata-să-explorați-infrastructura-open-source" id="toc-sunteți-gata-să-explorați-infrastructura-open-source" class="nav-link" data-scroll-target="#sunteți-gata-să-explorați-infrastructura-open-source">Sunteți gata să explorați infrastructura open-source?</a></li>
   </ul></li>
   </ul>
 </nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Infrastructură Open-Source pentru IMM-uri: Un ghid practic</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Open Source</div>
+    <div class="quarto-category">Digital Infrastructure</div>
+    <div class="quarto-category">SMB</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Un ghid practic pentru construirea infrastructurii IMM-urilor cu instrumente open-source — de la productivitate și comunicare la identitate, monitorizare și fundamente UNIX.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>CHENIST Team </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 20, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 <div class="text-center mb-4">
   <img loading="lazy" src="../../assets/images/stock/code-screen.webp" alt="Article cover" class="img-fluid rounded shadow" style="max-height: 400px; width: 100%; object-fit: cover;">
 </div>
 <section id="de-ce-open-source-are-sens-pentru-imm-uri" class="level2">
-<h2 data-anchor-id="de-ce-open-source-are-sens-pentru-imm-uri">De ce Open Source are sens pentru IMM-uri</h2>
+<h2 class="anchored" data-anchor-id="de-ce-open-source-are-sens-pentru-imm-uri">De ce Open Source are sens pentru IMM-uri</h2>
 <p>Întreprinderile mici și mijlocii se confruntă cu o tensiune familiară: au nevoie de infrastructură de nivel enterprise, dar adesea nu pot justifica costurile de licențiere de nivel enterprise. Software-ul open-source rezolvă această problemă oferind instrumente pregătite pentru producție, fără taxe per utilizator, suveranitate completă asupra datelor și libertate față de dependența de furnizor.</p>
 <p>Nu este vorba despre ideologie. Este vorba despre construirea unei infrastructuri pe care o dețineți cu adevărat. Când e-mailul, sistemul de identitate sau stiva de monitorizare depind de un furnizor care poate schimba prețurile, termenii sau funcționalitățile în orice moment, purtați un risc dificil de cuantificat până când se materializează. Alternativele open-source vă oferă control asupra acestui risc.</p>
 <p>Iată o defalcare practică a stivei open-source pe care o recomandăm pentru IMM-uri, organizată pe funcționalitate.</p>
 </section>
 <section id="productivitate-și-colaborare" class="level2">
-<h2 data-anchor-id="productivitate-și-colaborare">Productivitate și colaborare</h2>
+<h2 class="anchored" data-anchor-id="productivitate-și-colaborare">Productivitate și colaborare</h2>
 <p>Suita de productivitate este locul unde majoritatea companiilor încep și unde opțiunile open-source s-au maturizat considerabil.</p>
 <section id="editare-de-documente-și-instrumente-de-birou" class="level3">
-<h3 data-anchor-id="editare-de-documente-și-instrumente-de-birou">Editare de documente și instrumente de birou</h3>
+<h3 class="anchored" data-anchor-id="editare-de-documente-și-instrumente-de-birou">Editare de documente și instrumente de birou</h3>
 <p><strong>LibreOffice</strong> rămâne suita standard de birou pentru desktop, gestionând procesarea de text, foi de calcul și prezentări cu compatibilitate puternică pentru formatele Microsoft Office. Pentru echipele care au nevoie de editare colaborativă în timp real în browser, <strong>Collabora Online</strong> oferă un editor web bazat pe LibreOffice care se integrează direct cu platformele de stocare a fișierelor.</p>
 <p><strong>CryptPad</strong> oferă o alternativă axată pe confidențialitate pentru documente, foi de calcul și prezentări colaborative. Tot conținutul este criptat end-to-end, ceea ce înseamnă că nici administratorul serverului nu poate citi documentele dumneavoastră. Acest lucru este deosebit de relevant pentru companiile care gestionează date sensibile ale clienților.</p>
 </section>
 <section id="stocare-și-sincronizare-de-fișiere" class="level3">
-<h3 data-anchor-id="stocare-și-sincronizare-de-fișiere">Stocare și sincronizare de fișiere</h3>
+<h3 class="anchored" data-anchor-id="stocare-și-sincronizare-de-fișiere">Stocare și sincronizare de fișiere</h3>
 <p><strong>Nextcloud</strong> este piesa centrală a majorității implementărilor de productivitate open-source. Oferă sincronizarea fișierelor, calendare partajate, contacte, gestionarea sarcinilor și un ecosistem de aplicații care extinde capacitățile sale în managementul proiectelor, semnarea documentelor și multe altele. Găzduit intern sau administrat, Nextcloud înlocuiește o parte semnificativă din ceea ce companiile cumpără de obicei de la furnizorii de productivitate cloud.</p>
 </section>
 </section>
 <section id="comunicare" class="level2">
-<h2 data-anchor-id="comunicare">Comunicare</h2>
+<h2 class="anchored" data-anchor-id="comunicare">Comunicare</h2>
 <section id="mesagerie-și-chat" class="level3">
-<h3 data-anchor-id="mesagerie-și-chat">Mesagerie și chat</h3>
+<h3 class="anchored" data-anchor-id="mesagerie-și-chat">Mesagerie și chat</h3>
 <p><strong>Matrix</strong> (prin clientul <strong>Element</strong>) oferă mesagerie federată, criptată end-to-end. Federarea înseamnă că serverul de chat al organizației dumneavoastră poate comunica cu alte servere Matrix, fiind util pentru colaborarea între organizații fără a crea conturi pe platforme terțe.</p>
 <p><strong>Mattermost</strong> este o alegere excelentă pentru echipele care preferă o experiență similară cu Slack cu control auto-găzduit. Suportă canale, fire de discuție, integrări și are un API bine documentat pentru automatizare.</p>
 </section>
 <section id="videoconferințe" class="level3">
-<h3 data-anchor-id="videoconferințe">Videoconferințe</h3>
+<h3 class="anchored" data-anchor-id="videoconferințe">Videoconferințe</h3>
 <p><strong>Jitsi Meet</strong> oferă videoconferințe bazate pe browser, fără a fi necesar un cont pentru participanți. Suportă partajarea ecranului, înregistrarea și sălile de breakout. Pentru IMM-urile care au nevoie de apeluri video fiabile fără licențiere per utilizator, Jitsi este opțiunea cea mai directă.</p>
 </section>
 </section>
 <section id="identitate-și-single-sign-on" class="level2">
-<h2 data-anchor-id="identitate-și-single-sign-on">Identitate și Single Sign-On</h2>
+<h2 class="anchored" data-anchor-id="identitate-și-single-sign-on">Identitate și Single Sign-On</h2>
 <p>Gestionarea identității este adesea piesa cea mai neglijată din infrastructura IMM-urilor, dar este și una dintre cele mai impactante.</p>
 <section id="autentificare-centralizată" class="level3">
-<h3 data-anchor-id="autentificare-centralizată">Autentificare centralizată</h3>
+<h3 class="anchored" data-anchor-id="autentificare-centralizată">Autentificare centralizată</h3>
 <p><strong>Keycloak</strong> oferă gestionarea identității și accesului de nivel enterprise, inclusiv single sign-on (SSO), autentificarea cu factori multipli, autentificare socială și integrare cu aplicații SAML și OpenID Connect. Este echivalentul open-source al platformelor comerciale de identitate și se integrează bine cu restul stivei.</p>
 <p><strong>FreeIPA</strong> combină servicii de director LDAP, autentificare Kerberos, gestionare DNS și funcții de autoritate de certificare într-o singură platformă. Este deosebit de potrivit pentru mediile predominant Linux, unde aveți nevoie de gestionare centralizată a utilizatorilor pe servere, stații de lucru și aplicații.</p>
 <p><strong>OpenLDAP</strong> rămâne relevant pentru organizațiile care au nevoie de un serviciu de director ușor și flexibil fără întreaga stivă FreeIPA.</p>
@@ -669,16 +704,16 @@ Tip
 </section>
 </section>
 <section id="monitorizare-și-observabilitate" class="level2">
-<h2 data-anchor-id="monitorizare-și-observabilitate">Monitorizare și observabilitate</h2>
+<h2 class="anchored" data-anchor-id="monitorizare-și-observabilitate">Monitorizare și observabilitate</h2>
 <p>Nu poți gestiona ceea ce nu poți vedea. Infrastructura de monitorizare este non-negociabilă, chiar și pentru echipele mici.</p>
 <p><strong>Prometheus</strong> colectează metrici de la serverele, aplicațiile și dispozitivele de rețea folosind un model bazat pe extragere. Asociați-l cu <strong>Grafana</strong> pentru tablouri de bord și alerte, și aveți o stivă de monitorizare care se scalează de la câteva servere la mii.</p>
 <p><strong>Uptime Kuma</strong> este un monitor de uptime ușor, auto-găzduit, cu o interfață web curată. Suportă verificări HTTP, TCP, DNS și ping cu notificări prin e-mail, Slack, Matrix și zeci de alte canale. Pentru IMM-urile care au nevoie de monitorizare de bază a uptime-ului fără complexitatea unei platforme complete de observabilitate, Uptime Kuma este un punct de plecare excelent.</p>
 </section>
 <section id="fundamente-unix" class="level2">
-<h2 data-anchor-id="fundamente-unix">Fundamente UNIX</h2>
+<h2 class="anchored" data-anchor-id="fundamente-unix">Fundamente UNIX</h2>
 <p>Stratul sistemului de operare este locul unde începe infrastructura open-source, iar alegerea sistemului de operare modelează tot ce este deasupra.</p>
 <section id="distribuții-linux" class="level3">
-<h3 data-anchor-id="distribuții-linux">Distribuții Linux</h3>
+<h3 class="anchored" data-anchor-id="distribuții-linux">Distribuții Linux</h3>
 <ul>
 <li><strong>NixOS</strong> folosește un model de configurare declarativ în care întreaga stare a sistemului este definită în fișiere de configurare. Acest lucru face implementările reproductibile și rollback-urile triviale. Are o curbă de învățare abruptă, dar dă roade în ceea ce privește consistența între medii.</li>
 <li><strong>Debian</strong> este alegerea conservatoare: stabil, bine documentat și larg suportat. Este recomandarea implicită pentru organizațiile care doresc fiabilitate fără surprize.</li>
@@ -686,7 +721,7 @@ Tip
 </ul>
 </section>
 <section id="sisteme-bsd" class="level3">
-<h3 data-anchor-id="sisteme-bsd">Sisteme BSD</h3>
+<h3 class="anchored" data-anchor-id="sisteme-bsd">Sisteme BSD</h3>
 <ul>
 <li><strong>OpenBSD</strong> este construit special pentru securitate și este o alegere excelentă pentru firewall-uri, gateway-uri VPN și orice rol orientat către rețea unde minimizarea suprafeței de atac este prioritatea. Filtrul său de pachete <code>pf</code> este printre cele mai elegante sisteme de firewall disponibile.</li>
 <li><strong>FreeBSD</strong> excelează la sarcinile de stocare și rețea. Cu ZFS ca sistem de fișiere de primă clasă și sistemul <code>jail</code> pentru containerizare ușoară, FreeBSD este o fundație solidă pentru servere de fișiere, ținte de backup și dispozitive de rețea.</li>
@@ -694,24 +729,24 @@ Tip
 </section>
 </section>
 <section id="exemple-de-implementare-din-lumea-reală" class="level2">
-<h2 data-anchor-id="exemple-de-implementare-din-lumea-reală">Exemple de implementare din lumea reală</h2>
+<h2 class="anchored" data-anchor-id="exemple-de-implementare-din-lumea-reală">Exemple de implementare din lumea reală</h2>
 <p><strong>Firmă de avocatură (15 angajați):</strong> Nextcloud pentru stocarea fișierelor cu Collabora Online pentru editarea documentelor, Keycloak pentru SSO, Matrix/Element pentru comunicare criptată cu clienții, firewall OpenBSD la marginea rețelei. Cost total de licențiere: zero.</p>
 <p><strong>Agenție de marketing (30 angajați):</strong> Mattermost pentru chat intern, Jitsi pentru apeluri video cu clienții, Nextcloud pentru partajarea fișierelor de proiect, Prometheus și Grafana pentru monitorizarea infrastructurii de web hosting, servere Debian peste tot.</p>
 <p><strong>Companie de producție (50 angajați):</strong> FreeIPA pentru identitate centralizată pe stațiile de lucru Linux de pe linia de producție, Uptime Kuma pentru monitorizarea aplicațiilor interne critice, FreeBSD cu ZFS pentru stocarea fișierelor de inginerie, CryptPad pentru colaborare sensibilă în R&amp;D.</p>
 </section>
 <section id="răspunsuri-la-preocupări-frecvente" class="level2">
-<h2 data-anchor-id="răspunsuri-la-preocupări-frecvente">Răspunsuri la preocupări frecvente</h2>
+<h2 class="anchored" data-anchor-id="răspunsuri-la-preocupări-frecvente">Răspunsuri la preocupări frecvente</h2>
 <p><strong>„Pe cine sunăm pentru suport?“</strong> Majoritatea proiectelor open-source mature oferă abonamente de suport comercial. Red Hat, Collabora, Nextcloud GmbH, Element (Matrix) și Mattermost vând toate suport enterprise. De asemenea, puteți colabora cu consultanțe precum chen.ist specializate în implementări open-source.</p>
 <p><strong>„Cum ne instruim echipa?“</strong> Curba de învățare variază în funcție de instrument, dar majoritatea software-ului enumerat mai sus are documentație extinsă și forumuri comunitare active. De obicei includem instruirea ca parte a angajamentelor noastre de implementare.</p>
 <p><strong>„Ce se întâmplă cu migrarea de la instrumentele existente?“</strong> Migrarea este specifică fiecărui proiect, dar abordarea generală este: rulați stiva open-source în paralel, migrați datele incremental și faceți trecerea odată ce echipa este confortabilă. Am ajutat companii să migreze de la Microsoft 365, Google Workspace și diverse instrumente proprietare.</p>
 </section>
 <section id="primii-pași" class="level2">
-<h2 data-anchor-id="primii-pași">Primii pași</h2>
+<h2 class="anchored" data-anchor-id="primii-pași">Primii pași</h2>
 <p>Construirea unei stive de infrastructură open-source nu este o decizie de tip totul sau nimic. Începeți cu o zonă în care aveți cea mai mare problemă — fie că este productivitatea, comunicarea sau monitorizarea — implementați-o și extindeți de acolo.</p>
 <p>Pentru o privire mai aprofundată asupra modului în care abordăm infrastructura digitală, vizitați pagina noastră de <a href="../../digital/">servicii de infrastructură digitală</a>.</p>
 <div class="card mt-5 mb-3">
 <section id="sunteți-gata-să-explorați-infrastructura-open-source" class="level3 card-body">
-<h3 data-anchor-id="sunteți-gata-să-explorați-infrastructura-open-source">Sunteți gata să explorați infrastructura open-source?</h3>
+<h3 class="anchored" data-anchor-id="sunteți-gata-să-explorați-infrastructura-open-source">Sunteți gata să explorați infrastructura open-source?</h3>
 <p>Programați o consultație gratuită pentru a discuta ce instrumente se potrivesc organizației dumneavoastră și cum să planificați o migrare practică.</p>
 <div class="text-center mt-3">
 <p><a href="https://cal.com/chenist" target="_blank">Programează o consultație</a>{.btn .btn-success}</p>
@@ -722,7 +757,7 @@ Tip
 
 </section>
 
-
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1216,6 +1251,82 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
   document.querySelectorAll('.m-s, .m-bg, .m-cta, .m-r, .m-n, .hp-sec, .hp-stats, .ev-card, .ev-past, .m-t').forEach(el => observer.observe(el));
+
+  // Breadcrumb + Language bar
+  (function() {
+    var path = window.location.pathname;
+    var currentLang = 'en';
+    var cleanPath = path;
+
+    if (path.match(/^\/(ro|de|sv)\//)) {
+      currentLang = path.split('/')[1];
+      cleanPath = path.replace(/^\/(ro|de|sv)/, '');
+    }
+
+    var parts = cleanPath.split('/').filter(function(p) { return p && p !== 'index.html'; });
+
+    var bar = document.createElement('div');
+    bar.className = 'path-bar';
+    var inner = document.createElement('div');
+    inner.className = 'path-bar-inner';
+
+    // Breadcrumbs
+    var crumbs = document.createElement('div');
+    crumbs.className = 'path-crumbs';
+    var homeLink = document.createElement('a');
+    homeLink.href = currentLang === 'en' ? '/' : '/' + currentLang + '/';
+    homeLink.textContent = 'Home';
+    crumbs.appendChild(homeLink);
+
+    var accumulated = currentLang === 'en' ? '' : '/' + currentLang;
+    for (var i = 0; i < parts.length; i++) {
+      var sep = document.createElement('span');
+      sep.className = 'sep';
+      sep.textContent = ' \u203A ';
+      crumbs.appendChild(sep);
+      var name = parts[i].replace('.html', '').replace(/-/g, ' ');
+      name = name.charAt(0).toUpperCase() + name.slice(1);
+      accumulated += '/' + parts[i];
+      if (i === parts.length - 1) {
+        var cur = document.createElement('span');
+        cur.className = 'current';
+        cur.textContent = name;
+        crumbs.appendChild(cur);
+      } else {
+        var link = document.createElement('a');
+        link.href = accumulated + '/';
+        link.textContent = name;
+        crumbs.appendChild(link);
+      }
+    }
+
+    // Language buttons
+    var langsDiv = document.createElement('div');
+    langsDiv.className = 'path-langs';
+    var langs = [
+      { code: 'en', label: 'EN', prefix: '' },
+      { code: 'ro', label: 'RO', prefix: '/ro' },
+      { code: 'sv', label: 'SV', prefix: '/sv' },
+      { code: 'de', label: 'DE', prefix: '/de' }
+    ];
+    for (var j = 0; j < langs.length; j++) {
+      var l = langs[j];
+      var a = document.createElement('a');
+      a.href = l.prefix + (cleanPath || '/');
+      a.textContent = l.label;
+      if (l.code === currentLang) a.className = 'active';
+      langsDiv.appendChild(a);
+    }
+
+    inner.appendChild(crumbs);
+    inner.appendChild(langsDiv);
+    bar.appendChild(inner);
+
+    var header = document.getElementById('quarto-header');
+    if (header) {
+      header.appendChild(bar);
+    }
+  })();
 });
 </script>
 <!-- Cal.com floating button -->
@@ -1262,23 +1373,43 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     
-    // Language switcher — rewrites URL to same page in other language
-    document.querySelectorAll('a[href^="#lang-"]').forEach(function(link) {
+    // Language switcher — intercept lang dropdown and rewrite to same page
+    document.querySelectorAll('.dropdown-item').forEach(function(link) {
+      var href = link.getAttribute('href') || '';
+      var isLang = false;
+      var targetLang = '';
+
+      if (href.match(/^\/?index\.html$/) || href === '/' || href.match(/^\.\.\/?index\.html$/)) {
+        isLang = true; targetLang = 'en';
+      } else if (href.match(/\/?ro\//) || href.match(/^\.\.\/ro\//)) {
+        isLang = true; targetLang = 'ro';
+      } else if (href.match(/\/?sv\//) || href.match(/^\.\.\/sv\//)) {
+        isLang = true; targetLang = 'sv';
+      } else if (href.match(/\/?de\//) || href.match(/^\.\.\/de\//)) {
+        isLang = true; targetLang = 'de';
+      }
+
+      var text = (link.textContent || '').trim();
+      if (text === 'English' || text === 'Română' || text === 'Svenska' || text === 'Deutsch') {
+        isLang = true;
+        if (text === 'English') targetLang = 'en';
+        if (text === 'Română') targetLang = 'ro';
+        if (text === 'Svenska') targetLang = 'sv';
+        if (text === 'Deutsch') targetLang = 'de';
+      }
+
+      if (!isLang) return;
+
       link.addEventListener('click', function(e) {
         e.preventDefault();
-        var lang = this.getAttribute('href').replace('#lang-', '');
         var path = window.location.pathname;
-
-        // Strip existing language prefix
         var cleanPath = path.replace(/^\/(ro|de|sv)\//, '/').replace(/^\/(ro|de|sv)$/, '/');
 
-        // Build new URL
         var newPath;
-        if (lang === 'en') {
+        if (targetLang === 'en') {
           newPath = cleanPath;
         } else {
-          var prefix = lang === 'sv' ? '/sv' : '/' + lang;
-          newPath = prefix + (cleanPath === '/' ? '/' : cleanPath);
+          newPath = '/' + (targetLang === 'sv' ? 'sv' : targetLang) + (cleanPath === '/' ? '/' : cleanPath);
         }
 
         window.location.href = newPath;
