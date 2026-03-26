@@ -1,79 +1,401 @@
 ---
-title: "chen.ist"
+pagetitle: "chen.ist — Bauen. Sichern. Wachsen."
 title-block-style: none
-subtitle: "Innovative Technologielösungen für die moderne Welt"
-page-layout: custom
-toc: false
+description: "chen.ist liefert digitale Infrastruktur, Cybersicherheit, Cloud-Dienste und Technologie-Ausbildung für moderne Organisationen."
 from: markdown+raw_html
+page-layout: custom
+format:
+  html:
+    toc: false
+    include-in-header:
+      text: |
+        <style>
+        .quarto-title-block, #title-block-header { display: none !important; }
+        #quarto-content > * { margin-top: 0 !important; padding-top: 0 !important; }
+        main.content { padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
+        footer { margin-top: 0 !important; }
+        #quarto-content { margin-bottom: 0 !important; padding-bottom: 0 !important; }
+        .page-columns { margin-bottom: 0 !important; }
+        </style>
+        <style>
+        .hp { font-family: 'Open Sans', -apple-system, system-ui, sans-serif; }
+
+        /* Hero */
+        .hp-hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8rem 1.5rem 6rem; position: relative; overflow: hidden; }
+        .hp-hero-img { position: absolute; inset: 0; background: url('/assets/images/stock/network-closeup.webp') center/cover no-repeat; }
+        .hp-hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.8) 100%); }
+        .hp-hero-content { position: relative; z-index: 1; }
+        .hp-hero h1 { font-size: clamp(3rem, 8vw, 7rem); font-weight: 700; letter-spacing: -0.05em; line-height: 1.0; color: #fff; margin-bottom: 1.5rem; }
+        .hp-hero h1 .gr { color: #81BD4A; }
+        .hp-hero p { font-size: clamp(1.1rem, 2vw, 1.35rem); color: rgba(255,255,255,0.6); max-width: 520px; margin: 0 auto 2.5rem; line-height: 1.5; }
+        .hp-hero-btn { display: inline-block; padding: 1rem 2.5rem; background: #81BD4A; color: #fff; border-radius: 980px; font-weight: 500; font-size: 1.05rem; text-decoration: none; transition: all 0.2s; }
+        .hp-hero-btn:hover { background: #6BA33A; color: #fff; text-decoration: none; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(129,189,74,0.3); }
+        .hp-scroll { display: block; margin-top: 3rem; color: rgba(255,255,255,0.2); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; text-decoration: none; }
+        .hp-scroll i { display: block; font-size: 1rem; margin-top: 0.4rem; animation: hpb 2s infinite; }
+        @keyframes hpb { 0%,100%{transform:translateY(0)} 50%{transform:translateY(5px)} }
+
+        /* Marquee */
+        .hp-mq { background: #81BD4A; padding: 0.6rem 0; overflow: hidden; white-space: nowrap; }
+        .hp-mq-inner { display: inline-block; animation: hps 22s linear infinite; }
+        .hp-mq span { display: inline-block; padding: 0 2rem; font-size: 0.75rem; font-weight: 700; color: #fff; letter-spacing: 0.06em; text-transform: uppercase; }
+        @keyframes hps { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+        /* Sections */
+        .hp-sec { min-height: 90vh; display: flex; align-items: center; position: relative; overflow: hidden; padding: 10rem 0; color: #fff; }
+        .hp-sec-content { position: relative; z-index: 1; width: 100%; max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; }
+        .hp-sec h2 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 700; letter-spacing: -0.04em; line-height: 1.06; margin-bottom: 1.5rem; }
+        .hp-sec p { font-size: clamp(1rem, 1.6vw, 1.15rem); max-width: 500px; line-height: 1.6; margin-bottom: 2.5rem; color: rgba(255,255,255,0.55); }
+        .hp-sec-links { margin-top: 1rem; }
+        .hp-sec-links a { font-size: 1rem; font-weight: 500; text-decoration: none; margin-right: 2rem; }
+        .hp-sec-links a:hover { text-decoration: underline; }
+        .hp-sec-links .pr { color: #81BD4A; }
+        .hp-sec-links .pr::after { content: " \203A"; }
+        .hp-sec-links .se { color: rgba(255,255,255,0.4); }
+        .hp-sec-links .se::after { content: " \203A"; }
+
+        /* Layout variants */
+        .hp-split { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+        .hp-split-text h2 { margin-bottom: 1.75rem; }
+        .hp-split-visual { display: flex; flex-direction: column; gap: 1rem; }
+
+        /* Feature pills */
+        .hp-pill { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: rgba(129,189,74,0.08); border: 1px solid rgba(129,189,74,0.15); border-radius: 980px; font-size: 0.82rem; color: rgba(255,255,255,0.7); margin: 0.25rem; }
+        .hp-pill i { color: #81BD4A; font-size: 0.9rem; }
+
+        /* Icon grid */
+        .hp-icons { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .hp-icon { display: flex; gap: 1rem; align-items: flex-start; }
+        .hp-icon-circle { flex-shrink: 0; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: rgba(129,189,74,0.1); border-radius: 12px; font-size: 1.2rem; color: #81BD4A; }
+        .hp-icon h4 { font-size: 0.95rem; font-weight: 600; color: #fff; margin: 0 0 0.2rem; }
+        .hp-icon p { font-size: 0.82rem; color: rgba(255,255,255,0.45); margin: 0; line-height: 1.4; }
+
+        /* Badge */
+        .hp-badge { display: inline-block; background: rgba(129,189,74,0.12); color: #81BD4A; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.3rem 0.85rem; border-radius: 980px; margin-bottom: 1.25rem; }
+
+        /* SVG patterns — dark mode (default) */
+        .hp-squares { background: #161617 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Crect fill='%23161617' width='200' height='200'/%3E%3Cg fill='%231e1e21' fill-opacity='1'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='%2381BD4A' fill-opacity='0.06' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='%2381BD4A' fill-opacity='0.04' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E"); }
+        .hp-triangles { background: #111 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='540' height='450' viewBox='0 0 1080 900'%3E%3Crect fill='%23111' width='1080' height='900'/%3E%3Cg fill-opacity='0.07'%3E%3Cpolygon fill='%2381BD4A' points='90 150 0 300 180 300'/%3E%3Cpolygon fill='%231a1a1d' points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%2381BD4A' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%231a1a1d' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%2381BD4A' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%231a1a1d' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%2381BD4A' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%231a1a1d' points='90 450 0 600 180 600'/%3E%3Cpolygon fill='%2381BD4A' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%231a1a1d' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%2381BD4A' points='630 450 720 300 540 300'/%3E%3Cpolygon fill='%231a1a1d' points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%2381BD4A' points='990 450 1080 300 900 300'/%3E%3C/g%3E%3C/svg%3E"); }
+        .hp-constellation { background: #0a0a0a url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='692' height='692' viewBox='0 0 800 800'%3E%3Crect fill='none' width='800' height='800'/%3E%3Cg fill='none' stroke='%2381BD4A' stroke-width='1' stroke-opacity='0.1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3C/g%3E%3Cg fill='%2381BD4A' fill-opacity='0.06'%3E%3Ccircle cx='769' cy='229' r='4'/%3E%3Ccircle cx='539' cy='269' r='4'/%3E%3Ccircle cx='603' cy='493' r='4'/%3E%3Ccircle cx='731' cy='737' r='4'/%3E%3Ccircle cx='295' cy='764' r='4'/%3E%3Ccircle cx='102' cy='382' r='4'/%3E%3Ccircle cx='370' cy='105' r='4'/%3E%3Ccircle cx='390' cy='382' r='4'/%3E%3C/g%3E%3C/svg%3E"); }
+        .hp-stripes { background: #131315; background-image: repeating-linear-gradient(135deg, rgba(129,189,74,0) 0px, rgba(129,189,74,0) 20px, rgba(129,189,74,0.03) 20px, rgba(129,189,74,0.03) 22px, rgba(129,189,74,0) 22px, rgba(129,189,74,0) 40px, rgba(129,189,74,0.05) 40px, rgba(129,189,74,0.05) 43px, rgba(129,189,74,0) 43px, rgba(129,189,74,0) 60px, rgba(129,189,74,0.02) 60px, rgba(129,189,74,0.02) 61px); }
+        .hp-mountains { background: #0e0e10; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Crect fill='%230e0e10' width='1600' height='900'/%3E%3Cpolygon fill='%23151517' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23131315' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23171719' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23141416' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%231a1a1d' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23161618' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%231c1c1f' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23181819' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%231e1e21' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%231a1a1c' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23202023' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%231c1c1e' points='943 900 1210 900 971 687'/%3E%3C/svg%3E"); background-size: cover; background-position: bottom; }
+
+        /* ===== LIGHT MODE ===== */
+        html:not([data-bs-theme="dark"]) .hp-hero-overlay { background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.65) 100%); }
+        html:not([data-bs-theme="dark"]) .hp-sec { color: #1d1d1f; }
+        html:not([data-bs-theme="dark"]) .hp-sec h2 { color: #1d1d1f; }
+        html:not([data-bs-theme="dark"]) .hp-sec p { color: #6e6e73; }
+        html:not([data-bs-theme="dark"]) .hp-icon h4 { color: #1d1d1f; }
+        html:not([data-bs-theme="dark"]) .hp-icon p { color: #86868b; }
+        html:not([data-bs-theme="dark"]) .hp-icon-circle { background: rgba(129,189,74,0.07); }
+        html:not([data-bs-theme="dark"]) .hp-pill { background: rgba(129,189,74,0.05); border-color: rgba(129,189,74,0.1); color: #424245; }
+        html:not([data-bs-theme="dark"]) .hp-sec-links .se { color: #86868b; }
+        html:not([data-bs-theme="dark"]) .hp-badge { background: rgba(129,189,74,0.06); color: #5a9c25; }
+        html:not([data-bs-theme="dark"]) .hp-blog-title { color: #1d1d1f; }
+        html:not([data-bs-theme="dark"]) .hp-blog-date { color: #86868b; }
+        html:not([data-bs-theme="dark"]) .hp-blog-item { border-color: rgba(0,0,0,0.06); }
+        html:not([data-bs-theme="dark"]) .hp-blog-item:hover { background: rgba(129,189,74,0.02); }
+        /* Stats bar — soft grey in light mode */
+        html:not([data-bs-theme="dark"]) .hp-stats { background: #f5f5f7; }
+        html:not([data-bs-theme="dark"]) .hp-sl { color: #86868b; }
+        /* Security visual numbers */
+        html:not([data-bs-theme="dark"]) .hp-sn { color: #81BD4A; }
+        html:not([data-bs-theme="dark"]) .hp-split-visual [style*="rgba(255,255,255,0.4)"] { color: #86868b !important; }
+        html:not([data-bs-theme="dark"]) .hp-split-visual [style*="font-size: 5rem"] { color: #1d1d1f !important; }
+        html:not([data-bs-theme="dark"]) .hp-split-visual [style*="color: #81BD4A"] { color: #81BD4A !important; }
+        /* Marquee stays green in both modes */
+        html:not([data-bs-theme="dark"]) .hp-mq { background: #81BD4A; }
+        /* Light SVG backgrounds — white (#fff) and soft grey (#f5f5f7) alternating */
+        html:not([data-bs-theme="dark"]) .hp-squares { background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Crect fill='%23fff' width='200' height='200'/%3E%3Cg fill='%23f8f8fa' fill-opacity='1'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='%2381BD4A' fill-opacity='0.03' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='%2381BD4A' fill-opacity='0.02' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E"); }
+        html:not([data-bs-theme="dark"]) .hp-triangles { background: #f5f5f7 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='540' height='450' viewBox='0 0 1080 900'%3E%3Crect fill='%23f5f5f7' width='1080' height='900'/%3E%3Cg fill-opacity='0.04'%3E%3Cpolygon fill='%2381BD4A' points='90 150 0 300 180 300'/%3E%3Cpolygon fill='%23ebebed' points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%2381BD4A' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23ebebed' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%2381BD4A' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23ebebed' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%2381BD4A' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23ebebed' points='90 450 0 600 180 600'/%3E%3Cpolygon fill='%2381BD4A' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23ebebed' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%2381BD4A' points='630 450 720 300 540 300'/%3E%3Cpolygon fill='%23ebebed' points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%2381BD4A' points='990 450 1080 300 900 300'/%3E%3C/g%3E%3C/svg%3E"); }
+        html:not([data-bs-theme="dark"]) .hp-constellation { background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='692' height='692' viewBox='0 0 800 800'%3E%3Crect fill='none' width='800' height='800'/%3E%3Cg fill='none' stroke='%2381BD4A' stroke-width='1' stroke-opacity='0.07'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3C/g%3E%3Cg fill='%2381BD4A' fill-opacity='0.04'%3E%3Ccircle cx='769' cy='229' r='4'/%3E%3Ccircle cx='539' cy='269' r='4'/%3E%3Ccircle cx='603' cy='493' r='4'/%3E%3Ccircle cx='731' cy='737' r='4'/%3E%3Ccircle cx='295' cy='764' r='4'/%3E%3Ccircle cx='102' cy='382' r='4'/%3E%3C/g%3E%3C/svg%3E"); }
+        html:not([data-bs-theme="dark"]) .hp-stripes { background: #f5f5f7; background-image: repeating-linear-gradient(135deg, rgba(129,189,74,0) 0px, rgba(129,189,74,0) 20px, rgba(129,189,74,0.02) 20px, rgba(129,189,74,0.02) 22px, rgba(129,189,74,0) 22px, rgba(129,189,74,0) 40px, rgba(129,189,74,0.035) 40px, rgba(129,189,74,0.035) 43px); }
+        html:not([data-bs-theme="dark"]) .hp-mountains { background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Crect fill='%23fff' width='1600' height='900'/%3E%3Cpolygon fill='%23f8f8fa' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23f5f5f7' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23f0f0f2' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23ededef' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23eaeaec' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23e8e8ea' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23e5e5e7' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23e2e2e4' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23dfdfdf' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23dcdcdc' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23dadada' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23d7d7d7' points='943 900 1210 900 971 687'/%3E%3C/svg%3E"); background-size: cover; background-position: bottom; }
+
+        /* Stats */
+        .hp-stats { display: flex; justify-content: center; gap: clamp(2rem, 5vw, 5rem); flex-wrap: wrap; padding: 5rem 1.5rem; background: #000; }
+        .hp-sn { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 700; color: #81BD4A; line-height: 1; }
+        .hp-sl { font-size: 0.7rem; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.3rem; }
+
+        /* Blog list */
+        .hp-blog { max-width: 700px; margin: 0 auto; }
+        .hp-blog-item { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); text-decoration: none; color: inherit; }
+        .hp-blog-item:hover .hp-blog-title { color: #81BD4A; }
+        .hp-blog-title { font-size: 1.05rem; font-weight: 600; color: #fff; transition: color 0.15s; }
+        .hp-blog-date { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+        .hp-blog-arrow { color: #81BD4A; flex-shrink: 0; margin-left: 1.5rem; font-size: 0.9rem; }
+
+        @media (max-width: 991px) {
+          .hp-split { grid-template-columns: 1fr; gap: 2.5rem; }
+          .hp-icons { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 767px) {
+          .hp-hero { min-height: 80vh; padding: 5rem 1.25rem 3.5rem; }
+          .hp-hero h1 { font-size: clamp(2.5rem, 10vw, 3.5rem); }
+          .hp-hero p { font-size: 0.95rem; max-width: 340px; }
+          .hp-hero-btn { font-size: 0.95rem; padding: 0.85rem 2rem; border-radius: 14px; }
+          .hp-scroll { margin-top: 2rem; }
+          .hp-sec { min-height: auto; padding: 4.5rem 0; }
+          .hp-sec h2 { font-size: clamp(1.75rem, 6vw, 2.5rem); }
+          .hp-mq span { padding: 0 1rem; font-size: 0.6rem; }
+          .hp-stats { gap: 1.5rem; padding: 3rem 1.25rem; }
+          .hp-sec-content { padding: 0 1.25rem; }
+          .hp-sec-links { display: flex; flex-direction: column; gap: 0.75rem; }
+          .hp-sec-links a { margin-right: 0; font-size: 0.95rem; }
+          .hp-pill { font-size: 0.72rem; padding: 0.4rem 0.7rem; margin: 0.15rem; }
+          .hp-icon { gap: 0.75rem; }
+          .hp-icon-circle { width: 42px; height: 42px; border-radius: 10px; }
+          .hp-icon h4 { font-size: 0.9rem; }
+          .hp-icon p { font-size: 0.78rem; }
+          .hp-blog { max-width: 100%; }
+          .hp-blog-item { flex-direction: column; align-items: flex-start; gap: 0.2rem; padding: 1rem 0; }
+          .hp-blog-title { font-size: 0.95rem; }
+          .hp-blog-arrow { display: none; }
+          .hp-badge { font-size: 0.65rem; }
+        }
+        @media (max-width: 480px) {
+          .hp-hero { min-height: 70vh; padding: 4.5rem 1rem 3rem; }
+          .hp-hero h1 { font-size: clamp(2.25rem, 11vw, 3rem); }
+          .hp-hero-btn { padding: 0.8rem 1.75rem; font-size: 0.9rem; }
+          .hp-stats { flex-direction: column; align-items: center; gap: 1.25rem; padding: 2.5rem 1rem; }
+          .hp-sec { padding: 3.5rem 0; }
+          .hp-sec h2 { font-size: clamp(1.5rem, 7vw, 2rem); }
+          .hp-sec p { font-size: 0.9rem; }
+          .hp-sn { font-size: clamp(1.75rem, 5vw, 2.5rem); }
+        }
+        </style>
 ---
 
 ```{=html}
-<div class="m">
+<div class="hp">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>Willkommen bei <span class="gr">chen.ist</span></h1>
-    <p>Innovative Technologielösungen für die moderne Welt</p>
-    <a href="/de/booking/" class="m-b">Loslegen</a>
+<!-- HERO -->
+<div class="hp-hero">
+  <div class="hp-hero-img"></div>
+  <div class="hp-hero-overlay"></div>
+  <div class="hp-hero-content">
+    <h1>Bauen.<br><span class="gr">Sichern.</span><br>Wachsen.</h1>
+    <p>Digitale Infrastruktur, Cybersicherheit und Bildung. Auf Open-Source gebaut, für Organisationen die Kontrolle schätzen.</p>
+    <a href="/de/booking/" class="hp-hero-btn">Kostenlose Beratung buchen</a>
+    <a href="#s1" class="hp-scroll">Scrollen <i class="bi bi-chevron-down"></i></a>
   </div>
 </div>
 
-<div class="m-bg">
-  <div class="container">
-    <h2>Unsere Dienstleistungen</h2>
-    <p class="sub">Umfassende Technologielösungen für Ihr Unternehmen.</p>
-    <div class="row g-5">
-      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-terminal"></i><h3>Digitale Infrastruktur</h3><p>Open Source, UNIX & Apple für KMU. Linux, BSD, NixOS und die neue Apple Business-Plattform.</p><a href="/de/digital/" class="m-lk">Mehr erfahren</a></div></div>
-      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-shield-check"></i><h3>Cybersicherheit</h3><p>Blue Team: SOC-Überwachung rund um die Uhr, Bedrohungsjagd, Incident Response und Sicherheitsanalyse.</p><a href="/de/services/cybersecurity/" class="m-lk">Mehr erfahren</a></div></div>
-      <div class="col-lg-4 col-md-6"><div class="m-t"><i class="bi bi-cloud"></i><h3>Cloud-Dienste</h3><p>Migration, Infrastruktur, DevOps und Cloud-Sicherheit auf AWS, Azure und Google Cloud.</p><a href="/de/services/cloud/" class="m-lk">Mehr erfahren</a></div></div>
+<!-- MARQUEE -->
+<div class="hp-mq">
+  <div class="hp-mq-inner">
+    <span>NixOS</span><span>OpenBSD</span><span>FreeBSD</span><span>Apple Business</span><span>Nextcloud</span><span>Keycloak</span><span>Blue Team SOC</span><span>NIS2</span><span>Threat Hunting</span><span>Überwachung 24/7</span><span>EU-Daten</span><span>Open Source</span>
+    <span>NixOS</span><span>OpenBSD</span><span>FreeBSD</span><span>Apple Business</span><span>Nextcloud</span><span>Keycloak</span><span>Blue Team SOC</span><span>NIS2</span><span>Threat Hunting</span><span>Überwachung 24/7</span><span>EU-Daten</span><span>Open Source</span>
+  </div>
+</div>
+
+<!-- DIGITALE INFRASTRUKTUR — Split-Layout mit Icon-Grid -->
+<div class="hp-sec hp-squares" id="s1">
+  <div class="hp-sec-content">
+    <div class="hp-split">
+      <div class="hp-split-text">
+        <div class="hp-badge"><i class="bi bi-terminal me-1"></i> Digitale Infrastruktur</div>
+        <h2>Infrastruktur, die Ihnen<br>wirklich gehört.</h2>
+        <p>Open-Source, UNIX und Apple-Plattformen. Kein Vendor Lock-in, keine versteckten Kosten. Wir implementieren und verwalten alles.</p>
+        <div class="hp-sec-links">
+          <a href="/de/digital/" class="pr">Mehr erfahren</a>
+          <a href="/de/booking/" class="se">Loslegen</a>
+        </div>
+      </div>
+      <div class="hp-split-visual">
+        <div class="hp-icons">
+          <div class="hp-icon"><div class="hp-icon-circle"><i class="bi bi-server"></i></div><div><h4>NixOS / Debian</h4><p>Deklarative, reproduzierbare Server</p></div></div>
+          <div class="hp-icon"><div class="hp-icon-circle"><i class="bi bi-shield-lock"></i></div><div><h4>OpenBSD Firewall</h4><p>Gehärtete Netzwerksicherheit</p></div></div>
+          <div class="hp-icon"><div class="hp-icon-circle"><i class="bi bi-apple"></i></div><div><h4>Apple Business</h4><p>Zero-Touch Gerätemanagement</p></div></div>
+          <div class="hp-icon"><div class="hp-icon-circle"><i class="bi bi-cloud-arrow-up"></i></div><div><h4>Nextcloud + SSO</h4><p>Dateien, E-Mail, Identität</p></div></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="m-s">
-  <div class="container">
-    <h2>Warum uns wählen</h2>
-    <p class="sub">Vier Werte im Kern von allem, was wir aufbauen.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-trophy"></i><h3>Expertise</h3><p>Unser Expertenteam bringt jahrelange Erfahrung aus verschiedenen Technologiebereichen mit.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-lightbulb"></i><h3>Innovation</h3><p>Wir erforschen ständig neue Technologien und Ansätze zur Lösung komplexer Probleme.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-star"></i><h3>Qualität</h3><p>Wir halten in unserer gesamten Arbeit die höchsten Standards ein, von der Planung bis zur Umsetzung.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-headset"></i><h3>Support</h3><p>Wir begleiten Sie auf jedem Schritt des Weges und bieten kontinuierliche Unterstützung und Wartung.</p></div></div>
+<!-- SICHERHEIT — Split-Layout mit Pills -->
+<div class="hp-sec hp-triangles">
+  <div class="hp-sec-content">
+    <div class="hp-split" style="direction: rtl;">
+      <div class="hp-split-text" style="direction: ltr;">
+        <div class="hp-badge"><i class="bi bi-shield-check me-1"></i> Proaktive Sicherheit</div>
+        <h2>Bedrohungen schlafen nie.<br>Wir auch nicht.</h2>
+        <p>SOC-Überwachung rund um die Uhr, Threat Hunting, NIS2-Konformität und CISO as a Service.</p>
+        <div style="margin-bottom: 2rem;">
+          <span class="hp-pill"><i class="bi bi-eye"></i> SOC 24/7</span>
+          <span class="hp-pill"><i class="bi bi-search"></i> Threat Hunting</span>
+          <span class="hp-pill"><i class="bi bi-clipboard-check"></i> NIS2</span>
+          <span class="hp-pill"><i class="bi bi-person-badge"></i> vCISO</span>
+          <span class="hp-pill"><i class="bi bi-lightning"></i> Incident Response</span>
+        </div>
+        <div class="hp-sec-links">
+          <a href="/de/security/" class="pr">Mehr erfahren</a>
+          <a href="/de/booking/" class="se">Kostenlose Bewertung</a>
+        </div>
+      </div>
+      <div class="hp-split-visual" style="direction: ltr; text-align: center;">
+        <div class="hp-sn" style="font-size: 5rem; margin-bottom: 0.5rem;">197</div>
+        <div style="color: rgba(255,255,255,0.4); font-size: 0.85rem;">durchschnittliche Tage bis zur Erkennung eines Angriffs</div>
+        <div style="margin-top: 1.5rem; color: #81BD4A; font-size: 1.5rem; font-weight: 700;">&lt;24h</div>
+        <div style="color: rgba(255,255,255,0.4); font-size: 0.85rem;">unsere Erkennung + Reaktion</div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="m-bg">
-  <div class="container">
-    <h2>Neueste Blogbeiträge</h2>
-    <p class="sub">Einblicke, Tutorials und Updates von unserem Team.</p>
-    <div class="row g-5">
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-shield-lock"></i><h3><a href="blog/cyber-security-best-practices.html">Cybersicherheit Best Practices</a></h3><p>Wesentliche Cybersicherheits-Best-Practices, die jede Organisation implementieren sollte, um sich gegen sich entwickelnde Bedrohungen im Jahr 2025 zu schützen.</p></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-cloud-arrow-up"></i><h3>Cloud-Migrationsstrategien</h3><p>Schritt-für-Schritt-Strategien für eine erfolgreiche Cloud-Migration mit minimaler Störung Ihrer Abläufe.</p></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-code-slash"></i><h3>Moderne Entwicklungspraktiken</h3><p>Erkundung moderner Entwicklungspraktiken, die Effizienz, Qualität und Zusammenarbeit verbessern.</p></div></div>
+<!-- CLOUD — zentriert mit Pills -->
+<div class="hp-sec hp-constellation" style="text-align: center;">
+  <div class="hp-sec-content" style="max-width: 700px;">
+    <div class="hp-badge"><i class="bi bi-cloud me-1"></i> Cloud-Dienste</div>
+    <h2>Cloud-Dienste</h2>
+    <p style="margin: 0 auto 1.5rem;">Migration, Infrastruktur, DevOps und Multi-Cloud-Sicherheit.</p>
+    <div style="margin-bottom: 2rem;">
+      <span class="hp-pill"><i class="bi bi-arrow-repeat"></i> Migration</span>
+      <span class="hp-pill"><i class="bi bi-hdd-rack"></i> Infrastruktur</span>
+      <span class="hp-pill"><i class="bi bi-gear"></i> DevOps</span>
+      <span class="hp-pill"><i class="bi bi-shield"></i> Sicherheit</span>
     </div>
-    <div style="text-align:center;margin-top:2rem;"><a href="blog.html" class="m-b">Alle Beiträge anzeigen</a></div>
+    <div class="hp-sec-links" style="display:flex; gap:2rem; justify-content:center;">
+      <a href="/de/services/cloud/" class="pr">Mehr erfahren</a>
+    </div>
   </div>
 </div>
 
-<div class="m-bg" style="padding:7rem 0; text-align:center;">
-  <div class="container" style="max-width:650px;">
-    <div style="display:inline-block; background:rgba(129,189,74,0.12); color:#81BD4A; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; padding:0.3rem 1rem; border-radius:980px; margin-bottom:1.25rem;"><i class="bi bi-flag me-1"></i> Europäisches Unternehmen</div>
+<!-- ACADEMY — Split mit Icon-Grid -->
+<div class="hp-sec hp-stripes">
+  <div class="hp-sec-content">
+    <div class="hp-split">
+      <div class="hp-split-text">
+        <div class="hp-badge" style="background: rgba(245,166,35,0.12); color: #F5A623; border-color: rgba(245,166,35,0.2);"><i class="bi bi-mortarboard me-1"></i> Academy</div>
+        <h2>Wissen, das bleibt.</h2>
+        <p>Kurse, Hackathons und Intensivtrainings. Alles, was wir lehren, machen wir selbst.</p>
+        <div class="hp-sec-links">
+          <a href="/de/academy/" class="pr">Entdecken</a>
+          <a href="/de/academy/events.html" class="se">Veranstaltungen</a>
+        </div>
+      </div>
+      <div class="hp-split-visual">
+        <div class="hp-icons">
+          <div class="hp-icon"><div class="hp-icon-circle" style="background:rgba(245,166,35,0.1);"><i class="bi bi-book" style="color:#F5A623;"></i></div><div><h4>6 Kurse</h4><p>Cybersicherheit & Open-Source, mehrwöchig</p></div></div>
+          <div class="hp-icon"><div class="hp-icon-circle" style="background:rgba(245,166,35,0.1);"><i class="bi bi-lightning" style="color:#F5A623;"></i></div><div><h4>7 Trainings</h4><p>Intensive 1-2-Tages-Workshops</p></div></div>
+          <div class="hp-icon"><div class="hp-icon-circle" style="background:rgba(245,166,35,0.1);"><i class="bi bi-trophy" style="color:#F5A623;"></i></div><div><h4>Hackathons</h4><p>SpaceApps, AI Ethics, Cybersicherheit</p></div></div>
+          <div class="hp-icon"><div class="hp-icon-circle" style="background:rgba(245,166,35,0.1);"><i class="bi bi-people" style="color:#F5A623;"></i></div><div><h4>Computer Club</h4><p>Monatliche Treffen, alle Niveaus</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RESILIENZ — zentriert minimal -->
+<div class="hp-sec hp-mountains" style="min-height: 70vh; text-align: center;">
+  <div class="hp-sec-content" style="max-width: 600px;">
+    <div class="hp-badge"><i class="bi bi-heart-pulse me-1"></i> Digitale Resilienz</div>
+    <h2>Wenn alles ausfällt,<br>bleiben Sie betriebsbereit.</h2>
+    <p style="margin: 0 auto 2rem;">Business Continuity, Disaster Recovery und Architektur-Frameworks.</p>
+    <div class="hp-sec-links" style="display:flex; gap:2rem; justify-content:center;">
+      <a href="/de/services/digital-resilience/" class="pr">Mehr erfahren</a>
+    </div>
+  </div>
+</div>
+
+<!-- EUROPÄISCH — besonders prominent für den deutschen Markt -->
+<div class="hp-sec hp-constellation" style="min-height: 70vh; text-align: center;">
+  <div class="hp-sec-content" style="max-width: 700px;">
+    <div class="hp-badge"><i class="bi bi-flag me-1"></i> Europäisches Unternehmen</div>
     <h2>In Europa gebaut.<br>Für Europa.</h2>
-    <p class="sub" style="margin-bottom:2rem;">Wir sind ein europäisches Unternehmen mit Fokus auf den europäischen Markt. Unsere Infrastruktur läuft auf EU-Boden, Ihre Daten bleiben in der EU, und unsere Lösungen entsprechen europäischen Vorschriften von Anfang an.</p>
-    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
-      <a href="/de/services/cloud/" class="m-lk">Cloud-Dienste</a>
-      <a href="/de/services/nis2/" class="m-lk">NIS2-Konformität</a>
+    <p style="margin: 0 auto 1.5rem;">Wir sind ein europäisches Unternehmen mit Fokus auf den europäischen Markt. Unsere Infrastruktur läuft auf EU-Boden, Ihre Daten bleiben in der EU, und unsere Lösungen entsprechen europäischen Vorschriften von Anfang an — nicht als Nachgedanke.</p>
+    <div style="margin-bottom: 2rem;">
+      <span class="hp-pill"><i class="bi bi-shield-check"></i> DSGVO nativ</span>
+      <span class="hp-pill"><i class="bi bi-geo-alt"></i> EU-Datenhaltung</span>
+      <span class="hp-pill"><i class="bi bi-clipboard-check"></i> NIS2-bereit</span>
+      <span class="hp-pill"><i class="bi bi-lock"></i> Europäische Sicherheit</span>
+      <span class="hp-pill"><i class="bi bi-building"></i> Digitale Souveränität</span>
+    </div>
+    <div class="hp-sec-links" style="display:flex; gap:2rem; justify-content:center;">
+      <a href="/de/services/cloud/" class="pr">Cloud-Dienste</a>
+      <a href="/de/services/nis2/" class="se">NIS2-Konformität</a>
     </div>
   </div>
 </div>
 
-<div class="m-cta">
-  <div class="container">
-    <div class="m-d"></div>
-    <h2>Bereit loszulegen?</h2>
-    <p>Kontaktieren Sie uns noch heute, um zu erfahren, wie wir Ihnen helfen können, Ihre Ziele zu erreichen.</p>
-    <a href="/de/booking/" class="m-b">Kontakt</a>
+<!-- TESTIMONIALS -->
+<div class="hp-sec hp-stripes" style="min-height:auto; padding:8rem 0; text-align:center;">
+  <div class="hp-sec-content" style="max-width:900px;">
+    <div class="hp-badge"><i class="bi bi-chat-quote me-1"></i> Was Kunden sagen</div>
+    <h2 style="margin-bottom:3rem;">Vertraut von Organisationen<br>in ganz Europa.</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:2rem; text-align:left;">
+      <div style="padding:2rem; border-radius:16px; border:1px solid rgba(129,189,74,0.1); background:rgba(129,189,74,0.02);">
+        <div style="color:#81BD4A; font-size:1.5rem; margin-bottom:0.75rem;"><i class="bi bi-quote"></i></div>
+        <p style="font-size:0.92rem; line-height:1.6; margin-bottom:1rem; max-width:none;">chen.ist hat unsere gesamte Infrastruktur in 3 Monaten auf Open-Source migriert. Null Ausfallzeit, 40% Kostenreduktion. Das Team hat unsere Anforderungen vom ersten Tag an verstanden.</p>
+        <div style="font-size:0.82rem;"><strong>CTO</strong> · Produktionsunternehmen, Rumänien</div>
+      </div>
+      <div style="padding:2rem; border-radius:16px; border:1px solid rgba(129,189,74,0.1); background:rgba(129,189,74,0.02);">
+        <div style="color:#81BD4A; font-size:1.5rem; margin-bottom:0.75rem;"><i class="bi bi-quote"></i></div>
+        <p style="font-size:0.92rem; line-height:1.6; margin-bottom:1rem; max-width:none;">Ihre NIS2-Gap-Analyse hat uns Monate der Verwirrung erspart. Klarer Fahrplan, keine unnötige Komplexität. Wir waren in 4 Monaten konform.</p>
+        <div style="font-size:0.82rem;"><strong>CISO</strong> · Gesundheitsdienstleister, EU</div>
+      </div>
+      <div style="padding:2rem; border-radius:16px; border:1px solid rgba(129,189,74,0.1); background:rgba(129,189,74,0.02);">
+        <div style="color:#81BD4A; font-size:1.5rem; margin-bottom:0.75rem;"><i class="bi bi-quote"></i></div>
+        <p style="font-size:0.92rem; line-height:1.6; margin-bottom:1rem; max-width:none;">Das Cybersicherheits-Training war die beste Investition dieses Jahres. Praktisch, kein Ballast, und unser Team nutzt tatsächlich, was es gelernt hat.</p>
+        <div style="font-size:0.82rem;"><strong>IT-Direktor</strong> · Bildungssektor, Schweden</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STATISTIKEN -->
+<div class="hp-stats">
+  <div style="text-align:center;"><div class="hp-sn">15+</div><div class="hp-sl">Jahre</div></div>
+  <div style="text-align:center;"><div class="hp-sn">100%</div><div class="hp-sl">Open-Source</div></div>
+  <div style="text-align:center;"><div class="hp-sn">EU</div><div class="hp-sl">Datenhaltung</div></div>
+  <div style="text-align:center;"><div class="hp-sn">24/7</div><div class="hp-sl">Überwachung</div></div>
+</div>
+
+<!-- BLOG -->
+<div class="hp-sec hp-squares" style="min-height: auto; padding: 5rem 0;">
+  <div class="hp-sec-content">
+    <div class="hp-blog">
+      <h2 style="text-align: center; margin-bottom: 3rem;">Neueste Beiträge</h2>
+      <a href="/de/blog/apple-business-smb-guide.html" class="hp-blog-item">
+        <div>
+          <div class="hp-blog-title">Apple Business: Was KMU wissen müssen</div>
+          <div class="hp-blog-date">25. März 2026</div>
+        </div>
+        <span class="hp-blog-arrow"><i class="bi bi-arrow-right"></i></span>
+      </a>
+      <a href="/de/blog/open-source-infrastructure-smbs.html" class="hp-blog-item">
+        <div>
+          <div class="hp-blog-title">Open-Source-Infrastruktur für KMU</div>
+          <div class="hp-blog-date">20. März 2026</div>
+        </div>
+        <span class="hp-blog-arrow"><i class="bi bi-arrow-right"></i></span>
+      </a>
+      <a href="/de/blog/cyber-security-best-practices.html" class="hp-blog-item">
+        <div>
+          <div class="hp-blog-title">Cybersicherheit Best Practices für 2025</div>
+          <div class="hp-blog-date">Aktualisiert März 2026</div>
+        </div>
+        <span class="hp-blog-arrow"><i class="bi bi-arrow-right"></i></span>
+      </a>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="/de/blog.html" class="pr" style="font-size: 0.95rem; font-weight: 500; color: #81BD4A; text-decoration: none;">Alle Beiträge <span style="font-weight: 300;">&#8250;</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="hp-sec hp-cta-dark" style="min-height: 70vh; background: #000 !important; color: #fff !important; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='856' height='102.7' viewBox='0 0 1000 120'%3E%3Crect fill='%23000' width='1000' height='120'/%3E%3Cg fill='none' stroke='%2381BD4A' stroke-width='2' stroke-opacity='0.15'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E&quot;); background-size: 100% auto; background-repeat: repeat-y; text-align: center;">
+  <div class="hp-sec-content" style="max-width: 600px;">
+    <div style="width: 36px; height: 3px; background: #81BD4A; margin: 0 auto 3rem; border-radius: 2px; opacity: 0.6;"></div>
+    <h2>Bereit, die Kontrolle zu übernehmen?</h2>
+    <p style="margin: 0 auto 2rem;">30 Minuten. Kein Pitch. Nur ein ehrlicher Blick auf das, was Sie brauchen.</p>
+    <a href="/de/booking/" class="hp-hero-btn">Kostenlose Beratung buchen</a>
+    <div style="margin-top: 2rem; font-size: 0.8rem; color: rgba(255,255,255,0.3);">
+      <i class="bi bi-check-circle-fill" style="color:#81BD4A;"></i> Kostenlos &nbsp;
+      <i class="bi bi-check-circle-fill" style="color:#81BD4A;"></i> 30 Min &nbsp;
+      <i class="bi bi-check-circle-fill" style="color:#81BD4A;"></i> Keine Verpflichtung
+    </div>
   </div>
 </div>
 
