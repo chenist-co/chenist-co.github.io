@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="CHENIST Team">
-<meta name="dcterms.date" content="2026-03-25">
-<meta name="description" content="Allt SMF behöver veta om lanseringen av Apple Business den 14 april 2026 — från gratis MDM och Blueprints till betalda tillägg och migrering.">
+<meta name="dcterms.date" content="2025-04-01">
+<meta name="description" content="Viktiga cybersäkerhetspraxis som varje organisation bör implementera för att skydda sig mot de föränderliga hoten 2025.">
 
-<title>Apple Business: Vad SMF behöver veta – chen.ist</title>
+<title>Bästa praxis för cybersäkerhet 2025 – chen.ist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -46,9 +81,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-73406dad87c631b3ff16adcaa0b1ab21.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-d670e99d9fdfed706f1502bc605e1805.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-73406dad87c631b3ff16adcaa0b1ab21.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-7aebb704979873d987a9577224f07705.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-5bb150d023bc505d90d3f0361b894f96.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-7aebb704979873d987a9577224f07705.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,13 +112,13 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<meta property="og:title" content="Apple Business: Vad SMF behöver veta – chen.ist">
-<meta property="og:description" content="Allt SMF behöver veta om lanseringen av Apple Business den 14 april 2026 — från gratis MDM och Blueprints till betalda tillägg och migrering.">
-<meta property="og:image" content="https://chen.ist/assets/images/stock/team-macbooks.webp">
+<meta property="og:title" content="Bästa praxis för cybersäkerhet 2025 – chen.ist">
+<meta property="og:description" content="Viktiga cybersäkerhetspraxis som varje organisation bör implementera för att skydda sig mot de föränderliga hoten 2025.">
+<meta property="og:image" content="https://chen.ist/assets/images/stock/cybersecurity-monitor.webp">
 <meta property="og:site_name" content="chen.ist">
-<meta name="twitter:title" content="Apple Business: Vad SMF behöver veta – chen.ist">
-<meta name="twitter:description" content="Allt SMF behöver veta om lanseringen av Apple Business den 14 april 2026 — från gratis MDM och Blueprints till betalda tillägg och migrering.">
-<meta name="twitter:image" content="https://chen.ist/assets/images/stock/team-macbooks.webp">
+<meta name="twitter:title" content="Bästa praxis för cybersäkerhet 2025 – chen.ist">
+<meta name="twitter:description" content="Viktiga cybersäkerhetspraxis som varje organisation bör implementera för att skydda sig mot de föränderliga hoten 2025.">
+<meta name="twitter:image" content="https://chen.ist/assets/images/stock/cybersecurity-monitor.webp">
 <meta name="twitter:card" content="summary_large_image">
 </head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
@@ -686,28 +721,18 @@ document.addEventListener('DOMContentLoaded', function() {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#en-enda-plattform-för-allt-apple-på-jobbet" id="toc-en-enda-plattform-för-allt-apple-på-jobbet" class="nav-link active" data-scroll-target="#en-enda-plattform-för-allt-apple-på-jobbet">En enda plattform för allt Apple på jobbet</a></li>
-  <li><a href="#vad-du-får-gratis" id="toc-vad-du-får-gratis" class="nav-link" data-scroll-target="#vad-du-får-gratis">Vad du får gratis</a>
+  <li><a href="#det-föränderliga-hotlandskapet" id="toc-det-föränderliga-hotlandskapet" class="nav-link active" data-scroll-target="#det-föränderliga-hotlandskapet">Det föränderliga hotlandskapet</a>
   <ul class="collapse">
-  <li><a href="#inbyggd-mdm-och-blueprints" id="toc-inbyggd-mdm-och-blueprints" class="nav-link" data-scroll-target="#inbyggd-mdm-och-blueprints">Inbyggd MDM och Blueprints</a></li>
-  <li><a href="#hanterade-apple-konton" id="toc-hanterade-apple-konton" class="nav-link" data-scroll-target="#hanterade-apple-konton">Hanterade Apple-konton</a></li>
-  <li><a href="#företagsmail-kalender-och-katalog" id="toc-företagsmail-kalender-och-katalog" class="nav-link" data-scroll-target="#företagsmail-kalender-och-katalog">Företagsmail, kalender och katalog</a></li>
+  <li><a href="#multifaktorautentisering-mfa" id="toc-multifaktorautentisering-mfa" class="nav-link" data-scroll-target="#multifaktorautentisering-mfa">Multifaktorautentisering (MFA)</a></li>
+  <li><a href="#zero-trust-arkitektur" id="toc-zero-trust-arkitektur" class="nav-link" data-scroll-target="#zero-trust-arkitektur">Zero Trust-arkitektur</a></li>
+  <li><a href="#regelbundna-säkerhetsuppdateringar" id="toc-regelbundna-säkerhetsuppdateringar" class="nav-link" data-scroll-target="#regelbundna-säkerhetsuppdateringar">Regelbundna säkerhetsuppdateringar</a></li>
+  <li><a href="#utbildning-i-säkerhetsmedvetenhet" id="toc-utbildning-i-säkerhetsmedvetenhet" class="nav-link" data-scroll-target="#utbildning-i-säkerhetsmedvetenhet">Utbildning i säkerhetsmedvetenhet</a></li>
+  <li><a href="#datakryptering" id="toc-datakryptering" class="nav-link" data-scroll-target="#datakryptering">Datakryptering</a></li>
   </ul></li>
-  <li><a href="#varumärkeshantering-över-apples-tjänster" id="toc-varumärkeshantering-över-apples-tjänster" class="nav-link" data-scroll-target="#varumärkeshantering-över-apples-tjänster">Varumärkeshantering över Apples tjänster</a>
+  <li><a href="#implementera-en-omfattande-säkerhetsstrategi" id="toc-implementera-en-omfattande-säkerhetsstrategi" class="nav-link" data-scroll-target="#implementera-en-omfattande-säkerhetsstrategi">Implementera en omfattande säkerhetsstrategi</a></li>
+  <li><a href="#slutsats" id="toc-slutsats" class="nav-link" data-scroll-target="#slutsats">Slutsats</a>
   <ul class="collapse">
-  <li><a href="#apple-maps-wallet-och-mail" id="toc-apple-maps-wallet-och-mail" class="nav-link" data-scroll-target="#apple-maps-wallet-och-mail">Apple Maps, Wallet och Mail</a></li>
-  <li><a href="#tap-to-pay-på-iphone" id="toc-tap-to-pay-på-iphone" class="nav-link" data-scroll-target="#tap-to-pay-på-iphone">Tap to Pay på iPhone</a></li>
-  <li><a href="#annonser-på-apple-maps" id="toc-annonser-på-apple-maps" class="nav-link" data-scroll-target="#annonser-på-apple-maps">Annonser på Apple Maps</a></li>
-  </ul></li>
-  <li><a href="#valfria-betalda-tillägg" id="toc-valfria-betalda-tillägg" class="nav-link" data-scroll-target="#valfria-betalda-tillägg">Valfria betalda tillägg</a>
-  <ul class="collapse">
-  <li><a href="#icloud-lagring-för-företag" id="toc-icloud-lagring-för-företag" class="nav-link" data-scroll-target="#icloud-lagring-för-företag">iCloud-lagring för företag</a></li>
-  <li><a href="#applecare-för-företag" id="toc-applecare-för-företag" class="nav-link" data-scroll-target="#applecare-för-företag">AppleCare+ för företag</a></li>
-  </ul></li>
-  <li><a href="#migreringsväg-från-äldre-tjänster" id="toc-migreringsväg-från-äldre-tjänster" class="nav-link" data-scroll-target="#migreringsväg-från-äldre-tjänster">Migreringsväg från äldre tjänster</a></li>
-  <li><a href="#hur-chen.ist-kan-hjälpa" id="toc-hur-chen.ist-kan-hjälpa" class="nav-link" data-scroll-target="#hur-chen.ist-kan-hjälpa">Hur chen.ist kan hjälpa</a>
-  <ul class="collapse">
-  <li><a href="#redo-att-konfigurera-apple-business" id="toc-redo-att-konfigurera-apple-business" class="nav-link" data-scroll-target="#redo-att-konfigurera-apple-business">Redo att konfigurera Apple Business?</a></li>
+  <li><a href="#vill-du-veta-mer" id="toc-vill-du-veta-mer" class="nav-link" data-scroll-target="#vill-du-veta-mer">Vill du veta mer?</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -718,17 +743,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Apple Business: Vad SMF behöver veta</h1>
+<h1 class="title">Bästa praxis för cybersäkerhet 2025</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Apple</div>
-    <div class="quarto-category">Digital Infrastructure</div>
-    <div class="quarto-category">SMB</div>
+    <div class="quarto-category">Cybersäkerhet</div>
+    <div class="quarto-category">Bästa Praxis</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Allt SMF behöver veta om lanseringen av Apple Business den 14 april 2026 — från gratis MDM och Blueprints till betalda tillägg och migrering.
+    Viktiga cybersäkerhetspraxis som varje organisation bör implementera för att skydda sig mot de föränderliga hoten 2025.
   </div>
 </div>
 
@@ -745,7 +769,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 25, 2026</p>
+      <p class="date">April 1, 2025</p>
     </div>
   </div>
   
@@ -758,99 +782,67 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <div class="text-center mb-4">
-  <img loading="lazy" src="../../assets/images/stock/team-macbooks.webp" alt="Article cover" class="img-fluid rounded shadow" style="max-height: 400px; width: 100%; object-fit: cover;">
+  <img loading="lazy" src="../../assets/images/stock/cybersecurity-monitor.webp" alt="Article cover" class="img-fluid rounded shadow" style="max-height: 400px; width: 100%; object-fit: cover;">
 </div>
-<section id="en-enda-plattform-för-allt-apple-på-jobbet" class="level2">
-<h2 class="anchored" data-anchor-id="en-enda-plattform-för-allt-apple-på-jobbet">En enda plattform för allt Apple på jobbet</h2>
-<p>Den 14 april 2026 slår Apple samman Apple Business Manager, Apple Business Essentials och Apple Business Connect till en enda enhetlig plattform: <strong>Apple Business</strong>. För små och medelstora företag som redan investerat i Apples ekosystem är detta en betydande förändring som förenklar hantering, driftsättning och varumärkesnärvaro — allt från en enda konsol.</p>
-<p>Om din organisation använder någon av Apples företagstjänster idag är migrering inte valfritt. De äldre tjänsterna avvecklas den 14 april. Här är vad du behöver veta.</p>
+<section id="det-föränderliga-hotlandskapet" class="level2">
+<h2 class="anchored" data-anchor-id="det-föränderliga-hotlandskapet">Det föränderliga hotlandskapet</h2>
+<p>Under 2025 fortsätter cybersäkerhetslandskapet att utvecklas i snabb takt. Hotaktörer blir allt mer sofistikerade och attacker blir alltmer riktade och komplexa. I detta inlägg utforskar vi de viktigaste cybersäkerhetspraxis som varje organisation bör implementera för att skydda sig mot dessa föränderliga hot.</p>
+<section id="multifaktorautentisering-mfa" class="level3">
+<h3 class="anchored" data-anchor-id="multifaktorautentisering-mfa">Multifaktorautentisering (MFA)</h3>
+<p>Multifaktorautentisering förblir en av de mest effektiva säkerhetsåtgärderna för att förhindra obehörig åtkomst. Genom att kräva flera former av verifiering minskar MFA avsevärt risken för kontokompromittering.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exempel: Implementera MFA i en Python-applikation</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> login(username, password, second_factor):</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    user <span class="op">=</span> authenticate_credentials(username, password)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> user <span class="kw">and</span> verify_second_factor(user, second_factor):</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> generate_session(user)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">None</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="vad-du-får-gratis" class="level2">
-<h2 class="anchored" data-anchor-id="vad-du-får-gratis">Vad du får gratis</h2>
-<p>Apple Business basplattform är tillgänglig utan kostnad och inkluderar en överraskande kapabel uppsättning verktyg.</p>
-<section id="inbyggd-mdm-och-blueprints" class="level3">
-<h3 class="anchored" data-anchor-id="inbyggd-mdm-och-blueprints">Inbyggd MDM och Blueprints</h3>
-<p>Apple Business inkluderar inbyggd hantering av mobila enheter (MDM) med <strong>Blueprints</strong>, ett zero-touch-driftsättningssystem som låter dig förkonfigurera enheter innan de ens når dina anställda. Definiera säkerhetspolicyer, installera appar, konfigurera Wi-Fi- och VPN-inställningar och tilldela enheter till team — allt utan att behöva röra varje enhet individuellt.</p>
-<p>För SMF som tidigare förlitade sig på MDM-lösningar från tredje part eller manuell konfiguration kan enbart detta spara timmar per enhet.</p>
+<section id="zero-trust-arkitektur" class="level3">
+<h3 class="anchored" data-anchor-id="zero-trust-arkitektur">Zero Trust-arkitektur</h3>
+<p>Den traditionella perimeterbaserade säkerhetsmodellen är inte längre tillräcklig. Zero Trust utgår från att hot existerar både inom och utanför nätverket, och kräver verifiering av alla som försöker komma åt resurser.</p>
+<p>Nyckelprinciper för Zero Trust inkluderar:</p>
+<ul>
+<li>Verifiera uttryckligen</li>
+<li>Använd åtkomst med lägsta behörighet</li>
+<li>Utgå från intrång</li>
+</ul>
 </section>
-<section id="hanterade-apple-konton" class="level3">
-<h3 class="anchored" data-anchor-id="hanterade-apple-konton">Hanterade Apple-konton</h3>
-<p>Varje anställd får ett <strong>Hanterat Apple-konto</strong> kopplat till din organisation. Dessa konton är separata från personliga Apple-ID:n, vilket ger ditt företag kontroll över företagsdata samtidigt som de anställdas integritet respekteras. Hanterade konton integreras med identitetsleverantörer via federerad autentisering, så du kan koppla dem till din befintliga SSO-infrastruktur.</p>
-</section>
-<section id="företagsmail-kalender-och-katalog" class="level3">
-<h3 class="anchored" data-anchor-id="företagsmail-kalender-och-katalog">Företagsmail, kalender och katalog</h3>
-<p>Apple Business tillhandahåller företagsmail, delade kalendrar och en företagskatalog på din <strong>egna domän</strong>. Detta är ett meningsfullt alternativ till produktivitetssviter från tredje part för team som vill stanna helt inom Apples ekosystem.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Viktigt:</strong> Funktionerna för företagsmail och kalender kräver enheter som kör iOS 26, iPadOS 26 eller macOS 26, som levereras senare under 2026. Planera din uppgraderingstidslinje för enheter därefter.</p>
-</div>
+<section id="regelbundna-säkerhetsuppdateringar" class="level3">
+<h3 class="anchored" data-anchor-id="regelbundna-säkerhetsuppdateringar">Regelbundna säkerhetsuppdateringar</h3>
+<p>Att hålla system och programvara uppdaterade är avgörande. Många framgångsrika attacker utnyttjar kända sårbarheter som redan har patchats.</p>
+<div class="security-feature">
+<p><strong>Snabbtips:</strong> Implementera automatiserad patchhantering för att säkerställa snabba uppdateringar i hela din organisation.</p>
 </div>
 </section>
+<section id="utbildning-i-säkerhetsmedvetenhet" class="level3">
+<h3 class="anchored" data-anchor-id="utbildning-i-säkerhetsmedvetenhet">Utbildning i säkerhetsmedvetenhet</h3>
+<p>Mänskliga fel förblir en betydande faktor vid säkerhetsintrång. Regelbunden utbildning i säkerhetsmedvetenhet hjälper anställda att känna igen och reagera lämpligt på säkerhetshot som phishing.</p>
 </section>
-<section id="varumärkeshantering-över-apples-tjänster" class="level2">
-<h2 class="anchored" data-anchor-id="varumärkeshantering-över-apples-tjänster">Varumärkeshantering över Apples tjänster</h2>
-<p>Apple Business samlar varumärkesnärvarohantering som tidigare var utspridd över Apple Business Connect och andra verktyg.</p>
-<section id="apple-maps-wallet-och-mail" class="level3">
-<h3 class="anchored" data-anchor-id="apple-maps-wallet-och-mail">Apple Maps, Wallet och Mail</h3>
-<p>Från Apple Business-konsolen kan du hantera ditt företags listningar på <strong>Apple Maps</strong>, skapa varumärkesprofilerade pass för <strong>Apple Wallet</strong> (lojalitetskort, evenemangsbiljetter, boardingkort) och konfigurera din verifierade varumärkesidentitet i <strong>Apple Mail</strong>. För kundorienterade företag är detta ett enkelt sätt att upprätthålla ett konsekvent varumärke vid varje Apple-kontaktpunkt.</p>
-</section>
-<section id="tap-to-pay-på-iphone" class="level3">
-<h3 class="anchored" data-anchor-id="tap-to-pay-på-iphone">Tap to Pay på iPhone</h3>
-<p><strong>Tap to Pay på iPhone</strong> är integrerat direkt i Apple Business, vilket gör att du kan ta emot kontaktlösa betalningar utan extra hårdvara. För detaljhandel, tjänsteföretag och fältverksamheter eliminerar detta behovet av separata avtal och hårdvara för betalningsterminal.</p>
-</section>
-<section id="annonser-på-apple-maps" class="level3">
-<h3 class="anchored" data-anchor-id="annonser-på-apple-maps">Annonser på Apple Maps</h3>
-<p>Från och med sommaren 2026 kommer företag i USA och Kanada att kunna köpa <strong>annonsplatser på Apple Maps</strong>. Information om prissättning och målgruppsstyrning är fortfarande under utveckling, men detta representerar en ny lokal upptäcktskanal som är värd att bevaka.</p>
+<section id="datakryptering" class="level3">
+<h3 class="anchored" data-anchor-id="datakryptering">Datakryptering</h3>
+<p>Kryptera känslig data både i vila och under överföring. Detta säkerställer att även om data komprometteras förblir den oläsbar utan rätt dekrypteringsnycklar.</p>
 </section>
 </section>
-<section id="valfria-betalda-tillägg" class="level2">
-<h2 class="anchored" data-anchor-id="valfria-betalda-tillägg">Valfria betalda tillägg</h2>
-<p>Medan kärnplattformen är gratis erbjuder Apple två betalda nivåer för ytterligare tjänster.</p>
-<section id="icloud-lagring-för-företag" class="level3">
-<h3 class="anchored" data-anchor-id="icloud-lagring-för-företag">iCloud-lagring för företag</h3>
-<p>Ytterligare iCloud-lagring för Hanterade Apple-konton börjar på <strong>0,99 $ per användare och månad</strong>. Detta täcker molnlagring för dokument, säkerhetskopior och samarbetsfunktioner kopplade till företagskontot. Prissättningen skalas med lagringsnivåer, liknande iCloud+-planer för konsumenter.</p>
-</section>
-<section id="applecare-för-företag" class="level3">
-<h3 class="anchored" data-anchor-id="applecare-för-företag">AppleCare+ för företag</h3>
-<p>Enhetsskydd genom <strong>AppleCare+ för företag</strong> kostar mellan <strong>6,99 $ och 13,99 $ per enhet och månad</strong>, beroende på enhetstyp. Detta täcker oavsiktlig skada, batteribyte och prioriterad support. För organisationer med betydande hårdvaruinvesteringar kan den månatliga per-enhets-modellen vara mer förutsägbar än att hantera reparationer ad hoc.</p>
-</section>
-</section>
-<section id="migreringsväg-från-äldre-tjänster" class="level2">
-<h2 class="anchored" data-anchor-id="migreringsväg-från-äldre-tjänster">Migreringsväg från äldre tjänster</h2>
-<p>Om din organisation för närvarande använder Apple Business Manager, Apple Business Essentials eller Apple Business Connect behöver du migrera före den 14 april 2026. Apple har publicerat migreringsguider för varje tjänst, och i de flesta fall innebär övergången att du loggar in på Apple Business med dina befintliga inloggningsuppgifter och följer den guidade konfigurationen.</p>
-<p>Viktiga migreringsöverväganden:</p>
+<section id="implementera-en-omfattande-säkerhetsstrategi" class="level2">
+<h2 class="anchored" data-anchor-id="implementera-en-omfattande-säkerhetsstrategi">Implementera en omfattande säkerhetsstrategi</h2>
+<p>En holistisk säkerhetsmetod involverar flera lager av skydd:</p>
 <ol type="1">
-<li><strong>Apple Business Manager-användare</strong>: Enhetsregistreringar och apptilldelningar överförs, men granska dina MDM-konfigurationer mot det nya Blueprints-systemet</li>
-<li><strong>Apple Business Essentials-användare</strong>: Dina befintliga enhetshanteringspolicyer migreras, men verifiera att alla inställningar överfördes korrekt</li>
-<li><strong>Apple Business Connect-användare</strong>: Varumärkesinformation och platsdata bör migreras automatiskt, men granska dina listningar efter övergången</li>
-<li><strong>MDM från tredje part</strong>: Om du använder en MDM från tredje part tillsammans med Apples verktyg, bekräfta kompatibilitet med de nya Apple Business-API:erna</li>
+<li><strong>Riskbedömning</strong>: Utvärdera regelbundet er säkerhetsställning</li>
+<li><strong>Försvar på djupet</strong>: Implementera flera säkerhetskontroller</li>
+<li><strong>Incidentrespons</strong>: Förbered er för säkerhetsincidenter</li>
+<li><strong>Regelbunden testning</strong>: Genomför penetrationstester och säkerhetsbedömningar</li>
 </ol>
 </section>
-<section id="hur-chen.ist-kan-hjälpa" class="level2">
-<h2 class="anchored" data-anchor-id="hur-chen.ist-kan-hjälpa">Hur chen.ist kan hjälpa</h2>
-<p>På chen.ist har vi arbetat med Apple Business sedan programmet för tidig åtkomst och är redo att hjälpa SMF att navigera denna övergång. Våra tjänster inkluderar:</p>
-<ul>
-<li><strong>Migreringsplanering</strong> från äldre Apple-tjänster till Apple Business</li>
-<li><strong>Blueprints-konfiguration</strong> för zero-touch-driftsättning av enheter</li>
-<li><strong>Identitetsintegrering</strong> som kopplar Hanterade Apple-konton med din befintliga SSO-leverantör</li>
-<li><strong>Varumärkeskonfiguration</strong> på Apple Maps, Wallet och Mail</li>
-<li><strong>Löpande hantering</strong> och support för din Apple Business-miljö</li>
-</ul>
-<p>Oavsett om du börjar från början eller migrerar från en befintlig konfiguration kan vi hjälpa dig att få ut det mesta av plattformen från dag ett.</p>
+<section id="slutsats" class="level2">
+<h2 class="anchored" data-anchor-id="slutsats">Slutsats</h2>
+<p>Cybersäkerhet är en pågående process, inte ett engångsprojekt. Genom att implementera dessa bästa praxis och förbli vaksam kan organisationer avsevärt minska sina säkerhetsrisker i dagens utmanande hotmiljö.</p>
+<p>För mer information eller hjälp med att implementera dessa rutiner, <a href="../../sv/booking/" target="_blank">kontakta vårt säkerhetsteam</a>.</p>
 <div class="card mt-5 mb-3">
-<section id="redo-att-konfigurera-apple-business" class="level3 card-body">
-<h3 class="anchored" data-anchor-id="redo-att-konfigurera-apple-business">Redo att konfigurera Apple Business?</h3>
-<p>Boka en kostnadsfri konsultation för att diskutera din migreringsplan och komma igång före deadline den 14 april.</p>
+<section id="vill-du-veta-mer" class="level3 card-body">
+<h3 class="anchored" data-anchor-id="vill-du-veta-mer">Vill du veta mer?</h3>
+<p>Delta i vårt kommande webbinarium om avancerade cybersäkerhetsstrategier där vi fördjupar oss i dessa ämnen och ger handlingsbara insikter för din organisation.</p>
 <div class="text-center mt-3">
-<p><a href="../../sv/booking/" class="m-b" target="_blank">Boka en konsultation</a></p>
+<p><a href="../../sv/booking/" class="m-b" target="_blank">Registrera dig nu</a></p>
 </div>
 </section>
 </div>
@@ -1363,10 +1355,9 @@ footer a { -webkit-tap-highlight-color: transparent; }
   document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
     var href = a.getAttribute('href');
     if (href && href.startsWith('/') && !href.startsWith('//')) {
-      // Swedish blog is at /sv/blogg.html, not /sv/blog.html
-      if (lang === 'sv' && href === '/blog.html') {
-        a.setAttribute('href', '/sv/blogg.html');
-      } else {
+
+
+
         a.setAttribute('href', prefix + href);
       }
     }

@@ -17,7 +17,164 @@
 <width>144</width>
 </image>
 <generator>quarto-1.8.26</generator>
-<lastBuildDate>Wed, 25 Mar 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 26 Mar 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Open Source in Europa: Wie Nextcloud und LibreOffice proprietäre Software ersetzen</title>
+  <dc:creator>CHENIST-Team </dc:creator>
+  <link>https://chen.ist/de/blog/open-source-europe-nextcloud-libreoffice.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><img src="https://chen.ist/assets/images/stock/cloud-sky.webp" class="rounded shadow img-fluid" style="width:100.0%"></p>
+<section id="warum-europa-auf-open-source-umsteigt" class="level2">
+<h2 class="anchored" data-anchor-id="warum-europa-auf-open-source-umsteigt">Warum Europa auf Open Source umsteigt</h2>
+<p>In europäischen Regierungen und öffentlichen Institutionen geschieht etwas Bedeutsames. Nach Jahrzehnten, in denen proprietäre Software von US-amerikanischen Anbietern die Standardwahl war, vollziehen immer mehr Länder bewusste, politisch gesteuerte Übergänge zu Open-Source-Alternativen. Dies ist keine Randbewegung — es geschieht auf der Ebene von Bundesregierungen, Verteidigungsministerien und der Europäischen Kommission selbst.</p>
+<p>Die Motivationen sind konkret und überschneiden sich.</p>
+<section id="digitale-souveränität" class="level3">
+<h3 class="anchored" data-anchor-id="digitale-souveränität">Digitale Souveränität</h3>
+<p>Das Konzept der digitalen Souveränität — die Fähigkeit einer Regierung oder Organisation, ihre eigene digitale Infrastruktur zu kontrollieren — ist zu einem zentralen politischen Anliegen in Europa geworden. Wenn kritische Regierungsoperationen von Software abhängen, die von Unternehmen kontrolliert wird, die ausländischen Rechtsordnungen unterliegen, besteht ein inhärentes Risiko. Der US CLOUD Act kann beispielsweise amerikanische Unternehmen zwingen, Daten herauszugeben, die überall auf der Welt gespeichert sind. Für europäische Institutionen, die sensible Bürgerdaten verarbeiten, ist dies kein theoretisches Anliegen.</p>
+<p>Open-Source-Software beseitigt diese Abhängigkeit. Der Code ist überprüfbar, das Hosting kann lokal erfolgen und kein einzelner Anbieter hält die Schlüssel in der Hand.</p>
+</section>
+<section id="dsgvo-konformität" class="level3">
+<h3 class="anchored" data-anchor-id="dsgvo-konformität">DSGVO-Konformität</h3>
+<p>Die Datenschutz-Grundverordnung verlangt, dass personenbezogene Daten von EU-Bürgern mit spezifischen Schutzmaßnahmen behandelt werden. Wenn Daten über Cloud-Dienste fließen, die von Nicht-EU-Unternehmen betrieben werden, wird die Einhaltung kompliziert. Selbst gehostete Open-Source-Lösungen ermöglichen es Organisationen, Daten auf EU-Boden, unter EU-Gerichtsbarkeit und mit voller Transparenz darüber zu halten, wie sie verarbeitet werden.</p>
+</section>
+<section id="kosten-im-großen-maßstab" class="level3">
+<h3 class="anchored" data-anchor-id="kosten-im-großen-maßstab">Kosten im großen Maßstab</h3>
+<p>Organisationen des öffentlichen Sektors operieren in enormem Maßstab. Allein die deutsche Bundesregierung beschäftigt über 300.000 Mitarbeiter. In diesem Maßstab stellen Lizenzgebühren pro Benutzer für Office-Pakete, Cloud-Speicher und Kollaborationstools erhebliche wiederkehrende Kosten dar. Open-Source-Alternativen haben keine Lizenzgebühren pro Arbeitsplatz. Die Kosten verlagern sich auf Bereitstellung, Anpassung und Support — Bereiche, in denen europäische IT-Unternehmen wettbewerbsfähig sind und in denen die Ausgaben in der EU-Wirtschaft bleiben.</p>
+</section>
+<section id="sicherheit-durch-transparenz" class="level3">
+<h3 class="anchored" data-anchor-id="sicherheit-durch-transparenz">Sicherheit durch Transparenz</h3>
+<p>Proprietäre Software funktioniert als Blackbox. Benutzer vertrauen darauf, dass der Anbieter keine Schwachstellen, keine Hintertüren und keine undokumentierte Datenerfassung hat. Open-Source-Software ermöglicht unabhängige Sicherheitsaudits. Regierungen können — und tun es — den Code inspizieren, der auf ihrer Infrastruktur läuft. Es geht nicht um Misstrauen gegenüber Anbietern; es geht um überprüfbares Vertrauen statt angenommenem Vertrauen.</p>
+</section>
+<section id="eu-politik-die-open-source-strategie" class="level3">
+<h3 class="anchored" data-anchor-id="eu-politik-die-open-source-strategie">EU-Politik: Die Open-Source-Strategie</h3>
+<p>Die Europäische Kommission hat ihre <a href="https://commission.europa.eu/about-european-commission/departments-and-executive-agencies/informatics/open-source-software-strategy_en">Open-Source-Software-Strategie 2020-2023</a> verabschiedet, die ausdrücklich die Nutzung von Open-Source-Lösungen in EU-Institutionen fördert. Die Strategie legte das Prinzip „Think Open” als Standardansatz für neue IT-Lösungen fest und verpflichtete die Kommission, zum Open-Source-Ökosystem beizutragen. Diese Strategie wurde seitdem erweitert und verstärkt, wobei Open Source zu einem integralen Bestandteil der digitalen Politik der EU geworden ist und kein nachträglicher Gedanke mehr.</p>
+</section>
+</section>
+<section id="nextcloud-die-europäische-cloud-alternative" class="level2">
+<h2 class="anchored" data-anchor-id="nextcloud-die-europäische-cloud-alternative">Nextcloud: Die europäische Cloud-Alternative</h2>
+<p><a href="https://nextcloud.com">Nextcloud</a> ist eine selbst gehostete Plattform für Dateisynchronisation, Zusammenarbeit und Kommunikation. Das Unternehmen hat seinen Hauptsitz in Stuttgart, Deutschland, und wird hauptsächlich von einem europäischen Team entwickelt. Es bietet Funktionalität vergleichbar mit Google Workspace oder Microsoft 365 — Dateispeicherung, Kalender, Kontakte, Videoanrufe, Dokumentenzusammenarbeit, Projektmanagement — aber die Daten bleiben auf der Infrastruktur, die Sie kontrollieren.</p>
+<p>Was Nextcloud im europäischen Kontext besonders relevant macht, ist nicht nur der Funktionsumfang, sondern das Bereitstellungsmodell. Es ist von Grund auf für On-Premises- oder Private-Cloud-Hosting konzipiert, wodurch die DSGVO-Konformität durch Design und nicht durch Vertrag gewährleistet wird.</p>
+<section id="deutschland-die-bundescloud" class="level3">
+<h3 class="anchored" data-anchor-id="deutschland-die-bundescloud">Deutschland: Die Bundescloud</h3>
+<p>Die deutsche Bundesverwaltung hat Nextcloud als Grundlage ihrer „Bundescloud” eingesetzt — einer sicheren Cloud-Plattform für über 300.000 Bundesbedienstete. Dies ist eine der größten Nextcloud-Implementierungen der Welt und stellt eine bewusste Entscheidung auf höchster Regierungsebene dar, für interne Zusammenarbeit und Dateifreigabe von US-Cloud-Anbietern abzurücken. Die Implementierung wird vom Informationstechnikzentrum Bund (ITZBund) verwaltet, was der Regierung die volle Kontrolle über ihre Daten und Infrastruktur gibt.</p>
+<p>Quelle: <a href="https://nextcloud.com/blog/german-federal-administration-relies-on-nextcloud/">Nextcloud — Deutsche Bundesverwaltung</a></p>
+</section>
+<section id="frankreich-die-regierungscloud-nubo" class="level3">
+<h3 class="anchored" data-anchor-id="frankreich-die-regierungscloud-nubo">Frankreich: Die Regierungscloud „Nubo”</h3>
+<p>Die französische Regierung wählte Nextcloud als Basis für ihre interministerielle Cloud-Plattform, die sichere Dateifreigabe und Zusammenarbeit zwischen Regierungsministerien ermöglicht. Frankreich war besonders aggressiv in seinem Streben nach digitaler Souveränität, wobei die Direction Interministérielle du Numérique (DINUM) die Bemühungen zur Verringerung der Abhängigkeit von ausländischen Cloud-Diensten anführt. Die Wahl von Nextcloud fügt sich in eine breitere Strategie ein, die Open-Source-Messaging, Identitätsmanagement und kollaborative Tools im gesamten französischen Staat umfasst.</p>
+<p>Quelle: <a href="https://nextcloud.com/blog/french-government-chooses-nextcloud/">Nextcloud — Französische Regierung</a></p>
+</section>
+<section id="schweden-und-die-niederlande" class="level3">
+<h3 class="anchored" data-anchor-id="schweden-und-die-niederlande">Schweden und die Niederlande</h3>
+<p>Mehrere schwedische Kommunen haben Nextcloud für die interne Zusammenarbeit eingeführt, getrieben von Datenschutzanforderungen und dem Wunsch, Bürgerdaten unter lokaler Kontrolle zu halten. In den Niederlanden haben Regierungsbehörden sich ebenfalls Nextcloud zugewandt, als Teil breiterer Bemühungen zur Einhaltung von Datenschutzvorschriften und zur Verringerung der Abhängigkeit von US-amerikanischen Cloud-Diensten. Dies sind keine experimentellen Pilotprogramme — es sind Produktivsysteme, die Tausende von Beamten bedienen.</p>
+</section>
+<section id="warum-gerade-nextcloud" class="level3">
+<h3 class="anchored" data-anchor-id="warum-gerade-nextcloud">Warum gerade Nextcloud</h3>
+<p>Die Attraktivität von Nextcloud im europäischen öffentlichen Sektor beruht auf einigen Faktoren: Es ist ein europäisches Unternehmen, das dem EU-Recht unterliegt. Es ist vollständig selbst gehostet, sodass die Datenresidenz garantiert ist. Es verfügt über ein aktives Enterprise-Support-Modell, sodass Organisationen nicht ohne professionelle Unterstützung bleiben. Und seine Funktionalität ist breit genug, um mehrere proprietäre Tools durch eine einzige Plattform zu ersetzen.</p>
+</section>
+</section>
+<section id="libreoffice-der-open-document-standard" class="level2">
+<h2 class="anchored" data-anchor-id="libreoffice-der-open-document-standard">LibreOffice: Der Open-Document-Standard</h2>
+<p><a href="https://www.libreoffice.org">LibreOffice</a> ist das führende Open-Source-Office-Paket, entwickelt von <a href="https://www.documentfoundation.org">The Document Foundation</a>, einer gemeinnützigen Organisation mit Sitz in Berlin. Es umfasst eine Textverarbeitung, eine Tabellenkalkulationsanwendung, Präsentationssoftware und mehr. Es liest und schreibt Microsoft Office-Formate und unterstützt nativ das Open Document Format (ODF), ein ISO-standardisiertes Dateiformat und das Standard-Dokumentenformat mehrerer EU-Mitgliedstaaten.</p>
+<p>Die Einführung von LibreOffice in europäischen Institutionen wird von denselben Faktoren wie bei Nextcloud angetrieben — Souveränität, Kosten und Interoperabilität — aber mit einer zusätzlichen Dimension: Unabhängigkeit vom Dokumentenformat. Wenn eine Regierung auf ODF standardisiert, ist sie nicht mehr auf die Software eines bestimmten Anbieters angewiesen, um ihre eigenen Dokumente zu lesen.</p>
+<section id="italien-verteidigungsministerium-und-kommunalverwaltungen" class="level3">
+<h3 class="anchored" data-anchor-id="italien-verteidigungsministerium-und-kommunalverwaltungen">Italien: Verteidigungsministerium und Kommunalverwaltungen</h3>
+<p>Das italienische Verteidigungsministerium migrierte etwa 150.000 Arbeitsplätze auf LibreOffice, was es zu einer der größten Einzelorganisations-Migrationen in Europa macht. Die Entscheidung wurde durch Kosteneinsparungen und den Wunsch nach offenen Standards getrieben. Über die nationale Ebene hinaus haben auch italienische Kommunen, darunter die Stadt Bari und die Stadt Pesaro, auf LibreOffice migriert, was zeigt, dass der Ansatz von großen Ministerien bis hin zur Kommunalverwaltung skaliert.</p>
+</section>
+<section id="deutschland-münchen-und-schleswig-holstein" class="level3">
+<h3 class="anchored" data-anchor-id="deutschland-münchen-und-schleswig-holstein">Deutschland: München und Schleswig-Holstein</h3>
+<p>Das LiMux-Projekt der Stadt München ist wohl die am meisten untersuchte — und am meisten diskutierte — Open-Source-Migration der Geschichte. München migrierte in den 2000er Jahren etwa 15.000 Arbeitsplätze von Windows und Microsoft Office auf Linux und LibreOffice und kehrte dann 2017 unter einer neuen Stadtverwaltung kontrovers um. Die Umkehr wurde weithin politischen statt technischen Faktoren zugeschrieben, und München hat seitdem seine Open-Source-Strategie überarbeitet.</p>
+<p>Jüngst kündigte die Landesregierung von Schleswig-Holstein eine umfassende Migration zu LibreOffice und anderen Open-Source-Tools auf ihren 25.000 Arbeitsplätzen an. Diese Migration, die 2024 angekündigt wurde, wird systematisch mit einem mehrjährigen Zeitplan durchgeführt und stellt eine neue Generation der Open-Source-Einführung dar, die aus den Erfahrungen Münchens gelernt hat.</p>
+</section>
+<section id="frankreich-die-gendarmerie" class="level3">
+<h3 class="anchored" data-anchor-id="frankreich-die-gendarmerie">Frankreich: Die Gendarmerie</h3>
+<p>Die französische Nationalgendarmerie, die militärische Polizeitruppe mit über 100.000 Angehörigen, migrierte ab 2005 mehr als 70.000 Arbeitsplätze auf Linux und LibreOffice. Dies ist eine der am längsten laufenden und erfolgreichsten großflächigen Open-Source-Implementierungen in einer Regierung weltweit. Die Gendarmerie hat erhebliche Kosteneinsparungen und verbesserte operative Unabhängigkeit gemeldet, und die Migration wurde über mehrere Regierungswechsel hinweg beibehalten — ein starker Indikator für institutionelle Zufriedenheit.</p>
+</section>
+<section id="spanien-regionalregierungen" class="level3">
+<h3 class="anchored" data-anchor-id="spanien-regionalregierungen">Spanien: Regionalregierungen</h3>
+<p>Die Region Valencia und die Autonome Gemeinschaft Extremadura in Spanien waren frühe Anwender von Open-Source-Software in Bildung und Verwaltung. Extremadura entwickelte seine eigene Linux-Distribution (LinEx) für Schulen und Regierungsbüros, und Valencia hat ein starkes Engagement für Open-Source-Tools einschließlich LibreOffice in seiner gesamten Regionalverwaltung beibehalten.</p>
+</section>
+<section id="der-odf-standard" class="level3">
+<h3 class="anchored" data-anchor-id="der-odf-standard">Der ODF-Standard</h3>
+<p>Ein Schlüsselfaktor für die Einführung von LibreOffice ist das Open Document Format (ODF). Als ISO/IEC-Standard (26300) stellt ODF sicher, dass Dokumente nicht an die Implementierung eines einzelnen Anbieters gebunden sind. Mehrere EU-Mitgliedstaaten haben ODF als empfohlenes oder vorgeschriebenes Format für Regierungsdokumente übernommen. Diese Standardisierung ist entscheidend: Sie bedeutet, dass auch wenn eine Organisation LibreOffice nicht verwendet, sie dennoch Dokumente frei mit denen austauschen kann, die es tun.</p>
+</section>
+</section>
+<section id="wer-den-wandel-anführt" class="level2">
+<h2 class="anchored" data-anchor-id="wer-den-wandel-anführt">Wer den Wandel anführt</h2>
+<p>Die Umstellung auf Open Source in Europa geschieht nicht isoliert. Sie wird von einem wachsenden institutionellen Rahmen unterstützt.</p>
+<section id="das-ospo-der-europäischen-kommission" class="level3">
+<h3 class="anchored" data-anchor-id="das-ospo-der-europäischen-kommission">Das OSPO der Europäischen Kommission</h3>
+<p>Die Europäische Kommission hat ein Open Source Programme Office (OSPO) eingerichtet, um ihre Open-Source-Aktivitäten zu koordinieren, zu Upstream-Projekten beizutragen und EU-Institutionen bei der Open-Source-Einführung zu beraten. Das OSPO stellt ein institutionelles Engagement dar, das über einzelne Beschaffungsentscheidungen hinausgeht.</p>
+</section>
+<section id="gaia-x" class="level3">
+<h3 class="anchored" data-anchor-id="gaia-x">GAIA-X</h3>
+<p><a href="https://gaia-x.eu">GAIA-X</a> ist eine europäische Initiative zur Entwicklung einer föderierten Dateninfrastruktur auf Basis offener Standards und europäischer Werte. Obwohl nicht ausschließlich Open Source, priorisiert GAIA-X Interoperabilität, Transparenz und Datensouveränität — Prinzipien, die eng mit Open-Source-Ansätzen übereinstimmen. Ziel ist es, eine europäische Alternative zu Hyperscale-Cloud-Anbietern zu schaffen, die europäische Datenschutznormen respektiert.</p>
+</section>
+<section id="public-money-public-code" class="level3">
+<h3 class="anchored" data-anchor-id="public-money-public-code">Public Money, Public Code</h3>
+<p>Die <a href="https://fsfe.org">Free Software Foundation Europe</a> (FSFE) führt die Kampagne <a href="https://publiccode.eu">Public Money, Public Code</a> durch, die ein einfaches Prinzip vertritt: Software, die mit öffentlichen Geldern finanziert wird, sollte öffentlich als Open Source verfügbar sein. Die Kampagne hat Unterstützung von über 200 Organisationen und zahlreichen öffentlichen Verwaltungen erhalten. Die Logik ist einfach — wenn Steuerzahler Softwareentwicklung finanzieren, sollten die Ergebnisse allen zugutekommen und nicht als proprietärer Code eingesperrt werden.</p>
+</section>
+<section id="nationale-strategien" class="level3">
+<h3 class="anchored" data-anchor-id="nationale-strategien">Nationale Strategien</h3>
+<p>Einzelne EU-Mitgliedstaaten haben ihre eigenen Open-Source-Strategien entwickelt. Der deutsche Sovereign Tech Fund bietet direkte Finanzierung für kritische Open-Source-Infrastrukturprojekte. Frankreichs DINUM koordiniert die digitale Strategie im gesamten französischen Staat mit einem starken Open-Source-Mandat. Diese nationalen Bemühungen ergänzen die Politik auf EU-Ebene und schaffen eine mehrschichtige Unterstützungsstruktur für die Open-Source-Einführung.</p>
+</section>
+</section>
+<section id="was-das-für-ihr-unternehmen-bedeutet" class="level2">
+<h2 class="anchored" data-anchor-id="was-das-für-ihr-unternehmen-bedeutet">Was das für Ihr Unternehmen bedeutet</h2>
+<p>Wenn nationale Regierungen mit Hunderttausenden von Nutzern ihren Betrieb auf Nextcloud und LibreOffice laufen lassen, sind die Tools reif genug für ein Unternehmen jeder Größe. Die Frage ist nicht mehr, ob Open-Source-Alternativen produktionsreif sind — das sind sie. Die Frage ist, ob Ihre Organisation einen praktikablen Migrationsweg hat.</p>
+<section id="das-ökosystem-ist-bereit" class="level3">
+<h3 class="anchored" data-anchor-id="das-ökosystem-ist-bereit">Das Ökosystem ist bereit</h3>
+<p>Sowohl Nextcloud als auch LibreOffice bieten Enterprise-Support-Optionen, entweder direkt oder über zertifizierte Partner. Professionelle Bereitstellung, Migrationsunterstützung und laufender Support sind in ganz Europa verfügbar. Dies ist kein reines Community-Ökosystem — es ist ein kommerzielles Ökosystem, das auf Open-Source-Grundlagen aufgebaut ist.</p>
+</section>
+<section id="migration-ist-praktikabel" class="level3">
+<h3 class="anchored" data-anchor-id="migration-ist-praktikabel">Migration ist praktikabel</h3>
+<p>Der Umstieg von proprietären Tools muss nicht über Nacht erfolgen. Die meisten erfolgreichen Migrationen folgen einem schrittweisen Ansatz: Beginnen Sie mit neuen Projekten auf Open-Source-Tools, bewahren Sie die Kompatibilität mit bestehenden Formaten während einer Übergangsphase und migrieren Sie historische Daten nach einem praktischen Zeitplan. Die in diesem Artikel genannten Organisationen — von der französischen Gendarmerie bis zur deutschen Bundesregierung — sind alle diesem Muster gefolgt.</p>
+</section>
+<section id="es-geht-um-risikomanagement-nicht-um-ideologie" class="level3">
+<h3 class="anchored" data-anchor-id="es-geht-um-risikomanagement-nicht-um-ideologie">Es geht um Risikomanagement, nicht um Ideologie</h3>
+<p>Die europäische Umstellung auf Open Source wird durch praktisches Risikomanagement angetrieben: Verringerung der Anbieterbindung, Kostenkontrolle, Sicherstellung der Compliance und Wahrung der operativen Unabhängigkeit. Dieselbe Logik gilt für Unternehmen. Wenn Ihre Organisation von Tools abhängt, bei denen ein einzelner Anbieter einseitig Preise ändern, Funktionen einstellen oder Nutzungsbedingungen modifizieren kann, tragen Sie ein Risiko. Open-Source-Alternativen geben Ihnen Optionen.</p>
+<p>Für einen detaillierten Vergleich von Open-Source- und proprietären Tools besuchen Sie unsere <a href="../../compare.html">Vergleichsseite</a>. Um zu erkunden, wie eine Migration für Ihre Organisation aussehen könnte, besuchen Sie unsere Seite für <a href="../../digital/">digitale Dienstleistungen</a>.</p>
+</section>
+</section>
+<section id="ressourcen" class="level2">
+<h2 class="anchored" data-anchor-id="ressourcen">Ressourcen</h2>
+<ul>
+<li><a href="https://nextcloud.com">Nextcloud</a> — Selbst gehostete Plattform für Dateisynchronisation und Zusammenarbeit</li>
+<li><a href="https://www.libreoffice.org">LibreOffice</a> — Open-Source-Office-Paket</li>
+<li><a href="https://www.documentfoundation.org">The Document Foundation</a> — Gemeinnützige Organisation hinter LibreOffice</li>
+<li><a href="https://commission.europa.eu/about-european-commission/departments-and-executive-agencies/informatics/open-source-software-strategy_en">Open-Source-Strategie der Europäischen Kommission</a></li>
+<li><a href="https://publiccode.eu">Public Money, Public Code</a> — Kampagne für öffentlich finanzierte Open-Source-Software</li>
+<li><a href="https://gaia-x.eu">GAIA-X</a> — Europäische Initiative für Dateninfrastruktur</li>
+<li><a href="https://fsfe.org">Free Software Foundation Europe</a></li>
+</ul>
+<div style="margin:3rem 0; padding:2rem 2.5rem; background:rgba(129,189,74,0.04); border:1.5px solid rgba(129,189,74,0.15); border-radius:16px; text-align:center;">
+<h3 style="font-size:1.15rem; font-weight:700; margin-bottom:0.5rem;" class="anchored">
+Bereit, Open Source für Ihre Organisation zu erkunden?
+</h3>
+<p style="color:#86868b; margin-bottom:1.25rem;">
+Buchen Sie eine kostenlose Beratung, um zu besprechen, welche Tools zu Ihren Anforderungen passen und wie Sie eine praktische Migration planen können.
+</p>
+<p><a href="../../de/booking/" class="m-b" style="font-size:0.9rem; padding:0.65rem 1.5rem; color:#fff !important;">Beratung buchen</a></p>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>Open Source</category>
+  <category>Europa</category>
+  <category>Digitale Souveränität</category>
+  <category>Nextcloud</category>
+  <category>LibreOffice</category>
+  <guid>https://chen.ist/de/blog/open-source-europe-nextcloud-libreoffice.html</guid>
+  <pubDate>Thu, 26 Mar 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://chen.ist/assets/images/stock/cloud-sky.webp" medium="image" type="image/webp"/>
+</item>
 <item>
   <title>Apple Business: Was KMU wissen müssen</title>
   <dc:creator>CHENIST Team</dc:creator>

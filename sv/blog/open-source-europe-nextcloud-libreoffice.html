@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="CHENIST-teamet">
+<meta name="dcterms.date" content="2026-03-26">
+<meta name="description" content="Verkliga fallstudier om europeiska regeringar och organisationer som anammar Nextcloud och LibreOffice. Varför EU övergår till open source, vem som leder vägen och vad det innebär för ditt företag.">
+
+<title>Open source i Europa: Hur Nextcloud och LibreOffice ersätter proprietär programvara – chen.ist</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/images/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-7aebb704979873d987a9577224f07705.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-5bb150d023bc505d90d3f0361b894f96.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-7aebb704979873d987a9577224f07705.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<meta property="og:title" content="Open source i Europa: Hur Nextcloud och LibreOffice ersätter proprietär programvara – chen.ist">
+<meta property="og:description" content="Verkliga fallstudier om europeiska regeringar och organisationer som anammar Nextcloud och LibreOffice. Varför EU övergår till open source, vem som leder vägen och vad det innebär för ditt företag.">
+<meta property="og:image" content="https://chen.ist/assets/images/stock/cloud-sky.webp">
+<meta property="og:site_name" content="chen.ist">
+<meta name="twitter:title" content="Open source i Europa: Hur Nextcloud och LibreOffice ersätter proprietär programvara – chen.ist">
+<meta name="twitter:description" content="Verkliga fallstudier om europeiska regeringar och organisationer som anammar Nextcloud och LibreOffice. Varför EU övergår till open source, vem som leder vägen och vad det innebär för ditt företag.">
+<meta name="twitter:image" content="https://chen.ist/assets/images/stock/cloud-sky.webp">
+<meta name="twitter:card" content="summary_large_image">
+</head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script><a href="#main-content" class="skip-link">Skip to main content</a>
+<style>
+/* Corporate navbar — inspired by CrowdStrike/SentinelOne */
+.navbar {
+  background: #0a0a0a !important;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 0 !important;
+  font-size: 0.85rem;
+  min-height: 60px;
+}
+.navbar-container { height: 60px; }
+.navbar-brand-container { display: flex; align-items: center; }
+.navbar-brand { display: flex; align-items: center; gap: 0.5rem; }
+.navbar-brand .navbar-title {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-family: 'Source Code Pro', monospace;
+}
+.navbar-brand .brand-dot { color: #81BD4A; }
+
+/* Nav links — normal case like CrowdStrike, not uppercase */
+.navbar .nav-link {
+  color: rgba(255,255,255,0.7) !important;
+  font-size: 0.85rem !important;
+  font-weight: 400;
+  padding: 0.5rem 0.9rem !important;
+  transition: color 0.15s;
+}
+.navbar .nav-link:hover { color: #fff !important; }
+.navbar .nav-link.active { color: #81BD4A !important; }
+
+/* CTA button in navbar — like SentinelOne "Get Started" */
+.navbar .navbar-cta {
+  display: inline-block;
+  padding: 0.4rem 1.25rem;
+  background: #81BD4A;
+  color: #fff !important;
+  border-radius: 980px;
+  font-size: 0.8rem !important;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s;
+  margin-left: 0.5rem;
+}
+.navbar .navbar-cta:hover { background: #6BA33A; color: #fff !important; text-decoration: none; }
+
+/* Dropdowns */
+.navbar .dropdown-menu {
+  background: #0a0a0a;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 0.5rem;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+.navbar .dropdown-item {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.83rem;
+  border-radius: 6px;
+  padding: 0.45rem 0.85rem;
+}
+.navbar .dropdown-item:hover {
+  background: rgba(129,189,74,0.08);
+  color: #81BD4A;
+}
+
+/* Search + theme toggle */
+.navbar .quarto-navigation-tool, .navbar .quarto-color-scheme-toggle { color: rgba(255,255,255,0.4) !important; }
+.navbar .quarto-navigation-tool:hover, .navbar .quarto-color-scheme-toggle:hover { color: #81BD4A !important; }
+
+/* Mobile */
+@media (max-width: 991px) {
+  .navbar .nav-link { font-size: 0.82rem !important; }
+}
+@media (max-width: 767.98px) {
+  .navbar { min-height: 54px !important; }
+  .navbar-brand .navbar-title { font-size: 0.95rem; }
+  .navbar .navbar-collapse {
+    background: #0a0a0a;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 1.25rem;
+    margin-top: 0.75rem;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    max-height: 75vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .navbar .nav-link {
+    font-size: 0.9rem !important;
+    padding: 0.65rem 0.75rem !important;
+    border-radius: 10px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .navbar .nav-link:active { background: rgba(129,189,74,0.08); }
+  .navbar .dropdown-menu {
+    border: none !important;
+    padding: 0 0 0 1rem !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+  .navbar .dropdown-item {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+  }
+  .navbar .navbar-cta {
+    display: block;
+    text-align: center;
+    margin: 0.75rem 0 0;
+    padding: 0.75rem 1.5rem;
+    border-radius: 14px;
+    min-height: 44px;
+  }
+  .navbar-toggler { border: none !important; padding: 0.5rem; }
+  .navbar-toggler:focus { box-shadow: none !important; }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var navbarBrand = document.querySelector('.navbar-brand');
+  if (navbarBrand) {
+    var titleSpan = document.createElement('span');
+    titleSpan.className = 'navbar-title';
+    titleSpan.textContent = 'CHEN';
+    var dot = document.createElement('span');
+    dot.className = 'brand-dot';
+    dot.textContent = '.';
+    var ist = document.createTextNode('IST');
+    titleSpan.appendChild(dot);
+    titleSpan.appendChild(ist);
+    navbarBrand.appendChild(titleSpan);
+  }
+
+  // Add CTA button to navbar (language-aware)
+  var navRight = document.querySelector('.navbar-nav.ms-auto');
+  if (navRight) {
+    var langPrefix = '';
+    var langMatch = window.location.pathname.match(/^\/(ro|sv|de)\//);
+    if (langMatch) langPrefix = '/' + langMatch[1];
+    var ctaLi = document.createElement('li');
+    ctaLi.className = 'nav-item';
+    var ctaLink = document.createElement('a');
+    ctaLink.className = 'nav-link navbar-cta';
+    ctaLink.href = langPrefix + '/booking/';
+    var ctaLabels = { ro: 'Programează', sv: 'Boka Samtal', de: 'Gespräch Buchen' };
+    ctaLink.textContent = langMatch ? (ctaLabels[langMatch[1]] || 'Book a Call') : 'Book a Call';
+    ctaLi.appendChild(ctaLink);
+    navRight.appendChild(ctaLi);
+  }
+});
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="../../manifest.json">
+<meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<script>
+(function() {
+  var path = window.location.pathname;
+  // Only redirect on English pages (no language prefix)
+  if (path.match(/^\/(ro|sv|de)\//)) return;
+  // Don't redirect if user explicitly chose English
+  if (localStorage.getItem('chen-lang-choice') === 'en') return;
+  // Don't redirect if already redirected this session
+  if (sessionStorage.getItem('chen-lang-redirected')) return;
+  // Detect browser language
+  var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  var target = null;
+  if (lang.startsWith('ro')) target = 'ro';
+  else if (lang.startsWith('sv')) target = 'sv';
+  else if (lang.startsWith('de')) target = 'de';
+  if (target) {
+    sessionStorage.setItem('chen-lang-redirected', '1');
+    window.location.href = '/' + target + path;
+  }
+})();
+</script>
+<link rel="preload" href="../../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
+<meta name="view-transition" content="same-origin">
+<noscript><style>.m-s,.m-bg,.m-cta,.m-r,.m-n,.hp-sec,.hp-stats,.ev-card,.ev-past,.m-t{opacity:1!important;transform:none!important;}</style></noscript>
+<link rel="dns-prefetch" href="https://cal.com">
+<link rel="dns-prefetch" href="https://app.cal.com">
+<link rel="preconnect" href="https://cal.com" crossorigin="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "chen.ist",
+  "url": "https://chen.ist",
+  "logo": "https://chen.ist/assets/images/logo-light.svg",
+  "description": "Digital infrastructure, cybersecurity, cloud services, and technology education for modern organizations.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Str. Filantropiei, 1-3",
+    "addressLocality": "Craiova",
+    "postalCode": "200143",
+    "addressCountry": "RO"
+  },
+  "email": "office@chen.ist",
+  "sameAs": [
+    "https://github.com/chenist",
+    "https://linkedin.com/in/chenistsec",
+    "https://twitter.com/chenistsec"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Infrastructure", "url": "https://chen.ist/digital/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "NIS2 Compliance", "url": "https://chen.ist/services/nis2/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cybersecurity", "url": "https://chen.ist/services/cybersecurity/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cloud Services", "url": "https://chen.ist/services/cloud/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Resilience", "url": "https://chen.ist/services/digital-resilience/"}}
+    ]
+  }
+}
+</script>
+
+
+<link rel="stylesheet" href="../../assets/css/main.min.css">
+
+
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-services" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Services</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-services">    
+        <li>
+    <a class="dropdown-item" href="../../services/index.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../security/index.html">
+ <span class="dropdown-text">Security</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../digital/index.html">
+ <span class="dropdown-text">Digital Infrastructure</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../services/nis2/index.html">
+ <span class="dropdown-text">NIS2 Compliance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../services/cybersecurity/index.html">
+ <span class="dropdown-text">Cybersecurity</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../services/cloud/index.html">
+ <span class="dropdown-text">Cloud Services</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../services/digital-resilience/index.html">
+ <span class="dropdown-text">Digital Resilience</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../services/gdpr/index.html">
+ <span class="dropdown-text">GDPR Compliance</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-academy" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Academy</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-academy">    
+        <li>
+    <a class="dropdown-item" href="../../academy/overview.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../academy/courses.html">
+ <span class="dropdown-text">Courses</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../academy/trainings.html">
+ <span class="dropdown-text">Trainings</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../academy/microlearning.html">
+ <span class="dropdown-text">Microlearning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../academy/programs/index.html">
+ <span class="dropdown-text">Programs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../academy/events.html">
+ <span class="dropdown-text">Events</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../academy/webinars.html">
+ <span class="dropdown-text">Webinars</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../academy/computerclub.html">
+ <span class="dropdown-text">Computer Club</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../academy/partnerships.html">
+ <span class="dropdown-text">Partnerships</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html"> 
+<span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Resources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
+        <li>
+    <a class="dropdown-item" href="../../resources/index.html">
+ <span class="dropdown-text">All Resources</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../resources/tools/index.html">
+ <span class="dropdown-text">Tools</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../compare.html">
+ <span class="dropdown-text">Why Open Source</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../faq.html">
+ <span class="dropdown-text">FAQ</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../../about/index.html">
+ <span class="dropdown-text">About</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../about/team.html">
+ <span class="dropdown-text">Team</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../about/csr.html">
+ <span class="dropdown-text">CSR</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../about/community.html">
+ <span class="dropdown-text">Community</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">🌐</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-">    
+        <li>
+    <a class="dropdown-item" href="../../index.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../ro/index.html">
+ <span class="dropdown-text">Română</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../sv/index.html">
+ <span class="dropdown-text">Svenska</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../de/index.html">
+ <span class="dropdown-text">Deutsch</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#varför-europa-övergår-till-open-source" id="toc-varför-europa-övergår-till-open-source" class="nav-link active" data-scroll-target="#varför-europa-övergår-till-open-source">Varför Europa övergår till open source</a>
+  <ul class="collapse">
+  <li><a href="#digital-suveränitet" id="toc-digital-suveränitet" class="nav-link" data-scroll-target="#digital-suveränitet">Digital suveränitet</a></li>
+  <li><a href="#gdpr-efterlevnad" id="toc-gdpr-efterlevnad" class="nav-link" data-scroll-target="#gdpr-efterlevnad">GDPR-efterlevnad</a></li>
+  <li><a href="#kostnader-i-stor-skala" id="toc-kostnader-i-stor-skala" class="nav-link" data-scroll-target="#kostnader-i-stor-skala">Kostnader i stor skala</a></li>
+  <li><a href="#säkerhet-genom-transparens" id="toc-säkerhet-genom-transparens" class="nav-link" data-scroll-target="#säkerhet-genom-transparens">Säkerhet genom transparens</a></li>
+  <li><a href="#eu-politik-open-source-strategin" id="toc-eu-politik-open-source-strategin" class="nav-link" data-scroll-target="#eu-politik-open-source-strategin">EU-politik: Open Source-strategin</a></li>
+  </ul></li>
+  <li><a href="#nextcloud-det-europeiska-molnalternativet" id="toc-nextcloud-det-europeiska-molnalternativet" class="nav-link" data-scroll-target="#nextcloud-det-europeiska-molnalternativet">Nextcloud: Det europeiska molnalternativet</a>
+  <ul class="collapse">
+  <li><a href="#tyskland-bundescloud" id="toc-tyskland-bundescloud" class="nav-link" data-scroll-target="#tyskland-bundescloud">Tyskland: Bundescloud</a></li>
+  <li><a href="#frankrike-statens-moln-nubo" id="toc-frankrike-statens-moln-nubo" class="nav-link" data-scroll-target="#frankrike-statens-moln-nubo">Frankrike: Statens moln “Nubo”</a></li>
+  <li><a href="#sverige-och-nederländerna" id="toc-sverige-och-nederländerna" class="nav-link" data-scroll-target="#sverige-och-nederländerna">Sverige och Nederländerna</a></li>
+  <li><a href="#varför-just-nextcloud" id="toc-varför-just-nextcloud" class="nav-link" data-scroll-target="#varför-just-nextcloud">Varför just Nextcloud</a></li>
+  </ul></li>
+  <li><a href="#libreoffice-standarden-för-öppna-dokument" id="toc-libreoffice-standarden-för-öppna-dokument" class="nav-link" data-scroll-target="#libreoffice-standarden-för-öppna-dokument">LibreOffice: Standarden för öppna dokument</a>
+  <ul class="collapse">
+  <li><a href="#italien-försvarsministeriet-och-kommunala-förvaltningar" id="toc-italien-försvarsministeriet-och-kommunala-förvaltningar" class="nav-link" data-scroll-target="#italien-försvarsministeriet-och-kommunala-förvaltningar">Italien: Försvarsministeriet och kommunala förvaltningar</a></li>
+  <li><a href="#tyskland-münchen-och-schleswig-holstein" id="toc-tyskland-münchen-och-schleswig-holstein" class="nav-link" data-scroll-target="#tyskland-münchen-och-schleswig-holstein">Tyskland: München och Schleswig-Holstein</a></li>
+  <li><a href="#frankrike-gendarmeriet" id="toc-frankrike-gendarmeriet" class="nav-link" data-scroll-target="#frankrike-gendarmeriet">Frankrike: Gendarmeriet</a></li>
+  <li><a href="#spanien-regionala-regeringar" id="toc-spanien-regionala-regeringar" class="nav-link" data-scroll-target="#spanien-regionala-regeringar">Spanien: Regionala regeringar</a></li>
+  <li><a href="#odf-standarden" id="toc-odf-standarden" class="nav-link" data-scroll-target="#odf-standarden">ODF-standarden</a></li>
+  </ul></li>
+  <li><a href="#vem-leder-förändringen" id="toc-vem-leder-förändringen" class="nav-link" data-scroll-target="#vem-leder-förändringen">Vem leder förändringen</a>
+  <ul class="collapse">
+  <li><a href="#europeiska-kommissionens-ospo" id="toc-europeiska-kommissionens-ospo" class="nav-link" data-scroll-target="#europeiska-kommissionens-ospo">Europeiska kommissionens OSPO</a></li>
+  <li><a href="#gaia-x" id="toc-gaia-x" class="nav-link" data-scroll-target="#gaia-x">GAIA-X</a></li>
+  <li><a href="#public-money-public-code" id="toc-public-money-public-code" class="nav-link" data-scroll-target="#public-money-public-code">Public Money, Public Code</a></li>
+  <li><a href="#nationella-strategier" id="toc-nationella-strategier" class="nav-link" data-scroll-target="#nationella-strategier">Nationella strategier</a></li>
+  </ul></li>
+  <li><a href="#vad-detta-innebär-för-ditt-företag" id="toc-vad-detta-innebär-för-ditt-företag" class="nav-link" data-scroll-target="#vad-detta-innebär-för-ditt-företag">Vad detta innebär för ditt företag</a>
+  <ul class="collapse">
+  <li><a href="#ekosystemet-är-redo" id="toc-ekosystemet-är-redo" class="nav-link" data-scroll-target="#ekosystemet-är-redo">Ekosystemet är redo</a></li>
+  <li><a href="#migrering-är-praktisk" id="toc-migrering-är-praktisk" class="nav-link" data-scroll-target="#migrering-är-praktisk">Migrering är praktisk</a></li>
+  <li><a href="#det-handlar-om-riskhantering-inte-ideologi" id="toc-det-handlar-om-riskhantering-inte-ideologi" class="nav-link" data-scroll-target="#det-handlar-om-riskhantering-inte-ideologi">Det handlar om riskhantering, inte ideologi</a></li>
+  </ul></li>
+  <li><a href="#resurser" id="toc-resurser" class="nav-link" data-scroll-target="#resurser">Resurser</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Open source i Europa: Hur Nextcloud och LibreOffice ersätter proprietär programvara</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Open Source</div>
+    <div class="quarto-category">Europa</div>
+    <div class="quarto-category">Digital suveränitet</div>
+    <div class="quarto-category">Nextcloud</div>
+    <div class="quarto-category">LibreOffice</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Verkliga fallstudier om europeiska regeringar och organisationer som anammar Nextcloud och LibreOffice. Varför EU övergår till open source, vem som leder vägen och vad det innebär för ditt företag.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>CHENIST-teamet </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 26, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><img src="../../assets/images/stock/cloud-sky.webp" class="rounded shadow img-fluid" style="width:100.0%"></p>
+<section id="varför-europa-övergår-till-open-source" class="level2">
+<h2 class="anchored" data-anchor-id="varför-europa-övergår-till-open-source">Varför Europa övergår till open source</h2>
+<p>Något betydelsefullt händer i europeiska regeringar och offentliga institutioner. Efter decennier av att som standard använda proprietär programvara från amerikanska leverantörer gör ett växande antal länder medvetna, politikstyrda övergångar till open source-alternativ. Det här är inte en marginell rörelse — det sker på nivån av federala regeringar, försvarsministerier och Europeiska kommissionen själv.</p>
+<p>Motivationerna är konkreta och överlappande.</p>
+<section id="digital-suveränitet" class="level3">
+<h3 class="anchored" data-anchor-id="digital-suveränitet">Digital suveränitet</h3>
+<p>Begreppet digital suveränitet — förmågan hos en regering eller organisation att kontrollera sin egen digitala infrastruktur — har blivit en central politisk fråga i Europa. När kritiska statliga verksamheter är beroende av programvara som kontrolleras av företag under utländsk jurisdiktion finns det en inneboende risk. Den amerikanska CLOUD Act kan till exempel tvinga amerikanska företag att lämna ut data som lagras var som helst i världen. För europeiska institutioner som hanterar känsliga medborgardata är detta inte en teoretisk farhåga.</p>
+<p>Open source-programvara eliminerar detta beroende. Koden kan granskas, värdtjänsten kan vara lokal och ingen enskild leverantör sitter på nycklarna.</p>
+</section>
+<section id="gdpr-efterlevnad" class="level3">
+<h3 class="anchored" data-anchor-id="gdpr-efterlevnad">GDPR-efterlevnad</h3>
+<p>Den allmänna dataskyddsförordningen kräver att personuppgifter för EU-medborgare hanteras med specifika skyddsåtgärder. När data flödar genom molntjänster som drivs av företag utanför EU blir efterlevnaden komplicerad. Självvärdade open source-lösningar gör det möjligt för organisationer att hålla data på EU:s mark, under EU:s jurisdiktion, med full insyn i hur den behandlas.</p>
+</section>
+<section id="kostnader-i-stor-skala" class="level3">
+<h3 class="anchored" data-anchor-id="kostnader-i-stor-skala">Kostnader i stor skala</h3>
+<p>Organisationer inom den offentliga sektorn verkar i enorm skala. Enbart den tyska federala regeringen sysselsätter över 300 000 personer. I den skalan utgör licensavgifter per användare för kontorspaket, molnlagring och samarbetsverktyg en betydande återkommande kostnad. Open source-alternativ har inga licensavgifter per plats. Kostnaderna flyttas till distribution, anpassning och support — områden där europeiska IT-företag kan konkurrera och där utgifterna stannar inom EU:s ekonomi.</p>
+</section>
+<section id="säkerhet-genom-transparens" class="level3">
+<h3 class="anchored" data-anchor-id="säkerhet-genom-transparens">Säkerhet genom transparens</h3>
+<p>Proprietär programvara fungerar som en svart låda. Användare litar på att leverantören inte har några sårbarheter, bakdörrar eller odeklarerad datainsamling. Open source-programvara möjliggör oberoende säkerhetsgranskningar. Regeringar kan — och gör det — inspektera koden som körs på deras infrastruktur. Det handlar inte om misstro mot leverantörer; det handlar om verifierbart förtroende snarare än antaget förtroende.</p>
+</section>
+<section id="eu-politik-open-source-strategin" class="level3">
+<h3 class="anchored" data-anchor-id="eu-politik-open-source-strategin">EU-politik: Open Source-strategin</h3>
+<p>Europeiska kommissionen antog sin <a href="https://commission.europa.eu/about-european-commission/departments-and-executive-agencies/informatics/open-source-software-strategy_en">strategi för öppen källkod 2020-2023</a>, som uttryckligen uppmuntrar användning av open source-lösningar i EU:s institutioner. Strategin fastställde principen “Think Open” som standardansats för nya IT-lösningar och åtog kommissionen att bidra tillbaka till open source-ekosystemet. Denna strategi har sedan dess utökats och förstärkts, och open source har blivit en integrerad del av EU:s digitala politik snarare än en eftertanke.</p>
+</section>
+</section>
+<section id="nextcloud-det-europeiska-molnalternativet" class="level2">
+<h2 class="anchored" data-anchor-id="nextcloud-det-europeiska-molnalternativet">Nextcloud: Det europeiska molnalternativet</h2>
+<p><a href="https://nextcloud.com">Nextcloud</a> är en självvärdad plattform för filsynkronisering, samarbete och kommunikation. Företaget har sitt huvudkontor i Stuttgart, Tyskland, och utvecklas främst av ett europeiskt team. Det erbjuder funktionalitet jämförbar med Google Workspace eller Microsoft 365 — fillagring, kalender, kontakter, videosamtal, dokumentsamarbete, projekthantering — men datan stannar på infrastruktur du kontrollerar.</p>
+<p>Det som gör Nextcloud särskilt relevant i det europeiska sammanhanget är inte bara funktionsuppsättningen, utan distributionsmodellen. Det är utformat från grunden för lokal eller privat molnvärdtjänst, vilket gör GDPR-efterlevnad enkel genom design snarare än genom avtal.</p>
+<section id="tyskland-bundescloud" class="level3">
+<h3 class="anchored" data-anchor-id="tyskland-bundescloud">Tyskland: Bundescloud</h3>
+<p>Den tyska federala administrationen implementerade Nextcloud som grunden för sitt “Bundescloud” — en säker molnplattform för över 300 000 federala anställda. Detta är en av de största Nextcloud-implementeringarna i världen och representerar ett medvetet beslut på högsta regeringsnivå att gå ifrån amerikanska molnleverantörer för internt samarbete och fildelning. Implementeringen hanteras av det tyska federala IT-centret (ITZBund), vilket ger regeringen full kontroll över sina data och sin infrastruktur.</p>
+<p>Källa: <a href="https://nextcloud.com/blog/german-federal-administration-relies-on-nextcloud/">Nextcloud — Tyska federala administrationen</a></p>
+</section>
+<section id="frankrike-statens-moln-nubo" class="level3">
+<h3 class="anchored" data-anchor-id="frankrike-statens-moln-nubo">Frankrike: Statens moln “Nubo”</h3>
+<p>Den franska regeringen valde Nextcloud som grund för sin interdepartementala molnplattform, vilket möjliggör säker fildelning och samarbete mellan regeringsministerier. Frankrike har varit särskilt aggressivt i sin strävan efter digital suveränitet, med Direction Interministérielle du Numérique (DINUM) som leder insatserna för att minska beroendet av utländska molntjänster. Valet av Nextcloud passar in i en bredare strategi som inkluderar open source-meddelanden, identitetshantering och samarbetsverktyg i hela den franska staten.</p>
+<p>Källa: <a href="https://nextcloud.com/blog/french-government-chooses-nextcloud/">Nextcloud — Franska regeringen</a></p>
+</section>
+<section id="sverige-och-nederländerna" class="level3">
+<h3 class="anchored" data-anchor-id="sverige-och-nederländerna">Sverige och Nederländerna</h3>
+<p>Flera svenska kommuner har anammat Nextcloud för internt samarbete, drivet av dataskyddskrav och önskan att hålla medborgardata under lokal kontroll. I Nederländerna har myndigheter på liknande sätt vänt sig till Nextcloud som del av bredare insatser för att efterleva integritetsregler och minska beroendet av amerikanska molntjänster. Det här är inte experimentella pilotprogram — det är produktionssystem som betjänar tusentals offentliganställda.</p>
+</section>
+<section id="varför-just-nextcloud" class="level3">
+<h3 class="anchored" data-anchor-id="varför-just-nextcloud">Varför just Nextcloud</h3>
+<p>Nextclouds attraktionskraft inom den europeiska offentliga sektorn beror på några faktorer: det är ett europeiskt företag, underkastat EU-lagstiftning. Det är helt självvärdat, så dataresidensen är garanterad. Det har en aktiv enterprise-supportmodell, så organisationer lämnas inte utan professionellt stöd. Och dess funktionalitet är tillräckligt bred för att ersätta flera proprietära verktyg med en enda plattform.</p>
+</section>
+</section>
+<section id="libreoffice-standarden-för-öppna-dokument" class="level2">
+<h2 class="anchored" data-anchor-id="libreoffice-standarden-för-öppna-dokument">LibreOffice: Standarden för öppna dokument</h2>
+<p><a href="https://www.libreoffice.org">LibreOffice</a> är det ledande kontorspaketet med öppen källkod, utvecklat av <a href="https://www.documentfoundation.org">The Document Foundation</a>, en ideell organisation med säte i Berlin. Det inkluderar ordbehandlare, kalkylprogram, presentationsprogram och mer. Det läser och skriver Microsoft Office-format och stöder nativt Open Document Format (ODF), som är ett ISO-standardiserat filformat och standarddokumentformat för flera EU-medlemsstater.</p>
+<p>Anammandet av LibreOffice i europeiska institutioner drivs av samma faktorer som Nextcloud — suveränitet, kostnader och interoperabilitet — men med en ytterligare dimension: oberoende från dokumentformat. När en regering standardiserar på ODF är den inte längre låst till en viss leverantörs programvara för att läsa sina egna dokument.</p>
+<section id="italien-försvarsministeriet-och-kommunala-förvaltningar" class="level3">
+<h3 class="anchored" data-anchor-id="italien-försvarsministeriet-och-kommunala-förvaltningar">Italien: Försvarsministeriet och kommunala förvaltningar</h3>
+<p>Det italienska försvarsministeriet migrerade cirka 150 000 arbetsstationer till LibreOffice, vilket gör det till en av de största enskilda organisationsmigrationerna i Europa. Beslutet drevs av kostnadsbesparingar och önskan att anta öppna standarder. Utöver den nationella nivån har italienska kommuner inklusive staden Bari och staden Pesaro också migrerat till LibreOffice, vilket visar att tillvägagångssättet skalas från stora ministerier ner till lokalförvaltning.</p>
+</section>
+<section id="tyskland-münchen-och-schleswig-holstein" class="level3">
+<h3 class="anchored" data-anchor-id="tyskland-münchen-och-schleswig-holstein">Tyskland: München och Schleswig-Holstein</h3>
+<p>Staden Münchens LiMux-projekt är kanske den mest studerade — och mest debatterade — open source-migrationen i historien. München migrerade cirka 15 000 arbetsstationer från Windows och Microsoft Office till Linux och LibreOffice på 2000-talet, och vände sedan kontroversiellt om 2017 under en ny stadsförvaltning. Omvändningen tillskrevs allmänt politiska snarare än tekniska faktorer, och München har sedan dess omprövat sin open source-strategi.</p>
+<p>Mer nyligen tillkännagav delstatsregeringen i Schleswig-Holstein en omfattande migrering till LibreOffice och andra open source-verktyg på sina 25 000 arbetsstationer. Denna migrering, som tillkännagavs 2024, genomförs systematiskt med en flerårig tidsplan och representerar en ny generation av open source-anammande som har lärt sig av Münchens erfarenhet.</p>
+</section>
+<section id="frankrike-gendarmeriet" class="level3">
+<h3 class="anchored" data-anchor-id="frankrike-gendarmeriet">Frankrike: Gendarmeriet</h3>
+<p>Det franska nationella gendarmeriet, den militära poliskåren med över 100 000 anställda, migrerade mer än 70 000 arbetsstationer till Linux och LibreOffice med start 2005. Detta är en av de längst pågående och mest framgångsrika storskaliga open source-implementeringarna i något land i världen. Gendarmeriet har rapporterat betydande kostnadsbesparingar och förbättrat operativt oberoende, och migreringen har upprätthållits genom flera regeringsbyten — en stark indikator på institutionell tillfredsställelse.</p>
+</section>
+<section id="spanien-regionala-regeringar" class="level3">
+<h3 class="anchored" data-anchor-id="spanien-regionala-regeringar">Spanien: Regionala regeringar</h3>
+<p>Regionen Valencia och den autonoma gemenskapen Extremadura i Spanien var tidiga anhängare av open source-programvara inom utbildning och förvaltning. Extremadura utvecklade sin egen Linux-distribution (LinEx) för skolor och myndighetskontor, och Valencia har upprätthållit ett starkt engagemang för open source-verktyg inklusive LibreOffice i hela sin regionala förvaltning.</p>
+</section>
+<section id="odf-standarden" class="level3">
+<h3 class="anchored" data-anchor-id="odf-standarden">ODF-standarden</h3>
+<p>En nyckelfaktor för anammandet av LibreOffice är Open Document Format (ODF). Som ISO/IEC-standard (26300) säkerställer ODF att dokument inte är bundna till en enda leverantörs implementation. Flera EU-medlemsstater har antagit ODF som rekommenderat eller obligatoriskt format för myndighetsdokument. Denna standardisering är avgörande: den innebär att även om en organisation inte använder LibreOffice kan den fortfarande fritt utbyta dokument med dem som gör det.</p>
+</section>
+</section>
+<section id="vem-leder-förändringen" class="level2">
+<h2 class="anchored" data-anchor-id="vem-leder-förändringen">Vem leder förändringen</h2>
+<p>Övergången till open source i Europa sker inte isolerat. Den stöds av ett växande institutionellt ramverk.</p>
+<section id="europeiska-kommissionens-ospo" class="level3">
+<h3 class="anchored" data-anchor-id="europeiska-kommissionens-ospo">Europeiska kommissionens OSPO</h3>
+<p>Europeiska kommissionen inrättade ett Open Source Programme Office (OSPO) för att samordna sina open source-aktiviteter, bidra till uppströmsprojekt och rådge EU-institutioner om open source-anammande. OSPO representerar ett institutionellt åtagande som sträcker sig bortom enskilda upphandlingsbeslut.</p>
+</section>
+<section id="gaia-x" class="level3">
+<h3 class="anchored" data-anchor-id="gaia-x">GAIA-X</h3>
+<p><a href="https://gaia-x.eu">GAIA-X</a> är ett europeiskt initiativ för att utveckla en federerad datainfrastruktur baserad på öppna standarder och europeiska värderingar. Även om det inte är uteslutande open source prioriterar GAIA-X interoperabilitet, transparens och datasuveränitet — principer som ligger nära open source-metoder. Målet är att skapa ett europeiskt alternativ till hyperskala-molnleverantörer som respekterar europeiska dataskyddsnormer.</p>
+</section>
+<section id="public-money-public-code" class="level3">
+<h3 class="anchored" data-anchor-id="public-money-public-code">Public Money, Public Code</h3>
+<p><a href="https://fsfe.org">Free Software Foundation Europe</a> (FSFE) driver kampanjen <a href="https://publiccode.eu">Public Money, Public Code</a>, som förespråkar en enkel princip: programvara som finansieras med offentliga medel bör vara offentligt tillgänglig som öppen källkod. Kampanjen har samlat stöd från över 200 organisationer och många offentliga förvaltningar. Logiken är enkel — när skattebetalare finansierar mjukvaruutveckling bör resultaten gynna alla, inte vara inlåsta som proprietär kod.</p>
+</section>
+<section id="nationella-strategier" class="level3">
+<h3 class="anchored" data-anchor-id="nationella-strategier">Nationella strategier</h3>
+<p>Enskilda EU-medlemsstater har utvecklat sina egna open source-strategier. Tysklands Sovereign Tech Fund ger direkt finansiering till kritiska open source-infrastrukturprojekt. Frankrikes DINUM samordnar den digitala strategin i hela den franska staten med ett starkt open source-mandat. Dessa nationella insatser kompletterar politik på EU-nivå och skapar en flerskiktad stödstruktur för open source-anammande.</p>
+</section>
+</section>
+<section id="vad-detta-innebär-för-ditt-företag" class="level2">
+<h2 class="anchored" data-anchor-id="vad-detta-innebär-för-ditt-företag">Vad detta innebär för ditt företag</h2>
+<p>Om nationella regeringar med hundratusentals användare driver sin verksamhet på Nextcloud och LibreOffice är verktygen mogna nog för ett företag av vilken storlek som helst. Frågan är inte längre om open source-alternativ är produktionsklara — det är de. Frågan är om din organisation har en praktisk migreringsväg.</p>
+<section id="ekosystemet-är-redo" class="level3">
+<h3 class="anchored" data-anchor-id="ekosystemet-är-redo">Ekosystemet är redo</h3>
+<p>Både Nextcloud och LibreOffice erbjuder enterprise-supportalternativ, antingen direkt eller genom certifierade partners. Professionell distribution, migreringshjälp och löpande support finns tillgängligt i hela Europa. Det här är inte ett community-only-ekosystem — det är ett kommersiellt ekosystem byggt på open source-grunder.</p>
+</section>
+<section id="migrering-är-praktisk" class="level3">
+<h3 class="anchored" data-anchor-id="migrering-är-praktisk">Migrering är praktisk</h3>
+<p>Att gå från proprietära verktyg behöver inte ske över en natt. De flesta framgångsrika migreringar följer ett stegvist tillvägagångssätt: börja med nya projekt på open source-verktyg, upprätthåll kompatibilitet med befintliga format under en övergångsperiod och migrera historisk data på en praktisk tidsplan. De organisationer som nämns i denna artikel — från det franska gendarmeriet till den tyska federala regeringen — har alla följt detta mönster.</p>
+</section>
+<section id="det-handlar-om-riskhantering-inte-ideologi" class="level3">
+<h3 class="anchored" data-anchor-id="det-handlar-om-riskhantering-inte-ideologi">Det handlar om riskhantering, inte ideologi</h3>
+<p>Den europeiska övergången till open source drivs av praktisk riskhantering: minska leverantörsinlåsning, kontrollera kostnader, säkerställa efterlevnad och upprätthålla operativt oberoende. Samma logik gäller för företag. Om din organisation är beroende av verktyg där en enda leverantör ensidigt kan ändra prissättning, avveckla funktioner eller ändra tjänstevillkor bär du en risk. Open source-alternativ ger dig valmöjligheter.</p>
+<p>För en detaljerad jämförelse av open source- och proprietära verktyg, se vår <a href="../../compare.html">jämförelsesida</a>. För att utforska hur en migrering kan se ut för din organisation, besök vår sida för <a href="../../digital/">digitala tjänster</a>.</p>
+</section>
+</section>
+<section id="resurser" class="level2">
+<h2 class="anchored" data-anchor-id="resurser">Resurser</h2>
+<ul>
+<li><a href="https://nextcloud.com">Nextcloud</a> — Självvärdad plattform för filsynkronisering och samarbete</li>
+<li><a href="https://www.libreoffice.org">LibreOffice</a> — Kontorspaket med öppen källkod</li>
+<li><a href="https://www.documentfoundation.org">The Document Foundation</a> — Ideell organisation bakom LibreOffice</li>
+<li><a href="https://commission.europa.eu/about-european-commission/departments-and-executive-agencies/informatics/open-source-software-strategy_en">Europeiska kommissionens strategi för öppen källkod</a></li>
+<li><a href="https://publiccode.eu">Public Money, Public Code</a> — Kampanj för offentligt finansierad programvara med öppen källkod</li>
+<li><a href="https://gaia-x.eu">GAIA-X</a> — Europeiskt initiativ för datainfrastruktur</li>
+<li><a href="https://fsfe.org">Free Software Foundation Europe</a></li>
+</ul>
+<div style="margin:3rem 0; padding:2rem 2.5rem; background:rgba(129,189,74,0.04); border:1.5px solid rgba(129,189,74,0.15); border-radius:16px; text-align:center;">
+<h3 style="font-size:1.15rem; font-weight:700; margin-bottom:0.5rem;" class="anchored">
+Redo att utforska open source för din organisation?
+</h3>
+<p style="color:#86868b; margin-bottom:1.25rem;">
+Boka en kostnadsfri konsultation för att diskutera vilka verktyg som passar dina behov och hur du planerar en praktisk migrering.
+</p>
+<p><a href="../../sv/booking/" class="m-b" style="font-size:0.9rem; padding:0.65rem 1.5rem; color:#fff !important;">Boka en konsultation</a></p>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/chen\.ist");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<!-- Back to top -->
+<div style="text-align:center; padding:2rem 0; background:#0a0a0a; border-top:1px solid rgba(255,255,255,0.04);">
+  <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" style="color:rgba(255,255,255,0.3); text-decoration:none; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em;">
+    <i class="bi bi-chevron-up" style="display:block; font-size:1rem; margin-bottom:0.25rem;"></i><span class="footer-i18n" data-key="backToTop">Back to top</span>
+  </a>
+</div>
+
+<footer style="background-color:#050505; background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 200 200'%3E%3Crect fill='none' width='200' height='200'/%3E%3Cg fill='none' stroke='%2381BD4A' stroke-width='1' stroke-opacity='0.04'%3E%3Crect x='-40' y='40' width='75' height='75'/%3E%3Crect x='40' width='75' height='75'/%3E%3Crect x='80' y='80' width='75' height='75'/%3E%3Crect x='120' y='-40' width='75' height='75'/%3E%3Crect y='120' width='75' height='75'/%3E%3Crect x='160' y='40' width='75' height='75'/%3E%3C/g%3E%3C/svg%3E&quot;); background-repeat:repeat; background-size:200px 200px; color:rgba(255,255,255,0.5); padding:4rem 0 2rem; font-size:0.82rem; line-height:1.8;">
+  <div style="max-width:1200px; margin:0 auto; padding:0 1.5rem;">
+    <div style="display:grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr; gap:2rem;">
+      <div>
+        <div style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:1rem; font-family:'Source Code Pro',monospace;">chen<span style="color:#81BD4A;">.</span>ist</div>
+        <p style="margin-bottom:1rem; color:rgba(255,255,255,0.4);" class="footer-i18n" data-key="tagline">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
+        <div style="display:flex; gap:0.75rem; margin-bottom:1rem;">
+          <a href="https://github.com/chenist" target="_blank" class="footer-social"><i class="bi bi-github"></i></a>
+          <a href="https://linkedin.com/in/chenistsec" target="_blank" class="footer-social"><i class="bi bi-linkedin"></i></a>
+          <a href="https://alinmechenici.substack.com" target="_blank" class="footer-social"><i class="bi bi-envelope"></i></a>
+        </div>
+        <p style="color:rgba(255,255,255,0.2); font-size:0.75rem;">© 2026 chen.ist</p>
+      </div>
+      <div>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="services">Services</div>
+        <a href="../../digital/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="digitalInfra">Digital Infrastructure</a>
+        <a href="../../security/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="security">Security</a>
+        <a href="../../services/cloud/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
+        <a href="../../services/nis2/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="nis2">NIS2 Compliance</a>
+        <a href="../../services/digital-resilience/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="resilience">Digital Resilience</a>
+        <a href="../../services/gdpr/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">GDPR Compliance</a>
+      </div>
+      <div>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="academy">Academy</div>
+        <a href="../../academy/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="overview">Overview</a>
+        <a href="../../academy/courses.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="courses">Courses</a>
+        <a href="../../academy/trainings.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="trainings">Trainings</a>
+        <a href="../../academy/events.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="events">Events</a>
+        <a href="../../academy/webinars.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="webinars">Webinars</a>
+      </div>
+      <div>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="company">Company</div>
+        <a href="../../about/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="about">About</a>
+        <a href="../../blog.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
+        <a href="../../contact.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="contact">Contact</a>
+        <a href="../../faq.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">FAQ</a>
+        <a href="../../privacy.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="privacy">Privacy</a>
+        <a href="../../terms.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="terms">Terms</a>
+      </div>
+      <div>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="connect">Connect</div>
+        <a href="mailto:office@chen.ist" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">office@chen.ist</a>
+        <a href="../../booking/" data-footer-link="" style="display:block; color:#81BD4A; text-decoration:none; padding:0.1rem 0; font-weight:500;" class="footer-i18n" data-key="bookCall">Book a Call</a>
+        <div style="margin-top:1rem; color:rgba(255,255,255,0.2); font-size:0.72rem;">Craiova · Bucharest · Stockholm</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+@media (max-width:991px) { footer > div > div { grid-template-columns: 2fr 1fr 1fr !important; } }
+@media (max-width:767px) {
+  footer { padding: 3rem 0 2rem !important; font-size: 0.8rem !important; }
+  footer > div > div { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
+  footer a { padding: 0.3rem 0 !important; min-height: 36px; display: inline-flex; align-items: center; }
+}
+@media (max-width:480px) {
+  footer > div > div { grid-template-columns: 1fr !important; gap: 1.75rem !important; }
+  footer { padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px)) !important; }
+}
+footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
+footer a { -webkit-tap-highlight-color: transparent; }
+.footer-social { display:flex !important; align-items:center !important; justify-content:center !important; width:40px !important; height:40px !important; min-height:40px !important; border-radius:50% !important; background:rgba(255,255,255,0.06) !important; color:rgba(255,255,255,0.5) !important; text-decoration:none !important; font-size:1rem !important; padding:0 !important; }
+.footer-social:hover { background:rgba(129,189,74,0.15) !important; color:#81BD4A !important; }
+</style>
+
+<script>
+(function() {
+  var langMatch = window.location.pathname.match(/^\/(ro|sv|de)\//);
+  var lang = langMatch ? langMatch[1] : 'en';
+  var prefix = lang === 'en' ? '' : '/' + lang;
+
+  // Rewrite all internal footer links to include language prefix
+  document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
+    var href = a.getAttribute('href');
+    if (href && href.startsWith('/') && !href.startsWith('//')) {
+
+
+
+        a.setAttribute('href', prefix + href);
+      }
+    }
+  });
+
+  // Translate labels if not English
+  if (lang === 'en') return;
+  var i18n = {
+    ro: {
+      backToTop: 'Înapoi sus', tagline: 'Infrastructură digitală, securitate cibernetică și educație. Construit pe open-source.',
+      services: 'Servicii', digitalInfra: 'Infrastructură Digitală', security: 'Securitate', nis2: 'Conformitate NIS2', resilience: 'Reziliență Digitală',
+      academy: 'Academie', overview: 'Prezentare', courses: 'Cursuri', trainings: 'Training-uri', events: 'Evenimente', webinars: 'Webinarii',
+      company: 'Companie', about: 'Despre noi', contact: 'Contact', privacy: 'Confidențialitate', terms: 'Termeni',
+      connect: 'Conectare', bookCall: 'Programează'
+    },
+    sv: {
+      backToTop: 'Tillbaka upp', tagline: 'Digital infrastruktur, cybersäkerhet och utbildning. Byggt på öppen källkod.',
+      services: 'Tjänster', digitalInfra: 'Digital Infrastruktur', security: 'Säkerhet', nis2: 'NIS2-efterlevnad', resilience: 'Digital Resiliens',
+      academy: 'Akademi', overview: 'Översikt', courses: 'Kurser', trainings: 'Utbildningar', events: 'Evenemang', webinars: 'Webbinarier',
+      company: 'Företag', about: 'Om oss', contact: 'Kontakt', privacy: 'Integritet', terms: 'Villkor',
+      connect: 'Kontakta', bookCall: 'Boka Samtal'
+    },
+    de: {
+      backToTop: 'Nach oben', tagline: 'Digitale Infrastruktur, Cybersicherheit und Bildung. Auf Open-Source aufgebaut.',
+      services: 'Dienstleistungen', digitalInfra: 'Digitale Infrastruktur', security: 'Sicherheit', nis2: 'NIS2-Konformität', resilience: 'Digitale Resilienz',
+      academy: 'Akademie', overview: 'Übersicht', courses: 'Kurse', trainings: 'Schulungen', events: 'Veranstaltungen', webinars: 'Webinare',
+      company: 'Unternehmen', about: 'Über uns', contact: 'Kontakt', privacy: 'Datenschutz', terms: 'AGB',
+      connect: 'Verbinden', bookCall: 'Gespräch Buchen'
+    }
+  };
+  var t = i18n[lang];
+  if (!t) return;
+  document.querySelectorAll('.footer-i18n').forEach(function(el) {
+    var key = el.getAttribute('data-key');
+    if (key && t[key]) el.textContent = t[key];
+  });
+})();
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.m-s, .m-bg, .m-cta, .m-r, .m-n, .hp-sec, .hp-stats, .ev-card, .ev-past, .m-t').forEach(el => observer.observe(el));
+
+  // Breadcrumb + Language bar
+  (function() {
+    var path = window.location.pathname;
+    var currentLang = 'en';
+    var cleanPath = path;
+
+    if (path.match(/^\/(ro|de|sv)\//)) {
+      currentLang = path.split('/')[1];
+      cleanPath = path.replace(/^\/(ro|de|sv)/, '');
+    }
+
+    var parts = cleanPath.split('/').filter(function(p) { return p && p !== 'index.html'; });
+
+    var bar = document.createElement('div');
+    bar.className = 'path-bar';
+    var inner = document.createElement('div');
+    inner.className = 'path-bar-inner';
+
+    // Breadcrumbs
+    var crumbs = document.createElement('div');
+    crumbs.className = 'path-crumbs';
+    var homeLink = document.createElement('a');
+    homeLink.href = currentLang === 'en' ? '/' : '/' + currentLang + '/';
+    homeLink.textContent = 'Home';
+    crumbs.appendChild(homeLink);
+
+    var accumulated = currentLang === 'en' ? '' : '/' + currentLang;
+    for (var i = 0; i < parts.length; i++) {
+      var sep = document.createElement('span');
+      sep.className = 'sep';
+      sep.textContent = ' \u203A ';
+      crumbs.appendChild(sep);
+      var name = parts[i].replace('.html', '').replace(/-/g, ' ');
+      name = name.charAt(0).toUpperCase() + name.slice(1);
+      accumulated += '/' + parts[i];
+      if (i === parts.length - 1) {
+        var cur = document.createElement('span');
+        cur.className = 'current';
+        cur.textContent = name;
+        crumbs.appendChild(cur);
+      } else {
+        var link = document.createElement('a');
+        link.href = accumulated + '/';
+        link.textContent = name;
+        crumbs.appendChild(link);
+      }
+    }
+
+    // Language buttons
+    var langsDiv = document.createElement('div');
+    langsDiv.className = 'path-langs';
+    var langs = [
+      { code: 'en', label: 'EN', prefix: '' },
+      { code: 'ro', label: 'RO', prefix: '/ro' },
+      { code: 'sv', label: 'SV', prefix: '/sv' },
+      { code: 'de', label: 'DE', prefix: '/de' }
+    ];
+    for (var j = 0; j < langs.length; j++) {
+      var l = langs[j];
+      var a = document.createElement('a');
+      a.href = l.prefix + (cleanPath || '/');
+      a.textContent = l.label;
+      if (l.code === currentLang) a.className = 'active';
+      a.addEventListener('click', function(e) { localStorage.setItem('chen-lang-choice', this.textContent.toLowerCase() === 'en' ? 'en' : ''); });
+      langsDiv.appendChild(a);
+    }
+
+    inner.appendChild(crumbs);
+    inner.appendChild(langsDiv);
+    bar.appendChild(inner);
+
+    var header = document.getElementById('quarto-header');
+    if (header) {
+      header.appendChild(bar);
+    }
+  })();
+});
+</script>
+<!-- Cal.com embed (for booking page only, no floating button) -->
+<script>
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  if (window.location.pathname.includes('/booking/')) {
+    Cal("init", {origin:"https://cal.com"});
+  }
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Function to toggle dark/light mode
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-bs-theme') || 'light';
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-bs-theme', newTheme);
+      localStorage.setItem('quarto-color-scheme', newTheme);
+      
+      // Update icon if needed
+      const themeIcon = document.querySelector('.navbar-nav a[href="#"] i');
+      if (themeIcon) {
+        themeIcon.className = newTheme === 'light' ? 'bi bi-moon' : 'bi bi-sun';
+      }
+    }
+    
+    // Apply saved theme on load
+    const savedTheme = localStorage.getItem('quarto-color-scheme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      
+      // Update icon to match saved theme
+      const themeIcon = document.querySelector('.navbar-nav a[href="#"] i');
+      if (themeIcon && savedTheme === 'dark') {
+        themeIcon.className = 'bi bi-sun';
+      }
+    }
+    
+    // Set up toggle button
+    document.querySelectorAll('a[href="#"]').forEach(function(link) {
+      if (link.textContent.includes('Toggle Theme')) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          toggleTheme();
+        });
+      }
+    });
+    
+    // Language switcher — intercept lang dropdown and rewrite to same page
+    document.querySelectorAll('.dropdown-item').forEach(function(link) {
+      var href = link.getAttribute('href') || '';
+      var isLang = false;
+      var targetLang = '';
+
+      if (href.match(/^\/?index\.html$/) || href === '/' || href.match(/^\.\.\/?index\.html$/)) {
+        isLang = true; targetLang = 'en';
+      } else if (href.match(/\/?ro\//) || href.match(/^\.\.\/ro\//)) {
+        isLang = true; targetLang = 'ro';
+      } else if (href.match(/\/?sv\//) || href.match(/^\.\.\/sv\//)) {
+        isLang = true; targetLang = 'sv';
+      } else if (href.match(/\/?de\//) || href.match(/^\.\.\/de\//)) {
+        isLang = true; targetLang = 'de';
+      }
+
+      var text = (link.textContent || '').trim();
+      if (text === 'English' || text === 'Română' || text === 'Svenska' || text === 'Deutsch') {
+        isLang = true;
+        if (text === 'English') targetLang = 'en';
+        if (text === 'Română') targetLang = 'ro';
+        if (text === 'Svenska') targetLang = 'sv';
+        if (text === 'Deutsch') targetLang = 'de';
+      }
+
+      if (!isLang) return;
+
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var path = window.location.pathname;
+        var cleanPath = path.replace(/^\/(ro|de|sv)\//, '/').replace(/^\/(ro|de|sv)$/, '/');
+
+        var newPath;
+        if (targetLang === 'en') {
+          newPath = cleanPath;
+        } else {
+          newPath = '/' + (targetLang === 'sv' ? 'sv' : targetLang) + (cleanPath === '/' ? '/' : cleanPath);
+        }
+
+        window.location.href = newPath;
+      });
+    });
+
+    // Enable Bootstrap tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      if (anchor.getAttribute('href') === '#') return;
+      
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 70,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -17,7 +17,164 @@
 <width>144</width>
 </image>
 <generator>quarto-1.8.26</generator>
-<lastBuildDate>Wed, 25 Mar 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 26 Mar 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Open-Source în Europa: Cum Nextcloud și LibreOffice înlocuiesc software-ul proprietar</title>
+  <dc:creator>Echipa CHENIST</dc:creator>
+  <link>https://chen.ist/ro/blog/open-source-europe-nextcloud-libreoffice.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><img src="https://chen.ist/assets/images/stock/cloud-sky.webp" class="rounded shadow img-fluid" style="width:100.0%"></p>
+<section id="de-ce-europa-se-orientează-către-open-source" class="level2">
+<h2 class="anchored" data-anchor-id="de-ce-europa-se-orientează-către-open-source">De ce Europa se orientează către Open Source</h2>
+<p>Ceva semnificativ se întâmplă în guvernele și instituțiile publice europene. După decenii în care software-ul proprietar de la furnizori americani a fost alegerea implicită, un număr tot mai mare de țări fac tranziții deliberate, bazate pe politici, către alternative open-source. Nu este o mișcare marginală — se întâmplă la nivelul guvernelor federale, al ministerelor apărării și al Comisiei Europene în sine.</p>
+<p>Motivațiile sunt concrete și se suprapun.</p>
+<section id="suveranitate-digitală" class="level3">
+<h3 class="anchored" data-anchor-id="suveranitate-digitală">Suveranitate digitală</h3>
+<p>Conceptul de suveranitate digitală — capacitatea unui guvern sau a unei organizații de a-și controla propria infrastructură digitală — a devenit o preocupare centrală de politică în Europa. Când operațiunile guvernamentale critice depind de software controlat de companii supuse jurisdicțiilor străine, există un risc inerent. US CLOUD Act, de exemplu, poate obliga companiile americane să predea date stocate oriunde în lume. Pentru instituțiile europene care gestionează date sensibile ale cetățenilor, aceasta nu este o preocupare teoretică.</p>
+<p>Software-ul open-source elimină această dependență. Codul poate fi auditat, găzduirea poate fi locală și niciun furnizor nu deține cheile.</p>
+</section>
+<section id="conformitate-gdpr" class="level3">
+<h3 class="anchored" data-anchor-id="conformitate-gdpr">Conformitate GDPR</h3>
+<p>Regulamentul General privind Protecția Datelor impune ca datele personale ale cetățenilor UE să fie gestionate cu protecții specifice. Când datele trec prin servicii cloud operate de companii din afara UE, conformitatea devine complicată. Soluțiile open-source auto-găzduite permit organizațiilor să păstreze datele pe teritoriul UE, sub jurisdicția UE, cu vizibilitate completă asupra modului în care sunt procesate.</p>
+</section>
+<section id="costuri-la-scară-largă" class="level3">
+<h3 class="anchored" data-anchor-id="costuri-la-scară-largă">Costuri la scară largă</h3>
+<p>Organizațiile din sectorul public operează la scară enormă. Doar guvernul federal german angajează peste 300.000 de persoane. La această scară, taxele de licențiere per utilizator pentru suite de birou, stocare cloud și instrumente de colaborare reprezintă un cost recurent substanțial. Alternativele open-source nu au taxe de licențiere per loc. Costurile se mută spre implementare, personalizare și suport — domenii în care companiile IT europene pot concura și unde cheltuielile rămân în economia UE.</p>
+</section>
+<section id="securitate-prin-transparență" class="level3">
+<h3 class="anchored" data-anchor-id="securitate-prin-transparență">Securitate prin transparență</h3>
+<p>Software-ul proprietar funcționează ca o cutie neagră. Utilizatorii se bazează pe încrederea că furnizorul nu are vulnerabilități, backdoor-uri sau colectare de date nedeclarată. Software-ul open-source permite audituri de securitate independente. Guvernele pot — și o fac — să inspecteze codul care rulează pe infrastructura lor. Nu este vorba despre neîncredere în furnizori; este vorba despre încredere verificabilă, nu presupusă.</p>
+</section>
+<section id="politica-ue-strategia-open-source" class="level3">
+<h3 class="anchored" data-anchor-id="politica-ue-strategia-open-source">Politica UE: Strategia Open Source</h3>
+<p>Comisia Europeană a adoptat <a href="https://commission.europa.eu/about-european-commission/departments-and-executive-agencies/informatics/open-source-software-strategy_en">Strategia pentru Software Open Source 2020-2023</a>, încurajând explicit utilizarea soluțiilor open-source în instituțiile UE. Strategia a stabilit principiul „Think Open” ca abordare implicită pentru noile soluții IT și a angajat Comisia să contribuie înapoi la ecosistemul open-source. Această strategie a fost de atunci extinsă și consolidată, open-source devenind o parte integrantă a politicii digitale a UE, nu un aspect secundar.</p>
+</section>
+</section>
+<section id="nextcloud-alternativa-europeană-de-cloud" class="level2">
+<h2 class="anchored" data-anchor-id="nextcloud-alternativa-europeană-de-cloud">Nextcloud: Alternativa europeană de cloud</h2>
+<p><a href="https://nextcloud.com">Nextcloud</a> este o platformă auto-găzduită de sincronizare fișiere, colaborare și comunicare. Are sediul în Stuttgart, Germania, și este dezvoltată în principal de o echipă europeană. Oferă funcționalitate comparabilă cu Google Workspace sau Microsoft 365 — stocare de fișiere, calendar, contacte, apeluri video, colaborare pe documente, management de proiecte — dar datele rămân pe infrastructura pe care o controlezi.</p>
+<p>Ceea ce face Nextcloud deosebit de relevant în contextul european nu este doar setul de funcționalități, ci modelul de implementare. Este conceput de la zero pentru găzduire on-premises sau cloud privat, făcând conformitatea GDPR simplă prin design, nu prin contract.</p>
+<section id="germania-bundescloud" class="level3">
+<h3 class="anchored" data-anchor-id="germania-bundescloud">Germania: Bundescloud</h3>
+<p>Administrația federală germană a implementat Nextcloud ca fundație a „Bundescloud” — o platformă cloud securizată pentru peste 300.000 de angajați federali. Aceasta este una dintre cele mai mari implementări Nextcloud din lume și reprezintă o decizie deliberată la cel mai înalt nivel guvernamental de a renunța la furnizorii de cloud americani pentru colaborare internă și partajare de fișiere. Implementarea este gestionată de Centrul Federal German de Tehnologia Informației (ITZBund), oferind guvernului control complet asupra datelor și infrastructurii sale.</p>
+<p>Sursă: <a href="https://nextcloud.com/blog/german-federal-administration-relies-on-nextcloud/">Nextcloud — Administrația Federală Germană</a></p>
+</section>
+<section id="franța-cloud-ul-guvernamental-nubo" class="level3">
+<h3 class="anchored" data-anchor-id="franța-cloud-ul-guvernamental-nubo">Franța: Cloud-ul guvernamental „Nubo”</h3>
+<p>Guvernul francez a selectat Nextcloud ca bază pentru platforma sa cloud interministerială, permițând partajarea securizată de fișiere și colaborarea între ministerele guvernamentale. Franța a fost deosebit de agresivă în urmărirea suveranității digitale, cu Direction Interministérielle du Numérique (DINUM) coordonând eforturile de reducere a dependenței de serviciile cloud străine. Alegerea Nextcloud se încadrează într-o strategie mai amplă care include mesagerie open-source, management al identității și instrumente colaborative în întregul stat francez.</p>
+<p>Sursă: <a href="https://nextcloud.com/blog/french-government-chooses-nextcloud/">Nextcloud — Guvernul Francez</a></p>
+</section>
+<section id="suedia-și-olanda" class="level3">
+<h3 class="anchored" data-anchor-id="suedia-și-olanda">Suedia și Olanda</h3>
+<p>Mai multe municipalități suedeze au adoptat Nextcloud pentru colaborare internă, motivate de cerințele de protecție a datelor și dorința de a păstra datele cetățenilor sub control local. În Olanda, agențiile guvernamentale s-au orientat în mod similar către Nextcloud ca parte a eforturilor mai ample de conformitate cu reglementările privind confidențialitatea și reducerea dependenței de serviciile cloud americane. Acestea nu sunt programe pilot experimentale — sunt implementări de producție care deservesc mii de funcționari publici.</p>
+</section>
+<section id="de-ce-nextcloud-în-mod-specific" class="level3">
+<h3 class="anchored" data-anchor-id="de-ce-nextcloud-în-mod-specific">De ce Nextcloud în mod specific</h3>
+<p>Atractivitatea Nextcloud în sectorul public european se reduce la câțiva factori: este o companie europeană, supusă legislației UE. Este complet auto-găzduit, deci rezidența datelor este garantată. Are un model activ de suport enterprise, astfel încât organizațiile nu rămân fără sprijin profesional. Iar funcționalitatea sa este suficient de largă pentru a înlocui mai multe instrumente proprietare cu o singură platformă.</p>
+</section>
+</section>
+<section id="libreoffice-standardul-open-document" class="level2">
+<h2 class="anchored" data-anchor-id="libreoffice-standardul-open-document">LibreOffice: Standardul Open Document</h2>
+<p><a href="https://www.libreoffice.org">LibreOffice</a> este suita de birou open-source lider, dezvoltată de <a href="https://www.documentfoundation.org">The Document Foundation</a>, o organizație non-profit cu sediul în Berlin. Include un procesor de text, aplicație de calcul tabelar, software de prezentări și altele. Citește și scrie formate Microsoft Office și acceptă nativ Open Document Format (ODF), care este un format de fișier standardizat ISO și formatul implicit de documente pentru mai multe state membre UE.</p>
+<p>Adoptarea LibreOffice în instituțiile europene este motivată de aceiași factori ca și Nextcloud — suveranitate, costuri și interoperabilitate — dar cu o dimensiune suplimentară: independența față de formatul documentelor. Când un guvern standardizează pe ODF, nu mai este blocat de software-ul unui anumit furnizor pentru a-și citi propriile documente.</p>
+<section id="italia-ministerul-apărării-și-administrațiile-municipale" class="level3">
+<h3 class="anchored" data-anchor-id="italia-ministerul-apărării-și-administrațiile-municipale">Italia: Ministerul Apărării și administrațiile municipale</h3>
+<p>Ministerul Apărării din Italia a migrat aproximativ 150.000 de stații de lucru la LibreOffice, făcând-o una dintre cele mai mari migrări ale unei singure organizații din Europa. Decizia a fost motivată de economii de costuri și dorința de a adopta standarde deschise. Dincolo de nivelul național, municipalitățile italiene, inclusiv orașul Bari și orașul Pesaro, au migrat și ele la LibreOffice, demonstrând că abordarea se extinde de la ministere mari până la administrația locală.</p>
+</section>
+<section id="germania-münchen-și-schleswig-holstein" class="level3">
+<h3 class="anchored" data-anchor-id="germania-münchen-și-schleswig-holstein">Germania: München și Schleswig-Holstein</h3>
+<p>Proiectul LiMux al orașului München este probabil cea mai studiată — și cea mai dezbătută — migrare open-source din istorie. München a migrat aproximativ 15.000 de stații de lucru de la Windows și Microsoft Office la Linux și LibreOffice în anii 2000, apoi a revenit controversat în 2017 sub o nouă administrație a orașului. Revenirea a fost atribuită pe scară largă factorilor politici, nu tehnici, iar München a revizuit de atunci strategia sa open-source.</p>
+<p>Mai recent, guvernul landului Schleswig-Holstein a anunțat o migrare cuprinzătoare la LibreOffice și alte instrumente open-source pe cele 25.000 de stații de lucru ale sale. Această migrare, anunțată în 2024, este executată sistematic cu un calendar multianual și reprezintă o nouă generație de adoptare open-source care a învățat din experiența München.</p>
+</section>
+<section id="franța-jandarmeria" class="level3">
+<h3 class="anchored" data-anchor-id="franța-jandarmeria">Franța: Jandarmeria</h3>
+<p>Jandarmeria Națională Franceză, forța de poliție militară cu peste 100.000 de membri, a migrat peste 70.000 de stații de lucru la Linux și LibreOffice începând din 2005. Aceasta este una dintre cele mai longevive și de succes implementări open-source la scară largă din orice guvern la nivel mondial. Jandarmeria a raportat economii semnificative de costuri și independență operațională îmbunătățită, iar migrarea a fost susținută de-a lungul mai multor schimbări de guvern — un indicator puternic al satisfacției instituționale.</p>
+</section>
+<section id="spania-guvernele-regionale" class="level3">
+<h3 class="anchored" data-anchor-id="spania-guvernele-regionale">Spania: Guvernele regionale</h3>
+<p>Regiunea Valencia și Comunitatea Autonomă Extremadura din Spania au fost printre primii adoptanți ai software-ului open-source în educație și guvern. Extremadura a dezvoltat propria distribuție Linux (LinEx) pentru școli și birouri guvernamentale, iar Valencia a menținut un angajament puternic față de instrumentele open-source, inclusiv LibreOffice, în întreaga administrație regională.</p>
+</section>
+<section id="standardul-odf" class="level3">
+<h3 class="anchored" data-anchor-id="standardul-odf">Standardul ODF</h3>
+<p>Un factor cheie care permite adoptarea LibreOffice este Open Document Format (ODF). Ca standard ISO/IEC (26300), ODF asigură că documentele nu sunt legate de implementarea unui singur furnizor. Mai multe state membre UE au adoptat ODF ca format recomandat sau obligatoriu pentru documentele guvernamentale. Această standardizare este critică: înseamnă că, chiar dacă o organizație nu folosește LibreOffice, poate totuși schimba documente liber cu cele care o fac.</p>
+</section>
+</section>
+<section id="cine-conduce-schimbarea" class="level2">
+<h2 class="anchored" data-anchor-id="cine-conduce-schimbarea">Cine conduce schimbarea</h2>
+<p>Trecerea la open-source în Europa nu se întâmplă izolat. Este susținută de un cadru instituțional în creștere.</p>
+<section id="ospo-al-comisiei-europene" class="level3">
+<h3 class="anchored" data-anchor-id="ospo-al-comisiei-europene">OSPO al Comisiei Europene</h3>
+<p>Comisia Europeană a înființat un Open Source Programme Office (OSPO) pentru a coordona activitățile sale open-source, a contribui la proiecte upstream și a consilia instituțiile UE cu privire la adoptarea open-source. OSPO reprezintă un angajament instituțional care depășește deciziile individuale de achiziție.</p>
+</section>
+<section id="gaia-x" class="level3">
+<h3 class="anchored" data-anchor-id="gaia-x">GAIA-X</h3>
+<p><a href="https://gaia-x.eu">GAIA-X</a> este o inițiativă europeană pentru dezvoltarea unei infrastructuri de date federalizate bazate pe standarde deschise și valori europene. Deși nu este exclusiv open-source, GAIA-X prioritizează interoperabilitatea, transparența și suveranitatea datelor — principii care se aliniază strâns cu abordările open-source. Scopul este de a crea o alternativă europeană la furnizorii cloud hyperscale care respectă normele europene de protecție a datelor.</p>
+</section>
+<section id="public-money-public-code" class="level3">
+<h3 class="anchored" data-anchor-id="public-money-public-code">Public Money, Public Code</h3>
+<p><a href="https://fsfe.org">Free Software Foundation Europe</a> (FSFE) derulează campania <a href="https://publiccode.eu">Public Money, Public Code</a>, care promovează un principiu simplu: software-ul finanțat din bani publici ar trebui să fie disponibil public ca open-source. Campania a strâns sprijinul a peste 200 de organizații și a numeroase administrații publice. Logica este simplă — când contribuabilii finanțează dezvoltarea de software, rezultatele ar trebui să beneficieze pe toți, nu să fie închise ca și cod proprietar.</p>
+</section>
+<section id="strategii-naționale" class="level3">
+<h3 class="anchored" data-anchor-id="strategii-naționale">Strategii naționale</h3>
+<p>Statele membre UE individuale și-au dezvoltat propriile strategii open-source. Fondul Sovereign Tech al Germaniei oferă finanțare directă pentru proiecte critice de infrastructură open-source. DINUM din Franța coordonează strategia digitală în întregul stat francez cu un mandat puternic open-source. Aceste eforturi naționale completează politica la nivel UE și creează o structură de sprijin pe mai multe niveluri pentru adoptarea open-source.</p>
+</section>
+</section>
+<section id="ce-înseamnă-aceasta-pentru-afacerea-ta" class="level2">
+<h2 class="anchored" data-anchor-id="ce-înseamnă-aceasta-pentru-afacerea-ta">Ce înseamnă aceasta pentru afacerea ta</h2>
+<p>Dacă guvernele naționale cu sute de mii de utilizatori își desfășoară operațiunile pe Nextcloud și LibreOffice, instrumentele sunt suficient de mature pentru o afacere de orice dimensiune. Întrebarea nu mai este dacă alternativele open-source sunt pregătite pentru producție — sunt. Întrebarea este dacă organizația ta are o cale practică de migrare.</p>
+<section id="ecosistemul-este-pregătit" class="level3">
+<h3 class="anchored" data-anchor-id="ecosistemul-este-pregătit">Ecosistemul este pregătit</h3>
+<p>Atât Nextcloud, cât și LibreOffice oferă opțiuni de suport enterprise, fie direct, fie prin parteneri certificați. Implementare profesională, asistență la migrare și suport continuu sunt disponibile în întreaga Europă. Acesta nu este un ecosistem doar comunitar — este un ecosistem comercial construit pe fundații open-source.</p>
+</section>
+<section id="migrarea-este-practică" class="level3">
+<h3 class="anchored" data-anchor-id="migrarea-este-practică">Migrarea este practică</h3>
+<p>Trecerea de la instrumente proprietare nu trebuie să se întâmple peste noapte. Cele mai reușite migrări urmează o abordare graduală: începe cu proiecte noi pe instrumente open-source, menține compatibilitatea cu formatele existente în perioada de tranziție și migrează datele istorice pe un calendar practic. Organizațiile menționate în acest articol — de la Jandarmeria Franceză la guvernul federal german — au urmat toate acest model.</p>
+</section>
+<section id="este-vorba-despre-managementul-riscurilor-nu-despre-ideologie" class="level3">
+<h3 class="anchored" data-anchor-id="este-vorba-despre-managementul-riscurilor-nu-despre-ideologie">Este vorba despre managementul riscurilor, nu despre ideologie</h3>
+<p>Schimbarea europeană către open-source este motivată de managementul practic al riscurilor: reducerea dependenței de furnizor, controlul costurilor, asigurarea conformității și menținerea independenței operaționale. Aceeași logică se aplică și afacerilor. Dacă organizația ta depinde de instrumente în care un singur furnizor poate schimba prețurile, întrerupe funcționalități sau modifica termenii de serviciu unilateral, porți un risc. Alternativele open-source îți oferă opțiuni.</p>
+<p>Pentru o comparație detaliată între instrumentele open-source și cele proprietare, consultă <a href="../../compare.html">pagina noastră de comparație</a>. Pentru a explora cum ar putea arăta o migrare pentru organizația ta, vizitează pagina noastră de <a href="../../digital/">servicii digitale</a>.</p>
+</section>
+</section>
+<section id="resurse" class="level2">
+<h2 class="anchored" data-anchor-id="resurse">Resurse</h2>
+<ul>
+<li><a href="https://nextcloud.com">Nextcloud</a> — Platformă auto-găzduită de sincronizare fișiere și colaborare</li>
+<li><a href="https://www.libreoffice.org">LibreOffice</a> — Suită de birou open-source</li>
+<li><a href="https://www.documentfoundation.org">The Document Foundation</a> — Organizația non-profit din spatele LibreOffice</li>
+<li><a href="https://commission.europa.eu/about-european-commission/departments-and-executive-agencies/informatics/open-source-software-strategy_en">Strategia Open Source a Comisiei Europene</a></li>
+<li><a href="https://publiccode.eu">Public Money, Public Code</a> — Campanie pentru software open-source finanțat public</li>
+<li><a href="https://gaia-x.eu">GAIA-X</a> — Inițiativa europeană de infrastructură de date</li>
+<li><a href="https://fsfe.org">Free Software Foundation Europe</a></li>
+</ul>
+<div style="margin:3rem 0; padding:2rem 2.5rem; background:rgba(129,189,74,0.04); border:1.5px solid rgba(129,189,74,0.15); border-radius:16px; text-align:center;">
+<h3 style="font-size:1.15rem; font-weight:700; margin-bottom:0.5rem;" class="anchored">
+Pregătit să explorezi open-source pentru organizația ta?
+</h3>
+<p style="color:#86868b; margin-bottom:1.25rem;">
+Programează o consultanță gratuită pentru a discuta ce instrumente se potrivesc nevoilor tale și cum să planifici o migrare practică.
+</p>
+<p><a href="../../ro/booking/" class="m-b" style="font-size:0.9rem; padding:0.65rem 1.5rem; color:#fff !important;">Programează o consultanță</a></p>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>Open Source</category>
+  <category>Europa</category>
+  <category>Suveranitate Digitală</category>
+  <category>Nextcloud</category>
+  <category>LibreOffice</category>
+  <guid>https://chen.ist/ro/blog/open-source-europe-nextcloud-libreoffice.html</guid>
+  <pubDate>Thu, 26 Mar 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://chen.ist/assets/images/stock/cloud-sky.webp" medium="image" type="image/webp"/>
+</item>
 <item>
   <title>Apple Business: Ce trebuie să știe IMM-urile</title>
   <dc:creator>CHENIST Team</dc:creator>

@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-b37f6c1b9a99d16252d3ddd2c7074628.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6cb3fdec3a604e15d7c32437517db040.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-398b749543a727f3b66e7cafba33b310.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-6cb3fdec3a604e15d7c32437517db040.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -1029,21 +1029,21 @@ html:not([data-bs-theme="dark"]) .hp-mountains { background: #fff url("data:imag
   <div class="hp-sec-content">
     <div class="hp-blog">
       <h2 style="text-align: center; margin-bottom: 3rem;">Senaste</h2>
-      <a href="../sv/blogg/apple-business-smb-guide.html" class="hp-blog-item">
+      <a href="../sv/blog/apple-business-smb-guide.html" class="hp-blog-item">
         <div>
           <div class="hp-blog-title">Apple Business: Vad SMF behöver veta</div>
           <div class="hp-blog-date">25 mars 2026</div>
         </div>
         <span class="hp-blog-arrow"><i class="bi bi-arrow-right"></i></span>
       </a>
-      <a href="../sv/blogg/open-source-infrastructure-smbs.html" class="hp-blog-item">
+      <a href="../sv/blog/open-source-infrastructure-smbs.html" class="hp-blog-item">
         <div>
           <div class="hp-blog-title">Öppen källkods-infrastruktur för SMF</div>
           <div class="hp-blog-date">20 mars 2026</div>
         </div>
         <span class="hp-blog-arrow"><i class="bi bi-arrow-right"></i></span>
       </a>
-      <a href="../sv/blogg/cyber-security-best-practices.html" class="hp-blog-item">
+      <a href="../sv/blog/cyber-security-best-practices.html" class="hp-blog-item">
         <div>
           <div class="hp-blog-title">Bästa praxis för cybersäkerhet 2025</div>
           <div class="hp-blog-date">Uppdaterad mars 2026</div>
@@ -1051,7 +1051,7 @@ html:not([data-bs-theme="dark"]) .hp-mountains { background: #fff url("data:imag
         <span class="hp-blog-arrow"><i class="bi bi-arrow-right"></i></span>
       </a>
       <div style="text-align: center; margin-top: 2rem;">
-        <a href="../sv/blogg.html" class="pr" style="font-size: 0.95rem; font-weight: 500; color: #81BD4A; text-decoration: none;">Alla inlägg <span style="font-weight: 300;">›</span></a>
+        <a href="../sv/blog.html" class="pr" style="font-size: 0.95rem; font-weight: 500; color: #81BD4A; text-decoration: none;">Alla inlägg <span style="font-weight: 300;">›</span></a>
       </div>
     </div>
   </div>
@@ -1581,10 +1581,9 @@ footer a { -webkit-tap-highlight-color: transparent; }
   document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
     var href = a.getAttribute('href');
     if (href && href.startsWith('/') && !href.startsWith('//')) {
-      // Swedish blog is at /sv/blogg.html, not /sv/blog.html
-      if (lang === 'sv' && href === '/blog.html') {
-        a.setAttribute('href', '/sv/blogg.html');
-      } else {
+
+
+
         a.setAttribute('href', prefix + href);
       }
     }

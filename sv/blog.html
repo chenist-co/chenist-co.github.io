@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="CHENIST Team">
-<meta name="dcterms.date" content="2026-03-20">
-<meta name="description" content="En praktisk guide till att bygga SMF-infrastruktur med open source-verktyg — från produktivitet och kommunikation till identitet, övervakning och UNIX-grunder.">
 
-<title>Open source-infrastruktur för SMF: En praktisk guide – chen.ist</title>
+<title>Blogg – chen.ist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,29 +23,31 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../assets/images/favicon.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-73406dad87c631b3ff16adcaa0b1ab21.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-d670e99d9fdfed706f1502bc605e1805.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-73406dad87c631b3ff16adcaa0b1ab21.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/images/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6cb3fdec3a604e15d7c32437517db040.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-398b749543a727f3b66e7cafba33b310.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-6cb3fdec3a604e15d7c32437517db040.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -76,16 +75,45 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>html{ scroll-behavior: smooth; }</style>
-<meta property="og:title" content="Open source-infrastruktur för SMF: En praktisk guide – chen.ist">
-<meta property="og:description" content="En praktisk guide till att bygga SMF-infrastruktur med open source-verktyg — från produktivitet och kommunikation till identitet, övervakning och UNIX-grunder.">
-<meta property="og:image" content="https://chen.ist/assets/images/stock/code-screen.webp">
+<link rel="alternate" type="application/rss+xml" title="chen.ist" href="blog.xml" data-external="1"><meta property="og:title" content="Blogg – chen.ist">
+<meta property="og:description" content="Insikter, handledningar och uppdateringar från vårt team">
+<meta property="og:image" content="https://chen.ist/sv/assets/images/og-image.png">
 <meta property="og:site_name" content="chen.ist">
-<meta name="twitter:title" content="Open source-infrastruktur för SMF: En praktisk guide – chen.ist">
-<meta name="twitter:description" content="En praktisk guide till att bygga SMF-infrastruktur med open source-verktyg — från produktivitet och kommunikation till identitet, övervakning och UNIX-grunder.">
-<meta name="twitter:image" content="https://chen.ist/assets/images/stock/code-screen.webp">
+<meta name="twitter:title" content="Blogg – chen.ist">
+<meta name="twitter:description" content="Insikter, handledningar och uppdateringar från vårt team">
+<meta name="twitter:image" content="https://chen.ist/sv/assets/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-</head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+</head><body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -411,7 +439,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<link rel="manifest" href="../../manifest.json">
+<link rel="manifest" href="../manifest.json">
 <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
@@ -436,7 +464,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 </script>
-<link rel="preload" href="../../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
+<link rel="preload" href="../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
 <meta name="view-transition" content="same-origin">
 <noscript><style>.m-s,.m-bg,.m-cta,.m-r,.m-n,.hp-sec,.hp-stats,.ev-card,.ev-past,.m-t{opacity:1!important;transform:none!important;}</style></noscript>
@@ -482,8 +510,51 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 </script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
 
-<link rel="stylesheet" href="../../assets/css/main.min.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../assets/css/main.min.css">
 
 
 
@@ -493,9 +564,9 @@ document.addEventListener('DOMContentLoaded', function() {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
-    <img src="../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -505,7 +576,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -514,35 +585,35 @@ document.addEventListener('DOMContentLoaded', function() {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-services">    
         <li>
-    <a class="dropdown-item" href="../../services/index.html">
+    <a class="dropdown-item" href="../services/index.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../security/index.html">
+    <a class="dropdown-item" href="../security/index.html">
  <span class="dropdown-text">Security</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../digital/index.html">
+    <a class="dropdown-item" href="../digital/index.html">
  <span class="dropdown-text">Digital Infrastructure</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../services/nis2/index.html">
+    <a class="dropdown-item" href="../services/nis2/index.html">
  <span class="dropdown-text">NIS2 Compliance</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../services/cybersecurity/index.html">
+    <a class="dropdown-item" href="../services/cybersecurity/index.html">
  <span class="dropdown-text">Cybersecurity</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../services/cloud/index.html">
+    <a class="dropdown-item" href="../services/cloud/index.html">
  <span class="dropdown-text">Cloud Services</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../services/digital-resilience/index.html">
+    <a class="dropdown-item" href="../services/digital-resilience/index.html">
  <span class="dropdown-text">Digital Resilience</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../services/gdpr/index.html">
+    <a class="dropdown-item" href="../services/gdpr/index.html">
  <span class="dropdown-text">GDPR Compliance</span></a>
   </li>  
     </ul>
@@ -553,45 +624,45 @@ document.addEventListener('DOMContentLoaded', function() {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-academy">    
         <li>
-    <a class="dropdown-item" href="../../academy/overview.html">
+    <a class="dropdown-item" href="../academy/overview.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../academy/courses.html">
+    <a class="dropdown-item" href="../academy/courses.html">
  <span class="dropdown-text">Courses</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../academy/trainings.html">
+    <a class="dropdown-item" href="../academy/trainings.html">
  <span class="dropdown-text">Trainings</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../academy/microlearning.html">
+    <a class="dropdown-item" href="../academy/microlearning.html">
  <span class="dropdown-text">Microlearning</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../academy/programs/index.html">
+    <a class="dropdown-item" href="../academy/programs/index.html">
  <span class="dropdown-text">Programs</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../academy/events.html">
+    <a class="dropdown-item" href="../academy/events.html">
  <span class="dropdown-text">Events</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../academy/webinars.html">
+    <a class="dropdown-item" href="../academy/webinars.html">
  <span class="dropdown-text">Webinars</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../academy/computerclub.html">
+    <a class="dropdown-item" href="../academy/computerclub.html">
  <span class="dropdown-text">Computer Club</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../academy/partnerships.html">
+    <a class="dropdown-item" href="../academy/partnerships.html">
  <span class="dropdown-text">Partnerships</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../blog.html"> 
+    <a class="nav-link" href="../blog.html"> 
 <span class="menu-text">Blogs</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -600,19 +671,19 @@ document.addEventListener('DOMContentLoaded', function() {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
         <li>
-    <a class="dropdown-item" href="../../resources/index.html">
+    <a class="dropdown-item" href="../resources/index.html">
  <span class="dropdown-text">All Resources</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../resources/tools/index.html">
+    <a class="dropdown-item" href="../resources/tools/index.html">
  <span class="dropdown-text">Tools</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../compare.html">
+    <a class="dropdown-item" href="../compare.html">
  <span class="dropdown-text">Why Open Source</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../faq.html">
+    <a class="dropdown-item" href="../faq.html">
  <span class="dropdown-text">FAQ</span></a>
   </li>  
     </ul>
@@ -625,25 +696,25 @@ document.addEventListener('DOMContentLoaded', function() {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
         <li>
-    <a class="dropdown-item" href="../../about/index.html">
+    <a class="dropdown-item" href="../about/index.html">
  <span class="dropdown-text">About</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../about/team.html">
+    <a class="dropdown-item" href="../about/team.html">
  <span class="dropdown-text">Team</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../about/csr.html">
+    <a class="dropdown-item" href="../about/csr.html">
  <span class="dropdown-text">CSR</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../about/community.html">
+    <a class="dropdown-item" href="../about/community.html">
  <span class="dropdown-text">Community</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../contact.html"> 
+    <a class="nav-link" href="../contact.html"> 
 <span class="menu-text">Contact</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -652,19 +723,19 @@ document.addEventListener('DOMContentLoaded', function() {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-">    
         <li>
-    <a class="dropdown-item" href="../../index.html">
+    <a class="dropdown-item" href="../index.html">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../ro/index.html">
+    <a class="dropdown-item" href="../ro/index.html">
  <span class="dropdown-text">Română</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../sv/index.html">
+    <a class="dropdown-item" href="../sv/index.html">
  <span class="dropdown-text">Svenska</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../de/index.html">
+    <a class="dropdown-item" href="../de/index.html">
  <span class="dropdown-text">Deutsch</span></a>
   </li>  
     </ul>
@@ -678,201 +749,82 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#varför-open-source-är-vettigt-för-smf" id="toc-varför-open-source-är-vettigt-för-smf" class="nav-link active" data-scroll-target="#varför-open-source-är-vettigt-för-smf">Varför open source är vettigt för SMF</a></li>
-  <li><a href="#produktivitet-och-samarbete" id="toc-produktivitet-och-samarbete" class="nav-link" data-scroll-target="#produktivitet-och-samarbete">Produktivitet och samarbete</a>
-  <ul class="collapse">
-  <li><a href="#dokumentredigering-och-kontorsverktyg" id="toc-dokumentredigering-och-kontorsverktyg" class="nav-link" data-scroll-target="#dokumentredigering-och-kontorsverktyg">Dokumentredigering och kontorsverktyg</a></li>
-  <li><a href="#fillagring-och-synkronisering" id="toc-fillagring-och-synkronisering" class="nav-link" data-scroll-target="#fillagring-och-synkronisering">Fillagring och synkronisering</a></li>
-  </ul></li>
-  <li><a href="#kommunikation" id="toc-kommunikation" class="nav-link" data-scroll-target="#kommunikation">Kommunikation</a>
-  <ul class="collapse">
-  <li><a href="#meddelanden-och-chatt" id="toc-meddelanden-och-chatt" class="nav-link" data-scroll-target="#meddelanden-och-chatt">Meddelanden och chatt</a></li>
-  <li><a href="#videokonferenser" id="toc-videokonferenser" class="nav-link" data-scroll-target="#videokonferenser">Videokonferenser</a></li>
-  </ul></li>
-  <li><a href="#identitet-och-single-sign-on" id="toc-identitet-och-single-sign-on" class="nav-link" data-scroll-target="#identitet-och-single-sign-on">Identitet och Single Sign-On</a>
-  <ul class="collapse">
-  <li><a href="#centraliserad-autentisering" id="toc-centraliserad-autentisering" class="nav-link" data-scroll-target="#centraliserad-autentisering">Centraliserad autentisering</a></li>
-  </ul></li>
-  <li><a href="#övervakning-och-observerbarhet" id="toc-övervakning-och-observerbarhet" class="nav-link" data-scroll-target="#övervakning-och-observerbarhet">Övervakning och observerbarhet</a></li>
-  <li><a href="#unix-grunder" id="toc-unix-grunder" class="nav-link" data-scroll-target="#unix-grunder">UNIX-grunder</a>
-  <ul class="collapse">
-  <li><a href="#linux-distributioner" id="toc-linux-distributioner" class="nav-link" data-scroll-target="#linux-distributioner">Linux-distributioner</a></li>
-  <li><a href="#bsd-system" id="toc-bsd-system" class="nav-link" data-scroll-target="#bsd-system">BSD-system</a></li>
-  </ul></li>
-  <li><a href="#verkliga-driftsättningsexempel" id="toc-verkliga-driftsättningsexempel" class="nav-link" data-scroll-target="#verkliga-driftsättningsexempel">Verkliga driftsättningsexempel</a></li>
-  <li><a href="#svar-på-vanliga-frågor" id="toc-svar-på-vanliga-frågor" class="nav-link" data-scroll-target="#svar-på-vanliga-frågor">Svar på vanliga frågor</a></li>
-  <li><a href="#kom-igång" id="toc-kom-igång" class="nav-link" data-scroll-target="#kom-igång">Kom igång</a>
-  <ul class="collapse">
-  <li><a href="#redo-att-utforska-open-source-infrastruktur" id="toc-redo-att-utforska-open-source-infrastruktur" class="nav-link" data-scroll-target="#redo-att-utforska-open-source-infrastruktur">Redo att utforska open source-infrastruktur?</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Open source-infrastruktur för SMF: En praktisk guide</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">Open Source</div>
-    <div class="quarto-category">Digital Infrastructure</div>
-    <div class="quarto-category">SMB</div>
-  </div>
-  </div>
-
-<div>
-  <div class="description">
-    En praktisk guide till att bygga SMF-infrastruktur med open source-verktyg — från produktivitet och kommunikation till identitet, övervakning och UNIX-grunder.
-  </div>
-</div>
-
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>CHENIST Team </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">March 20, 2026</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
+<header id="title-block-header">
+<h1 class="title display-7">Blogg</h1>
+<p class="subtitle lead">Insikter, handledningar och uppdateringar från vårt team</p>
 
 </header>
 
 
-<div class="text-center mb-4">
-  <img loading="lazy" src="../../assets/images/stock/code-screen.webp" alt="Article cover" class="img-fluid rounded shadow" style="max-height: 400px; width: 100%; object-fit: cover;">
+<div class="m">
+
+<div class="blog-hero">
+  <div class="container">
+    <h1>Vår <span class="gr">Blogg</span></h1>
+    <p>Insikter om cybersäkerhet, öppen källkod-guider och infrastrukturanalyser från vårt team.</p>
+    <div class="blog-bar">
+      <div class="blog-lang-switch">
+        <a href="../blog.html">EN</a>
+        <a href="../ro/blog.html">RO</a>
+        <a href="../sv/blog.html" class="active">SV</a>
+        <a href="../de/blog.html">DE</a>
+      </div>
+    </div>
+  </div>
 </div>
-<section id="varför-open-source-är-vettigt-för-smf" class="level2">
-<h2 class="anchored" data-anchor-id="varför-open-source-är-vettigt-för-smf">Varför open source är vettigt för SMF</h2>
-<p>Små och medelstora företag står inför en bekant spänning: de behöver infrastruktur på företagsnivå men kan ofta inte motivera licensieringskostnader på företagsnivå. Open source-programvara löser detta genom att tillhandahålla produktionsklara verktyg utan licensavgifter per användare, fullständig datasuveränitet och frihet från leverantörsberoende.</p>
-<p>Det handlar inte om ideologi. Det handlar om att bygga infrastruktur som du faktiskt äger. När din e-post, ditt identitetssystem eller din övervakningsstack beror på en leverantör som kan ändra priser, villkor eller funktioner när som helst, bär du en risk som är svår att kvantifiera förrän den realiseras. Open source-alternativ ger dig kontroll över den risken.</p>
-<p>Här är en praktisk genomgång av den open source-stack vi rekommenderar för SMF, organiserad efter funktion.</p>
-</section>
-<section id="produktivitet-och-samarbete" class="level2">
-<h2 class="anchored" data-anchor-id="produktivitet-och-samarbete">Produktivitet och samarbete</h2>
-<p>Produktivitetssviten är där de flesta företag börjar, och där open source-alternativ har mognat avsevärt.</p>
-<section id="dokumentredigering-och-kontorsverktyg" class="level3">
-<h3 class="anchored" data-anchor-id="dokumentredigering-och-kontorsverktyg">Dokumentredigering och kontorsverktyg</h3>
-<p><strong>LibreOffice</strong> förblir den standardmässiga kontorssviten för skrivbordet och hanterar ordbehandling, kalkylblad och presentationer med stark kompatibilitet för Microsoft Office-format. För team som behöver kollaborativ redigering i realtid i webbläsaren erbjuder <strong>Collabora Online</strong> en LibreOffice-baserad webbredigerare som integreras direkt med fillagringsplattformar.</p>
-<p><strong>CryptPad</strong> erbjuder ett integritetsfokuserat alternativ för kollaborativa dokument, kalkylblad och presentationer. Allt innehåll är end-to-end-krypterat, vilket innebär att inte ens serveradministratören kan läsa dina dokument. Detta är särskilt relevant för företag som hanterar känslig kunddata.</p>
-</section>
-<section id="fillagring-och-synkronisering" class="level3">
-<h3 class="anchored" data-anchor-id="fillagring-och-synkronisering">Fillagring och synkronisering</h3>
-<p><strong>Nextcloud</strong> är kärnan i de flesta open source-produktivitetsinstallationer. Det tillhandahåller filsynkronisering, delade kalendrar, kontakter, uppgiftshantering och ett app-ekosystem som utökar dess kapacitet till projekthantering, dokumentsignering och mer. Egenhostad eller hanterad ersätter Nextcloud en betydande del av vad företag vanligtvis köper från molnproduktivitetsleverantörer.</p>
-</section>
-</section>
-<section id="kommunikation" class="level2">
-<h2 class="anchored" data-anchor-id="kommunikation">Kommunikation</h2>
-<section id="meddelanden-och-chatt" class="level3">
-<h3 class="anchored" data-anchor-id="meddelanden-och-chatt">Meddelanden och chatt</h3>
-<p><strong>Matrix</strong> (via <strong>Element</strong>-klienten) tillhandahåller federerad, end-to-end-krypterad meddelandehantering. Federering innebär att din organisations chattserver kan kommunicera med andra Matrix-servrar, vilket gör det användbart för samarbete mellan organisationer utan att skapa konton på tredjepartsplattformar.</p>
-<p><strong>Mattermost</strong> är ett starkt val för team som föredrar en Slack-liknande upplevelse med egenhosterad kontroll. Det stöder kanaler, trådar, integrationer och har ett väldokumenterat API för automatisering.</p>
-</section>
-<section id="videokonferenser" class="level3">
-<h3 class="anchored" data-anchor-id="videokonferenser">Videokonferenser</h3>
-<p><strong>Jitsi Meet</strong> tillhandahåller webbläsarbaserade videokonferenser utan att deltagare behöver ett konto. Det stöder skärmdelning, inspelning och breakout-rum. För SMF som behöver pålitliga videosamtal utan licensiering per användare är Jitsi det mest okomplicerade alternativet.</p>
-</section>
-</section>
-<section id="identitet-och-single-sign-on" class="level2">
-<h2 class="anchored" data-anchor-id="identitet-och-single-sign-on">Identitet och Single Sign-On</h2>
-<p>Identitetshantering är ofta den mest förbisedda delen av SMF-infrastruktur, men det är också en av de mest verkningsfulla.</p>
-<section id="centraliserad-autentisering" class="level3">
-<h3 class="anchored" data-anchor-id="centraliserad-autentisering">Centraliserad autentisering</h3>
-<p><strong>Keycloak</strong> tillhandahåller identitets- och åtkomsthantering på företagsnivå, inklusive single sign-on (SSO), multifaktorautentisering, social inloggning och integration med SAML- och OpenID Connect-applikationer. Det är open source-motsvarigheten till kommersiella identitetsplattformar och integreras väl med resten av stacken.</p>
-<p><strong>FreeIPA</strong> kombinerar LDAP-katalogtjänster, Kerberos-autentisering, DNS-hantering och certifikatutfärdarfunktioner i en enda plattform. Det är särskilt väl lämpat för Linux-tunga miljöer där du behöver centraliserad användarhantering över servrar, arbetsstationer och applikationer.</p>
-<p><strong>OpenLDAP</strong> förblir relevant för organisationer som behöver en lätt, flexibel katalogtjänst utan den fullständiga FreeIPA-stacken.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+
+<div class="blog-featured">
+  <a href="../sv/blog/open-source-europe-nextcloud-libreoffice.html" class="blog-featured-card" style="text-decoration:none; color:inherit;">
+    <div class="blog-featured-img">
+      <img src="../assets/images/stock/cloud-sky.webp" alt="Open Source i Europa" loading="lazy">
+    </div>
+    <div>
+      <div class="blog-featured-tag"><i class="bi bi-star-fill" style="font-size:0.6rem;"></i> Senaste</div>
+      <div class="blog-featured-title">Öppen källkod i Europa: Nextcloud och LibreOffice</div>
+      <div class="blog-featured-desc">Verkliga fallstudier av europeiska regeringar som antar öppen källkod.</div>
+      <div class="blog-featured-meta">
+        <span><i class="bi bi-calendar3"></i> 26 mars 2026</span>
+        <span><i class="bi bi-tag"></i> Open Source, Europa</span>
+      </div>
+      <span class="blog-featured-link">Läs artikel</span>
+    </div>
+  </a>
 </div>
-<div class="callout-title-container flex-fill">
-Tip
+
+<div style="max-width:1200px; margin:2rem auto 0; padding:0 2rem;">
+  <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(0,0,0,0.06); padding-bottom:0.75rem;">
+    <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#86868b;">Alla Artiklar</span>
+    <a href="../sv/blog.xml" style="display:inline-flex; align-items:center; gap:0.3rem; font-size:0.78rem; font-weight:500; color:#f26522; text-decoration:none;"><i class="bi bi-rss"></i> RSS</a>
+  </div>
 </div>
+
+<div class="container" style="margin-bottom:3rem;">
+
 </div>
-<div class="callout-body-container callout-body">
-<p><strong>Praktiskt råd:</strong> Börja med Keycloak för SSO för webbapplikationer och lägg till FreeIPA när du behöver centraliserad autentisering för Linux-arbetsstationer och servrar. De integreras väl tillsammans.</p>
+<div class="blog-cta" style="padding:5rem 2rem;">
+  <div class="container">
+    <div style="width:36px;height:3px;background:#81BD4A;margin:0 auto 2rem;border-radius:2px;opacity:0.6;"></div>
+    <h2>Håll dig informerad</h2>
+    <p>Prenumerera på vårt RSS-flöde, nyhetsbrev eller följ oss för de senaste artiklarna.</p>
+    <div style="display:flex; justify-content:center; gap:0.75rem; flex-wrap:wrap;">
+      <a href="../sv/blog.xml" class="m-b" style="background:#f26522;"><i class="bi bi-rss me-2"></i>Prenumerera RSS</a>
+      <a href="https://alinmechenici.substack.com" target="_blank" class="m-b" style="background:#ff6719;"><i class="bi bi-envelope me-2"></i>Substack</a>
+      <a href="https://linkedin.com/in/chenistsec" target="_blank" class="m-bo"><i class="bi bi-linkedin me-2"></i>Följ oss</a>
+    </div>
+  </div>
 </div>
-</div>
-</section>
-</section>
-<section id="övervakning-och-observerbarhet" class="level2">
-<h2 class="anchored" data-anchor-id="övervakning-och-observerbarhet">Övervakning och observerbarhet</h2>
-<p>Du kan inte hantera det du inte kan se. Övervakningsinfrastruktur är icke-förhandlingsbar, även för små team.</p>
-<p><strong>Prometheus</strong> samlar in mätvärden från dina servrar, applikationer och nätverksenheter med en pull-baserad modell. Para ihop den med <strong>Grafana</strong> för instrumentpaneler och larm, och du har en övervakningsstack som skalas från en handfull servrar till tusentals.</p>
-<p><strong>Uptime Kuma</strong> är en lättviktig, egenhostad uptimemonitor med ett rent webbgränssnitt. Den stöder HTTP-, TCP-, DNS- och ping-kontroller med notifieringar via e-post, Slack, Matrix och dussintals andra kanaler. För SMF som behöver grundläggande uptimeövervakning utan komplexiteten i en fullständig observerbarhetsplattform är Uptime Kuma en utmärkt startpunkt.</p>
-</section>
-<section id="unix-grunder" class="level2">
-<h2 class="anchored" data-anchor-id="unix-grunder">UNIX-grunder</h2>
-<p>Operativsystemslagret är där open source-infrastruktur börjar, och valet av OS formar allt ovanför det.</p>
-<section id="linux-distributioner" class="level3">
-<h3 class="anchored" data-anchor-id="linux-distributioner">Linux-distributioner</h3>
-<ul>
-<li><strong>NixOS</strong> använder en deklarativ konfigurationsmodell där hela systemtillståndet definieras i konfigurationsfiler. Detta gör driftsättningar reproducerbara och återställningar triviala. Det har en brant inlärningskurva men ger utdelning i konsekvens mellan miljöer.</li>
-<li><strong>Debian</strong> är det konservativa valet: stabilt, väldokumenterat och brett stött. Det är standardrekommendationen för organisationer som vill ha tillförlitlighet utan överraskningar.</li>
-<li><strong>Red Hat Enterprise Linux (RHEL)</strong> och dess community-derivat tillhandahåller en stödd, certifierad plattform för företag som behöver leverantörsstöd eller efterlevnadscertifieringar.</li>
-</ul>
-</section>
-<section id="bsd-system" class="level3">
-<h3 class="anchored" data-anchor-id="bsd-system">BSD-system</h3>
-<ul>
-<li><strong>OpenBSD</strong> är specialbyggt för säkerhet och är ett utmärkt val för brandväggar, VPN-gateways och alla nätverksvända roller där minimering av attackytan är prioritet. Dess <code>pf</code>-paketfilter hör till de mest eleganta brandväggssystem som finns.</li>
-<li><strong>FreeBSD</strong> utmärker sig vid lagrings- och nätverksarbetsbelastningar. Med ZFS som förstklassigt filsystem och <code>jail</code>-systemet för lätt containerisering är FreeBSD en stark grund för filservrar, backupmål och nätverksapparater.</li>
-</ul>
-</section>
-</section>
-<section id="verkliga-driftsättningsexempel" class="level2">
-<h2 class="anchored" data-anchor-id="verkliga-driftsättningsexempel">Verkliga driftsättningsexempel</h2>
-<p><strong>Advokatfirma (15 anställda):</strong> Nextcloud för fillagring med Collabora Online för dokumentredigering, Keycloak för SSO, Matrix/Element för krypterad klientkommunikation, OpenBSD-brandvägg vid nätverkskanten. Total licenskostnad: noll.</p>
-<p><strong>Marknadsföringsbyrå (30 anställda):</strong> Mattermost för intern chatt, Jitsi för videosamtal med kunder, Nextcloud för projektfildelning, Prometheus och Grafana för övervakning av deras webbhotellinfrastruktur, Debian-servrar genomgående.</p>
-<p><strong>Tillverkningsföretag (50 anställda):</strong> FreeIPA för centraliserad identitet över Linux-arbetsstationer på produktionsgolvet, Uptime Kuma för övervakning av kritiska interna applikationer, FreeBSD med ZFS för ingenjörsfillagring, CryptPad för känsligt F&amp;U-samarbete.</p>
-</section>
-<section id="svar-på-vanliga-frågor" class="level2">
-<h2 class="anchored" data-anchor-id="svar-på-vanliga-frågor">Svar på vanliga frågor</h2>
-<p><strong>“Vem ringer vi för support?”</strong> De flesta mogna open source-projekt erbjuder kommersiella supportprenumerationer. Red Hat, Collabora, Nextcloud GmbH, Element (Matrix) och Mattermost säljer alla företagssupport. Du kan också arbeta med konsultföretag som chen.ist som specialiserar sig på open source-driftsättningar.</p>
-<p><strong>“Hur utbildar vi vårt team?”</strong> Inlärningskurvan varierar beroende på verktyg, men den mesta programvara som listas ovan har omfattande dokumentation och aktiva communityforum. Vi inkluderar vanligtvis utbildning som en del av våra driftsättningsuppdrag.</p>
-<p><strong>“Hur är det med migrering från befintliga verktyg?”</strong> Migrering är projektspecifik, men det generella tillvägagångssättet är: kör open source-stacken parallellt, migrera data stegvis och byt över när teamet är bekvämt. Vi har hjälpt företag att migrera från Microsoft 365, Google Workspace och diverse proprietära verktyg.</p>
-</section>
-<section id="kom-igång" class="level2">
-<h2 class="anchored" data-anchor-id="kom-igång">Kom igång</h2>
-<p>Att bygga en open source-infrastrukturstack är inte ett allt-eller-inget-beslut. Börja med ett område där du har mest problem — oavsett om det är produktivitet, kommunikation eller övervakning — driftsätt det och expandera därifrån.</p>
-<p>För en djupare titt på hur vi arbetar med digital infrastruktur, besök vår sida för <a href="../../sv/digital/">tjänster inom digital infrastruktur</a>.</p>
-<div class="card mt-5 mb-3">
-<section id="redo-att-utforska-open-source-infrastruktur" class="level3 card-body">
-<h3 class="anchored" data-anchor-id="redo-att-utforska-open-source-infrastruktur">Redo att utforska open source-infrastruktur?</h3>
-<p>Boka en kostnadsfri konsultation för att diskutera vilka verktyg som passar din organisation och hur man planerar en praktisk migrering.</p>
-<div class="text-center mt-3">
-<p><a href="../../sv/booking/" class="m-b" target="_blank">Boka en konsultation</a></p>
-</div>
-</section>
 </div>
 
 
-</section>
 
-</main> <!-- /main -->
+
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1293,7 +1245,151 @@ Tip
     }
   });
   </script>
-</div> <!-- /content -->
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="listing-actions-group">
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="T3BlbiUyMFNvdXJjZSUyQ0V1cm9wYSUyQ0RpZ2l0YWwlMjBzdXZlciVDMyVBNG5pdGV0JTJDTmV4dGNsb3VkJTJDTGlicmVPZmZpY2U=" data-listing-date-sort="1774483200000" data-listing-file-modified-sort="1774561668886" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1776">
+<a href="../sv/blog/open-source-europe-nextcloud-libreoffice.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../assets/images/stock/cloud-sky.webp" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Open source i Europa: Hur Nextcloud och LibreOffice ersätter proprietär programvara
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('T3BlbiUyMFNvdXJjZQ=='); return false;">Open Source</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RXVyb3Bh'); return false;">Europa</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RGlnaXRhbCUyMHN1dmVyJUMzJUE0bml0ZXQ='); return false;">Digital suveränitet</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TmV4dGNsb3Vk'); return false;">Nextcloud</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TGlicmVPZmZpY2U='); return false;">LibreOffice</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Verkliga fallstudier om europeiska regeringar och organisationer som anammar Nextcloud och LibreOffice. Varför EU övergår till open source, vem som leder vägen och vad det…</p>
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+CHENIST-teamet
+</div>
+<div class="listing-date">
+Mar 26, 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="QXBwbGUlMkNEaWdpdGFsJTIwSW5mcmFzdHJ1Y3R1cmUlMkNTTUI=" data-listing-date-sort="1774396800000" data-listing-file-modified-sort="1774561668883" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="782">
+<a href="../sv/blog/apple-business-smb-guide.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../assets/images/stock/team-macbooks.webp" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Apple Business: Vad SMF behöver veta
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('QXBwbGU='); return false;">Apple</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RGlnaXRhbCUyMEluZnJhc3RydWN0dXJl'); return false;">Digital Infrastructure</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U01C'); return false;">SMB</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Allt SMF behöver veta om lanseringen av Apple Business den 14 april 2026 — från gratis MDM och Blueprints till betalda tillägg och migrering.</p>
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+CHENIST Team
+</div>
+<div class="listing-date">
+Mar 25, 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="T3BlbiUyMFNvdXJjZSUyQ0RpZ2l0YWwlMjBJbmZyYXN0cnVjdHVyZSUyQ1NNQg==" data-listing-date-sort="1773964800000" data-listing-file-modified-sort="1774561668889" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1008">
+<a href="../sv/blog/open-source-infrastructure-smbs.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../assets/images/stock/code-screen.webp" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Open source-infrastruktur för SMF: En praktisk guide
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('T3BlbiUyMFNvdXJjZQ=='); return false;">Open Source</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RGlnaXRhbCUyMEluZnJhc3RydWN0dXJl'); return false;">Digital Infrastructure</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U01C'); return false;">SMB</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>En praktisk guide till att bygga SMF-infrastruktur med open source-verktyg — från produktivitet och kommunikation till identitet, övervakning och UNIX-grunder.</p>
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+CHENIST Team
+</div>
+<div class="listing-date">
+Mar 20, 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="Q3liZXJzJUMzJUE0a2VyaGV0JTJDQiVDMyVBNHN0YSUyMFByYXhpcw==" data-listing-date-sort="1743465600000" data-listing-file-modified-sort="1774561668885" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="355">
+<a href="../sv/blog/cyber-security-best-practices.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../assets/images/stock/cybersecurity-monitor.webp" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Bästa praxis för cybersäkerhet 2025
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Q3liZXJzJUMzJUE0a2VyaGV0'); return false;">Cybersäkerhet</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('QiVDMyVBNHN0YSUyMFByYXhpcw=='); return false;">Bästa Praxis</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Viktiga cybersäkerhetspraxis som varje organisation bör implementera för att skydda sig mot de föränderliga hoten 2025.</p>
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+CHENIST Team
+</div>
+<div class="listing-date">
+Apr 1, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></div> <!-- /content -->
 <!-- Back to top -->
 <div style="text-align:center; padding:2rem 0; background:#0a0a0a; border-top:1px solid rgba(255,255,255,0.04);">
   <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" style="color:rgba(255,255,255,0.3); text-decoration:none; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em;">
@@ -1316,34 +1412,34 @@ Tip
       </div>
       <div>
         <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="services">Services</div>
-        <a href="../../digital/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="digitalInfra">Digital Infrastructure</a>
-        <a href="../../security/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="security">Security</a>
-        <a href="../../services/cloud/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
-        <a href="../../services/nis2/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="nis2">NIS2 Compliance</a>
-        <a href="../../services/digital-resilience/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="resilience">Digital Resilience</a>
-        <a href="../../services/gdpr/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">GDPR Compliance</a>
+        <a href="../digital/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="digitalInfra">Digital Infrastructure</a>
+        <a href="../security/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="security">Security</a>
+        <a href="../services/cloud/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
+        <a href="../services/nis2/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="nis2">NIS2 Compliance</a>
+        <a href="../services/digital-resilience/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="resilience">Digital Resilience</a>
+        <a href="../services/gdpr/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">GDPR Compliance</a>
       </div>
       <div>
         <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="academy">Academy</div>
-        <a href="../../academy/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="overview">Overview</a>
-        <a href="../../academy/courses.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="courses">Courses</a>
-        <a href="../../academy/trainings.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="trainings">Trainings</a>
-        <a href="../../academy/events.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="events">Events</a>
-        <a href="../../academy/webinars.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="webinars">Webinars</a>
+        <a href="../academy/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="overview">Overview</a>
+        <a href="../academy/courses.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="courses">Courses</a>
+        <a href="../academy/trainings.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="trainings">Trainings</a>
+        <a href="../academy/events.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="events">Events</a>
+        <a href="../academy/webinars.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="webinars">Webinars</a>
       </div>
       <div>
         <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="company">Company</div>
-        <a href="../../about/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="about">About</a>
-        <a href="../../blog.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
-        <a href="../../contact.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="contact">Contact</a>
-        <a href="../../faq.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">FAQ</a>
-        <a href="../../privacy.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="privacy">Privacy</a>
-        <a href="../../terms.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="terms">Terms</a>
+        <a href="../about/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="about">About</a>
+        <a href="../blog.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
+        <a href="../contact.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="contact">Contact</a>
+        <a href="../faq.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">FAQ</a>
+        <a href="../privacy.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="privacy">Privacy</a>
+        <a href="../terms.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="terms">Terms</a>
       </div>
       <div>
         <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="connect">Connect</div>
         <a href="mailto:office@chen.ist" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">office@chen.ist</a>
-        <a href="../../booking/" data-footer-link="" style="display:block; color:#81BD4A; text-decoration:none; padding:0.1rem 0; font-weight:500;" class="footer-i18n" data-key="bookCall">Book a Call</a>
+        <a href="../booking/" data-footer-link="" style="display:block; color:#81BD4A; text-decoration:none; padding:0.1rem 0; font-weight:500;" class="footer-i18n" data-key="bookCall">Book a Call</a>
         <div style="margin-top:1rem; color:rgba(255,255,255,0.2); font-size:0.72rem;">Craiova · Bucharest · Stockholm</div>
       </div>
     </div>
@@ -1377,10 +1473,9 @@ footer a { -webkit-tap-highlight-color: transparent; }
   document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
     var href = a.getAttribute('href');
     if (href && href.startsWith('/') && !href.startsWith('//')) {
-      // Swedish blog is at /sv/blogg.html, not /sv/blog.html
-      if (lang === 'sv' && href === '/blog.html') {
-        a.setAttribute('href', '/sv/blogg.html');
-      } else {
+
+
+
         a.setAttribute('href', prefix + href);
       }
     }
@@ -1623,5 +1718,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
