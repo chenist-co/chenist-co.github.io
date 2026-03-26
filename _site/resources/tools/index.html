@@ -32,8 +32,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
 <link href="../../assets/images/favicon.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -76,35 +74,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-description','listing-date','listing-categories','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <meta property="og:title" content="Tools – chen.ist">
 <meta property="og:description" content="Discover curated tools and utilities for cybersecurity, development, cloud management, and IT operations recommended by chen.ist.">
@@ -423,53 +392,8 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 </script>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../assets/css/main.min.css">
-<link rel="stylesheet" href="../../assets/css/styles.css">
-<link rel="stylesheet" href="../../assets/css/modern.css">
 
 
 
@@ -665,7 +589,7 @@ window.Quarto = {
     <div class="row g-5">
       <div class="col-md-4"><div class="m-t"><i class="bi bi-key"></i><h3>Password Strength Checker</h3><p>Evaluate password strength against modern security standards and common attack techniques.</p><ul><li>Entropy calculation</li><li>Dictionary attack detection</li><li>Common pattern identification</li><li>Estimated cracking time</li></ul><a href="password-strength-checker.html" class="m-lk">Launch Tool</a></div></div>
       <div class="col-md-4"><div class="m-t"><i class="bi bi-shield-exclamation"></i><h3>Zero Trust Assessment</h3><p>Evaluate your organization's Zero Trust security maturity across multiple domains.</p><ul><li>Comprehensive questionnaire</li><li>Domain-specific scoring</li><li>Maturity measurement</li><li>Actionable recommendations</li></ul><a href="zero-trust-assessment.html" class="m-lk">Launch Tool</a></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-lock"></i><h3>SSL/TLS Certificate Inspector</h3><p>Analyze SSL/TLS certificates for security issues, expiration dates, and configuration problems.</p><ul><li>Certificate validation</li><li>Cipher suite analysis</li><li>Protocol version checking</li><li>Configuration recommendations</li></ul><a href="ssl-certificate-inspector.html" class="m-lk">Launch Tool</a></div></div>
+      <div class="col-md-4"><div class="m-t" style="opacity:0.5;"><i class="bi bi-lock"></i><h3>SSL/TLS Inspector</h3><p>Analyze SSL/TLS certificates for security issues and configuration problems.</p><p style="font-size:0.8rem; color:var(--c);">Coming soon</p></div></div>
     </div>
   </div>
 </div>
@@ -675,9 +599,9 @@ window.Quarto = {
     <h2>Development Tools</h2>
     <p class="sub">Streamline your development workflow.</p>
     <div class="row g-5">
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-cloud-arrow-up"></i><h3>Cloud Cost Calculator</h3><p>Estimate and compare costs across different cloud providers based on your resource requirements.</p><ul><li>Multi-cloud comparison</li><li>Reserved instance analysis</li><li>Right-sizing recommendations</li><li>Cost projection</li></ul><a href="cloud-cost-calculator.html" class="m-lk">Launch Tool</a></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-braces"></i><h3>API Request Builder</h3><p>Construct, test, and debug API requests with an interactive interface for RESTful and GraphQL APIs.</p><ul><li>Request method selection</li><li>Header and parameter builder</li><li>Authentication support</li><li>Response visualization</li></ul><a href="api-request-builder.html" class="m-lk">Launch Tool</a></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-globe2"></i><h3>Security Headers Analyzer</h3><p>Check and evaluate HTTP security headers for websites and get recommendations for improvement.</p><ul><li>Header detection and validation</li><li>CSP analysis</li><li>Security scoring</li><li>Best practice recommendations</li></ul><a href="security-headers-analyzer.html" class="m-lk">Launch Tool</a></div></div>
+      <div class="col-md-4"><div class="m-t" style="opacity:0.5;"><i class="bi bi-cloud-arrow-up"></i><h3>Cloud Cost Calculator</h3><p>Estimate and compare costs across cloud providers.</p><p style="font-size:0.8rem; color:var(--c);">Coming soon</p></div></div>
+      <div class="col-md-4"><div class="m-t" style="opacity:0.5;"><i class="bi bi-braces"></i><h3>API Request Builder</h3><p>Construct and test REST and GraphQL API requests.</p><p style="font-size:0.8rem; color:var(--c);">Coming soon</p></div></div>
+      <div class="col-md-4"><div class="m-t" style="opacity:0.5;"><i class="bi bi-globe2"></i><h3>Security Headers Analyzer</h3><p>Check HTTP security headers and get recommendations.</p><p style="font-size:0.8rem; color:var(--c);">Coming soon</p></div></div>
     </div>
   </div>
 </div>
@@ -687,8 +611,8 @@ window.Quarto = {
     <h2>Interactive Calculators</h2>
     <p class="sub">Quick calculations for networking and risk analysis.</p>
     <div class="row g-5">
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-diagram-3"></i><h3>CIDR Subnet Calculator</h3><p>Calculate IP address ranges, subnet masks, and network information from CIDR notation.</p><a href="cidr-calculator.html" class="m-lk">Full Calculator</a></div></div>
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-currency-dollar"></i><h3>Data Breach Cost Estimator</h3><p>Estimate the potential financial impact of a data breach based on industry, size, and data types.</p><a href="breach-cost-estimator.html" class="m-lk">Full Estimator</a></div></div>
+      <div class="col-md-6"><div class="m-t" style="opacity:0.5;"><i class="bi bi-diagram-3"></i><h3>CIDR Subnet Calculator</h3><p>Calculate IP ranges and subnet masks from CIDR notation.</p><p style="font-size:0.8rem; color:var(--c);">Coming soon</p></div></div>
+      <div class="col-md-6"><div class="m-t" style="opacity:0.5;"><i class="bi bi-currency-dollar"></i><h3>Data Breach Cost Estimator</h3><p>Estimate financial impact of a data breach.</p><p style="font-size:0.8rem; color:var(--c);">Coming soon</p></div></div>
     </div>
   </div>
 </div>
@@ -696,10 +620,10 @@ window.Quarto = {
 <div class="m-s">
   <div class="container">
     <h2>Command-Line Tools</h2>
-    <p class="sub">Download and install on your own infrastructure.</p>
+    <p class="sub">Coming soon — download and install on your own infrastructure.</p>
     <div class="row g-5">
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-terminal"></i><h3>CloudScan CLI</h3><p>Scan cloud environments for security misconfigurations and compliance issues. Multi-cloud support for AWS, Azure, and GCP.</p><code>$ cloudscan audit --provider aws --region us-east-1 --framework cis</code><br><br><a href="https://github.com/chenist/cloudscan" target="_blank" class="m-lk">GitHub</a> <a href="downloads/cloudscan-cli-v1.2.0.zip" class="m-lk" download="">Download v1.2.0</a></div></div>
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-eye"></i><h3>SecretScan</h3><p>Detect and prevent secrets and sensitive information in code repositories. Pre-commit hook and CI/CD pipeline integration.</p><code>$ secretscan check --path ./src --exclude node_modules</code><br><br><a href="https://github.com/chenist/secretscan" target="_blank" class="m-lk">GitHub</a> <a href="downloads/secretscan-v0.9.5.zip" class="m-lk" download="">Download v0.9.5</a></div></div>
+      <div class="col-md-6"><div class="m-t" style="opacity:0.5;"><i class="bi bi-terminal"></i><h3>CloudScan CLI</h3><p>Scan cloud environments for security misconfigurations. Multi-cloud support for AWS, Azure, and GCP.</p><p style="font-size:0.8rem; color:var(--c);">Coming soon</p></div></div>
+      <div class="col-md-6"><div class="m-t" style="opacity:0.5;"><i class="bi bi-eye"></i><h3>SecretScan</h3><p>Detect and prevent secrets in code repositories. Pre-commit hook and CI/CD integration.</p><p style="font-size:0.8rem; color:var(--c);">Coming soon</p></div></div>
     </div>
   </div>
 </div>
@@ -719,7 +643,6 @@ window.Quarto = {
 </div>
 
 </div>
-
 
 
 
@@ -1144,93 +1067,7 @@ window.Quarto = {
     }
   });
   </script>
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="c2VjdXJpdHklMkNhdXRoZW50aWNhdGlvbiUyQ3Rvb2xz" data-listing-date-sort="1741557600000" data-listing-file-modified-sort="1774514467125" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2167">
-<a href="../../resources/tools/password-strength-checker.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../../assets/images/cyber-security.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Password Strength Checker
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('c2VjdXJpdHk='); return false;">security</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YXV0aGVudGljYXRpb24='); return false;">authentication</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dG9vbHM='); return false;">tools</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Evaluate the strength of passwords against modern security standards</p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-March 10, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="c2VjdXJpdHklMkNhc3Nlc3NtZW50JTJDemVyby10cnVzdA==" data-listing-date-sort="1740434400000" data-listing-file-modified-sort="1774514467124" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4424">
-<a href="../../resources/tools/zero-trust-assessment.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../../assets/images/cyber-security.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Zero Trust Assessment Tool
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('c2VjdXJpdHk='); return false;">security</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YXNzZXNzbWVudA=='); return false;">assessment</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('emVyby10cnVzdA=='); return false;">zero-trust</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Evaluate your organization’s Zero Trust security maturity across multiple domains</p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-February 25, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></div> <!-- /content -->
+</div> <!-- /content -->
 <footer style="background-color:#0a0a0a; background-image: url(&quot;data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2381BD4A' fill-opacity='0.08'%3E%3Ccircle cx='20' cy='20' r='1.5'/%3E%3C/g%3E%3C/svg%3E&quot;); background-repeat: repeat; background-size: 40px 40px; color:rgba(255,255,255,0.6); padding:4rem 0 2rem; font-size:0.82rem; line-height:1.8;">
   <div style="max-width:1200px; margin:0 auto; padding:0 1.5rem;">
     <div style="display:grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr; gap:2rem;">
