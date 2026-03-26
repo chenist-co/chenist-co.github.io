@@ -1,83 +1,89 @@
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <style>
-/* Corporate navbar — solid dark, structured, professional */
+/* Corporate navbar — inspired by CrowdStrike/SentinelOne */
 .navbar {
   background: #0a0a0a !important;
-  border-bottom: 1px solid rgba(129,189,74,0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
   padding: 0 !important;
-  font-size: 0.82rem;
-  min-height: 56px;
+  font-size: 0.85rem;
+  min-height: 60px;
 }
-.navbar-container {
-  display: flex;
-  align-items: center;
-  height: 56px;
-}
+.navbar-container { height: 60px; }
 .navbar-brand-container { display: flex; align-items: center; }
 .navbar-brand { display: flex; align-items: center; gap: 0.5rem; }
 .navbar-brand .navbar-title {
-  display: inline-block;
   color: #FFFFFF;
   font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: 0.08em;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   font-family: 'Source Code Pro', monospace;
 }
 .navbar-brand .brand-dot { color: #81BD4A; }
+
+/* Nav links — normal case like CrowdStrike, not uppercase */
 .navbar .nav-link {
-  color: rgba(255,255,255,0.65) !important;
-  font-size: 0.78rem !important;
-  font-weight: 500;
-  padding: 0.5rem 0.85rem !important;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.7) !important;
+  font-size: 0.85rem !important;
+  font-weight: 400;
+  padding: 0.5rem 0.9rem !important;
   transition: color 0.15s;
 }
-.navbar .nav-link:hover,
+.navbar .nav-link:hover { color: #fff !important; }
 .navbar .nav-link.active { color: #81BD4A !important; }
+
+/* CTA button in navbar — like SentinelOne "Get Started" */
+.navbar .navbar-cta {
+  display: inline-block;
+  padding: 0.4rem 1.25rem;
+  background: #81BD4A;
+  color: #fff !important;
+  border-radius: 980px;
+  font-size: 0.8rem !important;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s;
+  margin-left: 0.5rem;
+}
+.navbar .navbar-cta:hover { background: #6BA33A; color: #fff !important; text-decoration: none; }
+
+/* Dropdowns */
 .navbar .dropdown-menu {
   background: #0a0a0a;
-  border: 1px solid rgba(129,189,74,0.12);
-  border-radius: 8px;
-  padding: 0.4rem;
-  margin-top: 0;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 0.5rem;
   box-shadow: 0 12px 40px rgba(0,0,0,0.5);
 }
 .navbar .dropdown-item {
-  color: rgba(255,255,255,0.65);
-  font-size: 0.78rem;
-  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.83rem;
   border-radius: 6px;
   padding: 0.45rem 0.85rem;
-  letter-spacing: 0.02em;
 }
 .navbar .dropdown-item:hover {
-  background: rgba(129,189,74,0.1);
+  background: rgba(129,189,74,0.08);
   color: #81BD4A;
 }
-.navbar .quarto-navigation-tool { color: rgba(255,255,255,0.5) !important; }
-.navbar .quarto-navigation-tool:hover { color: #81BD4A !important; }
-.navbar .quarto-color-scheme-toggle { color: rgba(255,255,255,0.5) !important; }
-.navbar .quarto-color-scheme-toggle:hover { color: #81BD4A !important; }
 
+/* Search + theme toggle */
+.navbar .quarto-navigation-tool, .navbar .quarto-color-scheme-toggle { color: rgba(255,255,255,0.4) !important; }
+.navbar .quarto-navigation-tool:hover, .navbar .quarto-color-scheme-toggle:hover { color: #81BD4A !important; }
+
+/* Mobile */
 @media (max-width: 991px) {
-  .navbar .nav-link { font-size: 0.75rem !important; padding: 0.4rem 0.6rem !important; }
+  .navbar .nav-link { font-size: 0.82rem !important; }
 }
 @media (max-width: 767.98px) {
-  .navbar-brand .navbar-title { font-size: 0.9rem; }
+  .navbar-brand .navbar-title { font-size: 1rem; }
   .navbar .navbar-collapse {
     background: #0a0a0a;
-    border: 1px solid rgba(129,189,74,0.1);
-    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
     padding: 1rem;
     margin-top: 0.5rem;
   }
-  .navbar .nav-link {
-    text-transform: none;
-    font-size: 0.85rem !important;
-    padding: 0.5rem 0.75rem !important;
-  }
+  .navbar .navbar-cta { display: block; text-align: center; margin: 0.75rem 0 0; }
 }
 </style>
 
@@ -95,6 +101,20 @@ document.addEventListener('DOMContentLoaded', function() {
     titleSpan.appendChild(dot);
     titleSpan.appendChild(ist);
     navbarBrand.appendChild(titleSpan);
+  }
+
+  // Add CTA button to navbar
+  var navRight = document.querySelector('.navbar-nav.ms-auto');
+  if (navRight) {
+    var ctaLi = document.createElement('li');
+    ctaLi.className = 'nav-item';
+    var ctaLink = document.createElement('a');
+    ctaLink.className = 'nav-link navbar-cta';
+    ctaLink.href = '/booking/';
+    // internal link, no new tab
+    ctaLink.textContent = 'Book a Call';
+    ctaLi.appendChild(ctaLink);
+    navRight.appendChild(ctaLi);
   }
 });
 </script>
