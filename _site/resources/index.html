@@ -495,6 +495,10 @@ document.addEventListener('DOMContentLoaded', function() {
     <a class="dropdown-item" href="../services/digital-resilience/index.html">
  <span class="dropdown-text">Digital Resilience</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../services/gdpr/index.html">
+ <span class="dropdown-text">GDPR Compliance</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -544,10 +548,29 @@ document.addEventListener('DOMContentLoaded', function() {
     <a class="nav-link" href="../blog.html"> 
 <span class="menu-text">Blogs</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="../resources/index.html" aria-current="page"> 
-<span class="menu-text">Resources</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Resources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
+        <li>
+    <a class="dropdown-item" href="../resources/index.html">
+ <span class="dropdown-text">All Resources</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../resources/tools/index.html">
+ <span class="dropdown-text">Tools</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../compare.html">
+ <span class="dropdown-text">Why Open Source</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../faq.html">
+ <span class="dropdown-text">FAQ</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item dropdown ">
@@ -558,6 +581,10 @@ document.addEventListener('DOMContentLoaded', function() {
         <li>
     <a class="dropdown-item" href="../about/index.html">
  <span class="dropdown-text">About</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/team.html">
+ <span class="dropdown-text">Team</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../about/csr.html">
@@ -676,11 +703,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="pg-card"><img loading="lazy" src="../assets/images/stock/network-closeup.webp" alt="Cloud"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Cloud</div><h3>Migration Handbook</h3><p>Step-by-step strategies for successful cloud migration.</p></div></div>
         </a>
       </div>
-      <div class="col-md-4">
-        <a href="../resources/guides/api/endpoints.html" style="text-decoration:none;">
-          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/code-screen.webp" alt="Development"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#81BD4A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">Development</div><h3>API Reference</h3><p>Endpoint documentation and integration guides.</p></div></div>
-        </a>
-      </div>
+      <!-- API guide hidden for now -->
     </div>
   </div>
 </div>
@@ -735,6 +758,19 @@ document.addEventListener('DOMContentLoaded', function() {
         </a>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- Newsletter signup -->
+<div style="max-width:900px; margin:2rem auto; padding:2rem;">
+  <div style="background:rgba(129,189,74,0.04); border:1px solid rgba(129,189,74,0.15); border-radius:16px; padding:2rem 2.5rem; text-align:center;">
+    <div style="font-size:1.15rem; font-weight:700; margin-bottom:0.5rem;">Get cybersecurity insights delivered to your inbox</div>
+    <form action="https://formspree.io/f/mpwkaqev" method="POST" class="m-form" style="display:flex; gap:0.75rem; justify-content:center; align-items:center; flex-wrap:wrap; margin-top:1rem;">
+      <input type="hidden" name="_source" value="newsletter-signup">
+      <input type="email" name="email" placeholder="you@company.com" required="" style="flex:1; min-width:220px; max-width:360px; padding:0.6rem 1rem; border:1px solid rgba(0,0,0,0.12); border-radius:8px; font-size:0.9rem; background:transparent; color:inherit;">
+      <button type="submit" class="m-b" style="font-size:0.9rem; padding:0.6rem 1.5rem; white-space:nowrap;">Subscribe</button>
+    </form>
+    <div style="margin-top:0.75rem; font-size:0.72rem; color:#86868b;">No spam. Unsubscribe anytime. <a href="../privacy.html" style="color:#81BD4A; text-decoration:underline;">Privacy policy</a></div>
   </div>
 </div>
 
@@ -1204,6 +1240,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <a href="../services/cloud/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
         <a href="../services/nis2/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="nis2">NIS2 Compliance</a>
         <a href="../services/digital-resilience/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="resilience">Digital Resilience</a>
+        <a href="../services/gdpr/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">GDPR Compliance</a>
       </div>
       <div>
         <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="academy">Academy</div>
@@ -1218,6 +1255,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <a href="../about/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="about">About</a>
         <a href="../blog.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
         <a href="../contact.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="contact">Contact</a>
+        <a href="../faq.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">FAQ</a>
         <a href="../privacy.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="privacy">Privacy</a>
         <a href="../terms.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="terms">Terms</a>
       </div>

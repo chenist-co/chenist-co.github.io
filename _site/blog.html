@@ -573,6 +573,10 @@ window.Quarto = {
     <a class="dropdown-item" href="./services/digital-resilience/index.html">
  <span class="dropdown-text">Digital Resilience</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./services/gdpr/index.html">
+ <span class="dropdown-text">GDPR Compliance</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -622,10 +626,29 @@ window.Quarto = {
     <a class="nav-link active" href="./blog.html" aria-current="page"> 
 <span class="menu-text">Blogs</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./resources/index.html"> 
-<span class="menu-text">Resources</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Resources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
+        <li>
+    <a class="dropdown-item" href="./resources/index.html">
+ <span class="dropdown-text">All Resources</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./resources/tools/index.html">
+ <span class="dropdown-text">Tools</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./compare.html">
+ <span class="dropdown-text">Why Open Source</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./faq.html">
+ <span class="dropdown-text">FAQ</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item dropdown ">
@@ -636,6 +659,10 @@ window.Quarto = {
         <li>
     <a class="dropdown-item" href="./about/index.html">
  <span class="dropdown-text">About</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./about/team.html">
+ <span class="dropdown-text">Team</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./about/csr.html">
@@ -742,15 +769,28 @@ window.Quarto = {
 
 </div>
 <div class="m">
-<div class="blog-cta" style="padding:5rem 2rem;">
+
+<!-- Newsletter signup -->
+<div style="max-width:900px; margin:2rem auto; padding:2rem;">
+  <div style="background:rgba(129,189,74,0.04); border:1px solid rgba(129,189,74,0.15); border-radius:16px; padding:2rem 2.5rem; text-align:center;">
+    <div style="font-size:1.15rem; font-weight:700; margin-bottom:0.5rem;">Get cybersecurity insights delivered to your inbox</div>
+    <form action="https://formspree.io/f/mpwkaqev" method="POST" class="m-form" style="display:flex; gap:0.75rem; justify-content:center; align-items:center; flex-wrap:wrap; margin-top:1rem;">
+      <input type="hidden" name="_source" value="newsletter-signup">
+      <input type="email" name="email" placeholder="you@company.com" required="" style="flex:1; min-width:220px; max-width:360px; padding:0.6rem 1rem; border:1px solid rgba(0,0,0,0.12); border-radius:8px; font-size:0.9rem; background:transparent; color:inherit;">
+      <button type="submit" class="m-b" style="font-size:0.9rem; padding:0.6rem 1.5rem; white-space:nowrap;">Subscribe</button>
+    </form>
+    <div style="margin-top:0.75rem; font-size:0.72rem; color:#86868b;">No spam. Unsubscribe anytime. <a href="./privacy.html" style="color:#81BD4A; text-decoration:underline;">Privacy policy</a></div>
+  </div>
+</div>
+
+<div class="blog-cta" style="padding:4rem 2rem;">
   <div class="container">
-    <div style="width:36px;height:3px;background:#81BD4A;margin:0 auto 2rem;border-radius:2px;opacity:0.6;"></div>
-    <h2>Stay informed</h2>
+    <h2 style="font-size:1.5rem;">Stay informed</h2>
     <p>Subscribe to our RSS feed, newsletter, or follow us for the latest articles.</p>
     <div style="display:flex; justify-content:center; gap:0.75rem; flex-wrap:wrap;">
-      <a href="./blog.xml" class="m-b" style="background:#f26522;"><i class="bi bi-rss me-2"></i>Subscribe via RSS</a>
-      <a href="https://alinmechenici.substack.com" target="_blank" class="m-b" style="background:#ff6719;"><i class="bi bi-envelope me-2"></i>Substack</a>
-      <a href="https://linkedin.com/in/chenistsec" target="_blank" class="m-bo"><i class="bi bi-linkedin me-2"></i>Follow us</a>
+      <a href="./blog.xml" class="m-b" style="background:#f26522; font-size:0.9rem; padding:0.6rem 1.25rem;"><i class="bi bi-rss me-2"></i>RSS</a>
+      <a href="https://alinmechenici.substack.com" target="_blank" class="m-b" style="background:#ff6719; font-size:0.9rem; padding:0.6rem 1.25rem;"><i class="bi bi-envelope me-2"></i>Substack</a>
+      <a href="https://linkedin.com/in/chenistsec" target="_blank" class="m-bo" style="font-size:0.9rem; padding:0.6rem 1.25rem;"><i class="bi bi-linkedin me-2"></i>Follow</a>
     </div>
   </div>
 </div>
@@ -1188,7 +1228,7 @@ window.Quarto = {
     </div>
 </div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="QXBwbGUlMkNEaWdpdGFsJTIwSW5mcmFzdHJ1Y3R1cmUlMkNTTUI=" data-listing-date-sort="1774389600000" data-listing-file-modified-sort="1774529937038" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="825">
+<div class="g-col-1" data-index="0" data-categories="QXBwbGUlMkNEaWdpdGFsJTIwSW5mcmFzdHJ1Y3R1cmUlMkNTTUI=" data-listing-date-sort="1774389600000" data-listing-file-modified-sort="1774530684792" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="824">
 <a href="./blog/apple-business-smb-guide.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1221,7 +1261,7 @@ Mar 25, 2026
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="T3BlbiUyMFNvdXJjZSUyQ0RpZ2l0YWwlMjBJbmZyYXN0cnVjdHVyZSUyQ1NNQg==" data-listing-date-sort="1773957600000" data-listing-file-modified-sort="1774529937037" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1083">
+<div class="g-col-1" data-index="1" data-categories="T3BlbiUyMFNvdXJjZSUyQ0RpZ2l0YWwlMjBJbmZyYXN0cnVjdHVyZSUyQ1NNQg==" data-listing-date-sort="1773957600000" data-listing-file-modified-sort="1774530684791" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1082">
 <a href="./blog/open-source-infrastructure-smbs.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1254,7 +1294,7 @@ Mar 20, 2026
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="Q3liZXJzZWN1cml0eSUyQ0Jlc3QlMjBQcmFjdGljZXM=" data-listing-date-sort="1743454800000" data-listing-file-modified-sort="1774529937037" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="370">
+<div class="g-col-1" data-index="2" data-categories="Q3liZXJzZWN1cml0eSUyQ0Jlc3QlMjBQcmFjdGljZXM=" data-listing-date-sort="1743454800000" data-listing-file-modified-sort="1774530684792" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="369">
 <a href="./blog/cyber-security-best-practices.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1315,6 +1355,7 @@ Apr 1, 2025
         <a href="./services/cloud/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
         <a href="./services/nis2/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="nis2">NIS2 Compliance</a>
         <a href="./services/digital-resilience/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="resilience">Digital Resilience</a>
+        <a href="./services/gdpr/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">GDPR Compliance</a>
       </div>
       <div>
         <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="academy">Academy</div>
@@ -1329,6 +1370,7 @@ Apr 1, 2025
         <a href="./about/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="about">About</a>
         <a href="./blog.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
         <a href="./contact.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="contact">Contact</a>
+        <a href="./faq.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">FAQ</a>
         <a href="./privacy.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="privacy">Privacy</a>
         <a href="./terms.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="terms">Terms</a>
       </div>

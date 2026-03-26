@@ -250,21 +250,151 @@ html[data-bs-theme="dark"] .page-layout-article .card{background:#1a1a1d !import
 @media(max-width:767px){.blog-hero{padding:7rem 0 2rem;}.blog-featured-card{grid-template-columns:1fr;gap:1.5rem;padding:1.5rem;}.blog-bar{flex-direction:column;gap:0.75rem;}.blog-lang-switch{flex-wrap:wrap;justify-content:center;}.blog-cta{padding:4rem 1.5rem;}}
 @media(max-width:480px){.blog-hero{padding:5rem 0 1.5rem;}}
 
-/* Mobile fixes — program cards, upcoming items, breadcrumb */
-@media(max-width:767px){
-.pg-card img{height:200px;}.pg-card-body{padding:1.25rem;}.pg-card-body h3{font-size:1.1rem;}.pg-card-body p{font-size:0.82rem;}
-.up-item{flex-direction:column;align-items:flex-start;gap:0.75rem;}.up-badge{align-self:flex-start;}
-#quarto-header .path-bar .path-bar-inner{padding-left:1.5rem !important;padding-right:1.5rem !important;}
-.ev-hero{min-height:60vh !important;}.ev-hero-content{padding:4rem 1.5rem;}.ev-hero-content h1{font-size:2.25rem;}.ev-hero-content p{font-size:1rem;}
-.m-r .m-ri img{border-radius:16px;}
-.m-contact-info .ci{margin-bottom:1.5rem;}
+/* ===== iOS-FRIENDLY MOBILE DESIGN ===== */
+
+/* Touch targets: minimum 44px height for all interactive elements */
+@media(max-width:991px){
+.m-b,.m-bo,.ev-btn,.ev-btn-ghost,.hp-hero-btn{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+.m-lk{padding:0.5rem 0;display:inline-block;}
+.blog-lang-switch a{min-height:36px;display:inline-flex;align-items:center;}
 }
+
+/* Tablet (768-991px) */
+@media(max-width:991px){
+.pg-card{border-radius:20px;}.pg-card img{height:220px;}
+.blog-featured-card{gap:2rem;padding:2rem;}
+.m-form .fr{grid-template-columns:1fr;}
+}
+
+/* Mobile (max 767px) — iOS-inspired */
+@media(max-width:767px){
+/* Global mobile feel */
+body{-webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased;}
+
+/* Hero sections — compact, impactful */
+.ev-hero{min-height:55vh !important;}
+.ev-hero-content{padding:3.5rem 1.25rem 2.5rem;}
+.ev-hero-content h1{font-size:clamp(2rem, 8vw, 2.5rem);letter-spacing:-0.03em;}
+.ev-hero-content p{font-size:0.95rem;margin-bottom:1.5rem;}
+.ev-btn,.ev-btn-ghost{font-size:0.9rem;padding:0.75rem 1.75rem;}
+
+/* Cards — full-width, iOS-style rounded */
+.pg-card{border-radius:16px;margin-bottom:1rem;}
+.pg-card img{height:180px;}
+.pg-card-body{padding:1.25rem;}
+.pg-card-body h3{font-size:1.05rem;margin-bottom:0.25rem;}
+.pg-card-body p{font-size:0.82rem;line-height:1.45;}
+
+/* List items — spacious touch targets */
+.up-item{flex-direction:column;align-items:flex-start;gap:0.75rem;padding:1.25rem 0;}
+.up-badge{align-self:flex-start;}
+.up-item h4{font-size:1rem;}
+
+/* Breadcrumb — no logo offset */
+#quarto-header .path-bar .path-bar-inner{padding-left:1.25rem !important;padding-right:1.25rem !important;}
+
+/* Feature rows — stack with rounded images */
+.m-r .m-ri img{border-radius:16px;}
+.m-rt h2{font-size:1.5rem !important;}
+
+/* Blog featured — single column */
+.blog-featured-card{grid-template-columns:1fr;gap:1.25rem;padding:1.25rem;border-radius:16px;}
+.blog-featured-title{font-size:1.25rem;}
+.blog-featured-desc{font-size:0.88rem;}
+.blog-bar{flex-direction:column;gap:0.75rem;}
+.blog-lang-switch{flex-wrap:wrap;justify-content:center;}
+.blog-cta{padding:3.5rem 1.25rem;}
+
+/* Sections — tighter padding */
+.m-hero{padding:5rem 0 3.5rem !important;}
+.m-hero h1{font-size:clamp(2rem, 7vw, 2.5rem) !important;}
+.m-hero p{font-size:1rem !important;}
+
+/* Buttons — larger touch area on mobile */
+.m-b,.m-bo{font-size:0.9rem;padding:0.8rem 1.75rem;border-radius:14px;}
+.hp-hero-btn{font-size:0.95rem;padding:0.85rem 2rem;border-radius:14px;}
+
+/* Stats — horizontal scroll on mobile instead of wrapping */
+.m-n{gap:2rem;justify-content:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:0 1rem;flex-wrap:nowrap;}
+.m-n > div{flex-shrink:0;min-width:100px;}
+
+/* Contact form — full width inputs */
+.m-form .fr{grid-template-columns:1fr;gap:1rem;}
+.m-form input,.m-form textarea,.m-form select{font-size:16px !important;padding:0.75rem 1rem;border-radius:10px;}
+.m-form button{padding:0.85rem;border-radius:14px;font-size:1rem;}
+.m-contact-info .ci{margin-bottom:1.5rem;}
+
+/* Footer — single column */
+footer > div > div{gap:2.5rem !important;}
+
+/* Navbar — iOS-style compact */
+.navbar{min-height:54px !important;}
+.navbar-logo{max-height:28px !important;}
+
+/* Smooth scrolling */
+html{scroll-behavior:smooth;-webkit-overflow-scrolling:touch;}
+
+/* FAQ accordions — bigger touch target */
+details summary{padding:1.25rem 0 !important;min-height:44px;}
+
+/* Package/pricing cards */
+.m-pkg{border-radius:16px;padding:2rem 1.5rem;}
+
+/* Quarto listing cards */
+.page-layout-custom .quarto-grid-item{border-radius:14px !important;}
+
+/* Tables — horizontal scroll */
+.table-responsive,.m table{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+}
+
+/* Small phones (max 480px) — extra compact */
 @media(max-width:480px){
+.ev-hero{min-height:45vh !important;}
+.ev-hero-content h1{font-size:clamp(1.75rem, 9vw, 2.25rem);}
+.ev-hero-content{padding:3rem 1rem 2rem;}
+
+.pg-card img{height:150px;}
+.pg-card-body{padding:1rem;}
+.pg-card-body h3{font-size:0.95rem;}
+
 .hp-blog-item{flex-direction:column;align-items:flex-start;gap:0.25rem;}
-.pg-card img{height:160px;}
-.ev-hero{min-height:50vh !important;}
-.up-item{padding:1rem 0;}
+
 .m-n{gap:1.5rem;}
+.m-nn{font-size:1.75rem;}
+
+.m-b,.m-bo{font-size:0.85rem;padding:0.75rem 1.5rem;}
+
+.blog-featured{padding:2rem 1rem 1rem;}
+.blog-featured-title{font-size:1.1rem;}
+
+/* Pricing cards stack nicely */
+.m-pkg{padding:1.75rem 1.25rem;}
+
+/* Full-bleed sections on small phones */
+.m-s,.m-bg{padding:3.5rem 0 !important;}
+.m-cta{padding:3.5rem 0 !important;}
+.container{padding-left:1rem !important;padding-right:1rem !important;}
+
+/* Stats go vertical */
+.m-n{flex-direction:column;align-items:center;flex-wrap:wrap;overflow-x:visible;}
+
+details summary{font-size:0.95rem !important;}
+}
+
+/* iOS safe areas */
+@supports(padding-bottom: env(safe-area-inset-bottom)){
+footer{padding-bottom:calc(2rem + env(safe-area-inset-bottom));}
+.m-cta{padding-bottom:calc(4rem + env(safe-area-inset-bottom));}
+}
+
+/* Prevent iOS zoom on input focus (16px minimum) */
+@media(max-width:767px){
+input[type="text"],input[type="email"],input[type="tel"],input[type="url"],input[type="search"],select,textarea{font-size:16px !important;}
+}
+
+/* Smooth transitions for all interactive elements */
+.pg-card,.up-item,.m-b,.m-bo,.ev-btn,.blog-featured-card,.quarto-grid-item{
+-webkit-tap-highlight-color:transparent;
 }
 
 /* Homepage light mode overrides */

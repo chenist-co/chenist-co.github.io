@@ -369,6 +369,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<script>
+(function() {
+  var path = window.location.pathname;
+  // Only redirect on English pages (no language prefix)
+  if (path.match(/^\/(ro|sv|de)\//)) return;
+  // Don't redirect if user explicitly chose English
+  if (localStorage.getItem('chen-lang-choice') === 'en') return;
+  // Don't redirect if already redirected this session
+  if (sessionStorage.getItem('chen-lang-redirected')) return;
+  // Detect browser language
+  var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  var target = null;
+  if (lang.startsWith('ro')) target = 'ro';
+  else if (lang.startsWith('sv')) target = 'sv';
+  else if (lang.startsWith('de')) target = 'de';
+  if (target) {
+    sessionStorage.setItem('chen-lang-redirected', '1');
+    window.location.href = '/' + target + path;
+  }
+})();
+</script>
 <link rel="preload" href="../../../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
 <meta name="view-transition" content="same-origin">
@@ -428,8 +449,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../assets/images/logo-light.svg" alt="" class="navbar-logo light-content">
-    <img src="../../../assets/images/logo-light.svg" alt="" class="navbar-logo dark-content">
+    <img src="../../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="../../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -550,6 +571,10 @@ document.addEventListener('DOMContentLoaded', function() {
     </ul>
   </li>
   <li class="nav-item">
+    <a class="nav-link" href="../../../faq.html"> 
+<span class="menu-text">FAQ</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../../../contact.html"> 
 <span class="menu-text">Contact</span></a>
   </li>  
@@ -614,7 +639,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <p class="sub">Immersive Erfahrungen, die über traditionelles Lernen hinausgehen.</p>
     <div class="row g-5">
       <div class="col-md-4">
-        <a href="../../../de/academy/programs/hackathons/" style="text-decoration:none;">
+        <a href="../../../academy/programs/hackathons/" style="text-decoration:none;">
           <div class="pg-card">
             <img loading="lazy" src="../../../assets/images/stock/hacker-screens.webp" alt="Hackathons">
             <div class="pg-card-body">
@@ -626,7 +651,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </a>
       </div>
       <div class="col-md-4">
-        <a href="../../../de/academy/programs/summer-school/" style="text-decoration:none;">
+        <a href="../../../academy/programs/summer-school/" style="text-decoration:none;">
           <div class="pg-card">
             <img loading="lazy" src="../../../assets/images/stock/hackathon-team.webp" alt="Sommerschule">
             <div class="pg-card-body">
@@ -661,7 +686,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="m-rt">
         <h2>Schneller lernen<br>durch gemeinsames Bauen.</h2>
         <p>Unsere Programme bringen Sie in Teams mit Gleichgesinnten und Mentoren zusammen, die an echten Herausforderungen unter realen Deadlines arbeiten. Es ist der schnellste Weg, Fähigkeiten aufzubauen, die bleiben — und ein Netzwerk, das hält.</p>
-        <div class="lk"><a href="../../../de/academy/events.html" class="m-lk">Kommende Veranstaltungen ansehen</a></div>
+        <div class="lk"><a href="../../../academy/events.html" class="m-lk">Kommende Veranstaltungen ansehen</a></div>
       </div>
     </div>
   </div>
@@ -683,7 +708,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <div class="up-item">
       <div style="flex-grow:1;">
-        <h4><a href="../../../de/academy/programs/hackathons/ai-ethics-hackathon.html">AI Ethics Hackathon</a></h4>
+        <h4><a href="../../../academy/programs/hackathons/ai-ethics-hackathon.html">AI Ethics Hackathon</a></h4>
         <div class="up-meta"><i class="bi bi-calendar3"></i> 5. März 2026 &nbsp; <i class="bi bi-geo-alt"></i> Bukarest</div>
       </div>
       <div class="up-badge up-badge-open">Offen</div>
@@ -691,7 +716,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <div class="up-item">
       <div style="flex-grow:1;">
-        <h4><a href="../../../de/academy/programs/summer-school/2025.html">Sommerschule 2026</a></h4>
+        <h4><a href="../../../academy/programs/summer-school/2025.html">Sommerschule 2026</a></h4>
         <div class="up-meta"><i class="bi bi-calendar3"></i> 1.–15. Aug. 2026 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
       </div>
       <div class="up-badge up-badge-soon">Demnächst</div>
@@ -699,7 +724,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <div class="up-item">
       <div style="flex-grow:1;">
-        <h4><a href="../../../de/academy/programs/hackathons/spaceapps/challenge-2025.html">SpaceApps Challenge 2026</a></h4>
+        <h4><a href="../../../academy/programs/hackathons/spaceapps/challenge-2025.html">SpaceApps Challenge 2026</a></h4>
         <div class="up-meta"><i class="bi bi-calendar3"></i> Oktober 2026 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
       </div>
       <div class="up-badge up-badge-soon">Demnächst</div>
@@ -707,7 +732,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <div class="up-item">
       <div style="flex-grow:1;">
-        <h4><a href="../../../de/academy/programs/summer-school/junior.html">Junior-Sommerschule</a></h4>
+        <h4><a href="../../../academy/programs/summer-school/junior.html">Junior-Sommerschule</a></h4>
         <div class="up-meta"><i class="bi bi-calendar3"></i> Juli 2026 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
       </div>
       <div class="up-badge up-badge-soon">Demnächst</div>
@@ -735,7 +760,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <h2>Bereit teilzunehmen?</h2>
     <p>Durchsuchen Sie Programme oder buchen Sie ein Gespräch, um maßgeschneiderte Veranstaltungen für Ihr Team zu besprechen.</p>
     <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-      <a href="../../../de/academy/events.html" class="m-b">Alle Veranstaltungen ansehen</a>
+      <a href="../../../academy/events.html" class="m-b">Alle Veranstaltungen ansehen</a>
       <a href="../../../de/booking/" class="m-bo">Beratung buchen</a>
     </div>
   </div>
@@ -1208,6 +1233,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <a href="../../../about/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="about">About</a>
         <a href="../../../blog.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
         <a href="../../../contact.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="contact">Contact</a>
+        <a href="../../../faq.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">FAQ</a>
         <a href="../../../privacy.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="privacy">Privacy</a>
         <a href="../../../terms.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="terms">Terms</a>
       </div>
@@ -1354,6 +1380,7 @@ document.addEventListener('DOMContentLoaded', function() {
       a.href = l.prefix + (cleanPath || '/');
       a.textContent = l.label;
       if (l.code === currentLang) a.className = 'active';
+      a.addEventListener('click', function(e) { localStorage.setItem('chen-lang-choice', this.textContent.toLowerCase() === 'en' ? 'en' : ''); });
       langsDiv.appendChild(a);
     }
 
@@ -1368,11 +1395,10 @@ document.addEventListener('DOMContentLoaded', function() {
   })();
 });
 </script>
-<!-- Cal.com floating button -->
+<!-- Cal.com embed (for booking page only, no floating button) -->
 <script>
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", {origin:"https://cal.com"});
-  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
