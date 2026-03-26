@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-8dd3dd159173adcf0f2e6467a4c7591f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-34a1d7218939eaee31c1f1ef031ca8da.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-8dd3dd159173adcf0f2e6467a4c7591f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-a592c5a32ddb2bbfd9fa55d2db6a7c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-29f4aea09a2439b849a9d23a02a83b44.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-a592c5a32ddb2bbfd9fa55d2db6a7c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:description" content="A comprehensive course on using NixOS to build secure, reproducible environments for cybersecurity operations.">
 <meta name="twitter:image" content="https://chen.ist/academy/courses/nixos-cybersecurity/assets/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-</head><body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+</head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -350,16 +350,19 @@ document.addEventListener('DOMContentLoaded', function() {
     navbarBrand.appendChild(titleSpan);
   }
 
-  // Add CTA button to navbar
+  // Add CTA button to navbar (language-aware)
   var navRight = document.querySelector('.navbar-nav.ms-auto');
   if (navRight) {
+    var langPrefix = '';
+    var langMatch = window.location.pathname.match(/^\/(ro|sv|de)\//);
+    if (langMatch) langPrefix = '/' + langMatch[1];
     var ctaLi = document.createElement('li');
     ctaLi.className = 'nav-item';
     var ctaLink = document.createElement('a');
     ctaLink.className = 'nav-link navbar-cta';
-    ctaLink.href = '/booking/';
-    // internal link, no new tab
-    ctaLink.textContent = 'Book a Call';
+    ctaLink.href = langPrefix + '/booking/';
+    var ctaLabels = { ro: 'Programează', sv: 'Boka Samtal', de: 'Gespräch Buchen' };
+    ctaLink.textContent = langMatch ? (ctaLabels[langMatch[1]] || 'Book a Call') : 'Book a Call';
     ctaLi.appendChild(ctaLink);
     navRight.appendChild(ctaLi);
   }
@@ -411,7 +414,10 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 }
 </script>
-<style>.m { --c: #F5A623; }</style>
+<style>
+.m { --c: #F5A623; }
+.quarto-title-block { display: none !important; }
+</style>
 
 
 <link rel="stylesheet" href="../../../assets/css/main.min.css">
@@ -582,31 +588,75 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#course-overview" id="toc-course-overview" class="nav-link active" data-scroll-target="#course-overview">Course Overview</a></li>
+  <li><a href="#course-objectives" id="toc-course-objectives" class="nav-link" data-scroll-target="#course-objectives">Course Objectives</a></li>
+  <li><a href="#course-structure" id="toc-course-structure" class="nav-link" data-scroll-target="#course-structure">Course Structure</a></li>
+  <li><a href="#practical-applications" id="toc-practical-applications" class="nav-link" data-scroll-target="#practical-applications">Practical Applications</a></li>
+  <li><a href="#what-sets-this-course-apart" id="toc-what-sets-this-course-apart" class="nav-link" data-scroll-target="#what-sets-this-course-apart">What Sets This Course Apart</a></li>
+  <li><a href="#who-should-attend" id="toc-who-should-attend" class="nav-link" data-scroll-target="#who-should-attend">Who Should Attend</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#instructors" id="toc-instructors" class="nav-link" data-scroll-target="#instructors">Instructors</a></li>
+  <li><a href="#student-testimonials" id="toc-student-testimonials" class="nav-link" data-scroll-target="#student-testimonials">Student Testimonials</a></li>
+  <li><a href="#frequently-asked-questions" id="toc-frequently-asked-questions" class="nav-link" data-scroll-target="#frequently-asked-questions">Frequently Asked Questions</a></li>
+  <li><a href="#download" id="toc-download" class="nav-link" data-scroll-target="#download">Download</a></li>
+  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
+<main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header">
-<h1 class="title display-7">NixOS for Cybersecurity</h1>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">NixOS for Cybersecurity</h1>
 <p class="subtitle lead">Secure, Reproducible Computing Environments</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">nixos</div>
+    <div class="quarto-category">linux</div>
+    <div class="quarto-category">cybersecurity</div>
+    <div class="quarto-category">infrastructure</div>
+    <div class="quarto-category">system-hardening</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    A comprehensive course on using NixOS to build secure, reproducible environments for cybersecurity operations.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
 
 </header>
 
 
 <div class="m">
-
-<div class="m-hero">
-  <div class="container">
+<div class="m-hero" style="margin: -1em -1em 3rem; padding: 10rem 0 6rem;">
+  <div class="container" style="max-width: 700px;">
     <h1>NixOS for <span class="gr">Cybersecurity</span></h1>
     <p>Building secure, reproducible computing environments</p>
   </div>
 </div>
-
-<div class="container">
+</div>
 <section id="course-overview" class="level2">
-<h2 data-anchor-id="course-overview">Course Overview</h2>
+<h2 class="anchored" data-anchor-id="course-overview">Course Overview</h2>
 <p>This 4-week course introduces cybersecurity professionals and enthusiasts to NixOS as a powerful platform for building secure, reproducible computing environments. Through hands-on exercises and real-world scenarios, you’ll learn how to leverage NixOS’s unique approach to system configuration to enhance security posture, create consistent testing environments, and implement robust security controls.</p>
 <div class="row">
   <div class="col-md-6 text-center mt-3 mb-3">
@@ -631,7 +681,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="col-md-6">
     <div class="card mb-4">
       <div class="card-header bg-primary text-white">
-        <h3 class="card-title mb-0">Course Details</h3>
+        <h3 class="card-title mb-0 anchored">Course Details</h3>
       </div>
       <div class="card-body">
         <p><strong>Duration:</strong> 4 weeks (8 sessions)</p>
@@ -647,7 +697,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="col-md-6">
     <div class="card mb-4">
       <div class="card-header bg-primary text-white">
-        <h3 class="card-title mb-0">Why NixOS for Security?</h3>
+        <h3 class="card-title mb-0 anchored">Why NixOS for Security?</h3>
       </div>
       <div class="card-body">
         <ul>
@@ -663,7 +713,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 </section>
 <section id="course-objectives" class="level2">
-<h2 data-anchor-id="course-objectives">Course Objectives</h2>
+<h2 class="anchored" data-anchor-id="course-objectives">Course Objectives</h2>
 <p>By the end of this course, participants will be able to:</p>
 <ul>
 <li>Understand and apply NixOS’s declarative approach to system configuration</li>
@@ -675,14 +725,14 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="course-structure" class="level2">
-<h2 data-anchor-id="course-structure">Course Structure</h2>
+<h2 class="anchored" data-anchor-id="course-structure">Course Structure</h2>
 <div class="row mt-4">
   <div class="col-md-12">
     <div class="timeline">
       <div class="timeline-item">
         <div class="timeline-marker bg-success"></div>
         <div class="timeline-content">
-          <h3>Week 1: NixOS Fundamentals for Security</h3>
+          <h3 class="anchored">Week 1: NixOS Fundamentals for Security</h3>
           <ul>
             <li>Introduction to NixOS and its security benefits</li>
             <li>The Nix package manager and store concepts</li>
@@ -696,7 +746,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="timeline-item">
         <div class="timeline-marker bg-success"></div>
         <div class="timeline-content">
-          <h3>Week 2: System Hardening with NixOS</h3>
+          <h3 class="anchored">Week 2: System Hardening with NixOS</h3>
           <ul>
             <li>Firewall configuration and network security</li>
             <li>User security settings and privilege management</li>
@@ -710,7 +760,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="timeline-item">
         <div class="timeline-marker bg-success"></div>
         <div class="timeline-content">
-          <h3>Week 3: Network Isolation and Sandboxing</h3>
+          <h3 class="anchored">Week 3: Network Isolation and Sandboxing</h3>
           <ul>
             <li>Container isolation and security</li>
             <li>Network namespaces for security testing</li>
@@ -724,7 +774,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="timeline-item">
         <div class="timeline-marker bg-success"></div>
         <div class="timeline-content">
-          <h3>Week 4: Deployment and Real-World Applications</h3>
+          <h3 class="anchored">Week 4: Deployment and Real-World Applications</h3>
           <ul>
             <li>Version-controlled security configurations</li>
             <li>Multi-system deployment with NixOps</li>
@@ -739,13 +789,13 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 </section>
 <section id="practical-applications" class="level2">
-<h2 data-anchor-id="practical-applications">Practical Applications</h2>
+<h2 class="anchored" data-anchor-id="practical-applications">Practical Applications</h2>
 <p>Learn how to apply NixOS in real-world cybersecurity scenarios:</p>
 <div class="row mt-4">
   <div class="col-md-6 mb-4">
     <div class="card h-100">
       <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0">Incident Response</h3>
+        <h3 class="card-title mb-0 anchored">Incident Response</h3>
       </div>
       <div class="card-body">
         <p>Create reproducible forensics environments that ensure consistent evidence analysis and documentation:</p>
@@ -762,7 +812,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="col-md-6 mb-4">
     <div class="card h-100">
       <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0">Penetration Testing</h3>
+        <h3 class="card-title mb-0 anchored">Penetration Testing</h3>
       </div>
       <div class="card-body">
         <p>Deploy consistent testing environments across engagements:</p>
@@ -779,7 +829,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="col-md-6 mb-4">
     <div class="card h-100">
       <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0">Security Research</h3>
+        <h3 class="card-title mb-0 anchored">Security Research</h3>
       </div>
       <div class="card-body">
         <p>Create environments for reproducible vulnerability research:</p>
@@ -796,7 +846,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="col-md-6 mb-4">
     <div class="card h-100">
       <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0">SOC Operations</h3>
+        <h3 class="card-title mb-0 anchored">SOC Operations</h3>
       </div>
       <div class="card-body">
         <p>Standardize security operations with consistent environments:</p>
@@ -812,14 +862,14 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 </section>
 <section id="what-sets-this-course-apart" class="level2">
-<h2 data-anchor-id="what-sets-this-course-apart">What Sets This Course Apart</h2>
+<h2 class="anchored" data-anchor-id="what-sets-this-course-apart">What Sets This Course Apart</h2>
 <div class="row mt-4">
   <div class="col-lg-4 col-md-6">
     <div class="feature-card text-center">
       <div class="feature-card-icon">
         <i class="bi bi-shield-check"></i>
       </div>
-      <h3>Practical Focus</h3>
+      <h3 class="anchored">Practical Focus</h3>
       <p>Hands-on exercises that apply directly to real-world security operations and challenges.</p>
     </div>
   </div>
@@ -829,7 +879,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="feature-card-icon">
         <i class="bi bi-code-square"></i>
       </div>
-      <h3>Infrastructure as Code</h3>
+      <h3 class="anchored">Infrastructure as Code</h3>
       <p>Learn to implement security as code with version-controlled, auditable system configurations.</p>
     </div>
   </div>
@@ -839,14 +889,14 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="feature-card-icon">
         <i class="bi bi-diagram-3"></i>
       </div>
-      <h3>Modern Approach</h3>
+      <h3 class="anchored">Modern Approach</h3>
       <p>Cutting-edge techniques that align with the latest in DevSecOps and secure infrastructure practices.</p>
     </div>
   </div>
 </div>
 </section>
 <section id="who-should-attend" class="level2">
-<h2 data-anchor-id="who-should-attend">Who Should Attend</h2>
+<h2 class="anchored" data-anchor-id="who-should-attend">Who Should Attend</h2>
 <p>This course is ideal for:</p>
 <ul>
 <li>Security professionals looking to enhance their infrastructure security skills</li>
@@ -857,7 +907,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="prerequisites" class="level2">
-<h2 data-anchor-id="prerequisites">Prerequisites</h2>
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
 <p>Participants should have:</p>
 <ul>
 <li>Basic Linux knowledge and command line experience</li>
@@ -868,7 +918,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>No prior NixOS experience is required.</p>
 </section>
 <section id="instructors" class="level2">
-<h2 data-anchor-id="instructors">Instructors</h2>
+<h2 class="anchored" data-anchor-id="instructors">Instructors</h2>
 <div class="row mt-4">
   <div class="col-md-6">
     <div class="card mb-4">
@@ -878,7 +928,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <i class="bi bi-person-circle fs-1"></i>
           </div>
           <div>
-            <h3 class="mb-0">Alin Mechenici</h3>
+            <h3 class="mb-0 anchored">Alin Mechenici</h3>
             <p class="text-muted">Lead Instructor</p>
           </div>
         </div>
@@ -895,7 +945,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <i class="bi bi-person-circle fs-1"></i>
           </div>
           <div>
-            <h3 class="mb-0">Guest Instructors</h3>
+            <h3 class="mb-0 anchored">Guest Instructors</h3>
             <p class="text-muted">Industry Experts</p>
           </div>
         </div>
@@ -906,7 +956,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 </section>
 <section id="student-testimonials" class="level2">
-<h2 data-anchor-id="student-testimonials">Student Testimonials</h2>
+<h2 class="anchored" data-anchor-id="student-testimonials">Student Testimonials</h2>
 <div class="row mt-4">
   <div class="col-md-6 mb-4">
     <div class="testimonial-card">
@@ -932,12 +982,12 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 </section>
 <section id="frequently-asked-questions" class="level2">
-<h2 data-anchor-id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h2 class="anchored" data-anchor-id="frequently-asked-questions">Frequently Asked Questions</h2>
 <div class="row mt-4">
   <div class="col-md-6 mb-4">
     <div class="card h-100">
       <div class="card-header">
-        <h3 class="card-title mb-0">Common Questions</h3>
+        <h3 class="card-title mb-0 anchored">Common Questions</h3>
       </div>
       <div class="card-body">
         <dl>
@@ -957,7 +1007,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="col-md-6 mb-4">
     <div class="card h-100">
       <div class="card-header">
-        <h3 class="card-title mb-0">Additional Information</h3>
+        <h3 class="card-title mb-0 anchored">Additional Information</h3>
       </div>
       <div class="card-body">
         <dl>
@@ -974,21 +1024,47 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   </div>
 </div>
-</section></div>
-
+</section>
+<section id="download" class="level2">
+<h2 class="anchored" data-anchor-id="download">Download</h2>
+<div style="margin: 2rem 0; padding: 1.5rem 2rem; background: rgba(129,189,74,0.06); border: 1px solid rgba(129,189,74,0.15); border-radius: 12px;">
+<p style="margin: 0 0 0.5rem; font-weight: 600;">
+Download Course Details
+</p>
+<p style="margin: 0 0 1rem; font-size: 0.9rem; color: #86868b;">
+Get the full course outline, pricing, and contact information as a PDF.
+</p>
+<p><a href="index.pdf" class="m-b" style="font-size: 0.9rem; padding: 0.6rem 1.5rem;">Download PDF</a></p>
+</div>
+</section>
+<section id="contact" class="level2">
+<h2 class="anchored" data-anchor-id="contact">Contact</h2>
+<p>Interested in enrolling or have questions about this course?</p>
+<ul>
+<li><strong>Email:</strong> <a href="mailto:office@chen.ist">office@chen.ist</a></li>
+<li><strong>Phone:</strong> Schedule a call to discuss your goals</li>
+<li><strong>Web:</strong> <a href="../../../booking/">Book a free consultation</a></li>
+</ul>
+<div class="m">
 <div class="m-cta">
   <div class="container">
-    <h2>Ready to get started?</h2>
+    <div class="m-d"></div>
+    <h2 class="anchored">Ready to get started?</h2>
     <p>Book a call to discuss your goals and find the right program.</p>
+    <a href="../../../booking/" class="m-b">Book a Call</a>
+    <div class="m-sm">
+      <i class="bi bi-check-circle-fill"></i> Free consultation &nbsp;
+      <i class="bi bi-check-circle-fill"></i> No commitment &nbsp;
+      <i class="bi bi-check-circle-fill"></i> Custom team pricing
+    </div>
   </div>
 </div>
-
 </div>
 
 
+</section>
 
-
-
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1413,7 +1489,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- Back to top -->
 <div style="text-align:center; padding:2rem 0; background:#0a0a0a; border-top:1px solid rgba(255,255,255,0.04);">
   <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" style="color:rgba(255,255,255,0.3); text-decoration:none; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em;">
-    <i class="bi bi-chevron-up" style="display:block; font-size:1rem; margin-bottom:0.25rem;"></i>Back to top
+    <i class="bi bi-chevron-up" style="display:block; font-size:1rem; margin-bottom:0.25rem;"></i><span class="footer-i18n" data-key="backToTop">Back to top</span>
   </a>
 </div>
 
@@ -1422,7 +1498,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div style="display:grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr; gap:2rem;">
       <div>
         <div style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:1rem; font-family:'Source Code Pro',monospace;">chen<span style="color:#81BD4A;">.</span>ist</div>
-        <p style="margin-bottom:1rem; color:rgba(255,255,255,0.4);">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
+        <p style="margin-bottom:1rem; color:rgba(255,255,255,0.4);" class="footer-i18n" data-key="tagline">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
         <div style="display:flex; gap:0.75rem; margin-bottom:1rem;">
           <a href="https://github.com/chenist" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-github"></i></a>
           <a href="https://linkedin.com/in/chenistsec" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-linkedin"></i></a>
@@ -1431,33 +1507,33 @@ document.addEventListener('DOMContentLoaded', function() {
         <p style="color:rgba(255,255,255,0.2); font-size:0.75rem;">© 2026 chen.ist</p>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Services</div>
-        <a href="../../../digital/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Digital Infrastructure</a>
-        <a href="../../../security/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Security</a>
-        <a href="../../../services/cloud/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
-        <a href="../../../services/nis2/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">NIS2 Compliance</a>
-        <a href="../../../services/digital-resilience/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Digital Resilience</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="services">Services</div>
+        <a href="../../../digital/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="digitalInfra">Digital Infrastructure</a>
+        <a href="../../../security/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="security">Security</a>
+        <a href="../../../services/cloud/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
+        <a href="../../../services/nis2/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="nis2">NIS2 Compliance</a>
+        <a href="../../../services/digital-resilience/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="resilience">Digital Resilience</a>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Academy</div>
-        <a href="../../../academy/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Overview</a>
-        <a href="../../../academy/courses.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Courses</a>
-        <a href="../../../academy/trainings.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Trainings</a>
-        <a href="../../../academy/events.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Events</a>
-        <a href="../../../academy/webinars.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Webinars</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="academy">Academy</div>
+        <a href="../../../academy/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="overview">Overview</a>
+        <a href="../../../academy/courses.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="courses">Courses</a>
+        <a href="../../../academy/trainings.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="trainings">Trainings</a>
+        <a href="../../../academy/events.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="events">Events</a>
+        <a href="../../../academy/webinars.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="webinars">Webinars</a>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Company</div>
-        <a href="../../../about/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">About</a>
-        <a href="../../../blog.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
-        <a href="../../../contact.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Contact</a>
-        <a href="../../../privacy.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Privacy</a>
-        <a href="../../../terms.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Terms</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="company">Company</div>
+        <a href="../../../about/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="about">About</a>
+        <a href="../../../blog.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
+        <a href="../../../contact.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="contact">Contact</a>
+        <a href="../../../privacy.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="privacy">Privacy</a>
+        <a href="../../../terms.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="terms">Terms</a>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Connect</div>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="connect">Connect</div>
         <a href="mailto:office@chen.ist" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">office@chen.ist</a>
-        <a href="../../../booking/" style="display:block; color:#81BD4A; text-decoration:none; padding:0.1rem 0; font-weight:500;">Book a Call</a>
+        <a href="../../../booking/" data-footer-link="" style="display:block; color:#81BD4A; text-decoration:none; padding:0.1rem 0; font-weight:500;" class="footer-i18n" data-key="bookCall">Book a Call</a>
         <div style="margin-top:1rem; color:rgba(255,255,255,0.2); font-size:0.72rem;">Craiova · Bucharest · Stockholm</div>
       </div>
     </div>
@@ -1470,6 +1546,54 @@ document.addEventListener('DOMContentLoaded', function() {
 @media (max-width:480px) { footer > div > div { grid-template-columns: 1fr !important; } }
 footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
 </style>
+
+<script>
+(function() {
+  var langMatch = window.location.pathname.match(/^\/(ro|sv|de)\//);
+  var lang = langMatch ? langMatch[1] : 'en';
+  var prefix = lang === 'en' ? '' : '/' + lang;
+
+  // Rewrite all internal footer links to include language prefix
+  document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
+    var href = a.getAttribute('href');
+    if (href && href.startsWith('/') && !href.startsWith('//')) {
+      a.setAttribute('href', prefix + href);
+    }
+  });
+
+  // Translate labels if not English
+  if (lang === 'en') return;
+  var i18n = {
+    ro: {
+      backToTop: 'Înapoi sus', tagline: 'Infrastructură digitală, securitate cibernetică și educație. Construit pe open-source.',
+      services: 'Servicii', digitalInfra: 'Infrastructură Digitală', security: 'Securitate', nis2: 'Conformitate NIS2', resilience: 'Reziliență Digitală',
+      academy: 'Academie', overview: 'Prezentare', courses: 'Cursuri', trainings: 'Training-uri', events: 'Evenimente', webinars: 'Webinarii',
+      company: 'Companie', about: 'Despre noi', contact: 'Contact', privacy: 'Confidențialitate', terms: 'Termeni',
+      connect: 'Conectare', bookCall: 'Programează'
+    },
+    sv: {
+      backToTop: 'Tillbaka upp', tagline: 'Digital infrastruktur, cybersäkerhet och utbildning. Byggt på öppen källkod.',
+      services: 'Tjänster', digitalInfra: 'Digital Infrastruktur', security: 'Säkerhet', nis2: 'NIS2-efterlevnad', resilience: 'Digital Resiliens',
+      academy: 'Akademi', overview: 'Översikt', courses: 'Kurser', trainings: 'Utbildningar', events: 'Evenemang', webinars: 'Webbinarier',
+      company: 'Företag', about: 'Om oss', contact: 'Kontakt', privacy: 'Integritet', terms: 'Villkor',
+      connect: 'Kontakta', bookCall: 'Boka Samtal'
+    },
+    de: {
+      backToTop: 'Nach oben', tagline: 'Digitale Infrastruktur, Cybersicherheit und Bildung. Auf Open-Source aufgebaut.',
+      services: 'Dienstleistungen', digitalInfra: 'Digitale Infrastruktur', security: 'Sicherheit', nis2: 'NIS2-Konformität', resilience: 'Digitale Resilienz',
+      academy: 'Akademie', overview: 'Übersicht', courses: 'Kurse', trainings: 'Schulungen', events: 'Veranstaltungen', webinars: 'Webinare',
+      company: 'Unternehmen', about: 'Über uns', contact: 'Kontakt', privacy: 'Datenschutz', terms: 'AGB',
+      connect: 'Verbinden', bookCall: 'Gespräch Buchen'
+    }
+  };
+  var t = i18n[lang];
+  if (!t) return;
+  document.querySelectorAll('.footer-i18n').forEach(function(el) {
+    var key = el.getAttribute('data-key');
+    if (key && t[key]) el.textContent = t[key];
+  });
+})();
+</script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const observer = new IntersectionObserver((entries) => {

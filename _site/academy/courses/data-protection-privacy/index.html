@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-8dd3dd159173adcf0f2e6467a4c7591f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-34a1d7218939eaee31c1f1ef031ca8da.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-8dd3dd159173adcf0f2e6467a4c7591f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-a592c5a32ddb2bbfd9fa55d2db6a7c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-29f4aea09a2439b849a9d23a02a83b44.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-a592c5a32ddb2bbfd9fa55d2db6a7c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:description" content="Learn data protection and privacy fundamentals including GDPR compliance, privacy engineering, and technical approaches to securing sensitive data.">
 <meta name="twitter:image" content="https://chen.ist/academy/courses/data-protection-privacy/assets/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-</head><body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+</head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -350,16 +350,19 @@ document.addEventListener('DOMContentLoaded', function() {
     navbarBrand.appendChild(titleSpan);
   }
 
-  // Add CTA button to navbar
+  // Add CTA button to navbar (language-aware)
   var navRight = document.querySelector('.navbar-nav.ms-auto');
   if (navRight) {
+    var langPrefix = '';
+    var langMatch = window.location.pathname.match(/^\/(ro|sv|de)\//);
+    if (langMatch) langPrefix = '/' + langMatch[1];
     var ctaLi = document.createElement('li');
     ctaLi.className = 'nav-item';
     var ctaLink = document.createElement('a');
     ctaLink.className = 'nav-link navbar-cta';
-    ctaLink.href = '/booking/';
-    // internal link, no new tab
-    ctaLink.textContent = 'Book a Call';
+    ctaLink.href = langPrefix + '/booking/';
+    var ctaLabels = { ro: 'Programează', sv: 'Boka Samtal', de: 'Gespräch Buchen' };
+    ctaLink.textContent = langMatch ? (ctaLabels[langMatch[1]] || 'Book a Call') : 'Book a Call';
     ctaLi.appendChild(ctaLink);
     navRight.appendChild(ctaLi);
   }
@@ -411,7 +414,10 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 }
 </script>
-<style>.m { --c: #F5A623; }</style>
+<style>
+.m { --c: #F5A623; }
+.quarto-title-block { display: none !important; }
+</style>
 
 
 <link rel="stylesheet" href="../../../assets/css/main.min.css">
@@ -582,34 +588,85 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#course-overview" id="toc-course-overview" class="nav-link active" data-scroll-target="#course-overview">Course Overview</a>
+  <ul class="collapse">
+  <li><a href="#next-cohort" id="toc-next-cohort" class="nav-link" data-scroll-target="#next-cohort">Next Cohort</a></li>
+  </ul></li>
+  <li><a href="#course-curriculum" id="toc-course-curriculum" class="nav-link" data-scroll-target="#course-curriculum">Course Curriculum</a>
+  <ul class="collapse">
+  <li><a href="#module-1-privacy-fundamentals-and-legal-frameworks-week-1" id="toc-module-1-privacy-fundamentals-and-legal-frameworks-week-1" class="nav-link" data-scroll-target="#module-1-privacy-fundamentals-and-legal-frameworks-week-1">Module 1: Privacy Fundamentals and Legal Frameworks (Week 1)</a></li>
+  <li><a href="#module-2-privacy-by-design-and-data-governance-week-2" id="toc-module-2-privacy-by-design-and-data-governance-week-2" class="nav-link" data-scroll-target="#module-2-privacy-by-design-and-data-governance-week-2">Module 2: Privacy by Design and Data Governance (Week 2)</a></li>
+  <li><a href="#module-3-technical-privacy-controls-week-3" id="toc-module-3-technical-privacy-controls-week-3" class="nav-link" data-scroll-target="#module-3-technical-privacy-controls-week-3">Module 3: Technical Privacy Controls (Week 3)</a></li>
+  <li><a href="#module-4-privacy-impact-assessment-and-risk-management-week-4" id="toc-module-4-privacy-impact-assessment-and-risk-management-week-4" class="nav-link" data-scroll-target="#module-4-privacy-impact-assessment-and-risk-management-week-4">Module 4: Privacy Impact Assessment and Risk Management (Week 4)</a></li>
+  <li><a href="#module-5-data-breach-prevention-and-response-week-5" id="toc-module-5-data-breach-prevention-and-response-week-5" class="nav-link" data-scroll-target="#module-5-data-breach-prevention-and-response-week-5">Module 5: Data Breach Prevention and Response (Week 5)</a></li>
+  <li><a href="#module-6-privacy-program-implementation-and-case-studies-week-6" id="toc-module-6-privacy-program-implementation-and-case-studies-week-6" class="nav-link" data-scroll-target="#module-6-privacy-program-implementation-and-case-studies-week-6">Module 6: Privacy Program Implementation and Case Studies (Week 6)</a></li>
+  </ul></li>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link" data-scroll-target="#learning-outcomes">Learning Outcomes</a></li>
+  <li><a href="#instructors" id="toc-instructors" class="nav-link" data-scroll-target="#instructors">Instructors</a></li>
+  <li><a href="#assessment-and-certification" id="toc-assessment-and-certification" class="nav-link" data-scroll-target="#assessment-and-certification">Assessment and Certification</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  <li><a href="#download" id="toc-download" class="nav-link" data-scroll-target="#download">Download</a></li>
+  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
+<main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header">
-<h1 class="title display-7">Data Protection and Privacy</h1>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Data Protection and Privacy</h1>
 <p class="subtitle lead">Technical and legal approaches to safeguarding sensitive information</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">data-privacy</div>
+    <div class="quarto-category">gdpr</div>
+    <div class="quarto-category">compliance</div>
+    <div class="quarto-category">privacy-engineering</div>
+    <div class="quarto-category">data-security</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Learn data protection and privacy fundamentals including GDPR compliance, privacy engineering, and technical approaches to securing sensitive data.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
 
 </header>
 
 
 <div class="m">
-
-<div class="m-hero">
-  <div class="container">
+<div class="m-hero" style="margin: -1em -1em 3rem; padding: 10rem 0 6rem;">
+  <div class="container" style="max-width: 700px;">
     <h1>Data Protection and <span class="gr">Privacy</span></h1>
     <p>Master the technical and legal frameworks for safeguarding sensitive information</p>
   </div>
 </div>
-
-<div class="container">
+</div>
 <section id="course-overview" class="level2">
-<h2 data-anchor-id="course-overview">Course Overview</h2>
+<h2 class="anchored" data-anchor-id="course-overview">Course Overview</h2>
 <p>Explore the technical and legal aspects of data protection, focusing on implementing privacy-by-design principles and compliance with global regulations. This 6-week course provides practical knowledge on how to implement effective data protection measures, navigate complex compliance requirements, and build privacy-conscious systems.</p>
 <section id="next-cohort" class="level3">
-<h3 data-anchor-id="next-cohort">Next Cohort</h3>
+<h3 class="anchored" data-anchor-id="next-cohort">Next Cohort</h3>
 <ul>
 <li><strong>Start Date:</strong> November 5th, 2025</li>
 <li><strong>Format:</strong> Available in instructor-led online, self-paced, and in-person formats</li>
@@ -618,9 +675,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="course-curriculum" class="level2">
-<h2 data-anchor-id="course-curriculum">Course Curriculum</h2>
+<h2 class="anchored" data-anchor-id="course-curriculum">Course Curriculum</h2>
 <section id="module-1-privacy-fundamentals-and-legal-frameworks-week-1" class="level3">
-<h3 data-anchor-id="module-1-privacy-fundamentals-and-legal-frameworks-week-1">Module 1: Privacy Fundamentals and Legal Frameworks (Week 1)</h3>
+<h3 class="anchored" data-anchor-id="module-1-privacy-fundamentals-and-legal-frameworks-week-1">Module 1: Privacy Fundamentals and Legal Frameworks (Week 1)</h3>
 <ul>
 <li>Evolution of privacy concepts and concerns</li>
 <li>Key global privacy regulations (GDPR, CCPA/CPRA, HIPAA, etc.)</li>
@@ -631,7 +688,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="module-2-privacy-by-design-and-data-governance-week-2" class="level3">
-<h3 data-anchor-id="module-2-privacy-by-design-and-data-governance-week-2">Module 2: Privacy by Design and Data Governance (Week 2)</h3>
+<h3 class="anchored" data-anchor-id="module-2-privacy-by-design-and-data-governance-week-2">Module 2: Privacy by Design and Data Governance (Week 2)</h3>
 <ul>
 <li>Privacy by Design principles and implementation</li>
 <li>Data classification and mapping</li>
@@ -642,7 +699,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="module-3-technical-privacy-controls-week-3" class="level3">
-<h3 data-anchor-id="module-3-technical-privacy-controls-week-3">Module 3: Technical Privacy Controls (Week 3)</h3>
+<h3 class="anchored" data-anchor-id="module-3-technical-privacy-controls-week-3">Module 3: Technical Privacy Controls (Week 3)</h3>
 <ul>
 <li>Pseudonymization and anonymization techniques</li>
 <li>Encryption fundamentals and implementation</li>
@@ -653,7 +710,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="module-4-privacy-impact-assessment-and-risk-management-week-4" class="level3">
-<h3 data-anchor-id="module-4-privacy-impact-assessment-and-risk-management-week-4">Module 4: Privacy Impact Assessment and Risk Management (Week 4)</h3>
+<h3 class="anchored" data-anchor-id="module-4-privacy-impact-assessment-and-risk-management-week-4">Module 4: Privacy Impact Assessment and Risk Management (Week 4)</h3>
 <ul>
 <li>Privacy risk assessment methodologies</li>
 <li>Conducting Data Protection Impact Assessments (DPIAs)</li>
@@ -664,7 +721,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="module-5-data-breach-prevention-and-response-week-5" class="level3">
-<h3 data-anchor-id="module-5-data-breach-prevention-and-response-week-5">Module 5: Data Breach Prevention and Response (Week 5)</h3>
+<h3 class="anchored" data-anchor-id="module-5-data-breach-prevention-and-response-week-5">Module 5: Data Breach Prevention and Response (Week 5)</h3>
 <ul>
 <li>Common causes of data breaches</li>
 <li>Technical safeguards against breaches</li>
@@ -675,7 +732,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="module-6-privacy-program-implementation-and-case-studies-week-6" class="level3">
-<h3 data-anchor-id="module-6-privacy-program-implementation-and-case-studies-week-6">Module 6: Privacy Program Implementation and Case Studies (Week 6)</h3>
+<h3 class="anchored" data-anchor-id="module-6-privacy-program-implementation-and-case-studies-week-6">Module 6: Privacy Program Implementation and Case Studies (Week 6)</h3>
 <ul>
 <li>Building a privacy program</li>
 <li>Privacy awareness and training</li>
@@ -688,7 +745,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="learning-outcomes" class="level2">
-<h2 data-anchor-id="learning-outcomes">Learning Outcomes</h2>
+<h2 class="anchored" data-anchor-id="learning-outcomes">Learning Outcomes</h2>
 <p>By the end of this course, you will be able to:</p>
 <ul>
 <li>Interpret and apply key privacy regulations in practical contexts</li>
@@ -701,11 +758,11 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="instructors" class="level2">
-<h2 data-anchor-id="instructors">Instructors</h2>
+<h2 class="anchored" data-anchor-id="instructors">Instructors</h2>
 <p>Our instructors are experienced privacy professionals with backgrounds in both technical implementation and legal compliance, bringing a well-rounded perspective to this multidisciplinary field.</p>
 </section>
 <section id="assessment-and-certification" class="level2">
-<h2 data-anchor-id="assessment-and-certification">Assessment and Certification</h2>
+<h2 class="anchored" data-anchor-id="assessment-and-certification">Assessment and Certification</h2>
 <ul>
 <li>Weekly practical assignments and case studies</li>
 <li>Privacy impact assessment project</li>
@@ -716,7 +773,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="resources" class="level2">
-<h2 data-anchor-id="resources">Resources</h2>
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
 <ul>
 <li>Comprehensive course materials and reference guides</li>
 <li>Privacy assessment templates and tools</li>
@@ -725,21 +782,47 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>Community forum for discussion and networking</li>
 <li>Office hours with instructors for personalized support</li>
 </ul>
-</section></div>
-
+</section>
+<section id="download" class="level2">
+<h2 class="anchored" data-anchor-id="download">Download</h2>
+<div style="margin: 2rem 0; padding: 1.5rem 2rem; background: rgba(129,189,74,0.06); border: 1px solid rgba(129,189,74,0.15); border-radius: 12px;">
+<p style="margin: 0 0 0.5rem; font-weight: 600;">
+Download Course Details
+</p>
+<p style="margin: 0 0 1rem; font-size: 0.9rem; color: #86868b;">
+Get the full course outline, pricing, and contact information as a PDF.
+</p>
+<p><a href="index.pdf" class="m-b" style="font-size: 0.9rem; padding: 0.6rem 1.5rem;">Download PDF</a></p>
+</div>
+</section>
+<section id="contact" class="level2">
+<h2 class="anchored" data-anchor-id="contact">Contact</h2>
+<p>Interested in enrolling or have questions about this course?</p>
+<ul>
+<li><strong>Email:</strong> <a href="mailto:office@chen.ist">office@chen.ist</a></li>
+<li><strong>Phone:</strong> Schedule a call to discuss your goals</li>
+<li><strong>Web:</strong> <a href="../../../booking/">Book a free consultation</a></li>
+</ul>
+<div class="m">
 <div class="m-cta">
   <div class="container">
-    <h2>Ready to get started?</h2>
+    <div class="m-d"></div>
+    <h2 class="anchored">Ready to get started?</h2>
     <p>Book a call to discuss your goals and find the right program.</p>
+    <a href="../../../booking/" class="m-b">Book a Call</a>
+    <div class="m-sm">
+      <i class="bi bi-check-circle-fill"></i> Free consultation &nbsp;
+      <i class="bi bi-check-circle-fill"></i> No commitment &nbsp;
+      <i class="bi bi-check-circle-fill"></i> Custom team pricing
+    </div>
   </div>
 </div>
-
 </div>
 
 
+</section>
 
-
-
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1164,7 +1247,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- Back to top -->
 <div style="text-align:center; padding:2rem 0; background:#0a0a0a; border-top:1px solid rgba(255,255,255,0.04);">
   <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" style="color:rgba(255,255,255,0.3); text-decoration:none; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em;">
-    <i class="bi bi-chevron-up" style="display:block; font-size:1rem; margin-bottom:0.25rem;"></i>Back to top
+    <i class="bi bi-chevron-up" style="display:block; font-size:1rem; margin-bottom:0.25rem;"></i><span class="footer-i18n" data-key="backToTop">Back to top</span>
   </a>
 </div>
 
@@ -1173,7 +1256,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div style="display:grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr; gap:2rem;">
       <div>
         <div style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:1rem; font-family:'Source Code Pro',monospace;">chen<span style="color:#81BD4A;">.</span>ist</div>
-        <p style="margin-bottom:1rem; color:rgba(255,255,255,0.4);">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
+        <p style="margin-bottom:1rem; color:rgba(255,255,255,0.4);" class="footer-i18n" data-key="tagline">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
         <div style="display:flex; gap:0.75rem; margin-bottom:1rem;">
           <a href="https://github.com/chenist" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-github"></i></a>
           <a href="https://linkedin.com/in/chenistsec" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-linkedin"></i></a>
@@ -1182,33 +1265,33 @@ document.addEventListener('DOMContentLoaded', function() {
         <p style="color:rgba(255,255,255,0.2); font-size:0.75rem;">© 2026 chen.ist</p>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Services</div>
-        <a href="../../../digital/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Digital Infrastructure</a>
-        <a href="../../../security/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Security</a>
-        <a href="../../../services/cloud/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
-        <a href="../../../services/nis2/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">NIS2 Compliance</a>
-        <a href="../../../services/digital-resilience/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Digital Resilience</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="services">Services</div>
+        <a href="../../../digital/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="digitalInfra">Digital Infrastructure</a>
+        <a href="../../../security/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="security">Security</a>
+        <a href="../../../services/cloud/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
+        <a href="../../../services/nis2/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="nis2">NIS2 Compliance</a>
+        <a href="../../../services/digital-resilience/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="resilience">Digital Resilience</a>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Academy</div>
-        <a href="../../../academy/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Overview</a>
-        <a href="../../../academy/courses.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Courses</a>
-        <a href="../../../academy/trainings.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Trainings</a>
-        <a href="../../../academy/events.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Events</a>
-        <a href="../../../academy/webinars.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Webinars</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="academy">Academy</div>
+        <a href="../../../academy/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="overview">Overview</a>
+        <a href="../../../academy/courses.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="courses">Courses</a>
+        <a href="../../../academy/trainings.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="trainings">Trainings</a>
+        <a href="../../../academy/events.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="events">Events</a>
+        <a href="../../../academy/webinars.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="webinars">Webinars</a>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Company</div>
-        <a href="../../../about/" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">About</a>
-        <a href="../../../blog.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
-        <a href="../../../contact.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Contact</a>
-        <a href="../../../privacy.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Privacy</a>
-        <a href="../../../terms.html" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Terms</a>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="company">Company</div>
+        <a href="../../../about/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="about">About</a>
+        <a href="../../../blog.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
+        <a href="../../../contact.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="contact">Contact</a>
+        <a href="../../../privacy.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="privacy">Privacy</a>
+        <a href="../../../terms.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="terms">Terms</a>
       </div>
       <div>
-        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Connect</div>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="connect">Connect</div>
         <a href="mailto:office@chen.ist" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">office@chen.ist</a>
-        <a href="../../../booking/" style="display:block; color:#81BD4A; text-decoration:none; padding:0.1rem 0; font-weight:500;">Book a Call</a>
+        <a href="../../../booking/" data-footer-link="" style="display:block; color:#81BD4A; text-decoration:none; padding:0.1rem 0; font-weight:500;" class="footer-i18n" data-key="bookCall">Book a Call</a>
         <div style="margin-top:1rem; color:rgba(255,255,255,0.2); font-size:0.72rem;">Craiova · Bucharest · Stockholm</div>
       </div>
     </div>
@@ -1221,6 +1304,54 @@ document.addEventListener('DOMContentLoaded', function() {
 @media (max-width:480px) { footer > div > div { grid-template-columns: 1fr !important; } }
 footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
 </style>
+
+<script>
+(function() {
+  var langMatch = window.location.pathname.match(/^\/(ro|sv|de)\//);
+  var lang = langMatch ? langMatch[1] : 'en';
+  var prefix = lang === 'en' ? '' : '/' + lang;
+
+  // Rewrite all internal footer links to include language prefix
+  document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
+    var href = a.getAttribute('href');
+    if (href && href.startsWith('/') && !href.startsWith('//')) {
+      a.setAttribute('href', prefix + href);
+    }
+  });
+
+  // Translate labels if not English
+  if (lang === 'en') return;
+  var i18n = {
+    ro: {
+      backToTop: 'Înapoi sus', tagline: 'Infrastructură digitală, securitate cibernetică și educație. Construit pe open-source.',
+      services: 'Servicii', digitalInfra: 'Infrastructură Digitală', security: 'Securitate', nis2: 'Conformitate NIS2', resilience: 'Reziliență Digitală',
+      academy: 'Academie', overview: 'Prezentare', courses: 'Cursuri', trainings: 'Training-uri', events: 'Evenimente', webinars: 'Webinarii',
+      company: 'Companie', about: 'Despre noi', contact: 'Contact', privacy: 'Confidențialitate', terms: 'Termeni',
+      connect: 'Conectare', bookCall: 'Programează'
+    },
+    sv: {
+      backToTop: 'Tillbaka upp', tagline: 'Digital infrastruktur, cybersäkerhet och utbildning. Byggt på öppen källkod.',
+      services: 'Tjänster', digitalInfra: 'Digital Infrastruktur', security: 'Säkerhet', nis2: 'NIS2-efterlevnad', resilience: 'Digital Resiliens',
+      academy: 'Akademi', overview: 'Översikt', courses: 'Kurser', trainings: 'Utbildningar', events: 'Evenemang', webinars: 'Webbinarier',
+      company: 'Företag', about: 'Om oss', contact: 'Kontakt', privacy: 'Integritet', terms: 'Villkor',
+      connect: 'Kontakta', bookCall: 'Boka Samtal'
+    },
+    de: {
+      backToTop: 'Nach oben', tagline: 'Digitale Infrastruktur, Cybersicherheit und Bildung. Auf Open-Source aufgebaut.',
+      services: 'Dienstleistungen', digitalInfra: 'Digitale Infrastruktur', security: 'Sicherheit', nis2: 'NIS2-Konformität', resilience: 'Digitale Resilienz',
+      academy: 'Akademie', overview: 'Übersicht', courses: 'Kurse', trainings: 'Schulungen', events: 'Veranstaltungen', webinars: 'Webinare',
+      company: 'Unternehmen', about: 'Über uns', contact: 'Kontakt', privacy: 'Datenschutz', terms: 'AGB',
+      connect: 'Verbinden', bookCall: 'Gespräch Buchen'
+    }
+  };
+  var t = i18n[lang];
+  if (!t) return;
+  document.querySelectorAll('.footer-i18n').forEach(function(el) {
+    var key = el.getAttribute('data-key');
+    if (key && t[key]) el.textContent = t[key];
+  });
+})();
+</script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const observer = new IntersectionObserver((entries) => {

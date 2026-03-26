@@ -1,15 +1,25 @@
 ---
 title: "Open Source Development"
-title-block-style: none
 subtitle: "Learn how to effectively contribute to open source projects"
 description: "Learn to contribute to open source projects with hands-on training in Git workflows, collaboration practices, and community engagement."
-page-layout: custom
+page-layout: article
 format:
   html:
-    toc: false
+    toc: true
+    toc-depth: 3
     include-in-header:
       text: |
-        <style>.m { --c: #F5A623; }</style>
+        <style>
+        .m { --c: #F5A623; }
+        .quarto-title-block { display: none !important; }
+        </style>
+  typst:
+    toc: true
+    number-sections: false
+    margin:
+      x: 2cm
+      y: 2.5cm
+format-links: false
 categories:
   - open-source
   - git
@@ -19,15 +29,13 @@ categories:
 
 ```{=html}
 <div class="m">
-
-<div class="m-hero">
-  <div class="container">
+<div class="m-hero" style="margin: -1em -1em 3rem; padding: 10rem 0 6rem;">
+  <div class="container" style="max-width: 700px;">
     <h1>Open Source <span class="gr">Development</span></h1>
     <p>Master the skills needed to contribute effectively to open source projects</p>
   </div>
 </div>
-
-<div class="container">
+</div>
 ```
 
 ## Course Overview
@@ -131,15 +139,38 @@ Our instructors are experienced open source contributors and maintainers with ex
 - Community forum for discussion and collaboration
 - Office hours with instructors for personalized support
 
-```{=html}
-</div>
+## Download
 
+::: {.content-visible when-format="html"}
+<div style="margin: 2rem 0; padding: 1.5rem 2rem; background: rgba(129,189,74,0.06); border: 1px solid rgba(129,189,74,0.15); border-radius: 12px;">
+<p style="margin: 0 0 0.5rem; font-weight: 600;">Download Course Details</p>
+<p style="margin: 0 0 1rem; font-size: 0.9rem; color: #86868b;">Get the full course outline, pricing, and contact information as a PDF.</p>
+<a href="index.pdf" class="m-b" style="font-size: 0.9rem; padding: 0.6rem 1.5rem;">Download PDF</a>
+</div>
+:::
+
+## Contact
+
+Interested in enrolling or have questions about this course?
+
+- **Email:** [office@chen.ist](mailto:office@chen.ist)
+- **Phone:** Schedule a call to discuss your goals
+- **Web:** [Book a free consultation](/booking/)
+
+```{=html}
+<div class="m">
 <div class="m-cta">
   <div class="container">
+    <div class="m-d"></div>
     <h2>Ready to get started?</h2>
     <p>Book a call to discuss your goals and find the right program.</p>
+    <a href="/booking/" class="m-b">Book a Call</a>
+    <div class="m-sm">
+      <i class="bi bi-check-circle-fill"></i> Free consultation &nbsp;
+      <i class="bi bi-check-circle-fill"></i> No commitment &nbsp;
+      <i class="bi bi-check-circle-fill"></i> Custom team pricing
+    </div>
   </div>
 </div>
-
 </div>
 ```
