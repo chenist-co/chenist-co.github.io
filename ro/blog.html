@@ -399,6 +399,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<script>
+(function() {
+  var path = window.location.pathname;
+  // Only redirect on English pages (no language prefix)
+  if (path.match(/^\/(ro|sv|de)\//)) return;
+  // Don't redirect if user explicitly chose English
+  if (localStorage.getItem('chen-lang-choice') === 'en') return;
+  // Don't redirect if already redirected this session
+  if (sessionStorage.getItem('chen-lang-redirected')) return;
+  // Detect browser language
+  var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  var target = null;
+  if (lang.startsWith('ro')) target = 'ro';
+  else if (lang.startsWith('sv')) target = 'sv';
+  else if (lang.startsWith('de')) target = 'de';
+  if (target) {
+    sessionStorage.setItem('chen-lang-redirected', '1');
+    window.location.href = '/' + target + path;
+  }
+})();
+</script>
 <link rel="preload" href="../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
 <meta name="view-transition" content="same-origin">
@@ -500,8 +521,8 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../assets/images/logo-light.svg" alt="" class="navbar-logo light-content">
-    <img src="../assets/images/logo-light.svg" alt="" class="navbar-logo dark-content">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -671,21 +692,64 @@ window.Quarto = {
 
 
 <div class="m">
-<div class="m-listing-hero">
+
+<div class="blog-hero">
   <div class="container">
     <h1>Blogul <span class="gr">Nostru</span></h1>
-    <p>Perspective, tutoriale și noutăți de la echipa noastră</p>
-    <div class="blog-lang-switch">
-      <a href="../blog.html">EN</a>
-      <a href="../ro/blog.html" class="active">RO</a>
-      <a href="../sv/blogg.html">SV</a>
-      <a href="../de/blog.html">DE</a>
+    <p>Perspective asupra securității cibernetice, ghiduri open-source și analize de infrastructură de la echipa noastră.</p>
+    <div class="blog-bar">
+      <div class="blog-lang-switch">
+        <a href="../blog.html">EN</a>
+        <a href="../ro/blog.html" class="active">RO</a>
+        <a href="../sv/blogg.html">SV</a>
+        <a href="../de/blog.html">DE</a>
+      </div>
     </div>
   </div>
 </div>
-</div>
-<div class="container">
 
+<div class="blog-featured">
+  <a href="../ro/blog/apple-business-smb-guide.html" class="blog-featured-card" style="text-decoration:none; color:inherit;">
+    <div class="blog-featured-img">
+      <img src="../assets/images/stock/team-macbooks.webp" alt="Apple Business pentru IMM-uri" loading="lazy">
+    </div>
+    <div>
+      <div class="blog-featured-tag"><i class="bi bi-star-fill" style="font-size:0.6rem;"></i> Cel mai recent</div>
+      <div class="blog-featured-title">Apple Business: Ce trebuie să știe IMM-urile</div>
+      <div class="blog-featured-desc">Tot ce trebuie să știe IMM-urile despre lansarea Apple Business pe 14 aprilie 2026 — de la MDM gratuit și Blueprints la suplimente plătite și migrare.</div>
+      <div class="blog-featured-meta">
+        <span><i class="bi bi-calendar3"></i> 25 martie 2026</span>
+        <span><i class="bi bi-tag"></i> Apple, Infrastructură Digitală</span>
+      </div>
+      <span class="blog-featured-link">Citește articolul</span>
+    </div>
+  </a>
+</div>
+
+<div style="max-width:1200px; margin:2rem auto 0; padding:0 2rem;">
+  <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(0,0,0,0.06); padding-bottom:0.75rem;">
+    <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#86868b;">Toate Articolele</span>
+    <a href="../ro/blog.xml" style="display:inline-flex; align-items:center; gap:0.3rem; font-size:0.78rem; font-weight:500; color:#f26522; text-decoration:none;"><i class="bi bi-rss"></i> RSS</a>
+  </div>
+</div>
+
+</div>
+<div class="container" style="margin-bottom:3rem;">
+
+</div>
+<div class="m">
+<div class="blog-cta" style="padding:5rem 2rem;">
+  <div class="container">
+    <div style="width:36px;height:3px;background:#81BD4A;margin:0 auto 2rem;border-radius:2px;opacity:0.6;"></div>
+    <h2>Rămâi informat</h2>
+    <p>Abonează-te la fluxul nostru RSS, newsletter sau urmărește-ne pentru cele mai noi articole.</p>
+    <div style="display:flex; justify-content:center; gap:0.75rem; flex-wrap:wrap;">
+      <a href="../ro/blog.xml" class="m-b" style="background:#f26522;"><i class="bi bi-rss me-2"></i>Abonare RSS</a>
+      <a href="https://alinmechenici.substack.com" target="_blank" class="m-b" style="background:#ff6719;"><i class="bi bi-envelope me-2"></i>Substack</a>
+      <a href="https://linkedin.com/in/chenistsec" target="_blank" class="m-bo"><i class="bi bi-linkedin me-2"></i>Urmărește-ne</a>
+    </div>
+  </div>
+</div>
 </div>
 
 
@@ -1114,32 +1178,13 @@ window.Quarto = {
   </script>
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-author" data-direction="asc">
-        Author
-      </option>
-    </select>
-  </div>
     <div class="input-group input-group-sm quarto-listing-filter">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="QXBwbGUlMkNEaWdpdGFsJTIwSW5mcmFzdHJ1Y3R1cmUlMkNTTUI=" data-listing-date-sort="1774396800000" data-listing-file-modified-sort="1774522815989" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="897">
+<div class="g-col-1" data-index="0" data-categories="QXBwbGUlMkNEaWdpdGFsJTIwSW5mcmFzdHJ1Y3R1cmUlMkNTTUI=" data-listing-date-sort="1774396800000" data-listing-file-modified-sort="1774529094502" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="897">
 <a href="../ro/blog/apple-business-smb-guide.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1172,7 +1217,7 @@ Mar 25, 2026
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="T3BlbiUyMFNvdXJjZSUyQ0RpZ2l0YWwlMjBJbmZyYXN0cnVjdHVyZSUyQ1NNQg==" data-listing-date-sort="1773964800000" data-listing-file-modified-sort="1774522816047" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1239">
+<div class="g-col-1" data-index="1" data-categories="T3BlbiUyMFNvdXJjZSUyQ0RpZ2l0YWwlMjBJbmZyYXN0cnVjdHVyZSUyQ1NNQg==" data-listing-date-sort="1773964800000" data-listing-file-modified-sort="1774529094509" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1240">
 <a href="../ro/blog/open-source-infrastructure-smbs.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1205,7 +1250,7 @@ Mar 20, 2026
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="Q3liZXJzZWN1cml0eSUyQ0Jlc3QlMjBQcmFjdGljZXM=" data-listing-date-sort="1743465600000" data-listing-file-modified-sort="1774522816008" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="431">
+<div class="g-col-1" data-index="2" data-categories="Q3liZXJzZWN1cml0eSUyQ0Jlc3QlMjBQcmFjdGljZXM=" data-listing-date-sort="1743465600000" data-listing-file-modified-sort="1774529094504" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="432">
 <a href="../ro/blog/cyber-security-best-practices.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1426,6 +1471,7 @@ document.addEventListener('DOMContentLoaded', function() {
       a.href = l.prefix + (cleanPath || '/');
       a.textContent = l.label;
       if (l.code === currentLang) a.className = 'active';
+      a.addEventListener('click', function(e) { localStorage.setItem('chen-lang-choice', this.textContent.toLowerCase() === 'en' ? 'en' : ''); });
       langsDiv.appendChild(a);
     }
 
@@ -1440,11 +1486,10 @@ document.addEventListener('DOMContentLoaded', function() {
   })();
 });
 </script>
-<!-- Cal.com floating button -->
+<!-- Cal.com embed (for booking page only, no floating button) -->
 <script>
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", {origin:"https://cal.com"});
-  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {

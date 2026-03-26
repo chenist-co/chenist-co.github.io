@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Learn about chen.ist Academy’s educational philosophy, hands-on approach, and commitment to real-world technical skills development.">
 
-<title>Academy Overview – chen.ist</title>
+<title>Academy — chen.ist – chen.ist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,12 +74,10 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<meta property="og:title" content="Academy Overview – chen.ist">
-<meta property="og:description" content="Learn about chen.ist Academy’s educational philosophy, hands-on approach, and commitment to real-world technical skills development.">
+<meta property="og:title" content="Academy — chen.ist">
 <meta property="og:image" content="https://chen.ist/academy/assets/images/og-image.png">
 <meta property="og:site_name" content="chen.ist">
-<meta name="twitter:title" content="Academy Overview – chen.ist">
-<meta name="twitter:description" content="Learn about chen.ist Academy’s educational philosophy, hands-on approach, and commitment to real-world technical skills development.">
+<meta name="twitter:title" content="Academy — chen.ist">
 <meta name="twitter:image" content="https://chen.ist/academy/assets/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 </head><body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -369,6 +366,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<script>
+(function() {
+  var path = window.location.pathname;
+  // Only redirect on English pages (no language prefix)
+  if (path.match(/^\/(ro|sv|de)\//)) return;
+  // Don't redirect if user explicitly chose English
+  if (localStorage.getItem('chen-lang-choice') === 'en') return;
+  // Don't redirect if already redirected this session
+  if (sessionStorage.getItem('chen-lang-redirected')) return;
+  // Detect browser language
+  var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  var target = null;
+  if (lang.startsWith('ro')) target = 'ro';
+  else if (lang.startsWith('sv')) target = 'sv';
+  else if (lang.startsWith('de')) target = 'de';
+  if (target) {
+    sessionStorage.setItem('chen-lang-redirected', '1');
+    window.location.href = '/' + target + path;
+  }
+})();
+</script>
 <link rel="preload" href="../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
 <meta name="view-transition" content="same-origin">
@@ -414,7 +432,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 }
 </script>
-<style>.m { --c: #F5A623; }</style>
+<meta http-equiv="refresh" content="0; url=/academy/">
 
 
 <link rel="stylesheet" href="../assets/css/main.min.css">
@@ -428,8 +446,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../assets/images/logo-light.svg" alt="" class="navbar-logo light-content">
-    <img src="../assets/images/logo-light.svg" alt="" class="navbar-logo dark-content">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -591,87 +609,12 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- main -->
 
 
-<header id="title-block-header">
-<h1 class="title display-7">Academy Overview</h1>
-<p class="subtitle lead">Courses, trainings, and hands-on programs in cybersecurity, open-source, and digital skills</p>
-
-</header>
 
 
-<div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>chen.ist <span class="gr">Academy</span></h1>
-    <p>Hands-on courses, trainings, and programs in cybersecurity, open-source, and digital skills.</p>
-  </div>
-</div>
-
-<div class="m-bg m-bg-stripes">
-  <div class="container">
-    <h2>Learn by doing</h2>
-    <p class="sub">Six ways to build real-world technical skills.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-book"></i><h3>Courses</h3><p>Multi-week programs in cybersecurity, privacy, and open-source development.</p><a href="../academy/courses.html" class="m-lk">Browse courses</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-lightning"></i><h3>Trainings</h3><p>Intensive 1-2 day workshops on focused topics with hands-on labs.</p><a href="../academy/trainings.html" class="m-lk">Browse trainings</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-clock-history"></i><h3>Microlearning</h3><p>1-2 hour sessions on specific tools — CLI, NixOS, Emacs, tmux, and more.</p><a href="../academy/microlearning.html" class="m-lk">Browse sessions</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-trophy"></i><h3>Hackathons</h3><p>Cybersecurity, AI ethics, and SpaceApps challenges. Build under pressure.</p><a href="../academy/events.html" class="m-lk">See events</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-camera-video"></i><h3>Webinars</h3><p>Live online sessions on zero trust, cloud security, and digital transformation.</p><a href="../academy/webinars.html" class="m-lk">View schedule</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-people"></i><h3>Computer Club</h3><p>Weekly meetups for coding, hacking, and building together.</p><a href="../academy/programs/computerclub/" class="m-lk">Join the club</a></div></div>
-    </div>
-  </div>
-</div>
-
-<div class="m-s">
-  <div class="container">
-    <div class="m-r">
-      <div class="m-ri"><img loading="lazy" src="../assets/images/stock/hackathon-team.webp" alt="Academy training session"></div>
-      <div class="m-rt">
-        <h2>Real skills.<br>Not certificates.</h2>
-        <p>Every course is built around practical exercises, real tools, and scenarios from actual engagements. You leave with skills you can use on Monday morning — not a PDF you'll never open.</p>
-        <div class="lk"><a href="../academy/courses.html" class="m-lk">Explore the curriculum</a></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="m-bg m-bg-stripes">
-  <div class="container">
-    <div class="m-r rv">
-      <div class="m-ri"><img loading="lazy" src="../assets/images/stock/terminal-green.webp" alt="Hackathon coding"></div>
-      <div class="m-rt">
-        <h2>Build under pressure.<br>Learn faster.</h2>
-        <p>Our hackathons and summer school programs immerse you in 24-48 hour challenges. SpaceApps, cybersecurity, AI ethics — real problems, real teams, real deadlines.</p>
-        <div class="lk"><a href="../academy/events.html" class="m-lk">See upcoming programs</a></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="m-s">
-  <div class="container">
-    <div class="m-n">
-      <div><div class="m-nn">6</div><div class="m-nl">Full courses</div></div>
-      <div><div class="m-nn">7</div><div class="m-nl">Intensive trainings</div></div>
-      <div><div class="m-nn">14</div><div class="m-nl">Microlearning sessions</div></div>
-      <div><div class="m-nn">4</div><div class="m-nl">Languages</div></div>
-    </div>
-  </div>
-</div>
-
-<div class="m-cta">
-  <div class="container">
-    <div class="m-d"></div>
-    <h2>Start learning</h2>
-    <p>Browse our catalog or book a call to discuss custom training for your team.</p>
-    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-      <a href="../academy/courses.html" class="m-b">Browse courses</a>
-      <a href="../booking/" class="m-bo">Book a consultation</a>
-    </div>
-  </div>
-</div>
-
-</div>
+<meta http-equiv="refresh" content="0;url=/academy/">
+<script>window.location.href = "/academy/";</script>
+<p>If you are not redirected automatically, please <a href="../academy/">click here</a>.</p>
 
 
 
@@ -1284,6 +1227,7 @@ document.addEventListener('DOMContentLoaded', function() {
       a.href = l.prefix + (cleanPath || '/');
       a.textContent = l.label;
       if (l.code === currentLang) a.className = 'active';
+      a.addEventListener('click', function(e) { localStorage.setItem('chen-lang-choice', this.textContent.toLowerCase() === 'en' ? 'en' : ''); });
       langsDiv.appendChild(a);
     }
 
@@ -1298,11 +1242,10 @@ document.addEventListener('DOMContentLoaded', function() {
   })();
 });
 </script>
-<!-- Cal.com floating button -->
+<!-- Cal.com embed (for booking page only, no floating button) -->
 <script>
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", {origin:"https://cal.com"});
-  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {

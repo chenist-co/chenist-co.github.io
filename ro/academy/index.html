@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Explorați cursurile, webinarele, evenimentele și programele de formare chen.ist Academy în securitate cibernetică, open source, cloud și dezvoltare software.">
+<meta name="description" content="chen.ist Academy oferă cursuri, sesiuni intensive de formare, microlearning, hackathon-uri, webinare și programe comunitare. Învățați prin practică.">
 
 <title>Academy – chen.ist</title>
 <style>
@@ -76,11 +76,11 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <meta property="og:title" content="Academy – chen.ist">
-<meta property="og:description" content="Explorați cursurile, webinarele, evenimentele și programele de formare chen.ist Academy în securitate cibernetică, open source, cloud și dezvoltare software.">
+<meta property="og:description" content="chen.ist Academy oferă cursuri, sesiuni intensive de formare, microlearning, hackathon-uri, webinare și programe comunitare. Învățați prin practică.">
 <meta property="og:image" content="https://chen.ist/ro/academy/assets/images/og-image.png">
 <meta property="og:site_name" content="chen.ist">
 <meta name="twitter:title" content="Academy – chen.ist">
-<meta name="twitter:description" content="Explorați cursurile, webinarele, evenimentele și programele de formare chen.ist Academy în securitate cibernetică, open source, cloud și dezvoltare software.">
+<meta name="twitter:description" content="chen.ist Academy oferă cursuri, sesiuni intensive de formare, microlearning, hackathon-uri, webinare și programe comunitare. Învățați prin practică.">
 <meta name="twitter:image" content="https://chen.ist/ro/academy/assets/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 </head><body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -369,6 +369,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<script>
+(function() {
+  var path = window.location.pathname;
+  // Only redirect on English pages (no language prefix)
+  if (path.match(/^\/(ro|sv|de)\//)) return;
+  // Don't redirect if user explicitly chose English
+  if (localStorage.getItem('chen-lang-choice') === 'en') return;
+  // Don't redirect if already redirected this session
+  if (sessionStorage.getItem('chen-lang-redirected')) return;
+  // Detect browser language
+  var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  var target = null;
+  if (lang.startsWith('ro')) target = 'ro';
+  else if (lang.startsWith('sv')) target = 'sv';
+  else if (lang.startsWith('de')) target = 'de';
+  if (target) {
+    sessionStorage.setItem('chen-lang-redirected', '1');
+    window.location.href = '/' + target + path;
+  }
+})();
+</script>
 <link rel="preload" href="../../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
 <meta name="view-transition" content="same-origin">
@@ -428,8 +449,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../assets/images/logo-light.svg" alt="" class="navbar-logo light-content">
-    <img src="../../assets/images/logo-light.svg" alt="" class="navbar-logo dark-content">
+    <img src="../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -593,36 +614,136 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <header id="title-block-header">
 <h1 class="title display-7">Academy</h1>
-<p class="subtitle lead">Învățați, colaborați și creșteți prin programele noastre educaționale</p>
+<p class="subtitle lead">Cursuri, sesiuni de formare și programe practice în securitate cibernetică, open-source și competențe digitale</p>
 
 </header>
 
 
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>chen.ist <span class="gr">Academy</span></h1>
-    <p>Cursuri practice, sesiuni de formare și programe în securitate cibernetică, open-source și competențe digitale.</p>
-  </div>
-</div>
-
-<div class="m-bg m-bg-squares">
-  <div class="container">
-    <h2>Învățați prin practică</h2>
-    <p class="sub">Șase modalități de a dezvolta competențe tehnice aplicabile.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-book"></i><h3>Cursuri</h3><p>Programe de mai multe săptămâni în securitate cibernetică, confidențialitate și dezvoltare open-source.</p><a href="../../ro/academy/courses.html" class="m-lk">Explorați cursurile</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-lightning"></i><h3>Sesiuni de formare</h3><p>Workshop-uri intensive de 1-2 zile pe teme specifice cu laboratoare practice.</p><a href="../../ro/academy/trainings.html" class="m-lk">Explorați sesiunile</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-clock-history"></i><h3>Microlearning</h3><p>Sesiuni de 1-2 ore pe instrumente specifice — CLI, NixOS, Emacs, tmux și altele.</p><a href="../../ro/academy/microlearning.html" class="m-lk">Explorați sesiunile</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-trophy"></i><h3>Hackathon-uri</h3><p>Provocări de securitate cibernetică, etică AI și SpaceApps. Construiți sub presiune.</p><a href="../../ro/academy/events.html" class="m-lk">Vezi evenimente</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-camera-video"></i><h3>Webinare</h3><p>Sesiuni online live despre zero trust, securitate cloud și transformare digitală.</p><a href="../../ro/academy/webinars.html" class="m-lk">Vezi programul</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-people"></i><h3>Computer Club</h3><p>Întâlniri săptămânale pentru programare, hacking și construire împreună.</p><a href="../../ro/academy/programs/computerclub/" class="m-lk">Alăturați-vă</a></div></div>
+<!-- HERO -->
+<div class="ev-hero" style="min-height:70vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/hackathon-team.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">chen.ist</div>
+    <h1>Academy</h1>
+    <p>Cursuri practice, sesiuni de formare și programe în securitate cibernetică, open-source și competențe digitale. Învățați prin practică.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="#programs" class="ev-btn" style="background:#F5A623;">Explorați programele</a>
+      <a href="../../ro/booking/" class="ev-btn-ghost">Programați o consultanță</a>
     </div>
   </div>
 </div>
 
-<div class="m-s">
+<!-- STATS -->
+<div class="m-bg" style="padding:4rem 0;">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn" style="color:#F5A623;">7</div><div class="m-nl">Cursuri</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">7</div><div class="m-nl">Sesiuni de formare</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">14</div><div class="m-nl">Microlearning</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">9+</div><div class="m-nl">Ani de evenimente</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ALL PROGRAMS GRID -->
+<div class="m-s" id="programs" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Tot ce oferim</h2>
+    <p class="sub">Nouă modalități de a dezvolta competențe tehnice aplicabile.</p>
+    <div class="row g-4">
+
+      <!-- Courses -->
+      <div class="col-md-4">
+        <a href="../../ro/academy/courses.html" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../../assets/images/stock/code-screen.webp" alt="Cursuri">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">7 cursuri · 4–12 săptămâni</div>
+              <h3>Cursuri</h3>
+              <p>Programe de mai multe săptămâni în securitate cibernetică, confidențialitate, Linux și dezvoltare open-source.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Trainings -->
+      <div class="col-md-4">
+        <a href="../../ro/academy/trainings.html" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../../assets/images/stock/hacker-screens.webp" alt="Sesiuni de formare">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">7 workshop-uri · 1–2 zile</div>
+              <h3>Sesiuni intensive de formare</h3>
+              <p>Workshop-uri practice concentrate. 80% practică. Plecați cu competențe pe care le folosiți de luni.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Microlearning -->
+      <div class="col-md-4">
+        <a href="../../ro/academy/microlearning.html" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../../assets/images/stock/terminal-green.webp" alt="Microlearning">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">14 sesiuni · 1–2 ore</div>
+              <h3>Microlearning</h3>
+              <p>Sesiuni scurte pe CLI, NixOS, Emacs, tmux, Typst, FreeBSD și altele.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Programs / Hackathons -->
+      <div class="col-md-4">
+        <a href="../../ro/academy/programs/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../../assets/images/stock/hackathon-team.webp" alt="Programe">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">Hackathon-uri · Școala de vară</div>
+              <h3>Programe</h3>
+              <p>Experiențe imersive — hackathon-uri, școală de vară și Computer Club.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Events -->
+      <div class="col-md-4">
+        <a href="../../ro/academy/events.html" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../../assets/images/stock/cybersecurity-monitor.webp" alt="Evenimente">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">Viitoare · Lunare</div>
+              <h3>Evenimente</h3>
+              <p>Conferințe, întâlniri și adunări comunitare. Fizic și online.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Webinars -->
+      <div class="col-md-4">
+        <a href="../../ro/academy/webinars.html" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../../assets/images/stock/network-closeup.webp" alt="Webinare">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">Live · Înregistrate</div>
+              <h3>Webinare</h3>
+              <p>Zero trust, securitate cloud, transformare digitală și altele.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE ROW 1 -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
   <div class="container">
     <div class="m-r">
       <div class="m-ri"><img loading="lazy" src="../../assets/images/stock/hackathon-team.webp" alt="Sesiune de formare Academy"></div>
@@ -635,7 +756,37 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<div class="m-bg m-bg-squares">
+<!-- COMMUNITY -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Comunitate</h2>
+    <p class="sub">Învățarea nu se oprește când sesiunea se termină.</p>
+    <div style="max-width:750px; margin:0 auto;">
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-terminal" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4><a href="../../ro/academy/computerclub.html">Computer Club</a></h4>
+          <div class="up-meta">Întâlniri lunare pentru programare, hacking și construire împreună. Toate nivelurile sunt binevenite.</div>
+        </div>
+        <div class="up-badge up-badge-open">Lunar</div>
+      </div>
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-handshake" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4><a href="../../ro/academy/partnerships.html">Parteneriate</a></h4>
+          <div class="up-meta">Colaborați cu noi — aduceți programele Academy în organizația sau orașul dvs.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE ROW 2 -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
   <div class="container">
     <div class="m-r rv">
       <div class="m-ri"><img loading="lazy" src="../../assets/images/stock/terminal-green.webp" alt="Programare la hackathon"></div>
@@ -648,24 +799,15 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<div class="m-s">
-  <div class="container">
-    <div class="m-n">
-      <div><div class="m-nn">6</div><div class="m-nl">Cursuri complete</div></div>
-      <div><div class="m-nn">7</div><div class="m-nl">Sesiuni intensive</div></div>
-      <div><div class="m-nn">14</div><div class="m-nl">Sesiuni microlearning</div></div>
-      <div><div class="m-nn">4</div><div class="m-nl">Limbi</div></div>
-    </div>
-  </div>
-</div>
-
+<!-- CTA -->
 <div class="m-cta">
   <div class="container">
     <div class="m-d"></div>
     <h2>Începeți să învățați</h2>
     <p>Răsfoiți catalogul nostru sau programați un apel pentru a discuta despre formare personalizată pentru echipa dvs.</p>
-    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-      <a href="../../ro/academy/courses.html" class="m-b">Explorați cursurile</a>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="../../ro/academy/courses.html" class="m-b" style="background:#F5A623;">Explorați cursurile</a>
+      <a href="../../ro/academy/trainings.html" class="m-bo" style="border-color:#F5A623; color:#F5A623;">Explorați sesiunile</a>
       <a href="../../ro/booking/" class="m-bo">Programați o consultanță</a>
     </div>
   </div>
@@ -1284,6 +1426,7 @@ document.addEventListener('DOMContentLoaded', function() {
       a.href = l.prefix + (cleanPath || '/');
       a.textContent = l.label;
       if (l.code === currentLang) a.className = 'active';
+      a.addEventListener('click', function(e) { localStorage.setItem('chen-lang-choice', this.textContent.toLowerCase() === 'en' ? 'en' : ''); });
       langsDiv.appendChild(a);
     }
 
@@ -1298,11 +1441,10 @@ document.addEventListener('DOMContentLoaded', function() {
   })();
 });
 </script>
-<!-- Cal.com floating button -->
+<!-- Cal.com embed (for booking page only, no floating button) -->
 <script>
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", {origin:"https://cal.com"});
-  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {

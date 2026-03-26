@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Hitta kommande hackathons, workshops, konferenser, meetups och sommarskoleprogram arrangerade av chen.ist Academy.">
+<meta name="description" content="chen.ist Academy-evenemang genomförs på engelska och rumänska. Bli partner för att arrangera i din stad.">
 
 <title>Evenemang – chen.ist</title>
 <style>
@@ -76,11 +76,11 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <meta property="og:title" content="Evenemang – chen.ist">
-<meta property="og:description" content="Hitta kommande hackathons, workshops, konferenser, meetups och sommarskoleprogram arrangerade av chen.ist Academy.">
+<meta property="og:description" content="chen.ist Academy-evenemang genomförs på engelska och rumänska. Bli partner för att arrangera i din stad.">
 <meta property="og:image" content="https://chen.ist/sv/academy/assets/images/og-image.png">
 <meta property="og:site_name" content="chen.ist">
 <meta name="twitter:title" content="Evenemang – chen.ist">
-<meta name="twitter:description" content="Hitta kommande hackathons, workshops, konferenser, meetups och sommarskoleprogram arrangerade av chen.ist Academy.">
+<meta name="twitter:description" content="chen.ist Academy-evenemang genomförs på engelska och rumänska. Bli partner för att arrangera i din stad.">
 <meta name="twitter:image" content="https://chen.ist/sv/academy/assets/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 </head><body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -369,6 +369,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<script>
+(function() {
+  var path = window.location.pathname;
+  // Only redirect on English pages (no language prefix)
+  if (path.match(/^\/(ro|sv|de)\//)) return;
+  // Don't redirect if user explicitly chose English
+  if (localStorage.getItem('chen-lang-choice') === 'en') return;
+  // Don't redirect if already redirected this session
+  if (sessionStorage.getItem('chen-lang-redirected')) return;
+  // Detect browser language
+  var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  var target = null;
+  if (lang.startsWith('ro')) target = 'ro';
+  else if (lang.startsWith('sv')) target = 'sv';
+  else if (lang.startsWith('de')) target = 'de';
+  if (target) {
+    sessionStorage.setItem('chen-lang-redirected', '1');
+    window.location.href = '/' + target + path;
+  }
+})();
+</script>
 <link rel="preload" href="../../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
 <meta name="view-transition" content="same-origin">
@@ -428,8 +449,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../assets/images/logo-light.svg" alt="" class="navbar-logo light-content">
-    <img src="../../assets/images/logo-light.svg" alt="" class="navbar-logo dark-content">
+    <img src="../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -593,131 +614,71 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <header id="title-block-header">
 <h1 class="title display-7">Evenemang</h1>
-<p class="subtitle lead">Kommande och återkommande evenemang arrangerade av chen.ist</p>
 
 </header>
 
 
 <div class="m">
 
-<!-- HERO -->
-<div class="m-hero">
-  <div class="container">
-    <h1>Academy <span class="gr">Evenemang</span></h1>
-    <p>Kommande och återkommande evenemang arrangerade av chen.ist</p>
+<div class="ev-hero" style="min-height:50vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/hackathon-team.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Academy</div>
+    <h1>Evenemang</h1>
+    <p>Hackathons, workshops och community-träffar. Bygg något riktigt med engagerade människor.</p>
   </div>
 </div>
 
-<!-- FEATURED EVENT -->
-<div class="m-bg">
-  <div class="container" style="text-align:center;">
-    <div class="m-t" style="max-width:700px; margin:0 auto;">
-      <div style="margin-bottom:0.5rem;"><span style="background:var(--c);color:#000;padding:0.25rem 0.75rem;border-radius:4px;font-size:0.85rem;font-weight:600;">Nästa evenemang</span></div>
-      <h2>AI Ethics Hackathon</h2>
-      <div style="opacity:0.7; margin-bottom:1rem;">
-        <i class="bi bi-calendar3"></i> 5 mars 2026 &nbsp;&nbsp;
-        <i class="bi bi-geo-alt"></i> Bukarest
-      </div>
-      <p>Ett helghackathon om etisk AI — biasdetektering, ansvarsfull design och AI som sätter människan först.</p>
-      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-        <a href="../../sv/academy/events/pages/ai-ethics-hackathon.html" class="m-b">Registrera dig nu</a>
-        <a href="../../sv/academy/events/ical/ai-ethics-hackathon-2025.ics" class="m-b-ghost" download="">Lägg till i kalender</a>
-      </div>
+<div class="m-bg" style="padding:5rem 0;">
+  <div class="container" style="max-width:750px;">
+    <div style="background:rgba(245,166,35,0.06); border:1px solid rgba(245,166,35,0.15); border-radius:16px; padding:2.5rem; text-align:center;">
+      <i class="bi bi-translate" style="font-size:2rem; color:#F5A623; display:block; margin-bottom:1rem;"></i>
+      <h2 style="font-size:1.5rem; margin-bottom:0.75rem;">Evenemang på engelska &amp; rumänska</h2>
+      <p style="color:rgba(255,255,255,0.6); max-width:500px; margin:0 auto 1.5rem;">Våra evenemang genomförs för närvarande på engelska och rumänska i Rumänien. Utforska det fullständiga programmet nedan.</p>
+      <a href="../../academy/events.html" class="m-b" style="background:#F5A623;">Se alla evenemang (EN)</a>
     </div>
   </div>
 </div>
 
-<!-- UPCOMING -->
-<div class="m-s">
-  <div class="container">
-    <h2>På gång</h2>
-    <p class="sub">Platserna är begränsade. Registrera dig tidigt.</p>
-    <div class="row g-5">
-      <div class="col-md-4">
-        <a href="../../sv/academy/events/pages/summer-school-2025.html" style="text-decoration:none;">
-          <div class="m-t">
-            <h3>Sommarskola 2026</h3>
-            <div style="opacity:0.7;font-size:0.9rem;"><i class="bi bi-calendar3"></i> 1–15 aug &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
-            <p>Två veckor med cybersäkerhet, moln och AI.</p>
-          </div>
-        </a>
+<div class="m-s" style="padding:6rem 0;">
+  <div class="container" style="max-width:750px;">
+    <h2>Kommande evenemang</h2>
+    <p class="sub">Klicka för fullständig information på engelska.</p>
+    <div class="up-item">
+      <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;"><i class="bi bi-cpu" style="font-size:1.2rem; color:#F5A623;"></i></div>
+      <div style="flex-grow:1;">
+        <h4><a href="../../academy/events/pages/ai-ethics-hackathon.html">AI Ethics Hackathon</a></h4>
+        <div class="up-meta"><i class="bi bi-calendar3"></i> 5 mars 2026 &nbsp; <i class="bi bi-geo-alt"></i> Bukarest</div>
       </div>
-      <div class="col-md-4">
-        <a href="../../sv/academy/events/pages/makers-workshop.html" style="text-decoration:none;">
-          <div class="m-t">
-            <h3>Makers Workshop</h3>
-            <div style="opacity:0.7;font-size:0.9rem;"><i class="bi bi-calendar3"></i> 15 sep &nbsp; <i class="bi bi-geo-alt"></i> Bukarest</div>
-            <p>Hårdvara, DIY och praktiskt byggande.</p>
-          </div>
-        </a>
+      <div class="up-badge up-badge-open">Öppen</div>
+    </div>
+    <div class="up-item">
+      <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;"><i class="bi bi-mortarboard" style="font-size:1.2rem; color:#F5A623;"></i></div>
+      <div style="flex-grow:1;">
+        <h4><a href="../../academy/events/pages/summer-school-2025.html">Sommarskola 2026</a></h4>
+        <div class="up-meta"><i class="bi bi-calendar3"></i> 1–15 aug 2026 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
       </div>
-      <div class="col-md-4">
-        <a href="../../sv/academy/events/pages/space-hackathon.html" style="text-decoration:none;">
-          <div class="m-t">
-            <h3>SpaceApps Challenge</h3>
-            <div style="opacity:0.7;font-size:0.9rem;"><i class="bi bi-calendar3"></i> Okt 2026 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
-            <p>NASAs 48-timmars globala hackathon.</p>
-          </div>
-        </a>
+      <div class="up-badge up-badge-soon">Snart</div>
+    </div>
+    <div class="up-item">
+      <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;"><i class="bi bi-rocket-takeoff" style="font-size:1.2rem; color:#F5A623;"></i></div>
+      <div style="flex-grow:1;">
+        <h4><a href="../../academy/events/pages/space-hackathon.html">SpaceApps Challenge</a></h4>
+        <div class="up-meta"><i class="bi bi-calendar3"></i> Oktober 2026 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
       </div>
+      <div class="up-badge up-badge-soon">Snart</div>
     </div>
   </div>
 </div>
 
-<!-- RECURRING -->
-<div class="m-bg">
-  <div class="container">
-    <h2>Varje månad</h2>
-    <p class="sub">Regelbundna träffar du kan räkna med.</p>
-    <div class="row g-5">
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-calendar-event"></i><h3>Computer Club</h3><p>Öppen diskussion, hacking och teknikutforskning.</p><div style="opacity:0.7;font-size:0.9rem;">Sista torsdagen</div><a href="https://clubul.computer/" class="m-lk">Schema</a></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-mic"></i><h3>Tech Talks</h3><p>Branschexperter om framväxande teknik och bästa praxis.</p><div style="opacity:0.7;font-size:0.9rem;">Första tisdagen</div><a href="https://lu.ma/chenistacademy" class="m-lk">Nästa föredrag</a></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-code-slash"></i><h3>Workshops</h3><p>Kodsessioner, open source-projekt och kollaborativt lärande.</p><div style="opacity:0.7;font-size:0.9rem;">Se kalender</div><a href="https://lu.ma/chenistacademy" class="m-lk">Delta</a></div></div>
-    </div>
-  </div>
-</div>
-
-<!-- PAST EVENTS -->
-<div class="m-s">
-  <div class="container">
-    <h2>Tidigare evenemang</h2>
-    <p class="sub"></p>
-    <div class="row g-5">
-      <div class="col-md-4">
-        <a href="https://marca-ro.ca/2024/11/23/conferinta-igiena-digitala-la-copii-are-loc-la-craiova/" target="_blank" style="text-decoration:none;">
-          <div class="m-t">
-            <h4>Cyberhygien för barn</h4>
-            <div style="opacity:0.7;font-size:0.9rem;">Craiova · November 2024</div>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-4">
-        <div class="m-t">
-          <h4>Capture the Flag</h4>
-          <div style="opacity:0.7;font-size:0.9rem;">Craiova · November 2023</div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <a href="https://alinmechenici.substack.com/p/sac" target="_blank" style="text-decoration:none;">
-          <div class="m-t">
-            <h4>SpaceApps · 9 upplagor</h4>
-            <div style="opacity:0.7;font-size:0.9rem;">Sverige &amp; Rumänien · 2016–2024</div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- CTA -->
 <div class="m-cta">
   <div class="container">
     <div class="m-d"></div>
-    <h2>Missa inte nästa evenemang</h2>
-    <p>Få evenemangsuppdateringar eller diskutera att anordna ett privat evenemang för ditt team.</p>
-    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-      <a href="https://alinmechenici.substack.com" target="_blank" class="m-b">Prenumerera på uppdateringar</a>
-      <a href="../../sv/booking/" class="m-b-ghost">Boka ett samtal</a>
+    <h2>Vill du arrangera i din stad?</h2>
+    <p>Bli partner med vår academy och organisera hackathons, workshops eller utbildningar i ditt företag eller din stad.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="../../sv/booking/" class="m-b" style="background:#F5A623;"><i class="bi bi-handshake me-2"></i>Bli partner</a>
+      <a href="../../sv/academy/partnerships.html" class="m-bo" style="border-color:#F5A623; color:#F5A623;">Läs mer om partnerskap</a>
     </div>
   </div>
 </div>
@@ -1335,6 +1296,7 @@ document.addEventListener('DOMContentLoaded', function() {
       a.href = l.prefix + (cleanPath || '/');
       a.textContent = l.label;
       if (l.code === currentLang) a.className = 'active';
+      a.addEventListener('click', function(e) { localStorage.setItem('chen-lang-choice', this.textContent.toLowerCase() === 'en' ? 'en' : ''); });
       langsDiv.appendChild(a);
     }
 
@@ -1349,11 +1311,10 @@ document.addEventListener('DOMContentLoaded', function() {
   })();
 });
 </script>
-<!-- Cal.com floating button -->
+<!-- Cal.com embed (for booking page only, no floating button) -->
 <script>
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", {origin:"https://cal.com"});
-  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {

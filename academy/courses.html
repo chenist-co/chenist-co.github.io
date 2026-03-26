@@ -369,6 +369,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<script>
+(function() {
+  var path = window.location.pathname;
+  // Only redirect on English pages (no language prefix)
+  if (path.match(/^\/(ro|sv|de)\//)) return;
+  // Don't redirect if user explicitly chose English
+  if (localStorage.getItem('chen-lang-choice') === 'en') return;
+  // Don't redirect if already redirected this session
+  if (sessionStorage.getItem('chen-lang-redirected')) return;
+  // Detect browser language
+  var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  var target = null;
+  if (lang.startsWith('ro')) target = 'ro';
+  else if (lang.startsWith('sv')) target = 'sv';
+  else if (lang.startsWith('de')) target = 'de';
+  if (target) {
+    sessionStorage.setItem('chen-lang-redirected', '1');
+    window.location.href = '/' + target + path;
+  }
+})();
+</script>
 <link rel="preload" href="../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
 <meta name="view-transition" content="same-origin">
@@ -428,8 +449,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../assets/images/logo-light.svg" alt="" class="navbar-logo light-content">
-    <img src="../assets/images/logo-light.svg" alt="" class="navbar-logo dark-content">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -600,63 +621,173 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>Academy <span class="gr">Courses</span></h1>
-    <p>Comprehensive, multi-week programs that build deep expertise through hands-on projects and expert instruction.</p>
+<!-- HERO -->
+<div class="ev-hero" style="min-height:60vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/code-screen.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Academy</div>
+    <h1>Courses</h1>
+    <p>Multi-week programs that build deep expertise through hands-on projects and expert instruction.</p>
+    <a href="#courses" class="ev-btn" style="background:#F5A623;">Explore courses</a>
   </div>
 </div>
 
-<div class="m-bg m-bg-squares">
+<!-- STATS -->
+<div class="m-bg" style="padding:4rem 0;">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn" style="color:#F5A623;">7</div><div class="m-nl">Courses</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">4–12</div><div class="m-nl">Weeks each</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">80%</div><div class="m-nl">Hands-on</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">100%</div><div class="m-nl">Certification</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- COURSE GRID — image cards -->
+<div class="m-s" id="courses" style="padding:7rem 0;">
   <div class="container">
     <h2>Seven courses, one goal</h2>
     <p class="sub">Practical skills taught by practitioners, not textbooks.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-code-slash"></i><h3>Open Source Development</h3><p>Git workflows, licensing, and contributing to real projects. 8 weeks.</p><a href="../academy/courses/open-source-development/" class="m-lk">Course details</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-shield-lock"></i><h3>Practical Cybersecurity</h3><p>Network security, pentesting, and incident response. 12 weeks.</p><a href="../academy/courses/practical-cybersecurity/" class="m-lk">Course details</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-terminal"></i><h3>Unix/Linux Administration</h3><p>Shell scripting, service management, and performance tuning. 10 weeks.</p><a href="../academy/courses/unix-linux-administration/" class="m-lk">Course details</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-file-earmark-lock"></i><h3>Data Protection &amp; Privacy</h3><p>GDPR, CCPA, privacy-by-design, and breach response. 6 weeks.</p><a href="../academy/courses/data-protection-privacy/" class="m-lk">Course details</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-people"></i><h3>Human Firewall</h3><p>Security awareness, social engineering defense, and culture building. 4 weeks.</p><a href="../academy/courses/human-firewall-security-awareness/" class="m-lk">Course details</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-bug"></i><h3>Cyberhygiene Essentials</h3><p>Digital threat awareness, device protection, and safe practices. 6 weeks.</p><a href="../academy/courses/cyberhygiene-essentials/" class="m-lk">Course details</a></div></div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="../academy/courses/practical-cybersecurity/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../assets/images/stock/cybersecurity-monitor.webp" alt="Practical Cybersecurity">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">12 weeks</div>
+              <h3>Practical Cybersecurity</h3>
+              <p>Network security, pentesting, and incident response.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../academy/courses/open-source-development/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../assets/images/stock/code-screen.webp" alt="Open Source Development">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">8 weeks</div>
+              <h3>Open Source Development</h3>
+              <p>Git workflows, licensing, and contributing to real projects.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../academy/courses/unix-linux-administration/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../assets/images/stock/terminal-green.webp" alt="Unix/Linux Administration">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">10 weeks</div>
+              <h3>Unix/Linux Administration</h3>
+              <p>Shell scripting, service management, and performance tuning.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../academy/courses/data-protection-privacy/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../assets/images/stock/network-closeup.webp" alt="Data Protection">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">6 weeks</div>
+              <h3>Data Protection &amp; Privacy</h3>
+              <p>GDPR, CCPA, privacy-by-design, and breach response.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../academy/courses/cyberhygiene-essentials/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../assets/images/stock/hacker-screens.webp" alt="Cyberhygiene Essentials">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">6 weeks</div>
+              <h3>Cyberhygiene Essentials</h3>
+              <p>Digital threat awareness, device protection, and safe practices.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../academy/courses/human-firewall-security-awareness/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../assets/images/stock/team-macbooks.webp" alt="Human Firewall">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">4 weeks</div>
+              <h3>Human Firewall</h3>
+              <p>Security awareness, social engineering defense, and culture building.</p>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
-    <div class="row g-5 mt-2 justify-content-center">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-snow"></i><h3>NixOS for Cybersecurity</h3><p>Declarative security, reproducible environments, and system hardening. 4 weeks.</p><a href="../academy/courses/nixos-cybersecurity/" class="m-lk">Course details</a></div></div>
+    <div class="row g-4 mt-1 justify-content-center">
+      <div class="col-md-4">
+        <a href="../academy/courses/nixos-cybersecurity/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../assets/images/stock/terminal-green.webp" alt="NixOS for Cybersecurity">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">4 weeks</div>
+              <h3>NixOS for Cybersecurity</h3>
+              <p>Declarative security, reproducible environments, and system hardening.</p>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="m-s">
+<!-- DELIVERY FORMATS -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
   <div class="container">
     <h2>Three ways to learn</h2>
     <p class="sub">Pick the format that fits your schedule.</p>
-    <div class="row g-5">
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-camera-video"></i><h3>Instructor-Led Online</h3><p>Live virtual sessions with real-time interaction, guided exercises, and recorded replays.</p></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-play-circle"></i><h3>Self-Paced Online</h3><p>On-demand video lessons, downloadable resources, and forum support at your own speed.</p></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-building"></i><h3>In-Person Workshops</h3><p>Immersive hands-on sessions at our facilities or on-site at your organization.</p></div></div>
+    <div style="max-width:750px; margin:0 auto;">
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-camera-video" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4 style="margin:0 0 0.15rem;"><span style="color:#fff;">Instructor-Led Online</span></h4>
+          <div class="up-meta">Live virtual sessions with real-time interaction, guided exercises, and recorded replays.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-play-circle" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4 style="margin:0 0 0.15rem;"><span style="color:#fff;">Self-Paced Online</span></h4>
+          <div class="up-meta">On-demand video lessons, downloadable resources, and forum support at your own speed.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-building" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4 style="margin:0 0 0.15rem;"><span style="color:#fff;">In-Person Workshops</span></h4>
+          <div class="up-meta">Immersive hands-on sessions at our facilities or on-site at your organization.</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="m-bg m-bg-squares">
-  <div class="container">
-    <div class="m-n">
-      <div><div class="m-nn">7</div><div class="m-nl">Courses</div></div>
-      <div><div class="m-nn">4–12</div><div class="m-nl">Weeks each</div></div>
-      <div><div class="m-nn">80%</div><div class="m-nl">Hands-on</div></div>
-    </div>
-  </div>
-</div>
-
+<!-- CTA -->
 <div class="m-cta">
   <div class="container">
     <div class="m-d"></div>
     <h2>Find the right course<br>for your team</h2>
     <p>Custom cohorts, flexible scheduling, and group pricing available for organizations.</p>
-    <a href="../booking/" class="m-b">Book a call</a>
+    <a href="../booking/" class="m-b" style="background:#F5A623;">Book a call</a>
     <div class="m-sm">
-      <i class="bi bi-check-circle-fill"></i> Expert instructors &nbsp;
-      <i class="bi bi-check-circle-fill"></i> Certification included &nbsp;
-      <i class="bi bi-check-circle-fill"></i> Updated quarterly
+      <i class="bi bi-check-circle-fill" style="color:#F5A623;"></i> Expert instructors &nbsp;
+      <i class="bi bi-check-circle-fill" style="color:#F5A623;"></i> Certification included &nbsp;
+      <i class="bi bi-check-circle-fill" style="color:#F5A623;"></i> Updated quarterly
     </div>
   </div>
 </div>
@@ -1274,6 +1405,7 @@ document.addEventListener('DOMContentLoaded', function() {
       a.href = l.prefix + (cleanPath || '/');
       a.textContent = l.label;
       if (l.code === currentLang) a.className = 'active';
+      a.addEventListener('click', function(e) { localStorage.setItem('chen-lang-choice', this.textContent.toLowerCase() === 'en' ? 'en' : ''); });
       langsDiv.appendChild(a);
     }
 
@@ -1288,11 +1420,10 @@ document.addEventListener('DOMContentLoaded', function() {
   })();
 });
 </script>
-<!-- Cal.com floating button -->
+<!-- Cal.com embed (for booking page only, no floating button) -->
 <script>
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", {origin:"https://cal.com"});
-  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {

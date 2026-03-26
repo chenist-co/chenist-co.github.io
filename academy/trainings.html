@@ -369,6 +369,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<script>
+(function() {
+  var path = window.location.pathname;
+  // Only redirect on English pages (no language prefix)
+  if (path.match(/^\/(ro|sv|de)\//)) return;
+  // Don't redirect if user explicitly chose English
+  if (localStorage.getItem('chen-lang-choice') === 'en') return;
+  // Don't redirect if already redirected this session
+  if (sessionStorage.getItem('chen-lang-redirected')) return;
+  // Detect browser language
+  var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  var target = null;
+  if (lang.startsWith('ro')) target = 'ro';
+  else if (lang.startsWith('sv')) target = 'sv';
+  else if (lang.startsWith('de')) target = 'de';
+  if (target) {
+    sessionStorage.setItem('chen-lang-redirected', '1');
+    window.location.href = '/' + target + path;
+  }
+})();
+</script>
 <link rel="preload" href="../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
 <meta name="view-transition" content="same-origin">
@@ -428,8 +449,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../assets/images/logo-light.svg" alt="" class="navbar-logo light-content">
-    <img src="../assets/images/logo-light.svg" alt="" class="navbar-logo dark-content">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -600,63 +621,173 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>Intensive <span class="gr">Trainings</span></h1>
+<!-- HERO -->
+<div class="ev-hero" style="min-height:60vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/hacker-screens.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Academy</div>
+    <h1>Intensive<br>Trainings</h1>
     <p>One- and two-day workshops that condense essential skills into focused, hands-on sessions you can apply immediately.</p>
+    <a href="#workshops" class="ev-btn" style="background:#F5A623;">See all workshops</a>
   </div>
 </div>
 
-<div class="m-bg m-bg-stripes">
+<!-- STATS -->
+<div class="m-bg" style="padding:4rem 0;">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn" style="color:#F5A623;">7</div><div class="m-nl">Workshops</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">1–2</div><div class="m-nl">Days each</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">80%</div><div class="m-nl">Hands-on</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">30</div><div class="m-nl">Days post-support</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- WORKSHOP GRID -->
+<div class="m-s" id="workshops" style="padding:7rem 0;">
   <div class="container">
     <h2>Seven workshops, zero fluff</h2>
     <p class="sub">80% hands-on. Walk out with skills you can use on Monday.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-code-slash"></i><h3>Open Source Contribution</h3><p>Git essentials, your first PR, and community best practices. 2 days.</p><a href="../academy/trainings/open-source-contribution/" class="m-lk">Training details</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-shield-lock"></i><h3>Cybersecurity Essentials</h3><p>Threat landscape, security controls, and quick wins. 2 days.</p><a href="../academy/trainings/cybersecurity-essentials/" class="m-lk">Training details</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-terminal"></i><h3>Linux Admin Fundamentals</h3><p>Command line, users, packages, and basic monitoring. 2 days.</p><a href="../academy/trainings/linux-admin-fundamentals/" class="m-lk">Training details</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-file-earmark-lock"></i><h3>Data Privacy Compliance</h3><p>GDPR, CCPA, data mapping, and breach response planning. 2 days.</p><a href="../academy/trainings/data-privacy-compliance/" class="m-lk">Training details</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-people"></i><h3>Security Awareness for Teams</h3><p>Social engineering defense, safe habits, and incident reporting. 1 day.</p><a href="../academy/trainings/security-awareness-teams/" class="m-lk">Training details</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-bug"></i><h3>Cyberhygiene Intensive</h3><p>Device security, authentication, and data protection essentials. 1 day.</p><a href="../academy/trainings/cyberhygiene-intensive/" class="m-lk">Training details</a></div></div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="../academy/trainings/cybersecurity-essentials/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../assets/images/stock/cybersecurity-monitor.webp" alt="Cybersecurity Essentials">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">2 days</div>
+              <h3>Cybersecurity Essentials</h3>
+              <p>Threat landscape, security controls, and quick wins.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../academy/trainings/open-source-contribution/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../assets/images/stock/code-screen.webp" alt="Open Source Contribution">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">2 days</div>
+              <h3>Open Source Contribution</h3>
+              <p>Git essentials, your first PR, and community best practices.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../academy/trainings/linux-admin-fundamentals/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../assets/images/stock/terminal-green.webp" alt="Linux Admin Fundamentals">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">2 days</div>
+              <h3>Linux Admin Fundamentals</h3>
+              <p>Command line, users, packages, and basic monitoring.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../academy/trainings/data-privacy-compliance/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../assets/images/stock/network-closeup.webp" alt="Data Privacy Compliance">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">2 days</div>
+              <h3>Data Privacy Compliance</h3>
+              <p>GDPR, CCPA, data mapping, and breach response planning.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../academy/trainings/security-awareness-teams/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../assets/images/stock/team-macbooks.webp" alt="Security Awareness">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">1 day</div>
+              <h3>Security Awareness for Teams</h3>
+              <p>Social engineering defense, safe habits, and incident reporting.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../academy/trainings/cyberhygiene-intensive/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../assets/images/stock/hacker-screens.webp" alt="Cyberhygiene Intensive">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">1 day</div>
+              <h3>Cyberhygiene Intensive</h3>
+              <p>Device security, authentication, and data protection essentials.</p>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
-    <div class="row g-5 mt-2 justify-content-center">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-snow"></i><h3>NixOS Security Jumpstart</h3><p>Declarative configuration, hardening, and reproducible environments. 2 days.</p><a href="../academy/trainings/nixos-security-jumpstart/" class="m-lk">Training details</a></div></div>
+    <div class="row g-4 mt-1 justify-content-center">
+      <div class="col-md-4">
+        <a href="../academy/trainings/nixos-security-jumpstart/" style="text-decoration:none;">
+          <div class="pg-card">
+            <img loading="lazy" src="../assets/images/stock/terminal-green.webp" alt="NixOS Security Jumpstart">
+            <div class="pg-card-body">
+              <div style="font-size:0.7rem; font-weight:700; color:#F5A623; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">2 days</div>
+              <h3>NixOS Security Jumpstart</h3>
+              <p>Declarative configuration, hardening, and reproducible environments.</p>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="m-s">
+<!-- DELIVERY -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
   <div class="container">
     <h2>Built for busy teams</h2>
     <p class="sub">Flexible delivery, lasting impact.</p>
-    <div class="row g-5">
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-lightning-charge"></i><h3>Immersive Learning</h3><p>80% hands-on activities with real-world scenarios and collaborative problem-solving.</p></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-geo-alt"></i><h3>Flexible Delivery</h3><p>In-person at our facilities, on-site at your location, live virtual, or hybrid.</p></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-headset"></i><h3>Ongoing Support</h3><p>30-day post-training support, reference materials, community forum, and follow-up Q&amp;A.</p></div></div>
+    <div style="max-width:750px; margin:0 auto;">
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-lightning-charge" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4 style="margin:0 0 0.15rem;"><span style="color:#fff;">Immersive Learning</span></h4>
+          <div class="up-meta">80% hands-on activities with real-world scenarios and collaborative problem-solving.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-geo-alt" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4 style="margin:0 0 0.15rem;"><span style="color:#fff;">Flexible Delivery</span></h4>
+          <div class="up-meta">In-person at our facilities, on-site at your location, live virtual, or hybrid format.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-headset" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4 style="margin:0 0 0.15rem;"><span style="color:#fff;">Ongoing Support</span></h4>
+          <div class="up-meta">30-day post-training support, reference materials, community forum, and follow-up Q&amp;A.</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="m-bg m-bg-stripes">
-  <div class="container">
-    <div class="m-n">
-      <div><div class="m-nn">1–2</div><div class="m-nl">Days per workshop</div></div>
-      <div><div class="m-nn">80%</div><div class="m-nl">Hands-on time</div></div>
-      <div><div class="m-nn">30</div><div class="m-nl">Days post-training support</div></div>
-    </div>
-  </div>
-</div>
-
+<!-- CTA -->
 <div class="m-cta">
   <div class="container">
     <div class="m-d"></div>
     <h2>Schedule a training<br>for your team</h2>
     <p>Custom workshops with organization-specific scenarios and flexible scheduling.</p>
-    <a href="../booking/" class="m-b">Book a call</a>
+    <a href="../booking/" class="m-b" style="background:#F5A623;">Book a call</a>
     <div class="m-sm">
-      <i class="bi bi-check-circle-fill"></i> Expert trainers &nbsp;
-      <i class="bi bi-check-circle-fill"></i> Practical focus &nbsp;
-      <i class="bi bi-check-circle-fill"></i> Team pricing
+      <i class="bi bi-check-circle-fill" style="color:#F5A623;"></i> Expert trainers &nbsp;
+      <i class="bi bi-check-circle-fill" style="color:#F5A623;"></i> Practical focus &nbsp;
+      <i class="bi bi-check-circle-fill" style="color:#F5A623;"></i> Team pricing
     </div>
   </div>
 </div>
@@ -1274,6 +1405,7 @@ document.addEventListener('DOMContentLoaded', function() {
       a.href = l.prefix + (cleanPath || '/');
       a.textContent = l.label;
       if (l.code === currentLang) a.className = 'active';
+      a.addEventListener('click', function(e) { localStorage.setItem('chen-lang-choice', this.textContent.toLowerCase() === 'en' ? 'en' : ''); });
       langsDiv.appendChild(a);
     }
 
@@ -1288,11 +1420,10 @@ document.addEventListener('DOMContentLoaded', function() {
   })();
 });
 </script>
-<!-- Cal.com floating button -->
+<!-- Cal.com embed (for booking page only, no floating button) -->
 <script>
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", {origin:"https://cal.com"});
-  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {

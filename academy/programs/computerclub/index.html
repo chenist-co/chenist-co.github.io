@@ -369,6 +369,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<script>
+(function() {
+  var path = window.location.pathname;
+  // Only redirect on English pages (no language prefix)
+  if (path.match(/^\/(ro|sv|de)\//)) return;
+  // Don't redirect if user explicitly chose English
+  if (localStorage.getItem('chen-lang-choice') === 'en') return;
+  // Don't redirect if already redirected this session
+  if (sessionStorage.getItem('chen-lang-redirected')) return;
+  // Detect browser language
+  var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  var target = null;
+  if (lang.startsWith('ro')) target = 'ro';
+  else if (lang.startsWith('sv')) target = 'sv';
+  else if (lang.startsWith('de')) target = 'de';
+  if (target) {
+    sessionStorage.setItem('chen-lang-redirected', '1');
+    window.location.href = '/' + target + path;
+  }
+})();
+</script>
 <link rel="preload" href="../../../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
 <meta name="view-transition" content="same-origin">
@@ -428,8 +449,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../assets/images/logo-light.svg" alt="" class="navbar-logo light-content">
-    <img src="../../../assets/images/logo-light.svg" alt="" class="navbar-logo dark-content">
+    <img src="../../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="../../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -600,29 +621,74 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>Clubul <span class="gr">Computer</span></h1>
-    <p>A community-driven tech club. Learn, build, and share — all ages, all levels.</p>
-  </div>
-</div>
-
-<div class="m-bg">
-  <div class="container">
-    <h2>What we do</h2>
-    <p class="sub">Six programs for every interest and skill level.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-laptop"></i><h3>Workshops</h3><p>Python, web dev, JavaScript — beginner to advanced.</p><a href="https://www.clubul.computer/t/workshops" class="m-lk" target="_blank">Schedule</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-people"></i><h3>Tech Talks</h3><p>Industry speakers on open source, AI ethics, cybersecurity.</p><a href="https://www.clubul.computer/t/talks" class="m-lk" target="_blank">Browse talks</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-controller"></i><h3>Junior Club</h3><p>Game dev, robot programming, and digital storytelling for ages 8-14.</p><a href="https://www.clubul.computer/t/junior" class="m-lk" target="_blank">Learn more</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-gear"></i><h3>Hardware Hacking</h3><p>Arduino, Raspberry Pi, IoT devices, and 3D printing.</p><a href="https://www.clubul.computer/t/hacking" class="m-lk" target="_blank">See projects</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-code-slash"></i><h3>Open Source</h3><p>Find projects, understand codebases, make real contributions.</p><a href="https://www.clubul.computer/t/open-source" class="m-lk" target="_blank">Join session</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-rocket"></i><h3>Project Incubator</h3><p>Turn your idea into reality with mentorship and resources.</p><a href="https://www.clubul.computer/t/incubator" class="m-lk" target="_blank">Submit idea</a></div></div>
+<!-- HERO -->
+<div class="ev-hero" style="min-height:65vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/hackathon-team.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Academy Program</div>
+    <h1>Clubul<br>Computer</h1>
+    <p>A community-driven tech club. Learn, build, and share — all ages, all levels, zero fees.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="https://clubul.computer" target="_blank" class="ev-btn" style="background:#F5A623;">Visit clubul.computer</a>
+      <a href="#join" class="ev-btn-ghost">Join the club</a>
     </div>
   </div>
 </div>
 
-<div class="m-s">
+<!-- STATS -->
+<div class="m-bg" style="padding:4rem 0;">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn" style="color:#F5A623;">150+</div><div class="m-nl">Schools reached</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">5000+</div><div class="m-nl">Students</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">25</div><div class="m-nl">IoT sensors deployed</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">Free</div><div class="m-nl">Always</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PROGRAMS -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <h2>What we do</h2>
+    <p class="sub">Six programs for every interest and skill level.</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="https://www.clubul.computer/t/workshops" target="_blank" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../../../assets/images/stock/code-screen.webp" alt="Workshops"><div class="pg-card-body"><h3>Workshops</h3><p>Python, web dev, JavaScript — beginner to advanced.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="https://www.clubul.computer/t/talks" target="_blank" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../../../assets/images/stock/network-closeup.webp" alt="Tech Talks"><div class="pg-card-body"><h3>Tech Talks</h3><p>Industry speakers on open source, AI ethics, cybersecurity.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="https://www.clubul.computer/t/junior" target="_blank" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../../../assets/images/stock/hackathon-team.webp" alt="Junior Club"><div class="pg-card-body"><h3>Junior Club</h3><p>Game dev, robot programming, and digital storytelling for ages 8-14.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="https://www.clubul.computer/t/hacking" target="_blank" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../../../assets/images/stock/terminal-green.webp" alt="Hardware Hacking"><div class="pg-card-body"><h3>Hardware Hacking</h3><p>Arduino, Raspberry Pi, IoT devices, and 3D printing.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="https://www.clubul.computer/t/open-source" target="_blank" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../../../assets/images/stock/hacker-screens.webp" alt="Open Source"><div class="pg-card-body"><h3>Open Source</h3><p>Find projects, understand codebases, make real contributions.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="https://www.clubul.computer/t/incubator" target="_blank" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../../../assets/images/stock/cybersecurity-monitor.webp" alt="Project Incubator"><div class="pg-card-body"><h3>Project Incubator</h3><p>Turn your idea into reality with mentorship and resources.</p></div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE ROW 1 -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
   <div class="container">
     <div class="m-r">
       <div class="m-ri"><img loading="lazy" src="../../../assets/images/stock/hackathon-team.webp" alt="Club meetup"></div>
@@ -635,7 +701,8 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<div class="m-bg">
+<!-- FEATURE ROW 2 -->
+<div class="m-s" style="padding:7rem 0;">
   <div class="container">
     <div class="m-r rv">
       <div class="m-ri"><img loading="lazy" src="../../../assets/images/stock/code-screen.webp" alt="Coding session"></div>
@@ -648,38 +715,171 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<div class="m-s">
+<!-- FIND US -->
+<div class="m-bg" style="padding:6rem 0;">
   <div class="container">
-    <div class="m-n">
-      <div><div class="m-nn">150+</div><div class="m-nl">Schools reached</div></div>
-      <div><div class="m-nn">5000+</div><div class="m-nl">Students</div></div>
-      <div><div class="m-nn">25</div><div class="m-nl">IoT sensors deployed</div></div>
-      <div><div class="m-nn">0</div><div class="m-nl">Membership fee</div></div>
-    </div>
-  </div>
-</div>
-
-<div class="m-bg">
-  <div class="container" style="max-width: 600px;">
     <h2>Find us</h2>
-    <p class="sub"></p>
-    <div style="text-align:center; color: var(--g); font-size: 1rem; line-height: 2;">
-      <p><strong>Main location:</strong> Craiova, Romania</p>
-      <p><strong>Satellite meetups:</strong> Bucharest (quarterly) + Online</p>
-      <p><strong>Email:</strong> <a href="mailto:social@clubul.computer" class="m-lk" style="font-size:1rem;">social@clubul.computer</a></p>
-      <p><strong>When:</strong> Last Thursday of every month</p>
+    <p class="sub">Show up. That's all it takes.</p>
+    <div style="max-width:750px; margin:0 auto;">
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-geo-alt" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4><span style="color:#fff;">Craiova, Romania</span></h4>
+          <div class="up-meta">Main location. Last Thursday of every month.</div>
+        </div>
+        <div class="up-badge up-badge-open">Monthly</div>
+      </div>
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-building" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4><span style="color:#fff;">Bucharest</span></h4>
+          <div class="up-meta">Satellite meetups. Quarterly.</div>
+        </div>
+        <div class="up-badge up-badge-soon">Quarterly</div>
+      </div>
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-camera-video" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4><span style="color:#fff;">Online</span></h4>
+          <div class="up-meta">Virtual meetups and workshops. Join from anywhere.</div>
+        </div>
+        <div class="up-badge up-badge-open">Always</div>
+      </div>
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-envelope" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4><a href="mailto:social@clubul.computer">social@clubul.computer</a></h4>
+          <div class="up-meta">Questions, ideas, or just want to say hi.</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="m-cta">
+<!-- PARTNERSHIP APPLICATION -->
+<div class="m-s" id="apply" style="padding:7rem 0;">
+  <div class="container" style="max-width:950px;">
+    <div style="display:grid; grid-template-columns:1fr 1.2fr; gap:3rem; align-items:start;">
+
+      <!-- Left: info -->
+      <div>
+        <i class="bi bi-handshake" style="font-size:2rem; color:#F5A623; display:block; margin-bottom:1rem;"></i>
+        <h2 style="font-size:1.75rem; text-align:left; margin-bottom:1rem;">Start a Computer Club in your organization</h2>
+        <p style="color:#86868b; line-height:1.6; margin-bottom:2rem;">We help you launch and run your own Computer Club chapter. We provide the curriculum, mentorship framework, and community platform — you provide the space and enthusiasm.</p>
+
+        <div style="display:flex; flex-direction:column; gap:1.25rem;">
+          <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+            <div style="flex-shrink:0; width:40px; height:40px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:10px;">
+              <i class="bi bi-building" style="color:#F5A623;"></i>
+            </div>
+            <div><div style="font-weight:600; font-size:0.9rem;">Companies</div><div style="font-size:0.82rem; color:#86868b;">Employee upskilling, team building, and innovation culture</div></div>
+          </div>
+          <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+            <div style="flex-shrink:0; width:40px; height:40px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:10px;">
+              <i class="bi bi-mortarboard" style="color:#F5A623;"></i>
+            </div>
+            <div><div style="font-weight:600; font-size:0.9rem;">Schools</div><div style="font-size:0.82rem; color:#86868b;">Extracurricular STEM programs and digital literacy</div></div>
+          </div>
+          <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+            <div style="flex-shrink:0; width:40px; height:40px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:10px;">
+              <i class="bi bi-bank" style="color:#F5A623;"></i>
+            </div>
+            <div><div style="font-weight:600; font-size:0.9rem;">Universities</div><div style="font-size:0.82rem; color:#86868b;">Student tech communities and research groups</div></div>
+          </div>
+          <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+            <div style="flex-shrink:0; width:40px; height:40px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:10px;">
+              <i class="bi bi-heart" style="color:#F5A623;"></i>
+            </div>
+            <div><div style="font-weight:600; font-size:0.9rem;">NGOs</div><div style="font-size:0.82rem; color:#86868b;">Digital literacy and community empowerment</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="m-form">
+        <div style="background:rgba(245,166,35,0.04); border:1.5px solid rgba(245,166,35,0.12); border-radius:20px; padding:2.5rem;">
+          <h3 style="font-size:1.25rem; font-weight:700; margin-bottom:0.35rem; text-align:center;">Apply to start a chapter</h3>
+          <p style="font-size:0.85rem; color:#86868b; text-align:center; margin-bottom:1.75rem;">Fill in the form and we'll get back to you within 48 hours.</p>
+          <form action="https://formspree.io/f/mpwkaqev" method="POST">
+            <div class="fr">
+              <div class="fg">
+                <label>Your Name *</label>
+                <input type="text" name="name" required="" placeholder="Full name">
+              </div>
+              <div class="fg">
+                <label>Email *</label>
+                <input type="email" name="email" required="" placeholder="your@email.com">
+              </div>
+            </div>
+            <div class="fg">
+              <label>Organization *</label>
+              <input type="text" name="organization" required="" placeholder="Company, school, or organization name">
+            </div>
+            <div class="fr">
+              <div class="fg">
+                <label>Type *</label>
+                <select name="org_type" required="">
+                  <option value="">Select...</option>
+                  <option value="company">Company</option>
+                  <option value="school">School (K-12)</option>
+                  <option value="university">University</option>
+                  <option value="ngo">NGO / Nonprofit</option>
+                  <option value="community">Community Group</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="fg">
+                <label>City / Country *</label>
+                <input type="text" name="location" required="" placeholder="e.g. Berlin, Germany">
+              </div>
+            </div>
+            <div class="fg">
+              <label>Expected participants</label>
+              <select name="participants">
+                <option value="">Select...</option>
+                <option value="5-15">5–15 people</option>
+                <option value="15-30">15–30 people</option>
+                <option value="30-50">30–50 people</option>
+                <option value="50+">50+ people</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label>Tell us about your vision *</label>
+              <textarea name="message" rows="3" required="" placeholder="What would you like the club to focus on? Who are the participants?"></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="Computer Club Chapter Application">
+            <input type="hidden" name="_source" value="computerclub-apply">
+            <input type="text" name="_gotcha" style="display:none">
+            <div class="fc">
+              <input type="checkbox" required="">
+              <span>I agree to the <a href="../../../privacy.html" target="_blank">privacy policy</a> *</span>
+            </div>
+            <button type="submit" style="background:#F5A623;"><i class="bi bi-send me-2"></i>Submit Application</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="m-cta" id="join">
   <div class="container">
     <div class="m-d"></div>
     <h2>Join the club</h2>
     <p>Show up to a meetup or reach out online. That's it.</p>
-    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-      <a href="https://clubul.computer" target="_blank" class="m-b">Visit clubul.computer</a>
-      <a href="../../../booking/" class="m-bo">Book a call</a>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="https://clubul.computer" target="_blank" class="m-b" style="background:#F5A623;">Visit clubul.computer</a>
+      <a href="../../../booking/" class="m-bo" style="border-color:#F5A623; color:#F5A623;">Book a call</a>
     </div>
   </div>
 </div>
@@ -1297,6 +1497,7 @@ document.addEventListener('DOMContentLoaded', function() {
       a.href = l.prefix + (cleanPath || '/');
       a.textContent = l.label;
       if (l.code === currentLang) a.className = 'active';
+      a.addEventListener('click', function(e) { localStorage.setItem('chen-lang-choice', this.textContent.toLowerCase() === 'en' ? 'en' : ''); });
       langsDiv.appendChild(a);
     }
 
@@ -1311,11 +1512,10 @@ document.addEventListener('DOMContentLoaded', function() {
   })();
 });
 </script>
-<!-- Cal.com floating button -->
+<!-- Cal.com embed (for booking page only, no floating button) -->
 <script>
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", {origin:"https://cal.com"});
-  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {

@@ -369,6 +369,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<script>
+(function() {
+  var path = window.location.pathname;
+  // Only redirect on English pages (no language prefix)
+  if (path.match(/^\/(ro|sv|de)\//)) return;
+  // Don't redirect if user explicitly chose English
+  if (localStorage.getItem('chen-lang-choice') === 'en') return;
+  // Don't redirect if already redirected this session
+  if (sessionStorage.getItem('chen-lang-redirected')) return;
+  // Detect browser language
+  var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  var target = null;
+  if (lang.startsWith('ro')) target = 'ro';
+  else if (lang.startsWith('sv')) target = 'sv';
+  else if (lang.startsWith('de')) target = 'de';
+  if (target) {
+    sessionStorage.setItem('chen-lang-redirected', '1');
+    window.location.href = '/' + target + path;
+  }
+})();
+</script>
 <link rel="preload" href="../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
 <meta name="view-transition" content="same-origin">
@@ -428,8 +449,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../assets/images/logo-light.svg" alt="" class="navbar-logo light-content">
-    <img src="../assets/images/logo-light.svg" alt="" class="navbar-logo dark-content">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -600,58 +621,133 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>Online <span class="gr">Webinars</span></h1>
+<!-- HERO -->
+<div class="ev-hero" style="min-height:55vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/network-closeup.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Academy</div>
+    <h1>Webinars</h1>
     <p>Free, expert-led sessions on cybersecurity, cloud, AI, and digital transformation. Join from anywhere.</p>
+    <a href="#upcoming" class="ev-btn" style="background:#F5A623;">See upcoming</a>
   </div>
 </div>
 
-<div class="m-bg">
+<!-- UPCOMING WEBINARS -->
+<div class="m-s" id="upcoming" style="padding:7rem 0;">
   <div class="container">
     <h2>Upcoming webinars</h2>
     <p class="sub">Live sessions with Q&amp;A. Register to save your spot.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-shield-lock"></i><h3>Zero Trust Security</h3><p>Principles, implementation strategies, and real-world case studies. 90 min.</p><a href="../academy/webinars/pages/zero-trust-security.html" class="m-lk">View details</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-cloud"></i><h3>Cloud Cost Optimization</h3><p>Identify waste, implement governance, and maximize cloud ROI. 60 min.</p><a href="../academy/webinars/pages/cloud-cost-optimization.html" class="m-lk">View details</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-robot"></i><h3>AI Ethics</h3><p>Responsible AI, privacy, fairness, and transparency in practice. 120 min.</p><a href="../academy/webinars/pages/ai-ethics-developers.html" class="m-lk">View details</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-people"></i><h3>Cyber Awareness</h3><p>New-school security awareness training with KnowBe4. 90 min.</p><a href="../academy/webinars/pages/modern-web-development.html" class="m-lk">View details</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-graph-up-arrow"></i><h3>Digital Transformation</h3><p>Framework for leading technology change in your organization. 75 min.</p><a href="../academy/webinars/pages/digital-transformation.html" class="m-lk">View details</a></div></div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="../academy/webinars/pages/zero-trust-security.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/cybersecurity-monitor.webp" alt="Zero Trust"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">90 min</div><h3>Zero Trust Security</h3><p>Principles, implementation strategies, and real-world case studies.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../academy/webinars/pages/cloud-cost-optimization.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/network-closeup.webp" alt="Cloud Cost"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">60 min</div><h3>Cloud Cost Optimization</h3><p>Identify waste, implement governance, and maximize cloud ROI.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../academy/webinars/pages/ai-ethics-developers.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/hacker-screens.webp" alt="AI Ethics"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">120 min</div><h3>AI Ethics for Developers</h3><p>Responsible AI, privacy, fairness, and transparency in practice.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../academy/webinars/pages/cyber-awareness.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/team-macbooks.webp" alt="Cyber Awareness"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">90 min</div><h3>Cyber Awareness</h3><p>New-school security awareness training with KnowBe4.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../academy/webinars/pages/digital-transformation.html" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../assets/images/stock/code-screen.webp" alt="Digital Transformation"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">75 min</div><h3>Digital Transformation</h3><p>Framework for leading technology change in your organization.</p></div></div>
+        </a>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="m-s">
+<!-- RECURRING SERIES -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
   <div class="container">
     <h2>Recurring series</h2>
     <p class="sub">Regular sessions you can count on.</p>
-    <div class="row g-5">
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-shield-check"></i><h3>Security First</h3><p>Monthly deep dives into cybersecurity practices, threat intelligence, and security architecture. First Tuesday, 60 min.</p></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-cloud-arrow-up"></i><h3>Cloud Mastery</h3><p>Cloud technologies, architecture patterns, and operational best practices across major platforms. Monthly, 90 min.</p></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-heart-pulse"></i><h3>Cyber Hygiene</h3><p>Weekly sessions covering procedures, frameworks, and cybersecurity methodologies. Every Wednesday, 60 min.</p></div></div>
+    <div style="max-width:750px; margin:0 auto;">
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-shield-check" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4><span style="color:#fff;">Security First</span></h4>
+          <div class="up-meta">Monthly deep dives into cybersecurity practices, threat intelligence, and security architecture. First Tuesday, 60 min.</div>
+        </div>
+        <div class="up-badge up-badge-open">Monthly</div>
+      </div>
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-cloud-arrow-up" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4><span style="color:#fff;">Cloud Mastery</span></h4>
+          <div class="up-meta">Cloud technologies, architecture patterns, and operational best practices across major platforms. Monthly, 90 min.</div>
+        </div>
+        <div class="up-badge up-badge-open">Monthly</div>
+      </div>
+      <div class="up-item">
+        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
+          <i class="bi bi-heart-pulse" style="font-size:1.2rem; color:#F5A623;"></i>
+        </div>
+        <div style="flex-grow:1;">
+          <h4><span style="color:#fff;">Cyber Hygiene</span></h4>
+          <div class="up-meta">Weekly sessions covering procedures, frameworks, and cybersecurity methodologies. Every Wednesday, 60 min.</div>
+        </div>
+        <div class="up-badge up-badge-open">Weekly</div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="m-bg">
+<!-- PAST WEBINARS -->
+<div class="m-s" style="padding:7rem 0;">
   <div class="container">
     <h2>Past webinars</h2>
-    <p class="sub">Recordings coming soon.</p>
-    <div class="row g-5">
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-collection-play"></i><h3>Cyber Awareness Best Practices</h3><p>Cybersecurity and risk management with Chenist, KnowBe4, and the Romanian Cybersecurity Office (DNSC). March 2025.</p></div></div>
-      <div class="col-md-6"><div class="m-t"><i class="bi bi-collection-play"></i><h3>Data Privacy Compliance</h3><p>Global data privacy regulations and practical compliance approaches. February 2025.</p></div></div>
+    <p class="sub">Recordings available for registered participants.</p>
+    <div class="row g-4" style="max-width:900px; margin:0 auto;">
+      <div class="col-md-6">
+        <div class="pg-card">
+          <img loading="lazy" src="../assets/images/stock/cybersecurity-monitor.webp" alt="Cyber Awareness">
+          <div class="pg-card-body">
+            <div style="font-size:0.7rem; font-weight:700; color:#81BD4A; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;"><i class="bi bi-collection-play me-1"></i> Recording available</div>
+            <h3>Cyber Awareness Best Practices</h3>
+            <p style="font-size:0.82rem;">With Chenist, KnowBe4, and the Romanian Cybersecurity Office (DNSC).</p>
+            <div style="font-size:0.75rem; color:rgba(255,255,255,0.4);"><i class="bi bi-calendar3" style="color:#F5A623;"></i> March 2025</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="pg-card">
+          <img loading="lazy" src="../assets/images/stock/network-closeup.webp" alt="Data Privacy">
+          <div class="pg-card-body">
+            <div style="font-size:0.7rem; font-weight:700; color:#81BD4A; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;"><i class="bi bi-collection-play me-1"></i> Recording available</div>
+            <h3>Data Privacy Compliance</h3>
+            <p style="font-size:0.82rem;">Global data privacy regulations and practical compliance approaches.</p>
+            <div style="font-size:0.75rem; color:rgba(255,255,255,0.4);"><i class="bi bi-calendar3" style="color:#F5A623;"></i> February 2025</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
+<!-- CTA -->
 <div class="m-cta">
   <div class="container">
     <div class="m-d"></div>
     <h2>Never miss a webinar</h2>
     <p>Subscribe for announcements, tech insights, and exclusive content.</p>
-    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-      <a href="https://alinmechenici.substack.com" target="_blank" class="m-b">Subscribe to updates</a>
-      <a href="../booking/" class="m-b-ghost">Book a call</a>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="https://alinmechenici.substack.com" target="_blank" class="m-b" style="background:#F5A623;"><i class="bi bi-bell me-2"></i>Subscribe to updates</a>
+      <a href="../booking/" class="m-bo" style="border-color:#F5A623; color:#F5A623;">Book a call</a>
     </div>
   </div>
 </div>
@@ -1269,6 +1365,7 @@ document.addEventListener('DOMContentLoaded', function() {
       a.href = l.prefix + (cleanPath || '/');
       a.textContent = l.label;
       if (l.code === currentLang) a.className = 'active';
+      a.addEventListener('click', function(e) { localStorage.setItem('chen-lang-choice', this.textContent.toLowerCase() === 'en' ? 'en' : ''); });
       langsDiv.appendChild(a);
     }
 
@@ -1283,11 +1380,10 @@ document.addEventListener('DOMContentLoaded', function() {
   })();
 });
 </script>
-<!-- Cal.com floating button -->
+<!-- Cal.com embed (for booking page only, no floating button) -->
 <script>
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", {origin:"https://cal.com"});
-  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {

@@ -373,6 +373,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<script>
+(function() {
+  var path = window.location.pathname;
+  // Only redirect on English pages (no language prefix)
+  if (path.match(/^\/(ro|sv|de)\//)) return;
+  // Don't redirect if user explicitly chose English
+  if (localStorage.getItem('chen-lang-choice') === 'en') return;
+  // Don't redirect if already redirected this session
+  if (sessionStorage.getItem('chen-lang-redirected')) return;
+  // Detect browser language
+  var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  var target = null;
+  if (lang.startsWith('ro')) target = 'ro';
+  else if (lang.startsWith('sv')) target = 'sv';
+  else if (lang.startsWith('de')) target = 'de';
+  if (target) {
+    sessionStorage.setItem('chen-lang-redirected', '1');
+    window.location.href = '/' + target + path;
+  }
+})();
+</script>
 <link rel="preload" href="./assets/images/stock/network-closeup.webp" as="image" type="image/webp">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
 <meta name="view-transition" content="same-origin">
@@ -481,12 +502,35 @@ footer { margin-top: 0 !important; }
 /* Badge */
 .hp-badge { display: inline-block; background: rgba(129,189,74,0.12); color: #81BD4A; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.3rem 0.85rem; border-radius: 980px; margin-bottom: 1.25rem; }
 
-/* SVG patterns */
+/* SVG patterns — dark mode (default) */
 .hp-squares { background: #161617 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Crect fill='%23161617' width='200' height='200'/%3E%3Cg fill='%231e1e21' fill-opacity='1'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='%2381BD4A' fill-opacity='0.06' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='%2381BD4A' fill-opacity='0.04' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E"); }
 .hp-triangles { background: #111 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='540' height='450' viewBox='0 0 1080 900'%3E%3Crect fill='%23111' width='1080' height='900'/%3E%3Cg fill-opacity='0.07'%3E%3Cpolygon fill='%2381BD4A' points='90 150 0 300 180 300'/%3E%3Cpolygon fill='%231a1a1d' points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%2381BD4A' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%231a1a1d' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%2381BD4A' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%231a1a1d' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%2381BD4A' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%231a1a1d' points='90 450 0 600 180 600'/%3E%3Cpolygon fill='%2381BD4A' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%231a1a1d' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%2381BD4A' points='630 450 720 300 540 300'/%3E%3Cpolygon fill='%231a1a1d' points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%2381BD4A' points='990 450 1080 300 900 300'/%3E%3C/g%3E%3C/svg%3E"); }
 .hp-constellation { background: #0a0a0a url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='692' height='692' viewBox='0 0 800 800'%3E%3Crect fill='none' width='800' height='800'/%3E%3Cg fill='none' stroke='%2381BD4A' stroke-width='1' stroke-opacity='0.1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3C/g%3E%3Cg fill='%2381BD4A' fill-opacity='0.06'%3E%3Ccircle cx='769' cy='229' r='4'/%3E%3Ccircle cx='539' cy='269' r='4'/%3E%3Ccircle cx='603' cy='493' r='4'/%3E%3Ccircle cx='731' cy='737' r='4'/%3E%3Ccircle cx='295' cy='764' r='4'/%3E%3Ccircle cx='102' cy='382' r='4'/%3E%3Ccircle cx='370' cy='105' r='4'/%3E%3Ccircle cx='390' cy='382' r='4'/%3E%3C/g%3E%3C/svg%3E"); }
 .hp-stripes { background: #131315; background-image: repeating-linear-gradient(135deg, rgba(129,189,74,0) 0px, rgba(129,189,74,0) 20px, rgba(129,189,74,0.03) 20px, rgba(129,189,74,0.03) 22px, rgba(129,189,74,0) 22px, rgba(129,189,74,0) 40px, rgba(129,189,74,0.05) 40px, rgba(129,189,74,0.05) 43px, rgba(129,189,74,0) 43px, rgba(129,189,74,0) 60px, rgba(129,189,74,0.02) 60px, rgba(129,189,74,0.02) 61px); }
 .hp-mountains { background: #0e0e10; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Crect fill='%230e0e10' width='1600' height='900'/%3E%3Cpolygon fill='%23151517' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23131315' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23171719' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23141416' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%231a1a1d' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23161618' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%231c1c1f' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23181819' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%231e1e21' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%231a1a1c' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23202023' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%231c1c1e' points='943 900 1210 900 971 687'/%3E%3C/svg%3E"); background-size: cover; background-position: bottom; }
+
+/* Light mode — alternate between white and soft grey, with subtle SVG patterns */
+html:not([data-bs-theme="dark"]) .hp-sec { color: #1d1d1f; }
+html:not([data-bs-theme="dark"]) .hp-sec h2 { color: #1d1d1f; }
+html:not([data-bs-theme="dark"]) .hp-sec p { color: #6e6e73; }
+html:not([data-bs-theme="dark"]) .hp-icon h4 { color: #1d1d1f; }
+html:not([data-bs-theme="dark"]) .hp-icon p { color: #86868b; }
+html:not([data-bs-theme="dark"]) .hp-pill { background: rgba(129,189,74,0.06); border-color: rgba(129,189,74,0.12); color: #424245; }
+html:not([data-bs-theme="dark"]) .hp-sec-links .se { color: #86868b; }
+html:not([data-bs-theme="dark"]) .hp-badge { background: rgba(129,189,74,0.08); color: #81BD4A; }
+html:not([data-bs-theme="dark"]) .hp-blog-title { color: #1d1d1f; }
+html:not([data-bs-theme="dark"]) .hp-blog-date { color: #86868b; }
+html:not([data-bs-theme="dark"]) .hp-blog-item { border-color: rgba(0,0,0,0.06); }
+/* Light SVG backgrounds — white and #f5f5f7 alternating */
+html:not([data-bs-theme="dark"]) .hp-squares { background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Crect fill='%23fff' width='200' height='200'/%3E%3Cg fill='%23f8f8fa' fill-opacity='1'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='%2381BD4A' fill-opacity='0.03' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='%2381BD4A' fill-opacity='0.02' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E"); }
+html:not([data-bs-theme="dark"]) .hp-triangles { background: #f5f5f7 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='540' height='450' viewBox='0 0 1080 900'%3E%3Crect fill='%23f5f5f7' width='1080' height='900'/%3E%3Cg fill-opacity='0.04'%3E%3Cpolygon fill='%2381BD4A' points='90 150 0 300 180 300'/%3E%3Cpolygon fill='%23ebebed' points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%2381BD4A' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23ebebed' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%2381BD4A' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23ebebed' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%2381BD4A' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23ebebed' points='90 450 0 600 180 600'/%3E%3Cpolygon fill='%2381BD4A' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23ebebed' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%2381BD4A' points='630 450 720 300 540 300'/%3E%3Cpolygon fill='%23ebebed' points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%2381BD4A' points='990 450 1080 300 900 300'/%3E%3C/g%3E%3C/svg%3E"); }
+html:not([data-bs-theme="dark"]) .hp-constellation { background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='692' height='692' viewBox='0 0 800 800'%3E%3Crect fill='none' width='800' height='800'/%3E%3Cg fill='none' stroke='%2381BD4A' stroke-width='1' stroke-opacity='0.07'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3C/g%3E%3Cg fill='%2381BD4A' fill-opacity='0.04'%3E%3Ccircle cx='769' cy='229' r='4'/%3E%3Ccircle cx='539' cy='269' r='4'/%3E%3Ccircle cx='603' cy='493' r='4'/%3E%3Ccircle cx='731' cy='737' r='4'/%3E%3Ccircle cx='295' cy='764' r='4'/%3E%3Ccircle cx='102' cy='382' r='4'/%3E%3C/g%3E%3C/svg%3E"); }
+html:not([data-bs-theme="dark"]) .hp-stripes { background: #f5f5f7; background-image: repeating-linear-gradient(135deg, rgba(129,189,74,0) 0px, rgba(129,189,74,0) 20px, rgba(129,189,74,0.02) 20px, rgba(129,189,74,0.02) 22px, rgba(129,189,74,0) 22px, rgba(129,189,74,0) 40px, rgba(129,189,74,0.035) 40px, rgba(129,189,74,0.035) 43px); }
+html:not([data-bs-theme="dark"]) .hp-mountains { background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Crect fill='%23fff' width='1600' height='900'/%3E%3Cpolygon fill='%23f8f8fa' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23f5f5f7' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23f0f0f2' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23ededef' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23eaeaec' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23e8e8ea' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23e5e5e7' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23e2e2e4' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23dfdfdf' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23dcdcdc' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23dadada' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23d7d7d7' points='943 900 1210 900 971 687'/%3E%3C/svg%3E"); background-size: cover; background-position: bottom; }
+html:not([data-bs-theme="dark"]) .hp-stats { background: #f5f5f7; }
+html:not([data-bs-theme="dark"]) .hp-sl { color: #86868b; }
+/* Security visual numbers in light mode */
+html:not([data-bs-theme="dark"]) .hp-split-visual [style*="rgba(255,255,255,0.4)"] { color: #86868b !important; }
 
 /* Stats */
 .hp-stats { display: flex; justify-content: center; gap: clamp(2rem, 5vw, 5rem); flex-wrap: wrap; padding: 5rem 1.5rem; background: #000; }
@@ -507,14 +551,25 @@ footer { margin-top: 0 !important; }
 }
 @media (max-width: 767px) {
   .hp-hero { min-height: 85vh; padding: 6rem 1.5rem 4rem; }
-  .hp-sec { min-height: auto; padding: 6rem 0; }
+  .hp-hero h1 { font-size: clamp(2.5rem, 10vw, 4rem); }
+  .hp-hero p { font-size: 1rem; }
+  .hp-sec { min-height: auto; padding: 5rem 0; }
+  .hp-sec h2 { font-size: clamp(2rem, 6vw, 3rem); }
   .hp-mq span { padding: 0 1.25rem; font-size: 0.65rem; }
   .hp-stats { gap: 1.5rem; padding: 3.5rem 1.5rem; }
   .hp-sec-content { padding: 0 1.5rem; }
+  .hp-sec-links { display: flex; flex-direction: column; gap: 0.75rem; }
+  .hp-sec-links a { margin-right: 0; }
+  .hp-pill { font-size: 0.75rem; padding: 0.4rem 0.75rem; }
+  .hp-icon { gap: 0.75rem; }
+  .hp-blog-item { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+  .hp-blog-arrow { display: none; }
 }
 @media (max-width: 480px) {
-  .hp-hero { min-height: 75vh; }
+  .hp-hero { min-height: 70vh; padding: 5rem 1.25rem 3rem; }
+  .hp-hero-btn { padding: 0.85rem 2rem; font-size: 0.95rem; }
   .hp-stats { flex-direction: column; align-items: center; }
+  .hp-sec { padding: 4rem 0; }
 }
 </style>
 
@@ -530,8 +585,8 @@ footer { margin-top: 0 !important; }
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./assets/images/logo-light.svg" alt="" class="navbar-logo light-content">
-    <img src="./assets/images/logo-light.svg" alt="" class="navbar-logo dark-content">
+    <img src="./assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="./assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -828,6 +883,25 @@ footer { margin-top: 0 !important; }
   </div>
 </div>
 
+<!-- EUROPEAN -->
+<div class="hp-sec hp-constellation" style="min-height: 60vh; text-align: center;">
+  <div class="hp-sec-content" style="max-width: 650px;">
+    <div class="hp-badge"><i class="bi bi-flag me-1"></i> European Company</div>
+    <h2>Built in Europe.<br>For Europe.</h2>
+    <p style="margin: 0 auto 1.5rem;">We are a European company focused on the European market. Our infrastructure runs on EU soil, our data stays in the EU, and our solutions comply with European regulations by default — not as an afterthought.</p>
+    <div style="margin-bottom: 2rem;">
+      <span class="hp-pill"><i class="bi bi-shield-check"></i> GDPR native</span>
+      <span class="hp-pill"><i class="bi bi-geo-alt"></i> EU data residency</span>
+      <span class="hp-pill"><i class="bi bi-clipboard-check"></i> NIS2 ready</span>
+      <span class="hp-pill"><i class="bi bi-lock"></i> European security</span>
+    </div>
+    <div class="hp-sec-links" style="display:flex; gap:2rem; justify-content:center;">
+      <a href="./services/cloud/" class="pr">Cloud services</a>
+      <a href="./services/nis2/" class="se">NIS2 compliance</a>
+    </div>
+  </div>
+</div>
+
 <!-- STATS -->
 <div class="hp-stats">
   <div style="text-align:center;"><div class="hp-sn">15+</div><div class="hp-sl">Years</div></div>
@@ -857,8 +931,8 @@ footer { margin-top: 0 !important; }
       </a>
       <a href="./blog/cyber-security-best-practices.html" class="hp-blog-item">
         <div>
-          <div class="hp-blog-title">Cybersecurity Best Practices</div>
-          <div class="hp-blog-date">April 1, 2025</div>
+          <div class="hp-blog-title">Cybersecurity Best Practices for 2025</div>
+          <div class="hp-blog-date">Updated March 2026</div>
         </div>
         <span class="hp-blog-arrow"><i class="bi bi-arrow-right"></i></span>
       </a>
@@ -870,7 +944,7 @@ footer { margin-top: 0 !important; }
 </div>
 
 <!-- CTA -->
-<div class="hp-sec" style="min-height: 70vh; background: #000; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='856' height='102.7' viewBox='0 0 1000 120'%3E%3Crect fill='%23000' width='1000' height='120'/%3E%3Cg fill='none' stroke='%2381BD4A' stroke-width='2' stroke-opacity='0.15'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E&quot;); background-size: 100% auto; background-repeat: repeat-y; text-align: center;">
+<div class="hp-sec hp-cta-dark" style="min-height: 70vh; background: #000 !important; color: #fff !important; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='856' height='102.7' viewBox='0 0 1000 120'%3E%3Crect fill='%23000' width='1000' height='120'/%3E%3Cg fill='none' stroke='%2381BD4A' stroke-width='2' stroke-opacity='0.15'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E&quot;); background-size: 100% auto; background-repeat: repeat-y; text-align: center;">
   <div class="hp-sec-content" style="max-width: 600px;">
     <div style="width: 36px; height: 3px; background: #81BD4A; margin: 0 auto 3rem; border-radius: 2px; opacity: 0.6;"></div>
     <h2>Ready to take control?</h2>
@@ -1497,6 +1571,7 @@ document.addEventListener('DOMContentLoaded', function() {
       a.href = l.prefix + (cleanPath || '/');
       a.textContent = l.label;
       if (l.code === currentLang) a.className = 'active';
+      a.addEventListener('click', function(e) { localStorage.setItem('chen-lang-choice', this.textContent.toLowerCase() === 'en' ? 'en' : ''); });
       langsDiv.appendChild(a);
     }
 
@@ -1511,11 +1586,10 @@ document.addEventListener('DOMContentLoaded', function() {
   })();
 });
 </script>
-<!-- Cal.com floating button -->
+<!-- Cal.com embed (for booking page only, no floating button) -->
 <script>
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", {origin:"https://cal.com"});
-  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {

@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-b37f6c1b9a99d16252d3ddd2c7074628.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-73406dad87c631b3ff16adcaa0b1ab21.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-d670e99d9fdfed706f1502bc605e1805.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-73406dad87c631b3ff16adcaa0b1ab21.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:description" content="Intensive 2-day hands-on workshop for system administrators and security professionals to leverage NixOS for improved security, featuring reproducible configurations, immutable deployments, and security best practices.">
 <meta name="twitter:image" content="https://chen.ist/academy/trainings/nixos-security-jumpstart/assets/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-</head><body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+</head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -369,6 +369,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<script>
+(function() {
+  var path = window.location.pathname;
+  // Only redirect on English pages (no language prefix)
+  if (path.match(/^\/(ro|sv|de)\//)) return;
+  // Don't redirect if user explicitly chose English
+  if (localStorage.getItem('chen-lang-choice') === 'en') return;
+  // Don't redirect if already redirected this session
+  if (sessionStorage.getItem('chen-lang-redirected')) return;
+  // Detect browser language
+  var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  var target = null;
+  if (lang.startsWith('ro')) target = 'ro';
+  else if (lang.startsWith('sv')) target = 'sv';
+  else if (lang.startsWith('de')) target = 'de';
+  if (target) {
+    sessionStorage.setItem('chen-lang-redirected', '1');
+    window.location.href = '/' + target + path;
+  }
+})();
+</script>
 <link rel="preload" href="../../../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
 <meta name="view-transition" content="same-origin">
@@ -414,7 +435,10 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 }
 </script>
-<style>.m { --c: #F5A623; }</style>
+<style>
+.m { --c: #F5A623; }
+.quarto-title-block { display: none !important; }
+</style>
 
 
 <link rel="stylesheet" href="../../../assets/css/main.min.css">
@@ -428,8 +452,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../assets/images/logo-light.svg" alt="" class="navbar-logo light-content">
-    <img src="../../../assets/images/logo-light.svg" alt="" class="navbar-logo dark-content">
+    <img src="../../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="../../../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -585,34 +609,83 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#training-overview" id="toc-training-overview" class="nav-link active" data-scroll-target="#training-overview">Training Overview</a>
+  <ul class="collapse">
+  <li><a href="#next-session" id="toc-next-session" class="nav-link" data-scroll-target="#next-session">Next Session</a></li>
+  </ul></li>
+  <li><a href="#training-curriculum" id="toc-training-curriculum" class="nav-link" data-scroll-target="#training-curriculum">Training Curriculum</a>
+  <ul class="collapse">
+  <li><a href="#day-1-nixos-foundations-and-secure-configuration" id="toc-day-1-nixos-foundations-and-secure-configuration" class="nav-link" data-scroll-target="#day-1-nixos-foundations-and-secure-configuration">Day 1: NixOS Foundations and Secure Configuration</a></li>
+  <li><a href="#day-2-advanced-security-and-deployment" id="toc-day-2-advanced-security-and-deployment" class="nav-link" data-scroll-target="#day-2-advanced-security-and-deployment">Day 2: Advanced Security and Deployment</a></li>
+  </ul></li>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link" data-scroll-target="#learning-outcomes">Learning Outcomes</a></li>
+  <li><a href="#training-methods" id="toc-training-methods" class="nav-link" data-scroll-target="#training-methods">Training Methods</a></li>
+  <li><a href="#who-should-attend" id="toc-who-should-attend" class="nav-link" data-scroll-target="#who-should-attend">Who Should Attend</a></li>
+  <li><a href="#materials-and-resources" id="toc-materials-and-resources" class="nav-link" data-scroll-target="#materials-and-resources">Materials and Resources</a></li>
+  <li><a href="#instructor" id="toc-instructor" class="nav-link" data-scroll-target="#instructor">Instructor</a></li>
+  <li><a href="#testimonials" id="toc-testimonials" class="nav-link" data-scroll-target="#testimonials">Testimonials</a></li>
+  <li><a href="#related-offerings" id="toc-related-offerings" class="nav-link" data-scroll-target="#related-offerings">Related Offerings</a></li>
+  <li><a href="#download" id="toc-download" class="nav-link" data-scroll-target="#download">Download</a></li>
+  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
+<main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header">
-<h1 class="title display-7">NixOS Security Jumpstart Training</h1>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">NixOS Security Jumpstart Training</h1>
 <p class="subtitle lead">A 2-day intensive workshop on secure system configuration with NixOS</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">nixos</div>
+    <div class="quarto-category">system-security</div>
+    <div class="quarto-category">secure-configuration</div>
+    <div class="quarto-category">immutable-infrastructure</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Intensive 2-day hands-on workshop for system administrators and security professionals to leverage NixOS for improved security, featuring reproducible configurations, immutable deployments, and security best practices.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
 
 </header>
 
 
 <div class="m">
-
-<div class="m-hero">
-  <div class="container">
+<div class="m-hero" style="margin: -1em -1em 3rem; padding: 10rem 0 6rem;">
+  <div class="container" style="max-width: 700px;">
     <h1>NixOS Security <span class="gr">Jumpstart</span></h1>
     <p>Master secure system configuration with NixOS's declarative approach</p>
   </div>
 </div>
-
-<div class="container">
+</div>
 <section id="training-overview" class="level2">
-<h2 data-anchor-id="training-overview">Training Overview</h2>
+<h2 class="anchored" data-anchor-id="training-overview">Training Overview</h2>
 <p>This intensive 2-day workshop provides practical, hands-on training for system administrators and security professionals who want to leverage NixOS for improved security posture. The training focuses on NixOS’s unique advantages for security, including reproducible system configurations, declarative management, secure package handling, and immutable deployments. Participants will learn how to implement, harden, and maintain NixOS systems with security best practices at the forefront.</p>
 <section id="next-session" class="level3">
-<h3 data-anchor-id="next-session">Next Session</h3>
+<h3 class="anchored" data-anchor-id="next-session">Next Session</h3>
 <ul>
 <li><strong>Dates:</strong> August 15-16, 2025</li>
 <li><strong>Times:</strong> 9:00 AM - 5:00 PM each day</li>
@@ -623,20 +696,20 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="training-curriculum" class="level2">
-<h2 data-anchor-id="training-curriculum">Training Curriculum</h2>
+<h2 class="anchored" data-anchor-id="training-curriculum">Training Curriculum</h2>
 <section id="day-1-nixos-foundations-and-secure-configuration" class="level3">
-<h3 data-anchor-id="day-1-nixos-foundations-and-secure-configuration">Day 1: NixOS Foundations and Secure Configuration</h3>
+<h3 class="anchored" data-anchor-id="day-1-nixos-foundations-and-secure-configuration">Day 1: NixOS Foundations and Secure Configuration</h3>
 <p><strong>Morning Session: NixOS Security Fundamentals</strong> - Introduction to NixOS and its security philosophy - Understanding the Nix expression language for secure configurations - The security advantages of declarative system management - Setting up a reproducible NixOS environment - Hands-on exercise: Building your first secure NixOS configuration</p>
 <p><strong>Afternoon Session: System Hardening with NixOS</strong> - Implementing baseline security controls in NixOS - Secure user and service management - Network security configuration in NixOS - Filesystem security and encryption - Hands-on exercise: Hardening a NixOS system</p>
 </section>
 <section id="day-2-advanced-security-and-deployment" class="level3">
-<h3 data-anchor-id="day-2-advanced-security-and-deployment">Day 2: Advanced Security and Deployment</h3>
+<h3 class="anchored" data-anchor-id="day-2-advanced-security-and-deployment">Day 2: Advanced Security and Deployment</h3>
 <p><strong>Morning Session: Advanced NixOS Security Features</strong> - Package verification and trusted binary sources - Immutable system state and security implications - Rollbacks and system recovery from security perspective - Configuration testing and validation - Hands-on exercise: Implementing and testing advanced security controls</p>
 <p><strong>Afternoon Session: Secure Deployments and Management</strong> - NixOS deployment strategies for security-critical environments - Managing secrets in NixOS configurations - Monitoring and logging for security events - Automated security testing and compliance - Hands-on exercise: Deploying and managing a secure multi-component system</p>
 </section>
 </section>
 <section id="learning-outcomes" class="level2">
-<h2 data-anchor-id="learning-outcomes">Learning Outcomes</h2>
+<h2 class="anchored" data-anchor-id="learning-outcomes">Learning Outcomes</h2>
 <p>By completing this training, participants will be able to:</p>
 <ul>
 <li>Build reproducible and secure NixOS system configurations</li>
@@ -650,12 +723,12 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="training-methods" class="level2">
-<h2 data-anchor-id="training-methods">Training Methods</h2>
+<h2 class="anchored" data-anchor-id="training-methods">Training Methods</h2>
 <div class="row mt-4">
   <div class="col-md-6">
     <div class="card mb-4">
       <div class="card-header bg-primary text-white">
-        <h3 class="card-title mb-0">Hands-On Learning</h3>
+        <h3 class="card-title mb-0 anchored">Hands-On Learning</h3>
       </div>
       <div class="card-body">
         <p>This training emphasizes practical application with over 70% of course time dedicated to hands-on exercises:</p>
@@ -669,11 +742,11 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     </div>
   </div>
-  
+
   <div class="col-md-6">
     <div class="card mb-4">
       <div class="card-header bg-primary text-white">
-        <h3 class="card-title mb-0">Expert Instruction</h3>
+        <h3 class="card-title mb-0 anchored">Expert Instruction</h3>
       </div>
       <div class="card-body">
         <p>Our instructors bring specialized NixOS and security expertise:</p>
@@ -690,7 +763,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 </section>
 <section id="who-should-attend" class="level2">
-<h2 data-anchor-id="who-should-attend">Who Should Attend</h2>
+<h2 class="anchored" data-anchor-id="who-should-attend">Who Should Attend</h2>
 <p>This training is ideal for:</p>
 <ul>
 <li>System administrators seeking more secure infrastructure approaches</li>
@@ -703,7 +776,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>Participants should have basic Linux administration knowledge and familiarity with command-line interfaces. Prior experience with NixOS is helpful but not required.</p>
 </section>
 <section id="materials-and-resources" class="level2">
-<h2 data-anchor-id="materials-and-resources">Materials and Resources</h2>
+<h2 class="anchored" data-anchor-id="materials-and-resources">Materials and Resources</h2>
 <p>Participants will receive:</p>
 <ul>
 <li>Comprehensive digital training manual</li>
@@ -716,22 +789,12 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>Access to NixOS security community resources</li>
 </ul>
 </section>
-<section id="lead-instructor" class="level2">
-<h2 data-anchor-id="lead-instructor">Lead Instructor</h2>
-<div class="row mt-4 mb-5">
-  <div class="col-md-3">
-    <img loading="lazy" src="../../../assets/images/stock/hackathon-team.webp" alt="Instructor Photo" class="img-fluid rounded">
-  </div>
-  <div class="col-md-9">
-    <h3>CHENIST Team</h3>
-    <p><strong>Chief Security Officer, chen.ist</strong></p>
-    <p>Alex has been working with NixOS in security-critical environments for over 5 years, implementing secure system configurations for financial and healthcare organizations. He combines practical security expertise with deep knowledge of NixOS's unique features for security hardening and immutable infrastructure.</p>
-    <p>As a contributor to several NixOS security modules, Alex brings real-world experience in leveraging declarative configuration management for enhanced security posture and compliance requirements.</p>
-  </div>
-</div>
+<section id="instructor" class="level2">
+<h2 class="anchored" data-anchor-id="instructor">Instructor</h2>
+<p>This training is delivered by the <strong>CHENIST Team</strong> — experienced practitioners who combine deep technical expertise with practical, real-world teaching. Our trainers work on live engagements and bring current industry knowledge directly into the classroom.</p>
 </section>
 <section id="testimonials" class="level2">
-<h2 data-anchor-id="testimonials">Testimonials</h2>
+<h2 class="anchored" data-anchor-id="testimonials">Testimonials</h2>
 <div class="row mt-5">
   <div class="col-md-6">
     <div class="card mb-4">
@@ -741,7 +804,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     </div>
   </div>
-  
+
   <div class="col-md-6">
     <div class="card mb-4">
       <div class="card-body">
@@ -753,28 +816,53 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 </section>
 <section id="related-offerings" class="level2">
-<h2 data-anchor-id="related-offerings">Related Offerings</h2>
+<h2 class="anchored" data-anchor-id="related-offerings">Related Offerings</h2>
 <p>If you’re interested in this training, you might also consider:</p>
 <ul>
 <li><a href="../../../academy/courses/nixos-cybersecurity/">NixOS Cybersecurity Course</a> - Our comprehensive 12-week course for in-depth learning</li>
 <li><a href="../../../academy/trainings/linux-admin-fundamentals/">Linux Administration Fundamentals Training</a> - For those needing more Linux background</li>
 <li><a href="../../../academy/trainings/cybersecurity-essentials/">Cybersecurity Essentials Training</a> - For a broader overview of security concepts</li>
 </ul>
-</section></div>
-
+</section>
+<section id="download" class="level2">
+<h2 class="anchored" data-anchor-id="download">Download</h2>
+<div style="margin: 2rem 0; padding: 2rem 2.5rem; background: rgba(245,166,35,0.06); border: 1.5px solid rgba(245,166,35,0.2); border-radius: 16px;">
+<p style="margin: 0 0 0.5rem; font-weight: 600;">
+Download Training Details
+</p>
+<p style="margin: 0 0 1rem; font-size: 0.9rem; color: #86868b;">
+Get the full training outline, pricing, and contact information as a PDF.
+</p>
+<p><a href="index.pdf" class="m-b" style="font-size: 0.95rem; padding: 0.7rem 2rem; background: #F5A623;"><i class="bi bi-file-earmark-pdf me-2"></i>Download PDF</a></p>
+</div>
+</section>
+<section id="contact" class="level2">
+<h2 class="anchored" data-anchor-id="contact">Contact</h2>
+<p>Interested in this training?</p>
+<ul>
+<li><strong>Email:</strong> <a href="mailto:office@chen.ist">office@chen.ist</a></li>
+<li><strong>Web:</strong> <a href="../../../booking/">Book a free consultation</a></li>
+</ul>
+<div class="m">
 <div class="m-cta">
   <div class="container">
-    <h2>Ready to get started?</h2>
-    <p>Book a call to discuss your goals and find the right program.</p>
+    <div class="m-d"></div>
+    <h2 class="anchored">Book this training<br>for your team</h2>
+    <p>Custom workshops with organization-specific scenarios and flexible scheduling.</p>
+    <a href="../../../booking/" class="m-b">Book a Call</a>
+    <div class="m-sm">
+      <i class="bi bi-check-circle-fill"></i> Expert trainers &nbsp;
+      <i class="bi bi-check-circle-fill"></i> Practical focus &nbsp;
+      <i class="bi bi-check-circle-fill"></i> Team pricing
+    </div>
   </div>
 </div>
-
 </div>
 
 
+</section>
 
-
-
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1383,6 +1471,7 @@ document.addEventListener('DOMContentLoaded', function() {
       a.href = l.prefix + (cleanPath || '/');
       a.textContent = l.label;
       if (l.code === currentLang) a.className = 'active';
+      a.addEventListener('click', function(e) { localStorage.setItem('chen-lang-choice', this.textContent.toLowerCase() === 'en' ? 'en' : ''); });
       langsDiv.appendChild(a);
     }
 
@@ -1397,11 +1486,10 @@ document.addEventListener('DOMContentLoaded', function() {
   })();
 });
 </script>
-<!-- Cal.com floating button -->
+<!-- Cal.com embed (for booking page only, no floating button) -->
 <script>
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", {origin:"https://cal.com"});
-  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
