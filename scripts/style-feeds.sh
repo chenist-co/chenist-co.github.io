@@ -1,6 +1,6 @@
 #!/bin/bash
 # Inject XSL stylesheet reference into RSS XML feeds
-for f in _site/blog.xml _site/ro/blog.xml _site/de/blog.xml _site/sv/blogg.xml; do
+for f in _site/blog.xml _site/ro/blog.xml _site/de/blog.xml _site/sv/blog.xml; do
   if [ -f "$f" ]; then
     sed -i '' 's|<?xml version="1.0" encoding="UTF-8"?>|<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/feed.xsl"?>|' "$f"
     echo "Styled: $f"
@@ -8,7 +8,7 @@ for f in _site/blog.xml _site/ro/blog.xml _site/de/blog.xml _site/sv/blogg.xml; 
 done
 
 # Create blog directory redirects (can't use .qmd or they pollute listings)
-for lang_path in "ro/blog" "de/blog" "sv/blogg"; do
+for lang_path in "ro/blog" "de/blog" "sv/blog"; do
   lang=$(echo "$lang_path" | cut -d'/' -f1)
   blog_name=$(echo "$lang_path" | cut -d'/' -f2)
   mkdir -p "_site/$lang_path"

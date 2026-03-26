@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Utforska omfattande kurser inom cybersäkerhet, open source-utveckling, Linux-administration, dataskydd och säkerhetsmedvetenhet.">
+<meta name="description" content="chen.ist Academy-kurser genomförs på engelska och rumänska. Bli partner för att erbjuda utbildningar i ditt företag.">
 
 <title>Academy Kurser – chen.ist</title>
 <style>
@@ -76,11 +76,11 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <meta property="og:title" content="Academy Kurser – chen.ist">
-<meta property="og:description" content="Utforska omfattande kurser inom cybersäkerhet, open source-utveckling, Linux-administration, dataskydd och säkerhetsmedvetenhet.">
+<meta property="og:description" content="chen.ist Academy-kurser genomförs på engelska och rumänska. Bli partner för att erbjuda utbildningar i ditt företag.">
 <meta property="og:image" content="https://chen.ist/sv/academy/assets/images/og-image.png">
 <meta property="og:site_name" content="chen.ist">
 <meta name="twitter:title" content="Academy Kurser – chen.ist">
-<meta name="twitter:description" content="Utforska omfattande kurser inom cybersäkerhet, open source-utveckling, Linux-administration, dataskydd och säkerhetsmedvetenhet.">
+<meta name="twitter:description" content="chen.ist Academy-kurser genomförs på engelska och rumänska. Bli partner för att erbjuda utbildningar i ditt företag.">
 <meta name="twitter:image" content="https://chen.ist/sv/academy/assets/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 </head><body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -322,15 +322,53 @@ ul.task-list li input[type="checkbox"] {
   .navbar .nav-link { font-size: 0.82rem !important; }
 }
 @media (max-width: 767.98px) {
-  .navbar-brand .navbar-title { font-size: 1rem; }
+  .navbar { min-height: 54px !important; }
+  .navbar-brand .navbar-title { font-size: 0.95rem; }
   .navbar .navbar-collapse {
     background: #0a0a0a;
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 10px;
-    padding: 1rem;
-    margin-top: 0.5rem;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 1.25rem;
+    margin-top: 0.75rem;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    max-height: 75vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
-  .navbar .navbar-cta { display: block; text-align: center; margin: 0.75rem 0 0; }
+  .navbar .nav-link {
+    font-size: 0.9rem !important;
+    padding: 0.65rem 0.75rem !important;
+    border-radius: 10px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .navbar .nav-link:active { background: rgba(129,189,74,0.08); }
+  .navbar .dropdown-menu {
+    border: none !important;
+    padding: 0 0 0 1rem !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+  .navbar .dropdown-item {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+  }
+  .navbar .navbar-cta {
+    display: block;
+    text-align: center;
+    margin: 0.75rem 0 0;
+    padding: 0.75rem 1.5rem;
+    border-radius: 14px;
+    min-height: 44px;
+  }
+  .navbar-toggler { border: none !important; padding: 0.5rem; }
+  .navbar-toggler:focus { box-shadow: none !important; }
 }
 </style>
 
@@ -368,7 +406,34 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="../../manifest.json">
+<meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<script>
+(function() {
+  var path = window.location.pathname;
+  // Only redirect on English pages (no language prefix)
+  if (path.match(/^\/(ro|sv|de)\//)) return;
+  // Don't redirect if user explicitly chose English
+  if (localStorage.getItem('chen-lang-choice') === 'en') return;
+  // Don't redirect if already redirected this session
+  if (sessionStorage.getItem('chen-lang-redirected')) return;
+  // Detect browser language
+  var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  var target = null;
+  if (lang.startsWith('ro')) target = 'ro';
+  else if (lang.startsWith('sv')) target = 'sv';
+  else if (lang.startsWith('de')) target = 'de';
+  if (target) {
+    sessionStorage.setItem('chen-lang-redirected', '1');
+    window.location.href = '/' + target + path;
+  }
+})();
+</script>
 <link rel="preload" href="../../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
 <meta name="view-transition" content="same-origin">
@@ -475,6 +540,10 @@ document.addEventListener('DOMContentLoaded', function() {
     <a class="dropdown-item" href="../../services/digital-resilience/index.html">
  <span class="dropdown-text">Digital Resilience</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../../services/gdpr/index.html">
+ <span class="dropdown-text">GDPR Compliance</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -524,10 +593,29 @@ document.addEventListener('DOMContentLoaded', function() {
     <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blogs</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../resources/index.html"> 
-<span class="menu-text">Resources</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Resources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
+        <li>
+    <a class="dropdown-item" href="../../resources/index.html">
+ <span class="dropdown-text">All Resources</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../../resources/tools/index.html">
+ <span class="dropdown-text">Tools</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../compare.html">
+ <span class="dropdown-text">Why Open Source</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../faq.html">
+ <span class="dropdown-text">FAQ</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item dropdown ">
@@ -538,6 +626,10 @@ document.addEventListener('DOMContentLoaded', function() {
         <li>
     <a class="dropdown-item" href="../../about/index.html">
  <span class="dropdown-text">About</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../about/team.html">
+ <span class="dropdown-text">Team</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../about/csr.html">
@@ -593,56 +685,67 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <header id="title-block-header">
 <h1 class="title display-7">Academy Kurser</h1>
-<p class="subtitle lead">Omfattande tekniska utbildningsprogram</p>
 
 </header>
 
 
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
-    <h1>Academy <span class="gr">Kurser</span></h1>
-    <p>Omfattande flerveckorsprogram som bygger djup expertis genom praktiska projekt och expertundervisning.</p>
+<div class="ev-hero" style="min-height:50vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/code-screen.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Academy</div>
+    <h1>Kurser</h1>
+    <p>Flerveckorsprogram som bygger djup expertis genom praktiska projekt och expertinstruktion.</p>
   </div>
 </div>
 
-<div class="m-bg m-bg-squares">
-  <div class="container">
-    <h2>Sju kurser, ett mål</h2>
-    <p class="sub">Praktiska färdigheter undervisade av utövare, inte läroböcker.</p>
-    <div class="row g-5">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-code-slash"></i><h3>Open Source-utveckling</h3><p>Git-arbetsflöden, licensiering och bidrag till riktiga projekt. 8 veckor.</p><a href="../../sv/academy/courses/open-source-development/" class="m-lk">Kursdetaljer</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-shield-lock"></i><h3>Praktisk cybersäkerhet</h3><p>Nätverkssäkerhet, penetrationstestning och incidenthantering. 12 veckor.</p><a href="../../sv/academy/courses/practical-cybersecurity/" class="m-lk">Kursdetaljer</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-terminal"></i><h3>Unix/Linux-administration</h3><p>Skriptning, tjänstehantering och prestandaoptimering. 10 veckor.</p><a href="../../sv/academy/courses/unix-linux-administration/" class="m-lk">Kursdetaljer</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-file-earmark-lock"></i><h3>Dataskydd &amp; Integritet</h3><p>GDPR, CCPA, privacy-by-design och incidenthantering vid dataintrång. 6 veckor.</p><a href="../../sv/academy/courses/data-protection-privacy/" class="m-lk">Kursdetaljer</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-people"></i><h3>Human Firewall</h3><p>Säkerhetsmedvetenhet, försvar mot social engineering och kulturbyggande. 4 veckor.</p><a href="../../sv/academy/courses/human-firewall-security-awareness/" class="m-lk">Kursdetaljer</a></div></div>
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-bug"></i><h3>Cyberhygien Essentials</h3><p>Digital hotmedvetenhet, enhetsskydd och säkra rutiner. 6 veckor.</p><a href="../../sv/academy/courses/cyberhygiene-essentials/" class="m-lk">Kursdetaljer</a></div></div>
-    </div>
-    <div class="row g-5 mt-2 justify-content-center">
-      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-snow"></i><h3>NixOS för cybersäkerhet</h3><p>Deklarativ säkerhet, reproducerbara miljöer och systemhärdning. 4 veckor.</p><a href="../../sv/academy/courses/nixos-cybersecurity/" class="m-lk">Kursdetaljer</a></div></div>
+<div class="m-bg" style="padding:5rem 0;">
+  <div class="container" style="max-width:750px;">
+    <div style="background:rgba(245,166,35,0.06); border:1px solid rgba(245,166,35,0.15); border-radius:16px; padding:2.5rem; text-align:center;">
+      <i class="bi bi-translate" style="font-size:2rem; color:#F5A623; display:block; margin-bottom:1rem;"></i>
+      <h2 style="font-size:1.5rem; margin-bottom:0.75rem;">Kurser på engelska &amp; rumänska</h2>
+      <p style="color:rgba(255,255,255,0.6); max-width:500px; margin:0 auto 1.5rem;">Våra kurser genomförs för närvarande på engelska och rumänska. Klicka på valfri kurs nedan för fullständig information.</p>
+      <a href="../../academy/courses.html" class="m-b" style="background:#F5A623;">Se alla kurser (EN)</a>
     </div>
   </div>
 </div>
 
-<div class="m-s">
+<div class="m-s" style="padding:6rem 0;">
   <div class="container">
-    <h2>Tre sätt att lära dig</h2>
-    <p class="sub">Välj det format som passar ditt schema.</p>
-    <div class="row g-5">
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-camera-video"></i><h3>Lärarledd online</h3><p>Live virtuella sessioner med interaktion i realtid, guidade övningar och inspelade repriser.</p></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-play-circle"></i><h3>I egen takt online</h3><p>On-demand-videolektioner, nedladdningsbara resurser och forumstöd i din egen takt.</p></div></div>
-      <div class="col-md-4"><div class="m-t"><i class="bi bi-building"></i><h3>Workshops på plats</h3><p>Intensiva praktiska sessioner i våra lokaler eller på plats hos din organisation.</p></div></div>
-    </div>
-  </div>
-</div>
-
-<div class="m-bg m-bg-squares">
-  <div class="container">
-    <div class="m-n">
-      <div><div class="m-nn">7</div><div class="m-nl">Kurser</div></div>
-      <div><div class="m-nn">4–12</div><div class="m-nl">Veckor per kurs</div></div>
-      <div><div class="m-nn">80%</div><div class="m-nl">Praktiskt</div></div>
+    <h2>Sju kurser</h2>
+    <p class="sub">Praktiska färdigheter undervisade av yrkesverksamma, inte läroböcker.</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="../../academy/courses/practical-cybersecurity/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../../assets/images/stock/cybersecurity-monitor.webp" alt="Cybersäkerhet"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">12 veckor</div><h3>Practical Cybersecurity</h3><p>Nätverkssäkerhet, pentesting och incidenthantering.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../../academy/courses/open-source-development/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../../assets/images/stock/code-screen.webp" alt="Open Source"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">8 veckor</div><h3>Open Source Development</h3><p>Git-arbetsflöden, licensiering och bidrag till riktiga projekt.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../../academy/courses/unix-linux-administration/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../../assets/images/stock/terminal-green.webp" alt="Linux"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">10 veckor</div><h3>Unix/Linux Administration</h3><p>Shell-skriptning, tjänstehantering och prestandaoptimering.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../../academy/courses/data-protection-privacy/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../../assets/images/stock/network-closeup.webp" alt="Dataskydd"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">6 veckor</div><h3>Data Protection &amp; Privacy</h3><p>GDPR, CCPA, privacy-by-design och incidenthantering.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../../academy/courses/cyberhygiene-essentials/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../../assets/images/stock/hacker-screens.webp" alt="Cyberhygien"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">6 veckor</div><h3>Cyberhygiene Essentials</h3><p>Digitalt hotmedvetande, enhetsskydd och säkra vanor.</p></div></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="../../academy/courses/human-firewall-security-awareness/" style="text-decoration:none;">
+          <div class="pg-card"><img loading="lazy" src="../../assets/images/stock/team-macbooks.webp" alt="Human Firewall"><div class="pg-card-body"><div style="font-size:0.7rem;font-weight:700;color:#F5A623;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;">4 veckor</div><h3>Human Firewall</h3><p>Säkerhetsmedvetenhet, social engineering-försvar och kulturbyggande.</p></div></div>
+        </a>
+      </div>
     </div>
   </div>
 </div>
@@ -650,13 +753,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="m-cta">
   <div class="container">
     <div class="m-d"></div>
-    <h2>Hitta rätt kurs<br>för ditt team</h2>
-    <p>Anpassade grupper, flexibel schemaläggning och grupprabatter tillgängliga för organisationer.</p>
-    <a href="../../sv/booking/" class="m-b">Boka ett samtal</a>
-    <div class="m-sm">
-      <i class="bi bi-check-circle-fill"></i> Expertinstruktörer &nbsp;
-      <i class="bi bi-check-circle-fill"></i> Certifiering ingår &nbsp;
-      <i class="bi bi-check-circle-fill"></i> Uppdateras kvartalsvis
+    <h2>Vill du erbjuda kurser<br>i ditt företag?</h2>
+    <p>Bli partner med vår academy. Vi hjälper dig organisera anpassade kurser och utbildningar på plats eller online.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="../../sv/booking/" class="m-b" style="background:#F5A623;"><i class="bi bi-handshake me-2"></i>Bli partner</a>
+      <a href="../../sv/academy/partnerships.html" class="m-bo" style="border-color:#F5A623; color:#F5A623;">Läs mer om partnerskap</a>
     </div>
   </div>
 </div>
@@ -1101,9 +1202,9 @@ document.addEventListener('DOMContentLoaded', function() {
         <div style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:1rem; font-family:'Source Code Pro',monospace;">chen<span style="color:#81BD4A;">.</span>ist</div>
         <p style="margin-bottom:1rem; color:rgba(255,255,255,0.4);" class="footer-i18n" data-key="tagline">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
         <div style="display:flex; gap:0.75rem; margin-bottom:1rem;">
-          <a href="https://github.com/chenist" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-github"></i></a>
-          <a href="https://linkedin.com/in/chenistsec" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-linkedin"></i></a>
-          <a href="https://alinmechenici.substack.com" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-envelope"></i></a>
+          <a href="https://github.com/chenist" target="_blank" class="footer-social"><i class="bi bi-github"></i></a>
+          <a href="https://linkedin.com/in/chenistsec" target="_blank" class="footer-social"><i class="bi bi-linkedin"></i></a>
+          <a href="https://alinmechenici.substack.com" target="_blank" class="footer-social"><i class="bi bi-envelope"></i></a>
         </div>
         <p style="color:rgba(255,255,255,0.2); font-size:0.75rem;">© 2026 chen.ist</p>
       </div>
@@ -1114,6 +1215,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <a href="../../services/cloud/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
         <a href="../../services/nis2/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="nis2">NIS2 Compliance</a>
         <a href="../../services/digital-resilience/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="resilience">Digital Resilience</a>
+        <a href="../../services/gdpr/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">GDPR Compliance</a>
       </div>
       <div>
         <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="academy">Academy</div>
@@ -1128,6 +1230,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <a href="../../about/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="about">About</a>
         <a href="../../blog.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
         <a href="../../contact.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="contact">Contact</a>
+        <a href="../../faq.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">FAQ</a>
         <a href="../../privacy.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="privacy">Privacy</a>
         <a href="../../terms.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="terms">Terms</a>
       </div>
@@ -1143,9 +1246,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <style>
 @media (max-width:991px) { footer > div > div { grid-template-columns: 2fr 1fr 1fr !important; } }
-@media (max-width:767px) { footer > div > div { grid-template-columns: 1fr 1fr !important; gap:2rem !important; } }
-@media (max-width:480px) { footer > div > div { grid-template-columns: 1fr !important; } }
+@media (max-width:767px) {
+  footer { padding: 3rem 0 2rem !important; font-size: 0.8rem !important; }
+  footer > div > div { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
+  footer a { padding: 0.3rem 0 !important; min-height: 36px; display: inline-flex; align-items: center; }
+}
+@media (max-width:480px) {
+  footer > div > div { grid-template-columns: 1fr !important; gap: 1.75rem !important; }
+  footer { padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px)) !important; }
+}
 footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
+footer a { -webkit-tap-highlight-color: transparent; }
+.footer-social { display:flex !important; align-items:center !important; justify-content:center !important; width:40px !important; height:40px !important; min-height:40px !important; border-radius:50% !important; background:rgba(255,255,255,0.06) !important; color:rgba(255,255,255,0.5) !important; text-decoration:none !important; font-size:1rem !important; padding:0 !important; }
+.footer-social:hover { background:rgba(129,189,74,0.15) !important; color:#81BD4A !important; }
 </style>
 
 <script>
@@ -1160,7 +1273,7 @@ footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
     if (href && href.startsWith('/') && !href.startsWith('//')) {
       // Swedish blog is at /sv/blogg.html, not /sv/blog.html
       if (lang === 'sv' && href === '/blog.html') {
-        a.setAttribute('href', '/sv/blogg.html');
+        a.setAttribute('href', '/sv/blog.html');
       } else {
         a.setAttribute('href', prefix + href);
       }
@@ -1274,6 +1387,7 @@ document.addEventListener('DOMContentLoaded', function() {
       a.href = l.prefix + (cleanPath || '/');
       a.textContent = l.label;
       if (l.code === currentLang) a.className = 'active';
+      a.addEventListener('click', function(e) { localStorage.setItem('chen-lang-choice', this.textContent.toLowerCase() === 'en' ? 'en' : ''); });
       langsDiv.appendChild(a);
     }
 
@@ -1288,11 +1402,12 @@ document.addEventListener('DOMContentLoaded', function() {
   })();
 });
 </script>
-<!-- Cal.com floating button -->
+<!-- Cal.com embed (for booking page only, no floating button) -->
 <script>
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-  Cal("init", {origin:"https://cal.com"});
-  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
+  if (window.location.pathname.includes('/booking/')) {
+    Cal("init", {origin:"https://cal.com"});
+  }
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {

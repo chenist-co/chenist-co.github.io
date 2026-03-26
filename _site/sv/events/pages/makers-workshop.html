@@ -1199,7 +1199,7 @@ footer a { -webkit-tap-highlight-color: transparent; }
     if (href && href.startsWith('/') && !href.startsWith('//')) {
       // Swedish blog is at /sv/blogg.html, not /sv/blog.html
       if (lang === 'sv' && href === '/blog.html') {
-        a.setAttribute('href', '/sv/blogg.html');
+        a.setAttribute('href', '/sv/blog.html');
       } else {
         a.setAttribute('href', prefix + href);
       }
