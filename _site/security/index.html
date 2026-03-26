@@ -532,25 +532,25 @@ document.addEventListener('DOMContentLoaded', function() {
 <span class="menu-text">Contact</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-lang" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Lang</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">🌐</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-lang">    
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-">    
         <li>
     <a class="dropdown-item" href="../index.html">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../ro/index.html">
- <span class="dropdown-text">Romanian</span></a>
+ <span class="dropdown-text">Română</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../sv/index.html">
- <span class="dropdown-text">Swedish</span></a>
+ <span class="dropdown-text">Svenska</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../de/index.html">
- <span class="dropdown-text">German</span></a>
+ <span class="dropdown-text">Deutsch</span></a>
   </li>  
     </ul>
   </li>
@@ -1205,6 +1205,49 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     
+    // Language switcher — intercept lang dropdown and rewrite to same page
+    document.querySelectorAll('.dropdown-item').forEach(function(link) {
+      var href = link.getAttribute('href') || '';
+      var isLang = false;
+      var targetLang = '';
+
+      if (href.match(/^\/?index\.html$/) || href === '/' || href.match(/^\.\.\/?index\.html$/)) {
+        isLang = true; targetLang = 'en';
+      } else if (href.match(/\/?ro\//) || href.match(/^\.\.\/ro\//)) {
+        isLang = true; targetLang = 'ro';
+      } else if (href.match(/\/?sv\//) || href.match(/^\.\.\/sv\//)) {
+        isLang = true; targetLang = 'sv';
+      } else if (href.match(/\/?de\//) || href.match(/^\.\.\/de\//)) {
+        isLang = true; targetLang = 'de';
+      }
+
+      var text = (link.textContent || '').trim();
+      if (text === 'English' || text === 'Română' || text === 'Svenska' || text === 'Deutsch') {
+        isLang = true;
+        if (text === 'English') targetLang = 'en';
+        if (text === 'Română') targetLang = 'ro';
+        if (text === 'Svenska') targetLang = 'sv';
+        if (text === 'Deutsch') targetLang = 'de';
+      }
+
+      if (!isLang) return;
+
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var path = window.location.pathname;
+        var cleanPath = path.replace(/^\/(ro|de|sv)\//, '/').replace(/^\/(ro|de|sv)$/, '/');
+
+        var newPath;
+        if (targetLang === 'en') {
+          newPath = cleanPath;
+        } else {
+          newPath = '/' + (targetLang === 'sv' ? 'sv' : targetLang) + (cleanPath === '/' ? '/' : cleanPath);
+        }
+
+        window.location.href = newPath;
+      });
+    });
+
     // Enable Bootstrap tooltips
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {

@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="chen.ist delivers digital infrastructure, cybersecurity, cloud services, and technology education for modern organizations.">
+<meta name="description" content="Blue Team cybersecurity operations, NIS2 Directive compliance, CISO as a Service, threat hunting, and incident response. Protect your organization with chen.ist.">
 
 <title>chen.ist — Build. Secure. Grow. – chen.ist</title>
 <style>
@@ -672,7 +672,11 @@ footer { margin-top: 0 !important; }
 <!-- main -->
 
 
+<header id="title-block-header">
+<h1 class="title display-7">Security</h1>
+<p class="subtitle lead">Proactive cybersecurity and NIS2 compliance for modern organizations</p>
 
+</header>
 
 
 <div class="hp">
@@ -866,6 +870,92 @@ footer { margin-top: 0 !important; }
 </div>
 
 
+<div class="m">
+
+<div class="m-hero">
+  <div class="container">
+    <h1>Proactive <span class="gr">Security</span></h1>
+    <p>Monitor threats, respond to incidents, and stay compliant. All managed for you.</p>
+  </div>
+</div>
+
+<div class="m-bg m-bg-squares">
+  <div class="container">
+    <h2>Security, simplified</h2>
+    <p class="sub">Four services working together to protect your business.</p>
+    <div class="row g-5">
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-shield-check"></i><h3>SOC Monitoring</h3><p>24/7 surveillance and real-time threat detection.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-search"></i><h3>Threat Hunting</h3><p>Proactive search for threats that evade detection.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-clipboard-check"></i><h3>NIS2 Compliance</h3><p>Gap analysis and compliance roadmaps for the EU directive.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-person-badge"></i><h3>CISO as a Service</h3><p>Security leadership without a full-time hire.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="m-s">
+  <div class="container">
+    <div class="m-r">
+      <div class="m-ri"><img loading="lazy" src="./assets/images/stock/server-room-dark.jpg" alt="Security Operations Center"></div>
+      <div class="m-rt">
+        <h2>Always watching.<br>Always ready.</h2>
+        <p>Our SOC operates around the clock with open-source tools you can audit. We detect, investigate, and respond — so you can focus on your business.</p>
+        <div class="lk"><a href="https://cal.com/chenist" target="_blank" class="m-lk">Talk to our team</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="m-bg m-bg-stripes">
+  <div class="container">
+    <div class="m-r rv">
+      <div class="m-ri"><img loading="lazy" src="./assets/images/stock/analyst-monitors.webp" alt="Compliance monitoring"></div>
+      <div class="m-rt">
+        <h2>NIS2 compliance.<br>From gap to green.</h2>
+        <p>The directive is enforceable now. We take you from scoping through full compliance — with board-ready documentation at every step.</p>
+        <div class="lk"><a href="https://cal.com/chenist" target="_blank" class="m-lk">Check your NIS2 status</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="m-s">
+  <div class="container">
+    <div class="m-r">
+      <div class="m-ri"><img loading="lazy" src="./assets/images/stock/lock-keyboard.webp" alt="Infrastructure"></div>
+      <div class="m-rt">
+        <h2>When it happens.<br>You'll be ready.</h2>
+        <p>We build, test, and maintain your incident response plan. Every phase documented. Every role defined. NIS2's 24-hour reporting — covered.</p>
+        <div class="lk"><a href="https://cal.com/chenist" target="_blank" class="m-lk">Build your IR plan</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="m-bg m-bg-mountains">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn">197</div><div class="m-nl">Days to detect (avg)</div></div>
+      <div><div class="m-nn">&lt;24h</div><div class="m-nl">Our response time</div></div>
+      <div><div class="m-nn">EUR 10M</div><div class="m-nl">Max NIS2 fine</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Get started with a<br>free assessment</h2>
+    <p>30 minutes. No pitch. Just an honest look at where you stand.</p>
+    <a href="https://cal.com/chenist" target="_blank" class="m-b">Book your assessment</a>
+    <div class="m-sm">
+      <i class="bi bi-check-circle-fill"></i> Free &nbsp;
+      <i class="bi bi-check-circle-fill"></i> 30 min &nbsp;
+      <i class="bi bi-check-circle-fill"></i> Report in 5 days
+    </div>
+  </div>
+</div>
+
+</div>
 
 
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1361,6 +1451,82 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
   document.querySelectorAll('.m-s, .m-bg, .m-cta, .m-r, .m-n, .hp-sec, .hp-stats, .ev-card, .ev-past, .m-t').forEach(el => observer.observe(el));
+
+  // Breadcrumb + Language bar
+  (function() {
+    var path = window.location.pathname;
+    var currentLang = 'en';
+    var cleanPath = path;
+
+    if (path.match(/^\/(ro|de|sv)\//)) {
+      currentLang = path.split('/')[1];
+      cleanPath = path.replace(/^\/(ro|de|sv)/, '');
+    }
+
+    var parts = cleanPath.split('/').filter(function(p) { return p && p !== 'index.html'; });
+
+    var bar = document.createElement('div');
+    bar.className = 'path-bar';
+    var inner = document.createElement('div');
+    inner.className = 'path-bar-inner';
+
+    // Breadcrumbs
+    var crumbs = document.createElement('div');
+    crumbs.className = 'path-crumbs';
+    var homeLink = document.createElement('a');
+    homeLink.href = currentLang === 'en' ? '/' : '/' + currentLang + '/';
+    homeLink.textContent = 'Home';
+    crumbs.appendChild(homeLink);
+
+    var accumulated = currentLang === 'en' ? '' : '/' + currentLang;
+    for (var i = 0; i < parts.length; i++) {
+      var sep = document.createElement('span');
+      sep.className = 'sep';
+      sep.textContent = ' \u203A ';
+      crumbs.appendChild(sep);
+      var name = parts[i].replace('.html', '').replace(/-/g, ' ');
+      name = name.charAt(0).toUpperCase() + name.slice(1);
+      accumulated += '/' + parts[i];
+      if (i === parts.length - 1) {
+        var cur = document.createElement('span');
+        cur.className = 'current';
+        cur.textContent = name;
+        crumbs.appendChild(cur);
+      } else {
+        var link = document.createElement('a');
+        link.href = accumulated + '/';
+        link.textContent = name;
+        crumbs.appendChild(link);
+      }
+    }
+
+    // Language buttons
+    var langsDiv = document.createElement('div');
+    langsDiv.className = 'path-langs';
+    var langs = [
+      { code: 'en', label: 'EN', prefix: '' },
+      { code: 'ro', label: 'RO', prefix: '/ro' },
+      { code: 'sv', label: 'SV', prefix: '/sv' },
+      { code: 'de', label: 'DE', prefix: '/de' }
+    ];
+    for (var j = 0; j < langs.length; j++) {
+      var l = langs[j];
+      var a = document.createElement('a');
+      a.href = l.prefix + (cleanPath || '/');
+      a.textContent = l.label;
+      if (l.code === currentLang) a.className = 'active';
+      langsDiv.appendChild(a);
+    }
+
+    inner.appendChild(crumbs);
+    inner.appendChild(langsDiv);
+    bar.appendChild(inner);
+
+    var header = document.getElementById('quarto-header');
+    if (header && header.nextSibling) {
+      header.parentNode.insertBefore(bar, header.nextSibling);
+    }
+  })();
 });
 </script>
 <!-- Cal.com floating button -->

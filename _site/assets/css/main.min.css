@@ -166,3 +166,17 @@ html[data-bs-theme="dark"] .page-layout-article .card{background:#1a1a1d !import
 .m-bg-mountains h2 { color: #fff !important; }
 .m-bg-mountains .m-t i { color: #81BD4A; }
 .mb-blog{margin-bottom:10rem !important;}
+
+/* Breadcrumb + Language Bar */
+.path-bar{background:#0a0a0a;border-bottom:1px solid rgba(255,255,255,0.06);padding:0.5rem 0;font-size:0.75rem;position:sticky;top:56px;z-index:1030;}
+.path-bar-inner{max-width:1200px;margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;align-items:center;}
+.path-crumbs{display:flex;align-items:center;gap:0.4rem;color:rgba(255,255,255,0.35);}
+.path-crumbs a{color:rgba(255,255,255,0.45);text-decoration:none;transition:color 0.15s;}
+.path-crumbs a:hover{color:#81BD4A;text-decoration:none;}
+.path-crumbs .sep{color:rgba(255,255,255,0.2);}
+.path-crumbs .current{color:rgba(255,255,255,0.65);}
+.path-langs{display:flex;gap:0.25rem;}
+.path-langs a{display:inline-block;padding:0.15rem 0.5rem;border-radius:4px;color:rgba(255,255,255,0.4);text-decoration:none;font-weight:600;font-size:0.7rem;letter-spacing:0.03em;transition:all 0.15s;}
+.path-langs a:hover{color:#fff;background:rgba(255,255,255,0.08);text-decoration:none;}
+.path-langs a.active{color:#81BD4A;background:rgba(129,189,74,0.1);}
+@media(max-width:767px){.path-bar-inner{flex-direction:column;gap:0.4rem;align-items:flex-start;}.path-langs{align-self:flex-end;}}
