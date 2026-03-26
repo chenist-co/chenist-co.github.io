@@ -2,10 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Week 1 module exploring privacy fundamentals, the evolution of data protection, and key global legal frameworks including GDPR and CCPA.">
 
 <title>Week 1: Privacy Fundamentals and Legal Frameworks – chen.ist</title>
 <style>
@@ -33,18 +34,19 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../../assets/images/favicon.png" rel="icon" type="image/png">
 <script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../../site_libs/bootstrap/bootstrap-dark-b5057f3398a202b36a08d66ee4de0ec1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../../site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark-b37f6c1b9a99d16252d3ddd2c7074628.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,67 +75,15 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<style>
-.navbar-brand-container {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-brand {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-brand .navbar-title {
-  display: inline-block;
-  margin-left: 0;
-  color: #FFFFFF;
-  font-weight: 600;
-  font-size: 1.25rem;
-  letter-spacing: 0.5px;
-}
-
-@media (max-width: 767.98px) {
-  .navbar-brand .navbar-title {
-    font-size: 1.1rem;
-  }
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Find the navbar brand element that contains the logo
-  const navbarBrand = document.querySelector('.navbar-brand');
-  
-  if (navbarBrand) {
-    // Create a span for the CHENIST text
-    const titleSpan = document.createElement('span');
-    titleSpan.className = 'navbar-title';
-    titleSpan.textContent = 'CHENIST';
-    
-    // Append the span after the logo
-    navbarBrand.appendChild(titleSpan);
-  }
-});
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-
-<link rel="stylesheet" href="../../../../scss/styles.css">
-<link rel="stylesheet" href="../../../../scss/academy.scss">
-<link rel="stylesheet" href="../../../../scss/custom-hero.css">
 <meta property="og:title" content="Week 1: Privacy Fundamentals and Legal Frameworks – chen.ist">
-<meta property="og:description" content="Understanding the core concepts and regulations in data protection">
+<meta property="og:description" content="Week 1 module exploring privacy fundamentals, the evolution of data protection, and key global legal frameworks including GDPR and CCPA.">
+<meta property="og:image" content="https://chen.ist/academy/courses/data-protection-privacy/modules/assets/images/og-image.png">
 <meta property="og:site_name" content="chen.ist">
 <meta name="twitter:title" content="Week 1: Privacy Fundamentals and Legal Frameworks – chen.ist">
-<meta name="twitter:description" content="Understanding the core concepts and regulations in data protection">
-<meta name="twitter:card" content="summary">
-</head>
-
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<meta name="twitter:description" content="Week 1 module exploring privacy fundamentals, the evolution of data protection, and key global legal frameworks including GDPR and CCPA.">
+<meta name="twitter:image" content="https://chen.ist/academy/courses/data-protection-privacy/modules/assets/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+</head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -295,7 +245,158 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       toggleColorMode(false);
     }
-  </script>
+  </script><a href="#main-content" class="skip-link">Skip to main content</a>
+<style>
+/* Corporate navbar — solid dark, structured, professional */
+.navbar {
+  background: #0a0a0a !important;
+  border-bottom: 1px solid rgba(129,189,74,0.15);
+  padding: 0 !important;
+  font-size: 0.82rem;
+  min-height: 56px;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  height: 56px;
+}
+.navbar-brand-container { display: flex; align-items: center; }
+.navbar-brand { display: flex; align-items: center; gap: 0.5rem; }
+.navbar-brand .navbar-title {
+  display: inline-block;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: 'Source Code Pro', monospace;
+}
+.navbar-brand .brand-dot { color: #81BD4A; }
+.navbar .nav-link {
+  color: rgba(255,255,255,0.65) !important;
+  font-size: 0.78rem !important;
+  font-weight: 500;
+  padding: 0.5rem 0.85rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: color 0.15s;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active { color: #81BD4A !important; }
+.navbar .dropdown-menu {
+  background: #0a0a0a;
+  border: 1px solid rgba(129,189,74,0.12);
+  border-radius: 8px;
+  padding: 0.4rem;
+  margin-top: 0;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+.navbar .dropdown-item {
+  color: rgba(255,255,255,0.65);
+  font-size: 0.78rem;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 0.45rem 0.85rem;
+  letter-spacing: 0.02em;
+}
+.navbar .dropdown-item:hover {
+  background: rgba(129,189,74,0.1);
+  color: #81BD4A;
+}
+.navbar .quarto-navigation-tool { color: rgba(255,255,255,0.5) !important; }
+.navbar .quarto-navigation-tool:hover { color: #81BD4A !important; }
+.navbar .quarto-color-scheme-toggle { color: rgba(255,255,255,0.5) !important; }
+.navbar .quarto-color-scheme-toggle:hover { color: #81BD4A !important; }
+
+@media (max-width: 991px) {
+  .navbar .nav-link { font-size: 0.75rem !important; padding: 0.4rem 0.6rem !important; }
+}
+@media (max-width: 767.98px) {
+  .navbar-brand .navbar-title { font-size: 0.9rem; }
+  .navbar .navbar-collapse {
+    background: #0a0a0a;
+    border: 1px solid rgba(129,189,74,0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+  }
+  .navbar .nav-link {
+    text-transform: none;
+    font-size: 0.85rem !important;
+    padding: 0.5rem 0.75rem !important;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var navbarBrand = document.querySelector('.navbar-brand');
+  if (navbarBrand) {
+    var titleSpan = document.createElement('span');
+    titleSpan.className = 'navbar-title';
+    titleSpan.textContent = 'CHEN';
+    var dot = document.createElement('span');
+    dot.className = 'brand-dot';
+    dot.textContent = '.';
+    var ist = document.createTextNode('IST');
+    titleSpan.appendChild(dot);
+    titleSpan.appendChild(ist);
+    navbarBrand.appendChild(titleSpan);
+  }
+});
+</script>
+<script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<link rel="preload" href="../../../../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
+<meta name="view-transition" content="same-origin">
+<noscript><style>.m-s,.m-bg,.m-cta,.m-r,.m-n,.hp-sec,.hp-stats,.ev-card,.ev-past,.m-t{opacity:1!important;transform:none!important;}</style></noscript>
+<link rel="dns-prefetch" href="https://cal.com">
+<link rel="dns-prefetch" href="https://app.cal.com">
+<link rel="preconnect" href="https://cal.com" crossorigin="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "chen.ist",
+  "url": "https://chen.ist",
+  "logo": "https://chen.ist/assets/images/logo-light.svg",
+  "description": "Digital infrastructure, cybersecurity, cloud services, and technology education for modern organizations.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Str. Filantropiei, 1-3",
+    "addressLocality": "Craiova",
+    "postalCode": "200143",
+    "addressCountry": "RO"
+  },
+  "email": "office@chen.ist",
+  "sameAs": [
+    "https://github.com/chenist",
+    "https://linkedin.com/in/chenistsec",
+    "https://twitter.com/chenistsec"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Infrastructure", "url": "https://chen.ist/digital/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "NIS2 Compliance", "url": "https://chen.ist/services/nis2/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cybersecurity", "url": "https://chen.ist/services/cybersecurity/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cloud Services", "url": "https://chen.ist/services/cloud/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Resilience", "url": "https://chen.ist/services/digital-resilience/"}}
+    ]
+  }
+}
+</script>
+
+
+<link rel="stylesheet" href="../../../../assets/css/main.min.css">
+
+
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -303,7 +404,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../../assets/images/logo-light.svg" alt="" class="navbar-logo">
+    <img src="../../../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
+    <img src="../../../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -316,10 +418,41 @@ document.addEventListener('DOMContentLoaded', function() {
     <a class="nav-link" href="../../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../../../services.html"> 
-<span class="menu-text">Services</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-services" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Services</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-services">    
+        <li>
+    <a class="dropdown-item" href="../../../../services/index.html">
+ <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../security/index.html">
+ <span class="dropdown-text">Security</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../digital/index.html">
+ <span class="dropdown-text">Digital Infrastructure</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../services/nis2/index.html">
+ <span class="dropdown-text">NIS2 Compliance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../services/cybersecurity/index.html">
+ <span class="dropdown-text">Cybersecurity</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../services/cloud/index.html">
+ <span class="dropdown-text">Cloud Services</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../services/digital-resilience/index.html">
+ <span class="dropdown-text">Digital Resilience</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-academy" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Academy</span>
@@ -428,110 +561,87 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#privacy-fundamentals-and-legal-frameworks" id="toc-privacy-fundamentals-and-legal-frameworks" class="nav-link active" data-scroll-target="#privacy-fundamentals-and-legal-frameworks"><span class="header-section-number">1</span> Privacy Fundamentals and Legal Frameworks</a>
-  <ul class="collapse">
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">1.1</span> Learning Objectives</a></li>
-  <li><a href="#the-evolution-of-privacy" id="toc-the-evolution-of-privacy" class="nav-link" data-scroll-target="#the-evolution-of-privacy"><span class="header-section-number">1.2</span> The Evolution of Privacy</a>
-  <ul class="collapse">
-  <li><a href="#historical-context" id="toc-historical-context" class="nav-link" data-scroll-target="#historical-context"><span class="header-section-number">1.2.1</span> Historical Context</a></li>
-  <li><a href="#why-privacy-matters-today" id="toc-why-privacy-matters-today" class="nav-link" data-scroll-target="#why-privacy-matters-today"><span class="header-section-number">1.2.2</span> Why Privacy Matters Today</a></li>
-  </ul></li>
-  <li><a href="#key-global-privacy-regulations" id="toc-key-global-privacy-regulations" class="nav-link" data-scroll-target="#key-global-privacy-regulations"><span class="header-section-number">1.3</span> Key Global Privacy Regulations</a>
-  <ul class="collapse">
-  <li><a href="#general-data-protection-regulation-gdpr" id="toc-general-data-protection-regulation-gdpr" class="nav-link" data-scroll-target="#general-data-protection-regulation-gdpr"><span class="header-section-number">1.3.1</span> General Data Protection Regulation (GDPR)</a></li>
-  <li><a href="#california-consumer-privacy-act-ccpa-and-california-privacy-rights-act-cpra" id="toc-california-consumer-privacy-act-ccpa-and-california-privacy-rights-act-cpra" class="nav-link" data-scroll-target="#california-consumer-privacy-act-ccpa-and-california-privacy-rights-act-cpra"><span class="header-section-number">1.3.2</span> California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA)</a></li>
-  <li><a href="#other-regional-regulations" id="toc-other-regional-regulations" class="nav-link" data-scroll-target="#other-regional-regulations"><span class="header-section-number">1.3.3</span> Other Regional Regulations</a></li>
-  <li><a href="#sectoral-regulations-us" id="toc-sectoral-regulations-us" class="nav-link" data-scroll-target="#sectoral-regulations-us"><span class="header-section-number">1.3.4</span> Sectoral Regulations (US)</a></li>
-  </ul></li>
-  <li><a href="#core-privacy-principles" id="toc-core-privacy-principles" class="nav-link" data-scroll-target="#core-privacy-principles"><span class="header-section-number">1.4</span> Core Privacy Principles</a>
-  <ul class="collapse">
-  <li><a href="#lawfulness-fairness-and-transparency" id="toc-lawfulness-fairness-and-transparency" class="nav-link" data-scroll-target="#lawfulness-fairness-and-transparency"><span class="header-section-number">1.4.1</span> Lawfulness, Fairness, and Transparency</a></li>
-  <li><a href="#purpose-limitation" id="toc-purpose-limitation" class="nav-link" data-scroll-target="#purpose-limitation"><span class="header-section-number">1.4.2</span> Purpose Limitation</a></li>
-  <li><a href="#data-minimization" id="toc-data-minimization" class="nav-link" data-scroll-target="#data-minimization"><span class="header-section-number">1.4.3</span> Data Minimization</a></li>
-  <li><a href="#accuracy" id="toc-accuracy" class="nav-link" data-scroll-target="#accuracy"><span class="header-section-number">1.4.4</span> Accuracy</a></li>
-  <li><a href="#storage-limitation" id="toc-storage-limitation" class="nav-link" data-scroll-target="#storage-limitation"><span class="header-section-number">1.4.5</span> Storage Limitation</a></li>
-  <li><a href="#integrity-and-confidentiality-security" id="toc-integrity-and-confidentiality-security" class="nav-link" data-scroll-target="#integrity-and-confidentiality-security"><span class="header-section-number">1.4.6</span> Integrity and Confidentiality (Security)</a></li>
-  <li><a href="#accountability" id="toc-accountability" class="nav-link" data-scroll-target="#accountability"><span class="header-section-number">1.4.7</span> Accountability</a></li>
-  </ul></li>
-  <li><a href="#rights-of-data-subjects" id="toc-rights-of-data-subjects" class="nav-link" data-scroll-target="#rights-of-data-subjects"><span class="header-section-number">1.5</span> Rights of Data Subjects</a>
-  <ul class="collapse">
-  <li><a href="#right-to-information" id="toc-right-to-information" class="nav-link" data-scroll-target="#right-to-information"><span class="header-section-number">1.5.1</span> Right to Information</a></li>
-  <li><a href="#right-of-access" id="toc-right-of-access" class="nav-link" data-scroll-target="#right-of-access"><span class="header-section-number">1.5.2</span> Right of Access</a></li>
-  <li><a href="#right-to-rectification" id="toc-right-to-rectification" class="nav-link" data-scroll-target="#right-to-rectification"><span class="header-section-number">1.5.3</span> Right to Rectification</a></li>
-  <li><a href="#right-to-erasure-right-to-be-forgotten" id="toc-right-to-erasure-right-to-be-forgotten" class="nav-link" data-scroll-target="#right-to-erasure-right-to-be-forgotten"><span class="header-section-number">1.5.4</span> Right to Erasure (“Right to be Forgotten”)</a></li>
-  <li><a href="#right-to-restriction-of-processing" id="toc-right-to-restriction-of-processing" class="nav-link" data-scroll-target="#right-to-restriction-of-processing"><span class="header-section-number">1.5.5</span> Right to Restriction of Processing</a></li>
-  <li><a href="#right-to-data-portability" id="toc-right-to-data-portability" class="nav-link" data-scroll-target="#right-to-data-portability"><span class="header-section-number">1.5.6</span> Right to Data Portability</a></li>
-  <li><a href="#right-to-object" id="toc-right-to-object" class="nav-link" data-scroll-target="#right-to-object"><span class="header-section-number">1.5.7</span> Right to Object</a></li>
-  <li><a href="#rights-related-to-automated-decision-making" id="toc-rights-related-to-automated-decision-making" class="nav-link" data-scroll-target="#rights-related-to-automated-decision-making"><span class="header-section-number">1.5.8</span> Rights Related to Automated Decision Making</a></li>
-  </ul></li>
-  <li><a href="#organizational-responsibilities" id="toc-organizational-responsibilities" class="nav-link" data-scroll-target="#organizational-responsibilities"><span class="header-section-number">1.6</span> Organizational Responsibilities</a>
-  <ul class="collapse">
-  <li><a href="#governance-and-accountability" id="toc-governance-and-accountability" class="nav-link" data-scroll-target="#governance-and-accountability"><span class="header-section-number">1.6.1</span> Governance and Accountability</a></li>
-  <li><a href="#data-protection-officer-dpo" id="toc-data-protection-officer-dpo" class="nav-link" data-scroll-target="#data-protection-officer-dpo"><span class="header-section-number">1.6.2</span> Data Protection Officer (DPO)</a></li>
-  <li><a href="#data-protection-impact-assessment-dpia" id="toc-data-protection-impact-assessment-dpia" class="nav-link" data-scroll-target="#data-protection-impact-assessment-dpia"><span class="header-section-number">1.6.3</span> Data Protection Impact Assessment (DPIA)</a></li>
-  <li><a href="#breach-notification" id="toc-breach-notification" class="nav-link" data-scroll-target="#breach-notification"><span class="header-section-number">1.6.4</span> Breach Notification</a></li>
-  <li><a href="#vendor-management" id="toc-vendor-management" class="nav-link" data-scroll-target="#vendor-management"><span class="header-section-number">1.6.5</span> Vendor Management</a></li>
-  </ul></li>
-  <li><a href="#jurisdictional-considerations" id="toc-jurisdictional-considerations" class="nav-link" data-scroll-target="#jurisdictional-considerations"><span class="header-section-number">1.7</span> Jurisdictional Considerations</a>
-  <ul class="collapse">
-  <li><a href="#territorial-scope" id="toc-territorial-scope" class="nav-link" data-scroll-target="#territorial-scope"><span class="header-section-number">1.7.1</span> Territorial Scope</a></li>
-  <li><a href="#cross-border-data-transfers" id="toc-cross-border-data-transfers" class="nav-link" data-scroll-target="#cross-border-data-transfers"><span class="header-section-number">1.7.2</span> Cross-Border Data Transfers</a></li>
-  <li><a href="#conflict-of-laws" id="toc-conflict-of-laws" class="nav-link" data-scroll-target="#conflict-of-laws"><span class="header-section-number">1.7.3</span> Conflict of Laws</a></li>
-  </ul></li>
-  <li><a href="#practical-exercise-regulatory-mapping" id="toc-practical-exercise-regulatory-mapping" class="nav-link" data-scroll-target="#practical-exercise-regulatory-mapping"><span class="header-section-number">1.8</span> Practical Exercise: Regulatory Mapping</a>
-  <ul class="collapse">
-  <li><a href="#exercise-1-gdpr-compliance-checklist" id="toc-exercise-1-gdpr-compliance-checklist" class="nav-link" data-scroll-target="#exercise-1-gdpr-compliance-checklist"><span class="header-section-number">1.8.1</span> Exercise 1: GDPR Compliance Checklist</a></li>
-  <li><a href="#exercise-2-jurisdictional-analysis" id="toc-exercise-2-jurisdictional-analysis" class="nav-link" data-scroll-target="#exercise-2-jurisdictional-analysis"><span class="header-section-number">1.8.2</span> Exercise 2: Jurisdictional Analysis</a></li>
-  </ul></li>
-  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources"><span class="header-section-number">1.9</span> Additional Resources</a></li>
-  <li><a href="#next-week" id="toc-next-week" class="nav-link" data-scroll-target="#next-week"><span class="header-section-number">1.10</span> Next Week</a></li>
-  <li><a href="#discussion-questions" id="toc-discussion-questions" class="nav-link" data-scroll-target="#discussion-questions"><span class="header-section-number">1.11</span> Discussion Questions</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Week 1: Privacy Fundamentals and Legal Frameworks</h1>
+<header id="title-block-header">
+<h1 class="title display-7">Week 1: Privacy Fundamentals and Legal Frameworks</h1>
 <p class="subtitle lead">Understanding the core concepts and regulations in data protection</p>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">July 1, 2025</p>
-    </div>
-  </div>
-    
-  </div>
-  
-
 
 </header>
 
-
+<nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#privacy-fundamentals-and-legal-frameworks" id="toc-privacy-fundamentals-and-legal-frameworks"><span class="header-section-number">1</span> Privacy Fundamentals and Legal Frameworks</a>
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives"><span class="header-section-number">1.1</span> Learning Objectives</a></li>
+  <li><a href="#the-evolution-of-privacy" id="toc-the-evolution-of-privacy"><span class="header-section-number">1.2</span> The Evolution of Privacy</a>
+  <ul>
+  <li><a href="#historical-context" id="toc-historical-context"><span class="header-section-number">1.2.1</span> Historical Context</a></li>
+  <li><a href="#why-privacy-matters-today" id="toc-why-privacy-matters-today"><span class="header-section-number">1.2.2</span> Why Privacy Matters Today</a></li>
+  </ul></li>
+  <li><a href="#key-global-privacy-regulations" id="toc-key-global-privacy-regulations"><span class="header-section-number">1.3</span> Key Global Privacy Regulations</a>
+  <ul>
+  <li><a href="#general-data-protection-regulation-gdpr" id="toc-general-data-protection-regulation-gdpr"><span class="header-section-number">1.3.1</span> General Data Protection Regulation (GDPR)</a></li>
+  <li><a href="#california-consumer-privacy-act-ccpa-and-california-privacy-rights-act-cpra" id="toc-california-consumer-privacy-act-ccpa-and-california-privacy-rights-act-cpra"><span class="header-section-number">1.3.2</span> California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA)</a></li>
+  <li><a href="#other-regional-regulations" id="toc-other-regional-regulations"><span class="header-section-number">1.3.3</span> Other Regional Regulations</a></li>
+  <li><a href="#sectoral-regulations-us" id="toc-sectoral-regulations-us"><span class="header-section-number">1.3.4</span> Sectoral Regulations (US)</a></li>
+  </ul></li>
+  <li><a href="#core-privacy-principles" id="toc-core-privacy-principles"><span class="header-section-number">1.4</span> Core Privacy Principles</a>
+  <ul>
+  <li><a href="#lawfulness-fairness-and-transparency" id="toc-lawfulness-fairness-and-transparency"><span class="header-section-number">1.4.1</span> Lawfulness, Fairness, and Transparency</a></li>
+  <li><a href="#purpose-limitation" id="toc-purpose-limitation"><span class="header-section-number">1.4.2</span> Purpose Limitation</a></li>
+  <li><a href="#data-minimization" id="toc-data-minimization"><span class="header-section-number">1.4.3</span> Data Minimization</a></li>
+  <li><a href="#accuracy" id="toc-accuracy"><span class="header-section-number">1.4.4</span> Accuracy</a></li>
+  <li><a href="#storage-limitation" id="toc-storage-limitation"><span class="header-section-number">1.4.5</span> Storage Limitation</a></li>
+  <li><a href="#integrity-and-confidentiality-security" id="toc-integrity-and-confidentiality-security"><span class="header-section-number">1.4.6</span> Integrity and Confidentiality (Security)</a></li>
+  <li><a href="#accountability" id="toc-accountability"><span class="header-section-number">1.4.7</span> Accountability</a></li>
+  </ul></li>
+  <li><a href="#rights-of-data-subjects" id="toc-rights-of-data-subjects"><span class="header-section-number">1.5</span> Rights of Data Subjects</a>
+  <ul>
+  <li><a href="#right-to-information" id="toc-right-to-information"><span class="header-section-number">1.5.1</span> Right to Information</a></li>
+  <li><a href="#right-of-access" id="toc-right-of-access"><span class="header-section-number">1.5.2</span> Right of Access</a></li>
+  <li><a href="#right-to-rectification" id="toc-right-to-rectification"><span class="header-section-number">1.5.3</span> Right to Rectification</a></li>
+  <li><a href="#right-to-erasure-right-to-be-forgotten" id="toc-right-to-erasure-right-to-be-forgotten"><span class="header-section-number">1.5.4</span> Right to Erasure (“Right to be Forgotten”)</a></li>
+  <li><a href="#right-to-restriction-of-processing" id="toc-right-to-restriction-of-processing"><span class="header-section-number">1.5.5</span> Right to Restriction of Processing</a></li>
+  <li><a href="#right-to-data-portability" id="toc-right-to-data-portability"><span class="header-section-number">1.5.6</span> Right to Data Portability</a></li>
+  <li><a href="#right-to-object" id="toc-right-to-object"><span class="header-section-number">1.5.7</span> Right to Object</a></li>
+  <li><a href="#rights-related-to-automated-decision-making" id="toc-rights-related-to-automated-decision-making"><span class="header-section-number">1.5.8</span> Rights Related to Automated Decision Making</a></li>
+  </ul></li>
+  <li><a href="#organizational-responsibilities" id="toc-organizational-responsibilities"><span class="header-section-number">1.6</span> Organizational Responsibilities</a>
+  <ul>
+  <li><a href="#governance-and-accountability" id="toc-governance-and-accountability"><span class="header-section-number">1.6.1</span> Governance and Accountability</a></li>
+  <li><a href="#data-protection-officer-dpo" id="toc-data-protection-officer-dpo"><span class="header-section-number">1.6.2</span> Data Protection Officer (DPO)</a></li>
+  <li><a href="#data-protection-impact-assessment-dpia" id="toc-data-protection-impact-assessment-dpia"><span class="header-section-number">1.6.3</span> Data Protection Impact Assessment (DPIA)</a></li>
+  <li><a href="#breach-notification" id="toc-breach-notification"><span class="header-section-number">1.6.4</span> Breach Notification</a></li>
+  <li><a href="#vendor-management" id="toc-vendor-management"><span class="header-section-number">1.6.5</span> Vendor Management</a></li>
+  </ul></li>
+  <li><a href="#jurisdictional-considerations" id="toc-jurisdictional-considerations"><span class="header-section-number">1.7</span> Jurisdictional Considerations</a>
+  <ul>
+  <li><a href="#territorial-scope" id="toc-territorial-scope"><span class="header-section-number">1.7.1</span> Territorial Scope</a></li>
+  <li><a href="#cross-border-data-transfers" id="toc-cross-border-data-transfers"><span class="header-section-number">1.7.2</span> Cross-Border Data Transfers</a></li>
+  <li><a href="#conflict-of-laws" id="toc-conflict-of-laws"><span class="header-section-number">1.7.3</span> Conflict of Laws</a></li>
+  </ul></li>
+  <li><a href="#practical-exercise-regulatory-mapping" id="toc-practical-exercise-regulatory-mapping"><span class="header-section-number">1.8</span> Practical Exercise: Regulatory Mapping</a>
+  <ul>
+  <li><a href="#exercise-1-gdpr-compliance-checklist" id="toc-exercise-1-gdpr-compliance-checklist"><span class="header-section-number">1.8.1</span> Exercise 1: GDPR Compliance Checklist</a></li>
+  <li><a href="#exercise-2-jurisdictional-analysis" id="toc-exercise-2-jurisdictional-analysis"><span class="header-section-number">1.8.2</span> Exercise 2: Jurisdictional Analysis</a></li>
+  </ul></li>
+  <li><a href="#additional-resources" id="toc-additional-resources"><span class="header-section-number">1.9</span> Additional Resources</a></li>
+  <li><a href="#next-week" id="toc-next-week"><span class="header-section-number">1.10</span> Next Week</a></li>
+  <li><a href="#discussion-questions" id="toc-discussion-questions"><span class="header-section-number">1.11</span> Discussion Questions</a></li>
+  </ul></li>
+  </ul>
+</nav>
 <section id="privacy-fundamentals-and-legal-frameworks" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Privacy Fundamentals and Legal Frameworks</h1>
 <section id="learning-objectives" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">1.1</span> Learning Objectives</h2>
+<h2 data-number="1.1" data-anchor-id="learning-objectives"><span class="header-section-number">1.1</span> Learning Objectives</h2>
 <p>By the end of this module, you will be able to:</p>
 <ul>
 <li>Explain the evolution of privacy concepts and their importance in the digital age</li>
@@ -543,9 +653,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="the-evolution-of-privacy" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="the-evolution-of-privacy"><span class="header-section-number">1.2</span> The Evolution of Privacy</h2>
+<h2 data-number="1.2" data-anchor-id="the-evolution-of-privacy"><span class="header-section-number">1.2</span> The Evolution of Privacy</h2>
 <section id="historical-context" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="historical-context"><span class="header-section-number">1.2.1</span> Historical Context</h3>
+<h3 data-number="1.2.1" data-anchor-id="historical-context"><span class="header-section-number">1.2.1</span> Historical Context</h3>
 <p>Privacy as a concept has evolved significantly throughout human history:</p>
 <ul>
 <li><strong>Early Conceptions</strong>: Privacy initially focused on physical spaces and freedom from intrusion</li>
@@ -557,7 +667,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="why-privacy-matters-today" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="why-privacy-matters-today"><span class="header-section-number">1.2.2</span> Why Privacy Matters Today</h3>
+<h3 data-number="1.2.2" data-anchor-id="why-privacy-matters-today"><span class="header-section-number">1.2.2</span> Why Privacy Matters Today</h3>
 <ul>
 <li><strong>Scale of Data Collection</strong>: Unprecedented volumes of personal data collected</li>
 <li><strong>Ubiquitous Tracking</strong>: Constant monitoring across devices and platforms</li>
@@ -570,12 +680,12 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="key-global-privacy-regulations" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="key-global-privacy-regulations"><span class="header-section-number">1.3</span> Key Global Privacy Regulations</h2>
+<h2 data-number="1.3" data-anchor-id="key-global-privacy-regulations"><span class="header-section-number">1.3</span> Key Global Privacy Regulations</h2>
 <section id="general-data-protection-regulation-gdpr" class="level3" data-number="1.3.1">
-<h3 data-number="1.3.1" class="anchored" data-anchor-id="general-data-protection-regulation-gdpr"><span class="header-section-number">1.3.1</span> General Data Protection Regulation (GDPR)</h3>
+<h3 data-number="1.3.1" data-anchor-id="general-data-protection-regulation-gdpr"><span class="header-section-number">1.3.1</span> General Data Protection Regulation (GDPR)</h3>
 <p>The GDPR, effective since May 2018, represents the most comprehensive privacy regulation globally.</p>
 <section id="core-elements" class="level4" data-number="1.3.1.1">
-<h4 data-number="1.3.1.1" class="anchored" data-anchor-id="core-elements"><span class="header-section-number">1.3.1.1</span> Core Elements</h4>
+<h4 data-number="1.3.1.1" data-anchor-id="core-elements"><span class="header-section-number">1.3.1.1</span> Core Elements</h4>
 <ul>
 <li><strong>Territorial Scope</strong>: Applies to:
 <ul>
@@ -628,10 +738,10 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="california-consumer-privacy-act-ccpa-and-california-privacy-rights-act-cpra" class="level3" data-number="1.3.2">
-<h3 data-number="1.3.2" class="anchored" data-anchor-id="california-consumer-privacy-act-ccpa-and-california-privacy-rights-act-cpra"><span class="header-section-number">1.3.2</span> California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA)</h3>
+<h3 data-number="1.3.2" data-anchor-id="california-consumer-privacy-act-ccpa-and-california-privacy-rights-act-cpra"><span class="header-section-number">1.3.2</span> California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA)</h3>
 <p>California has established the strongest privacy framework in the United States.</p>
 <section id="core-elements-1" class="level4" data-number="1.3.2.1">
-<h4 data-number="1.3.2.1" class="anchored" data-anchor-id="core-elements-1"><span class="header-section-number">1.3.2.1</span> Core Elements</h4>
+<h4 data-number="1.3.2.1" data-anchor-id="core-elements-1"><span class="header-section-number">1.3.2.1</span> Core Elements</h4>
 <ul>
 <li><strong>Scope</strong>: Applies to businesses that:
 <ul>
@@ -657,7 +767,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="other-regional-regulations" class="level3" data-number="1.3.3">
-<h3 data-number="1.3.3" class="anchored" data-anchor-id="other-regional-regulations"><span class="header-section-number">1.3.3</span> Other Regional Regulations</h3>
+<h3 data-number="1.3.3" data-anchor-id="other-regional-regulations"><span class="header-section-number">1.3.3</span> Other Regional Regulations</h3>
 <ul>
 <li><strong>Brazil’s LGPD</strong>: Similar structure to GDPR, effective 2020</li>
 <li><strong>Canada’s PIPEDA</strong>: Consent-based framework with “meaningful consent”</li>
@@ -668,7 +778,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="sectoral-regulations-us" class="level3" data-number="1.3.4">
-<h3 data-number="1.3.4" class="anchored" data-anchor-id="sectoral-regulations-us"><span class="header-section-number">1.3.4</span> Sectoral Regulations (US)</h3>
+<h3 data-number="1.3.4" data-anchor-id="sectoral-regulations-us"><span class="header-section-number">1.3.4</span> Sectoral Regulations (US)</h3>
 <ul>
 <li><strong>HIPAA</strong>: Health information privacy and security</li>
 <li><strong>GLBA</strong>: Financial privacy</li>
@@ -679,9 +789,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="core-privacy-principles" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="core-privacy-principles"><span class="header-section-number">1.4</span> Core Privacy Principles</h2>
+<h2 data-number="1.4" data-anchor-id="core-privacy-principles"><span class="header-section-number">1.4</span> Core Privacy Principles</h2>
 <section id="lawfulness-fairness-and-transparency" class="level3" data-number="1.4.1">
-<h3 data-number="1.4.1" class="anchored" data-anchor-id="lawfulness-fairness-and-transparency"><span class="header-section-number">1.4.1</span> Lawfulness, Fairness, and Transparency</h3>
+<h3 data-number="1.4.1" data-anchor-id="lawfulness-fairness-and-transparency"><span class="header-section-number">1.4.1</span> Lawfulness, Fairness, and Transparency</h3>
 <ul>
 <li><strong>Lawfulness</strong>: Processing must be based on a valid legal ground</li>
 <li><strong>Fairness</strong>: Processing must not be deceptive or discriminatory</li>
@@ -689,7 +799,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="purpose-limitation" class="level3" data-number="1.4.2">
-<h3 data-number="1.4.2" class="anchored" data-anchor-id="purpose-limitation"><span class="header-section-number">1.4.2</span> Purpose Limitation</h3>
+<h3 data-number="1.4.2" data-anchor-id="purpose-limitation"><span class="header-section-number">1.4.2</span> Purpose Limitation</h3>
 <ul>
 <li>Collect data for specified, explicit, legitimate purposes</li>
 <li>Do not process data in ways incompatible with original purposes</li>
@@ -697,7 +807,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="data-minimization" class="level3" data-number="1.4.3">
-<h3 data-number="1.4.3" class="anchored" data-anchor-id="data-minimization"><span class="header-section-number">1.4.3</span> Data Minimization</h3>
+<h3 data-number="1.4.3" data-anchor-id="data-minimization"><span class="header-section-number">1.4.3</span> Data Minimization</h3>
 <ul>
 <li>Only collect what is adequate, relevant, and necessary</li>
 <li>Reduce collection scope to what’s needed for the purpose</li>
@@ -705,7 +815,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="accuracy" class="level3" data-number="1.4.4">
-<h3 data-number="1.4.4" class="anchored" data-anchor-id="accuracy"><span class="header-section-number">1.4.4</span> Accuracy</h3>
+<h3 data-number="1.4.4" data-anchor-id="accuracy"><span class="header-section-number">1.4.4</span> Accuracy</h3>
 <ul>
 <li>Ensure personal data is accurate and kept up to date</li>
 <li>Take reasonable steps to rectify inaccurate data</li>
@@ -713,7 +823,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="storage-limitation" class="level3" data-number="1.4.5">
-<h3 data-number="1.4.5" class="anchored" data-anchor-id="storage-limitation"><span class="header-section-number">1.4.5</span> Storage Limitation</h3>
+<h3 data-number="1.4.5" data-anchor-id="storage-limitation"><span class="header-section-number">1.4.5</span> Storage Limitation</h3>
 <ul>
 <li>Keep data in identifiable form only as long as necessary</li>
 <li>Establish and enforce retention periods</li>
@@ -721,7 +831,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="integrity-and-confidentiality-security" class="level3" data-number="1.4.6">
-<h3 data-number="1.4.6" class="anchored" data-anchor-id="integrity-and-confidentiality-security"><span class="header-section-number">1.4.6</span> Integrity and Confidentiality (Security)</h3>
+<h3 data-number="1.4.6" data-anchor-id="integrity-and-confidentiality-security"><span class="header-section-number">1.4.6</span> Integrity and Confidentiality (Security)</h3>
 <ul>
 <li>Implement appropriate technical and organizational measures</li>
 <li>Protect against unauthorized access, accidental loss, destruction</li>
@@ -729,7 +839,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="accountability" class="level3" data-number="1.4.7">
-<h3 data-number="1.4.7" class="anchored" data-anchor-id="accountability"><span class="header-section-number">1.4.7</span> Accountability</h3>
+<h3 data-number="1.4.7" data-anchor-id="accountability"><span class="header-section-number">1.4.7</span> Accountability</h3>
 <ul>
 <li>Responsible for and able to demonstrate compliance</li>
 <li>Document decisions and practices</li>
@@ -738,9 +848,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="rights-of-data-subjects" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="rights-of-data-subjects"><span class="header-section-number">1.5</span> Rights of Data Subjects</h2>
+<h2 data-number="1.5" data-anchor-id="rights-of-data-subjects"><span class="header-section-number">1.5</span> Rights of Data Subjects</h2>
 <section id="right-to-information" class="level3" data-number="1.5.1">
-<h3 data-number="1.5.1" class="anchored" data-anchor-id="right-to-information"><span class="header-section-number">1.5.1</span> Right to Information</h3>
+<h3 data-number="1.5.1" data-anchor-id="right-to-information"><span class="header-section-number">1.5.1</span> Right to Information</h3>
 <ul>
 <li>Provides transparency about collection and use</li>
 <li>Information must be concise, transparent, intelligible, easily accessible</li>
@@ -748,7 +858,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="right-of-access" class="level3" data-number="1.5.2">
-<h3 data-number="1.5.2" class="anchored" data-anchor-id="right-of-access"><span class="header-section-number">1.5.2</span> Right of Access</h3>
+<h3 data-number="1.5.2" data-anchor-id="right-of-access"><span class="header-section-number">1.5.2</span> Right of Access</h3>
 <ul>
 <li>Confirm whether personal data is being processed</li>
 <li>Receive copy of personal data</li>
@@ -756,7 +866,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="right-to-rectification" class="level3" data-number="1.5.3">
-<h3 data-number="1.5.3" class="anchored" data-anchor-id="right-to-rectification"><span class="header-section-number">1.5.3</span> Right to Rectification</h3>
+<h3 data-number="1.5.3" data-anchor-id="right-to-rectification"><span class="header-section-number">1.5.3</span> Right to Rectification</h3>
 <ul>
 <li>Correct inaccurate personal data</li>
 <li>Complete incomplete personal data</li>
@@ -764,7 +874,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="right-to-erasure-right-to-be-forgotten" class="level3" data-number="1.5.4">
-<h3 data-number="1.5.4" class="anchored" data-anchor-id="right-to-erasure-right-to-be-forgotten"><span class="header-section-number">1.5.4</span> Right to Erasure (“Right to be Forgotten”)</h3>
+<h3 data-number="1.5.4" data-anchor-id="right-to-erasure-right-to-be-forgotten"><span class="header-section-number">1.5.4</span> Right to Erasure (“Right to be Forgotten”)</h3>
 <ul>
 <li>Request deletion of personal data under certain circumstances</li>
 <li>Grounds include: no longer necessary, withdrawal of consent, unlawful processing</li>
@@ -772,7 +882,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="right-to-restriction-of-processing" class="level3" data-number="1.5.5">
-<h3 data-number="1.5.5" class="anchored" data-anchor-id="right-to-restriction-of-processing"><span class="header-section-number">1.5.5</span> Right to Restriction of Processing</h3>
+<h3 data-number="1.5.5" data-anchor-id="right-to-restriction-of-processing"><span class="header-section-number">1.5.5</span> Right to Restriction of Processing</h3>
 <ul>
 <li>Temporarily limit processing while addressing certain issues</li>
 <li>Applies during accuracy disputes, while determining legitimate interests, etc.</li>
@@ -780,7 +890,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="right-to-data-portability" class="level3" data-number="1.5.6">
-<h3 data-number="1.5.6" class="anchored" data-anchor-id="right-to-data-portability"><span class="header-section-number">1.5.6</span> Right to Data Portability</h3>
+<h3 data-number="1.5.6" data-anchor-id="right-to-data-portability"><span class="header-section-number">1.5.6</span> Right to Data Portability</h3>
 <ul>
 <li>Receive personal data in structured, commonly used, machine-readable format</li>
 <li>Transmit data to another controller where technically feasible</li>
@@ -788,7 +898,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="right-to-object" class="level3" data-number="1.5.7">
-<h3 data-number="1.5.7" class="anchored" data-anchor-id="right-to-object"><span class="header-section-number">1.5.7</span> Right to Object</h3>
+<h3 data-number="1.5.7" data-anchor-id="right-to-object"><span class="header-section-number">1.5.7</span> Right to Object</h3>
 <ul>
 <li>Object to processing based on legitimate interests, public interest, or direct marketing</li>
 <li>Controller must demonstrate compelling legitimate grounds that override interests</li>
@@ -796,7 +906,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="rights-related-to-automated-decision-making" class="level3" data-number="1.5.8">
-<h3 data-number="1.5.8" class="anchored" data-anchor-id="rights-related-to-automated-decision-making"><span class="header-section-number">1.5.8</span> Rights Related to Automated Decision Making</h3>
+<h3 data-number="1.5.8" data-anchor-id="rights-related-to-automated-decision-making"><span class="header-section-number">1.5.8</span> Rights Related to Automated Decision Making</h3>
 <ul>
 <li>Not be subject to purely automated decisions with legal/significant effects</li>
 <li>Obtain human intervention and contest the decision</li>
@@ -805,9 +915,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="organizational-responsibilities" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="organizational-responsibilities"><span class="header-section-number">1.6</span> Organizational Responsibilities</h2>
+<h2 data-number="1.6" data-anchor-id="organizational-responsibilities"><span class="header-section-number">1.6</span> Organizational Responsibilities</h2>
 <section id="governance-and-accountability" class="level3" data-number="1.6.1">
-<h3 data-number="1.6.1" class="anchored" data-anchor-id="governance-and-accountability"><span class="header-section-number">1.6.1</span> Governance and Accountability</h3>
+<h3 data-number="1.6.1" data-anchor-id="governance-and-accountability"><span class="header-section-number">1.6.1</span> Governance and Accountability</h3>
 <ul>
 <li>Establish privacy governance structure</li>
 <li>Designate responsible individuals/teams</li>
@@ -817,7 +927,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="data-protection-officer-dpo" class="level3" data-number="1.6.2">
-<h3 data-number="1.6.2" class="anchored" data-anchor-id="data-protection-officer-dpo"><span class="header-section-number">1.6.2</span> Data Protection Officer (DPO)</h3>
+<h3 data-number="1.6.2" data-anchor-id="data-protection-officer-dpo"><span class="header-section-number">1.6.2</span> Data Protection Officer (DPO)</h3>
 <ul>
 <li>Required when:
 <ul>
@@ -831,7 +941,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="data-protection-impact-assessment-dpia" class="level3" data-number="1.6.3">
-<h3 data-number="1.6.3" class="anchored" data-anchor-id="data-protection-impact-assessment-dpia"><span class="header-section-number">1.6.3</span> Data Protection Impact Assessment (DPIA)</h3>
+<h3 data-number="1.6.3" data-anchor-id="data-protection-impact-assessment-dpia"><span class="header-section-number">1.6.3</span> Data Protection Impact Assessment (DPIA)</h3>
 <ul>
 <li>Required for high-risk processing activities</li>
 <li>Systematic process to identify and minimize privacy risks</li>
@@ -840,7 +950,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="breach-notification" class="level3" data-number="1.6.4">
-<h3 data-number="1.6.4" class="anchored" data-anchor-id="breach-notification"><span class="header-section-number">1.6.4</span> Breach Notification</h3>
+<h3 data-number="1.6.4" data-anchor-id="breach-notification"><span class="header-section-number">1.6.4</span> Breach Notification</h3>
 <ul>
 <li>Notify supervisory authority of personal data breaches within 72 hours (GDPR)</li>
 <li>Notify affected individuals when high risk to rights and freedoms</li>
@@ -848,7 +958,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="vendor-management" class="level3" data-number="1.6.5">
-<h3 data-number="1.6.5" class="anchored" data-anchor-id="vendor-management"><span class="header-section-number">1.6.5</span> Vendor Management</h3>
+<h3 data-number="1.6.5" data-anchor-id="vendor-management"><span class="header-section-number">1.6.5</span> Vendor Management</h3>
 <ul>
 <li>Due diligence in selecting processors</li>
 <li>Written contracts with specific requirements</li>
@@ -857,9 +967,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="jurisdictional-considerations" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="jurisdictional-considerations"><span class="header-section-number">1.7</span> Jurisdictional Considerations</h2>
+<h2 data-number="1.7" data-anchor-id="jurisdictional-considerations"><span class="header-section-number">1.7</span> Jurisdictional Considerations</h2>
 <section id="territorial-scope" class="level3" data-number="1.7.1">
-<h3 data-number="1.7.1" class="anchored" data-anchor-id="territorial-scope"><span class="header-section-number">1.7.1</span> Territorial Scope</h3>
+<h3 data-number="1.7.1" data-anchor-id="territorial-scope"><span class="header-section-number">1.7.1</span> Territorial Scope</h3>
 <ul>
 <li><strong>Establishment</strong>: Where an organization is physically or effectively established</li>
 <li><strong>Targeting Principle</strong>: Directing activities to individuals in a jurisdiction</li>
@@ -867,7 +977,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="cross-border-data-transfers" class="level3" data-number="1.7.2">
-<h3 data-number="1.7.2" class="anchored" data-anchor-id="cross-border-data-transfers"><span class="header-section-number">1.7.2</span> Cross-Border Data Transfers</h3>
+<h3 data-number="1.7.2" data-anchor-id="cross-border-data-transfers"><span class="header-section-number">1.7.2</span> Cross-Border Data Transfers</h3>
 <ul>
 <li><strong>Adequacy Decisions</strong>: Recognition that a country provides adequate protection</li>
 <li><strong>Appropriate Safeguards</strong>: Mechanisms like Standard Contractual Clauses (SCCs)</li>
@@ -876,7 +986,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="conflict-of-laws" class="level3" data-number="1.7.3">
-<h3 data-number="1.7.3" class="anchored" data-anchor-id="conflict-of-laws"><span class="header-section-number">1.7.3</span> Conflict of Laws</h3>
+<h3 data-number="1.7.3" data-anchor-id="conflict-of-laws"><span class="header-section-number">1.7.3</span> Conflict of Laws</h3>
 <ul>
 <li>Challenge of complying with multiple, sometimes conflicting regulations</li>
 <li>Approaches:
@@ -889,9 +999,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="practical-exercise-regulatory-mapping" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="practical-exercise-regulatory-mapping"><span class="header-section-number">1.8</span> Practical Exercise: Regulatory Mapping</h2>
+<h2 data-number="1.8" data-anchor-id="practical-exercise-regulatory-mapping"><span class="header-section-number">1.8</span> Practical Exercise: Regulatory Mapping</h2>
 <section id="exercise-1-gdpr-compliance-checklist" class="level3" data-number="1.8.1">
-<h3 data-number="1.8.1" class="anchored" data-anchor-id="exercise-1-gdpr-compliance-checklist"><span class="header-section-number">1.8.1</span> Exercise 1: GDPR Compliance Checklist</h3>
+<h3 data-number="1.8.1" data-anchor-id="exercise-1-gdpr-compliance-checklist"><span class="header-section-number">1.8.1</span> Exercise 1: GDPR Compliance Checklist</h3>
 <ol type="1">
 <li>Review the following organizational practices:
 <ul>
@@ -913,7 +1023,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ol>
 </section>
 <section id="exercise-2-jurisdictional-analysis" class="level3" data-number="1.8.2">
-<h3 data-number="1.8.2" class="anchored" data-anchor-id="exercise-2-jurisdictional-analysis"><span class="header-section-number">1.8.2</span> Exercise 2: Jurisdictional Analysis</h3>
+<h3 data-number="1.8.2" data-anchor-id="exercise-2-jurisdictional-analysis"><span class="header-section-number">1.8.2</span> Exercise 2: Jurisdictional Analysis</h3>
 <p>Review the following scenario:</p>
 <blockquote class="blockquote">
 <p>A US-based e-commerce company sells products globally through its website. It collects customer information for order processing, offers personalized recommendations based on browsing behavior, and sends marketing emails. The company stores data on US-based servers but uses EU-based customer service contractors.</p>
@@ -922,7 +1032,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="additional-resources" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="additional-resources"><span class="header-section-number">1.9</span> Additional Resources</h2>
+<h2 data-number="1.9" data-anchor-id="additional-resources"><span class="header-section-number">1.9</span> Additional Resources</h2>
 <ul>
 <li><a href="https://www.eugdpr.org/">EU GDPR Portal</a></li>
 <li><a href="https://cppa.ca.gov/regulations/cpra_regulations.html">California Privacy Rights Act Text</a></li>
@@ -932,11 +1042,11 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="next-week" class="level2" data-number="1.10">
-<h2 data-number="1.10" class="anchored" data-anchor-id="next-week"><span class="header-section-number">1.10</span> Next Week</h2>
+<h2 data-number="1.10" data-anchor-id="next-week"><span class="header-section-number">1.10</span> Next Week</h2>
 <p>Next week, we’ll explore Privacy by Design principles and data governance frameworks, focusing on practical implementation approaches to embed privacy into organizational processes and systems.</p>
 </section>
 <section id="discussion-questions" class="level2" data-number="1.11">
-<h2 data-number="1.11" class="anchored" data-anchor-id="discussion-questions"><span class="header-section-number">1.11</span> Discussion Questions</h2>
+<h2 data-number="1.11" data-anchor-id="discussion-questions"><span class="header-section-number">1.11</span> Discussion Questions</h2>
 <ol type="1">
 <li>How has the concept of privacy evolved in the digital age, and what new challenges have emerged?</li>
 <li>What are the key similarities and differences between the GDPR and CCPA/CPRA approaches to privacy?</li>
@@ -949,7 +1059,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 
-</main> <!-- /main -->
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1014,13 +1124,14 @@ document.addEventListener('DOMContentLoaded', function() {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -1370,533 +1481,85 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
+<footer style="background-color:#0a0a0a; background-image: url(&quot;data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2381BD4A' fill-opacity='0.08'%3E%3Ccircle cx='20' cy='20' r='1.5'/%3E%3C/g%3E%3C/svg%3E&quot;); background-repeat: repeat; background-size: 40px 40px; color:rgba(255,255,255,0.6); padding:4rem 0 2rem; font-size:0.82rem; line-height:1.8;">
+  <div style="max-width:1200px; margin:0 auto; padding:0 1.5rem;">
+    <div style="display:grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr; gap:2rem;">
 
-</div>   
-    <div class="nav-footer-center">
+      <div>
+        <div style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:1rem; font-family:'Source Code Pro',monospace;">chen<span style="color:#81BD4A;">.ist</span></div>
+        <p style="margin-bottom:1rem;">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
+        <p style="color:rgba(255,255,255,0.25);">© 2026 chen.ist</p>
+      </div>
 
-</div>
-    <div class="nav-footer-right">
+      <div>
+        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Services</div>
+        <a href="../../../../digital/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Digital Infrastructure</a>
+        <a href="../../../../security/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Security</a>
+        <a href="../../../../services/cloud/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Cloud</a>
+        <a href="../../../../services/nis2/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">NIS2 Compliance</a>
+        <a href="../../../../services/digital-resilience/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Digital Resilience</a>
+      </div>
 
-</div>
-  </div>
-</footer>
-<footer class="footer mt-5 py-3 cybersecurity-footer">
-    <div class="container">
-        <div class="row mb-3">
-            <!-- Company Logo and Brief -->
-            <div class="col-md-4 mb-2">
-                <div class="d-flex align-items-center">
-                    <h4 class="footer-logo mb-0 me-2">chen<span class="text-accent">.ist</span></h4>
-                    <div class="secure-badge ms-2">
-                        <i class="bi bi-shield-lock-fill"></i> Secure
-                    </div>
-                </div>
-                <p class="footer-description small mt-2 mb-0">
-                    Enterprise cybersecurity solutions with zero-trust implementation and continuous monitoring.
-                </p>
-            </div>
-            
-            <!-- Tabs Navigation -->
-            <div class="col-md-8 mb-2">
-                <div class="footer-tabs">
-                    <ul class="nav nav-tabs footer-nav-tabs" id="footerTabs" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="solutions-tab" data-bs-toggle="tab" data-bs-target="#solutions" type="button" role="tab">
-                                <i class="bi bi-shield-fill"></i> Solutions
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="academy-tab" data-bs-toggle="tab" data-bs-target="#academy" type="button" role="tab">
-                                <i class="bi bi-mortarboard-fill"></i> Academy
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab">
-                                <i class="bi bi-envelope-fill"></i> Contact
-                            </button>
-                        </li>
-                    </ul>
-                    
-                    <!-- Tab Content -->
-                    <div class="tab-content pt-2" id="footerTabContent">
-                        <!-- Solutions Tab -->
-                        <div class="tab-pane fade show active" id="solutions" role="tabpanel">
-                            <div class="row">
-                                <div class="col-6 col-md-3">
-                                    <a href="../../../../services.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Security Services
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../../../../services.html#consulting" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Consulting
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../../../../services.html#compliance" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Compliance
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../../../../services.html#incident-response" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Incident Response
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Academy Tab -->
-                        <div class="tab-pane fade" id="academy" role="tabpanel">
-                            <div class="row">
-                                <div class="col-6 col-md-3">
-                                    <a href="../../../../academy/courses.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Courses
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../../../../academy/events.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Events
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../../../../academy/webinars.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Webinars
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../../../../academy/computerclub.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Computer Club
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3 mt-2">
-                                    <a href="../../../../academy/programs" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Explore Academy Programs
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Contact Tab -->
-                        <div class="tab-pane fade" id="contact" role="tabpanel">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="d-flex align-items-center mb-1">
-                                        <i class="bi bi-envelope-fill contact-icon"></i>
-                                        <a href="mailto:office@chen.ist" class="footer-link">office@chen.ist</a>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-shield-fill-check contact-icon"></i>
-                                        <span class="small">SOC Available 24/7</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="d-flex align-items-center mb-1">
-                                        <i class="bi bi-geo-alt-fill contact-icon"></i>
-                                        <span class="small">Stockholm | Craiova | Bucharest</span>
-                                    </div>
-                                    <div class="social-icons">
-                                        <a href="https://github.com/chenist" class="social-icon" aria-label="GitHub">
-                                            <i class="bi bi-github"></i>
-                                        </a>
-                                        <a href="https://linkedin.com/in/chenistsec" class="social-icon" aria-label="LinkedIn">
-                                            <i class="bi bi-linkedin"></i>
-                                        </a>
-                                        <a href="https://twitter.com/chenistsec" class="social-icon" aria-label="Twitter">
-                                            <i class="bi bi-twitter-x"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer-divider">
-            <div class="cyber-line"></div>
-        </div>
-        
-        <div class="row footer-bottom py-1">
-            <div class="col-md-6">
-                <div class="d-flex align-items-center">
-                    <div class="security-pulse"></div>
-                    <p class="mb-0 ms-2 copyright">
-                        © 2025 chen.ist <span class="d-none d-md-inline">| Secure. Vigilant. Resilient.</span>
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6 text-md-end">
-                <div class="footer-bottom-links">
-                    <a href="../../../../privacy.html">Privacy</a>
-                    <span class="separator">|</span>
-                    <a href="../../../../terms.html">Terms</a>
-                    <span class="separator">|</span>
-                    <a href="../../../../contact.html" class="btn-report-incident">
-                        <i class="bi bi-exclamation-triangle-fill"></i> Report Incident
-                    </a>
-                </div>
-            </div>
-        </div>
+      <div>
+        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Academy</div>
+        <a href="../../../../academy/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Overview</a>
+        <a href="../../../../academy/courses.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Courses</a>
+        <a href="../../../../academy/trainings.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Trainings</a>
+        <a href="../../../../academy/events.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Events</a>
+        <a href="../../../../academy/webinars.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Webinars</a>
+      </div>
+
+      <div>
+        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Company</div>
+        <a href="../../../../about/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">About</a>
+        <a href="../../../../blog.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Blog</a>
+        <a href="../../../../contact.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Contact</a>
+        <a href="../../../../privacy.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Privacy</a>
+        <a href="../../../../terms.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Terms</a>
+      </div>
+
+      <div>
+        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Connect</div>
+        <a href="mailto:office@chen.ist" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">office@chen.ist</a>
+        <a href="https://github.com/chenist" target="_blank" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">GitHub</a>
+        <a href="https://alinmechenici.substack.com" target="_blank" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Newsletter</a>
+        <a href="https://linkedin.com/in/chenistsec" target="_blank" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">LinkedIn</a>
+        <div style="margin-top:1rem; color:rgba(255,255,255,0.2); font-size:0.72rem;">Craiova · Bucharest · Stockholm</div>
+      </div>
+
     </div>
+  </div>
 </footer>
 
 <style>
-.cybersecurity-footer {
-    background-color: #0f1923;
-    color: #e6e6e6;
-    border-top: 3px solid #18bc9c;
-    position: relative;
-    font-size: 0.9rem;
+@media (max-width: 991px) {
+  footer > div > div { grid-template-columns: 2fr 1fr 1fr !important; }
 }
-
-/* Change accent colors for academy section */
-.academy-section .cybersecurity-footer {
-    border-top-color: #F5A623;
-}
-
-.academy-section .cybersecurity-footer::before {
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        #F5A623 20%, 
-        #F5A623 40%, 
-        transparent 50%,
-        transparent 60%,
-        #F5A623 80%,
-        transparent 100%
-    );
-}
-
-.academy-section .cybersecurity-footer .text-accent,
-.academy-section .cybersecurity-footer .contact-icon,
-.academy-section .cybersecurity-footer .footer-heading::after,
-.academy-section .cybersecurity-footer .social-icon:hover,
-.academy-section .cybersecurity-footer .footer-link:hover,
-.academy-section .cybersecurity-footer .contact-item a:hover,
-.academy-section .cybersecurity-footer .footer-bottom-links a:hover,
-.academy-section .cybersecurity-footer .nav-link.active {
-    color: #F5A623 !important;
-}
-
-.academy-section .cybersecurity-footer .secure-badge {
-    background-color: rgba(245, 166, 35, 0.15);
-    color: #F5A623;
-    border-left-color: #F5A623;
-}
-
-.academy-section .cybersecurity-footer .social-icon:hover {
-    background-color: #F5A623;
-    color: #0f1923 !important;
-}
-
-.academy-section .cybersecurity-footer .cyber-line {
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        rgba(245, 166, 35, 0.3) 10%, 
-        rgba(245, 166, 35, 0.5) 50%, 
-        rgba(245, 166, 35, 0.3) 90%, 
-        transparent 100%
-    );
-}
-
-.academy-section .cybersecurity-footer .cyber-line::before,
-.academy-section .cybersecurity-footer .cyber-line::after {
-    background-color: #F5A623;
-}
-
-.academy-section .cybersecurity-footer .security-pulse {
-    background-color: #F5A623;
-}
-
-.academy-section .cybersecurity-footer .security-pulse::before {
-    background-color: rgba(245, 166, 35, 0.3);
-}
-
-.cybersecurity-footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        #18bc9c 20%, 
-        #18bc9c 40%, 
-        transparent 50%,
-        transparent 60%,
-        #18bc9c 80%,
-        transparent 100%
-    );
-    opacity: 0.4;
-}
-
-.cybersecurity-footer .footer-brand {
-    display: flex;
-    margin-bottom: 0.5rem;
-}
-
-.cybersecurity-footer .footer-logo {
-    font-size: 1.4rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-family: 'Source Code Pro', monospace;
-    color: white;
-}
-
-.cybersecurity-footer .text-accent {
-    color: #18bc9c;
-}
-
-.cybersecurity-footer .secure-badge {
-    display: inline-flex;
-    align-items: center;
-    background-color: rgba(24, 188, 156, 0.15);
-    color: #18bc9c;
-    padding: 0.2rem 0.5rem;
-    border-radius: 3px;
-    font-size: 0.7rem;
-    font-weight: 600;
-    border-left: 2px solid #18bc9c;
-}
-
-.cybersecurity-footer .footer-description {
-    color: #9ba6b2;
-    line-height: 1.4;
-}
-
-.cybersecurity-footer .footer-tabs {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 4px;
-}
-
-.cybersecurity-footer .footer-nav-tabs {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.cybersecurity-footer .nav-tabs .nav-link {
-    color: #9ba6b2;
-    border: none;
-    font-size: 0.85rem;
-    padding: 0.4rem 0.8rem;
-    background-color: transparent;
-}
-
-.cybersecurity-footer .nav-tabs .nav-link:hover {
-    color: #e6e6e6;
-    border: none;
-}
-
-.cybersecurity-footer .nav-tabs .nav-link.active {
-    color: #18bc9c;
-    background-color: rgba(24, 188, 156, 0.1);
-    border: none;
-}
-
-.cybersecurity-footer .tab-content {
-    min-height: 60px;
-}
-
-.cybersecurity-footer .footer-link {
-    color: #9ba6b2;
-    text-decoration: none;
-    transition: color 0.2s ease, transform 0.2s ease;
-    display: inline-flex;
-    align-items: center;
-    margin-bottom: 0.5rem;
-    font-size: 0.85rem;
-}
-
-.cybersecurity-footer .footer-link:hover {
-    color: #18bc9c;
-    transform: translateX(3px);
-}
-
-.cybersecurity-footer .icon-small {
-    font-size: 0.75rem;
-    margin-right: 0.25rem;
-}
-
-.cybersecurity-footer .contact-icon {
-    margin-right: 0.5rem;
-    font-size: 0.9rem;
-    color: #18bc9c;
-}
-
-.cybersecurity-footer .social-icons {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-.cybersecurity-footer .social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #e6e6e6;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-size: 0.85rem;
-}
-
-.cybersecurity-footer .social-icon:hover {
-    background-color: #18bc9c;
-    color: #0f1923;
-    transform: translateY(-2px);
-}
-
-.cybersecurity-footer .footer-divider {
-    position: relative;
-    height: 12px;
-    margin: 0.5rem 0;
-}
-
-.cybersecurity-footer .cyber-line {
-    height: 1px;
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        rgba(24, 188, 156, 0.3) 10%, 
-        rgba(24, 188, 156, 0.5) 50%, 
-        rgba(24, 188, 156, 0.3) 90%, 
-        transparent 100%
-    );
-    position: relative;
-}
-
-.cybersecurity-footer .cyber-line::before,
-.cybersecurity-footer .cyber-line::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 8px;
-    height: 1px;
-    background-color: #18bc9c;
-    animation: blink 2s infinite;
-}
-
-.cybersecurity-footer .cyber-line::before {
-    left: 25%;
-}
-
-.cybersecurity-footer .cyber-line::after {
-    right: 25%;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 0.2; }
-    50% { opacity: 1; }
-}
-
-.cybersecurity-footer .security-pulse {
-    width: 8px;
-    height: 8px;
-    background-color: #18bc9c;
-    border-radius: 50%;
-    position: relative;
-}
-
-.cybersecurity-footer .security-pulse::before {
-    content: "";
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    border-radius: 50%;
-    background-color: rgba(24, 188, 156, 0.3);
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); opacity: 1; }
-    70% { transform: scale(1.5); opacity: 0; }
-    100% { transform: scale(1.5); opacity: 0; }
-}
-
-.cybersecurity-footer .copyright {
-    color: #9ba6b2;
-    font-size: 0.8rem;
-}
-
-.cybersecurity-footer .footer-bottom-links {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-}
-
-.cybersecurity-footer .footer-bottom-links a {
-    color: #9ba6b2;
-    text-decoration: none;
-    font-size: 0.8rem;
-    transition: color 0.2s ease;
-}
-
-.cybersecurity-footer .footer-bottom-links a:hover {
-    color: #18bc9c;
-}
-
-.cybersecurity-footer .separator {
-    margin: 0 0.5rem;
-    color: #4a5568;
-    font-size: 0.8rem;
-}
-
-.cybersecurity-footer .btn-report-incident {
-    display: inline-flex;
-    align-items: center;
-    background-color: rgba(220, 53, 69, 0.15);
-    color: #dc3545 !important;
-    padding: 0.2rem 0.5rem;
-    border-radius: 3px;
-    font-size: 0.75rem;
-    margin-left: 0.5rem;
-    font-weight: 600;
-    transition: all 0.3s ease !important;
-}
-
-.cybersecurity-footer .btn-report-incident:hover {
-    background-color: rgba(220, 53, 69, 0.3);
-}
-
-.cybersecurity-footer .btn-report-incident i {
-    margin-right: 0.3rem;
-}
-
 @media (max-width: 767px) {
-    .cybersecurity-footer .footer-bottom-links {
-        justify-content: flex-start;
-        margin-top: 0.5rem;
-    }
-    
-    .cybersecurity-footer .btn-report-incident {
-        margin-top: 0.5rem;
-        margin-left: 0;
-    }
-    
-    .cybersecurity-footer .separator:nth-of-type(2) {
-        display: none;
-    }
+  footer > div > div { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
 }
+@media (max-width: 480px) {
+  footer > div > div { grid-template-columns: 1fr !important; }
+}
+footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
 </style>
-
 <script>
-// Initialize Bootstrap tabs if not already initialized
 document.addEventListener('DOMContentLoaded', function() {
-    if (typeof bootstrap !== 'undefined') {
-        var tabElList = [].slice.call(document.querySelectorAll('#footerTabs .nav-link'));
-        tabElList.map(function(tabEl) {
-            return new bootstrap.Tab(tabEl);
-        });
-    }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.m-s, .m-bg, .m-cta, .m-r, .m-n, .hp-sec, .hp-stats, .ev-card, .ev-past, .m-t').forEach(el => observer.observe(el));
 });
+</script>
+<!-- Cal.com floating button -->
+<script>
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", {origin:"https://cal.com"});
+  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {

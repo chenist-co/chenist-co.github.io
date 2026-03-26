@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,18 +34,19 @@ ul.task-list li input[type="checkbox"] {
 <link href="../assets/images/favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-b5057f3398a202b36a08d66ee4de0ec1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-b37f6c1b9a99d16252d3ddd2c7074628.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,70 +75,15 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<style>
-.navbar-brand-container {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-brand {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-brand .navbar-title {
-  display: inline-block;
-  margin-left: 0;
-  color: #FFFFFF;
-  font-weight: 600;
-  font-size: 1.25rem;
-  letter-spacing: 0.5px;
-}
-
-@media (max-width: 767.98px) {
-  .navbar-brand .navbar-title {
-    font-size: 1.1rem;
-  }
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Find the navbar brand element that contains the logo
-  const navbarBrand = document.querySelector('.navbar-brand');
-  
-  if (navbarBrand) {
-    // Create a span for the CHENIST text
-    const titleSpan = document.createElement('span');
-    titleSpan.className = 'navbar-title';
-    titleSpan.textContent = 'CHENIST';
-    
-    // Append the span after the logo
-    navbarBrand.appendChild(titleSpan);
-  }
-});
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-
-<link rel="stylesheet" href="../scss/styles.css">
-<link rel="stylesheet" href="../scss/academy.scss">
-<link rel="stylesheet" href="../scss/custom-hero.css">
-<link rel="stylesheet" href="../scss/academy.scss">
 <meta property="og:title" content="Microlearning – chen.ist">
 <meta property="og:description" content="Focused 1-2 hour microlearning sessions for specific tools and technologies. Perfect for busy professionals who want to quickly learn a new skill or tool.">
-<meta property="og:image" content="https://chen.ist/assets/images/placeholder.jpg">
+<meta property="og:image" content="https://chen.ist/academy/assets/images/og-image.png">
 <meta property="og:site_name" content="chen.ist">
 <meta name="twitter:title" content="Microlearning – chen.ist">
 <meta name="twitter:description" content="Focused 1-2 hour microlearning sessions for specific tools and technologies. Perfect for busy professionals who want to quickly learn a new skill or tool.">
-<meta name="twitter:image" content="https://chen.ist/assets/images/placeholder.jpg">
+<meta name="twitter:image" content="https://chen.ist/academy/assets/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-</head>
-
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+</head><body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -299,7 +245,159 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       toggleColorMode(false);
     }
-  </script>
+  </script><a href="#main-content" class="skip-link">Skip to main content</a>
+<style>
+/* Corporate navbar — solid dark, structured, professional */
+.navbar {
+  background: #0a0a0a !important;
+  border-bottom: 1px solid rgba(129,189,74,0.15);
+  padding: 0 !important;
+  font-size: 0.82rem;
+  min-height: 56px;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  height: 56px;
+}
+.navbar-brand-container { display: flex; align-items: center; }
+.navbar-brand { display: flex; align-items: center; gap: 0.5rem; }
+.navbar-brand .navbar-title {
+  display: inline-block;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: 'Source Code Pro', monospace;
+}
+.navbar-brand .brand-dot { color: #81BD4A; }
+.navbar .nav-link {
+  color: rgba(255,255,255,0.65) !important;
+  font-size: 0.78rem !important;
+  font-weight: 500;
+  padding: 0.5rem 0.85rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: color 0.15s;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active { color: #81BD4A !important; }
+.navbar .dropdown-menu {
+  background: #0a0a0a;
+  border: 1px solid rgba(129,189,74,0.12);
+  border-radius: 8px;
+  padding: 0.4rem;
+  margin-top: 0;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+.navbar .dropdown-item {
+  color: rgba(255,255,255,0.65);
+  font-size: 0.78rem;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 0.45rem 0.85rem;
+  letter-spacing: 0.02em;
+}
+.navbar .dropdown-item:hover {
+  background: rgba(129,189,74,0.1);
+  color: #81BD4A;
+}
+.navbar .quarto-navigation-tool { color: rgba(255,255,255,0.5) !important; }
+.navbar .quarto-navigation-tool:hover { color: #81BD4A !important; }
+.navbar .quarto-color-scheme-toggle { color: rgba(255,255,255,0.5) !important; }
+.navbar .quarto-color-scheme-toggle:hover { color: #81BD4A !important; }
+
+@media (max-width: 991px) {
+  .navbar .nav-link { font-size: 0.75rem !important; padding: 0.4rem 0.6rem !important; }
+}
+@media (max-width: 767.98px) {
+  .navbar-brand .navbar-title { font-size: 0.9rem; }
+  .navbar .navbar-collapse {
+    background: #0a0a0a;
+    border: 1px solid rgba(129,189,74,0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+  }
+  .navbar .nav-link {
+    text-transform: none;
+    font-size: 0.85rem !important;
+    padding: 0.5rem 0.75rem !important;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var navbarBrand = document.querySelector('.navbar-brand');
+  if (navbarBrand) {
+    var titleSpan = document.createElement('span');
+    titleSpan.className = 'navbar-title';
+    titleSpan.textContent = 'CHEN';
+    var dot = document.createElement('span');
+    dot.className = 'brand-dot';
+    dot.textContent = '.';
+    var ist = document.createTextNode('IST');
+    titleSpan.appendChild(dot);
+    titleSpan.appendChild(ist);
+    navbarBrand.appendChild(titleSpan);
+  }
+});
+</script>
+<script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<link rel="preload" href="../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
+<meta name="view-transition" content="same-origin">
+<noscript><style>.m-s,.m-bg,.m-cta,.m-r,.m-n,.hp-sec,.hp-stats,.ev-card,.ev-past,.m-t{opacity:1!important;transform:none!important;}</style></noscript>
+<link rel="dns-prefetch" href="https://cal.com">
+<link rel="dns-prefetch" href="https://app.cal.com">
+<link rel="preconnect" href="https://cal.com" crossorigin="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "chen.ist",
+  "url": "https://chen.ist",
+  "logo": "https://chen.ist/assets/images/logo-light.svg",
+  "description": "Digital infrastructure, cybersecurity, cloud services, and technology education for modern organizations.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Str. Filantropiei, 1-3",
+    "addressLocality": "Craiova",
+    "postalCode": "200143",
+    "addressCountry": "RO"
+  },
+  "email": "office@chen.ist",
+  "sameAs": [
+    "https://github.com/chenist",
+    "https://linkedin.com/in/chenistsec",
+    "https://twitter.com/chenistsec"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Infrastructure", "url": "https://chen.ist/digital/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "NIS2 Compliance", "url": "https://chen.ist/services/nis2/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cybersecurity", "url": "https://chen.ist/services/cybersecurity/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cloud Services", "url": "https://chen.ist/services/cloud/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Resilience", "url": "https://chen.ist/services/digital-resilience/"}}
+    ]
+  }
+}
+</script>
+<style>.m { --c: #F5A623; }</style>
+
+
+<link rel="stylesheet" href="../assets/css/main.min.css">
+
+
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -307,7 +405,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../assets/images/logo-light.svg" alt="" class="navbar-logo">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -320,10 +419,41 @@ document.addEventListener('DOMContentLoaded', function() {
     <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../services.html"> 
-<span class="menu-text">Services</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-services" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Services</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-services">    
+        <li>
+    <a class="dropdown-item" href="../services/index.html">
+ <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../security/index.html">
+ <span class="dropdown-text">Security</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../digital/index.html">
+ <span class="dropdown-text">Digital Infrastructure</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../services/nis2/index.html">
+ <span class="dropdown-text">NIS2 Compliance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../services/cybersecurity/index.html">
+ <span class="dropdown-text">Cybersecurity</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../services/cloud/index.html">
+ <span class="dropdown-text">Cloud Services</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../services/digital-resilience/index.html">
+ <span class="dropdown-text">Digital Resilience</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-academy" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Academy</span>
@@ -432,680 +562,102 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Microlearning</h1>
+<header id="title-block-header">
+<h1 class="title display-7">Microlearning</h1>
 <p class="subtitle lead">Bite-sized 1-2 hour skill sessions</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">open-source</div>
-    <div class="quarto-category">linux</div>
-    <div class="quarto-category">tools</div>
-    <div class="quarto-category">productivity</div>
-    <div class="quarto-category">text-editors</div>
-  </div>
-  </div>
-
-<div>
-  <div class="description">
-    Focused 1-2 hour microlearning sessions for specific tools and technologies. Perfect for busy professionals who want to quickly learn a new skill or tool.
-  </div>
-</div>
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
 
 </header>
 
 
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="../">Home</a></li>
-    <li class="breadcrumb-item"><a href="../academy.html">Academy</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Microlearning</li>
-  </ol>
-</nav>
+<div class="m">
 
-<div class="hero-section">
+<div class="m-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-8 offset-md-2 text-center">
-        <img src="../assets/svg/learning.svg" alt="Microlearning" style="max-width: 150px; margin-bottom: 20px;">
-        <h1><span class="academy-text">Micro</span><span class="text-green">learning</span></h1>
-        <p>Master new tools and skills in just 1-2 hours</p>
-      </div>
+    <h1><span class="gr">Micro</span>learning</h1>
+    <p>Master a new tool in 1-2 hours. Focused sessions designed for busy professionals who value their time.</p>
+  </div>
+</div>
+
+<div class="m-bg">
+  <div class="container">
+    <h2>Tools &amp; systems</h2>
+    <p class="sub">Pick a session, show up, leave with a new skill.</p>
+    <div class="row g-5">
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-terminal"></i><h3>Unix Command Line</h3><p>Essential commands, navigation, and shell scripting basics. 2 hours.</p><a href="../academy/microlearning/cli-intro/" class="m-lk">Session details</a></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-table"></i><h3>SC-IM Spreadsheets</h3><p>Terminal-based spreadsheets with formulas, formatting, and data import. 1 hour.</p><a href="../academy/microlearning/sc-im/" class="m-lk">Session details</a></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-layout-split"></i><h3>Tmux</h3><p>Session management, panes, windows, and productivity shortcuts. 1 hour.</p><a href="../academy/microlearning/tmux/" class="m-lk">Session details</a></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-arrow-repeat"></i><h3>Syncthing</h3><p>Private, peer-to-peer file sync setup and configuration. 2 hours.</p><a href="../academy/microlearning/syncthing/" class="m-lk">Session details</a></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-code-square"></i><h3>Emacs Essentials</h3><p>Navigation, editing, buffers, and getting started with packages. 2 hours.</p><a href="../academy/microlearning/emacs/" class="m-lk">Session details</a></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-file-spreadsheet"></i><h3>LibreOffice Calc</h3><p>Advanced formulas, data analysis, charts, and macros. 2 hours.</p><a href="../academy/microlearning/libreoffice-calc/" class="m-lk">Session details</a></div></div>
     </div>
   </div>
 </div>
 
-<style>
-  /* Ensure the text is white in both light and dark modes */
-  .academy-text {
-    color: white !important;
-  }
-</style>
-<div class="container page-section">
-<section id="learning-options" class="level2">
-<h2 class="anchored" data-anchor-id="learning-options">Learning Options</h2>
-<div class="row mb-5">
-  <div class="col-md-4">
-    <div class="card">
-      <div class="card-header bg-success text-white">
-        <h3 class="mb-0 anchored">Courses</h3>
-        <span class="badge bg-light text-dark">8-12 Weeks</span>
-      </div>
-      <div class="card-body">
-        <p>Comprehensive learning experiences with in-depth coverage of topics and hands-on projects.</p>
-        <p><strong>Perfect for:</strong> Deep skill development and career advancement</p>
-        <a href="../academy/courses.html" class="btn btn-success">Browse Courses</a>
-      </div>
+<div class="m-s">
+  <div class="container">
+    <h2>Publishing &amp; writing</h2>
+    <p class="sub">Modern document tools for technical professionals.</p>
+    <div class="row g-5">
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-journal-code"></i><h3>Quarto Publishing</h3><p>YAML frontmatter, Markdown, code chunks, and multi-format output. 2 hours.</p><a href="../academy/microlearning/quarto/" class="m-lk">Session details</a></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-list-task"></i><h3>Org-mode Fundamentals</h3><p>Note-taking, task management, agenda views, and literate programming. 2 hours.</p><a href="../academy/microlearning/org-mode/" class="m-lk">Session details</a></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-file-earmark-text"></i><h3>LaTeX for Academic Writing</h3><p>Document structure, equations, bibliographies, and common packages. 2 hours.</p><a href="../academy/microlearning/latex/" class="m-lk">Session details</a></div></div>
     </div>
-  </div>
-  
-  <div class="col-md-4">
-    <div class="card">
-      <div class="card-header bg-primary text-white">
-        <h3 id="Trainings" class="mb-0 text-white anchored">Trainings</h3>
-        <span class="badge bg-light text-dark">1-2 Days</span>
-      </div>
-      <div class="card-body">
-        <p>Intensive workshops focused on practical skills you can apply immediately in your work.</p>
-        <p><strong>Perfect for:</strong> Professionals with limited time who need specific skills</p>
-        <a href="../academy/trainings.html" class="btn btn-primary text-white">Browse Trainings</a>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-md-4">
-    <div class="card">
-      <div class="card-header bg-info text-white">
-        <h3 class="mb-0 anchored">Microlearning</h3>
-        <span class="badge bg-light text-dark">1-2 Hours</span>
-      </div>
-      <div class="card-body">
-        <p>Bite-sized sessions on specific tools and technologies for quick skill acquisition.</p>
-        <p><strong>Perfect for:</strong> Busy professionals who want to learn a specific tool</p>
-        <p class="text-info fw-bold">You are here</p>
-      </div>
+    <div class="row g-5 mt-2 justify-content-center">
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-type"></i><h3>Typst Markup Language</h3><p>Modern typesetting with simple syntax, math notation, and templates. 1 hour.</p><a href="../academy/microlearning/typst/" class="m-lk">Session details</a></div></div>
     </div>
   </div>
 </div>
 
-<div class="card mb-5">
-  <div class="card-header bg-secondary text-white">
-    <h3 class="mb-0 anchored">For Organizations</h3>
-  </div>
-  <div class="card-body">
-    <div class="row align-items-center">
-      <div class="col-md-8">
-        <p class="mb-0">We offer custom microlearning packages for organizations looking to provide focused skill development for their teams. These can be delivered as lunch-and-learn sessions, team building activities, or as part of a broader training program.</p>
-      </div>
-      <div class="col-md-4 text-end">
-        <a href="../academy/partnerships.html" class="btn btn-secondary">Learn About Partnerships</a>
-      </div>
+<div class="m-bg">
+  <div class="container">
+    <h2>Operating systems</h2>
+    <p class="sub">Hands-on introductions to security-focused OS platforms.</p>
+    <div class="row g-5">
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-snow"></i><h3>NixOS Introduction</h3><p>Declarative configuration, package management, and rollbacks. 2 hours.</p><a href="../academy/microlearning/nixos/" class="m-lk">Session details</a></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-hdd-rack"></i><h3>FreeBSD Basics</h3><p>System architecture, pkg management, and ports collection. 2 hours.</p><a href="../academy/microlearning/freebsd/" class="m-lk">Session details</a></div></div>
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-lock"></i><h3>OpenBSD Security</h3><p>Security philosophy, pledge, PF firewall, and mitigations. 2 hours.</p><a href="../academy/microlearning/openbsd/" class="m-lk">Session details</a></div></div>
+    </div>
+    <div class="row g-5 mt-2 justify-content-center">
+      <div class="col-6 col-lg-4"><div class="m-t"><i class="bi bi-shield-check"></i><h3>QubesOS Security Model</h3><p>Compartmentalization, domains, templates, and secure workflows. 2 hours.</p><a href="../academy/microlearning/qubesos/" class="m-lk">Session details</a></div></div>
     </div>
   </div>
 </div>
 
-</section>
-<section id="available-microlearning-sessions" class="level2">
-<h2 class="anchored" data-anchor-id="available-microlearning-sessions">Available Microlearning Sessions</h2>
-<p>Our microlearning sessions are designed for busy professionals who want to quickly learn a specific tool or technology. Each session is just 1-2 hours long, focused on practical skills you can immediately apply.</p>
-<div class="row mt-5">
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Unix Command Line Introduction</h3>
-        <div class="d-flex justify-content-between">
-          <span class="badge bg-primary">Beginner</span>
-          <span class="badge bg-secondary">2 Hours</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <h4 class="anchored">Session Overview</h4>
-        <p>A quick introduction to the Unix command line interface for beginners, focused on essential commands and navigation.</p>
-
-        <h4 class="anchored">Key Topics</h4>
-        <ul>
-          <li>Basic file and directory operations</li>
-          <li>Navigation and file exploration</li>
-          <li>Text manipulation with command line tools</li>
-          <li>Simple shell scripting concepts</li>
-          <li>Using command line help and documentation</li>
-        </ul>
-
-        <div class="d-flex justify-content-between align-items-center mt-4">
-          <span><strong>Next Session:</strong> June 10, 2025</span>
-          <a href="../academy/microlearning/cli-intro/" class="btn btn-success">Session Details</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">SC-IM Spreadsheets</h3>
-        <div class="d-flex justify-content-between">
-          <span class="badge bg-primary">Intermediate</span>
-          <span class="badge bg-secondary">1 Hour</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <h4 class="anchored">Session Overview</h4>
-        <p>Learn SC-IM, a powerful spreadsheet program that runs in the terminal, offering a lightweight alternative to traditional spreadsheet applications.</p>
-
-        <h4 class="anchored">Key Topics</h4>
-        <ul>
-          <li>Basic navigation and data entry</li>
-          <li>Formulas and calculations</li>
-          <li>Data formatting and visualization</li>
-          <li>Keyboard shortcuts for efficiency</li>
-          <li>Importing and exporting data</li>
-        </ul>
-
-        <div class="d-flex justify-content-between align-items-center mt-4">
-          <span><strong>Next Session:</strong> June 15, 2025</span>
-          <a href="../academy/microlearning/sc-im/" class="btn btn-success">Session Details</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Tmux Terminal Multiplexer</h3>
-        <div class="d-flex justify-content-between">
-          <span class="badge bg-primary">Beginner</span>
-          <span class="badge bg-secondary">1 Hour</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <h4 class="anchored">Session Overview</h4>
-        <p>Master Tmux, a terminal multiplexer that allows you to manage multiple terminal sessions within a single window.</p>
-
-        <h4 class="anchored">Key Topics</h4>
-        <ul>
-          <li>Session management</li>
-          <li>Window and pane operations</li>
-          <li>Navigation shortcuts</li>
-          <li>Configuration basics</li>
-          <li>Useful plugins and customizations</li>
-        </ul>
-
-        <div class="d-flex justify-content-between align-items-center mt-4">
-          <span><strong>Next Session:</strong> June 22, 2025</span>
-          <a href="../academy/microlearning/tmux/" class="btn btn-success">Session Details</a>
-        </div>
-      </div>
+<div class="m-s">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn">13</div><div class="m-nl">Sessions available</div></div>
+      <div><div class="m-nn">1–2h</div><div class="m-nl">Per session</div></div>
+      <div><div class="m-nn">100%</div><div class="m-nl">Practical</div></div>
     </div>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Syncthing</h3>
-        <div class="d-flex justify-content-between">
-          <span class="badge bg-primary">All Levels</span>
-          <span class="badge bg-secondary">2 Hours</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <h4 class="anchored">Session Overview</h4>
-        <p>Set up and configure Syncthing, a free, open-source peer-to-peer file synchronization tool that respects your privacy.</p>
-
-        <h4 class="anchored">Key Topics</h4>
-        <ul>
-          <li>Installation and initial setup</li>
-          <li>Creating and managing shared folders</li>
-          <li>Device connections and permissions</li>
-          <li>Conflict resolution</li>
-          <li>Security and privacy features</li>
-        </ul>
-
-        <div class="d-flex justify-content-between align-items-center mt-4">
-          <span><strong>Next Session:</strong> July 5, 2025</span>
-          <a href="../academy/microlearning/syncthing/" class="btn btn-success">Session Details</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Emacs Essentials</h3>
-        <div class="d-flex justify-content-between">
-          <span class="badge bg-primary">Beginner</span>
-          <span class="badge bg-secondary">2 Hours</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <h4 class="anchored">Session Overview</h4>
-        <p>An introduction to Emacs, a powerful, extensible text editor with a rich ecosystem and a wide range of capabilities.</p>
-
-        <h4 class="anchored">Key Topics</h4>
-        <ul>
-          <li>Basic navigation and editing</li>
-          <li>Essential keyboard shortcuts</li>
-          <li>Buffers, windows, and frames</li>
-          <li>Simple customizations</li>
-          <li>Introduction to Emacs packages</li>
-        </ul>
-
-        <div class="d-flex justify-content-between align-items-center mt-4">
-          <span><strong>Next Session:</strong> July 12, 2025</span>
-          <a href="../academy/microlearning/emacs/" class="btn btn-success">Session Details</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">LibreOffice Calc</h3>
-        <div class="d-flex justify-content-between">
-          <span class="badge bg-primary">All Levels</span>
-          <span class="badge bg-secondary">2 Hours</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <h4 class="anchored">Session Overview</h4>
-        <p>Learn to use LibreOffice Calc, a powerful open-source spreadsheet application that offers a full-featured alternative to Microsoft Excel.</p>
-
-        <h4 class="anchored">Key Topics</h4>
-        <ul>
-          <li>Interface navigation and customization</li>
-          <li>Advanced formulas and functions</li>
-          <li>Data analysis tools</li>
-          <li>Charts and data visualization</li>
-          <li>Macros and automation</li>
-        </ul>
-
-        <div class="d-flex justify-content-between align-items-center mt-4">
-          <span><strong>Next Session:</strong> July 18, 2025</span>
-          <a href="../academy/microlearning/libreoffice-calc/" class="btn btn-success">Session Details</a>
-        </div>
-      </div>
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Learn something new<br>over lunch</h2>
+    <p>Perfect for lunch-and-learn sessions, team building, or personal skill upgrades.</p>
+    <a href="https://cal.com/chenist" target="_blank" class="m-b">Book a session</a>
+    <div class="m-sm">
+      <i class="bi bi-check-circle-fill"></i> Quick reference guides &nbsp;
+      <i class="bi bi-check-circle-fill"></i> Cheat sheets included &nbsp;
+      <i class="bi bi-check-circle-fill"></i> Group packages
     </div>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Quarto Publishing</h3>
-        <div class="d-flex justify-content-between">
-          <span class="badge bg-primary">Intermediate</span>
-          <span class="badge bg-secondary">2 Hours</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <h4 class="anchored">Session Overview</h4>
-        <p>Get started with Quarto, an open-source scientific and technical publishing system built on Pandoc.</p>
-
-        <h4 class="anchored">Key Topics</h4>
-        <ul>
-          <li>Document structure and YAML frontmatter</li>
-          <li>Markdown syntax and extensions</li>
-          <li>Code chunks and execution</li>
-          <li>Output formats (HTML, PDF, presentations)</li>
-          <li>Publishing and sharing documents</li>
-        </ul>
-
-        <div class="d-flex justify-content-between align-items-center mt-4">
-          <span><strong>Next Session:</strong> August 5, 2025</span>
-          <a href="../academy/microlearning/quarto/" class="btn btn-success">Session Details</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Org-mode Fundamentals</h3>
-        <div class="d-flex justify-content-between">
-          <span class="badge bg-primary">Intermediate</span>
-          <span class="badge bg-secondary">2 Hours</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <h4 class="anchored">Session Overview</h4>
-        <p>Learn the basics of Org-mode, a powerful plain text system for note-taking, task management, and document authoring in Emacs.</p>
-
-        <h4 class="anchored">Key Topics</h4>
-        <ul>
-          <li>Document structure and organization</li>
-          <li>Task and project management</li>
-          <li>Agenda views and scheduling</li>
-          <li>Export and publishing options</li>
-          <li>Literate programming with Org Babel</li>
-        </ul>
-
-        <div class="d-flex justify-content-between align-items-center mt-4">
-          <span><strong>Next Session:</strong> August 15, 2025</span>
-          <a href="../academy/microlearning/org-mode/" class="btn btn-success">Session Details</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">LaTeX for Academic Writing</h3>
-        <div class="d-flex justify-content-between">
-          <span class="badge bg-primary">Beginner</span>
-          <span class="badge bg-secondary">2 Hours</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <h4 class="anchored">Session Overview</h4>
-        <p>An introduction to LaTeX, a document preparation system widely used for academic and scientific publishing.</p>
-
-        <h4 class="anchored">Key Topics</h4>
-        <ul>
-          <li>Document structure and basic syntax</li>
-          <li>Mathematical equations and notation</li>
-          <li>Bibliographies with BibTeX</li>
-          <li>Tables and figures</li>
-          <li>Common document classes and packages</li>
-        </ul>
-
-        <div class="d-flex justify-content-between align-items-center mt-4">
-          <span><strong>Next Session:</strong> August 22, 2025</span>
-          <a href="../academy/microlearning/latex/" class="btn btn-success">Session Details</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Typst Markup Language</h3>
-        <div class="d-flex justify-content-between">
-          <span class="badge bg-primary">Beginner</span>
-          <span class="badge bg-secondary">1 Hour</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <h4 class="anchored">Session Overview</h4>
-        <p>Discover Typst, a modern markup-based typesetting system that offers a simpler alternative to LaTeX.</p>
-
-        <h4 class="anchored">Key Topics</h4>
-        <ul>
-          <li>Syntax and document structure</li>
-          <li>Text formatting and styling</li>
-          <li>Mathematical notation</li>
-          <li>Figures, tables, and references</li>
-          <li>Custom functions and templates</li>
-        </ul>
-
-        <div class="d-flex justify-content-between align-items-center mt-4">
-          <span><strong>Next Session:</strong> September 5, 2025</span>
-          <a href="../academy/microlearning/typst/" class="btn btn-success">Session Details</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">NixOS Introduction</h3>
-        <div class="d-flex justify-content-between">
-          <span class="badge bg-primary">Intermediate</span>
-          <span class="badge bg-secondary">2 Hours</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <h4 class="anchored">Session Overview</h4>
-        <p>A quick introduction to NixOS, a Linux distribution built on the unique Nix package manager with declarative configuration.</p>
-
-        <h4 class="anchored">Key Topics</h4>
-        <ul>
-          <li>Nix package manager basics</li>
-          <li>Declarative system configuration</li>
-          <li>NixOS configuration.nix</li>
-          <li>Managing services and users</li>
-          <li>Rollbacks and system generations</li>
-        </ul>
-
-        <div class="d-flex justify-content-between align-items-center mt-4">
-          <span><strong>Next Session:</strong> September 12, 2025</span>
-          <a href="../academy/microlearning/nixos/" class="btn btn-success">Session Details</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">FreeBSD Basics</h3>
-        <div class="d-flex justify-content-between">
-          <span class="badge bg-primary">Intermediate</span>
-          <span class="badge bg-secondary">2 Hours</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <h4 class="anchored">Session Overview</h4>
-        <p>An introduction to FreeBSD, a powerful, flexible, and secure operating system known for its reliability and performance.</p>
-
-        <h4 class="anchored">Key Topics</h4>
-        <ul>
-          <li>FreeBSD installation overview</li>
-          <li>System architecture and design</li>
-          <li>Package management with pkg</li>
-          <li>Ports collection basics</li>
-          <li>System configuration and rc.conf</li>
-        </ul>
-
-        <div class="d-flex justify-content-between align-items-center mt-4">
-          <span><strong>Next Session:</strong> September 20, 2025</span>
-          <a href="../academy/microlearning/freebsd/" class="btn btn-success">Session Details</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">OpenBSD Security</h3>
-        <div class="d-flex justify-content-between">
-          <span class="badge bg-primary">Intermediate</span>
-          <span class="badge bg-secondary">2 Hours</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <h4 class="anchored">Session Overview</h4>
-        <p>Learn about OpenBSD, an operating system known for its focus on security, correctness, and proactive security features.</p>
-
-        <h4 class="anchored">Key Topics</h4>
-        <ul>
-          <li>Security philosophy and approach</li>
-          <li>Installation and basic setup</li>
-          <li>Privilege separation and pledge</li>
-          <li>PF firewall basics</li>
-          <li>Security mitigations and features</li>
-        </ul>
-
-        <div class="d-flex justify-content-between align-items-center mt-4">
-          <span><strong>Next Session:</strong> October 5, 2025</span>
-          <a href="../academy/microlearning/openbsd/" class="btn btn-success">Session Details</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">QubesOS Security Model</h3>
-        <div class="d-flex justify-content-between">
-          <span class="badge bg-primary">Advanced</span>
-          <span class="badge bg-secondary">2 Hours</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <h4 class="anchored">Session Overview</h4>
-        <p>Explore QubesOS, a security-focused operating system that uses virtualization to provide strong security through isolation.</p>
-
-        <h4 class="anchored">Key Topics</h4>
-        <ul>
-          <li>Security by compartmentalization</li>
-          <li>Qubes domains and virtual machines</li>
-          <li>Template-based system design</li>
-          <li>Security workflows and practices</li>
-          <li>Inter-VM communication and data transfer</li>
-        </ul>
-
-        <div class="d-flex justify-content-between align-items-center mt-4">
-          <span><strong>Next Session:</strong> October 15, 2025</span>
-          <a href="../academy/microlearning/qubesos/" class="btn btn-success">Session Details</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-<section id="microlearning-format" class="level2">
-<h2 class="anchored" data-anchor-id="microlearning-format">Microlearning Format</h2>
-<p>Our microlearning sessions are designed for maximum efficiency and immediate application:</p>
-<div class="row mt-4">
-  <div class="col-md-4">
-    <div class="security-feature">
-      <h3 class="anchored">Focused Content</h3>
-      <p>Each session targets a specific tool or technology with no wasted time.</p>
-      <ul>
-        <li>Concentrated on essential skills</li>
-        <li>Practical, hands-on approach</li>
-        <li>Immediate application focus</li>
-        <li>Tool-specific best practices</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="security-feature">
-      <h3 class="anchored">Flexible Scheduling</h3>
-      <p>Fit learning into your busy schedule with our short, focused sessions.</p>
-      <ul>
-        <li>Lunchtime learning options</li>
-        <li>Early morning sessions</li>
-        <li>Evening availability</li>
-        <li>On-demand recordings</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="security-feature">
-      <h3 class="anchored">Practical Resources</h3>
-      <p>Take away resources you can use immediately after the session.</p>
-      <ul>
-        <li>Quick reference guides</li>
-        <li>Configuration templates</li>
-        <li>Command cheat sheets</li>
-        <li>Recommended practice exercises</li>
-      </ul>
-    </div>
-  </div>
-</div>
-</section>
-<section id="why-choose-our-microlearning" class="level2">
-<h2 class="anchored" data-anchor-id="why-choose-our-microlearning">Why Choose Our Microlearning</h2>
-<div class="row mt-5">
-  <div class="col-lg-3 col-md-6">
-    <div class="feature-card text-center">
-      <div class="feature-card-icon">
-        <i class="bi bi-clock"></i>
-      </div>
-      <h3 class="anchored">Time-Efficient</h3>
-      <p>Just 1-2 hours of focused learning gets you productive with new tools quickly.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-3 col-md-6">
-    <div class="feature-card text-center">
-      <div class="feature-card-icon">
-        <i class="bi bi-tools"></i>
-      </div>
-      <h3 class="anchored">Tool-Focused</h3>
-      <p>Practical skills for specific tools rather than broad theoretical concepts.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-3 col-md-6">
-    <div class="feature-card text-center">
-      <div class="feature-card-icon">
-        <i class="bi bi-lightning-charge"></i>
-      </div>
-      <h3 class="anchored">Immediate Application</h3>
-      <p>Start using what you learn immediately after the session concludes.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-3 col-md-6">
-    <div class="feature-card text-center">
-      <div class="feature-card-icon">
-        <i class="bi bi-puzzle"></i>
-      </div>
-      <h3 class="anchored">Building Blocks</h3>
-      <p>Stack multiple microlearning sessions to build comprehensive skillsets.</p>
-    </div>
-  </div>
-</div>
-</section>
-</div>
-<div class="cta-section">
-  <div class="container text-center">
-    <h2 class="anchored"><span class="text-dark">Ready to learn something new?</span></h2>
-    <p class="mb-4">Browse our microlearning catalog and find the perfect short session to expand your skillset.</p>
-    <div class="row justify-content-center mt-4">
-      <div class="col-md-6">
-        <a href="../academy/programs" class="cta-button">Explore Academy Programs</a>
-      </div>
-      <br>
-      <br>
-      <div class="col-md-6">
-        <a href="../contact.html" class="cta-button">Schedule a Session</a>
-      </div>
-    </div>
-  </div>
 </div>
 
 
 
-</main> <!-- /main -->
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1170,13 +722,14 @@ document.addEventListener('DOMContentLoaded', function() {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -1526,533 +1079,85 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
+<footer style="background-color:#0a0a0a; background-image: url(&quot;data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2381BD4A' fill-opacity='0.08'%3E%3Ccircle cx='20' cy='20' r='1.5'/%3E%3C/g%3E%3C/svg%3E&quot;); background-repeat: repeat; background-size: 40px 40px; color:rgba(255,255,255,0.6); padding:4rem 0 2rem; font-size:0.82rem; line-height:1.8;">
+  <div style="max-width:1200px; margin:0 auto; padding:0 1.5rem;">
+    <div style="display:grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr; gap:2rem;">
 
-</div>   
-    <div class="nav-footer-center">
+      <div>
+        <div style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:1rem; font-family:'Source Code Pro',monospace;">chen<span style="color:#81BD4A;">.ist</span></div>
+        <p style="margin-bottom:1rem;">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
+        <p style="color:rgba(255,255,255,0.25);">© 2026 chen.ist</p>
+      </div>
 
-</div>
-    <div class="nav-footer-right">
+      <div>
+        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Services</div>
+        <a href="../digital/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Digital Infrastructure</a>
+        <a href="../security/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Security</a>
+        <a href="../services/cloud/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Cloud</a>
+        <a href="../services/nis2/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">NIS2 Compliance</a>
+        <a href="../services/digital-resilience/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Digital Resilience</a>
+      </div>
 
-</div>
-  </div>
-</footer>
-<footer class="footer mt-5 py-3 cybersecurity-footer">
-    <div class="container">
-        <div class="row mb-3">
-            <!-- Company Logo and Brief -->
-            <div class="col-md-4 mb-2">
-                <div class="d-flex align-items-center">
-                    <h4 class="footer-logo mb-0 me-2">chen<span class="text-accent">.ist</span></h4>
-                    <div class="secure-badge ms-2">
-                        <i class="bi bi-shield-lock-fill"></i> Secure
-                    </div>
-                </div>
-                <p class="footer-description small mt-2 mb-0">
-                    Enterprise cybersecurity solutions with zero-trust implementation and continuous monitoring.
-                </p>
-            </div>
-            
-            <!-- Tabs Navigation -->
-            <div class="col-md-8 mb-2">
-                <div class="footer-tabs">
-                    <ul class="nav nav-tabs footer-nav-tabs" id="footerTabs" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="solutions-tab" data-bs-toggle="tab" data-bs-target="#solutions" type="button" role="tab">
-                                <i class="bi bi-shield-fill"></i> Solutions
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="academy-tab" data-bs-toggle="tab" data-bs-target="#academy" type="button" role="tab">
-                                <i class="bi bi-mortarboard-fill"></i> Academy
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab">
-                                <i class="bi bi-envelope-fill"></i> Contact
-                            </button>
-                        </li>
-                    </ul>
-                    
-                    <!-- Tab Content -->
-                    <div class="tab-content pt-2" id="footerTabContent">
-                        <!-- Solutions Tab -->
-                        <div class="tab-pane fade show active" id="solutions" role="tabpanel">
-                            <div class="row">
-                                <div class="col-6 col-md-3">
-                                    <a href="../services.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Security Services
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../services.html#consulting" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Consulting
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../services.html#compliance" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Compliance
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../services.html#incident-response" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Incident Response
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Academy Tab -->
-                        <div class="tab-pane fade" id="academy" role="tabpanel">
-                            <div class="row">
-                                <div class="col-6 col-md-3">
-                                    <a href="../academy/courses.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Courses
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../academy/events.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Events
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../academy/webinars.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Webinars
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../academy/computerclub.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Computer Club
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3 mt-2">
-                                    <a href="../academy/programs" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Explore Academy Programs
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Contact Tab -->
-                        <div class="tab-pane fade" id="contact" role="tabpanel">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="d-flex align-items-center mb-1">
-                                        <i class="bi bi-envelope-fill contact-icon"></i>
-                                        <a href="mailto:office@chen.ist" class="footer-link">office@chen.ist</a>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-shield-fill-check contact-icon"></i>
-                                        <span class="small">SOC Available 24/7</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="d-flex align-items-center mb-1">
-                                        <i class="bi bi-geo-alt-fill contact-icon"></i>
-                                        <span class="small">Stockholm | Craiova | Bucharest</span>
-                                    </div>
-                                    <div class="social-icons">
-                                        <a href="https://github.com/chenist" class="social-icon" aria-label="GitHub">
-                                            <i class="bi bi-github"></i>
-                                        </a>
-                                        <a href="https://linkedin.com/in/chenistsec" class="social-icon" aria-label="LinkedIn">
-                                            <i class="bi bi-linkedin"></i>
-                                        </a>
-                                        <a href="https://twitter.com/chenistsec" class="social-icon" aria-label="Twitter">
-                                            <i class="bi bi-twitter-x"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer-divider">
-            <div class="cyber-line"></div>
-        </div>
-        
-        <div class="row footer-bottom py-1">
-            <div class="col-md-6">
-                <div class="d-flex align-items-center">
-                    <div class="security-pulse"></div>
-                    <p class="mb-0 ms-2 copyright">
-                        © 2025 chen.ist <span class="d-none d-md-inline">| Secure. Vigilant. Resilient.</span>
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6 text-md-end">
-                <div class="footer-bottom-links">
-                    <a href="../privacy.html">Privacy</a>
-                    <span class="separator">|</span>
-                    <a href="../terms.html">Terms</a>
-                    <span class="separator">|</span>
-                    <a href="../contact.html" class="btn-report-incident">
-                        <i class="bi bi-exclamation-triangle-fill"></i> Report Incident
-                    </a>
-                </div>
-            </div>
-        </div>
+      <div>
+        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Academy</div>
+        <a href="../academy/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Overview</a>
+        <a href="../academy/courses.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Courses</a>
+        <a href="../academy/trainings.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Trainings</a>
+        <a href="../academy/events.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Events</a>
+        <a href="../academy/webinars.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Webinars</a>
+      </div>
+
+      <div>
+        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Company</div>
+        <a href="../about/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">About</a>
+        <a href="../blog.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Blog</a>
+        <a href="../contact.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Contact</a>
+        <a href="../privacy.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Privacy</a>
+        <a href="../terms.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Terms</a>
+      </div>
+
+      <div>
+        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Connect</div>
+        <a href="mailto:office@chen.ist" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">office@chen.ist</a>
+        <a href="https://github.com/chenist" target="_blank" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">GitHub</a>
+        <a href="https://alinmechenici.substack.com" target="_blank" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Newsletter</a>
+        <a href="https://linkedin.com/in/chenistsec" target="_blank" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">LinkedIn</a>
+        <div style="margin-top:1rem; color:rgba(255,255,255,0.2); font-size:0.72rem;">Craiova · Bucharest · Stockholm</div>
+      </div>
+
     </div>
+  </div>
 </footer>
 
 <style>
-.cybersecurity-footer {
-    background-color: #0f1923;
-    color: #e6e6e6;
-    border-top: 3px solid #18bc9c;
-    position: relative;
-    font-size: 0.9rem;
+@media (max-width: 991px) {
+  footer > div > div { grid-template-columns: 2fr 1fr 1fr !important; }
 }
-
-/* Change accent colors for academy section */
-.academy-section .cybersecurity-footer {
-    border-top-color: #F5A623;
-}
-
-.academy-section .cybersecurity-footer::before {
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        #F5A623 20%, 
-        #F5A623 40%, 
-        transparent 50%,
-        transparent 60%,
-        #F5A623 80%,
-        transparent 100%
-    );
-}
-
-.academy-section .cybersecurity-footer .text-accent,
-.academy-section .cybersecurity-footer .contact-icon,
-.academy-section .cybersecurity-footer .footer-heading::after,
-.academy-section .cybersecurity-footer .social-icon:hover,
-.academy-section .cybersecurity-footer .footer-link:hover,
-.academy-section .cybersecurity-footer .contact-item a:hover,
-.academy-section .cybersecurity-footer .footer-bottom-links a:hover,
-.academy-section .cybersecurity-footer .nav-link.active {
-    color: #F5A623 !important;
-}
-
-.academy-section .cybersecurity-footer .secure-badge {
-    background-color: rgba(245, 166, 35, 0.15);
-    color: #F5A623;
-    border-left-color: #F5A623;
-}
-
-.academy-section .cybersecurity-footer .social-icon:hover {
-    background-color: #F5A623;
-    color: #0f1923 !important;
-}
-
-.academy-section .cybersecurity-footer .cyber-line {
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        rgba(245, 166, 35, 0.3) 10%, 
-        rgba(245, 166, 35, 0.5) 50%, 
-        rgba(245, 166, 35, 0.3) 90%, 
-        transparent 100%
-    );
-}
-
-.academy-section .cybersecurity-footer .cyber-line::before,
-.academy-section .cybersecurity-footer .cyber-line::after {
-    background-color: #F5A623;
-}
-
-.academy-section .cybersecurity-footer .security-pulse {
-    background-color: #F5A623;
-}
-
-.academy-section .cybersecurity-footer .security-pulse::before {
-    background-color: rgba(245, 166, 35, 0.3);
-}
-
-.cybersecurity-footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        #18bc9c 20%, 
-        #18bc9c 40%, 
-        transparent 50%,
-        transparent 60%,
-        #18bc9c 80%,
-        transparent 100%
-    );
-    opacity: 0.4;
-}
-
-.cybersecurity-footer .footer-brand {
-    display: flex;
-    margin-bottom: 0.5rem;
-}
-
-.cybersecurity-footer .footer-logo {
-    font-size: 1.4rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-family: 'Source Code Pro', monospace;
-    color: white;
-}
-
-.cybersecurity-footer .text-accent {
-    color: #18bc9c;
-}
-
-.cybersecurity-footer .secure-badge {
-    display: inline-flex;
-    align-items: center;
-    background-color: rgba(24, 188, 156, 0.15);
-    color: #18bc9c;
-    padding: 0.2rem 0.5rem;
-    border-radius: 3px;
-    font-size: 0.7rem;
-    font-weight: 600;
-    border-left: 2px solid #18bc9c;
-}
-
-.cybersecurity-footer .footer-description {
-    color: #9ba6b2;
-    line-height: 1.4;
-}
-
-.cybersecurity-footer .footer-tabs {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 4px;
-}
-
-.cybersecurity-footer .footer-nav-tabs {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.cybersecurity-footer .nav-tabs .nav-link {
-    color: #9ba6b2;
-    border: none;
-    font-size: 0.85rem;
-    padding: 0.4rem 0.8rem;
-    background-color: transparent;
-}
-
-.cybersecurity-footer .nav-tabs .nav-link:hover {
-    color: #e6e6e6;
-    border: none;
-}
-
-.cybersecurity-footer .nav-tabs .nav-link.active {
-    color: #18bc9c;
-    background-color: rgba(24, 188, 156, 0.1);
-    border: none;
-}
-
-.cybersecurity-footer .tab-content {
-    min-height: 60px;
-}
-
-.cybersecurity-footer .footer-link {
-    color: #9ba6b2;
-    text-decoration: none;
-    transition: color 0.2s ease, transform 0.2s ease;
-    display: inline-flex;
-    align-items: center;
-    margin-bottom: 0.5rem;
-    font-size: 0.85rem;
-}
-
-.cybersecurity-footer .footer-link:hover {
-    color: #18bc9c;
-    transform: translateX(3px);
-}
-
-.cybersecurity-footer .icon-small {
-    font-size: 0.75rem;
-    margin-right: 0.25rem;
-}
-
-.cybersecurity-footer .contact-icon {
-    margin-right: 0.5rem;
-    font-size: 0.9rem;
-    color: #18bc9c;
-}
-
-.cybersecurity-footer .social-icons {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-.cybersecurity-footer .social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #e6e6e6;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-size: 0.85rem;
-}
-
-.cybersecurity-footer .social-icon:hover {
-    background-color: #18bc9c;
-    color: #0f1923;
-    transform: translateY(-2px);
-}
-
-.cybersecurity-footer .footer-divider {
-    position: relative;
-    height: 12px;
-    margin: 0.5rem 0;
-}
-
-.cybersecurity-footer .cyber-line {
-    height: 1px;
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        rgba(24, 188, 156, 0.3) 10%, 
-        rgba(24, 188, 156, 0.5) 50%, 
-        rgba(24, 188, 156, 0.3) 90%, 
-        transparent 100%
-    );
-    position: relative;
-}
-
-.cybersecurity-footer .cyber-line::before,
-.cybersecurity-footer .cyber-line::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 8px;
-    height: 1px;
-    background-color: #18bc9c;
-    animation: blink 2s infinite;
-}
-
-.cybersecurity-footer .cyber-line::before {
-    left: 25%;
-}
-
-.cybersecurity-footer .cyber-line::after {
-    right: 25%;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 0.2; }
-    50% { opacity: 1; }
-}
-
-.cybersecurity-footer .security-pulse {
-    width: 8px;
-    height: 8px;
-    background-color: #18bc9c;
-    border-radius: 50%;
-    position: relative;
-}
-
-.cybersecurity-footer .security-pulse::before {
-    content: "";
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    border-radius: 50%;
-    background-color: rgba(24, 188, 156, 0.3);
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); opacity: 1; }
-    70% { transform: scale(1.5); opacity: 0; }
-    100% { transform: scale(1.5); opacity: 0; }
-}
-
-.cybersecurity-footer .copyright {
-    color: #9ba6b2;
-    font-size: 0.8rem;
-}
-
-.cybersecurity-footer .footer-bottom-links {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-}
-
-.cybersecurity-footer .footer-bottom-links a {
-    color: #9ba6b2;
-    text-decoration: none;
-    font-size: 0.8rem;
-    transition: color 0.2s ease;
-}
-
-.cybersecurity-footer .footer-bottom-links a:hover {
-    color: #18bc9c;
-}
-
-.cybersecurity-footer .separator {
-    margin: 0 0.5rem;
-    color: #4a5568;
-    font-size: 0.8rem;
-}
-
-.cybersecurity-footer .btn-report-incident {
-    display: inline-flex;
-    align-items: center;
-    background-color: rgba(220, 53, 69, 0.15);
-    color: #dc3545 !important;
-    padding: 0.2rem 0.5rem;
-    border-radius: 3px;
-    font-size: 0.75rem;
-    margin-left: 0.5rem;
-    font-weight: 600;
-    transition: all 0.3s ease !important;
-}
-
-.cybersecurity-footer .btn-report-incident:hover {
-    background-color: rgba(220, 53, 69, 0.3);
-}
-
-.cybersecurity-footer .btn-report-incident i {
-    margin-right: 0.3rem;
-}
-
 @media (max-width: 767px) {
-    .cybersecurity-footer .footer-bottom-links {
-        justify-content: flex-start;
-        margin-top: 0.5rem;
-    }
-    
-    .cybersecurity-footer .btn-report-incident {
-        margin-top: 0.5rem;
-        margin-left: 0;
-    }
-    
-    .cybersecurity-footer .separator:nth-of-type(2) {
-        display: none;
-    }
+  footer > div > div { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
 }
+@media (max-width: 480px) {
+  footer > div > div { grid-template-columns: 1fr !important; }
+}
+footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
 </style>
-
 <script>
-// Initialize Bootstrap tabs if not already initialized
 document.addEventListener('DOMContentLoaded', function() {
-    if (typeof bootstrap !== 'undefined') {
-        var tabElList = [].slice.call(document.querySelectorAll('#footerTabs .nav-link'));
-        tabElList.map(function(tabEl) {
-            return new bootstrap.Tab(tabEl);
-        });
-    }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.m-s, .m-bg, .m-cta, .m-r, .m-n, .hp-sec, .hp-stats, .ev-card, .ev-past, .m-t').forEach(el => observer.observe(el));
 });
+</script>
+<!-- Cal.com floating button -->
+<script>
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", {origin:"https://cal.com"});
+  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {

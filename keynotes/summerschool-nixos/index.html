@@ -7,8 +7,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-7081dff82644c089f36d293adcfbb6b9.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.30">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.26">
 
   <meta name="author" content="Open4Tech Summer School">
   <meta name="dcterms.date" content="2025-06-25">
@@ -97,7 +97,7 @@
     code span.vs { color: #f1fa8c; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-890308df9978321aaae4ba21350e091c.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-1dd6971110d2938e8ea7ad7bde61c691.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -290,7 +290,7 @@ Open4Tech Summer School
 <h1>Session 1: NixOS Fundamentals</h1>
 
 </section>
-<section id="what-is-nixos" class="slide level2 center" data-background-image="../../assets/svg/code_review.svg" data-background-size="cover">
+<section id="what-is-nixos" class="slide level2 center" data-background-image="../../assets/svg/large-triangles.svg" data-background-size="cover">
 <h2>What is NixOS?</h2>
 <blockquote>
 <p>“A Linux distribution built on the Nix package manager”</p>
@@ -355,7 +355,7 @@ Open4Tech Summer School
 <section id="basic-configuration-structure" class="slide level2 center">
 <h2>Basic Configuration Structure</h2>
 <p><strong>Chapter:</strong> Declarative Configuration</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb1-1"><a></a><span class="op">{</span> <span class="va">config</span><span class="op">,</span> <span class="va">pkgs</span><span class="op">,</span> <span class="op">...</span> <span class="op">}</span>:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb1-1"><a></a><span class="op">{</span> <span class="va">config</span><span class="op">,</span> <span class="va">pkgs</span><span class="op">,</span> <span class="op">...</span> <span class="op">}</span>:</span>
 <span id="cb1-2"><a></a><span class="op">{</span></span>
 <span id="cb1-3"><a></a>  <span class="co"># System configuration</span></span>
 <span id="cb1-4"><a></a>  <span class="va">networking</span>.<span class="va">hostName</span> <span class="op">=</span> <span class="st">"security-lab"</span><span class="op">;</span></span>
@@ -371,7 +371,7 @@ Open4Tech Summer School
 <span id="cb1-14"><a></a>    wireshark</span>
 <span id="cb1-15"><a></a>    nmap</span>
 <span id="cb1-16"><a></a>  <span class="op">];</span></span>
-<span id="cb1-17"><a></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-17"><a></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="configuration-modules" class="slide level2 center">
 <h2>Configuration Modules</h2>
@@ -386,7 +386,7 @@ Open4Tech Summer School
 <section id="security-first-configuration" class="slide level2 center">
 <h2>Security-First Configuration</h2>
 <p><strong>Chapter:</strong> Declarative Configuration</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb2-1"><a></a><span class="op">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb2-1"><a></a><span class="op">{</span></span>
 <span id="cb2-2"><a></a>  <span class="co"># Enable firewall by default</span></span>
 <span id="cb2-3"><a></a>  <span class="va">networking</span>.<span class="va">firewall</span>.<span class="va">enable</span> <span class="op">=</span> <span class="cn">true</span><span class="op">;</span></span>
 <span id="cb2-4"><a></a>  </span>
@@ -397,7 +397,7 @@ Open4Tech Summer School
 <span id="cb2-9"><a></a>  <span class="co"># Enable security tools</span></span>
 <span id="cb2-10"><a></a>  <span class="va">programs</span>.<span class="va">wireshark</span>.<span class="va">enable</span> <span class="op">=</span> <span class="cn">true</span><span class="op">;</span></span>
 <span id="cb2-11"><a></a>  <span class="va">security</span>.<span class="va">sudo</span>.<span class="va">wheelNeedsPassword</span> <span class="op">=</span> <span class="cn">true</span><span class="op">;</span></span>
-<span id="cb2-12"><a></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-12"><a></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="package-management-with-nix" class="slide level2 center" data-background-image="../../assets/svg/operating_system.svg" data-background-size="cover">
 <h2>Package Management with Nix</h2>
@@ -418,7 +418,7 @@ Open4Tech Summer School
 <section id="installing-security-tools" class="slide level2 center">
 <h2>Installing Security Tools</h2>
 <p><strong>Chapter:</strong> Package Management with Nix</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb3-1"><a></a>environment<span class="op">.</span>systemPackages = <span class="kw">with</span> pkgs<span class="op">;</span> <span class="op">[</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb3-1"><a></a>environment<span class="op">.</span>systemPackages = <span class="kw">with</span> pkgs<span class="op">;</span> <span class="op">[</span></span>
 <span id="cb3-2"><a></a>  <span class="co"># Network analysis</span></span>
 <span id="cb3-3"><a></a>  wireshark tcpdump nmap</span>
 <span id="cb3-4"><a></a>  </span>
@@ -430,7 +430,7 @@ Open4Tech Summer School
 <span id="cb3-10"><a></a>  </span>
 <span id="cb3-11"><a></a>  <span class="co"># Monitoring</span></span>
 <span id="cb3-12"><a></a>  htop iotop nethogs</span>
-<span id="cb3-13"><a></a><span class="op">]</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-13"><a></a><span class="op">]</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="nix-shell-for-testing" class="slide level2 center">
 <h2>Nix Shell for Testing</h2>
@@ -445,7 +445,7 @@ Open4Tech Summer School
 <section id="shell.nix-example" class="slide level2 center">
 <h2>Shell.nix Example</h2>
 <p><strong>Chapter:</strong> Package Management with Nix</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb4-1"><a></a><span class="op">{</span> <span class="va">pkgs</span> <span class="op">?</span> <span class="bu">import</span> &lt;nixpkgs&gt; <span class="op">{}</span> <span class="op">}</span>:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb4-1"><a></a><span class="op">{</span> <span class="va">pkgs</span> <span class="op">?</span> <span class="bu">import</span> &lt;nixpkgs&gt; <span class="op">{}</span> <span class="op">}</span>:</span>
 <span id="cb4-2"><a></a></span>
 <span id="cb4-3"><a></a>pkgs<span class="op">.</span>mkShell <span class="op">{</span></span>
 <span id="cb4-4"><a></a>  <span class="va">buildInputs</span> <span class="op">=</span> <span class="kw">with</span> pkgs<span class="op">;</span> <span class="op">[</span></span>
@@ -458,7 +458,7 @@ Open4Tech Summer School
 <span id="cb4-11"><a></a>  <span class="va">shellHook</span> <span class="op">=</span> <span class="st">''</span></span>
 <span id="cb4-12"><a></a><span class="st">    echo "Penetration testing environment ready!"</span></span>
 <span id="cb4-13"><a></a><span class="st">  ''</span><span class="op">;</span></span>
-<span id="cb4-14"><a></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-14"><a></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="system-hardening-basics" class="slide level2 center" data-background-image="../../assets/svg/secure_data.svg" data-background-size="cover">
 <h2>System Hardening Basics</h2>
@@ -469,19 +469,19 @@ Open4Tech Summer School
 <section id="firewall-configuration" class="slide level2 center">
 <h2>Firewall Configuration</h2>
 <p><strong>Chapter:</strong> System Hardening Basics</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb5-1"><a></a>networking<span class="op">.</span>firewall = <span class="op">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb5-1"><a></a>networking<span class="op">.</span>firewall = <span class="op">{</span></span>
 <span id="cb5-2"><a></a>  <span class="va">enable</span> <span class="op">=</span> <span class="cn">true</span><span class="op">;</span></span>
 <span id="cb5-3"><a></a>  <span class="va">allowedTCPPorts</span> <span class="op">=</span> <span class="op">[</span> <span class="dv">22</span> <span class="dv">443</span> <span class="op">];</span></span>
 <span id="cb5-4"><a></a>  <span class="va">allowedUDPPorts</span> <span class="op">=</span> <span class="op">[</span> <span class="dv">53</span> <span class="op">];</span></span>
 <span id="cb5-5"><a></a>  <span class="va">extraCommands</span> <span class="op">=</span> <span class="st">''</span></span>
 <span id="cb5-6"><a></a><span class="st">    iptables -A INPUT -p icmp --icmp-type echo-request -j DROP</span></span>
 <span id="cb5-7"><a></a><span class="st">  ''</span><span class="op">;</span></span>
-<span id="cb5-8"><a></a><span class="op">}</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-8"><a></a><span class="op">}</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="user-security-settings" class="slide level2 center">
 <h2>User Security Settings</h2>
 <p><strong>Chapter:</strong> System Hardening Basics</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb6-1"><a></a>security = <span class="op">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb6-1"><a></a>security = <span class="op">{</span></span>
 <span id="cb6-2"><a></a>  <span class="va">sudo</span>.<span class="va">wheelNeedsPassword</span> <span class="op">=</span> <span class="cn">true</span><span class="op">;</span></span>
 <span id="cb6-3"><a></a>  <span class="va">pam</span>.<span class="va">services</span>.<span class="va">sshd</span>.<span class="va">failDelay</span> <span class="op">=</span> <span class="op">{</span></span>
 <span id="cb6-4"><a></a>    <span class="va">enable</span> <span class="op">=</span> <span class="cn">true</span><span class="op">;</span></span>
@@ -493,12 +493,12 @@ Open4Tech Summer School
 <span id="cb6-10"><a></a><span class="st">    root ALL=(ALL:ALL) ALL</span></span>
 <span id="cb6-11"><a></a><span class="st">    %wheel ALL=(ALL:ALL) ALL</span></span>
 <span id="cb6-12"><a></a><span class="st">  ''</span><span class="op">;</span></span>
-<span id="cb6-13"><a></a><span class="op">}</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-13"><a></a><span class="op">}</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="ssh-hardening" class="slide level2 center">
 <h2>SSH Hardening</h2>
 <p><strong>Chapter:</strong> System Hardening Basics</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb7-1"><a></a>services<span class="op">.</span>openssh = <span class="op">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb7-1"><a></a>services<span class="op">.</span>openssh = <span class="op">{</span></span>
 <span id="cb7-2"><a></a>  <span class="va">enable</span> <span class="op">=</span> <span class="cn">true</span><span class="op">;</span></span>
 <span id="cb7-3"><a></a>  <span class="va">settings</span> <span class="op">=</span> <span class="op">{</span></span>
 <span id="cb7-4"><a></a>    <span class="va">PasswordAuthentication</span> <span class="op">=</span> <span class="cn">false</span><span class="op">;</span></span>
@@ -512,7 +512,7 @@ Open4Tech Summer School
 <span id="cb7-12"><a></a><span class="st">    ClientAliveInterval 300</span></span>
 <span id="cb7-13"><a></a><span class="st">    ClientAliveCountMax 2</span></span>
 <span id="cb7-14"><a></a><span class="st">  ''</span><span class="op">;</span></span>
-<span id="cb7-15"><a></a><span class="op">}</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-15"><a></a><span class="op">}</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="service-minimization" class="slide level2 center">
 <h2>Service Minimization</h2>
@@ -551,7 +551,7 @@ Open4Tech Summer School
 <p><strong>Coming up in Session 2:</strong> - Advanced security configurations - Network isolation and sandboxing - Security testing environments - Deployment strategies</p>
 </section></section>
 <section>
-<section id="session-2-advanced-security" class="title-slide slide level1 center" data-background-image="../../assets/svg/code_review.svg" data-background-size="cover">
+<section id="session-2-advanced-security" class="title-slide slide level1 center" data-background-image="../../assets/svg/large-triangles.svg" data-background-size="cover">
 <h1>Session 2: Advanced Security</h1>
 
 </section>
@@ -564,7 +564,7 @@ Open4Tech Summer School
 <section id="apparmor-integration" class="slide level2 center">
 <h2>AppArmor Integration</h2>
 <p><strong>Chapter:</strong> Advanced Security Configurations</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb8-1"><a></a>security<span class="op">.</span>apparmor = <span class="op">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb8-1"><a></a>security<span class="op">.</span>apparmor = <span class="op">{</span></span>
 <span id="cb8-2"><a></a>  <span class="va">enable</span> <span class="op">=</span> <span class="cn">true</span><span class="op">;</span></span>
 <span id="cb8-3"><a></a>  <span class="va">packages</span> <span class="op">=</span> <span class="kw">with</span> pkgs<span class="op">;</span> <span class="op">[</span></span>
 <span id="cb8-4"><a></a>    apparmor-profiles</span>
@@ -581,7 +581,7 @@ Open4Tech Summer School
 <span id="cb8-15"><a></a><span class="st">      deny /etc/shadow r,</span></span>
 <span id="cb8-16"><a></a><span class="st">    }</span></span>
 <span id="cb8-17"><a></a><span class="st">  ''</span><span class="op">;</span></span>
-<span id="cb8-18"><a></a><span class="op">}</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-18"><a></a><span class="op">}</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="mandatory-access-control" class="slide level2 center">
 <h2>Mandatory Access Control</h2>
@@ -596,7 +596,7 @@ Open4Tech Summer School
 <section id="kernel-hardening" class="slide level2 center">
 <h2>Kernel Hardening</h2>
 <p><strong>Chapter:</strong> Advanced Security Configurations</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb9-1"><a></a>boot<span class="op">.</span>kernel<span class="op">.</span>sysctl = <span class="op">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb9-1"><a></a>boot<span class="op">.</span>kernel<span class="op">.</span>sysctl = <span class="op">{</span></span>
 <span id="cb9-2"><a></a>  <span class="co"># Network security</span></span>
 <span id="cb9-3"><a></a>  <span class="st">"net.ipv4.ip_forward"</span> <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
 <span id="cb9-4"><a></a>  <span class="st">"net.ipv4.conf.all.send_redirects"</span> <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
@@ -606,12 +606,12 @@ Open4Tech Summer School
 <span id="cb9-8"><a></a>  <span class="st">"kernel.dmesg_restrict"</span> <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
 <span id="cb9-9"><a></a>  <span class="st">"kernel.kptr_restrict"</span> <span class="op">=</span> <span class="dv">2</span><span class="op">;</span></span>
 <span id="cb9-10"><a></a>  <span class="st">"kernel.unprivileged_bpf_disabled"</span> <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
-<span id="cb9-11"><a></a><span class="op">}</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-11"><a></a><span class="op">}</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="secure-boot-configuration" class="slide level2 center">
 <h2>Secure Boot Configuration</h2>
 <p><strong>Chapter:</strong> Advanced Security Configurations</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb10-1"><a></a>boot<span class="op">.</span>loader<span class="op">.</span>systemd<span class="op">-</span>boot = <span class="op">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb10-1"><a></a>boot<span class="op">.</span>loader<span class="op">.</span>systemd<span class="op">-</span>boot = <span class="op">{</span></span>
 <span id="cb10-2"><a></a>  <span class="va">enable</span> <span class="op">=</span> <span class="cn">true</span><span class="op">;</span></span>
 <span id="cb10-3"><a></a>  <span class="va">editor</span> <span class="op">=</span> <span class="cn">false</span><span class="op">;</span>  <span class="co"># Disable kernel parameter editing</span></span>
 <span id="cb10-4"><a></a>  <span class="va">configurationLimit</span> <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span>
@@ -620,7 +620,7 @@ Open4Tech Summer School
 <span id="cb10-7"><a></a>boot<span class="op">.</span>loader<span class="op">.</span>efi<span class="op">.</span>canTouchEfiVariables = <span class="cn">true</span>;</span>
 <span id="cb10-8"><a></a></span>
 <span id="cb10-9"><a></a><span class="co"># Enable UEFI Secure Boot</span></span>
-<span id="cb10-10"><a></a>boot<span class="op">.</span>loader<span class="op">.</span>systemd<span class="op">-</span>boot<span class="op">.</span>secureBoot = <span class="cn">true</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-10"><a></a>boot<span class="op">.</span>loader<span class="op">.</span>systemd<span class="op">-</span>boot<span class="op">.</span>secureBoot = <span class="cn">true</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="network-isolation-sandboxing" class="slide level2 center" data-background-image="../../assets/svg/operating_system.svg" data-background-size="cover">
 <h2>Network Isolation &amp; Sandboxing</h2>
@@ -631,7 +631,7 @@ Open4Tech Summer School
 <section id="container-isolation" class="slide level2 center">
 <h2>Container Isolation</h2>
 <p><strong>Chapter:</strong> Network Isolation &amp; Sandboxing</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb11-1"><a></a>virtualisation<span class="op">.</span>docker<span class="op">.</span>enable = <span class="cn">true</span>;</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb11-1"><a></a>virtualisation<span class="op">.</span>docker<span class="op">.</span>enable = <span class="cn">true</span>;</span>
 <span id="cb11-2"><a></a></span>
 <span id="cb11-3"><a></a><span class="co"># Isolated security lab container</span></span>
 <span id="cb11-4"><a></a>virtualisation<span class="op">.</span>oci<span class="op">-</span>containers<span class="op">.</span>containers<span class="op">.</span>security<span class="op">-</span>lab = <span class="op">{</span></span>
@@ -644,7 +644,7 @@ Open4Tech Summer School
 <span id="cb11-11"><a></a>    <span class="st">"--cap-drop=ALL"</span></span>
 <span id="cb11-12"><a></a>    <span class="st">"--cap-add=NET_ADMIN"</span></span>
 <span id="cb11-13"><a></a>  <span class="op">];</span></span>
-<span id="cb11-14"><a></a><span class="op">}</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-14"><a></a><span class="op">}</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="network-namespaces" class="slide level2 center">
 <h2>Network Namespaces</h2>
@@ -659,7 +659,7 @@ Open4Tech Summer School
 <section id="vpn-and-tunnel-management" class="slide level2 center">
 <h2>VPN and Tunnel Management</h2>
 <p><strong>Chapter:</strong> Network Isolation &amp; Sandboxing</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb12-1"><a></a>services<span class="op">.</span>openvpn<span class="op">.</span>servers = <span class="op">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb12-1"><a></a>services<span class="op">.</span>openvpn<span class="op">.</span>servers = <span class="op">{</span></span>
 <span id="cb12-2"><a></a>  <span class="va">security-lab</span> <span class="op">=</span> <span class="op">{</span></span>
 <span id="cb12-3"><a></a>    <span class="va">config</span> <span class="op">=</span> <span class="st">''</span></span>
 <span id="cb12-4"><a></a><span class="st">      remote vpn.security-lab.com 1194</span></span>
@@ -680,12 +680,12 @@ Open4Tech Summer School
 <span id="cb12-19"><a></a>    <span class="va">allowedIPs</span> <span class="op">=</span> <span class="op">[</span> <span class="st">"10.100.0.0/24"</span> <span class="op">];</span></span>
 <span id="cb12-20"><a></a>    <span class="va">endpoint</span> <span class="op">=</span> <span class="st">"vpn.example.com:51820"</span><span class="op">;</span></span>
 <span id="cb12-21"><a></a>  <span class="op">}];</span></span>
-<span id="cb12-22"><a></a><span class="op">}</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-22"><a></a><span class="op">}</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="service-sandboxing" class="slide level2 center">
 <h2>Service Sandboxing</h2>
 <p><strong>Chapter:</strong> Network Isolation &amp; Sandboxing</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb13-1"><a></a>systemd<span class="op">.</span>services<span class="op">.</span>custom<span class="op">-</span>security<span class="op">-</span>tool = <span class="op">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb13-1"><a></a>systemd<span class="op">.</span>services<span class="op">.</span>custom<span class="op">-</span>security<span class="op">-</span>tool = <span class="op">{</span></span>
 <span id="cb13-2"><a></a>  <span class="va">serviceConfig</span> <span class="op">=</span> <span class="op">{</span></span>
 <span id="cb13-3"><a></a>    <span class="va">DynamicUser</span> <span class="op">=</span> <span class="cn">true</span><span class="op">;</span></span>
 <span id="cb13-4"><a></a>    <span class="va">PrivateTmp</span> <span class="op">=</span> <span class="cn">true</span><span class="op">;</span></span>
@@ -700,7 +700,7 @@ Open4Tech Summer School
 <span id="cb13-13"><a></a>    <span class="co"># Network restrictions</span></span>
 <span id="cb13-14"><a></a>    <span class="va">RestrictAddressFamilies</span> <span class="op">=</span> <span class="op">[</span> <span class="st">"AF_INET"</span> <span class="st">"AF_INET6"</span> <span class="op">];</span></span>
 <span id="cb13-15"><a></a>  <span class="op">};</span></span>
-<span id="cb13-16"><a></a><span class="op">}</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-16"><a></a><span class="op">}</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="security-testing-environments" class="slide level2 center" data-background-image="../../assets/svg/secure_data.svg" data-background-size="cover">
 <h2>Security Testing Environments</h2>
@@ -711,7 +711,7 @@ Open4Tech Summer School
 <section id="vulnerable-application-lab" class="slide level2 center">
 <h2>Vulnerable Application Lab</h2>
 <p><strong>Chapter:</strong> Security Testing Environments</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb14-1"><a></a><span class="co"># DVWA (Damn Vulnerable Web Application)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb14-1"><a></a><span class="co"># DVWA (Damn Vulnerable Web Application)</span></span>
 <span id="cb14-2"><a></a>services<span class="op">.</span>httpd = <span class="op">{</span></span>
 <span id="cb14-3"><a></a>  <span class="va">enable</span> <span class="op">=</span> <span class="cn">true</span><span class="op">;</span></span>
 <span id="cb14-4"><a></a>  <span class="va">virtualHosts</span>.<span class="st">"dvwa.local"</span> <span class="op">=</span> <span class="op">{</span></span>
@@ -729,12 +729,12 @@ Open4Tech Summer School
 <span id="cb14-16"><a></a>  <span class="va">enable</span> <span class="op">=</span> <span class="cn">true</span><span class="op">;</span></span>
 <span id="cb14-17"><a></a>  <span class="va">package</span> <span class="op">=</span> pkgs<span class="op">.</span>mariadb<span class="op">;</span></span>
 <span id="cb14-18"><a></a>  <span class="va">initialDatabases</span> <span class="op">=</span> <span class="op">[{</span> <span class="va">name</span> <span class="op">=</span> <span class="st">"dvwa"</span><span class="op">;</span> <span class="op">}];</span></span>
-<span id="cb14-19"><a></a><span class="op">}</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-19"><a></a><span class="op">}</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="penetration-testing-suite" class="slide level2 center">
 <h2>Penetration Testing Suite</h2>
 <p><strong>Chapter:</strong> Security Testing Environments</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb15-1"><a></a>environment<span class="op">.</span>systemPackages = <span class="kw">with</span> pkgs<span class="op">;</span> <span class="op">[</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb15-1"><a></a>environment<span class="op">.</span>systemPackages = <span class="kw">with</span> pkgs<span class="op">;</span> <span class="op">[</span></span>
 <span id="cb15-2"><a></a>  <span class="co"># Web application testing</span></span>
 <span id="cb15-3"><a></a>  burpsuite nikto dirb gobuster</span>
 <span id="cb15-4"><a></a>  </span>
@@ -749,12 +749,12 @@ Open4Tech Summer School
 <span id="cb15-13"><a></a>  </span>
 <span id="cb15-14"><a></a>  <span class="co"># Exploitation frameworks</span></span>
 <span id="cb15-15"><a></a>  exploit-db searchsploit</span>
-<span id="cb15-16"><a></a><span class="op">]</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-16"><a></a><span class="op">]</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="isolated-testing-networks" class="slide level2 center">
 <h2>Isolated Testing Networks</h2>
 <p><strong>Chapter:</strong> Security Testing Environments</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb16-1"><a></a><span class="co"># Create isolated network for testing</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb16-1"><a></a><span class="co"># Create isolated network for testing</span></span>
 <span id="cb16-2"><a></a>networking<span class="op">.</span>bridges<span class="op">.</span>br<span class="op">-</span>isolated = <span class="op">{</span></span>
 <span id="cb16-3"><a></a>  <span class="va">interfaces</span> <span class="op">=</span> <span class="op">[];</span></span>
 <span id="cb16-4"><a></a><span class="op">}</span>;</span>
@@ -776,12 +776,12 @@ Open4Tech Summer School
 <span id="cb16-20"><a></a><span class="st">      option routers 192.168.100.1;</span></span>
 <span id="cb16-21"><a></a><span class="st">    }</span></span>
 <span id="cb16-22"><a></a><span class="st">  ''</span><span class="op">;</span></span>
-<span id="cb16-23"><a></a><span class="op">}</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-23"><a></a><span class="op">}</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="automated-testing-pipeline" class="slide level2 center">
 <h2>Automated Testing Pipeline</h2>
 <p><strong>Chapter:</strong> Security Testing Environments</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb17-1"><a></a><span class="co"># Automated security scanning</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb17-1"><a></a><span class="co"># Automated security scanning</span></span>
 <span id="cb17-2"><a></a>systemd<span class="op">.</span>services<span class="op">.</span>security<span class="op">-</span>scan = <span class="op">{</span></span>
 <span id="cb17-3"><a></a>  <span class="va">serviceConfig</span> <span class="op">=</span> <span class="op">{</span></span>
 <span id="cb17-4"><a></a>    <span class="va">Type</span> <span class="op">=</span> <span class="st">"oneshot"</span><span class="op">;</span></span>
@@ -800,9 +800,9 @@ Open4Tech Summer School
 <span id="cb17-17"><a></a>    <span class="va">OnCalendar</span> <span class="op">=</span> <span class="st">"daily"</span><span class="op">;</span></span>
 <span id="cb17-18"><a></a>    <span class="va">Persistent</span> <span class="op">=</span> <span class="cn">true</span><span class="op">;</span></span>
 <span id="cb17-19"><a></a>  <span class="op">};</span></span>
-<span id="cb17-20"><a></a><span class="op">}</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb17-20"><a></a><span class="op">}</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="deployment-strategies" class="slide level2 center" data-background-image="../../assets/svg/code_review.svg" data-background-size="cover">
+<section id="deployment-strategies" class="slide level2 center" data-background-image="../../assets/svg/large-triangles.svg" data-background-size="cover">
 <h2>Deployment Strategies</h2>
 <blockquote>
 <p>“Scaling secure configurations”</p>
@@ -821,7 +821,7 @@ Open4Tech Summer School
 <section id="nixops-for-multi-system" class="slide level2 center">
 <h2>NixOps for Multi-System</h2>
 <p><strong>Chapter:</strong> Deployment Strategies</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb18-1"><a></a><span class="co"># deployment.nix</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb18-1"><a></a><span class="co"># deployment.nix</span></span>
 <span id="cb18-2"><a></a><span class="op">{</span></span>
 <span id="cb18-3"><a></a>  <span class="va">network</span>.<span class="va">description</span> <span class="op">=</span> <span class="st">"Security lab network"</span><span class="op">;</span></span>
 <span id="cb18-4"><a></a>  </span>
@@ -842,12 +842,12 @@ Open4Tech Summer School
 <span id="cb18-19"><a></a>    <span class="va">deployment</span>.<span class="va">targetHost</span> <span class="op">=</span> <span class="st">"10.0.1.20"</span><span class="op">;</span></span>
 <span id="cb18-20"><a></a>    <span class="va">imports</span> <span class="op">=</span> <span class="op">[</span> <span class="ss">./modules/vulnerable-apps.nix</span> <span class="op">];</span></span>
 <span id="cb18-21"><a></a>  <span class="op">};</span></span>
-<span id="cb18-22"><a></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb18-22"><a></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="docker-integration" class="slide level2 center">
 <h2>Docker Integration</h2>
 <p><strong>Chapter:</strong> Deployment Strategies</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb19-1"><a></a><span class="co"># Dockerized security tools</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb19-1"><a></a><span class="co"># Dockerized security tools</span></span>
 <span id="cb19-2"><a></a>virtualisation<span class="op">.</span>docker<span class="op">.</span>enable = <span class="cn">true</span>;</span>
 <span id="cb19-3"><a></a></span>
 <span id="cb19-4"><a></a>environment<span class="op">.</span>systemPackages = <span class="kw">with</span> pkgs<span class="op">;</span> <span class="op">[</span></span>
@@ -859,12 +859,12 @@ Open4Tech Summer School
 <span id="cb19-10"><a></a><span class="st">      --build-arg TOOLS="</span><span class="sc">${</span>lib<span class="op">.</span>concatStringsSep <span class="st">" "</span> securityTools<span class="sc">}</span><span class="st">" \</span></span>
 <span id="cb19-11"><a></a><span class="st">      /etc/nixos/docker/</span></span>
 <span id="cb19-12"><a></a><span class="st">  ''</span><span class="op">)</span></span>
-<span id="cb19-13"><a></a><span class="op">]</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-13"><a></a><span class="op">]</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="cloud-deployment" class="slide level2 center">
 <h2>Cloud Deployment</h2>
 <p><strong>Chapter:</strong> Deployment Strategies</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb20-1"><a></a><span class="co"># AWS EC2 configuration</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb20-1"><a></a><span class="co"># AWS EC2 configuration</span></span>
 <span id="cb20-2"><a></a>imports = <span class="op">[</span> &lt;<span class="ss">nixpkgs/nixos/modules/virtualisation/amazon-image.nix</span>&gt; <span class="op">]</span>;</span>
 <span id="cb20-3"><a></a></span>
 <span id="cb20-4"><a></a>ec2<span class="op">.</span>hvm = <span class="cn">true</span>;</span>
@@ -876,7 +876,7 @@ Open4Tech Summer School
 <span id="cb20-10"><a></a>  <span class="va">enable</span> <span class="op">=</span> <span class="cn">true</span><span class="op">;</span></span>
 <span id="cb20-11"><a></a>  <span class="va">allowReboot</span> <span class="op">=</span> <span class="cn">true</span><span class="op">;</span></span>
 <span id="cb20-12"><a></a>  <span class="va">channel</span> <span class="op">=</span> <span class="st">"https://nixos.org/channels/nixos-23.11"</span><span class="op">;</span></span>
-<span id="cb20-13"><a></a><span class="op">}</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb20-13"><a></a><span class="op">}</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="hands-on-exercise-2" class="slide level2 center">
 <h2>Hands-On Exercise 2</h2>
@@ -978,7 +978,7 @@ Open4Tech Summer School
 <section id="regular-security-updates" class="slide level2 center">
 <h2>Regular Security Updates</h2>
 <p><strong>Chapter:</strong> Building Security Habits</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb21-1"><a></a><span class="co"># Automated security updates</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode numberSource nix number-lines code-with-copy"><code class="sourceCode nix"><span id="cb21-1"><a></a><span class="co"># Automated security updates</span></span>
 <span id="cb21-2"><a></a>system<span class="op">.</span>autoUpgrade = <span class="op">{</span></span>
 <span id="cb21-3"><a></a>  <span class="va">enable</span> <span class="op">=</span> <span class="cn">true</span><span class="op">;</span></span>
 <span id="cb21-4"><a></a>  <span class="va">allowReboot</span> <span class="op">=</span> <span class="cn">false</span><span class="op">;</span>  <span class="co"># Manual reboot for critical systems</span></span>
@@ -987,7 +987,7 @@ Open4Tech Summer School
 <span id="cb21-7"><a></a>  <span class="co"># Only security updates</span></span>
 <span id="cb21-8"><a></a>  <span class="va">operation</span> <span class="op">=</span> <span class="st">"switch"</span><span class="op">;</span></span>
 <span id="cb21-9"><a></a>  <span class="va">flags</span> <span class="op">=</span> <span class="op">[</span> <span class="st">"--option"</span> <span class="st">"substituters"</span> <span class="st">"https://cache.nixos.org/"</span> <span class="op">];</span></span>
-<span id="cb21-10"><a></a><span class="op">}</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb21-10"><a></a><span class="op">}</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="configuration-testing" class="slide level2 center">
 <h2>Configuration Testing</h2>
@@ -1065,7 +1065,7 @@ Open4Tech Summer School
 <p><strong>Build secure, build reproducible!</strong></p>
 </div>
 </section>
-<section id="final-exercise-configuration-challenge" class="slide level2 center" data-background-image="../../assets/svg/code_review.svg" data-background-size="cover">
+<section id="final-exercise-configuration-challenge" class="slide level2 center" data-background-image="../../assets/svg/large-triangles.svg" data-background-size="cover">
 <h2>Final Exercise: Configuration Challenge</h2>
 <h3 id="create-your-security-lab-configuration">Create your security lab configuration:</h3>
 <p><em>Design a NixOS configuration for your ideal cybersecurity environment, including your preferred tools, hardening settings, and testing capabilities.</em></p>
@@ -1263,7 +1263,7 @@ Open4Tech Summer School
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -1337,13 +1337,14 @@ Open4Tech Summer School
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

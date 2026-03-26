@@ -2,10 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Week 1 module covering Unix and Linux history, filesystem hierarchy, essential command-line tools, and navigating Linux distributions.">
 
 <title>Week 1: Unix/Linux Fundamentals – chen.ist</title>
 <style>
@@ -68,18 +69,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../../assets/images/favicon.png" rel="icon" type="image/png">
 <script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../../site_libs/bootstrap/bootstrap-dark-b5057f3398a202b36a08d66ee4de0ec1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../../site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark-b37f6c1b9a99d16252d3ddd2c7074628.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -108,67 +110,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<style>
-.navbar-brand-container {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-brand {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-brand .navbar-title {
-  display: inline-block;
-  margin-left: 0;
-  color: #FFFFFF;
-  font-weight: 600;
-  font-size: 1.25rem;
-  letter-spacing: 0.5px;
-}
-
-@media (max-width: 767.98px) {
-  .navbar-brand .navbar-title {
-    font-size: 1.1rem;
-  }
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Find the navbar brand element that contains the logo
-  const navbarBrand = document.querySelector('.navbar-brand');
-  
-  if (navbarBrand) {
-    // Create a span for the CHENIST text
-    const titleSpan = document.createElement('span');
-    titleSpan.className = 'navbar-title';
-    titleSpan.textContent = 'CHENIST';
-    
-    // Append the span after the logo
-    navbarBrand.appendChild(titleSpan);
-  }
-});
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-
-<link rel="stylesheet" href="../../../../scss/styles.css">
-<link rel="stylesheet" href="../../../../scss/academy.scss">
-<link rel="stylesheet" href="../../../../scss/custom-hero.css">
 <meta property="og:title" content="Week 1: Unix/Linux Fundamentals – chen.ist">
-<meta property="og:description" content="Introduction to the foundations of Unix and Linux systems">
+<meta property="og:description" content="Week 1 module covering Unix and Linux history, filesystem hierarchy, essential command-line tools, and navigating Linux distributions.">
+<meta property="og:image" content="https://chen.ist/academy/courses/unix-linux-administration/modules/assets/images/og-image.png">
 <meta property="og:site_name" content="chen.ist">
 <meta name="twitter:title" content="Week 1: Unix/Linux Fundamentals – chen.ist">
-<meta name="twitter:description" content="Introduction to the foundations of Unix and Linux systems">
-<meta name="twitter:card" content="summary">
-</head>
-
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<meta name="twitter:description" content="Week 1 module covering Unix and Linux history, filesystem hierarchy, essential command-line tools, and navigating Linux distributions.">
+<meta name="twitter:image" content="https://chen.ist/academy/courses/unix-linux-administration/modules/assets/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+</head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -330,7 +280,158 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       toggleColorMode(false);
     }
-  </script>
+  </script><a href="#main-content" class="skip-link">Skip to main content</a>
+<style>
+/* Corporate navbar — solid dark, structured, professional */
+.navbar {
+  background: #0a0a0a !important;
+  border-bottom: 1px solid rgba(129,189,74,0.15);
+  padding: 0 !important;
+  font-size: 0.82rem;
+  min-height: 56px;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  height: 56px;
+}
+.navbar-brand-container { display: flex; align-items: center; }
+.navbar-brand { display: flex; align-items: center; gap: 0.5rem; }
+.navbar-brand .navbar-title {
+  display: inline-block;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: 'Source Code Pro', monospace;
+}
+.navbar-brand .brand-dot { color: #81BD4A; }
+.navbar .nav-link {
+  color: rgba(255,255,255,0.65) !important;
+  font-size: 0.78rem !important;
+  font-weight: 500;
+  padding: 0.5rem 0.85rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: color 0.15s;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active { color: #81BD4A !important; }
+.navbar .dropdown-menu {
+  background: #0a0a0a;
+  border: 1px solid rgba(129,189,74,0.12);
+  border-radius: 8px;
+  padding: 0.4rem;
+  margin-top: 0;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+.navbar .dropdown-item {
+  color: rgba(255,255,255,0.65);
+  font-size: 0.78rem;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 0.45rem 0.85rem;
+  letter-spacing: 0.02em;
+}
+.navbar .dropdown-item:hover {
+  background: rgba(129,189,74,0.1);
+  color: #81BD4A;
+}
+.navbar .quarto-navigation-tool { color: rgba(255,255,255,0.5) !important; }
+.navbar .quarto-navigation-tool:hover { color: #81BD4A !important; }
+.navbar .quarto-color-scheme-toggle { color: rgba(255,255,255,0.5) !important; }
+.navbar .quarto-color-scheme-toggle:hover { color: #81BD4A !important; }
+
+@media (max-width: 991px) {
+  .navbar .nav-link { font-size: 0.75rem !important; padding: 0.4rem 0.6rem !important; }
+}
+@media (max-width: 767.98px) {
+  .navbar-brand .navbar-title { font-size: 0.9rem; }
+  .navbar .navbar-collapse {
+    background: #0a0a0a;
+    border: 1px solid rgba(129,189,74,0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+  }
+  .navbar .nav-link {
+    text-transform: none;
+    font-size: 0.85rem !important;
+    padding: 0.5rem 0.75rem !important;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var navbarBrand = document.querySelector('.navbar-brand');
+  if (navbarBrand) {
+    var titleSpan = document.createElement('span');
+    titleSpan.className = 'navbar-title';
+    titleSpan.textContent = 'CHEN';
+    var dot = document.createElement('span');
+    dot.className = 'brand-dot';
+    dot.textContent = '.';
+    var ist = document.createTextNode('IST');
+    titleSpan.appendChild(dot);
+    titleSpan.appendChild(ist);
+    navbarBrand.appendChild(titleSpan);
+  }
+});
+</script>
+<script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<link rel="preload" href="../../../../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
+<meta name="view-transition" content="same-origin">
+<noscript><style>.m-s,.m-bg,.m-cta,.m-r,.m-n,.hp-sec,.hp-stats,.ev-card,.ev-past,.m-t{opacity:1!important;transform:none!important;}</style></noscript>
+<link rel="dns-prefetch" href="https://cal.com">
+<link rel="dns-prefetch" href="https://app.cal.com">
+<link rel="preconnect" href="https://cal.com" crossorigin="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "chen.ist",
+  "url": "https://chen.ist",
+  "logo": "https://chen.ist/assets/images/logo-light.svg",
+  "description": "Digital infrastructure, cybersecurity, cloud services, and technology education for modern organizations.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Str. Filantropiei, 1-3",
+    "addressLocality": "Craiova",
+    "postalCode": "200143",
+    "addressCountry": "RO"
+  },
+  "email": "office@chen.ist",
+  "sameAs": [
+    "https://github.com/chenist",
+    "https://linkedin.com/in/chenistsec",
+    "https://twitter.com/chenistsec"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Infrastructure", "url": "https://chen.ist/digital/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "NIS2 Compliance", "url": "https://chen.ist/services/nis2/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cybersecurity", "url": "https://chen.ist/services/cybersecurity/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cloud Services", "url": "https://chen.ist/services/cloud/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Resilience", "url": "https://chen.ist/services/digital-resilience/"}}
+    ]
+  }
+}
+</script>
+
+
+<link rel="stylesheet" href="../../../../assets/css/main.min.css">
+
+
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -338,7 +439,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../../assets/images/logo-light.svg" alt="" class="navbar-logo">
+    <img src="../../../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
+    <img src="../../../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -351,10 +453,41 @@ document.addEventListener('DOMContentLoaded', function() {
     <a class="nav-link" href="../../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../../../services.html"> 
-<span class="menu-text">Services</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-services" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Services</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-services">    
+        <li>
+    <a class="dropdown-item" href="../../../../services/index.html">
+ <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../security/index.html">
+ <span class="dropdown-text">Security</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../digital/index.html">
+ <span class="dropdown-text">Digital Infrastructure</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../services/nis2/index.html">
+ <span class="dropdown-text">NIS2 Compliance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../services/cybersecurity/index.html">
+ <span class="dropdown-text">Cybersecurity</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../services/cloud/index.html">
+ <span class="dropdown-text">Cloud Services</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../services/digital-resilience/index.html">
+ <span class="dropdown-text">Digital Resilience</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-academy" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Academy</span>
@@ -463,102 +596,79 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#unixlinux-fundamentals" id="toc-unixlinux-fundamentals" class="nav-link active" data-scroll-target="#unixlinux-fundamentals"><span class="header-section-number">1</span> Unix/Linux Fundamentals</a>
-  <ul class="collapse">
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">1.1</span> Learning Objectives</a></li>
-  <li><a href="#the-unixlinux-heritage" id="toc-the-unixlinux-heritage" class="nav-link" data-scroll-target="#the-unixlinux-heritage"><span class="header-section-number">1.2</span> The Unix/Linux Heritage</a>
-  <ul class="collapse">
-  <li><a href="#unix-origins-and-philosophy" id="toc-unix-origins-and-philosophy" class="nav-link" data-scroll-target="#unix-origins-and-philosophy"><span class="header-section-number">1.2.1</span> Unix Origins and Philosophy</a></li>
-  <li><a href="#from-unix-to-linux" id="toc-from-unix-to-linux" class="nav-link" data-scroll-target="#from-unix-to-linux"><span class="header-section-number">1.2.2</span> From Unix to Linux</a></li>
-  <li><a href="#unixlinux-today" id="toc-unixlinux-today" class="nav-link" data-scroll-target="#unixlinux-today"><span class="header-section-number">1.2.3</span> Unix/Linux Today</a></li>
-  </ul></li>
-  <li><a href="#major-linux-distributions" id="toc-major-linux-distributions" class="nav-link" data-scroll-target="#major-linux-distributions"><span class="header-section-number">1.3</span> Major Linux Distributions</a>
-  <ul class="collapse">
-  <li><a href="#distribution-families" id="toc-distribution-families" class="nav-link" data-scroll-target="#distribution-families"><span class="header-section-number">1.3.1</span> Distribution Families</a></li>
-  <li><a href="#choosing-a-distribution" id="toc-choosing-a-distribution" class="nav-link" data-scroll-target="#choosing-a-distribution"><span class="header-section-number">1.3.2</span> Choosing a Distribution</a></li>
-  </ul></li>
-  <li><a href="#system-architecture-overview" id="toc-system-architecture-overview" class="nav-link" data-scroll-target="#system-architecture-overview"><span class="header-section-number">1.4</span> System Architecture Overview</a>
-  <ul class="collapse">
-  <li><a href="#linux-kernel" id="toc-linux-kernel" class="nav-link" data-scroll-target="#linux-kernel"><span class="header-section-number">1.4.1</span> Linux Kernel</a></li>
-  <li><a href="#user-space-components" id="toc-user-space-components" class="nav-link" data-scroll-target="#user-space-components"><span class="header-section-number">1.4.2</span> User Space Components</a></li>
-  <li><a href="#boot-process" id="toc-boot-process" class="nav-link" data-scroll-target="#boot-process"><span class="header-section-number">1.4.3</span> Boot Process</a></li>
-  </ul></li>
-  <li><a href="#file-system-hierarchy" id="toc-file-system-hierarchy" class="nav-link" data-scroll-target="#file-system-hierarchy"><span class="header-section-number">1.5</span> File System Hierarchy</a>
-  <ul class="collapse">
-  <li><a href="#the-filesystem-hierarchy-standard-fhs" id="toc-the-filesystem-hierarchy-standard-fhs" class="nav-link" data-scroll-target="#the-filesystem-hierarchy-standard-fhs"><span class="header-section-number">1.5.1</span> The Filesystem Hierarchy Standard (FHS)</a></li>
-  <li><a href="#file-types-in-linux" id="toc-file-types-in-linux" class="nav-link" data-scroll-target="#file-types-in-linux"><span class="header-section-number">1.5.2</span> File Types in Linux</a></li>
-  </ul></li>
-  <li><a href="#essential-command-line-tools" id="toc-essential-command-line-tools" class="nav-link" data-scroll-target="#essential-command-line-tools"><span class="header-section-number">1.6</span> Essential Command-Line Tools</a>
-  <ul class="collapse">
-  <li><a href="#shell-basics" id="toc-shell-basics" class="nav-link" data-scroll-target="#shell-basics"><span class="header-section-number">1.6.1</span> Shell Basics</a></li>
-  <li><a href="#file-navigation" id="toc-file-navigation" class="nav-link" data-scroll-target="#file-navigation"><span class="header-section-number">1.6.2</span> File Navigation</a></li>
-  <li><a href="#file-operations" id="toc-file-operations" class="nav-link" data-scroll-target="#file-operations"><span class="header-section-number">1.6.3</span> File Operations</a></li>
-  <li><a href="#file-viewing" id="toc-file-viewing" class="nav-link" data-scroll-target="#file-viewing"><span class="header-section-number">1.6.4</span> File Viewing</a></li>
-  <li><a href="#text-processing" id="toc-text-processing" class="nav-link" data-scroll-target="#text-processing"><span class="header-section-number">1.6.5</span> Text Processing</a></li>
-  <li><a href="#system-information" id="toc-system-information" class="nav-link" data-scroll-target="#system-information"><span class="header-section-number">1.6.6</span> System Information</a></li>
-  </ul></li>
-  <li><a href="#getting-help-and-documentation" id="toc-getting-help-and-documentation" class="nav-link" data-scroll-target="#getting-help-and-documentation"><span class="header-section-number">1.7</span> Getting Help and Documentation</a>
-  <ul class="collapse">
-  <li><a href="#manual-pages" id="toc-manual-pages" class="nav-link" data-scroll-target="#manual-pages"><span class="header-section-number">1.7.1</span> Manual Pages</a></li>
-  <li><a href="#info-pages" id="toc-info-pages" class="nav-link" data-scroll-target="#info-pages"><span class="header-section-number">1.7.2</span> Info Pages</a></li>
-  <li><a href="#command-help-options" id="toc-command-help-options" class="nav-link" data-scroll-target="#command-help-options"><span class="header-section-number">1.7.3</span> Command Help Options</a></li>
-  <li><a href="#online-resources" id="toc-online-resources" class="nav-link" data-scroll-target="#online-resources"><span class="header-section-number">1.7.4</span> Online Resources</a></li>
-  </ul></li>
-  <li><a href="#practical-exercise-linux-exploration" id="toc-practical-exercise-linux-exploration" class="nav-link" data-scroll-target="#practical-exercise-linux-exploration"><span class="header-section-number">1.8</span> Practical Exercise: Linux Exploration</a>
-  <ul class="collapse">
-  <li><a href="#exercise-1-system-information-gathering" id="toc-exercise-1-system-information-gathering" class="nav-link" data-scroll-target="#exercise-1-system-information-gathering"><span class="header-section-number">1.8.1</span> Exercise 1: System Information Gathering</a></li>
-  <li><a href="#exercise-2-file-system-navigation-challenge" id="toc-exercise-2-file-system-navigation-challenge" class="nav-link" data-scroll-target="#exercise-2-file-system-navigation-challenge"><span class="header-section-number">1.8.2</span> Exercise 2: File System Navigation Challenge</a></li>
-  <li><a href="#exercise-3-command-line-problem-solving" id="toc-exercise-3-command-line-problem-solving" class="nav-link" data-scroll-target="#exercise-3-command-line-problem-solving"><span class="header-section-number">1.8.3</span> Exercise 3: Command Line Problem Solving</a></li>
-  </ul></li>
-  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources"><span class="header-section-number">1.9</span> Additional Resources</a></li>
-  <li><a href="#next-week" id="toc-next-week" class="nav-link" data-scroll-target="#next-week"><span class="header-section-number">1.10</span> Next Week</a></li>
-  <li><a href="#discussion-questions" id="toc-discussion-questions" class="nav-link" data-scroll-target="#discussion-questions"><span class="header-section-number">1.11</span> Discussion Questions</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Week 1: Unix/Linux Fundamentals</h1>
+<header id="title-block-header">
+<h1 class="title display-7">Week 1: Unix/Linux Fundamentals</h1>
 <p class="subtitle lead">Introduction to the foundations of Unix and Linux systems</p>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">July 1, 2025</p>
-    </div>
-  </div>
-    
-  </div>
-  
-
 
 </header>
 
-
+<nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#unixlinux-fundamentals" id="toc-unixlinux-fundamentals"><span class="header-section-number">1</span> Unix/Linux Fundamentals</a>
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives"><span class="header-section-number">1.1</span> Learning Objectives</a></li>
+  <li><a href="#the-unixlinux-heritage" id="toc-the-unixlinux-heritage"><span class="header-section-number">1.2</span> The Unix/Linux Heritage</a>
+  <ul>
+  <li><a href="#unix-origins-and-philosophy" id="toc-unix-origins-and-philosophy"><span class="header-section-number">1.2.1</span> Unix Origins and Philosophy</a></li>
+  <li><a href="#from-unix-to-linux" id="toc-from-unix-to-linux"><span class="header-section-number">1.2.2</span> From Unix to Linux</a></li>
+  <li><a href="#unixlinux-today" id="toc-unixlinux-today"><span class="header-section-number">1.2.3</span> Unix/Linux Today</a></li>
+  </ul></li>
+  <li><a href="#major-linux-distributions" id="toc-major-linux-distributions"><span class="header-section-number">1.3</span> Major Linux Distributions</a>
+  <ul>
+  <li><a href="#distribution-families" id="toc-distribution-families"><span class="header-section-number">1.3.1</span> Distribution Families</a></li>
+  <li><a href="#choosing-a-distribution" id="toc-choosing-a-distribution"><span class="header-section-number">1.3.2</span> Choosing a Distribution</a></li>
+  </ul></li>
+  <li><a href="#system-architecture-overview" id="toc-system-architecture-overview"><span class="header-section-number">1.4</span> System Architecture Overview</a>
+  <ul>
+  <li><a href="#linux-kernel" id="toc-linux-kernel"><span class="header-section-number">1.4.1</span> Linux Kernel</a></li>
+  <li><a href="#user-space-components" id="toc-user-space-components"><span class="header-section-number">1.4.2</span> User Space Components</a></li>
+  <li><a href="#boot-process" id="toc-boot-process"><span class="header-section-number">1.4.3</span> Boot Process</a></li>
+  </ul></li>
+  <li><a href="#file-system-hierarchy" id="toc-file-system-hierarchy"><span class="header-section-number">1.5</span> File System Hierarchy</a>
+  <ul>
+  <li><a href="#the-filesystem-hierarchy-standard-fhs" id="toc-the-filesystem-hierarchy-standard-fhs"><span class="header-section-number">1.5.1</span> The Filesystem Hierarchy Standard (FHS)</a></li>
+  <li><a href="#file-types-in-linux" id="toc-file-types-in-linux"><span class="header-section-number">1.5.2</span> File Types in Linux</a></li>
+  </ul></li>
+  <li><a href="#essential-command-line-tools" id="toc-essential-command-line-tools"><span class="header-section-number">1.6</span> Essential Command-Line Tools</a>
+  <ul>
+  <li><a href="#shell-basics" id="toc-shell-basics"><span class="header-section-number">1.6.1</span> Shell Basics</a></li>
+  <li><a href="#file-navigation" id="toc-file-navigation"><span class="header-section-number">1.6.2</span> File Navigation</a></li>
+  <li><a href="#file-operations" id="toc-file-operations"><span class="header-section-number">1.6.3</span> File Operations</a></li>
+  <li><a href="#file-viewing" id="toc-file-viewing"><span class="header-section-number">1.6.4</span> File Viewing</a></li>
+  <li><a href="#text-processing" id="toc-text-processing"><span class="header-section-number">1.6.5</span> Text Processing</a></li>
+  <li><a href="#system-information" id="toc-system-information"><span class="header-section-number">1.6.6</span> System Information</a></li>
+  </ul></li>
+  <li><a href="#getting-help-and-documentation" id="toc-getting-help-and-documentation"><span class="header-section-number">1.7</span> Getting Help and Documentation</a>
+  <ul>
+  <li><a href="#manual-pages" id="toc-manual-pages"><span class="header-section-number">1.7.1</span> Manual Pages</a></li>
+  <li><a href="#info-pages" id="toc-info-pages"><span class="header-section-number">1.7.2</span> Info Pages</a></li>
+  <li><a href="#command-help-options" id="toc-command-help-options"><span class="header-section-number">1.7.3</span> Command Help Options</a></li>
+  <li><a href="#online-resources" id="toc-online-resources"><span class="header-section-number">1.7.4</span> Online Resources</a></li>
+  </ul></li>
+  <li><a href="#practical-exercise-linux-exploration" id="toc-practical-exercise-linux-exploration"><span class="header-section-number">1.8</span> Practical Exercise: Linux Exploration</a>
+  <ul>
+  <li><a href="#exercise-1-system-information-gathering" id="toc-exercise-1-system-information-gathering"><span class="header-section-number">1.8.1</span> Exercise 1: System Information Gathering</a></li>
+  <li><a href="#exercise-2-file-system-navigation-challenge" id="toc-exercise-2-file-system-navigation-challenge"><span class="header-section-number">1.8.2</span> Exercise 2: File System Navigation Challenge</a></li>
+  <li><a href="#exercise-3-command-line-problem-solving" id="toc-exercise-3-command-line-problem-solving"><span class="header-section-number">1.8.3</span> Exercise 3: Command Line Problem Solving</a></li>
+  </ul></li>
+  <li><a href="#additional-resources" id="toc-additional-resources"><span class="header-section-number">1.9</span> Additional Resources</a></li>
+  <li><a href="#next-week" id="toc-next-week"><span class="header-section-number">1.10</span> Next Week</a></li>
+  <li><a href="#discussion-questions" id="toc-discussion-questions"><span class="header-section-number">1.11</span> Discussion Questions</a></li>
+  </ul></li>
+  </ul>
+</nav>
 <section id="unixlinux-fundamentals" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Unix/Linux Fundamentals</h1>
 <section id="learning-objectives" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">1.1</span> Learning Objectives</h2>
+<h2 data-number="1.1" data-anchor-id="learning-objectives"><span class="header-section-number">1.1</span> Learning Objectives</h2>
 <p>By the end of this module, you will be able to:</p>
 <ul>
 <li>Explain the history and philosophy of Unix and Linux</li>
@@ -570,9 +680,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="the-unixlinux-heritage" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="the-unixlinux-heritage"><span class="header-section-number">1.2</span> The Unix/Linux Heritage</h2>
+<h2 data-number="1.2" data-anchor-id="the-unixlinux-heritage"><span class="header-section-number">1.2</span> The Unix/Linux Heritage</h2>
 <section id="unix-origins-and-philosophy" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="unix-origins-and-philosophy"><span class="header-section-number">1.2.1</span> Unix Origins and Philosophy</h3>
+<h3 data-number="1.2.1" data-anchor-id="unix-origins-and-philosophy"><span class="header-section-number">1.2.1</span> Unix Origins and Philosophy</h3>
 <p>Unix was developed in the late 1960s and early 1970s at Bell Labs by Ken Thompson, Dennis Ritchie, and others. It embodied several key principles that continue to influence operating system design today:</p>
 <ul>
 <li><strong>Write programs that do one thing and do it well</strong></li>
@@ -582,7 +692,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>These principles led to the creation of a modular system where small, focused tools could be combined in powerful ways.</p>
 </section>
 <section id="from-unix-to-linux" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="from-unix-to-linux"><span class="header-section-number">1.2.2</span> From Unix to Linux</h3>
+<h3 data-number="1.2.2" data-anchor-id="from-unix-to-linux"><span class="header-section-number">1.2.2</span> From Unix to Linux</h3>
 <p>Linux was created in 1991 by Linus Torvalds as a free and open-source alternative to Unix. Some key milestones:</p>
 <ul>
 <li>1983: Richard Stallman announces the GNU Project to create a free Unix-like OS</li>
@@ -594,7 +704,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="unixlinux-today" class="level3" data-number="1.2.3">
-<h3 data-number="1.2.3" class="anchored" data-anchor-id="unixlinux-today"><span class="header-section-number">1.2.3</span> Unix/Linux Today</h3>
+<h3 data-number="1.2.3" data-anchor-id="unixlinux-today"><span class="header-section-number">1.2.3</span> Unix/Linux Today</h3>
 <p>Today, Unix and Linux systems power:</p>
 <ul>
 <li>Most of the world’s web servers</li>
@@ -607,12 +717,12 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="major-linux-distributions" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="major-linux-distributions"><span class="header-section-number">1.3</span> Major Linux Distributions</h2>
+<h2 data-number="1.3" data-anchor-id="major-linux-distributions"><span class="header-section-number">1.3</span> Major Linux Distributions</h2>
 <section id="distribution-families" class="level3" data-number="1.3.1">
-<h3 data-number="1.3.1" class="anchored" data-anchor-id="distribution-families"><span class="header-section-number">1.3.1</span> Distribution Families</h3>
+<h3 data-number="1.3.1" data-anchor-id="distribution-families"><span class="header-section-number">1.3.1</span> Distribution Families</h3>
 <p>Linux distributions (“distros”) can be grouped into several major families:</p>
 <section id="debian-based" class="level4" data-number="1.3.1.1">
-<h4 data-number="1.3.1.1" class="anchored" data-anchor-id="debian-based"><span class="header-section-number">1.3.1.1</span> Debian-based</h4>
+<h4 data-number="1.3.1.1" data-anchor-id="debian-based"><span class="header-section-number">1.3.1.1</span> Debian-based</h4>
 <ul>
 <li><strong>Debian</strong>: Community-developed, highly stable</li>
 <li><strong>Ubuntu</strong>: User-friendly, popular for desktops and servers</li>
@@ -621,7 +731,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="red-hat-based" class="level4" data-number="1.3.1.2">
-<h4 data-number="1.3.1.2" class="anchored" data-anchor-id="red-hat-based"><span class="header-section-number">1.3.1.2</span> Red Hat-based</h4>
+<h4 data-number="1.3.1.2" data-anchor-id="red-hat-based"><span class="header-section-number">1.3.1.2</span> Red Hat-based</h4>
 <ul>
 <li><strong>Red Hat Enterprise Linux (RHEL)</strong>: Commercial, enterprise-focused</li>
 <li><strong>CentOS/Rocky Linux/AlmaLinux</strong>: Free RHEL-compatible distributions</li>
@@ -629,14 +739,14 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="suse-based" class="level4" data-number="1.3.1.3">
-<h4 data-number="1.3.1.3" class="anchored" data-anchor-id="suse-based"><span class="header-section-number">1.3.1.3</span> SUSE-based</h4>
+<h4 data-number="1.3.1.3" data-anchor-id="suse-based"><span class="header-section-number">1.3.1.3</span> SUSE-based</h4>
 <ul>
 <li><strong>SUSE Linux Enterprise</strong>: Commercial enterprise distribution</li>
 <li><strong>openSUSE</strong>: Community version with Leap (stable) and Tumbleweed (rolling) variants</li>
 </ul>
 </section>
 <section id="arch-based" class="level4" data-number="1.3.1.4">
-<h4 data-number="1.3.1.4" class="anchored" data-anchor-id="arch-based"><span class="header-section-number">1.3.1.4</span> Arch-based</h4>
+<h4 data-number="1.3.1.4" data-anchor-id="arch-based"><span class="header-section-number">1.3.1.4</span> Arch-based</h4>
 <ul>
 <li><strong>Arch Linux</strong>: Rolling release, minimalist philosophy</li>
 <li><strong>Manjaro</strong>: User-friendly version of Arch</li>
@@ -644,7 +754,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="independent" class="level4" data-number="1.3.1.5">
-<h4 data-number="1.3.1.5" class="anchored" data-anchor-id="independent"><span class="header-section-number">1.3.1.5</span> Independent</h4>
+<h4 data-number="1.3.1.5" data-anchor-id="independent"><span class="header-section-number">1.3.1.5</span> Independent</h4>
 <ul>
 <li><strong>Gentoo</strong>: Source-based, highly customizable</li>
 <li><strong>Slackware</strong>: One of the oldest distributions, minimalist</li>
@@ -653,7 +763,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="choosing-a-distribution" class="level3" data-number="1.3.2">
-<h3 data-number="1.3.2" class="anchored" data-anchor-id="choosing-a-distribution"><span class="header-section-number">1.3.2</span> Choosing a Distribution</h3>
+<h3 data-number="1.3.2" data-anchor-id="choosing-a-distribution"><span class="header-section-number">1.3.2</span> Choosing a Distribution</h3>
 <p>Factors to consider when selecting a distribution:</p>
 <ul>
 <li><strong>Stability vs.&nbsp;cutting-edge features</strong></li>
@@ -666,9 +776,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="system-architecture-overview" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="system-architecture-overview"><span class="header-section-number">1.4</span> System Architecture Overview</h2>
+<h2 data-number="1.4" data-anchor-id="system-architecture-overview"><span class="header-section-number">1.4</span> System Architecture Overview</h2>
 <section id="linux-kernel" class="level3" data-number="1.4.1">
-<h3 data-number="1.4.1" class="anchored" data-anchor-id="linux-kernel"><span class="header-section-number">1.4.1</span> Linux Kernel</h3>
+<h3 data-number="1.4.1" data-anchor-id="linux-kernel"><span class="header-section-number">1.4.1</span> Linux Kernel</h3>
 <p>The kernel is the core of the operating system that:</p>
 <ul>
 <li>Manages hardware resources</li>
@@ -680,7 +790,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="user-space-components" class="level3" data-number="1.4.2">
-<h3 data-number="1.4.2" class="anchored" data-anchor-id="user-space-components"><span class="header-section-number">1.4.2</span> User Space Components</h3>
+<h3 data-number="1.4.2" data-anchor-id="user-space-components"><span class="header-section-number">1.4.2</span> User Space Components</h3>
 <ul>
 <li><strong>Shell</strong>: Command interpreter (bash, zsh, etc.)</li>
 <li><strong>Core utilities</strong>: Basic commands and tools</li>
@@ -690,7 +800,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="boot-process" class="level3" data-number="1.4.3">
-<h3 data-number="1.4.3" class="anchored" data-anchor-id="boot-process"><span class="header-section-number">1.4.3</span> Boot Process</h3>
+<h3 data-number="1.4.3" data-anchor-id="boot-process"><span class="header-section-number">1.4.3</span> Boot Process</h3>
 <ol type="1">
 <li><strong>BIOS/UEFI</strong>: Initial hardware initialization</li>
 <li><strong>Bootloader</strong> (GRUB, systemd-boot): Loads the kernel</li>
@@ -701,9 +811,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="file-system-hierarchy" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="file-system-hierarchy"><span class="header-section-number">1.5</span> File System Hierarchy</h2>
+<h2 data-number="1.5" data-anchor-id="file-system-hierarchy"><span class="header-section-number">1.5</span> File System Hierarchy</h2>
 <section id="the-filesystem-hierarchy-standard-fhs" class="level3" data-number="1.5.1">
-<h3 data-number="1.5.1" class="anchored" data-anchor-id="the-filesystem-hierarchy-standard-fhs"><span class="header-section-number">1.5.1</span> The Filesystem Hierarchy Standard (FHS)</h3>
+<h3 data-number="1.5.1" data-anchor-id="the-filesystem-hierarchy-standard-fhs"><span class="header-section-number">1.5.1</span> The Filesystem Hierarchy Standard (FHS)</h3>
 <p>Linux follows a standardized directory structure:</p>
 <ul>
 <li><strong>/bin</strong>: Essential command binaries</li>
@@ -727,7 +837,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="file-types-in-linux" class="level3" data-number="1.5.2">
-<h3 data-number="1.5.2" class="anchored" data-anchor-id="file-types-in-linux"><span class="header-section-number">1.5.2</span> File Types in Linux</h3>
+<h3 data-number="1.5.2" data-anchor-id="file-types-in-linux"><span class="header-section-number">1.5.2</span> File Types in Linux</h3>
 <ul>
 <li><strong>Regular files</strong>: Normal data files</li>
 <li><strong>Directories</strong>: Containers for other files</li>
@@ -739,9 +849,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="essential-command-line-tools" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="essential-command-line-tools"><span class="header-section-number">1.6</span> Essential Command-Line Tools</h2>
+<h2 data-number="1.6" data-anchor-id="essential-command-line-tools"><span class="header-section-number">1.6</span> Essential Command-Line Tools</h2>
 <section id="shell-basics" class="level3" data-number="1.6.1">
-<h3 data-number="1.6.1" class="anchored" data-anchor-id="shell-basics"><span class="header-section-number">1.6.1</span> Shell Basics</h3>
+<h3 data-number="1.6.1" data-anchor-id="shell-basics"><span class="header-section-number">1.6.1</span> Shell Basics</h3>
 <ul>
 <li><strong>Terminal emulators</strong>: Programs that provide terminal functionality</li>
 <li><strong>Shell prompt</strong>: Where you type commands</li>
@@ -751,8 +861,8 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="file-navigation" class="level3" data-number="1.6.2">
-<h3 data-number="1.6.2" class="anchored" data-anchor-id="file-navigation"><span class="header-section-number">1.6.2</span> File Navigation</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Print working directory</span></span>
+<h3 data-number="1.6.2" data-anchor-id="file-navigation"><span class="header-section-number">1.6.2</span> File Navigation</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Print working directory</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># List files and directories</span></span>
@@ -765,11 +875,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /path/to/directory</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~     <span class="co"># Go to home directory</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ..    <span class="co"># Go up one level</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="at">-</span>     <span class="co"># Go to previous directory</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="at">-</span>     <span class="co"># Go to previous directory</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="file-operations" class="level3" data-number="1.6.3">
-<h3 data-number="1.6.3" class="anchored" data-anchor-id="file-operations"><span class="header-section-number">1.6.3</span> File Operations</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create directories</span></span>
+<h3 data-number="1.6.3" data-anchor-id="file-operations"><span class="header-section-number">1.6.3</span> File Operations</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create directories</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> directory_name</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> parent/child/grandchild   <span class="co"># Create parent directories as needed</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -789,11 +899,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-i</span> filename    <span class="co"># Interactive mode (asks for confirmation)</span></span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-f</span> filename    <span class="co"># Force deletion without confirmation</span></span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Be very careful with rm, especially rm -rf!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Be very careful with rm, especially rm -rf!</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="file-viewing" class="level3" data-number="1.6.4">
-<h3 data-number="1.6.4" class="anchored" data-anchor-id="file-viewing"><span class="header-section-number">1.6.4</span> File Viewing</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># View file contents</span></span>
+<h3 data-number="1.6.4" data-anchor-id="file-viewing"><span class="header-section-number">1.6.4</span> File Viewing</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># View file contents</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> filename       <span class="co"># Display entire file</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> filename      <span class="co"># Paginated viewing</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> filename      <span class="co"># First 10 lines</span></span>
@@ -803,11 +913,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># File information</span></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="fu">file</span> filename      <span class="co"># Determine file type</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">stat</span> filename      <span class="co"># Detailed file information</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">stat</span> filename      <span class="co"># Detailed file information</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="text-processing" class="level3" data-number="1.6.5">
-<h3 data-number="1.6.5" class="anchored" data-anchor-id="text-processing"><span class="header-section-number">1.6.5</span> Text Processing</h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Search within files</span></span>
+<h3 data-number="1.6.5" data-anchor-id="text-processing"><span class="header-section-number">1.6.5</span> Text Processing</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Search within files</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> pattern filename</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-i</span> pattern filename     <span class="co"># Case-insensitive</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-r</span> pattern directory    <span class="co"># Recursive search</span></span>
@@ -819,11 +929,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="fu">cut</span> <span class="at">-d</span> <span class="st">','</span> <span class="at">-f</span> 1,3 filename   <span class="co"># Extract columns from CSV</span></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span> filename                <span class="co"># Sort lines</span></span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="fu">uniq</span> filename                <span class="co"># Remove duplicate lines</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> filename                  <span class="co"># Count lines, words, characters</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> filename                  <span class="co"># Count lines, words, characters</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="system-information" class="level3" data-number="1.6.6">
-<h3 data-number="1.6.6" class="anchored" data-anchor-id="system-information"><span class="header-section-number">1.6.6</span> System Information</h3>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># User information</span></span>
+<h3 data-number="1.6.6" data-anchor-id="system-information"><span class="header-section-number">1.6.6</span> System Information</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># User information</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">whoami</span>         <span class="co"># Current username</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">id</span>             <span class="co"># User and group IDs</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">who</span>            <span class="co"># Who is logged in</span></span>
@@ -840,32 +950,32 @@ document.addEventListener('DOMContentLoaded', function() {
 <span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="fu">df</span> <span class="at">-h</span>          <span class="co"># Disk usage</span></span>
 <span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="fu">du</span> <span class="at">-sh</span> directory  <span class="co"># Directory size</span></span>
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="ex">top</span>            <span class="co"># Process information (interactive)</span></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="fu">ps</span> aux         <span class="co"># Process listing</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="fu">ps</span> aux         <span class="co"># Process listing</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 <section id="getting-help-and-documentation" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="getting-help-and-documentation"><span class="header-section-number">1.7</span> Getting Help and Documentation</h2>
+<h2 data-number="1.7" data-anchor-id="getting-help-and-documentation"><span class="header-section-number">1.7</span> Getting Help and Documentation</h2>
 <section id="manual-pages" class="level3" data-number="1.7.1">
-<h3 data-number="1.7.1" class="anchored" data-anchor-id="manual-pages"><span class="header-section-number">1.7.1</span> Manual Pages</h3>
+<h3 data-number="1.7.1" data-anchor-id="manual-pages"><span class="header-section-number">1.7.1</span> Manual Pages</h3>
 <p>The <code>man</code> command provides detailed documentation for most commands:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">man</span> command_name</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">man</span> command_name</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">man</span> 5 passwd     <span class="co"># Section 5 (file formats) entry for passwd</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">man</span> <span class="at">-k</span> keyword   <span class="co"># Search manual pages for keyword</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">man</span> <span class="at">-k</span> keyword   <span class="co"># Search manual pages for keyword</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Navigation in man pages: - Space/Page Down: Next page - b/Page Up: Previous page - /pattern: Search forward - n: Next search match - q: Quit</p>
 </section>
 <section id="info-pages" class="level3" data-number="1.7.2">
-<h3 data-number="1.7.2" class="anchored" data-anchor-id="info-pages"><span class="header-section-number">1.7.2</span> Info Pages</h3>
+<h3 data-number="1.7.2" data-anchor-id="info-pages"><span class="header-section-number">1.7.2</span> Info Pages</h3>
 <p>The GNU project’s documentation system:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">info</span> command_name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">info</span> command_name</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="command-help-options" class="level3" data-number="1.7.3">
-<h3 data-number="1.7.3" class="anchored" data-anchor-id="command-help-options"><span class="header-section-number">1.7.3</span> Command Help Options</h3>
+<h3 data-number="1.7.3" data-anchor-id="command-help-options"><span class="header-section-number">1.7.3</span> Command Help Options</h3>
 <p>Most commands offer built-in help:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">command</span> <span class="at">--help</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">command</span> <span class="at">-h</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">command</span> <span class="at">--help</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">command</span> <span class="at">-h</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="online-resources" class="level3" data-number="1.7.4">
-<h3 data-number="1.7.4" class="anchored" data-anchor-id="online-resources"><span class="header-section-number">1.7.4</span> Online Resources</h3>
+<h3 data-number="1.7.4" data-anchor-id="online-resources"><span class="header-section-number">1.7.4</span> Online Resources</h3>
 <ul>
 <li>Distribution documentation</li>
 <li>The Linux Documentation Project (TLDP)</li>
@@ -875,9 +985,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="practical-exercise-linux-exploration" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="practical-exercise-linux-exploration"><span class="header-section-number">1.8</span> Practical Exercise: Linux Exploration</h2>
+<h2 data-number="1.8" data-anchor-id="practical-exercise-linux-exploration"><span class="header-section-number">1.8</span> Practical Exercise: Linux Exploration</h2>
 <section id="exercise-1-system-information-gathering" class="level3" data-number="1.8.1">
-<h3 data-number="1.8.1" class="anchored" data-anchor-id="exercise-1-system-information-gathering"><span class="header-section-number">1.8.1</span> Exercise 1: System Information Gathering</h3>
+<h3 data-number="1.8.1" data-anchor-id="exercise-1-system-information-gathering"><span class="header-section-number">1.8.1</span> Exercise 1: System Information Gathering</h3>
 <p>Create a script or series of commands to gather the following information about your Linux system:</p>
 <ol type="1">
 <li>Kernel version</li>
@@ -893,7 +1003,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ol>
 </section>
 <section id="exercise-2-file-system-navigation-challenge" class="level3" data-number="1.8.2">
-<h3 data-number="1.8.2" class="anchored" data-anchor-id="exercise-2-file-system-navigation-challenge"><span class="header-section-number">1.8.2</span> Exercise 2: File System Navigation Challenge</h3>
+<h3 data-number="1.8.2" data-anchor-id="exercise-2-file-system-navigation-challenge"><span class="header-section-number">1.8.2</span> Exercise 2: File System Navigation Challenge</h3>
 <ol type="1">
 <li>Starting from your home directory, create a directory structure that mimics the first three levels of the Linux file system hierarchy</li>
 <li>Create empty files representing some of the key configuration files</li>
@@ -902,7 +1012,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ol>
 </section>
 <section id="exercise-3-command-line-problem-solving" class="level3" data-number="1.8.3">
-<h3 data-number="1.8.3" class="anchored" data-anchor-id="exercise-3-command-line-problem-solving"><span class="header-section-number">1.8.3</span> Exercise 3: Command Line Problem Solving</h3>
+<h3 data-number="1.8.3" data-anchor-id="exercise-3-command-line-problem-solving"><span class="header-section-number">1.8.3</span> Exercise 3: Command Line Problem Solving</h3>
 <p>Solve the following tasks using command-line tools:</p>
 <ol type="1">
 <li>Find all files in your home directory modified in the last 24 hours</li>
@@ -914,7 +1024,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="additional-resources" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="additional-resources"><span class="header-section-number">1.9</span> Additional Resources</h2>
+<h2 data-number="1.9" data-anchor-id="additional-resources"><span class="header-section-number">1.9</span> Additional Resources</h2>
 <ul>
 <li><a href="https://tldp.org/">The Linux Documentation Project</a></li>
 <li><a href="https://linuxjourney.com/">Linux Journey</a></li>
@@ -924,11 +1034,11 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </section>
 <section id="next-week" class="level2" data-number="1.10">
-<h2 data-number="1.10" class="anchored" data-anchor-id="next-week"><span class="header-section-number">1.10</span> Next Week</h2>
+<h2 data-number="1.10" data-anchor-id="next-week"><span class="header-section-number">1.10</span> Next Week</h2>
 <p>Next week, we’ll dive deeper into user and permission management, covering user accounts, groups, file permissions, access control lists, and security best practices.</p>
 </section>
 <section id="discussion-questions" class="level2" data-number="1.11">
-<h2 data-number="1.11" class="anchored" data-anchor-id="discussion-questions"><span class="header-section-number">1.11</span> Discussion Questions</h2>
+<h2 data-number="1.11" data-anchor-id="discussion-questions"><span class="header-section-number">1.11</span> Discussion Questions</h2>
 <ol type="1">
 <li>How does the Unix philosophy influence modern software design beyond operating systems?</li>
 <li>What factors would influence your choice of Linux distribution for different use cases?</li>
@@ -941,7 +1051,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 
-</main> <!-- /main -->
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1006,13 +1116,14 @@ document.addEventListener('DOMContentLoaded', function() {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -1362,533 +1473,85 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
+<footer style="background-color:#0a0a0a; background-image: url(&quot;data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2381BD4A' fill-opacity='0.08'%3E%3Ccircle cx='20' cy='20' r='1.5'/%3E%3C/g%3E%3C/svg%3E&quot;); background-repeat: repeat; background-size: 40px 40px; color:rgba(255,255,255,0.6); padding:4rem 0 2rem; font-size:0.82rem; line-height:1.8;">
+  <div style="max-width:1200px; margin:0 auto; padding:0 1.5rem;">
+    <div style="display:grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr; gap:2rem;">
 
-</div>   
-    <div class="nav-footer-center">
+      <div>
+        <div style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:1rem; font-family:'Source Code Pro',monospace;">chen<span style="color:#81BD4A;">.ist</span></div>
+        <p style="margin-bottom:1rem;">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
+        <p style="color:rgba(255,255,255,0.25);">© 2026 chen.ist</p>
+      </div>
 
-</div>
-    <div class="nav-footer-right">
+      <div>
+        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Services</div>
+        <a href="../../../../digital/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Digital Infrastructure</a>
+        <a href="../../../../security/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Security</a>
+        <a href="../../../../services/cloud/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Cloud</a>
+        <a href="../../../../services/nis2/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">NIS2 Compliance</a>
+        <a href="../../../../services/digital-resilience/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Digital Resilience</a>
+      </div>
 
-</div>
-  </div>
-</footer>
-<footer class="footer mt-5 py-3 cybersecurity-footer">
-    <div class="container">
-        <div class="row mb-3">
-            <!-- Company Logo and Brief -->
-            <div class="col-md-4 mb-2">
-                <div class="d-flex align-items-center">
-                    <h4 class="footer-logo mb-0 me-2">chen<span class="text-accent">.ist</span></h4>
-                    <div class="secure-badge ms-2">
-                        <i class="bi bi-shield-lock-fill"></i> Secure
-                    </div>
-                </div>
-                <p class="footer-description small mt-2 mb-0">
-                    Enterprise cybersecurity solutions with zero-trust implementation and continuous monitoring.
-                </p>
-            </div>
-            
-            <!-- Tabs Navigation -->
-            <div class="col-md-8 mb-2">
-                <div class="footer-tabs">
-                    <ul class="nav nav-tabs footer-nav-tabs" id="footerTabs" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="solutions-tab" data-bs-toggle="tab" data-bs-target="#solutions" type="button" role="tab">
-                                <i class="bi bi-shield-fill"></i> Solutions
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="academy-tab" data-bs-toggle="tab" data-bs-target="#academy" type="button" role="tab">
-                                <i class="bi bi-mortarboard-fill"></i> Academy
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab">
-                                <i class="bi bi-envelope-fill"></i> Contact
-                            </button>
-                        </li>
-                    </ul>
-                    
-                    <!-- Tab Content -->
-                    <div class="tab-content pt-2" id="footerTabContent">
-                        <!-- Solutions Tab -->
-                        <div class="tab-pane fade show active" id="solutions" role="tabpanel">
-                            <div class="row">
-                                <div class="col-6 col-md-3">
-                                    <a href="../../../../services.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Security Services
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../../../../services.html#consulting" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Consulting
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../../../../services.html#compliance" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Compliance
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../../../../services.html#incident-response" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Incident Response
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Academy Tab -->
-                        <div class="tab-pane fade" id="academy" role="tabpanel">
-                            <div class="row">
-                                <div class="col-6 col-md-3">
-                                    <a href="../../../../academy/courses.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Courses
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../../../../academy/events.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Events
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../../../../academy/webinars.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Webinars
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../../../../academy/computerclub.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Computer Club
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3 mt-2">
-                                    <a href="../../../../academy/programs" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Explore Academy Programs
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Contact Tab -->
-                        <div class="tab-pane fade" id="contact" role="tabpanel">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="d-flex align-items-center mb-1">
-                                        <i class="bi bi-envelope-fill contact-icon"></i>
-                                        <a href="mailto:office@chen.ist" class="footer-link">office@chen.ist</a>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-shield-fill-check contact-icon"></i>
-                                        <span class="small">SOC Available 24/7</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="d-flex align-items-center mb-1">
-                                        <i class="bi bi-geo-alt-fill contact-icon"></i>
-                                        <span class="small">Stockholm | Craiova | Bucharest</span>
-                                    </div>
-                                    <div class="social-icons">
-                                        <a href="https://github.com/chenist" class="social-icon" aria-label="GitHub">
-                                            <i class="bi bi-github"></i>
-                                        </a>
-                                        <a href="https://linkedin.com/in/chenistsec" class="social-icon" aria-label="LinkedIn">
-                                            <i class="bi bi-linkedin"></i>
-                                        </a>
-                                        <a href="https://twitter.com/chenistsec" class="social-icon" aria-label="Twitter">
-                                            <i class="bi bi-twitter-x"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer-divider">
-            <div class="cyber-line"></div>
-        </div>
-        
-        <div class="row footer-bottom py-1">
-            <div class="col-md-6">
-                <div class="d-flex align-items-center">
-                    <div class="security-pulse"></div>
-                    <p class="mb-0 ms-2 copyright">
-                        © 2025 chen.ist <span class="d-none d-md-inline">| Secure. Vigilant. Resilient.</span>
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6 text-md-end">
-                <div class="footer-bottom-links">
-                    <a href="../../../../privacy.html">Privacy</a>
-                    <span class="separator">|</span>
-                    <a href="../../../../terms.html">Terms</a>
-                    <span class="separator">|</span>
-                    <a href="../../../../contact.html" class="btn-report-incident">
-                        <i class="bi bi-exclamation-triangle-fill"></i> Report Incident
-                    </a>
-                </div>
-            </div>
-        </div>
+      <div>
+        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Academy</div>
+        <a href="../../../../academy/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Overview</a>
+        <a href="../../../../academy/courses.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Courses</a>
+        <a href="../../../../academy/trainings.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Trainings</a>
+        <a href="../../../../academy/events.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Events</a>
+        <a href="../../../../academy/webinars.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Webinars</a>
+      </div>
+
+      <div>
+        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Company</div>
+        <a href="../../../../about/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">About</a>
+        <a href="../../../../blog.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Blog</a>
+        <a href="../../../../contact.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Contact</a>
+        <a href="../../../../privacy.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Privacy</a>
+        <a href="../../../../terms.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Terms</a>
+      </div>
+
+      <div>
+        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Connect</div>
+        <a href="mailto:office@chen.ist" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">office@chen.ist</a>
+        <a href="https://github.com/chenist" target="_blank" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">GitHub</a>
+        <a href="https://alinmechenici.substack.com" target="_blank" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Newsletter</a>
+        <a href="https://linkedin.com/in/chenistsec" target="_blank" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">LinkedIn</a>
+        <div style="margin-top:1rem; color:rgba(255,255,255,0.2); font-size:0.72rem;">Craiova · Bucharest · Stockholm</div>
+      </div>
+
     </div>
+  </div>
 </footer>
 
 <style>
-.cybersecurity-footer {
-    background-color: #0f1923;
-    color: #e6e6e6;
-    border-top: 3px solid #18bc9c;
-    position: relative;
-    font-size: 0.9rem;
+@media (max-width: 991px) {
+  footer > div > div { grid-template-columns: 2fr 1fr 1fr !important; }
 }
-
-/* Change accent colors for academy section */
-.academy-section .cybersecurity-footer {
-    border-top-color: #F5A623;
-}
-
-.academy-section .cybersecurity-footer::before {
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        #F5A623 20%, 
-        #F5A623 40%, 
-        transparent 50%,
-        transparent 60%,
-        #F5A623 80%,
-        transparent 100%
-    );
-}
-
-.academy-section .cybersecurity-footer .text-accent,
-.academy-section .cybersecurity-footer .contact-icon,
-.academy-section .cybersecurity-footer .footer-heading::after,
-.academy-section .cybersecurity-footer .social-icon:hover,
-.academy-section .cybersecurity-footer .footer-link:hover,
-.academy-section .cybersecurity-footer .contact-item a:hover,
-.academy-section .cybersecurity-footer .footer-bottom-links a:hover,
-.academy-section .cybersecurity-footer .nav-link.active {
-    color: #F5A623 !important;
-}
-
-.academy-section .cybersecurity-footer .secure-badge {
-    background-color: rgba(245, 166, 35, 0.15);
-    color: #F5A623;
-    border-left-color: #F5A623;
-}
-
-.academy-section .cybersecurity-footer .social-icon:hover {
-    background-color: #F5A623;
-    color: #0f1923 !important;
-}
-
-.academy-section .cybersecurity-footer .cyber-line {
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        rgba(245, 166, 35, 0.3) 10%, 
-        rgba(245, 166, 35, 0.5) 50%, 
-        rgba(245, 166, 35, 0.3) 90%, 
-        transparent 100%
-    );
-}
-
-.academy-section .cybersecurity-footer .cyber-line::before,
-.academy-section .cybersecurity-footer .cyber-line::after {
-    background-color: #F5A623;
-}
-
-.academy-section .cybersecurity-footer .security-pulse {
-    background-color: #F5A623;
-}
-
-.academy-section .cybersecurity-footer .security-pulse::before {
-    background-color: rgba(245, 166, 35, 0.3);
-}
-
-.cybersecurity-footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        #18bc9c 20%, 
-        #18bc9c 40%, 
-        transparent 50%,
-        transparent 60%,
-        #18bc9c 80%,
-        transparent 100%
-    );
-    opacity: 0.4;
-}
-
-.cybersecurity-footer .footer-brand {
-    display: flex;
-    margin-bottom: 0.5rem;
-}
-
-.cybersecurity-footer .footer-logo {
-    font-size: 1.4rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-family: 'Source Code Pro', monospace;
-    color: white;
-}
-
-.cybersecurity-footer .text-accent {
-    color: #18bc9c;
-}
-
-.cybersecurity-footer .secure-badge {
-    display: inline-flex;
-    align-items: center;
-    background-color: rgba(24, 188, 156, 0.15);
-    color: #18bc9c;
-    padding: 0.2rem 0.5rem;
-    border-radius: 3px;
-    font-size: 0.7rem;
-    font-weight: 600;
-    border-left: 2px solid #18bc9c;
-}
-
-.cybersecurity-footer .footer-description {
-    color: #9ba6b2;
-    line-height: 1.4;
-}
-
-.cybersecurity-footer .footer-tabs {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 4px;
-}
-
-.cybersecurity-footer .footer-nav-tabs {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.cybersecurity-footer .nav-tabs .nav-link {
-    color: #9ba6b2;
-    border: none;
-    font-size: 0.85rem;
-    padding: 0.4rem 0.8rem;
-    background-color: transparent;
-}
-
-.cybersecurity-footer .nav-tabs .nav-link:hover {
-    color: #e6e6e6;
-    border: none;
-}
-
-.cybersecurity-footer .nav-tabs .nav-link.active {
-    color: #18bc9c;
-    background-color: rgba(24, 188, 156, 0.1);
-    border: none;
-}
-
-.cybersecurity-footer .tab-content {
-    min-height: 60px;
-}
-
-.cybersecurity-footer .footer-link {
-    color: #9ba6b2;
-    text-decoration: none;
-    transition: color 0.2s ease, transform 0.2s ease;
-    display: inline-flex;
-    align-items: center;
-    margin-bottom: 0.5rem;
-    font-size: 0.85rem;
-}
-
-.cybersecurity-footer .footer-link:hover {
-    color: #18bc9c;
-    transform: translateX(3px);
-}
-
-.cybersecurity-footer .icon-small {
-    font-size: 0.75rem;
-    margin-right: 0.25rem;
-}
-
-.cybersecurity-footer .contact-icon {
-    margin-right: 0.5rem;
-    font-size: 0.9rem;
-    color: #18bc9c;
-}
-
-.cybersecurity-footer .social-icons {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-.cybersecurity-footer .social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #e6e6e6;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-size: 0.85rem;
-}
-
-.cybersecurity-footer .social-icon:hover {
-    background-color: #18bc9c;
-    color: #0f1923;
-    transform: translateY(-2px);
-}
-
-.cybersecurity-footer .footer-divider {
-    position: relative;
-    height: 12px;
-    margin: 0.5rem 0;
-}
-
-.cybersecurity-footer .cyber-line {
-    height: 1px;
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        rgba(24, 188, 156, 0.3) 10%, 
-        rgba(24, 188, 156, 0.5) 50%, 
-        rgba(24, 188, 156, 0.3) 90%, 
-        transparent 100%
-    );
-    position: relative;
-}
-
-.cybersecurity-footer .cyber-line::before,
-.cybersecurity-footer .cyber-line::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 8px;
-    height: 1px;
-    background-color: #18bc9c;
-    animation: blink 2s infinite;
-}
-
-.cybersecurity-footer .cyber-line::before {
-    left: 25%;
-}
-
-.cybersecurity-footer .cyber-line::after {
-    right: 25%;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 0.2; }
-    50% { opacity: 1; }
-}
-
-.cybersecurity-footer .security-pulse {
-    width: 8px;
-    height: 8px;
-    background-color: #18bc9c;
-    border-radius: 50%;
-    position: relative;
-}
-
-.cybersecurity-footer .security-pulse::before {
-    content: "";
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    border-radius: 50%;
-    background-color: rgba(24, 188, 156, 0.3);
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); opacity: 1; }
-    70% { transform: scale(1.5); opacity: 0; }
-    100% { transform: scale(1.5); opacity: 0; }
-}
-
-.cybersecurity-footer .copyright {
-    color: #9ba6b2;
-    font-size: 0.8rem;
-}
-
-.cybersecurity-footer .footer-bottom-links {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-}
-
-.cybersecurity-footer .footer-bottom-links a {
-    color: #9ba6b2;
-    text-decoration: none;
-    font-size: 0.8rem;
-    transition: color 0.2s ease;
-}
-
-.cybersecurity-footer .footer-bottom-links a:hover {
-    color: #18bc9c;
-}
-
-.cybersecurity-footer .separator {
-    margin: 0 0.5rem;
-    color: #4a5568;
-    font-size: 0.8rem;
-}
-
-.cybersecurity-footer .btn-report-incident {
-    display: inline-flex;
-    align-items: center;
-    background-color: rgba(220, 53, 69, 0.15);
-    color: #dc3545 !important;
-    padding: 0.2rem 0.5rem;
-    border-radius: 3px;
-    font-size: 0.75rem;
-    margin-left: 0.5rem;
-    font-weight: 600;
-    transition: all 0.3s ease !important;
-}
-
-.cybersecurity-footer .btn-report-incident:hover {
-    background-color: rgba(220, 53, 69, 0.3);
-}
-
-.cybersecurity-footer .btn-report-incident i {
-    margin-right: 0.3rem;
-}
-
 @media (max-width: 767px) {
-    .cybersecurity-footer .footer-bottom-links {
-        justify-content: flex-start;
-        margin-top: 0.5rem;
-    }
-    
-    .cybersecurity-footer .btn-report-incident {
-        margin-top: 0.5rem;
-        margin-left: 0;
-    }
-    
-    .cybersecurity-footer .separator:nth-of-type(2) {
-        display: none;
-    }
+  footer > div > div { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
 }
+@media (max-width: 480px) {
+  footer > div > div { grid-template-columns: 1fr !important; }
+}
+footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
 </style>
-
 <script>
-// Initialize Bootstrap tabs if not already initialized
 document.addEventListener('DOMContentLoaded', function() {
-    if (typeof bootstrap !== 'undefined') {
-        var tabElList = [].slice.call(document.querySelectorAll('#footerTabs .nav-link'));
-        tabElList.map(function(tabEl) {
-            return new bootstrap.Tab(tabEl);
-        });
-    }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.m-s, .m-bg, .m-cta, .m-r, .m-n, .hp-sec, .hp-stats, .ev-card, .ev-past, .m-t').forEach(el => observer.observe(el));
 });
+</script>
+<!-- Cal.com floating button -->
+<script>
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", {origin:"https://cal.com"});
+  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {

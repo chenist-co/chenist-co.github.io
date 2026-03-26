@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -70,18 +70,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../assets/images/favicon.png" rel="icon" type="image/png">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-b5057f3398a202b36a08d66ee4de0ec1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-b37f6c1b9a99d16252d3ddd2c7074628.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -110,67 +111,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<style>
-.navbar-brand-container {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-brand {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-brand .navbar-title {
-  display: inline-block;
-  margin-left: 0;
-  color: #FFFFFF;
-  font-weight: 600;
-  font-size: 1.25rem;
-  letter-spacing: 0.5px;
-}
-
-@media (max-width: 767.98px) {
-  .navbar-brand .navbar-title {
-    font-size: 1.1rem;
-  }
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Find the navbar brand element that contains the logo
-  const navbarBrand = document.querySelector('.navbar-brand');
-  
-  if (navbarBrand) {
-    // Create a span for the CHENIST text
-    const titleSpan = document.createElement('span');
-    titleSpan.className = 'navbar-title';
-    titleSpan.textContent = 'CHENIST';
-    
-    // Append the span after the logo
-    navbarBrand.appendChild(titleSpan);
-  }
-});
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-
-<link rel="stylesheet" href="../../../scss/styles.css">
-<link rel="stylesheet" href="../../../scss/academy.scss">
-<link rel="stylesheet" href="../../../scss/custom-hero.css">
 <meta property="og:title" content="API Endpoints Guide – chen.ist">
 <meta property="og:description" content="Comprehensive documentation of our API endpoints, parameters, and response formats">
+<meta property="og:image" content="https://chen.ist/resources/guides/api/assets/images/og-image.png">
 <meta property="og:site_name" content="chen.ist">
 <meta name="twitter:title" content="API Endpoints Guide – chen.ist">
 <meta name="twitter:description" content="Comprehensive documentation of our API endpoints, parameters, and response formats">
-<meta name="twitter:card" content="summary">
-</head>
-
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<meta name="twitter:image" content="https://chen.ist/resources/guides/api/assets/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+</head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -332,7 +281,158 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       toggleColorMode(false);
     }
-  </script>
+  </script><a href="#main-content" class="skip-link">Skip to main content</a>
+<style>
+/* Corporate navbar — solid dark, structured, professional */
+.navbar {
+  background: #0a0a0a !important;
+  border-bottom: 1px solid rgba(129,189,74,0.15);
+  padding: 0 !important;
+  font-size: 0.82rem;
+  min-height: 56px;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  height: 56px;
+}
+.navbar-brand-container { display: flex; align-items: center; }
+.navbar-brand { display: flex; align-items: center; gap: 0.5rem; }
+.navbar-brand .navbar-title {
+  display: inline-block;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: 'Source Code Pro', monospace;
+}
+.navbar-brand .brand-dot { color: #81BD4A; }
+.navbar .nav-link {
+  color: rgba(255,255,255,0.65) !important;
+  font-size: 0.78rem !important;
+  font-weight: 500;
+  padding: 0.5rem 0.85rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: color 0.15s;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active { color: #81BD4A !important; }
+.navbar .dropdown-menu {
+  background: #0a0a0a;
+  border: 1px solid rgba(129,189,74,0.12);
+  border-radius: 8px;
+  padding: 0.4rem;
+  margin-top: 0;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+.navbar .dropdown-item {
+  color: rgba(255,255,255,0.65);
+  font-size: 0.78rem;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 0.45rem 0.85rem;
+  letter-spacing: 0.02em;
+}
+.navbar .dropdown-item:hover {
+  background: rgba(129,189,74,0.1);
+  color: #81BD4A;
+}
+.navbar .quarto-navigation-tool { color: rgba(255,255,255,0.5) !important; }
+.navbar .quarto-navigation-tool:hover { color: #81BD4A !important; }
+.navbar .quarto-color-scheme-toggle { color: rgba(255,255,255,0.5) !important; }
+.navbar .quarto-color-scheme-toggle:hover { color: #81BD4A !important; }
+
+@media (max-width: 991px) {
+  .navbar .nav-link { font-size: 0.75rem !important; padding: 0.4rem 0.6rem !important; }
+}
+@media (max-width: 767.98px) {
+  .navbar-brand .navbar-title { font-size: 0.9rem; }
+  .navbar .navbar-collapse {
+    background: #0a0a0a;
+    border: 1px solid rgba(129,189,74,0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+  }
+  .navbar .nav-link {
+    text-transform: none;
+    font-size: 0.85rem !important;
+    padding: 0.5rem 0.75rem !important;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var navbarBrand = document.querySelector('.navbar-brand');
+  if (navbarBrand) {
+    var titleSpan = document.createElement('span');
+    titleSpan.className = 'navbar-title';
+    titleSpan.textContent = 'CHEN';
+    var dot = document.createElement('span');
+    dot.className = 'brand-dot';
+    dot.textContent = '.';
+    var ist = document.createTextNode('IST');
+    titleSpan.appendChild(dot);
+    titleSpan.appendChild(ist);
+    navbarBrand.appendChild(titleSpan);
+  }
+});
+</script>
+<script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<link rel="preload" href="../../../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
+<meta name="view-transition" content="same-origin">
+<noscript><style>.m-s,.m-bg,.m-cta,.m-r,.m-n,.hp-sec,.hp-stats,.ev-card,.ev-past,.m-t{opacity:1!important;transform:none!important;}</style></noscript>
+<link rel="dns-prefetch" href="https://cal.com">
+<link rel="dns-prefetch" href="https://app.cal.com">
+<link rel="preconnect" href="https://cal.com" crossorigin="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "chen.ist",
+  "url": "https://chen.ist",
+  "logo": "https://chen.ist/assets/images/logo-light.svg",
+  "description": "Digital infrastructure, cybersecurity, cloud services, and technology education for modern organizations.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Str. Filantropiei, 1-3",
+    "addressLocality": "Craiova",
+    "postalCode": "200143",
+    "addressCountry": "RO"
+  },
+  "email": "office@chen.ist",
+  "sameAs": [
+    "https://github.com/chenist",
+    "https://linkedin.com/in/chenistsec",
+    "https://twitter.com/chenistsec"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Infrastructure", "url": "https://chen.ist/digital/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "NIS2 Compliance", "url": "https://chen.ist/services/nis2/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cybersecurity", "url": "https://chen.ist/services/cybersecurity/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cloud Services", "url": "https://chen.ist/services/cloud/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Resilience", "url": "https://chen.ist/services/digital-resilience/"}}
+    ]
+  }
+}
+</script>
+
+
+<link rel="stylesheet" href="../../../assets/css/main.min.css">
+
+
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -340,7 +440,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../assets/images/logo-light.svg" alt="" class="navbar-logo">
+    <img src="../../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
+    <img src="../../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -353,10 +454,41 @@ document.addEventListener('DOMContentLoaded', function() {
     <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../../services.html"> 
-<span class="menu-text">Services</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-services" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Services</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-services">    
+        <li>
+    <a class="dropdown-item" href="../../../services/index.html">
+ <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../../../security/index.html">
+ <span class="dropdown-text">Security</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../digital/index.html">
+ <span class="dropdown-text">Digital Infrastructure</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../services/nis2/index.html">
+ <span class="dropdown-text">NIS2 Compliance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../services/cybersecurity/index.html">
+ <span class="dropdown-text">Cybersecurity</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../services/cloud/index.html">
+ <span class="dropdown-text">Cloud Services</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../services/digital-resilience/index.html">
+ <span class="dropdown-text">Digital Resilience</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-academy" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Academy</span>
@@ -465,142 +597,110 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+<!-- main -->
+
+
+<header id="title-block-header">
+<h1 class="title display-7">API Endpoints Guide</h1>
+
+<p class="date">2025-01-20</p>
+</header>
+
+<nav id="TOC" role="doc-toc">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#api-endpoints-guide" id="toc-api-endpoints-guide" class="nav-link active" data-scroll-target="#api-endpoints-guide">API Endpoints Guide</a>
-  <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#api-overview" id="toc-api-overview" class="nav-link" data-scroll-target="#api-overview">API Overview</a>
-  <ul class="collapse">
-  <li><a href="#base-url" id="toc-base-url" class="nav-link" data-scroll-target="#base-url">Base URL</a></li>
-  <li><a href="#response-format" id="toc-response-format" class="nav-link" data-scroll-target="#response-format">Response Format</a></li>
-  <li><a href="#pagination" id="toc-pagination" class="nav-link" data-scroll-target="#pagination">Pagination</a></li>
+  <li><a href="#api-endpoints-guide" id="toc-api-endpoints-guide">API Endpoints Guide</a>
+  <ul>
+  <li><a href="#introduction" id="toc-introduction">Introduction</a></li>
+  <li><a href="#api-overview" id="toc-api-overview">API Overview</a>
+  <ul>
+  <li><a href="#base-url" id="toc-base-url">Base URL</a></li>
+  <li><a href="#response-format" id="toc-response-format">Response Format</a></li>
+  <li><a href="#pagination" id="toc-pagination">Pagination</a></li>
   </ul></li>
-  <li><a href="#authentication" id="toc-authentication" class="nav-link" data-scroll-target="#authentication">Authentication</a>
-  <ul class="collapse">
-  <li><a href="#api-keys" id="toc-api-keys" class="nav-link" data-scroll-target="#api-keys">API Keys</a></li>
-  <li><a href="#obtaining-an-api-key" id="toc-obtaining-an-api-key" class="nav-link" data-scroll-target="#obtaining-an-api-key">Obtaining an API Key</a></li>
-  <li><a href="#rate-limiting" id="toc-rate-limiting" class="nav-link" data-scroll-target="#rate-limiting">Rate Limiting</a></li>
+  <li><a href="#authentication" id="toc-authentication">Authentication</a>
+  <ul>
+  <li><a href="#api-keys" id="toc-api-keys">API Keys</a></li>
+  <li><a href="#obtaining-an-api-key" id="toc-obtaining-an-api-key">Obtaining an API Key</a></li>
+  <li><a href="#rate-limiting" id="toc-rate-limiting">Rate Limiting</a></li>
   </ul></li>
-  <li><a href="#security-assessment-api" id="toc-security-assessment-api" class="nav-link" data-scroll-target="#security-assessment-api">Security Assessment API</a>
-  <ul class="collapse">
-  <li><a href="#get-security-assessment" id="toc-get-security-assessment" class="nav-link" data-scroll-target="#get-security-assessment">Get Security Assessment</a></li>
-  <li><a href="#create-security-assessment" id="toc-create-security-assessment" class="nav-link" data-scroll-target="#create-security-assessment">Create Security Assessment</a></li>
-  <li><a href="#list-security-assessments" id="toc-list-security-assessments" class="nav-link" data-scroll-target="#list-security-assessments">List Security Assessments</a></li>
+  <li><a href="#security-assessment-api" id="toc-security-assessment-api">Security Assessment API</a>
+  <ul>
+  <li><a href="#get-security-assessment" id="toc-get-security-assessment">Get Security Assessment</a></li>
+  <li><a href="#create-security-assessment" id="toc-create-security-assessment">Create Security Assessment</a></li>
+  <li><a href="#list-security-assessments" id="toc-list-security-assessments">List Security Assessments</a></li>
   </ul></li>
-  <li><a href="#cloud-resources-api" id="toc-cloud-resources-api" class="nav-link" data-scroll-target="#cloud-resources-api">Cloud Resources API</a>
-  <ul class="collapse">
-  <li><a href="#list-resources" id="toc-list-resources" class="nav-link" data-scroll-target="#list-resources">List Resources</a></li>
-  <li><a href="#get-resource" id="toc-get-resource" class="nav-link" data-scroll-target="#get-resource">Get Resource</a></li>
-  <li><a href="#update-resource-tags" id="toc-update-resource-tags" class="nav-link" data-scroll-target="#update-resource-tags">Update Resource Tags</a></li>
+  <li><a href="#cloud-resources-api" id="toc-cloud-resources-api">Cloud Resources API</a>
+  <ul>
+  <li><a href="#list-resources" id="toc-list-resources">List Resources</a></li>
+  <li><a href="#get-resource" id="toc-get-resource">Get Resource</a></li>
+  <li><a href="#update-resource-tags" id="toc-update-resource-tags">Update Resource Tags</a></li>
   </ul></li>
-  <li><a href="#data-analysis-api" id="toc-data-analysis-api" class="nav-link" data-scroll-target="#data-analysis-api">Data Analysis API</a>
-  <ul class="collapse">
-  <li><a href="#create-analysis-job" id="toc-create-analysis-job" class="nav-link" data-scroll-target="#create-analysis-job">Create Analysis Job</a></li>
-  <li><a href="#get-analysis-job" id="toc-get-analysis-job" class="nav-link" data-scroll-target="#get-analysis-job">Get Analysis Job</a></li>
-  <li><a href="#list-analysis-jobs" id="toc-list-analysis-jobs" class="nav-link" data-scroll-target="#list-analysis-jobs">List Analysis Jobs</a></li>
+  <li><a href="#data-analysis-api" id="toc-data-analysis-api">Data Analysis API</a>
+  <ul>
+  <li><a href="#create-analysis-job" id="toc-create-analysis-job">Create Analysis Job</a></li>
+  <li><a href="#get-analysis-job" id="toc-get-analysis-job">Get Analysis Job</a></li>
+  <li><a href="#list-analysis-jobs" id="toc-list-analysis-jobs">List Analysis Jobs</a></li>
   </ul></li>
-  <li><a href="#error-codes" id="toc-error-codes" class="nav-link" data-scroll-target="#error-codes">Error Codes</a></li>
-  <li><a href="#code-examples" id="toc-code-examples" class="nav-link" data-scroll-target="#code-examples">Code Examples</a>
-  <ul class="collapse">
-  <li><a href="#python-example" id="toc-python-example" class="nav-link" data-scroll-target="#python-example">Python Example</a></li>
-  <li><a href="#javascript-example" id="toc-javascript-example" class="nav-link" data-scroll-target="#javascript-example">JavaScript Example</a></li>
-  <li><a href="#curl-example" id="toc-curl-example" class="nav-link" data-scroll-target="#curl-example">cURL Example</a></li>
+  <li><a href="#error-codes" id="toc-error-codes">Error Codes</a></li>
+  <li><a href="#code-examples" id="toc-code-examples">Code Examples</a>
+  <ul>
+  <li><a href="#python-example" id="toc-python-example">Python Example</a></li>
+  <li><a href="#javascript-example" id="toc-javascript-example">JavaScript Example</a></li>
+  <li><a href="#curl-example" id="toc-curl-example">cURL Example</a></li>
   </ul></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#conclusion" id="toc-conclusion">Conclusion</a></li>
   </ul></li>
   </ul>
 </nav>
-    </div>
-<!-- main -->
-<main class="content" id="quarto-document-content">
-
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">API Endpoints Guide</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">api</div>
-    <div class="quarto-category">documentation</div>
-    <div class="quarto-category">development</div>
-  </div>
-  </div>
-
-<div>
-  <div class="description">
-    Comprehensive documentation of our API endpoints, parameters, and response formats
-  </div>
-</div>
-
-
-<div class="quarto-title-meta">
-
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 20, 2025</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-
-</header>
-
-
 <section id="api-endpoints-guide" class="level1">
 <h1>API Endpoints Guide</h1>
 <section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<h2 data-anchor-id="introduction">Introduction</h2>
 <p>This guide provides comprehensive documentation for the chen.ist API endpoints. It includes details about authentication, request parameters, response formats, and example code for integrating with our services.</p>
 </section>
 <section id="api-overview" class="level2">
-<h2 class="anchored" data-anchor-id="api-overview">API Overview</h2>
+<h2 data-anchor-id="api-overview">API Overview</h2>
 <p>The chen.ist API is a RESTful service that allows developers to access and integrate our services into their applications. The API provides endpoints for security assessment, cloud resource management, and data analysis.</p>
 <section id="base-url" class="level3">
-<h3 class="anchored" data-anchor-id="base-url">Base URL</h3>
+<h3 data-anchor-id="base-url">Base URL</h3>
 <p>All API requests should be made to the following base URL:</p>
 <pre><code>https://api.chen.ist/v1</code></pre>
 </section>
 <section id="response-format" class="level3">
-<h3 class="anchored" data-anchor-id="response-format">Response Format</h3>
+<h3 data-anchor-id="response-format">Response Format</h3>
 <p>All responses are returned in JSON format. Successful responses include a <code>data</code> object containing the requested information. Error responses include an <code>error</code> object with details about what went wrong.</p>
 <p>Example success response:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"status"</span><span class="fu">:</span> <span class="st">"success"</span><span class="fu">,</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"data"</span><span class="fu">:</span> <span class="fu">{</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"property1"</span><span class="fu">:</span> <span class="st">"value1"</span><span class="fu">,</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"property2"</span><span class="fu">:</span> <span class="st">"value2"</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Example error response:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"status"</span><span class="fu">:</span> <span class="st">"error"</span><span class="fu">,</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"error"</span><span class="fu">:</span> <span class="fu">{</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"code"</span><span class="fu">:</span> <span class="st">"invalid_request"</span><span class="fu">,</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"message"</span><span class="fu">:</span> <span class="st">"Invalid parameter: id"</span><span class="fu">,</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"details"</span><span class="fu">:</span> <span class="st">"The id parameter must be a valid UUID"</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="pagination" class="level3">
-<h3 class="anchored" data-anchor-id="pagination">Pagination</h3>
+<h3 data-anchor-id="pagination">Pagination</h3>
 <p>For endpoints that return collections of items, the API supports pagination using the <code>page</code> and <code>limit</code> parameters:</p>
 <ul>
 <li><code>page</code>: The page number (1-based)</li>
 <li><code>limit</code>: The number of items per page (default: 20, max: 100)</li>
 </ul>
 <p>Paginated responses include pagination metadata:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"status"</span><span class="fu">:</span> <span class="st">"success"</span><span class="fu">,</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"data"</span><span class="fu">:</span> <span class="ot">[</span><span class="er">...</span><span class="ot">]</span><span class="fu">,</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"pagination"</span><span class="fu">:</span> <span class="fu">{</span></span>
@@ -611,18 +711,18 @@ document.addEventListener('DOMContentLoaded', function() {
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"next_page"</span><span class="fu">:</span> <span class="st">"/v1/resources?page=3&amp;limit=20"</span><span class="fu">,</span></span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"prev_page"</span><span class="fu">:</span> <span class="st">"/v1/resources?page=1&amp;limit=20"</span></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 <section id="authentication" class="level2">
-<h2 class="anchored" data-anchor-id="authentication">Authentication</h2>
+<h2 data-anchor-id="authentication">Authentication</h2>
 <section id="api-keys" class="level3">
-<h3 class="anchored" data-anchor-id="api-keys">API Keys</h3>
+<h3 data-anchor-id="api-keys">API Keys</h3>
 <p>Authentication is performed using API keys. Include your API key in the <code>Authorization</code> header of each request:</p>
 <pre><code>Authorization: Bearer YOUR_API_KEY</code></pre>
 </section>
 <section id="obtaining-an-api-key" class="level3">
-<h3 class="anchored" data-anchor-id="obtaining-an-api-key">Obtaining an API Key</h3>
+<h3 data-anchor-id="obtaining-an-api-key">Obtaining an API Key</h3>
 <p>To obtain an API key:</p>
 <ol type="1">
 <li>Log in to your chen.ist account</li>
@@ -634,7 +734,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ol>
 </section>
 <section id="rate-limiting" class="level3">
-<h3 class="anchored" data-anchor-id="rate-limiting">Rate Limiting</h3>
+<h3 data-anchor-id="rate-limiting">Rate Limiting</h3>
 <p>API requests are rate-limited to ensure fair usage. The following headers are included in each response:</p>
 <ul>
 <li><code>X-Rate-Limit-Limit</code>: The maximum number of requests allowed per hour</li>
@@ -644,14 +744,14 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 <section id="security-assessment-api" class="level2">
-<h2 class="anchored" data-anchor-id="security-assessment-api">Security Assessment API</h2>
+<h2 data-anchor-id="security-assessment-api">Security Assessment API</h2>
 <section id="get-security-assessment" class="level3">
-<h3 class="anchored" data-anchor-id="get-security-assessment">Get Security Assessment</h3>
+<h3 data-anchor-id="get-security-assessment">Get Security Assessment</h3>
 <p>Retrieves a security assessment for a specified resource.</p>
 <p><strong>Endpoint:</strong> <code>GET /security/assessments/{id}</code></p>
 <p><strong>Parameters:</strong> - <code>id</code> (path, required): The assessment ID</p>
 <p><strong>Response:</strong></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"status"</span><span class="fu">:</span> <span class="st">"success"</span><span class="fu">,</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"data"</span><span class="fu">:</span> <span class="fu">{</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"a1b2c3d4-e5f6-7890-abcd-1234567890ab"</span><span class="fu">,</span></span>
@@ -682,23 +782,23 @@ document.addEventListener('DOMContentLoaded', function() {
 <span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"passing_checks"</span><span class="fu">:</span> <span class="dv">45</span></span>
 <span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
 <span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="create-security-assessment" class="level3">
-<h3 class="anchored" data-anchor-id="create-security-assessment">Create Security Assessment</h3>
+<h3 data-anchor-id="create-security-assessment">Create Security Assessment</h3>
 <p>Creates a new security assessment for a resource.</p>
 <p><strong>Endpoint:</strong> <code>POST /security/assessments</code></p>
 <p><strong>Request Body:</strong></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"resource_id"</span><span class="fu">:</span> <span class="st">"server-12345"</span><span class="fu">,</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"resource_type"</span><span class="fu">:</span> <span class="st">"virtual_machine"</span><span class="fu">,</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"scan_options"</span><span class="fu">:</span> <span class="fu">{</span></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"comprehensive"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"categories"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"authentication"</span><span class="ot">,</span> <span class="st">"network"</span><span class="ot">,</span> <span class="st">"encryption"</span><span class="ot">]</span></span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Response:</strong></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"status"</span><span class="fu">:</span> <span class="st">"success"</span><span class="fu">,</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"data"</span><span class="fu">:</span> <span class="fu">{</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"a1b2c3d4-e5f6-7890-abcd-1234567890ab"</span><span class="fu">,</span></span>
@@ -707,15 +807,15 @@ document.addEventListener('DOMContentLoaded', function() {
 <span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"status"</span><span class="fu">:</span> <span class="st">"pending"</span><span class="fu">,</span></span>
 <span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"estimated_completion_time"</span><span class="fu">:</span> <span class="st">"2025-01-15T14:35:00Z"</span></span>
 <span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="list-security-assessments" class="level3">
-<h3 class="anchored" data-anchor-id="list-security-assessments">List Security Assessments</h3>
+<h3 data-anchor-id="list-security-assessments">List Security Assessments</h3>
 <p>Retrieves a list of security assessments.</p>
 <p><strong>Endpoint:</strong> <code>GET /security/assessments</code></p>
 <p><strong>Parameters:</strong> - <code>resource_id</code> (query, optional): Filter by resource ID - <code>resource_type</code> (query, optional): Filter by resource type - <code>from_date</code> (query, optional): Filter by start date (ISO 8601 format) - <code>to_date</code> (query, optional): Filter by end date (ISO 8601 format) - <code>page</code> (query, optional): Page number - <code>limit</code> (query, optional): Items per page</p>
 <p><strong>Response:</strong></p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"status"</span><span class="fu">:</span> <span class="st">"success"</span><span class="fu">,</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"data"</span><span class="fu">:</span> <span class="ot">[</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
@@ -739,18 +839,18 @@ document.addEventListener('DOMContentLoaded', function() {
 <span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"current_page"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
 <span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"items_per_page"</span><span class="fu">:</span> <span class="dv">20</span></span>
 <span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 <section id="cloud-resources-api" class="level2">
-<h2 class="anchored" data-anchor-id="cloud-resources-api">Cloud Resources API</h2>
+<h2 data-anchor-id="cloud-resources-api">Cloud Resources API</h2>
 <section id="list-resources" class="level3">
-<h3 class="anchored" data-anchor-id="list-resources">List Resources</h3>
+<h3 data-anchor-id="list-resources">List Resources</h3>
 <p>Retrieves a list of cloud resources.</p>
 <p><strong>Endpoint:</strong> <code>GET /cloud/resources</code></p>
 <p><strong>Parameters:</strong> - <code>type</code> (query, optional): Filter by resource type - <code>provider</code> (query, optional): Filter by cloud provider - <code>region</code> (query, optional): Filter by region - <code>tag</code> (query, optional): Filter by tag (can be specified multiple times) - <code>page</code> (query, optional): Page number - <code>limit</code> (query, optional): Items per page</p>
 <p><strong>Response:</strong></p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"status"</span><span class="fu">:</span> <span class="st">"success"</span><span class="fu">,</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"data"</span><span class="fu">:</span> <span class="ot">[</span></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
@@ -786,15 +886,15 @@ document.addEventListener('DOMContentLoaded', function() {
 <span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"current_page"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
 <span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"items_per_page"</span><span class="fu">:</span> <span class="dv">20</span></span>
 <span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="get-resource" class="level3">
-<h3 class="anchored" data-anchor-id="get-resource">Get Resource</h3>
+<h3 data-anchor-id="get-resource">Get Resource</h3>
 <p>Retrieves details about a specific cloud resource.</p>
 <p><strong>Endpoint:</strong> <code>GET /cloud/resources/{id}</code></p>
 <p><strong>Parameters:</strong> - <code>id</code> (path, required): The resource ID</p>
 <p><strong>Response:</strong></p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"status"</span><span class="fu">:</span> <span class="st">"success"</span><span class="fu">,</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"data"</span><span class="fu">:</span> <span class="fu">{</span></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"vm-12345"</span><span class="fu">,</span></span>
@@ -823,23 +923,23 @@ document.addEventListener('DOMContentLoaded', function() {
 <span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>      <span class="ot">]</span></span>
 <span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
 <span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="update-resource-tags" class="level3">
-<h3 class="anchored" data-anchor-id="update-resource-tags">Update Resource Tags</h3>
+<h3 data-anchor-id="update-resource-tags">Update Resource Tags</h3>
 <p>Updates tags for a specific cloud resource.</p>
 <p><strong>Endpoint:</strong> <code>PATCH /cloud/resources/{id}/tags</code></p>
 <p><strong>Parameters:</strong> - <code>id</code> (path, required): The resource ID</p>
 <p><strong>Request Body:</strong></p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"tags"</span><span class="fu">:</span> <span class="ot">[</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span><span class="dt">"key"</span><span class="fu">:</span> <span class="st">"environment"</span><span class="fu">,</span> <span class="dt">"value"</span><span class="fu">:</span> <span class="st">"staging"</span><span class="fu">}</span><span class="ot">,</span></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span><span class="dt">"key"</span><span class="fu">:</span> <span class="st">"application"</span><span class="fu">,</span> <span class="dt">"value"</span><span class="fu">:</span> <span class="st">"web"</span><span class="fu">}</span><span class="ot">,</span></span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span><span class="dt">"key"</span><span class="fu">:</span> <span class="st">"owner"</span><span class="fu">,</span> <span class="dt">"value"</span><span class="fu">:</span> <span class="st">"platform-team"</span><span class="fu">}</span></span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Response:</strong></p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"status"</span><span class="fu">:</span> <span class="st">"success"</span><span class="fu">,</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"data"</span><span class="fu">:</span> <span class="fu">{</span></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"vm-12345"</span><span class="fu">,</span></span>
@@ -850,17 +950,17 @@ document.addEventListener('DOMContentLoaded', function() {
 <span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span><span class="fu">,</span></span>
 <span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"updated_at"</span><span class="fu">:</span> <span class="st">"2025-01-20T15:30:00Z"</span></span>
 <span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 <section id="data-analysis-api" class="level2">
-<h2 class="anchored" data-anchor-id="data-analysis-api">Data Analysis API</h2>
+<h2 data-anchor-id="data-analysis-api">Data Analysis API</h2>
 <section id="create-analysis-job" class="level3">
-<h3 class="anchored" data-anchor-id="create-analysis-job">Create Analysis Job</h3>
+<h3 data-anchor-id="create-analysis-job">Create Analysis Job</h3>
 <p>Creates a new data analysis job.</p>
 <p><strong>Endpoint:</strong> <code>POST /data/analysis/jobs</code></p>
 <p><strong>Request Body:</strong></p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"Monthly Security Analysis"</span><span class="fu">,</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"Analysis of security events for January 2025"</span><span class="fu">,</span></span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"data_source"</span><span class="fu">:</span> <span class="fu">{</span></span>
@@ -877,9 +977,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"email"</span><span class="fu">:</span> <span class="st">"user@example.com"</span><span class="fu">,</span></span>
 <span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"webhook_url"</span><span class="fu">:</span> <span class="st">"https://example.com/webhook"</span></span>
 <span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Response:</strong></p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"status"</span><span class="fu">:</span> <span class="st">"success"</span><span class="fu">,</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"data"</span><span class="fu">:</span> <span class="fu">{</span></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"job-12345"</span><span class="fu">,</span></span>
@@ -888,15 +988,15 @@ document.addEventListener('DOMContentLoaded', function() {
 <span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"created_at"</span><span class="fu">:</span> <span class="st">"2025-01-20T16:00:00Z"</span><span class="fu">,</span></span>
 <span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"estimated_completion_time"</span><span class="fu">:</span> <span class="st">"2025-01-20T16:30:00Z"</span></span>
 <span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="get-analysis-job" class="level3">
-<h3 class="anchored" data-anchor-id="get-analysis-job">Get Analysis Job</h3>
+<h3 data-anchor-id="get-analysis-job">Get Analysis Job</h3>
 <p>Retrieves the status and results of a data analysis job.</p>
 <p><strong>Endpoint:</strong> <code>GET /data/analysis/jobs/{id}</code></p>
 <p><strong>Parameters:</strong> - <code>id</code> (path, required): The job ID</p>
 <p><strong>Response:</strong></p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"status"</span><span class="fu">:</span> <span class="st">"success"</span><span class="fu">,</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"data"</span><span class="fu">:</span> <span class="fu">{</span></span>
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"job-12345"</span><span class="fu">,</span></span>
@@ -916,15 +1016,15 @@ document.addEventListener('DOMContentLoaded', function() {
 <span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"low_severity_findings"</span><span class="fu">:</span> <span class="dv">27</span></span>
 <span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
 <span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="list-analysis-jobs" class="level3">
-<h3 class="anchored" data-anchor-id="list-analysis-jobs">List Analysis Jobs</h3>
+<h3 data-anchor-id="list-analysis-jobs">List Analysis Jobs</h3>
 <p>Retrieves a list of data analysis jobs.</p>
 <p><strong>Endpoint:</strong> <code>GET /data/analysis/jobs</code></p>
 <p><strong>Parameters:</strong> - <code>status</code> (query, optional): Filter by job status - <code>created_after</code> (query, optional): Filter by creation date - <code>type</code> (query, optional): Filter by analysis type - <code>page</code> (query, optional): Page number - <code>limit</code> (query, optional): Items per page</p>
 <p><strong>Response:</strong></p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"status"</span><span class="fu">:</span> <span class="st">"success"</span><span class="fu">,</span></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"data"</span><span class="fu">:</span> <span class="ot">[</span></span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
@@ -950,11 +1050,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"current_page"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
 <span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"items_per_page"</span><span class="fu">:</span> <span class="dv">20</span></span>
 <span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 <section id="error-codes" class="level2">
-<h2 class="anchored" data-anchor-id="error-codes">Error Codes</h2>
+<h2 data-anchor-id="error-codes">Error Codes</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 31%">
@@ -999,10 +1099,10 @@ document.addEventListener('DOMContentLoaded', function() {
 </table>
 </section>
 <section id="code-examples" class="level2">
-<h2 class="anchored" data-anchor-id="code-examples">Code Examples</h2>
+<h2 data-anchor-id="code-examples">Code Examples</h2>
 <section id="python-example" class="level3">
-<h3 class="anchored" data-anchor-id="python-example">Python Example</h3>
-<div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
+<h3 data-anchor-id="python-example">Python Example</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>API_KEY <span class="op">=</span> <span class="st">"your_api_key"</span></span>
@@ -1031,11 +1131,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"ID: </span><span class="sc">{</span>assessment[<span class="st">'id'</span>]<span class="sc">}</span><span class="ss">, Score: </span><span class="sc">{</span>assessment[<span class="st">'score'</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
 <span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Error: </span><span class="sc">{</span>response<span class="sc">.</span>status_code<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(response.json())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(response.json())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="javascript-example" class="level3">
-<h3 class="anchored" data-anchor-id="javascript-example">JavaScript Example</h3>
-<div class="sourceCode" id="cb19"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> API_KEY <span class="op">=</span> <span class="st">"your_api_key"</span><span class="op">;</span></span>
+<h3 data-anchor-id="javascript-example">JavaScript Example</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> API_KEY <span class="op">=</span> <span class="st">"your_api_key"</span><span class="op">;</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> BASE_URL <span class="op">=</span> <span class="st">"https://api.chen.ist/v1"</span><span class="op">;</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Create a security assessment</span></span>
@@ -1072,11 +1172,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a><span class="fu">createSecurityAssessment</span>()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a><span class="fu">createSecurityAssessment</span>()<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="curl-example" class="level3">
-<h3 class="anchored" data-anchor-id="curl-example">cURL Example</h3>
-<div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List cloud resources</span></span>
+<h3 data-anchor-id="curl-example">cURL Example</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List cloud resources</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-X</span> GET <span class="st">"https://api.chen.ist/v1/cloud/resources?type=virtual_machine&amp;provider=aws"</span> <span class="dt">\</span></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">-H</span> <span class="st">"Authorization: Bearer your_api_key"</span> <span class="dt">\</span></span>
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">-H</span> <span class="st">"Content-Type: application/json"</span></span>
@@ -1098,11 +1198,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a><span class="st">    },</span></span>
 <span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a><span class="st">    "analysis_type": "security_event_correlation",</span></span>
 <span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a><span class="st">    "output_format": "json"</span></span>
-<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a><span class="st">  }'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a><span class="st">  }'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 <section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<h2 data-anchor-id="conclusion">Conclusion</h2>
 <p>This guide covers the key endpoints of the chen.ist API. For additional help, consult the following resources:</p>
 <ul>
 <li><a href="https://status.chen.ist/api">API Status Page</a></li>
@@ -1115,7 +1215,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 </section>
 
-</main> <!-- /main -->
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1180,13 +1280,14 @@ document.addEventListener('DOMContentLoaded', function() {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -1536,533 +1637,85 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
+<footer style="background-color:#0a0a0a; background-image: url(&quot;data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2381BD4A' fill-opacity='0.08'%3E%3Ccircle cx='20' cy='20' r='1.5'/%3E%3C/g%3E%3C/svg%3E&quot;); background-repeat: repeat; background-size: 40px 40px; color:rgba(255,255,255,0.6); padding:4rem 0 2rem; font-size:0.82rem; line-height:1.8;">
+  <div style="max-width:1200px; margin:0 auto; padding:0 1.5rem;">
+    <div style="display:grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr; gap:2rem;">
 
-</div>   
-    <div class="nav-footer-center">
+      <div>
+        <div style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:1rem; font-family:'Source Code Pro',monospace;">chen<span style="color:#81BD4A;">.ist</span></div>
+        <p style="margin-bottom:1rem;">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
+        <p style="color:rgba(255,255,255,0.25);">© 2026 chen.ist</p>
+      </div>
 
-</div>
-    <div class="nav-footer-right">
+      <div>
+        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Services</div>
+        <a href="../../../digital/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Digital Infrastructure</a>
+        <a href="../../../security/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Security</a>
+        <a href="../../../services/cloud/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Cloud</a>
+        <a href="../../../services/nis2/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">NIS2 Compliance</a>
+        <a href="../../../services/digital-resilience/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Digital Resilience</a>
+      </div>
 
-</div>
-  </div>
-</footer>
-<footer class="footer mt-5 py-3 cybersecurity-footer">
-    <div class="container">
-        <div class="row mb-3">
-            <!-- Company Logo and Brief -->
-            <div class="col-md-4 mb-2">
-                <div class="d-flex align-items-center">
-                    <h4 class="footer-logo mb-0 me-2">chen<span class="text-accent">.ist</span></h4>
-                    <div class="secure-badge ms-2">
-                        <i class="bi bi-shield-lock-fill"></i> Secure
-                    </div>
-                </div>
-                <p class="footer-description small mt-2 mb-0">
-                    Enterprise cybersecurity solutions with zero-trust implementation and continuous monitoring.
-                </p>
-            </div>
-            
-            <!-- Tabs Navigation -->
-            <div class="col-md-8 mb-2">
-                <div class="footer-tabs">
-                    <ul class="nav nav-tabs footer-nav-tabs" id="footerTabs" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="solutions-tab" data-bs-toggle="tab" data-bs-target="#solutions" type="button" role="tab">
-                                <i class="bi bi-shield-fill"></i> Solutions
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="academy-tab" data-bs-toggle="tab" data-bs-target="#academy" type="button" role="tab">
-                                <i class="bi bi-mortarboard-fill"></i> Academy
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab">
-                                <i class="bi bi-envelope-fill"></i> Contact
-                            </button>
-                        </li>
-                    </ul>
-                    
-                    <!-- Tab Content -->
-                    <div class="tab-content pt-2" id="footerTabContent">
-                        <!-- Solutions Tab -->
-                        <div class="tab-pane fade show active" id="solutions" role="tabpanel">
-                            <div class="row">
-                                <div class="col-6 col-md-3">
-                                    <a href="../../../services.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Security Services
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../../../services.html#consulting" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Consulting
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../../../services.html#compliance" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Compliance
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../../../services.html#incident-response" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Incident Response
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Academy Tab -->
-                        <div class="tab-pane fade" id="academy" role="tabpanel">
-                            <div class="row">
-                                <div class="col-6 col-md-3">
-                                    <a href="../../../academy/courses.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Courses
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../../../academy/events.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Events
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../../../academy/webinars.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Webinars
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../../../academy/computerclub.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Computer Club
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3 mt-2">
-                                    <a href="../../../academy/programs" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Explore Academy Programs
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Contact Tab -->
-                        <div class="tab-pane fade" id="contact" role="tabpanel">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="d-flex align-items-center mb-1">
-                                        <i class="bi bi-envelope-fill contact-icon"></i>
-                                        <a href="mailto:office@chen.ist" class="footer-link">office@chen.ist</a>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-shield-fill-check contact-icon"></i>
-                                        <span class="small">SOC Available 24/7</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="d-flex align-items-center mb-1">
-                                        <i class="bi bi-geo-alt-fill contact-icon"></i>
-                                        <span class="small">Stockholm | Craiova | Bucharest</span>
-                                    </div>
-                                    <div class="social-icons">
-                                        <a href="https://github.com/chenist" class="social-icon" aria-label="GitHub">
-                                            <i class="bi bi-github"></i>
-                                        </a>
-                                        <a href="https://linkedin.com/in/chenistsec" class="social-icon" aria-label="LinkedIn">
-                                            <i class="bi bi-linkedin"></i>
-                                        </a>
-                                        <a href="https://twitter.com/chenistsec" class="social-icon" aria-label="Twitter">
-                                            <i class="bi bi-twitter-x"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer-divider">
-            <div class="cyber-line"></div>
-        </div>
-        
-        <div class="row footer-bottom py-1">
-            <div class="col-md-6">
-                <div class="d-flex align-items-center">
-                    <div class="security-pulse"></div>
-                    <p class="mb-0 ms-2 copyright">
-                        © 2025 chen.ist <span class="d-none d-md-inline">| Secure. Vigilant. Resilient.</span>
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6 text-md-end">
-                <div class="footer-bottom-links">
-                    <a href="../../../privacy.html">Privacy</a>
-                    <span class="separator">|</span>
-                    <a href="../../../terms.html">Terms</a>
-                    <span class="separator">|</span>
-                    <a href="../../../contact.html" class="btn-report-incident">
-                        <i class="bi bi-exclamation-triangle-fill"></i> Report Incident
-                    </a>
-                </div>
-            </div>
-        </div>
+      <div>
+        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Academy</div>
+        <a href="../../../academy/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Overview</a>
+        <a href="../../../academy/courses.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Courses</a>
+        <a href="../../../academy/trainings.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Trainings</a>
+        <a href="../../../academy/events.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Events</a>
+        <a href="../../../academy/webinars.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Webinars</a>
+      </div>
+
+      <div>
+        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Company</div>
+        <a href="../../../about/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">About</a>
+        <a href="../../../blog.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Blog</a>
+        <a href="../../../contact.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Contact</a>
+        <a href="../../../privacy.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Privacy</a>
+        <a href="../../../terms.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Terms</a>
+      </div>
+
+      <div>
+        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Connect</div>
+        <a href="mailto:office@chen.ist" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">office@chen.ist</a>
+        <a href="https://github.com/chenist" target="_blank" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">GitHub</a>
+        <a href="https://alinmechenici.substack.com" target="_blank" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Newsletter</a>
+        <a href="https://linkedin.com/in/chenistsec" target="_blank" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">LinkedIn</a>
+        <div style="margin-top:1rem; color:rgba(255,255,255,0.2); font-size:0.72rem;">Craiova · Bucharest · Stockholm</div>
+      </div>
+
     </div>
+  </div>
 </footer>
 
 <style>
-.cybersecurity-footer {
-    background-color: #0f1923;
-    color: #e6e6e6;
-    border-top: 3px solid #18bc9c;
-    position: relative;
-    font-size: 0.9rem;
+@media (max-width: 991px) {
+  footer > div > div { grid-template-columns: 2fr 1fr 1fr !important; }
 }
-
-/* Change accent colors for academy section */
-.academy-section .cybersecurity-footer {
-    border-top-color: #F5A623;
-}
-
-.academy-section .cybersecurity-footer::before {
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        #F5A623 20%, 
-        #F5A623 40%, 
-        transparent 50%,
-        transparent 60%,
-        #F5A623 80%,
-        transparent 100%
-    );
-}
-
-.academy-section .cybersecurity-footer .text-accent,
-.academy-section .cybersecurity-footer .contact-icon,
-.academy-section .cybersecurity-footer .footer-heading::after,
-.academy-section .cybersecurity-footer .social-icon:hover,
-.academy-section .cybersecurity-footer .footer-link:hover,
-.academy-section .cybersecurity-footer .contact-item a:hover,
-.academy-section .cybersecurity-footer .footer-bottom-links a:hover,
-.academy-section .cybersecurity-footer .nav-link.active {
-    color: #F5A623 !important;
-}
-
-.academy-section .cybersecurity-footer .secure-badge {
-    background-color: rgba(245, 166, 35, 0.15);
-    color: #F5A623;
-    border-left-color: #F5A623;
-}
-
-.academy-section .cybersecurity-footer .social-icon:hover {
-    background-color: #F5A623;
-    color: #0f1923 !important;
-}
-
-.academy-section .cybersecurity-footer .cyber-line {
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        rgba(245, 166, 35, 0.3) 10%, 
-        rgba(245, 166, 35, 0.5) 50%, 
-        rgba(245, 166, 35, 0.3) 90%, 
-        transparent 100%
-    );
-}
-
-.academy-section .cybersecurity-footer .cyber-line::before,
-.academy-section .cybersecurity-footer .cyber-line::after {
-    background-color: #F5A623;
-}
-
-.academy-section .cybersecurity-footer .security-pulse {
-    background-color: #F5A623;
-}
-
-.academy-section .cybersecurity-footer .security-pulse::before {
-    background-color: rgba(245, 166, 35, 0.3);
-}
-
-.cybersecurity-footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        #18bc9c 20%, 
-        #18bc9c 40%, 
-        transparent 50%,
-        transparent 60%,
-        #18bc9c 80%,
-        transparent 100%
-    );
-    opacity: 0.4;
-}
-
-.cybersecurity-footer .footer-brand {
-    display: flex;
-    margin-bottom: 0.5rem;
-}
-
-.cybersecurity-footer .footer-logo {
-    font-size: 1.4rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-family: 'Source Code Pro', monospace;
-    color: white;
-}
-
-.cybersecurity-footer .text-accent {
-    color: #18bc9c;
-}
-
-.cybersecurity-footer .secure-badge {
-    display: inline-flex;
-    align-items: center;
-    background-color: rgba(24, 188, 156, 0.15);
-    color: #18bc9c;
-    padding: 0.2rem 0.5rem;
-    border-radius: 3px;
-    font-size: 0.7rem;
-    font-weight: 600;
-    border-left: 2px solid #18bc9c;
-}
-
-.cybersecurity-footer .footer-description {
-    color: #9ba6b2;
-    line-height: 1.4;
-}
-
-.cybersecurity-footer .footer-tabs {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 4px;
-}
-
-.cybersecurity-footer .footer-nav-tabs {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.cybersecurity-footer .nav-tabs .nav-link {
-    color: #9ba6b2;
-    border: none;
-    font-size: 0.85rem;
-    padding: 0.4rem 0.8rem;
-    background-color: transparent;
-}
-
-.cybersecurity-footer .nav-tabs .nav-link:hover {
-    color: #e6e6e6;
-    border: none;
-}
-
-.cybersecurity-footer .nav-tabs .nav-link.active {
-    color: #18bc9c;
-    background-color: rgba(24, 188, 156, 0.1);
-    border: none;
-}
-
-.cybersecurity-footer .tab-content {
-    min-height: 60px;
-}
-
-.cybersecurity-footer .footer-link {
-    color: #9ba6b2;
-    text-decoration: none;
-    transition: color 0.2s ease, transform 0.2s ease;
-    display: inline-flex;
-    align-items: center;
-    margin-bottom: 0.5rem;
-    font-size: 0.85rem;
-}
-
-.cybersecurity-footer .footer-link:hover {
-    color: #18bc9c;
-    transform: translateX(3px);
-}
-
-.cybersecurity-footer .icon-small {
-    font-size: 0.75rem;
-    margin-right: 0.25rem;
-}
-
-.cybersecurity-footer .contact-icon {
-    margin-right: 0.5rem;
-    font-size: 0.9rem;
-    color: #18bc9c;
-}
-
-.cybersecurity-footer .social-icons {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-.cybersecurity-footer .social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #e6e6e6;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-size: 0.85rem;
-}
-
-.cybersecurity-footer .social-icon:hover {
-    background-color: #18bc9c;
-    color: #0f1923;
-    transform: translateY(-2px);
-}
-
-.cybersecurity-footer .footer-divider {
-    position: relative;
-    height: 12px;
-    margin: 0.5rem 0;
-}
-
-.cybersecurity-footer .cyber-line {
-    height: 1px;
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        rgba(24, 188, 156, 0.3) 10%, 
-        rgba(24, 188, 156, 0.5) 50%, 
-        rgba(24, 188, 156, 0.3) 90%, 
-        transparent 100%
-    );
-    position: relative;
-}
-
-.cybersecurity-footer .cyber-line::before,
-.cybersecurity-footer .cyber-line::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 8px;
-    height: 1px;
-    background-color: #18bc9c;
-    animation: blink 2s infinite;
-}
-
-.cybersecurity-footer .cyber-line::before {
-    left: 25%;
-}
-
-.cybersecurity-footer .cyber-line::after {
-    right: 25%;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 0.2; }
-    50% { opacity: 1; }
-}
-
-.cybersecurity-footer .security-pulse {
-    width: 8px;
-    height: 8px;
-    background-color: #18bc9c;
-    border-radius: 50%;
-    position: relative;
-}
-
-.cybersecurity-footer .security-pulse::before {
-    content: "";
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    border-radius: 50%;
-    background-color: rgba(24, 188, 156, 0.3);
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); opacity: 1; }
-    70% { transform: scale(1.5); opacity: 0; }
-    100% { transform: scale(1.5); opacity: 0; }
-}
-
-.cybersecurity-footer .copyright {
-    color: #9ba6b2;
-    font-size: 0.8rem;
-}
-
-.cybersecurity-footer .footer-bottom-links {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-}
-
-.cybersecurity-footer .footer-bottom-links a {
-    color: #9ba6b2;
-    text-decoration: none;
-    font-size: 0.8rem;
-    transition: color 0.2s ease;
-}
-
-.cybersecurity-footer .footer-bottom-links a:hover {
-    color: #18bc9c;
-}
-
-.cybersecurity-footer .separator {
-    margin: 0 0.5rem;
-    color: #4a5568;
-    font-size: 0.8rem;
-}
-
-.cybersecurity-footer .btn-report-incident {
-    display: inline-flex;
-    align-items: center;
-    background-color: rgba(220, 53, 69, 0.15);
-    color: #dc3545 !important;
-    padding: 0.2rem 0.5rem;
-    border-radius: 3px;
-    font-size: 0.75rem;
-    margin-left: 0.5rem;
-    font-weight: 600;
-    transition: all 0.3s ease !important;
-}
-
-.cybersecurity-footer .btn-report-incident:hover {
-    background-color: rgba(220, 53, 69, 0.3);
-}
-
-.cybersecurity-footer .btn-report-incident i {
-    margin-right: 0.3rem;
-}
-
 @media (max-width: 767px) {
-    .cybersecurity-footer .footer-bottom-links {
-        justify-content: flex-start;
-        margin-top: 0.5rem;
-    }
-    
-    .cybersecurity-footer .btn-report-incident {
-        margin-top: 0.5rem;
-        margin-left: 0;
-    }
-    
-    .cybersecurity-footer .separator:nth-of-type(2) {
-        display: none;
-    }
+  footer > div > div { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
 }
+@media (max-width: 480px) {
+  footer > div > div { grid-template-columns: 1fr !important; }
+}
+footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
 </style>
-
 <script>
-// Initialize Bootstrap tabs if not already initialized
 document.addEventListener('DOMContentLoaded', function() {
-    if (typeof bootstrap !== 'undefined') {
-        var tabElList = [].slice.call(document.querySelectorAll('#footerTabs .nav-link'));
-        tabElList.map(function(tabEl) {
-            return new bootstrap.Tab(tabEl);
-        });
-    }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.m-s, .m-bg, .m-cta, .m-r, .m-n, .hp-sec, .hp-stats, .ev-card, .ev-past, .m-t').forEach(el => observer.observe(el));
 });
+</script>
+<!-- Cal.com floating button -->
+<script>
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", {origin:"https://cal.com"});
+  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {

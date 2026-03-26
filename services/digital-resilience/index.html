@@ -2,10 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Digital resilience services: business continuity planning, disaster recovery, resilient architecture, and adaptive frameworks for operational continuity.">
 
 <title>Digital Resilience – chen.ist</title>
 <style>
@@ -33,18 +34,19 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../assets/images/favicon.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-cc88a39b889daa6fbf8bd300a59b1a33.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-b5057f3398a202b36a08d66ee4de0ec1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-d5c84a301fae5037f75f94cb028315a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-b37f6c1b9a99d16252d3ddd2c7074628.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-5b1a5f95b0cf0791262c0420e19f6739.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,67 +75,15 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<style>
-.navbar-brand-container {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-brand {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-brand .navbar-title {
-  display: inline-block;
-  margin-left: 0;
-  color: #FFFFFF;
-  font-weight: 600;
-  font-size: 1.25rem;
-  letter-spacing: 0.5px;
-}
-
-@media (max-width: 767.98px) {
-  .navbar-brand .navbar-title {
-    font-size: 1.1rem;
-  }
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Find the navbar brand element that contains the logo
-  const navbarBrand = document.querySelector('.navbar-brand');
-  
-  if (navbarBrand) {
-    // Create a span for the CHENIST text
-    const titleSpan = document.createElement('span');
-    titleSpan.className = 'navbar-title';
-    titleSpan.textContent = 'CHENIST';
-    
-    // Append the span after the logo
-    navbarBrand.appendChild(titleSpan);
-  }
-});
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-
-<link rel="stylesheet" href="../../scss/styles.css">
-<link rel="stylesheet" href="../../scss/academy.scss">
-<link rel="stylesheet" href="../../scss/custom-hero.css">
 <meta property="og:title" content="Digital Resilience – chen.ist">
-<meta property="og:description" content="Ensuring business continuity in an evolving threat landscape">
+<meta property="og:description" content="Digital resilience services: business continuity planning, disaster recovery, resilient architecture, and adaptive frameworks for operational continuity.">
+<meta property="og:image" content="https://chen.ist/services/digital-resilience/assets/images/og-image.png">
 <meta property="og:site_name" content="chen.ist">
 <meta name="twitter:title" content="Digital Resilience – chen.ist">
-<meta name="twitter:description" content="Ensuring business continuity in an evolving threat landscape">
-<meta name="twitter:card" content="summary">
-</head>
-
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<meta name="twitter:description" content="Digital resilience services: business continuity planning, disaster recovery, resilient architecture, and adaptive frameworks for operational continuity.">
+<meta name="twitter:image" content="https://chen.ist/services/digital-resilience/assets/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+</head><body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -295,7 +245,158 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       toggleColorMode(false);
     }
-  </script>
+  </script><a href="#main-content" class="skip-link">Skip to main content</a>
+<style>
+/* Corporate navbar — solid dark, structured, professional */
+.navbar {
+  background: #0a0a0a !important;
+  border-bottom: 1px solid rgba(129,189,74,0.15);
+  padding: 0 !important;
+  font-size: 0.82rem;
+  min-height: 56px;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  height: 56px;
+}
+.navbar-brand-container { display: flex; align-items: center; }
+.navbar-brand { display: flex; align-items: center; gap: 0.5rem; }
+.navbar-brand .navbar-title {
+  display: inline-block;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: 'Source Code Pro', monospace;
+}
+.navbar-brand .brand-dot { color: #81BD4A; }
+.navbar .nav-link {
+  color: rgba(255,255,255,0.65) !important;
+  font-size: 0.78rem !important;
+  font-weight: 500;
+  padding: 0.5rem 0.85rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: color 0.15s;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active { color: #81BD4A !important; }
+.navbar .dropdown-menu {
+  background: #0a0a0a;
+  border: 1px solid rgba(129,189,74,0.12);
+  border-radius: 8px;
+  padding: 0.4rem;
+  margin-top: 0;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+.navbar .dropdown-item {
+  color: rgba(255,255,255,0.65);
+  font-size: 0.78rem;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 0.45rem 0.85rem;
+  letter-spacing: 0.02em;
+}
+.navbar .dropdown-item:hover {
+  background: rgba(129,189,74,0.1);
+  color: #81BD4A;
+}
+.navbar .quarto-navigation-tool { color: rgba(255,255,255,0.5) !important; }
+.navbar .quarto-navigation-tool:hover { color: #81BD4A !important; }
+.navbar .quarto-color-scheme-toggle { color: rgba(255,255,255,0.5) !important; }
+.navbar .quarto-color-scheme-toggle:hover { color: #81BD4A !important; }
+
+@media (max-width: 991px) {
+  .navbar .nav-link { font-size: 0.75rem !important; padding: 0.4rem 0.6rem !important; }
+}
+@media (max-width: 767.98px) {
+  .navbar-brand .navbar-title { font-size: 0.9rem; }
+  .navbar .navbar-collapse {
+    background: #0a0a0a;
+    border: 1px solid rgba(129,189,74,0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+  }
+  .navbar .nav-link {
+    text-transform: none;
+    font-size: 0.85rem !important;
+    padding: 0.5rem 0.75rem !important;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var navbarBrand = document.querySelector('.navbar-brand');
+  if (navbarBrand) {
+    var titleSpan = document.createElement('span');
+    titleSpan.className = 'navbar-title';
+    titleSpan.textContent = 'CHEN';
+    var dot = document.createElement('span');
+    dot.className = 'brand-dot';
+    dot.textContent = '.';
+    var ist = document.createTextNode('IST');
+    titleSpan.appendChild(dot);
+    titleSpan.appendChild(ist);
+    navbarBrand.appendChild(titleSpan);
+  }
+});
+</script>
+<script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<link rel="preload" href="../../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
+<meta name="view-transition" content="same-origin">
+<noscript><style>.m-s,.m-bg,.m-cta,.m-r,.m-n,.hp-sec,.hp-stats,.ev-card,.ev-past,.m-t{opacity:1!important;transform:none!important;}</style></noscript>
+<link rel="dns-prefetch" href="https://cal.com">
+<link rel="dns-prefetch" href="https://app.cal.com">
+<link rel="preconnect" href="https://cal.com" crossorigin="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "chen.ist",
+  "url": "https://chen.ist",
+  "logo": "https://chen.ist/assets/images/logo-light.svg",
+  "description": "Digital infrastructure, cybersecurity, cloud services, and technology education for modern organizations.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Str. Filantropiei, 1-3",
+    "addressLocality": "Craiova",
+    "postalCode": "200143",
+    "addressCountry": "RO"
+  },
+  "email": "office@chen.ist",
+  "sameAs": [
+    "https://github.com/chenist",
+    "https://linkedin.com/in/chenistsec",
+    "https://twitter.com/chenistsec"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Infrastructure", "url": "https://chen.ist/digital/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "NIS2 Compliance", "url": "https://chen.ist/services/nis2/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cybersecurity", "url": "https://chen.ist/services/cybersecurity/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cloud Services", "url": "https://chen.ist/services/cloud/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Resilience", "url": "https://chen.ist/services/digital-resilience/"}}
+    ]
+  }
+}
+</script>
+
+
+<link rel="stylesheet" href="../../assets/css/main.min.css">
+
+
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -303,7 +404,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../assets/images/logo-light.svg" alt="" class="navbar-logo">
+    <img src="../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo light-content">
+    <img src="../../assets/images/logo-light.svg" alt="chen.ist Logo" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -316,10 +418,41 @@ document.addEventListener('DOMContentLoaded', function() {
     <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../services.html"> 
-<span class="menu-text">Services</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-services" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Services</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-services">    
+        <li>
+    <a class="dropdown-item" href="../../services/index.html">
+ <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../../security/index.html">
+ <span class="dropdown-text">Security</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../digital/index.html">
+ <span class="dropdown-text">Digital Infrastructure</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../services/nis2/index.html">
+ <span class="dropdown-text">NIS2 Compliance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../services/cybersecurity/index.html">
+ <span class="dropdown-text">Cybersecurity</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../services/cloud/index.html">
+ <span class="dropdown-text">Cloud Services</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../services/digital-resilience/index.html">
+ <span class="dropdown-text">Digital Resilience</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-academy" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Academy</span>
@@ -428,511 +561,73 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#ready-to-strengthen-your-organizations-resilience" id="toc-ready-to-strengthen-your-organizations-resilience" class="nav-link active" data-scroll-target="#ready-to-strengthen-your-organizations-resilience"><span class="text-white">Ready to strengthen your organization’s resilience?</span></a></li>
-  </ul>
-</nav>
-    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Digital Resilience</h1>
+<header id="title-block-header">
+<h1 class="title display-7">Digital Resilience</h1>
 <p class="subtitle lead">Ensuring business continuity in an evolving threat landscape</p>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
 
 </header>
 
 
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="../../">Home</a></li>
-    <li class="breadcrumb-item"><a href="../../services/">Services</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Digital Resilience</li>
-  </ol>
-</nav>
+<div class="m">
 
-<div class="hero-section">
+<div class="m-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-8 offset-md-2 text-center">
-        <h1><span class="text-white">Digital</span> <span class="text-green">Resilience</span></h1>
-        <p>Adaptive technological frameworks that ensure operational continuity</p>
+    <h1>Digital <span class="gr">Resilience</span></h1>
+    <p>Adaptive frameworks that ensure operational continuity when it matters most.</p>
+  </div>
+</div>
+
+<div class="m-bg m-bg-mountains">
+  <div class="container">
+    <h2>Resilience, simplified</h2>
+    <p class="sub">Four pillars working together to keep your business running.</p>
+    <div class="row g-5">
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-building-check"></i><h3>Business Continuity</h3><p>Maintain essential functions during and after disruptions.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-arrow-counterclockwise"></i><h3>Disaster Recovery</h3><p>Rapid restoration with minimal downtime and data loss.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-diagram-3"></i><h3>Architecture Review</h3><p>Defense-in-depth design with zero-trust principles.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-clipboard-check"></i><h3>Risk Assessment</h3><p>Identify gaps and build a prioritized improvement roadmap.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="m-s">
+  <div class="container">
+    <div class="m-r">
+      <div class="m-ri"><img loading="lazy" src="../../assets/images/stock/cloud-sky.webp" alt="Resilient infrastructure"></div>
+      <div class="m-rt">
+        <h2>Built to endure.<br>Designed to recover.</h2>
+        <p>We help you plan for the worst and build for the best. From business impact analysis through tabletop exercises, every critical function gets a recovery strategy with clear RTOs and RPOs — aligned to ISO 22301 and NIST frameworks.</p>
+        <div class="lk"><a href="https://cal.com/chenist" target="_blank" class="m-lk">Assess your resilience</a></div>
       </div>
     </div>
   </div>
 </div>
 
-<style>
-  .text-white {
-    color: white !important;
-  }
-</style>
-<div class="container page-section">
-<section id="building-organizational-resilience" class="level2">
-<h2 class="anchored" data-anchor-id="building-organizational-resilience">Building Organizational Resilience</h2>
-<p>Our digital resilience solutions strengthen your organization’s ability to withstand, adapt to, and rapidly recover from disruptions, ensuring continuity of critical business operations in the face of cyber threats and technical failures.</p>
-<div class="row mt-4">
-<div class="col-md-6">
-<section id="business-continuity-planning" class="level3 security-feature">
-<h3 class="anchored" data-anchor-id="business-continuity-planning">Business Continuity Planning</h3>
-<p>Comprehensive strategies to maintain essential functions during and after security incidents or system failures.</p>
-<section id="key-benefits" class="level4">
-<h4 class="anchored" data-anchor-id="key-benefits">Key Benefits:</h4>
-<ul>
-<li>Minimized operational downtime</li>
-<li>Protection of critical business processes</li>
-<li>Clear recovery priorities and procedures</li>
-<li>Resilient organizational structure</li>
-</ul>
-<p><a href="#business-continuity" class="btn btn-outline-primary mt-2">Learn More</a></p>
-</section>
-</section>
-</div>
-<div class="col-md-6">
-<section id="disaster-recovery-solutions" class="level3 security-feature">
-<h3 class="anchored" data-anchor-id="disaster-recovery-solutions">Disaster Recovery Solutions</h3>
-<p>Robust backup and recovery systems that minimize downtime and data loss during critical incidents.</p>
-<section id="key-benefits-1" class="level4">
-<h4 class="anchored" data-anchor-id="key-benefits-1">Key Benefits:</h4>
-<ul>
-<li>Rapid recovery from data loss events</li>
-<li>Reduced financial impact of outages</li>
-<li>Geographic redundancy for critical systems</li>
-<li>Regular testing and validation</li>
-</ul>
-<p><a href="#disaster-recovery" class="btn btn-outline-primary mt-2">Learn More</a></p>
-</section>
-</section>
-</div>
-<div class="col-md-6">
-<section id="security-architecture-design" class="level3 security-feature">
-<h3 class="anchored" data-anchor-id="security-architecture-design">Security Architecture Design</h3>
-<p>Resilient infrastructure design that incorporates defense-in-depth principles and zero-trust architecture.</p>
-<section id="key-benefits-2" class="level4">
-<h4 class="anchored" data-anchor-id="key-benefits-2">Key Benefits:</h4>
-<ul>
-<li>Reduced attack surface</li>
-<li>Layered security controls</li>
-<li>Segmentation to limit breach impacts</li>
-<li>Secure by design principles</li>
-</ul>
-<p><a href="#security-architecture" class="btn btn-outline-primary mt-2">Learn More</a></p>
-</section>
-</section>
-</div>
-<div class="col-md-6">
-<section id="cyber-resilience-assessment" class="level3 security-feature">
-<h3 class="anchored" data-anchor-id="cyber-resilience-assessment">Cyber Resilience Assessment</h3>
-<p>Evaluation of your organization’s ability to maintain operations during and after cyber attacks or technical disruptions.</p>
-<section id="key-benefits-3" class="level4">
-<h4 class="anchored" data-anchor-id="key-benefits-3">Key Benefits:</h4>
-<ul>
-<li>Identification of resilience gaps</li>
-<li>Prioritized improvement roadmap</li>
-<li>Alignment with industry standards</li>
-<li>Regular resilience testing</li>
-</ul>
-<p><a href="#resilience-assessment" class="btn btn-outline-primary mt-2">Learn More</a></p>
-</section>
-</section>
-</div>
-</div>
-</section>
-<section id="business-continuity" class="level2">
-<h2 class="anchored" data-anchor-id="business-continuity">Business Continuity Planning</h2>
-<p>Our business continuity planning services help you develop comprehensive strategies to maintain essential business functions during and after disruptive events.</p>
-<div class="row mt-4">
-  <div class="col-md-12">
-    <div class="card mb-4">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-md-3 text-center">
-            <div class="process-step">
-              <div class="process-icon">
-                <i class="bi bi-file-earmark-text fs-1 text-primary"></i>
-              </div>
-              <h5 class="anchored">Business Impact Analysis</h5>
-              <p>Identifying critical functions and their recovery priorities</p>
-            </div>
-          </div>
-          
-          <div class="col-md-3 text-center">
-            <div class="process-step">
-              <div class="process-icon">
-                <i class="bi bi-gear fs-1 text-primary"></i>
-              </div>
-              <h5 class="anchored">Strategy Development</h5>
-              <p>Creating recovery strategies for different scenarios</p>
-            </div>
-          </div>
-          
-          <div class="col-md-3 text-center">
-            <div class="process-step">
-              <div class="process-icon">
-                <i class="bi bi-journal-check fs-1 text-primary"></i>
-              </div>
-              <h5 class="anchored">Plan Documentation</h5>
-              <p>Comprehensive documentation of procedures and responsibilities</p>
-            </div>
-          </div>
-          
-          <div class="col-md-3 text-center">
-            <div class="process-step">
-              <div class="process-icon">
-                <i class="bi bi-arrows-angle-contract fs-1 text-primary"></i>
-              </div>
-              <h5 class="anchored">Testing &amp; Refinement</h5>
-              <p>Regular exercises to validate and improve plans</p>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Start building<br>resilience today</h2>
+    <p>30 minutes. No pitch. Just an honest look at your continuity readiness.</p>
+    <a href="https://cal.com/chenist" target="_blank" class="m-b">Book a consultation</a>
+    <div class="m-sm">
+      <i class="bi bi-check-circle-fill"></i> Free &nbsp;
+      <i class="bi bi-check-circle-fill"></i> 30 min &nbsp;
+      <i class="bi bi-check-circle-fill"></i> Gap report in 5 days
     </div>
   </div>
 </div>
-<section id="business-continuity-components" class="level3">
-<h3 class="anchored" data-anchor-id="business-continuity-components">Business Continuity Components</h3>
-<div class="row mt-4">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-primary text-white">
-        <h3 class="card-title mb-0 anchored">Risk Assessment</h3>
-      </div>
-      <div class="card-body">
-        <p>Systematic identification and evaluation of potential threats and their impacts on critical business operations.</p>
-        <ul>
-          <li>Threat identification and categorization</li>
-          <li>Vulnerability assessment</li>
-          <li>Impact and likelihood analysis</li>
-          <li>Risk prioritization framework</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-primary text-white">
-        <h3 class="card-title mb-0 anchored">Recovery Strategies</h3>
-      </div>
-      <div class="card-body">
-        <p>Detailed procedures for restoring critical functions within defined recovery time objectives.</p>
-        <ul>
-          <li>Alternative processing strategies</li>
-          <li>Workforce continuity plans</li>
-          <li>Vendor and supply chain resilience</li>
-          <li>Communication protocols</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-</section>
-<section id="disaster-recovery" class="level2">
-<h2 class="anchored" data-anchor-id="disaster-recovery">Disaster Recovery Solutions</h2>
-<p>Our disaster recovery solutions provide the technical capabilities to recover IT systems and data after disruptive events, minimizing downtime and data loss.</p>
-<div class="row mt-4">
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center">
-      <div class="feature-card-icon">
-        <i class="bi bi-cloud-arrow-up"></i>
-      </div>
-      <h3 class="anchored">Cloud-Based Recovery</h3>
-      <p>Leveraging cloud platforms for cost-effective, scalable disaster recovery capabilities with rapid failover.</p>
-    </div>
-  </div>
 
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center">
-      <div class="feature-card-icon">
-        <i class="bi bi-arrow-repeat"></i>
-      </div>
-      <h3 class="anchored">Automated Backup Systems</h3>
-      <p>Reliable, scheduled backup processes with encryption, validation, and monitoring to ensure data recoverability.</p>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6">
-    <div class="feature-card text-center">
-      <div class="feature-card-icon">
-        <i class="bi bi-building-gear"></i>
-      </div>
-      <h3 class="anchored">Site Replication</h3>
-      <p>Hot, warm, and cold site options for different recovery time objectives and budget considerations.</p>
-    </div>
-  </div>
-</div>
-<section id="recovery-time-point-objectives" class="level3">
-<h3 class="anchored" data-anchor-id="recovery-time-point-objectives">Recovery Time &amp; Point Objectives</h3>
-<div class="row mt-4">
-  <div class="col-md-12">
-    <div class="card mb-4">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-md-6">
-            <h3 class="anchored"><i class="bi bi-clock-history text-primary"></i> Recovery Time Objective (RTO)</h3>
-            <p>We help you establish and meet appropriate RTOs for different systems and data, determining how quickly systems need to be restored after a disruption.</p>
-            <ul>
-              <li>Critical systems: Minutes to hours</li>
-              <li>Important systems: Hours to one day</li>
-              <li>Non-critical systems: Days</li>
-            </ul>
-          </div>
-          <div class="col-md-6">
-            <h3 class="anchored"><i class="bi bi-arrow-counterclockwise text-primary"></i> Recovery Point Objective (RPO)</h3>
-            <p>We design backup strategies to meet RPOs, determining how much data loss is acceptable in the event of a disruption.</p>
-            <ul>
-              <li>Critical data: Near-zero data loss</li>
-              <li>Important data: Hours of data loss</li>
-              <li>Non-critical data: Day(s) of data loss</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-</section>
-<section id="security-architecture" class="level2">
-<h2 class="anchored" data-anchor-id="security-architecture">Security Architecture Design</h2>
-<p>Our security architecture services create resilient infrastructure designs that incorporate defense-in-depth principles and zero-trust architecture to protect against evolving threats.</p>
-<div class="row mt-4">
-  <div class="col-md-12">
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-marker bg-success"></div>
-        <div class="timeline-content">
-          <h3 class="anchored">Requirements Analysis</h3>
-          <p>Understanding security needs, compliance requirements, and business objectives to inform architecture design.</p>
-        </div>
-      </div>
-      
-      <div class="timeline-item">
-        <div class="timeline-marker bg-success"></div>
-        <div class="timeline-content">
-          <h3 class="anchored">Architecture Framework</h3>
-          <p>Development of a security architecture framework aligned with industry standards (NIST, ISO, etc.).</p>
-        </div>
-      </div>
-      
-      <div class="timeline-item">
-        <div class="timeline-marker bg-success"></div>
-        <div class="timeline-content">
-          <h3 class="anchored">Control Selection</h3>
-          <p>Identification and implementation of appropriate security controls for each layer of the architecture.</p>
-        </div>
-      </div>
-      
-      <div class="timeline-item">
-        <div class="timeline-marker bg-success"></div>
-        <div class="timeline-content">
-          <h3 class="anchored">Implementation Planning</h3>
-          <p>Phased approach to implementing security architecture with minimal disruption to operations.</p>
-        </div>
-      </div>
-      
-      <div class="timeline-item">
-        <div class="timeline-marker bg-success"></div>
-        <div class="timeline-content">
-          <h3 class="anchored">Validation &amp; Refinement</h3>
-          <p>Testing and improving the architecture to address emerging threats and changing business needs.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<section id="zero-trust-architecture" class="level3">
-<h3 class="anchored" data-anchor-id="zero-trust-architecture">Zero-Trust Architecture</h3>
-<div class="row mt-4">
-  <div class="col-md-12">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Zero-Trust Security Principles</h3>
-      </div>
-      <div class="card-body">
-        <div class="row">
-          <div class="col-md-6">
-            <h4 class="anchored"><i class="bi bi-shield-lock text-primary"></i> Never Trust, Always Verify</h4>
-            <p>All users, devices, and applications must be authenticated and authorized, regardless of their network location.</p>
-            
-            <h4 class="anchored"><i class="bi bi-door-closed text-primary"></i> Least Privilege Access</h4>
-            <p>Users and systems are granted only the minimum access necessary to perform their functions.</p>
-            
-            <h4 class="anchored"><i class="bi bi-eye text-primary"></i> Assume Breach</h4>
-            <p>Security design assumes that breaches will occur and focuses on minimizing their impact.</p>
-          </div>
-          
-          <div class="col-md-6">
-            <h4 class="anchored"><i class="bi bi-segmented-nav text-primary"></i> Micro-Segmentation</h4>
-            <p>Network segmentation that limits lateral movement and contains security breaches.</p>
-            
-            <h4 class="anchored"><i class="bi bi-file-earmark-lock2 text-primary"></i> Data-Centric Security</h4>
-            <p>Protection focused on securing data rather than just network perimeters.</p>
-            
-            <h4 class="anchored"><i class="bi bi-reception-4 text-primary"></i> Continuous Monitoring</h4>
-            <p>Real-time visibility into all network traffic, user activities, and system behaviors.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-</section>
-<section id="resilience-assessment" class="level2">
-<h2 class="anchored" data-anchor-id="resilience-assessment">Cyber Resilience Assessment</h2>
-<p>Our cyber resilience assessment services evaluate your organization’s ability to maintain operations during and after cyber attacks or technical disruptions.</p>
-<div class="row mt-4">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-primary text-white">
-        <h3 class="card-title mb-0 anchored">Assessment Areas</h3>
-      </div>
-      <div class="card-body">
-        <ul>
-          <li><strong>Governance &amp; Risk Management:</strong> Evaluation of resilience policies, procedures, and oversight</li>
-          <li><strong>Threat Intelligence &amp; Awareness:</strong> Assessment of threat monitoring and analysis capabilities</li>
-          <li><strong>Security Controls:</strong> Review of preventive, detective, and corrective controls</li>
-          <li><strong>Response Capabilities:</strong> Evaluation of incident detection and response procedures</li>
-          <li><strong>Recovery Mechanisms:</strong> Assessment of backup, restoration, and continuity capabilities</li>
-          <li><strong>Supply Chain Resilience:</strong> Review of third-party risk management and continuity</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-primary text-white">
-        <h3 class="card-title mb-0 anchored">Assessment Methods</h3>
-      </div>
-      <div class="card-body">
-        <ul>
-          <li><strong>Documentation Review:</strong> Analysis of policies, procedures, and plans</li>
-          <li><strong>Technical Testing:</strong> Evaluation of technical controls and security measures</li>
-          <li><strong>Tabletop Exercises:</strong> Scenario-based simulations to test response procedures</li>
-          <li><strong>Interviews:</strong> Discussions with key personnel about resilience awareness and capabilities</li>
-          <li><strong>Gap Analysis:</strong> Comparison of current state with best practices and standards</li>
-          <li><strong>Resilience Metrics:</strong> Quantitative measurements of resilience capabilities</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-<section id="resilience-maturity-model" class="level3">
-<h3 class="anchored" data-anchor-id="resilience-maturity-model">Resilience Maturity Model</h3>
-<div class="row mt-4">
-  <div class="col-md-12">
-    <div class="card mb-4">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-md-4">
-            <h4 class="text-center anchored"><i class="bi bi-1-circle text-primary"></i> Initial</h4>
-            <ul>
-              <li>Ad hoc resilience measures</li>
-              <li>Limited awareness of threats</li>
-              <li>Reactive approach to incidents</li>
-              <li>Minimal recovery capabilities</li>
-            </ul>
-          </div>
-          
-          <div class="col-md-4">
-            <h4 class="text-center anchored"><i class="bi bi-3-circle text-primary"></i> Established</h4>
-            <ul>
-              <li>Documented resilience procedures</li>
-              <li>Regular testing and exercises</li>
-              <li>Defined recovery objectives</li>
-              <li>Coordination between teams</li>
-            </ul>
-          </div>
-          
-          <div class="col-md-4">
-            <h4 class="text-center anchored"><i class="bi bi-5-circle text-primary"></i> Optimized</h4>
-            <ul>
-              <li>Resilience integrated into business strategy</li>
-              <li>Continuous improvement process</li>
-              <li>Adaptive response capabilities</li>
-              <li>Resilience metrics and KPIs</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-</section>
-<section id="why-choose-our-digital-resilience-services" class="level2">
-<h2 class="anchored" data-anchor-id="why-choose-our-digital-resilience-services">Why Choose Our Digital Resilience Services</h2>
-<div class="row mt-4">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Our Expertise</h3>
-      </div>
-      <div class="card-body">
-        <ul>
-          <li><strong>Experienced Professionals:</strong> Team with extensive experience in business continuity, disaster recovery, and cybersecurity</li>
-          <li><strong>Industry Knowledge:</strong> Understanding of resilience requirements across various sectors</li>
-          <li><strong>Standards Alignment:</strong> Solutions aligned with industry standards (ISO 22301, NIST SP 800-34, etc.)</li>
-          <li><strong>Holistic Approach:</strong> Integration of technology, processes, and people in resilience solutions</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white">
-        <h3 class="card-title mb-0 anchored">Our Approach</h3>
-      </div>
-      <div class="card-body">
-        <ul>
-          <li><strong>Business-Focused:</strong> Resilience solutions tailored to your specific business needs and objectives</li>
-          <li><strong>Practical Implementation:</strong> Realistic, implementable solutions that balance security with usability</li>
-          <li><strong>Continuous Validation:</strong> Regular testing and refinement of resilience capabilities</li>
-          <li><strong>Knowledge Transfer:</strong> Building your team's capacity to maintain and improve resilience</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-</div>
-<div class="cta-section">
-<section id="ready-to-strengthen-your-organizations-resilience" class="level2 container text-center">
-<h2 class="anchored" data-anchor-id="ready-to-strengthen-your-organizations-resilience"><span class="text-white">Ready to strengthen your organization’s resilience?</span></h2>
-<p class="mb-4">Contact us today to discuss how our digital resilience services can help your business thrive in the face of disruption.</p>
-<p><a href="../../contact.html" class="cta-button">Contact Us</a></p>
-</section>
 </div>
 
 
 
-</main> <!-- /main -->
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -997,13 +692,14 @@ document.addEventListener('DOMContentLoaded', function() {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -1353,533 +1049,85 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
+<footer style="background-color:#0a0a0a; background-image: url(&quot;data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2381BD4A' fill-opacity='0.08'%3E%3Ccircle cx='20' cy='20' r='1.5'/%3E%3C/g%3E%3C/svg%3E&quot;); background-repeat: repeat; background-size: 40px 40px; color:rgba(255,255,255,0.6); padding:4rem 0 2rem; font-size:0.82rem; line-height:1.8;">
+  <div style="max-width:1200px; margin:0 auto; padding:0 1.5rem;">
+    <div style="display:grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr; gap:2rem;">
 
-</div>   
-    <div class="nav-footer-center">
+      <div>
+        <div style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:1rem; font-family:'Source Code Pro',monospace;">chen<span style="color:#81BD4A;">.ist</span></div>
+        <p style="margin-bottom:1rem;">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
+        <p style="color:rgba(255,255,255,0.25);">© 2026 chen.ist</p>
+      </div>
 
-</div>
-    <div class="nav-footer-right">
+      <div>
+        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Services</div>
+        <a href="../../digital/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Digital Infrastructure</a>
+        <a href="../../security/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Security</a>
+        <a href="../../services/cloud/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Cloud</a>
+        <a href="../../services/nis2/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">NIS2 Compliance</a>
+        <a href="../../services/digital-resilience/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Digital Resilience</a>
+      </div>
 
-</div>
-  </div>
-</footer>
-<footer class="footer mt-5 py-3 cybersecurity-footer">
-    <div class="container">
-        <div class="row mb-3">
-            <!-- Company Logo and Brief -->
-            <div class="col-md-4 mb-2">
-                <div class="d-flex align-items-center">
-                    <h4 class="footer-logo mb-0 me-2">chen<span class="text-accent">.ist</span></h4>
-                    <div class="secure-badge ms-2">
-                        <i class="bi bi-shield-lock-fill"></i> Secure
-                    </div>
-                </div>
-                <p class="footer-description small mt-2 mb-0">
-                    Enterprise cybersecurity solutions with zero-trust implementation and continuous monitoring.
-                </p>
-            </div>
-            
-            <!-- Tabs Navigation -->
-            <div class="col-md-8 mb-2">
-                <div class="footer-tabs">
-                    <ul class="nav nav-tabs footer-nav-tabs" id="footerTabs" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="solutions-tab" data-bs-toggle="tab" data-bs-target="#solutions" type="button" role="tab">
-                                <i class="bi bi-shield-fill"></i> Solutions
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="academy-tab" data-bs-toggle="tab" data-bs-target="#academy" type="button" role="tab">
-                                <i class="bi bi-mortarboard-fill"></i> Academy
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab">
-                                <i class="bi bi-envelope-fill"></i> Contact
-                            </button>
-                        </li>
-                    </ul>
-                    
-                    <!-- Tab Content -->
-                    <div class="tab-content pt-2" id="footerTabContent">
-                        <!-- Solutions Tab -->
-                        <div class="tab-pane fade show active" id="solutions" role="tabpanel">
-                            <div class="row">
-                                <div class="col-6 col-md-3">
-                                    <a href="../../services.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Security Services
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../../services.html#consulting" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Consulting
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../../services.html#compliance" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Compliance
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../../services.html#incident-response" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Incident Response
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Academy Tab -->
-                        <div class="tab-pane fade" id="academy" role="tabpanel">
-                            <div class="row">
-                                <div class="col-6 col-md-3">
-                                    <a href="../../academy/courses.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Courses
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../../academy/events.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Events
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../../academy/webinars.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Webinars
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <a href="../../academy/computerclub.html" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Computer Club
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-3 mt-2">
-                                    <a href="../../academy/programs" class="footer-link">
-                                        <i class="bi bi-chevron-right icon-small"></i> Explore Academy Programs
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Contact Tab -->
-                        <div class="tab-pane fade" id="contact" role="tabpanel">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="d-flex align-items-center mb-1">
-                                        <i class="bi bi-envelope-fill contact-icon"></i>
-                                        <a href="mailto:office@chen.ist" class="footer-link">office@chen.ist</a>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-shield-fill-check contact-icon"></i>
-                                        <span class="small">SOC Available 24/7</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="d-flex align-items-center mb-1">
-                                        <i class="bi bi-geo-alt-fill contact-icon"></i>
-                                        <span class="small">Stockholm | Craiova | Bucharest</span>
-                                    </div>
-                                    <div class="social-icons">
-                                        <a href="https://github.com/chenist" class="social-icon" aria-label="GitHub">
-                                            <i class="bi bi-github"></i>
-                                        </a>
-                                        <a href="https://linkedin.com/in/chenistsec" class="social-icon" aria-label="LinkedIn">
-                                            <i class="bi bi-linkedin"></i>
-                                        </a>
-                                        <a href="https://twitter.com/chenistsec" class="social-icon" aria-label="Twitter">
-                                            <i class="bi bi-twitter-x"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer-divider">
-            <div class="cyber-line"></div>
-        </div>
-        
-        <div class="row footer-bottom py-1">
-            <div class="col-md-6">
-                <div class="d-flex align-items-center">
-                    <div class="security-pulse"></div>
-                    <p class="mb-0 ms-2 copyright">
-                        © 2025 chen.ist <span class="d-none d-md-inline">| Secure. Vigilant. Resilient.</span>
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6 text-md-end">
-                <div class="footer-bottom-links">
-                    <a href="../../privacy.html">Privacy</a>
-                    <span class="separator">|</span>
-                    <a href="../../terms.html">Terms</a>
-                    <span class="separator">|</span>
-                    <a href="../../contact.html" class="btn-report-incident">
-                        <i class="bi bi-exclamation-triangle-fill"></i> Report Incident
-                    </a>
-                </div>
-            </div>
-        </div>
+      <div>
+        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Academy</div>
+        <a href="../../academy/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Overview</a>
+        <a href="../../academy/courses.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Courses</a>
+        <a href="../../academy/trainings.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Trainings</a>
+        <a href="../../academy/events.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Events</a>
+        <a href="../../academy/webinars.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Webinars</a>
+      </div>
+
+      <div>
+        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Company</div>
+        <a href="../../about/" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">About</a>
+        <a href="../../blog.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Blog</a>
+        <a href="../../contact.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Contact</a>
+        <a href="../../privacy.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Privacy</a>
+        <a href="../../terms.html" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Terms</a>
+      </div>
+
+      <div>
+        <div style="color:#fff; font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;">Connect</div>
+        <a href="mailto:office@chen.ist" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">office@chen.ist</a>
+        <a href="https://github.com/chenist" target="_blank" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">GitHub</a>
+        <a href="https://alinmechenici.substack.com" target="_blank" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">Newsletter</a>
+        <a href="https://linkedin.com/in/chenistsec" target="_blank" style="display:block; color:rgba(255,255,255,0.6); text-decoration:none; padding:0.1rem 0;">LinkedIn</a>
+        <div style="margin-top:1rem; color:rgba(255,255,255,0.2); font-size:0.72rem;">Craiova · Bucharest · Stockholm</div>
+      </div>
+
     </div>
+  </div>
 </footer>
 
 <style>
-.cybersecurity-footer {
-    background-color: #0f1923;
-    color: #e6e6e6;
-    border-top: 3px solid #18bc9c;
-    position: relative;
-    font-size: 0.9rem;
+@media (max-width: 991px) {
+  footer > div > div { grid-template-columns: 2fr 1fr 1fr !important; }
 }
-
-/* Change accent colors for academy section */
-.academy-section .cybersecurity-footer {
-    border-top-color: #F5A623;
-}
-
-.academy-section .cybersecurity-footer::before {
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        #F5A623 20%, 
-        #F5A623 40%, 
-        transparent 50%,
-        transparent 60%,
-        #F5A623 80%,
-        transparent 100%
-    );
-}
-
-.academy-section .cybersecurity-footer .text-accent,
-.academy-section .cybersecurity-footer .contact-icon,
-.academy-section .cybersecurity-footer .footer-heading::after,
-.academy-section .cybersecurity-footer .social-icon:hover,
-.academy-section .cybersecurity-footer .footer-link:hover,
-.academy-section .cybersecurity-footer .contact-item a:hover,
-.academy-section .cybersecurity-footer .footer-bottom-links a:hover,
-.academy-section .cybersecurity-footer .nav-link.active {
-    color: #F5A623 !important;
-}
-
-.academy-section .cybersecurity-footer .secure-badge {
-    background-color: rgba(245, 166, 35, 0.15);
-    color: #F5A623;
-    border-left-color: #F5A623;
-}
-
-.academy-section .cybersecurity-footer .social-icon:hover {
-    background-color: #F5A623;
-    color: #0f1923 !important;
-}
-
-.academy-section .cybersecurity-footer .cyber-line {
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        rgba(245, 166, 35, 0.3) 10%, 
-        rgba(245, 166, 35, 0.5) 50%, 
-        rgba(245, 166, 35, 0.3) 90%, 
-        transparent 100%
-    );
-}
-
-.academy-section .cybersecurity-footer .cyber-line::before,
-.academy-section .cybersecurity-footer .cyber-line::after {
-    background-color: #F5A623;
-}
-
-.academy-section .cybersecurity-footer .security-pulse {
-    background-color: #F5A623;
-}
-
-.academy-section .cybersecurity-footer .security-pulse::before {
-    background-color: rgba(245, 166, 35, 0.3);
-}
-
-.cybersecurity-footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        #18bc9c 20%, 
-        #18bc9c 40%, 
-        transparent 50%,
-        transparent 60%,
-        #18bc9c 80%,
-        transparent 100%
-    );
-    opacity: 0.4;
-}
-
-.cybersecurity-footer .footer-brand {
-    display: flex;
-    margin-bottom: 0.5rem;
-}
-
-.cybersecurity-footer .footer-logo {
-    font-size: 1.4rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-family: 'Source Code Pro', monospace;
-    color: white;
-}
-
-.cybersecurity-footer .text-accent {
-    color: #18bc9c;
-}
-
-.cybersecurity-footer .secure-badge {
-    display: inline-flex;
-    align-items: center;
-    background-color: rgba(24, 188, 156, 0.15);
-    color: #18bc9c;
-    padding: 0.2rem 0.5rem;
-    border-radius: 3px;
-    font-size: 0.7rem;
-    font-weight: 600;
-    border-left: 2px solid #18bc9c;
-}
-
-.cybersecurity-footer .footer-description {
-    color: #9ba6b2;
-    line-height: 1.4;
-}
-
-.cybersecurity-footer .footer-tabs {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 4px;
-}
-
-.cybersecurity-footer .footer-nav-tabs {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.cybersecurity-footer .nav-tabs .nav-link {
-    color: #9ba6b2;
-    border: none;
-    font-size: 0.85rem;
-    padding: 0.4rem 0.8rem;
-    background-color: transparent;
-}
-
-.cybersecurity-footer .nav-tabs .nav-link:hover {
-    color: #e6e6e6;
-    border: none;
-}
-
-.cybersecurity-footer .nav-tabs .nav-link.active {
-    color: #18bc9c;
-    background-color: rgba(24, 188, 156, 0.1);
-    border: none;
-}
-
-.cybersecurity-footer .tab-content {
-    min-height: 60px;
-}
-
-.cybersecurity-footer .footer-link {
-    color: #9ba6b2;
-    text-decoration: none;
-    transition: color 0.2s ease, transform 0.2s ease;
-    display: inline-flex;
-    align-items: center;
-    margin-bottom: 0.5rem;
-    font-size: 0.85rem;
-}
-
-.cybersecurity-footer .footer-link:hover {
-    color: #18bc9c;
-    transform: translateX(3px);
-}
-
-.cybersecurity-footer .icon-small {
-    font-size: 0.75rem;
-    margin-right: 0.25rem;
-}
-
-.cybersecurity-footer .contact-icon {
-    margin-right: 0.5rem;
-    font-size: 0.9rem;
-    color: #18bc9c;
-}
-
-.cybersecurity-footer .social-icons {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-.cybersecurity-footer .social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #e6e6e6;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-size: 0.85rem;
-}
-
-.cybersecurity-footer .social-icon:hover {
-    background-color: #18bc9c;
-    color: #0f1923;
-    transform: translateY(-2px);
-}
-
-.cybersecurity-footer .footer-divider {
-    position: relative;
-    height: 12px;
-    margin: 0.5rem 0;
-}
-
-.cybersecurity-footer .cyber-line {
-    height: 1px;
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        rgba(24, 188, 156, 0.3) 10%, 
-        rgba(24, 188, 156, 0.5) 50%, 
-        rgba(24, 188, 156, 0.3) 90%, 
-        transparent 100%
-    );
-    position: relative;
-}
-
-.cybersecurity-footer .cyber-line::before,
-.cybersecurity-footer .cyber-line::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 8px;
-    height: 1px;
-    background-color: #18bc9c;
-    animation: blink 2s infinite;
-}
-
-.cybersecurity-footer .cyber-line::before {
-    left: 25%;
-}
-
-.cybersecurity-footer .cyber-line::after {
-    right: 25%;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 0.2; }
-    50% { opacity: 1; }
-}
-
-.cybersecurity-footer .security-pulse {
-    width: 8px;
-    height: 8px;
-    background-color: #18bc9c;
-    border-radius: 50%;
-    position: relative;
-}
-
-.cybersecurity-footer .security-pulse::before {
-    content: "";
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    border-radius: 50%;
-    background-color: rgba(24, 188, 156, 0.3);
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); opacity: 1; }
-    70% { transform: scale(1.5); opacity: 0; }
-    100% { transform: scale(1.5); opacity: 0; }
-}
-
-.cybersecurity-footer .copyright {
-    color: #9ba6b2;
-    font-size: 0.8rem;
-}
-
-.cybersecurity-footer .footer-bottom-links {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-}
-
-.cybersecurity-footer .footer-bottom-links a {
-    color: #9ba6b2;
-    text-decoration: none;
-    font-size: 0.8rem;
-    transition: color 0.2s ease;
-}
-
-.cybersecurity-footer .footer-bottom-links a:hover {
-    color: #18bc9c;
-}
-
-.cybersecurity-footer .separator {
-    margin: 0 0.5rem;
-    color: #4a5568;
-    font-size: 0.8rem;
-}
-
-.cybersecurity-footer .btn-report-incident {
-    display: inline-flex;
-    align-items: center;
-    background-color: rgba(220, 53, 69, 0.15);
-    color: #dc3545 !important;
-    padding: 0.2rem 0.5rem;
-    border-radius: 3px;
-    font-size: 0.75rem;
-    margin-left: 0.5rem;
-    font-weight: 600;
-    transition: all 0.3s ease !important;
-}
-
-.cybersecurity-footer .btn-report-incident:hover {
-    background-color: rgba(220, 53, 69, 0.3);
-}
-
-.cybersecurity-footer .btn-report-incident i {
-    margin-right: 0.3rem;
-}
-
 @media (max-width: 767px) {
-    .cybersecurity-footer .footer-bottom-links {
-        justify-content: flex-start;
-        margin-top: 0.5rem;
-    }
-    
-    .cybersecurity-footer .btn-report-incident {
-        margin-top: 0.5rem;
-        margin-left: 0;
-    }
-    
-    .cybersecurity-footer .separator:nth-of-type(2) {
-        display: none;
-    }
+  footer > div > div { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
 }
+@media (max-width: 480px) {
+  footer > div > div { grid-template-columns: 1fr !important; }
+}
+footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
 </style>
-
 <script>
-// Initialize Bootstrap tabs if not already initialized
 document.addEventListener('DOMContentLoaded', function() {
-    if (typeof bootstrap !== 'undefined') {
-        var tabElList = [].slice.call(document.querySelectorAll('#footerTabs .nav-link'));
-        tabElList.map(function(tabEl) {
-            return new bootstrap.Tab(tabEl);
-        });
-    }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.m-s, .m-bg, .m-cta, .m-r, .m-n, .hp-sec, .hp-stats, .ev-card, .ev-past, .m-t').forEach(el => observer.observe(el));
 });
+</script>
+<!-- Cal.com floating button -->
+<script>
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", {origin:"https://cal.com"});
+  Cal("floatingButton", {calLink: "chenist", buttonColor: "#81BD4A", buttonTextColor: "#ffffff", buttonText: "Book a Call"});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
