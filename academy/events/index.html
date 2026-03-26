@@ -353,15 +353,53 @@ ul.task-list li input[type="checkbox"] {
   .navbar .nav-link { font-size: 0.82rem !important; }
 }
 @media (max-width: 767.98px) {
-  .navbar-brand .navbar-title { font-size: 1rem; }
+  .navbar { min-height: 54px !important; }
+  .navbar-brand .navbar-title { font-size: 0.95rem; }
   .navbar .navbar-collapse {
     background: #0a0a0a;
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 10px;
-    padding: 1rem;
-    margin-top: 0.5rem;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 1.25rem;
+    margin-top: 0.75rem;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    max-height: 75vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
-  .navbar .navbar-cta { display: block; text-align: center; margin: 0.75rem 0 0; }
+  .navbar .nav-link {
+    font-size: 0.9rem !important;
+    padding: 0.65rem 0.75rem !important;
+    border-radius: 10px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .navbar .nav-link:active { background: rgba(129,189,74,0.08); }
+  .navbar .dropdown-menu {
+    border: none !important;
+    padding: 0 0 0 1rem !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+  .navbar .dropdown-item {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+  }
+  .navbar .navbar-cta {
+    display: block;
+    text-align: center;
+    margin: 0.75rem 0 0;
+    padding: 0.75rem 1.5rem;
+    border-radius: 14px;
+    min-height: 44px;
+  }
+  .navbar-toggler { border: none !important; padding: 0.5rem; }
+  .navbar-toggler:focus { box-shadow: none !important; }
 }
 </style>
 
@@ -399,6 +437,11 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
 <script>
 (function() {
@@ -570,6 +613,10 @@ window.Quarto = {
     <a class="dropdown-item" href="../../services/digital-resilience/index.html">
  <span class="dropdown-text">Digital Resilience</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../../services/gdpr/index.html">
+ <span class="dropdown-text">GDPR Compliance</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -619,10 +666,29 @@ window.Quarto = {
     <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blogs</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../resources/index.html"> 
-<span class="menu-text">Resources</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Resources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
+        <li>
+    <a class="dropdown-item" href="../../resources/index.html">
+ <span class="dropdown-text">All Resources</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../../resources/tools/index.html">
+ <span class="dropdown-text">Tools</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../compare.html">
+ <span class="dropdown-text">Why Open Source</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../faq.html">
+ <span class="dropdown-text">FAQ</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item dropdown ">
@@ -633,6 +699,10 @@ window.Quarto = {
         <li>
     <a class="dropdown-item" href="../../about/index.html">
  <span class="dropdown-text">About</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../about/team.html">
+ <span class="dropdown-text">Team</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../about/csr.html">
@@ -1173,7 +1243,7 @@ window.Quarto = {
     </div>
 </div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-date-sort="1759622400000" data-listing-file-modified-sort="1774530825020" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="670">
+<div class="g-col-1" data-index="0" data-listing-date-sort="1759622400000" data-listing-file-modified-sort="1774548200863" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="669">
 <a href="../../academy/events/pages/space-hackathon.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1215,7 +1285,7 @@ hackathon
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-date-sort="1757030400000" data-listing-file-modified-sort="1774530825020" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="701">
+<div class="g-col-1" data-index="1" data-listing-date-sort="1757030400000" data-listing-file-modified-sort="1774548200863" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="700">
 <a href="../../academy/events/pages/makers-workshop.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1257,7 +1327,7 @@ workshop
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-listing-date-sort="1754006400000" data-listing-file-modified-sort="1774530825020" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="649">
+<div class="g-col-1" data-index="2" data-listing-date-sort="1754006400000" data-listing-file-modified-sort="1774548200863" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="648">
 <a href="../../academy/events/pages/2025.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1299,7 +1369,7 @@ summer-school
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-listing-date-sort="1754006400000" data-listing-file-modified-sort="1774530825020" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="515">
+<div class="g-col-1" data-index="3" data-listing-date-sort="1754006400000" data-listing-file-modified-sort="1774548200863" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="514">
 <a href="../../academy/events/pages/summer-school-2025.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1341,7 +1411,7 @@ summer-school
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="4" data-listing-date-sort="1752969600000" data-listing-file-modified-sort="1774530825020" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="718">
+<div class="g-col-1" data-index="4" data-listing-date-sort="1752969600000" data-listing-file-modified-sort="1774548200863" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="717">
 <a href="../../academy/events/pages/ai-ethics-hackathon.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1383,7 +1453,7 @@ hackathon
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="5" data-listing-date-sort="1749945600000" data-listing-file-modified-sort="1774530825020" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="633">
+<div class="g-col-1" data-index="5" data-listing-date-sort="1749945600000" data-listing-file-modified-sort="1774548200863" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="632">
 <a href="../../academy/events/pages/cybersecurity-hackathon.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1442,9 +1512,9 @@ hackathon
         <div style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:1rem; font-family:'Source Code Pro',monospace;">chen<span style="color:#81BD4A;">.</span>ist</div>
         <p style="margin-bottom:1rem; color:rgba(255,255,255,0.4);" class="footer-i18n" data-key="tagline">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
         <div style="display:flex; gap:0.75rem; margin-bottom:1rem;">
-          <a href="https://github.com/chenist" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-github"></i></a>
-          <a href="https://linkedin.com/in/chenistsec" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-linkedin"></i></a>
-          <a href="https://alinmechenici.substack.com" target="_blank" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;"><i class="bi bi-envelope"></i></a>
+          <a href="https://github.com/chenist" target="_blank" class="footer-social"><i class="bi bi-github"></i></a>
+          <a href="https://linkedin.com/in/chenistsec" target="_blank" class="footer-social"><i class="bi bi-linkedin"></i></a>
+          <a href="https://alinmechenici.substack.com" target="_blank" class="footer-social"><i class="bi bi-envelope"></i></a>
         </div>
         <p style="color:rgba(255,255,255,0.2); font-size:0.75rem;">© 2026 chen.ist</p>
       </div>
@@ -1455,6 +1525,7 @@ hackathon
         <a href="../../services/cloud/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
         <a href="../../services/nis2/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="nis2">NIS2 Compliance</a>
         <a href="../../services/digital-resilience/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="resilience">Digital Resilience</a>
+        <a href="../../services/gdpr/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">GDPR Compliance</a>
       </div>
       <div>
         <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="academy">Academy</div>
@@ -1469,6 +1540,7 @@ hackathon
         <a href="../../about/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="about">About</a>
         <a href="../../blog.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
         <a href="../../contact.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="contact">Contact</a>
+        <a href="../../faq.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">FAQ</a>
         <a href="../../privacy.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="privacy">Privacy</a>
         <a href="../../terms.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="terms">Terms</a>
       </div>
@@ -1484,9 +1556,19 @@ hackathon
 
 <style>
 @media (max-width:991px) { footer > div > div { grid-template-columns: 2fr 1fr 1fr !important; } }
-@media (max-width:767px) { footer > div > div { grid-template-columns: 1fr 1fr !important; gap:2rem !important; } }
-@media (max-width:480px) { footer > div > div { grid-template-columns: 1fr !important; } }
+@media (max-width:767px) {
+  footer { padding: 3rem 0 2rem !important; font-size: 0.8rem !important; }
+  footer > div > div { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
+  footer a { padding: 0.3rem 0 !important; min-height: 36px; display: inline-flex; align-items: center; }
+}
+@media (max-width:480px) {
+  footer > div > div { grid-template-columns: 1fr !important; gap: 1.75rem !important; }
+  footer { padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px)) !important; }
+}
 footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
+footer a { -webkit-tap-highlight-color: transparent; }
+.footer-social { display:flex !important; align-items:center !important; justify-content:center !important; width:40px !important; height:40px !important; min-height:40px !important; border-radius:50% !important; background:rgba(255,255,255,0.06) !important; color:rgba(255,255,255,0.5) !important; text-decoration:none !important; font-size:1rem !important; padding:0 !important; }
+.footer-social:hover { background:rgba(129,189,74,0.15) !important; color:#81BD4A !important; }
 </style>
 
 <script>
@@ -1633,7 +1715,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- Cal.com embed (for booking page only, no floating button) -->
 <script>
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-  Cal("init", {origin:"https://cal.com"});
+  if (window.location.pathname.includes('/booking/')) {
+    Cal("init", {origin:"https://cal.com"});
+  }
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
