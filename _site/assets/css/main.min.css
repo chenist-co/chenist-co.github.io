@@ -496,6 +496,59 @@ html:not([data-bs-theme="dark"]) .m-bg-mountains{background-color:#f5f5f7 !impor
 html:not([data-bs-theme="dark"]) .m-bg-mountains h2{color:#1d1d1f !important;}
 html:not([data-bs-theme="dark"]) .m-bg-mountains p, html:not([data-bs-theme="dark"]) .m-bg-mountains .sub{color:#86868b !important;}
 
+/* === LIGHT MODE: catch ALL inline white text on light backgrounds === */
+/* Any element with inline color:#fff inside .m-s, .m-bg, .m-cta (light bg sections) */
+html:not([data-bs-theme="dark"]) .m-s [style*="color:#fff"],
+html:not([data-bs-theme="dark"]) .m-s [style*="color: #fff"],
+html:not([data-bs-theme="dark"]) .m-cta [style*="color:#fff"],
+html:not([data-bs-theme="dark"]) .m-cta [style*="color: #fff"]{color:#1d1d1f !important;}
+/* Any element with rgba white text inside light sections */
+html:not([data-bs-theme="dark"]) .m-s [style*="rgba(255,255,255"],
+html:not([data-bs-theme="dark"]) .m-cta [style*="rgba(255,255,255"],
+html:not([data-bs-theme="dark"]) .m-bg [style*="rgba(255,255,255,0.4)"],
+html:not([data-bs-theme="dark"]) .m-bg [style*="rgba(255,255,255,0.5)"],
+html:not([data-bs-theme="dark"]) .m-bg [style*="rgba(255,255,255,0.6)"],
+html:not([data-bs-theme="dark"]) .m-bg [style*="rgba(255,255,255,0.7)"]{color:#86868b !important;}
+html:not([data-bs-theme="dark"]) .m-bg [style*="color:#fff"],
+html:not([data-bs-theme="dark"]) .m-bg [style*="color: #fff"]{color:#1d1d1f !important;}
+/* .m-bg-stripes and .m-bg-squares and .m-bg-mountains — all text dark in light mode */
+html:not([data-bs-theme="dark"]) .m-bg-stripes [style*="color:#fff"],
+html:not([data-bs-theme="dark"]) .m-bg-stripes [style*="color: #fff"],
+html:not([data-bs-theme="dark"]) .m-bg-squares [style*="color:#fff"],
+html:not([data-bs-theme="dark"]) .m-bg-squares [style*="color: #fff"],
+html:not([data-bs-theme="dark"]) .m-bg-mountains [style*="color:#fff"],
+html:not([data-bs-theme="dark"]) .m-bg-mountains [style*="color: #fff"]{color:#1d1d1f !important;}
+html:not([data-bs-theme="dark"]) .m-bg-stripes [style*="rgba(255,255,255"],
+html:not([data-bs-theme="dark"]) .m-bg-squares [style*="rgba(255,255,255"],
+html:not([data-bs-theme="dark"]) .m-bg-mountains [style*="rgba(255,255,255"]{color:#86868b !important;}
+
+/* === DARK MODE: ensure ALL text is light on dark backgrounds === */
+html[data-bs-theme="dark"] .m h1,html[data-bs-theme="dark"] .m h2,html[data-bs-theme="dark"] .m h3,html[data-bs-theme="dark"] .m h4{color:#e5e5e5 !important;}
+html[data-bs-theme="dark"] .m p{color:rgba(255,255,255,0.6);}
+html[data-bs-theme="dark"] .m .sub{color:rgba(255,255,255,0.45);}
+html[data-bs-theme="dark"] .m-t h3{color:#e5e5e5 !important;}
+html[data-bs-theme="dark"] .m-t p{color:rgba(255,255,255,0.5);}
+html[data-bs-theme="dark"] .m-rt h2{color:#e5e5e5 !important;}
+html[data-bs-theme="dark"] .m-rt p{color:rgba(255,255,255,0.55);}
+html[data-bs-theme="dark"] .m-cta h2{color:#e5e5e5 !important;}
+html[data-bs-theme="dark"] .m-cta p{color:rgba(255,255,255,0.5);}
+html[data-bs-theme="dark"] .up-item h4,html[data-bs-theme="dark"] .up-item h4 a,html[data-bs-theme="dark"] .up-item h4 span{color:#e5e5e5 !important;}
+html[data-bs-theme="dark"] .up-meta{color:rgba(255,255,255,0.4) !important;}
+html[data-bs-theme="dark"] .up-item{border-color:rgba(255,255,255,0.06) !important;}
+html[data-bs-theme="dark"] .m-step{border-color:rgba(255,255,255,0.06) !important;}
+html[data-bs-theme="dark"] .m-step-txt h3{color:#e5e5e5 !important;}
+html[data-bs-theme="dark"] .m-pkg h3{color:#e5e5e5 !important;}
+html[data-bs-theme="dark"] .m-pkg .sz{color:rgba(255,255,255,0.45);}
+html[data-bs-theme="dark"] .m-contact-info h3{color:#e5e5e5 !important;}
+html[data-bs-theme="dark"] .m-contact-info p{color:rgba(255,255,255,0.5);}
+html[data-bs-theme="dark"] .m-form label{color:#e5e5e5 !important;}
+html[data-bs-theme="dark"] .m-listing-hero h1{color:#e5e5e5 !important;}
+html[data-bs-theme="dark"] .m-hero h1{color:#e5e5e5 !important;}
+html[data-bs-theme="dark"] .blog-featured-title{color:#e5e5e5 !important;}
+html[data-bs-theme="dark"] .blog-featured-desc{color:rgba(255,255,255,0.5);}
+/* Dark mode — headings that use color:#323642 base need override */
+html[data-bs-theme="dark"] h1,html[data-bs-theme="dark"] h2,html[data-bs-theme="dark"] h3,html[data-bs-theme="dark"] h4,html[data-bs-theme="dark"] h5,html[data-bs-theme="dark"] h6{color:#e5e5e5 !important;}
+
 /* No bullet points on landing pages */
 .m ul,.m ol{list-style:none;padding-left:0;}
 .m li::before{content:none !important;}
