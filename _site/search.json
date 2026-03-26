@@ -2762,7 +2762,7 @@
     "href": "resources/tools/zero-trust-assessment.html#understanding-zero-trust-maturity",
     "title": "Zero Trust Assessment Tool",
     "section": "Understanding Zero Trust Maturity",
-    "text": "Understanding Zero Trust Maturity\nZero Trust is a security framework based on the principle “never trust, always verify.” It requires verifying every user and device before granting access to resources, regardless of location.\n\nMaturity Model\nOur Zero Trust Assessment uses a four-level maturity model:\n\nInitial (0-25%): Basic or minimal implementation of Zero Trust principles\nBasic (26-50%): Foundational elements in place but limited in scope\nIntermediate (51-75%): Comprehensive implementation across most domains\nAdvanced (76-100%): Sophisticated implementation with continuous validation\n\n\n\nKey Domains\nThe assessment covers these critical domains:\n\nIdentity and Access Management\n\nMulti-factor authentication\nPrivileged access management\nIdentity governance\n\nDevice Security\n\nDevice validation\nPatch management\nEndpoint protection\n\nNetwork Security\n\nMicro-segmentation\nEncrypted communications\nNetwork visibility\n\nData Protection\n\nData classification\nEncryption\nData access controls\n\nApplication Security\n\nSecure development\nAPI security\nApplication access controls\n\nVisibility and Analytics\n\nSecurity monitoring\nThreat detection\nUser behavior analytics\n\nAutomation and Orchestration\n\nSecurity policy enforcement\nResponse automation\nContinuous validation"
+    "text": "Understanding Zero Trust Maturity\nZero Trust is a security framework based on the principle “never trust, always verify.” It requires verifying every user and device before granting access to resources, regardless of location.\n\nMaturity Model\nOur Zero Trust Assessment uses a four-level maturity model:\n\nInitial (0-25%): Basic or minimal implementation of Zero Trust principles\nBasic (26-50%): Foundational elements in place but limited in scope\nIntermediate (51-75%): Comprehensive implementation across most domains\nAdvanced (76-100%): Sophisticated implementation with continuous validation\n\n\n\nKey Domains\nThe assessment covers these critical domains:\n\nIdentity and Access Management – Multi-factor authentication, privileged access management, identity governance\nDevice Security – Device validation, patch management, endpoint protection\nNetwork Security – Micro-segmentation, encrypted communications, network visibility\nData Protection – Data classification, encryption, data access controls\nApplication Security – Secure development, API security, application access controls\nVisibility and Analytics – Security monitoring, threat detection, user behavior analytics\nAutomation and Orchestration – Security policy enforcement, response automation, continuous validation\n\n\n\nImplementation Phases\nPhase 1: Foundation (0-6 months) – Implement MFA for privileged accounts, consolidate identity providers, create device inventory, deploy basic endpoint protection, establish network visibility.\nPhase 2: Intermediate (6-12 months) – Extend MFA to all users, implement privileged access management, deploy advanced endpoint protection, implement data classification.\nPhase 3: Advanced (12-24 months) – Implement continuous authentication, just-in-time access, micro-segmentation, software-defined perimeter, and security orchestration.\n\n\nFurther Resources\n\nNIST SP 800-207: Zero Trust Architecture\nZero Trust Maturity Model (CISA)\nZero Trust Implementation Guide\n\n\n\n\n  \n    \n    Ready to implement Zero Trust?\n    Our security team can help you build a roadmap tailored to your organization.\n    Book a free consultation\n    \n       Free  \n       30 min  \n       No commitment"
   },
   {
     "objectID": "resources/tools/zero-trust-assessment.html#implementation-guide",
@@ -7992,5 +7992,26 @@
     "title": "Cloud Migration Handbook",
     "section": "Migration Strategy Development",
     "text": "Migration Strategy Development\nDevelop a migration strategy that includes:\n\nBusiness case and objectives: Define the expected benefits and success criteria\nApplication portfolio assessment: Analyze applications for migration suitability\nMigration approach selection: Choose the appropriate approach for each application\nTechnical strategy: Define the target architecture and platform selection\nResource planning: Identify the skills and resources needed\nTimeline and roadmap: Establish a realistic timeline for migration"
+  },
+  {
+    "objectID": "resources/guides/cloud/migration-handbook.html",
+    "href": "resources/guides/cloud/migration-handbook.html",
+    "title": "Cloud Migration Handbook",
+    "section": "",
+    "text": "A comprehensive approach to migrating applications and infrastructure to the cloud.\n  \n\n\n\n  \n    \n    Choose the right approach for each workload.\n    \n      Lift and shift — move applications without modification.\n      Lift and reshape — minor modifications for cloud capabilities.\n      Re-architect to optimize for cloud-native patterns.\n      Drop and shop — replace with cloud-native alternatives.\n      Decommission unnecessary applications.\n      Keep certain applications on-premises."
+  },
+  {
+    "objectID": "resources/guides/security/implementation-guide.html",
+    "href": "resources/guides/security/implementation-guide.html",
+    "title": "Security Implementation Guide",
+    "section": "",
+    "text": "A comprehensive approach to implementing robust security practices in your organization.\n  \n\n\n\n  \n    \n    End-to-end security from governance to incident response.\n    \n      Establish programs, policies, and leadership structures.\n      Identify, assess, and treat risks systematically.\n      Least privilege, MFA, and privileged access management.\n      Segmentation, defense in depth, and monitoring.\n      Classification, encryption, and lifecycle protection.\n      Preparation, detection, containment, and recovery."
+  },
+  {
+    "objectID": "resources/guides/api/endpoints.html",
+    "href": "resources/guides/api/endpoints.html",
+    "title": "API Endpoints Guide",
+    "section": "",
+    "text": "Comprehensive documentation for authentication, requests, and response formats.\n  \n\n\n\n  \n    \n    The chen.ist API is a RESTful service that allows developers to access and integrate our services into their applications. The API provides endpoints for security assessment, cloud resource management, and data analysis.\n    \n      https://api.chen.ist/v1\n      All responses are returned in JSON format with status and data fields.\n      Collection endpoints support page and limit parameters (default: 20, max: 100).\n    \n  \n\n\n\n  \n    \n    Standard response envelope used by all endpoints."
   }
 ]

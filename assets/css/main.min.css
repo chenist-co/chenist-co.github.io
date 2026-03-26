@@ -190,3 +190,8 @@ html[data-bs-theme="dark"] .page-layout-article .card{background:#1a1a1d !import
 .m ul,.m ol{list-style:none;padding-left:0;}
 .m li::before{content:none !important;}
 .m-hero ul,.m-s ul,.m-bg ul,.m-cta ul{list-style:none;padding-left:0;}
+
+/* Sticky TOC — stays visible while scrolling article */
+#quarto-margin-sidebar{position:sticky !important;top:90px !important;padding-top:1rem;max-height:calc(100vh - 100px);overflow-y:auto;}
+.page-layout-article #quarto-margin-sidebar{position:sticky !important;top:90px !important;}
+#quarto-margin-sidebar nav{position:static !important;}

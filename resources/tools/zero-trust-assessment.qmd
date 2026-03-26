@@ -1,28 +1,33 @@
 ---
 title: "Zero Trust Assessment Tool"
-page-layout: custom
-title-block-style: none
+toc: true
+toc-depth: 3
+page-layout: article
+toc: false
 description: "Evaluate your organization's Zero Trust security maturity across multiple domains"
 date: "2025-02-25"
 categories: [security, assessment, zero-trust]
 image: "/assets/images/cyber-security.jpg"
 ---
 
-# Zero Trust Assessment Tool
-
-This tool helps you evaluate your organization's Zero Trust security maturity across multiple domains and provides actionable recommendations for improvement.
-
-## Assessment Questionnaire
-
-Complete the following questionnaire to evaluate your organization's Zero Trust maturity. The assessment covers seven key domains of Zero Trust security.
-
 ```{=html}
-<div class="card mb-4">
-  <div class="card-body">
+<div class="m">
+
+<div class="m-hero">
+  <div class="container">
+    <h1>Zero Trust <span class="gr">Assessment</span></h1>
+    <p>Evaluate your organization's Zero Trust security maturity and get actionable recommendations.</p>
+  </div>
+</div>
+
+<div class="m-s">
+  <div class="container">
+    <h2>Assessment Questionnaire</h2>
+    <p>Complete the questionnaire below to evaluate your organization's Zero Trust maturity across key security domains.</p>
+
     <form id="zero-trust-assessment">
-      <!-- Accordion for assessment questions -->
       <div class="accordion" id="assessmentAccordion">
-        
+
         <!-- Identity and Access Management -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
@@ -34,67 +39,29 @@ Complete the following questionnaire to evaluate your organization's Zero Trust 
             <div class="accordion-body">
               <div class="mb-3">
                 <label class="form-label">1.1 What percentage of user accounts use multi-factor authentication (MFA)?</label>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="mfa_coverage" id="mfa_1" value="1">
-                  <label class="form-check-label" for="mfa_1">Less than 25%</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="mfa_coverage" id="mfa_2" value="2">
-                  <label class="form-check-label" for="mfa_2">25-50%</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="mfa_coverage" id="mfa_3" value="3">
-                  <label class="form-check-label" for="mfa_3">51-75%</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="mfa_coverage" id="mfa_4" value="4">
-                  <label class="form-check-label" for="mfa_4">76-100%</label>
-                </div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="mfa_coverage" id="mfa_1" value="1"><label class="form-check-label" for="mfa_1">Less than 25%</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="mfa_coverage" id="mfa_2" value="2"><label class="form-check-label" for="mfa_2">25-50%</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="mfa_coverage" id="mfa_3" value="3"><label class="form-check-label" for="mfa_3">51-75%</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="mfa_coverage" id="mfa_4" value="4"><label class="form-check-label" for="mfa_4">76-100%</label></div>
               </div>
-              
               <div class="mb-3">
                 <label class="form-label">1.2 How are privileged accounts managed?</label>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="privileged_accounts" id="priv_1" value="1">
-                  <label class="form-check-label" for="priv_1">No special management for privileged accounts</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="privileged_accounts" id="priv_2" value="2">
-                  <label class="form-check-label" for="priv_2">Basic controls (dedicated accounts, password policies)</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="privileged_accounts" id="priv_3" value="3">
-                  <label class="form-check-label" for="priv_3">Privileged Access Management (PAM) system with workflow controls</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="privileged_accounts" id="priv_4" value="4">
-                  <label class="form-check-label" for="priv_4">Just-in-time privileged access with full monitoring and session recording</label>
-                </div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="privileged_accounts" id="priv_1" value="1"><label class="form-check-label" for="priv_1">No special management for privileged accounts</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="privileged_accounts" id="priv_2" value="2"><label class="form-check-label" for="priv_2">Basic controls (dedicated accounts, password policies)</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="privileged_accounts" id="priv_3" value="3"><label class="form-check-label" for="priv_3">Privileged Access Management (PAM) system with workflow controls</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="privileged_accounts" id="priv_4" value="4"><label class="form-check-label" for="priv_4">Just-in-time privileged access with full monitoring and session recording</label></div>
               </div>
-              
               <div class="mb-3">
                 <label class="form-label">1.3 How is identity governance implemented?</label>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="identity_governance" id="gov_1" value="1">
-                  <label class="form-check-label" for="gov_1">Manual processes for user lifecycle management</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="identity_governance" id="gov_2" value="2">
-                  <label class="form-check-label" for="gov_2">Partial automation of user lifecycle management</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="identity_governance" id="gov_3" value="3">
-                  <label class="form-check-label" for="gov_3">Automated identity lifecycle with regular access reviews</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="identity_governance" id="gov_4" value="4">
-                  <label class="form-check-label" for="gov_4">Comprehensive identity governance with risk-based access controls and continuous certification</label>
-                </div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="identity_governance" id="gov_1" value="1"><label class="form-check-label" for="gov_1">Manual processes for user lifecycle management</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="identity_governance" id="gov_2" value="2"><label class="form-check-label" for="gov_2">Partial automation of user lifecycle management</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="identity_governance" id="gov_3" value="3"><label class="form-check-label" for="gov_3">Automated identity lifecycle with regular access reviews</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="identity_governance" id="gov_4" value="4"><label class="form-check-label" for="gov_4">Comprehensive identity governance with risk-based access controls and continuous certification</label></div>
               </div>
             </div>
           </div>
         </div>
-        
+
         <!-- Device Security -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
@@ -106,67 +73,29 @@ Complete the following questionnaire to evaluate your organization's Zero Trust 
             <div class="accordion-body">
               <div class="mb-3">
                 <label class="form-label">2.1 How do you validate device security posture?</label>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="device_validation" id="dev_1" value="1">
-                  <label class="form-check-label" for="dev_1">No device validation</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="device_validation" id="dev_2" value="2">
-                  <label class="form-check-label" for="dev_2">Basic managed devices with standard configurations</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="device_validation" id="dev_3" value="3">
-                  <label class="form-check-label" for="dev_3">Device health attestation for managed devices</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="device_validation" id="dev_4" value="4">
-                  <label class="form-check-label" for="dev_4">Comprehensive device health validation for all devices (managed and BYOD)</label>
-                </div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="device_validation" id="dev_1" value="1"><label class="form-check-label" for="dev_1">No device validation</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="device_validation" id="dev_2" value="2"><label class="form-check-label" for="dev_2">Basic managed devices with standard configurations</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="device_validation" id="dev_3" value="3"><label class="form-check-label" for="dev_3">Device health attestation for managed devices</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="device_validation" id="dev_4" value="4"><label class="form-check-label" for="dev_4">Comprehensive device health validation for all devices (managed and BYOD)</label></div>
               </div>
-              
               <div class="mb-3">
                 <label class="form-label">2.2 How are software updates and patches managed?</label>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="patch_management" id="patch_1" value="1">
-                  <label class="form-check-label" for="patch_1">Manual or ad-hoc patching</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="patch_management" id="patch_2" value="2">
-                  <label class="form-check-label" for="patch_2">Centralized patch management for critical systems</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="patch_management" id="patch_3" value="3">
-                  <label class="form-check-label" for="patch_3">Automated patch management for all systems with compliance reporting</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="patch_management" id="patch_4" value="4">
-                  <label class="form-check-label" for="patch_4">Comprehensive patch management with risk-based prioritization and verification</label>
-                </div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="patch_management" id="patch_1" value="1"><label class="form-check-label" for="patch_1">Manual or ad-hoc patching</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="patch_management" id="patch_2" value="2"><label class="form-check-label" for="patch_2">Centralized patch management for critical systems</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="patch_management" id="patch_3" value="3"><label class="form-check-label" for="patch_3">Automated patch management for all systems with compliance reporting</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="patch_management" id="patch_4" value="4"><label class="form-check-label" for="patch_4">Comprehensive patch management with risk-based prioritization and verification</label></div>
               </div>
-              
               <div class="mb-3">
                 <label class="form-label">2.3 How are endpoint protection controls implemented?</label>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="endpoint_protection" id="endpoint_1" value="1">
-                  <label class="form-check-label" for="endpoint_1">Basic antivirus only</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="endpoint_protection" id="endpoint_2" value="2">
-                  <label class="form-check-label" for="endpoint_2">Endpoint protection platform with centralized management</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="endpoint_protection" id="endpoint_3" value="3">
-                  <label class="form-check-label" for="endpoint_3">Advanced endpoint detection and response (EDR)</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="endpoint_protection" id="endpoint_4" value="4">
-                  <label class="form-check-label" for="endpoint_4">Next-gen endpoint security with behavior analysis and automated response</label>
-                </div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="endpoint_protection" id="endpoint_1" value="1"><label class="form-check-label" for="endpoint_1">Basic antivirus only</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="endpoint_protection" id="endpoint_2" value="2"><label class="form-check-label" for="endpoint_2">Endpoint protection platform with centralized management</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="endpoint_protection" id="endpoint_3" value="3"><label class="form-check-label" for="endpoint_3">Advanced endpoint detection and response (EDR)</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="endpoint_protection" id="endpoint_4" value="4"><label class="form-check-label" for="endpoint_4">Next-gen endpoint security with behavior analysis and automated response</label></div>
               </div>
             </div>
           </div>
         </div>
-        
+
         <!-- Network Security -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingThree">
@@ -178,71 +107,29 @@ Complete the following questionnaire to evaluate your organization's Zero Trust 
             <div class="accordion-body">
               <div class="mb-3">
                 <label class="form-label">3.1 How is network segmentation implemented?</label>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="network_segmentation" id="net_1" value="1">
-                  <label class="form-check-label" for="net_1">Minimal segmentation (basic firewall only)</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="network_segmentation" id="net_2" value="2">
-                  <label class="form-check-label" for="net_2">Basic segmentation (separate VLANs for different functions)</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="network_segmentation" id="net_3" value="3">
-                  <label class="form-check-label" for="net_3">Micro-segmentation with detailed access controls</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="network_segmentation" id="net_4" value="4">
-                  <label class="form-check-label" for="net_4">Software-defined perimeter with identity-based access controls</label>
-                </div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="network_segmentation" id="net_1" value="1"><label class="form-check-label" for="net_1">Minimal segmentation (basic firewall only)</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="network_segmentation" id="net_2" value="2"><label class="form-check-label" for="net_2">Basic segmentation (separate VLANs for different functions)</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="network_segmentation" id="net_3" value="3"><label class="form-check-label" for="net_3">Micro-segmentation with detailed access controls</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="network_segmentation" id="net_4" value="4"><label class="form-check-label" for="net_4">Software-defined perimeter with identity-based access controls</label></div>
               </div>
-              
               <div class="mb-3">
                 <label class="form-label">3.2 How is encrypted communication enforced?</label>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="encryption" id="enc_1" value="1">
-                  <label class="form-check-label" for="enc_1">Basic encryption for select communications (e.g., VPN for remote access)</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="encryption" id="enc_2" value="2">
-                  <label class="form-check-label" for="enc_2">Transport encryption for most external communications</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="encryption" id="enc_3" value="3">
-                  <label class="form-check-label" for="enc_3">Encryption for all external and critical internal communications</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="encryption" id="enc_4" value="4">
-                  <label class="form-check-label" for="enc_4">End-to-end encryption for all communications with certificate validation</label>
-                </div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="encryption" id="enc_1" value="1"><label class="form-check-label" for="enc_1">Basic encryption for select communications (e.g., VPN for remote access)</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="encryption" id="enc_2" value="2"><label class="form-check-label" for="enc_2">Transport encryption for most external communications</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="encryption" id="enc_3" value="3"><label class="form-check-label" for="enc_3">Encryption for all external and critical internal communications</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="encryption" id="enc_4" value="4"><label class="form-check-label" for="enc_4">End-to-end encryption for all communications with certificate validation</label></div>
               </div>
-              
               <div class="mb-3">
                 <label class="form-label">3.3 How do you monitor network traffic?</label>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="network_monitoring" id="netmon_1" value="1">
-                  <label class="form-check-label" for="netmon_1">Basic perimeter monitoring</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="network_monitoring" id="netmon_2" value="2">
-                  <label class="form-check-label" for="netmon_2">Network monitoring with IDS/IPS capabilities</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="network_monitoring" id="netmon_3" value="3">
-                  <label class="form-check-label" for="netmon_3">Advanced network traffic analysis with behavioral analytics</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="network_monitoring" id="netmon_4" value="4">
-                  <label class="form-check-label" for="netmon_4">Comprehensive network detection and response with full visibility</label>
-                </div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="network_monitoring" id="netmon_1" value="1"><label class="form-check-label" for="netmon_1">Basic perimeter monitoring</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="network_monitoring" id="netmon_2" value="2"><label class="form-check-label" for="netmon_2">Network monitoring with IDS/IPS capabilities</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="network_monitoring" id="netmon_3" value="3"><label class="form-check-label" for="netmon_3">Advanced network traffic analysis with behavioral analytics</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="network_monitoring" id="netmon_4" value="4"><label class="form-check-label" for="netmon_4">Comprehensive network detection and response with full visibility</label></div>
               </div>
             </div>
           </div>
         </div>
-        
-        <!-- More sections would follow for Data Protection, Application Security, etc. -->
-        
-        <!-- For brevity, we'll include just a few more sections as examples -->
-        
+
         <!-- Data Protection -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingFour">
@@ -254,27 +141,15 @@ Complete the following questionnaire to evaluate your organization's Zero Trust 
             <div class="accordion-body">
               <div class="mb-3">
                 <label class="form-label">4.1 How is data classified and protected?</label>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="data_classification" id="data_1" value="1">
-                  <label class="form-check-label" for="data_1">No formal data classification</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="data_classification" id="data_2" value="2">
-                  <label class="form-check-label" for="data_2">Basic data classification without automated enforcement</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="data_classification" id="data_3" value="3">
-                  <label class="form-check-label" for="data_3">Data classification with automated protection for sensitive data</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="data_classification" id="data_4" value="4">
-                  <label class="form-check-label" for="data_4">Comprehensive data governance with automated classification and protection</label>
-                </div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="data_classification" id="data_1" value="1"><label class="form-check-label" for="data_1">No formal data classification</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="data_classification" id="data_2" value="2"><label class="form-check-label" for="data_2">Basic data classification without automated enforcement</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="data_classification" id="data_3" value="3"><label class="form-check-label" for="data_3">Data classification with automated protection for sensitive data</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="data_classification" id="data_4" value="4"><label class="form-check-label" for="data_4">Comprehensive data governance with automated classification and protection</label></div>
               </div>
             </div>
           </div>
         </div>
-        
+
         <!-- Visibility and Analytics -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingFive">
@@ -286,29 +161,16 @@ Complete the following questionnaire to evaluate your organization's Zero Trust 
             <div class="accordion-body">
               <div class="mb-3">
                 <label class="form-label">5.1 How comprehensive is your security monitoring?</label>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="security_monitoring" id="secmon_1" value="1">
-                  <label class="form-check-label" for="secmon_1">Basic log collection without correlation</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="security_monitoring" id="secmon_2" value="2">
-                  <label class="form-check-label" for="secmon_2">SIEM implementation with basic correlation rules</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="security_monitoring" id="secmon_3" value="3">
-                  <label class="form-check-label" for="secmon_3">Advanced monitoring with behavior analytics and user activity monitoring</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="security_monitoring" id="secmon_4" value="4">
-                  <label class="form-check-label" for="secmon_4">Comprehensive monitoring with AI-driven analytics and automated response</label>
-                </div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="security_monitoring" id="secmon_1" value="1"><label class="form-check-label" for="secmon_1">Basic log collection without correlation</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="security_monitoring" id="secmon_2" value="2"><label class="form-check-label" for="secmon_2">SIEM implementation with basic correlation rules</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="security_monitoring" id="secmon_3" value="3"><label class="form-check-label" for="secmon_3">Advanced monitoring with behavior analytics and user activity monitoring</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="security_monitoring" id="secmon_4" value="4"><label class="form-check-label" for="secmon_4">Comprehensive monitoring with AI-driven analytics and automated response</label></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
-      <!-- Assessment Submit Button -->
+
       <div class="mt-4 text-center">
         <button type="button" class="btn btn-primary" id="submit-assessment">Submit Assessment</button>
       </div>
@@ -317,23 +179,19 @@ Complete the following questionnaire to evaluate your organization's Zero Trust 
 </div>
 
 <!-- Results Section -->
-<div class="card mb-4" id="results-section" style="display: none;">
-  <div class="card-header">
-    <h3 class="card-title mb-0">Assessment Results</h3>
-  </div>
-  <div class="card-body">
-    <!-- Overall Maturity Score -->
+<div class="m-bg m-bg-stripes" id="results-section" style="display: none;">
+  <div class="container">
+    <h2>Assessment Results</h2>
+
     <div class="mb-4 text-center">
-      <h4>Overall Zero Trust Maturity Score</h4>
+      <h3>Overall Zero Trust Maturity Score</h3>
       <div class="display-4" id="overall-score">65%</div>
       <div class="progress mt-2" style="height: 30px;">
         <div class="progress-bar bg-info" role="progressbar" style="width: 65%;" id="overall-progress" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">Intermediate</div>
       </div>
     </div>
-    
-    <!-- Domain Scores -->
-    <h4>Domain Maturity Scores</h4>
-    <div class="row mb-4">
+
+    <div class="row g-5 mb-4">
       <div class="col-md-6">
         <canvas id="radar-chart" width="400" height="300"></canvas>
       </div>
@@ -341,120 +199,80 @@ Complete the following questionnaire to evaluate your organization's Zero Trust 
         <div class="table-responsive">
           <table class="table table-bordered">
             <thead class="table-light">
-              <tr>
-                <th>Domain</th>
-                <th>Score</th>
-                <th>Maturity Level</th>
-              </tr>
+              <tr><th>Domain</th><th>Score</th><th>Maturity Level</th></tr>
             </thead>
             <tbody id="domain-scores">
-              <tr>
-                <td>Identity & Access</td>
-                <td>75%</td>
-                <td><span class="badge bg-success">Advanced</span></td>
-              </tr>
-              <tr>
-                <td>Device Security</td>
-                <td>50%</td>
-                <td><span class="badge bg-info">Intermediate</span></td>
-              </tr>
-              <tr>
-                <td>Network Security</td>
-                <td>67%</td>
-                <td><span class="badge bg-info">Intermediate</span></td>
-              </tr>
-              <tr>
-                <td>Data Protection</td>
-                <td>25%</td>
-                <td><span class="badge bg-warning">Basic</span></td>
-              </tr>
-              <tr>
-                <td>Visibility & Analytics</td>
-                <td>75%</td>
-                <td><span class="badge bg-success">Advanced</span></td>
-              </tr>
+              <tr><td>Identity & Access</td><td>75%</td><td><span class="badge bg-success">Advanced</span></td></tr>
+              <tr><td>Device Security</td><td>50%</td><td><span class="badge bg-info">Intermediate</span></td></tr>
+              <tr><td>Network Security</td><td>67%</td><td><span class="badge bg-info">Intermediate</span></td></tr>
+              <tr><td>Data Protection</td><td>25%</td><td><span class="badge bg-warning">Basic</span></td></tr>
+              <tr><td>Visibility & Analytics</td><td>75%</td><td><span class="badge bg-success">Advanced</span></td></tr>
             </tbody>
           </table>
         </div>
       </div>
     </div>
-    
-    <!-- Recommendations -->
-    <div class="mb-4">
-      <h4>Key Recommendations</h4>
-      <div class="alert alert-primary">
-        <p><strong>Focus Areas for Improvement:</strong></p>
-        <ul id="recommendations-list">
-          <li><strong>Data Protection:</strong> Implement a formal data classification framework with automated controls for sensitive data.</li>
-          <li><strong>Device Security:</strong> Enhance endpoint protection with advanced EDR capabilities and improve patch management processes.</li>
-          <li><strong>Network Security:</strong> Move toward micro-segmentation to limit lateral movement and enhance network visibility.</li>
-        </ul>
-      </div>
+
+    <h3>Key Recommendations</h3>
+    <div class="alert alert-primary">
+      <ul id="recommendations-list">
+        <li><strong>Data Protection:</strong> Implement a formal data classification framework with automated controls for sensitive data.</li>
+        <li><strong>Device Security:</strong> Enhance endpoint protection with advanced EDR capabilities and improve patch management processes.</li>
+        <li><strong>Network Security:</strong> Move toward micro-segmentation to limit lateral movement and enhance network visibility.</li>
+      </ul>
     </div>
-    
-    <!-- Detailed Recommendations by Domain -->
-    <div class="mb-4">
-      <h4>Detailed Recommendations</h4>
-      <div class="accordion" id="recommendationsAccordion">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingRecOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRecOne" aria-expanded="false" aria-controls="collapseRecOne">
-              Identity and Access Management
-            </button>
-          </h2>
-          <div id="collapseRecOne" class="accordion-collapse collapse" aria-labelledby="headingRecOne" data-bs-parent="#recommendationsAccordion">
-            <div class="accordion-body" id="identity-recommendations">
-              <ul>
-                <li>Expand MFA to cover all user accounts, not just privileged access.</li>
-                <li>Implement just-in-time privileged access to reduce standing privileges.</li>
-                <li>Enhance identity governance with automated access reviews and certifications.</li>
-              </ul>
-            </div>
+
+    <h3>Detailed Recommendations</h3>
+    <div class="accordion mb-4" id="recommendationsAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingRecOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRecOne" aria-expanded="false" aria-controls="collapseRecOne">Identity and Access Management</button>
+        </h2>
+        <div id="collapseRecOne" class="accordion-collapse collapse" aria-labelledby="headingRecOne" data-bs-parent="#recommendationsAccordion">
+          <div class="accordion-body" id="identity-recommendations">
+            <ul>
+              <li>Expand MFA to cover all user accounts, not just privileged access.</li>
+              <li>Implement just-in-time privileged access to reduce standing privileges.</li>
+              <li>Enhance identity governance with automated access reviews and certifications.</li>
+            </ul>
           </div>
         </div>
-        
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingRecTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRecTwo" aria-expanded="false" aria-controls="collapseRecTwo">
-              Device Security
-            </button>
-          </h2>
-          <div id="collapseRecTwo" class="accordion-collapse collapse" aria-labelledby="headingRecTwo" data-bs-parent="#recommendationsAccordion">
-            <div class="accordion-body" id="device-recommendations">
-              <ul>
-                <li>Implement device health attestation for all managed devices.</li>
-                <li>Enhance patch management with automated compliance reporting.</li>
-                <li>Upgrade endpoint protection to include behavioral analytics and EDR capabilities.</li>
-              </ul>
-            </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingRecTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRecTwo" aria-expanded="false" aria-controls="collapseRecTwo">Device Security</button>
+        </h2>
+        <div id="collapseRecTwo" class="accordion-collapse collapse" aria-labelledby="headingRecTwo" data-bs-parent="#recommendationsAccordion">
+          <div class="accordion-body" id="device-recommendations">
+            <ul>
+              <li>Implement device health attestation for all managed devices.</li>
+              <li>Enhance patch management with automated compliance reporting.</li>
+              <li>Upgrade endpoint protection to include behavioral analytics and EDR capabilities.</li>
+            </ul>
           </div>
         </div>
-        
-        <!-- Additional recommendation sections would follow -->
       </div>
     </div>
-    
-    <!-- Next Steps -->
-    <div class="mb-4">
-      <h4>Next Steps</h4>
-      <div class="alert alert-success">
-        <ol>
-          <li>Review the detailed recommendations with your security team</li>
-          <li>Prioritize improvements based on risk and current maturity gaps</li>
-          <li>Develop a phased Zero Trust implementation roadmap</li>
-          <li>Implement quick wins while planning for longer-term initiatives</li>
-          <li>Reassess maturity periodically to track progress</li>
-        </ol>
-      </div>
+
+    <h3>Next Steps</h3>
+    <div class="alert alert-success">
+      <ol>
+        <li>Review the detailed recommendations with your security team</li>
+        <li>Prioritize improvements based on risk and current maturity gaps</li>
+        <li>Develop a phased Zero Trust implementation roadmap</li>
+        <li>Implement quick wins while planning for longer-term initiatives</li>
+        <li>Reassess maturity periodically to track progress</li>
+      </ol>
     </div>
-    
-    <!-- Download Results -->
+
     <div class="text-center mt-4">
       <button class="btn btn-primary" id="download-results">
         <i class="bi bi-download"></i> Download Assessment Report
       </button>
     </div>
   </div>
+</div>
+
 </div>
 ```
 
@@ -475,160 +293,67 @@ Our Zero Trust Assessment uses a four-level maturity model:
 
 The assessment covers these critical domains:
 
-1. **Identity and Access Management**
-   - Multi-factor authentication
-   - Privileged access management
-   - Identity governance
+1. **Identity and Access Management** -- Multi-factor authentication, privileged access management, identity governance
+2. **Device Security** -- Device validation, patch management, endpoint protection
+3. **Network Security** -- Micro-segmentation, encrypted communications, network visibility
+4. **Data Protection** -- Data classification, encryption, data access controls
+5. **Application Security** -- Secure development, API security, application access controls
+6. **Visibility and Analytics** -- Security monitoring, threat detection, user behavior analytics
+7. **Automation and Orchestration** -- Security policy enforcement, response automation, continuous validation
 
-2. **Device Security**
-   - Device validation
-   - Patch management
-   - Endpoint protection
+### Implementation Phases
 
-3. **Network Security**
-   - Micro-segmentation
-   - Encrypted communications
-   - Network visibility
+**Phase 1: Foundation (0-6 months)** -- Implement MFA for privileged accounts, consolidate identity providers, create device inventory, deploy basic endpoint protection, establish network visibility.
 
-4. **Data Protection**
-   - Data classification
-   - Encryption
-   - Data access controls
+**Phase 2: Intermediate (6-12 months)** -- Extend MFA to all users, implement privileged access management, deploy advanced endpoint protection, implement data classification.
 
-5. **Application Security**
-   - Secure development
-   - API security
-   - Application access controls
+**Phase 3: Advanced (12-24 months)** -- Implement continuous authentication, just-in-time access, micro-segmentation, software-defined perimeter, and security orchestration.
 
-6. **Visibility and Analytics**
-   - Security monitoring
-   - Threat detection
-   - User behavior analytics
-
-7. **Automation and Orchestration**
-   - Security policy enforcement
-   - Response automation
-   - Continuous validation
-
-## Implementation Guide
-
-### Phase 1: Foundation (0-6 months)
-
-Focus on establishing the foundational elements:
-
-- **Identity**
-  - Implement MFA for privileged accounts
-  - Consolidate identity providers
-  - Establish baseline access policies
-
-- **Devices**
-  - Create device inventory
-  - Deploy basic endpoint protection
-  - Implement patch management
-
-- **Network**
-  - Establish network visibility
-  - Document asset dependencies
-  - Implement basic segmentation
-
-- **Monitoring**
-  - Deploy centralized logging
-  - Establish security baseline
-  - Implement basic alerts
-
-### Phase 2: Intermediate (6-12 months)
-
-Expand security controls across domains:
-
-- **Identity**
-  - Extend MFA to all users
-  - Implement privileged access management
-  - Establish access certification processes
-
-- **Devices**
-  - Deploy advanced endpoint protection
-  - Implement device health validation
-  - Enhance patch compliance
-
-- **Network**
-  - Implement enhanced segmentation
-  - Deploy additional monitoring
-  - Encrypt sensitive traffic
-
-- **Data**
-  - Implement data classification
-  - Deploy basic data protection controls
-  - Establish data access governance
-
-### Phase 3: Advanced (12-24 months)
-
-Enhance capabilities with advanced controls:
-
-- **Identity**
-  - Implement continuous authentication
-  - Deploy just-in-time access
-  - Establish risk-based access controls
-
-- **Devices**
-  - Implement continuous device validation
-  - Deploy advanced behavioral analytics
-  - Establish automated remediation
-
-- **Network**
-  - Implement micro-segmentation
-  - Deploy software-defined perimeter
-  - Establish encrypted communications everywhere
-
-- **Automation**
-  - Implement policy-based automation
-  - Deploy security orchestration
-  - Establish continuous validation
-
-## Further Resources
-
-To learn more about Zero Trust security:
+### Further Resources
 
 - [NIST SP 800-207: Zero Trust Architecture](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf)
 - [Zero Trust Maturity Model (CISA)](https://www.cisa.gov/zero-trust-maturity-model)
 - [Zero Trust Implementation Guide](/resources/guides/security/implementation-guide.html)
-- [Zero Trust Security Webinar](/webinars/pages/zero-trust-security.html)
 
 ```{=html}
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<div class="m">
 
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Ready to implement Zero Trust?</h2>
+    <p>Our security team can help you build a roadmap tailored to your organization.</p>
+    <a href="https://cal.com/chenist" target="_blank" class="m-b">Book a free consultation</a>
+    <div class="m-sm">
+      <i class="bi bi-check-circle-fill"></i> Free &nbsp;
+      <i class="bi bi-check-circle-fill"></i> 30 min &nbsp;
+      <i class="bi bi-check-circle-fill"></i> No commitment
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const submitButton = document.getElementById('submit-assessment');
   const resultsSection = document.getElementById('results-section');
   const downloadButton = document.getElementById('download-results');
-  
-  // Mock data for the radar chart
+
   let radarChart = null;
-  
-  // Submit assessment handler
+
   submitButton.addEventListener('click', function() {
-    // In a real implementation, this would calculate scores based on form inputs
-    // For demo purposes, we'll show the pre-populated results
     resultsSection.style.display = 'block';
-    
-    // Scroll to results
     resultsSection.scrollIntoView({ behavior: 'smooth' });
-    
-    // Initialize radar chart
+
     const ctx = document.getElementById('radar-chart').getContext('2d');
-    
-    // Create radar chart if it doesn't exist
+
     if (!radarChart) {
       radarChart = new Chart(ctx, {
         type: 'radar',
         data: {
-          labels: [
-            'Identity & Access',
-            'Device Security',
-            'Network Security',
-            'Data Protection',
-            'Visibility & Analytics'
-          ],
+          labels: ['Identity & Access', 'Device Security', 'Network Security', 'Data Protection', 'Visibility & Analytics'],
           datasets: [{
             label: 'Current Maturity',
             data: [75, 50, 67, 25, 75],
@@ -650,41 +375,16 @@ document.addEventListener('DOMContentLoaded', function() {
           }]
         },
         options: {
-          elements: {
-            line: {
-              borderWidth: 3
-            }
-          },
-          scales: {
-            r: {
-              angleLines: {
-                display: true
-              },
-              suggestedMin: 0,
-              suggestedMax: 100
-            }
-          }
+          elements: { line: { borderWidth: 3 } },
+          scales: { r: { angleLines: { display: true }, suggestedMin: 0, suggestedMax: 100 } }
         }
       });
     }
   });
-  
-  // Download button handler
+
   downloadButton.addEventListener('click', function() {
     alert('In a production environment, this would generate and download a PDF report with your assessment results and detailed recommendations.');
   });
 });
 </script>
 ```
-
-## About Zero Trust Assessments
-
-Regular assessment of your Zero Trust maturity helps:
-
-1. **Identify gaps** in your security posture
-2. **Prioritize improvements** based on risk and business impact
-3. **Measure progress** over time
-4. **Benchmark** against industry peers
-5. **Communicate security posture** to leadership and stakeholders
-
-We recommend conducting this assessment at least annually, as well as after major changes to your IT environment or business operations.
