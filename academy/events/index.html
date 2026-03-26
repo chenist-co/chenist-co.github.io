@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Browse upcoming and past chen.ist Academy events including hackathons, workshops, conferences, meetups, and summer school programs.">
 
-<title>Events – chen.ist</title>
+<title>Events — chen.ist Academy – chen.ist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,8 +31,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
 <link href="../../assets/images/favicon.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -76,42 +73,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle','listing-location','listing-category',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
-<meta property="og:title" content="Events – chen.ist">
-<meta property="og:description" content="Browse upcoming and past chen.ist Academy events including hackathons, workshops, conferences, meetups, and summer school programs.">
+<meta property="og:title" content="Events — chen.ist Academy">
 <meta property="og:image" content="https://chen.ist/academy/events/assets/images/og-image.png">
 <meta property="og:site_name" content="chen.ist">
-<meta name="twitter:title" content="Events – chen.ist">
-<meta name="twitter:description" content="Browse upcoming and past chen.ist Academy events including hackathons, workshops, conferences, meetups, and summer school programs.">
+<meta name="twitter:title" content="Events — chen.ist Academy">
 <meta name="twitter:image" content="https://chen.ist/academy/events/assets/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 </head><body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -510,51 +476,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 }
 </script>
-<style>.m { --c: #F5A623; }</style>
+<meta http-equiv="refresh" content="0; url=/academy/events.html">
+<meta name="robots" content="noindex">
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../assets/css/main.min.css">
 
@@ -757,47 +681,14 @@ window.Quarto = {
 <!-- main -->
 
 
-<header id="title-block-header">
-<h1 class="title display-7">Events</h1>
-<p class="subtitle lead">Browse all our events</p>
-
-</header>
-
-
-<div class="m">
-
-<div class="m-hero">
-  <div class="container">
-    <h1>Academy <span class="gr">Events</span></h1>
-    <p>Browse all our events</p>
-  </div>
-</div>
-
-<div class="m-s">
-  <div class="container">
-    <div class="alert alert-success mt-4 mb-4" role="alert">
-      <h4 class="alert-heading"><i class="bi bi-megaphone"></i> New Event Added!</h4>
-      <p>Check out our <a href="pages/ai-ethics-hackathon.html" class="alert-link">AI Ethics Hackathon</a> on July 20-21, 2025 - a weekend focusing on ethical AI development and responsible technology.</p>
-    </div>
-  </div>
-</div>
-
-</div>
-<section id="event-categories" class="level2">
-<h2 data-anchor-id="event-categories">Event Categories</h2>
-<ul>
-<li><strong>Hackathons</strong>: Intense problem-solving events focused on collaboration and innovation</li>
-<li><strong>Workshops</strong>: Hands-on learning sessions with expert guidance</li>
-<li><strong>Conferences</strong>: Industry gatherings featuring keynotes, panels, and networking</li>
-<li><strong>Summer School</strong>: Intensive multi-week educational programs</li>
-<li><strong>Meetups</strong>: Informal community gatherings focused on specific topics</li>
-</ul>
-<p>Our events are designed to foster learning, connection, and professional development within the tech community. Each event page provides detailed information about the agenda, speakers, venue, and registration process.</p>
-<p>Want to suggest an event or collaborate as a partner? <a href="../../booking/">Contact us</a> with your ideas.</p>
 
 
 
-</section>
+<meta http-equiv="refresh" content="0;url=/academy/events.html">
+<script>window.location.href = "/academy/events.html";</script>
+<p>Redirecting to <a href="../../academy/events.html">Academy Events</a>…</p>
+
+
 
 
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1220,285 +1111,7 @@ window.Quarto = {
     }
   });
   </script>
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-date-sort="1759622400000" data-listing-file-modified-sort="1774562427593" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="669">
-<a href="../../academy/events/pages/space-hackathon.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../../assets/images/space-hackathon.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Space Hackathon
-</h5>
-<div class="card-subtitle listing-subtitle">
-Innovating for Space Exploration
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-October 5, 2025
-</div>
-</div>
-<table class="card-other-values">
-
-<tbody><tr>
-<td>
-location
-</td>
-<td class="location">
-Craiova, Romania
-</td>
-</tr>
-
-<tr>
-<td>
-category
-</td>
-<td class="category">
-hackathon
-</td>
-</tr>
-
-</tbody></table>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-date-sort="1757030400000" data-listing-file-modified-sort="1774562427593" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="700">
-<a href="../../academy/events/pages/makers-workshop.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../../assets/images/makers-workshop.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Makers Workshop
-</h5>
-<div class="card-subtitle listing-subtitle">
-Hands-on Hardware Hacking
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-September 5, 2025
-</div>
-</div>
-<table class="card-other-values">
-
-<tbody><tr>
-<td>
-location
-</td>
-<td class="location">
-Fab Lab, Brașov
-</td>
-</tr>
-
-<tr>
-<td>
-category
-</td>
-<td class="category">
-workshop
-</td>
-</tr>
-
-</tbody></table>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-date-sort="1754006400000" data-listing-file-modified-sort="1774562427593" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="648">
-<a href="../../academy/events/pages/2025.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../../assets/images/summer-school.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Summer School 2025
-</h5>
-<div class="card-subtitle listing-subtitle">
-Intensive Two-Week Technology Program
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-August 1, 2025
-</div>
-</div>
-<table class="card-other-values">
-
-<tbody><tr>
-<td>
-location
-</td>
-<td class="location">
-Private, Craiova
-</td>
-</tr>
-
-<tr>
-<td>
-category
-</td>
-<td class="category">
-summer-school
-</td>
-</tr>
-
-</tbody></table>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-date-sort="1754006400000" data-listing-file-modified-sort="1774562427593" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="514">
-<a href="../../academy/events/pages/summer-school-2025.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../../assets/images/summer-school.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Summer School 2025
-</h5>
-<div class="card-subtitle listing-subtitle">
-Intensive Two-Week Technology Program
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-August 1, 2025
-</div>
-</div>
-<table class="card-other-values">
-
-<tbody><tr>
-<td>
-location
-</td>
-<td class="location">
-Tech Campus, Bucharest
-</td>
-</tr>
-
-<tr>
-<td>
-category
-</td>
-<td class="category">
-summer-school
-</td>
-</tr>
-
-</tbody></table>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="4" data-listing-date-sort="1752969600000" data-listing-file-modified-sort="1774562427593" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="717">
-<a href="../../academy/events/pages/ai-ethics-hackathon.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../../assets/images/ai-ethics.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-AI Ethics Hackathon
-</h5>
-<div class="card-subtitle listing-subtitle">
-Developing Responsible AI Systems
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-July 20, 2025
-</div>
-</div>
-<table class="card-other-values">
-
-<tbody><tr>
-<td>
-location
-</td>
-<td class="location">
-Cyber Campus, Bucharest
-</td>
-</tr>
-
-<tr>
-<td>
-category
-</td>
-<td class="category">
-hackathon
-</td>
-</tr>
-
-</tbody></table>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="5" data-listing-date-sort="1749945600000" data-listing-file-modified-sort="1774562427593" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="632">
-<a href="../../academy/events/pages/cybersecurity-hackathon.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../../assets/images/cyber-security.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Cybersecurity Hackathon
-</h5>
-<div class="card-subtitle listing-subtitle">
-48-Hour Challenge for Security Enthusiasts
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-June 15, 2025
-</div>
-</div>
-<table class="card-other-values">
-
-<tbody><tr>
-<td>
-location
-</td>
-<td class="location">
-Innovation Hub, Cluj-Napoca
-</td>
-</tr>
-
-<tr>
-<td>
-category
-</td>
-<td class="category">
-hackathon
-</td>
-</tr>
-
-</tbody></table>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></div> <!-- /content -->
+</div> <!-- /content -->
 <!-- Back to top -->
 <div style="text-align:center; padding:2rem 0; background:#0a0a0a; border-top:1px solid rgba(255,255,255,0.04);">
   <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" style="color:rgba(255,255,255,0.3); text-decoration:none; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em;">
