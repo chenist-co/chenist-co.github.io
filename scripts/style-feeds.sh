@@ -1,8 +1,11 @@
 #!/bin/bash
+# Cross-platform sed -i (macOS needs '', Linux doesn't)
+sedi() { if [[ "$OSTYPE" == "darwin"* ]]; then sed -i '' "$@"; else sed -i "$@"; fi; }
+
 # Inject XSL stylesheet reference into RSS XML feeds
 for f in _site/blog.xml _site/ro/blog.xml _site/de/blog.xml _site/sv/blog.xml; do
   if [ -f "$f" ]; then
-    sed -i '' 's|<?xml version="1.0" encoding="UTF-8"?>|<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/feed.xsl"?>|' "$f"
+    sedi 's|<?xml version="1.0" encoding="UTF-8"?>|<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/feed.xsl"?>|' "$f"
     echo "Styled: $f"
   fi
 done
