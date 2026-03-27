@@ -728,7 +728,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <p class="sub">Fostrar nästa generation av teknikprofessionella.</p>
     <div class="row g-5">
       <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-rocket-takeoff"></i><h3>CodeStart Bootcamp</h3><p>Gratis 8-veckors kodningsbootcamp för underrepresenterade grupper. 150+ utexaminerade, 85% anställning inom 6 månader.</p></div></div>
-      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-pc-display"></i><h3>Datorklubb</h3><p>Programmerings- och robotikklubb året runt för åldrarna 8-18 i Bukarest, Cluj-Napoca och Timișoara.</p></div></div>
+      <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-pc-display"></i><h3>Datorklubb</h3><p>Programmerings- och robotikklubb året runt för åldrarna 8-18 i Bukarest och Timișoara.</p></div></div>
       <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-journal-text"></i><h3>Lärarresurser</h3><p>Gratis, open source-undervisningsmaterial för datavetenskapsutbildning K-12 och universitet.</p></div></div>
       <div class="col-6 col-lg-3"><div class="m-t"><i class="bi bi-mortarboard"></i><h3>Universitetspartnerskap</h3><p>Gästföreläsningar, läroplanutveckling, praktikplatser och forskningssamarbeten med ledande institutioner.</p></div></div>
     </div>
@@ -1282,10 +1282,9 @@ footer a { -webkit-tap-highlight-color: transparent; }
   document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
     var href = a.getAttribute('href');
     if (href && href.startsWith('/') && !href.startsWith('//')) {
-      // Swedish blog is at /sv/blogg.html, not /sv/blog.html
-      if (lang === 'sv' && href === '/blog.html') {
-        a.setAttribute('href', '/sv/blog.html');
-      } else {
+
+
+
         a.setAttribute('href', prefix + href);
       }
     }

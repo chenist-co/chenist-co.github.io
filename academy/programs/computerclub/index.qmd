@@ -1,8 +1,8 @@
 ---
-title: "Clubul Computer"
+title: "Computer Club"
 title-block-style: none
-subtitle: "A community-driven technology club for all ages"
-description: "Join Clubul Computer, a community-driven technology club offering programming workshops, meetups, and hands-on learning for all ages."
+subtitle: "A members-only technology club for builders, thinkers, and makers"
+description: "Join the Computer Club — a closed-door, membership-based technology community with scheduled events, exclusive opportunities, and a real network of people who build things."
 from: markdown+raw_html
 page-layout: custom
 format:
@@ -10,199 +10,492 @@ format:
     toc: false
     include-in-header:
       text: |
-        <style>.m { --c: #F5A623; }</style>
+        <style>
+        .m { --c: #F5A623; }
+        /* Force horizontal grids */
+        .cc-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; max-width: 1000px; margin: 0 auto; }
+        .cc-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; max-width: 1000px; margin: 0 auto; }
+        .cc-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+        @media (max-width: 767px) {
+          .cc-grid-2 { grid-template-columns: 1fr 1fr; gap: 1rem; }
+          .cc-grid-4 { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+          .cc-grid-3 { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+          .cc-grid-2 { gap: 0.75rem; }
+          .cc-grid-4 { gap: 0.75rem; }
+        }
+        /* Club page — theme-aware card styling */
+        .cc-card {
+          background: rgba(0,0,0,0.02);
+          border: 1px solid rgba(0,0,0,0.06);
+          border-radius: 16px;
+          padding: 2rem;
+          height: 100%;
+          transition: border-color 0.2s, transform 0.2s;
+        }
+        .cc-card:hover { border-color: var(--c); transform: translateY(-2px); }
+        [data-bs-theme="dark"] .cc-card {
+          background: rgba(245,166,35,0.04);
+          border-color: rgba(255,255,255,0.08);
+        }
+        [data-bs-theme="dark"] .cc-card:hover { border-color: var(--c); }
+        .cc-icon {
+          width: 44px; height: 44px;
+          display: flex; align-items: center; justify-content: center;
+          background: rgba(245,166,35,0.08);
+          border-radius: 10px; margin-bottom: 1rem;
+        }
+        [data-bs-theme="dark"] .cc-icon { background: rgba(245,166,35,0.12); }
+        .cc-icon i { font-size: 1.1rem; color: var(--c); }
+        .cc-card h4 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .cc-card p { font-size: 0.9rem; color: var(--g); margin: 0; line-height: 1.55; }
+        /* Rhythm cards */
+        .cc-rhythm {
+          text-align: center; padding: 2rem 1rem;
+          background: rgba(0,0,0,0.02);
+          border: 1px solid rgba(0,0,0,0.06);
+          border-radius: 16px;
+          transition: border-color 0.2s, transform 0.2s;
+        }
+        .cc-rhythm:hover { border-color: var(--c); transform: translateY(-2px); }
+        [data-bs-theme="dark"] .cc-rhythm {
+          background: rgba(245,166,35,0.04);
+          border-color: rgba(255,255,255,0.08);
+        }
+        [data-bs-theme="dark"] .cc-rhythm:hover { border-color: var(--c); }
+        .cc-rhythm .cc-num { font-size: 2.5rem; font-weight: 800; color: var(--c); line-height: 1; }
+        .cc-rhythm .cc-freq { font-size: 0.8rem; color: var(--g); margin-top: 0.5rem; }
+        .cc-rhythm .cc-label { font-weight: 600; font-size: 0.95rem; margin-top: 0.75rem; }
+        .cc-rhythm .cc-desc { font-size: 0.8rem; color: var(--g); margin-top: 0.35rem; }
+        /* Pricing cards */
+        .cc-tier {
+          background: rgba(0,0,0,0.015);
+          border: 1.5px solid rgba(0,0,0,0.08);
+          border-radius: 20px;
+          padding: 3rem 2.25rem;
+          height: 100%; display: flex; flex-direction: column;
+          transition: border-color 0.2s, transform 0.2s;
+        }
+        .cc-tier:hover { border-color: var(--c); transform: translateY(-2px); }
+        [data-bs-theme="dark"] .cc-tier {
+          background: rgba(245,166,35,0.03);
+          border-color: rgba(255,255,255,0.1);
+        }
+        [data-bs-theme="dark"] .cc-tier:hover { border-color: var(--c); }
+        .cc-tier.cc-featured {
+          background: rgba(245,166,35,0.04);
+          border-color: rgba(245,166,35,0.2);
+        }
+        [data-bs-theme="dark"] .cc-tier.cc-featured {
+          background: rgba(245,166,35,0.06);
+          border-color: rgba(245,166,35,0.25);
+        }
+        .cc-tier-label { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--c); margin-bottom: 1rem; }
+        .cc-price { font-size: 2.5rem; font-weight: 800; line-height: 1; margin-top: 0.5rem; }
+        .cc-price span { font-size: 0.9rem; font-weight: 400; color: var(--g); }
+        .cc-price-sub { font-size: 0.85rem; color: var(--g); margin-top: 0.75rem; padding-bottom: 2rem; margin-bottom: 2rem; border-bottom: 1px solid rgba(0,0,0,0.06); }
+        [data-bs-theme="dark"] .cc-price-sub { border-color: rgba(255,255,255,0.06); }
+        .cc-tier ul { list-style: none; padding: 0; margin: 0 0 2.5rem 0; flex-grow: 1; }
+        .cc-tier ul li { padding: 0.65rem 0; font-size: 0.9rem; color: var(--g); border-bottom: 1px solid rgba(0,0,0,0.04); }
+        .cc-tier ul li:last-child { border-bottom: none; }
+        [data-bs-theme="dark"] .cc-tier ul li { border-color: rgba(255,255,255,0.04); }
+        .cc-tier ul li i { color: var(--c); margin-right: 0.5rem; }
+        .cc-badge { position: absolute; top: -12px; right: 20px; background: var(--c); color: #000; font-size: 0.7rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 6px; letter-spacing: 0.05em; }
+        /* Up-item icon box */
+        .cc-up-icon {
+          flex-shrink: 0; width: 48px; height: 48px;
+          display: flex; align-items: center; justify-content: center;
+          background: rgba(245,166,35,0.08);
+          border-radius: 12px;
+        }
+        [data-bs-theme="dark"] .cc-up-icon { background: rgba(245,166,35,0.12); }
+        .cc-up-icon i { font-size: 1.2rem; color: var(--c); }
+        /* Section label */
+        .cc-label-sm { font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--c); margin-bottom: 1rem; }
+        /* Form grid stacking */
+        @media (max-width: 767px) {
+          .cc-form-grid { grid-template-columns: 1fr !important; }
+        }
+        </style>
 ---
 
 ```{=html}
 <div class="m">
 
 <!-- HERO -->
-<div class="ev-hero" style="min-height:65vh;">
+<div class="ev-hero" style="min-height:70vh;">
   <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/hackathon-team.webp');"></div>
   <div class="ev-hero-content">
-    <div class="ev-hero-tag" style="background:#F5A623;">Academy Program</div>
-    <h1>Clubul<br>Computer</h1>
-    <p>A community-driven tech club. Learn, build, and share — all ages, all levels, zero fees.</p>
+    <div class="ev-hero-tag" style="background:#F5A623;">Members Only</div>
+    <h1>Computer<br>Club</h1>
+    <p>A closed-door community for people who build things with technology.<br>Not a meetup. Not a conference. A club.</p>
     <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
-      <a href="https://clubul.computer" target="_blank" class="ev-btn" style="background:#F5A623;">Visit clubul.computer</a>
-      <a href="#join" class="ev-btn-ghost">Join the club</a>
+      <a href="#membership" class="ev-btn" style="background:#F5A623;">Apply for membership</a>
+      <a href="#organizations" class="ev-btn-ghost">Start a club in your org</a>
+    </div>
+  </div>
+</div>
+
+<!-- PHILOSOPHY -->
+<div class="m-bg" style="padding:6rem 0;">
+  <div class="container" style="max-width:800px; text-align:center;">
+    <div class="cc-label-sm">The idea</div>
+    <h2 style="font-size:2rem; line-height:1.3; margin-bottom:1.5rem;">The best things happen<br>when curious people commit.</h2>
+    <p style="color:var(--g); font-size:1.05rem; line-height:1.8; max-width:650px; margin:0 auto;">
+      Open meetups have a ceiling: inconsistent attendance, surface-level conversations, no continuity between sessions. Great ideas die between one meetup and the next because nobody follows through.<br><br>
+      The Computer Club takes what works about informal gatherings — zero hierarchy, builder energy, real conversations — and adds what's missing: <strong>commitment</strong>. A fixed group of members who show up, contribute, and grow together. Behind closed doors, the conversations go deeper.
+    </p>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <h2>How the club works</h2>
+    <p class="sub">Simple rules. Real commitment. No fluff.</p>
+    <div class="cc-grid-2">
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-door-closed"></i></div>
+        <h4>Closed door</h4>
+        <p>Membership by application or invitation. Each chapter is capped at 30 active members to keep conversations real and relationships meaningful.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-calendar-check"></i></div>
+        <h4>Scheduled cadence</h4>
+        <p>Monthly main sessions + bi-weekly working sessions + quarterly deep-dives. You know the rhythm. You plan around it. Consistency builds trust.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-person-check"></i></div>
+        <h4>Skin in the game</h4>
+        <p>Annual membership fee keeps everyone committed. Can't afford it? Sponsored memberships exist for that reason. No one gets excluded for money.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-lightning"></i></div>
+        <h4>Builder culture</h4>
+        <p>Every session has output — a demo, a decision, a skill learned, a project advanced. We don't just talk about building things. We build them.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT MEMBERS GET -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
+  <div class="container">
+    <h2>What members get</h2>
+    <p class="sub">This isn't a newsletter you forget about. It's a club you belong to.</p>
+    <div style="max-width:750px; margin:0 auto;">
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-calendar-event"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Scheduled events</span></h4>
+          <div class="up-meta">Monthly main sessions, bi-weekly working sessions, quarterly deep-dives, annual retreat. Full calendar access.</div>
+        </div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-book"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Content library</span></h4>
+          <div class="up-meta">Recordings, workshop materials, project templates, and curated learning paths. Updated after every session.</div>
+        </div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-briefcase"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Opportunities board</span></h4>
+          <div class="up-meta">Job openings, freelance gigs, collaboration requests, and project calls shared exclusively within the club.</div>
+        </div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-trophy"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Priority access</span></h4>
+          <div class="up-meta">First in line for Academy hackathons, summer schools, and partner events. Members get priority registration + discounts.</div>
+        </div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-people"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>The network</span></h4>
+          <div class="up-meta">A private member directory, direct introductions, and a culture where people actually help each other. No cold DMs.</div>
+        </div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-tools"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Lab access</span></h4>
+          <div class="up-meta">Hardware kits, cloud credits, software licenses, and shared infrastructure for member projects.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- EVENT CALENDAR -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <h2>The rhythm</h2>
+    <p class="sub">A structured calendar so you always know what's next.</p>
+    <div class="cc-grid-4">
+      <div class="cc-rhythm">
+        <div class="cc-num">2&times;</div>
+        <div class="cc-freq">per month</div>
+        <div class="cc-label">Working Sessions</div>
+        <div class="cc-desc">Co-working, pair programming, project time</div>
+      </div>
+      <div class="cc-rhythm">
+        <div class="cc-num">1&times;</div>
+        <div class="cc-freq">per month</div>
+        <div class="cc-label">Main Session</div>
+        <div class="cc-desc">Talks, demos, lightning rounds, Q&amp;A</div>
+      </div>
+      <div class="cc-rhythm">
+        <div class="cc-num">1&times;</div>
+        <div class="cc-freq">per quarter</div>
+        <div class="cc-label">Deep Dive</div>
+        <div class="cc-desc">Full-day workshop on one topic</div>
+      </div>
+      <div class="cc-rhythm">
+        <div class="cc-num">1&times;</div>
+        <div class="cc-freq">per year</div>
+        <div class="cc-label">Annual Retreat</div>
+        <div class="cc-desc">Weekend offsite, all chapters</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MEMBERSHIP TIERS -->
+<div class="m-bg" id="membership" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Membership</h2>
+    <p class="sub">Choose how you want to be part of the club.</p>
+    <div class="cc-grid-3">
+      <div class="cc-tier">
+        <div class="cc-tier-label">Individual</div>
+        <ul>
+          <li><i class="bi bi-check2"></i>All scheduled events</li>
+          <li><i class="bi bi-check2"></i>Content library access</li>
+          <li><i class="bi bi-check2"></i>Opportunities board</li>
+          <li><i class="bi bi-check2"></i>Member directory</li>
+          <li><i class="bi bi-check2"></i>Priority event registration</li>
+        </ul>
+        <a href="#apply" class="m-b" style="background:var(--c); text-align:center; width:100%;">Apply now</a>
+      </div>
+      <div class="cc-tier">
+        <div class="cc-tier-label">Student</div>
+        <ul>
+          <li><i class="bi bi-check2"></i>All scheduled events</li>
+          <li><i class="bi bi-check2"></i>Content library access</li>
+          <li><i class="bi bi-check2"></i>Opportunities board</li>
+          <li><i class="bi bi-check2"></i>Member directory</li>
+          <li><i class="bi bi-check2"></i>Mentorship pairing</li>
+        </ul>
+        <a href="#apply" class="m-b" style="background:var(--c); text-align:center; width:100%;">Apply as student</a>
+      </div>
+      <div class="cc-tier cc-featured" style="position:relative;">
+        <div class="cc-badge">GIVE BACK</div>
+        <div class="cc-tier-label">Sponsor a seat</div>
+        <ul>
+          <li><i class="bi bi-heart"></i>Cover one full membership</li>
+          <li><i class="bi bi-heart"></i>Matched to someone in need</li>
+          <li><i class="bi bi-heart"></i>Sponsor stays anonymous</li>
+          <li><i class="bi bi-heart"></i>Tax-deductible receipt</li>
+          <li><i class="bi bi-heart"></i>Sponsor multiple seats</li>
+        </ul>
+        <a href="#apply" class="m-bo" style="border-color:var(--c); color:var(--c); text-align:center; width:100%;">Sponsor a membership</a>
+      </div>
+
+    </div>
+    <p style="text-align:center; color:var(--g); font-size:0.85rem; margin-top:2rem;">Can't afford membership? Apply anyway — sponsored seats are available and no one will know the difference.</p>
+  </div>
+</div>
+
+<!-- FEATURE ROW: CULTURE -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <div class="m-r">
+      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Club session"></div>
+      <div class="m-rt">
+        <h2>Informal energy.<br>Real commitment.</h2>
+        <p>The best tech communities share one thing: they attract people who <em>do</em> things, not people who talk about doing things. We took that energy and added structure. Regular cadence. Real membership. A private space where you can share half-finished work, ask dumb questions, and find collaborators who actually follow through.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE ROW: OPPORTUNITIES -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
+  <div class="container">
+    <div class="m-r rv">
+      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="Member opportunities"></div>
+      <div class="m-rt">
+        <h2>Opportunities flow<br>through the club.</h2>
+        <p>Members share job openings before they're posted publicly. Freelance projects get passed to the right person. Startup founders find co-founders. Companies recruit from the club because they trust the network. The opportunities board is members-only, updated weekly, and curated — not a noisy job feed.</p>
+        <div class="lk"><a href="#apply" class="m-lk">Join to see the board</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- ORGANIZATIONS SECTION -->
+<!-- ═══════════════════════════════════════════ -->
+
+<div class="m-s" id="organizations" style="padding:7rem 0;">
+  <div class="container" style="text-align:center; max-width:800px;">
+    <div class="cc-label-sm">For organizations</div>
+    <h2 style="font-size:2.2rem; line-height:1.3;">Start a Computer Club<br>in your organization</h2>
+    <p style="color:var(--g); font-size:1.05rem; max-width:600px; margin:1rem auto 0;">We help schools, universities, NGOs, and companies launch and run their own Computer Club chapters. You bring the people — we bring everything else.</p>
+  </div>
+</div>
+
+<!-- WHAT ORGS GET -->
+<div class="m-bg" style="padding:5rem 0 7rem;">
+  <div class="container">
+    <div class="cc-grid-3">
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-person-video3"></i></div>
+        <h4>Trained facilitators</h4>
+        <p>We train your people to run club sessions. Or we send ours. Facilitator certification program included for your team.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-braces"></i></div>
+        <h4>Content API access</h4>
+        <p>Full API access to our content library — workshops, learning paths, exercises, and assessment tools. Integrate into your own LMS or use ours.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-box-seam"></i></div>
+        <h4>Event kit</h4>
+        <p>Ready-to-run event packages: agendas, slide decks, facilitator guides, participant materials, feedback forms. Just add people.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-diagram-3"></i></div>
+        <h4>Event development help</h4>
+        <p>Need a hackathon? A workshop series? A demo day? We help you design, plan, and execute events tailored to your audience and goals.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-graph-up"></i></div>
+        <h4>Analytics dashboard</h4>
+        <p>Track engagement, attendance, skill progression, and satisfaction across your chapter. Real metrics, not vibes.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-globe2"></i></div>
+        <h4>Network access</h4>
+        <p>Your chapter joins the wider Computer Club network. Cross-chapter events, shared speakers, inter-org hackathons, and a community that extends beyond your walls.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHO IT'S FOR -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Built for</h2>
+    <p class="sub">Any organization that wants a technology learning culture.</p>
+    <div style="max-width:750px; margin:0 auto;">
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-mortarboard"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Schools (K-12)</span></h4>
+          <div class="up-meta">Extracurricular STEM clubs with age-appropriate content. Coding, robotics, digital literacy. Teacher training included.</div>
+        </div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-bank"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Universities</span></h4>
+          <div class="up-meta">Student-run tech communities with faculty support. Research groups, startup incubators, inter-university competitions.</div>
+        </div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-heart"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>NGOs & Nonprofits</span></h4>
+          <div class="up-meta">Digital literacy programs, community empowerment, bridging the digital divide. Subsidized pricing available.</div>
+        </div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-building"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Companies</span></h4>
+          <div class="up-meta">Internal tech communities, employee upskilling, innovation culture, cross-team collaboration. R&D departments love this.</div>
+        </div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-globe"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Community organizations</span></h4>
+          <div class="up-meta">Libraries, co-working spaces, cultural centers, makerspaces. Anywhere people gather and want to learn.</div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
 
 <!-- STATS -->
-<div class="m-bg" style="padding:4rem 0;">
+<div class="m-bg" style="padding:5rem 0;">
   <div class="container">
     <div class="m-n">
       <div><div class="m-nn" style="color:#F5A623;">150+</div><div class="m-nl">Schools reached</div></div>
       <div><div class="m-nn" style="color:#F5A623;">5000+</div><div class="m-nl">Students</div></div>
-      <div><div class="m-nn" style="color:#F5A623;">25</div><div class="m-nl">IoT sensors deployed</div></div>
-      <div><div class="m-nn" style="color:#F5A623;">Free</div><div class="m-nl">Always</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">9+</div><div class="m-nl">Years running</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">30</div><div class="m-nl">Members per chapter</div></div>
     </div>
   </div>
 </div>
 
-<!-- PROGRAMS -->
-<div class="m-s" style="padding:7rem 0;">
-  <div class="container">
-    <h2>What we do</h2>
-    <p class="sub">Six programs for every interest and skill level.</p>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <a href="https://www.clubul.computer/t/workshops" target="_blank" style="text-decoration:none;">
-          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="Workshops"><div class="pg-card-body"><h3>Workshops</h3><p>Python, web dev, JavaScript — beginner to advanced.</p></div></div>
-        </a>
-      </div>
-      <div class="col-md-4">
-        <a href="https://www.clubul.computer/t/talks" target="_blank" style="text-decoration:none;">
-          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/network-closeup.webp" alt="Tech Talks"><div class="pg-card-body"><h3>Tech Talks</h3><p>Industry speakers on open source, AI ethics, cybersecurity.</p></div></div>
-        </a>
-      </div>
-      <div class="col-md-4">
-        <a href="https://www.clubul.computer/t/junior" target="_blank" style="text-decoration:none;">
-          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Junior Club"><div class="pg-card-body"><h3>Junior Club</h3><p>Game dev, robot programming, and digital storytelling for ages 8-14.</p></div></div>
-        </a>
-      </div>
-      <div class="col-md-4">
-        <a href="https://www.clubul.computer/t/hacking" target="_blank" style="text-decoration:none;">
-          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="Hardware Hacking"><div class="pg-card-body"><h3>Hardware Hacking</h3><p>Arduino, Raspberry Pi, IoT devices, and 3D printing.</p></div></div>
-        </a>
-      </div>
-      <div class="col-md-4">
-        <a href="https://www.clubul.computer/t/open-source" target="_blank" style="text-decoration:none;">
-          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/hacker-screens.webp" alt="Open Source"><div class="pg-card-body"><h3>Open Source</h3><p>Find projects, understand codebases, make real contributions.</p></div></div>
-        </a>
-      </div>
-      <div class="col-md-4">
-        <a href="https://www.clubul.computer/t/incubator" target="_blank" style="text-decoration:none;">
-          <div class="pg-card"><img loading="lazy" src="/assets/images/stock/cybersecurity-monitor.webp" alt="Project Incubator"><div class="pg-card-body"><h3>Project Incubator</h3><p>Turn your idea into reality with mentorship and resources.</p></div></div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- FEATURE ROW 1 -->
-<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
-  <div class="container">
-    <div class="m-r">
-      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Club meetup"></div>
-      <div class="m-rt">
-        <h2>Technology for<br>everyone.</h2>
-        <p>No fees. No requirements. Just show up. Whether you're 8 or 80, a complete beginner or a senior developer — Clubul Computer is your space to learn, experiment, and connect with people who share your curiosity.</p>
-        <div class="lk"><a href="https://clubul.computer" target="_blank" class="m-lk">Visit clubul.computer</a></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- FEATURE ROW 2 -->
-<div class="m-s" style="padding:7rem 0;">
-  <div class="container">
-    <div class="m-r rv">
-      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/code-screen.webp" alt="Coding session"></div>
-      <div class="m-rt">
-        <h2>Real projects.<br>Real impact.</h2>
-        <p>Our members build educational tools used in 150+ Romanian schools, deploy air quality sensors across cities, and contribute to open-source projects used worldwide. This isn't a classroom — it's a launchpad.</p>
-        <div class="lk"><a href="https://www.clubul.computer/t/open-source" target="_blank" class="m-lk">See community projects</a></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- FIND US -->
-<div class="m-bg" style="padding:6rem 0;">
-  <div class="container">
-    <h2>Find us</h2>
-    <p class="sub">Show up. That's all it takes.</p>
-    <div style="max-width:750px; margin:0 auto;">
-      <div class="up-item">
-        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
-          <i class="bi bi-geo-alt" style="font-size:1.2rem; color:#F5A623;"></i>
-        </div>
-        <div style="flex-grow:1;">
-          <h4><span style="color:#fff;">Craiova, Romania</span></h4>
-          <div class="up-meta">Main location. Last Thursday of every month.</div>
-        </div>
-        <div class="up-badge up-badge-open">Monthly</div>
-      </div>
-      <div class="up-item">
-        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
-          <i class="bi bi-building" style="font-size:1.2rem; color:#F5A623;"></i>
-        </div>
-        <div style="flex-grow:1;">
-          <h4><span style="color:#fff;">Bucharest</span></h4>
-          <div class="up-meta">Satellite meetups. Quarterly.</div>
-        </div>
-        <div class="up-badge up-badge-soon">Quarterly</div>
-      </div>
-      <div class="up-item">
-        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
-          <i class="bi bi-camera-video" style="font-size:1.2rem; color:#F5A623;"></i>
-        </div>
-        <div style="flex-grow:1;">
-          <h4><span style="color:#fff;">Online</span></h4>
-          <div class="up-meta">Virtual meetups and workshops. Join from anywhere.</div>
-        </div>
-        <div class="up-badge up-badge-open">Always</div>
-      </div>
-      <div class="up-item">
-        <div style="flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:12px;">
-          <i class="bi bi-envelope" style="font-size:1.2rem; color:#F5A623;"></i>
-        </div>
-        <div style="flex-grow:1;">
-          <h4><a href="mailto:social@clubul.computer">social@clubul.computer</a></h4>
-          <div class="up-meta">Questions, ideas, or just want to say hi.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- PARTNERSHIP APPLICATION -->
+<!-- APPLICATION FORM -->
 <div class="m-s" id="apply" style="padding:7rem 0;">
   <div class="container" style="max-width:950px;">
-    <div style="display:grid; grid-template-columns:1fr 1.2fr; gap:3rem; align-items:start;">
+    <div class="cc-form-grid" style="display:grid; grid-template-columns:1fr 1.2fr; gap:3rem; align-items:start;">
 
       <!-- Left: info -->
       <div>
-        <i class="bi bi-handshake" style="font-size:2rem; color:#F5A623; display:block; margin-bottom:1rem;"></i>
-        <h2 style="font-size:1.75rem; text-align:left; margin-bottom:1rem;">Start a Computer Club in your organization</h2>
-        <p style="color:#86868b; line-height:1.6; margin-bottom:2rem;">We help you launch and run your own Computer Club chapter. We provide the curriculum, mentorship framework, and community platform — you provide the space and enthusiasm.</p>
+        <i class="bi bi-shield-lock" style="font-size:2rem; color:#F5A623; display:block; margin-bottom:1rem;"></i>
+        <h2 style="font-size:1.75rem; text-align:left; margin-bottom:1rem;">Apply to join or<br>start a chapter</h2>
+        <p style="color:#86868b; line-height:1.6; margin-bottom:2rem;">Whether you want to join as an individual member, sponsor a seat, or start a Computer Club chapter in your organization — it starts here. We review applications weekly and get back to you within 48 hours.</p>
 
         <div style="display:flex; flex-direction:column; gap:1.25rem;">
           <div style="display:flex; align-items:flex-start; gap:0.75rem;">
-            <div style="flex-shrink:0; width:40px; height:40px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:10px;">
-              <i class="bi bi-building" style="color:#F5A623;"></i>
+            <div class="cc-icon" style="width:40px; height:40px;">
+              <i class="bi bi-person" style="color:#F5A623;"></i>
             </div>
-            <div><div style="font-weight:600; font-size:0.9rem;">Companies</div><div style="font-size:0.82rem; color:#86868b;">Employee upskilling, team building, and innovation culture</div></div>
+            <div><div style="font-weight:600; font-size:0.9rem;">Individual membership</div><div style="font-size:0.82rem; color:#86868b;">Join the Craiova chapter or request a new city</div></div>
           </div>
           <div style="display:flex; align-items:flex-start; gap:0.75rem;">
-            <div style="flex-shrink:0; width:40px; height:40px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:10px;">
-              <i class="bi bi-mortarboard" style="color:#F5A623;"></i>
-            </div>
-            <div><div style="font-weight:600; font-size:0.9rem;">Schools</div><div style="font-size:0.82rem; color:#86868b;">Extracurricular STEM programs and digital literacy</div></div>
-          </div>
-          <div style="display:flex; align-items:flex-start; gap:0.75rem;">
-            <div style="flex-shrink:0; width:40px; height:40px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:10px;">
-              <i class="bi bi-bank" style="color:#F5A623;"></i>
-            </div>
-            <div><div style="font-weight:600; font-size:0.9rem;">Universities</div><div style="font-size:0.82rem; color:#86868b;">Student tech communities and research groups</div></div>
-          </div>
-          <div style="display:flex; align-items:flex-start; gap:0.75rem;">
-            <div style="flex-shrink:0; width:40px; height:40px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:10px;">
+            <div class="cc-icon" style="width:40px; height:40px;">
               <i class="bi bi-heart" style="color:#F5A623;"></i>
             </div>
-            <div><div style="font-weight:600; font-size:0.9rem;">NGOs</div><div style="font-size:0.82rem; color:#86868b;">Digital literacy and community empowerment</div></div>
+            <div><div style="font-weight:600; font-size:0.9rem;">Sponsor a membership</div><div style="font-size:0.82rem; color:#86868b;">Fund a seat for someone who can't afford it</div></div>
+          </div>
+          <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+            <div class="cc-icon" style="width:40px; height:40px;">
+              <i class="bi bi-building" style="color:#F5A623;"></i>
+            </div>
+            <div><div style="font-weight:600; font-size:0.9rem;">Organization chapter</div><div style="font-size:0.82rem; color:#86868b;">Start a Computer Club in your school, company, or NGO</div></div>
           </div>
         </div>
       </div>
 
       <!-- Right: form -->
       <div class="m-form">
-        <div style="background:rgba(245,166,35,0.04); border:1.5px solid rgba(245,166,35,0.12); border-radius:20px; padding:2.5rem;">
-          <h3 style="font-size:1.25rem; font-weight:700; margin-bottom:0.35rem; text-align:center;">Apply to start a chapter</h3>
-          <p style="font-size:0.85rem; color:#86868b; text-align:center; margin-bottom:1.75rem;">Fill in the form and we'll get back to you within 48 hours.</p>
+        <div class="cc-tier" style="padding:2.5rem;">
+          <h3 style="font-size:1.25rem; font-weight:700; margin-bottom:0.35rem; text-align:center;">Apply now</h3>
+          <p style="font-size:0.85rem; color:#86868b; text-align:center; margin-bottom:1.75rem;">We'll review your application and respond within 48 hours.</p>
           <form action="https://formspree.io/f/mpwkaqev" method="POST">
             <div class="fr">
               <div class="fg">
@@ -215,49 +508,49 @@ format:
               </div>
             </div>
             <div class="fg">
-              <label>Organization *</label>
-              <input type="text" name="organization" required placeholder="Company, school, or organization name">
+              <label>I want to *</label>
+              <select name="application_type" required>
+                <option value="">Select...</option>
+                <option value="individual">Join as individual member</option>
+                <option value="student">Join as student member</option>
+                <option value="sponsor">Sponsor a membership</option>
+                <option value="organization">Start a chapter in my organization</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label>Organization (if applicable)</label>
+              <input type="text" name="organization" placeholder="Company, school, or organization name">
             </div>
             <div class="fr">
               <div class="fg">
-                <label>Type *</label>
-                <select name="org_type" required>
+                <label>Organization type</label>
+                <select name="org_type">
                   <option value="">Select...</option>
                   <option value="company">Company</option>
                   <option value="school">School (K-12)</option>
                   <option value="university">University</option>
                   <option value="ngo">NGO / Nonprofit</option>
-                  <option value="community">Community Group</option>
-                  <option value="other">Other</option>
+                  <option value="community">Community org</option>
+                  <option value="personal">Personal / N/A</option>
                 </select>
               </div>
               <div class="fg">
                 <label>City / Country *</label>
-                <input type="text" name="location" required placeholder="e.g. Berlin, Germany">
+                <input type="text" name="location" required placeholder="e.g. Craiova, Romania">
               </div>
             </div>
             <div class="fg">
-              <label>Expected participants</label>
-              <select name="participants">
-                <option value="">Select...</option>
-                <option value="5-15">5–15 people</option>
-                <option value="15-30">15–30 people</option>
-                <option value="30-50">30–50 people</option>
-                <option value="50+">50+ people</option>
-              </select>
+              <label>Tell us about yourself *</label>
+              <textarea name="message" rows="3" required placeholder="What do you build? What are you curious about? Why do you want to join?"></textarea>
             </div>
-            <div class="fg">
-              <label>Tell us about your vision *</label>
-              <textarea name="message" rows="3" required placeholder="What would you like the club to focus on? Who are the participants?"></textarea>
-            </div>
-            <input type="hidden" name="_subject" value="Computer Club Chapter Application">
+            <input type="hidden" name="_subject" value="Computer Club Application">
             <input type="hidden" name="_source" value="computerclub-apply">
             <input type="text" name="_gotcha" style="display:none">
             <div class="fc">
               <input type="checkbox" required>
               <span>I agree to the <a href="/privacy.html" target="_blank">privacy policy</a> *</span>
             </div>
-            <button type="submit" style="background:#F5A623;"><i class="bi bi-send me-2"></i>Submit Application</button>
+            <button type="submit" style="background:#F5A623;"><i class="bi bi-send me-2"></i>Submit application</button>
           </form>
         </div>
       </div>
@@ -266,14 +559,21 @@ format:
   </div>
 </div>
 
+<!-- HISTORY NOTE -->
+<div class="m-bg" style="padding:3rem 0;">
+  <div class="container" style="max-width:700px; text-align:center;">
+    <p style="color:var(--g); font-size:0.9rem; line-height:1.7; margin:0;">Inspired by the spirit of <strong>OpenCoffee</strong> (Athens, 2007), <strong>GeekMeet</strong> (Stockholm), and the <strong>Chaos Computer Club</strong> (Hamburg, 1981) — informal tech communities that proved the best ideas come from people gathering regularly around shared curiosity. We organized OpenCoffee and GeekMeet chapters ourselves for several years before distilling what worked into the Computer Club format.</p>
+  </div>
+</div>
+
 <!-- CTA -->
-<div class="m-cta" id="join">
+<div class="m-cta">
   <div class="container">
     <div class="m-d"></div>
-    <h2>Join the club</h2>
-    <p>Show up to a meetup or reach out online. That's it.</p>
+    <h2>The door is closed. But it's not locked.</h2>
+    <p>Apply for membership. Sponsor a seat. Or start a chapter in your organization.</p>
     <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
-      <a href="https://clubul.computer" target="_blank" class="m-b" style="background:#F5A623;">Visit clubul.computer</a>
+      <a href="#apply" class="m-b" style="background:#F5A623;">Apply now</a>
       <a href="/booking/" class="m-bo" style="border-color:#F5A623; color:#F5A623;">Book a call</a>
     </div>
   </div>

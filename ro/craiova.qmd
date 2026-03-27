@@ -1,0 +1,236 @@
+---
+title: "Craiova"
+title-block-style: none
+subtitle: "Academy & comunitate tech în Craiova"
+description: "Cursuri față-în-față, sesiuni de formare, Computer Club și evenimente tech în Craiova. Alătură-te comunității chen.ist Academy din Oltenia."
+from: markdown+raw_html
+page-layout: custom
+format:
+  html:
+    toc: false
+    include-in-header:
+      text: |
+        <style>
+        .m { --c: #F5A623; }
+        .cc-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; max-width: 1000px; margin: 0 auto; }
+        .cc-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+        .cc-card { background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; padding: 2rem; height: 100%; transition: border-color 0.2s, transform 0.2s; }
+        .cc-card:hover { border-color: var(--c); transform: translateY(-2px); }
+        [data-bs-theme="dark"] .cc-card { background: rgba(245,166,35,0.04); border-color: rgba(255,255,255,0.08); }
+        .cc-icon { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: rgba(245,166,35,0.08); border-radius: 10px; margin-bottom: 1rem; }
+        [data-bs-theme="dark"] .cc-icon { background: rgba(245,166,35,0.12); }
+        .cc-icon i { font-size: 1.1rem; color: var(--c); }
+        .cc-card h4 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .cc-card p { font-size: 0.9rem; color: var(--g); margin: 0; line-height: 1.55; }
+        .cc-up-icon { flex-shrink: 0; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: rgba(245,166,35,0.08); border-radius: 12px; }
+        [data-bs-theme="dark"] .cc-up-icon { background: rgba(245,166,35,0.12); }
+        .cc-up-icon i { font-size: 1.2rem; color: var(--c); }
+        .cc-label-sm { font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--c); margin-bottom: 1rem; }
+        @media (max-width: 767px) {
+          .cc-grid-2 { grid-template-columns: 1fr; }
+          .cc-grid-3 { grid-template-columns: 1fr; }
+        }
+        </style>
+---
+
+```{=html}
+<div class="m">
+
+<!-- HERO -->
+<div class="ev-hero" style="min-height:65vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/hackathon-team.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Academy · Craiova</div>
+    <h1>Craiova</h1>
+    <p>Cursuri față-în-față, cluburi tech și evenimente pentru comunitatea din Oltenia. Sediul principal al chen.ist Academy.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="#oferta" class="ev-btn" style="background:#F5A623;">Ce oferim</a>
+      <a href="/ro/booking/" class="ev-btn-ghost">Programează o întâlnire</a>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="m-bg" style="padding:4rem 0;">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn" style="color:#F5A623;">2021</div><div class="m-nl">Activi din</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">5+</div><div class="m-nl">Organizații implicate</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">450+</div><div class="m-nl">Participanți</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">Lunar</div><div class="m-nl">Computer Club</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT'S IN CRAIOVA -->
+<div class="m-s" id="oferta" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Ce găsești în Craiova</h2>
+    <p class="sub">Învățare practică, față-în-față, cu oameni care construiesc.</p>
+    <div class="cc-grid-3">
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-book"></i></div>
+        <h4>Cursuri față-în-față</h4>
+        <p>Securitate cibernetică, administrare Linux, dezvoltare open-source și protecția datelor. 4–12 săptămâni, grupuri mici, 80% practică.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-lightning"></i></div>
+        <h4>Sesiuni intensive</h4>
+        <p>Training-uri de 1–3 zile pe subiecte concentrate: NIS2, conștientizare securitate, NixOS, contribuție open-source. Ideal pentru echipe.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-terminal"></i></div>
+        <h4>Computer Club</h4>
+        <p>Clubul nostru cu membri — întâlniri lunare, sesiuni de lucru bisăptămânale, deep-dive-uri trimestriale. Comunitate reală, nu meetup.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-trophy"></i></div>
+        <h4>Hackathoane</h4>
+        <p>NASA SpaceApps (9 ediții!), CTF-uri, AI Ethics Hackathon. Evenimente de 48 de ore care produc proiecte reale.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-sun"></i></div>
+        <h4>Școala de Vară</h4>
+        <p>Două săptămâni intensive în august — securitate cibernetică, cloud și AI. Program complet cu proiecte, speakeri și certificare.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-people"></i></div>
+        <h4>Workshop-uri deschise</h4>
+        <p>Sesiuni gratuite și deschise publicului pe teme de actualitate: hardware hacking, IoT, programare pentru începători.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE ROW: HQ -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
+  <div class="container">
+    <div class="m-r">
+      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/team-macbooks.webp" alt="Echipa Craiova"></div>
+      <div class="m-rt">
+        <h2>Sediul principal<br>al Academy.</h2>
+        <p>Craiova este locul unde totul a început — din 2016 organizăm hackathoane, din 2023 rulăm Computer Club lunar. Aici dezvoltăm conținut, testăm formate noi și formăm comunitatea care apoi crește în alte orașe. Dacă ești din Oltenia, acesta e locul tău.</p>
+        <div class="lk"><a href="/ro/academy/programs/computerclub/" class="m-lk">Despre Computer Club</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- UPCOMING -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Următoarele evenimente</h2>
+    <p class="sub">Ce se întâmplă în Craiova în curând.</p>
+    <div style="max-width:750px; margin:0 auto;">
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-terminal"></i></div>
+        <div style="flex-grow:1;">
+          <h4><a href="/ro/academy/programs/computerclub/">Computer Club</a></h4>
+          <div class="up-meta"><i class="bi bi-calendar3"></i> Ultima joi din fiecare lună &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
+        </div>
+        <div class="up-badge up-badge-open">Lunar</div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-sun"></i></div>
+        <div style="flex-grow:1;">
+          <h4><a href="/academy/events/pages/summer-school-2025.html">Școala de Vară 2026</a></h4>
+          <div class="up-meta"><i class="bi bi-calendar3"></i> 1–15 aug 2026 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
+        </div>
+        <div class="up-badge up-badge-soon">Aug</div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-rocket-takeoff"></i></div>
+        <div style="flex-grow:1;">
+          <h4><a href="/academy/events/pages/space-hackathon.html">Space Hackathon</a></h4>
+          <div class="up-meta"><i class="bi bi-calendar3"></i> 3–4 oct 2026 &nbsp; <i class="bi bi-geo-alt"></i> Craiova</div>
+        </div>
+        <div class="up-badge up-badge-soon">Oct</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FOR ORGANIZATIONS -->
+<div class="m-bg" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Pentru organizații din Craiova</h2>
+    <p class="sub">Aducem Academy la tine.</p>
+    <div class="cc-grid-2">
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-building"></i></div>
+        <h4>Training corporativ</h4>
+        <p>Cursuri de securitate cibernetică, NIS2 compliance, conștientizare securitate — la sediul tău sau în locația noastră. Grupuri de 5–25 persoane.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-mortarboard"></i></div>
+        <h4>Parteneriate educaționale</h4>
+        <p>Colaborăm cu școli și universități din Craiova pentru cluburi tech, workshop-uri extracurriculare și pregătire competiții.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-heart"></i></div>
+        <h4>ONG-uri și comunitate</h4>
+        <p>Programe de alfabetizare digitală, cluburi de programare pentru copii, sesiuni gratuite pentru comunitate. Prețuri subvenționate disponibile.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-diagram-3"></i></div>
+        <h4>Evenimente personalizate</h4>
+        <p>Hackathoane, demo day-uri, workshop-uri interne — proiectăm și executăm evenimente tech adaptate obiectivelor tale.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LOCATION -->
+<div class="m-s" style="padding:6rem 0;">
+  <div class="container">
+    <h2>Unde ne găsești</h2>
+    <p class="sub">Craiova, județul Dolj, România.</p>
+    <div style="max-width:750px; margin:0 auto;">
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-geo-alt"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Craiova, România</span></h4>
+          <div class="up-meta">Locația principală pentru toate activitățile Academy.</div>
+        </div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-envelope"></i></div>
+        <div style="flex-grow:1;">
+          <h4><a href="mailto:academy@chen.ist">academy@chen.ist</a></h4>
+          <div class="up-meta">Întrebări, propuneri de parteneriat sau doar un salut.</div>
+        </div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-camera-video"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Hybrid disponibil</span></h4>
+          <div class="up-meta">Multe sesiuni sunt disponibile și online pentru cei care nu pot ajunge fizic.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Hai să construim<br>împreună în Craiova</h2>
+    <p>Alătură-te unui curs, vino la Computer Club sau organizează un eveniment cu noi.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="/ro/booking/" class="m-b" style="background:#F5A623;">Programează o întâlnire</a>
+      <a href="/ro/academy/" class="m-bo" style="border-color:#F5A623; color:#F5A623;">Toate programele Academy</a>
+    </div>
+  </div>
+</div>
+
+</div>
+```
