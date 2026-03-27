@@ -479,7 +479,26 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 }
 </script>
-<style>.m { --c: #F5A623; }</style>
+<style>
+.m { --c: #F5A623; }
+.ml-content { max-width: 800px; margin: 0 auto; padding: 0 1.5rem; }
+.ml-content h1, .ml-content h2 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; margin-top: 3rem; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(0,0,0,0.06); }
+[data-bs-theme="dark"] .ml-content h1, [data-bs-theme="dark"] .ml-content h2 { border-color: rgba(255,255,255,0.06); }
+.ml-content h3 { font-size: 1.15rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; }
+.ml-content h1:first-child, .ml-content h2:first-child { margin-top: 0; }
+.ml-content p { color: var(--g, #86868b); line-height: 1.7; margin-bottom: 1rem; }
+.ml-content ul, .ml-content ol { color: var(--g, #86868b); line-height: 1.8; padding-left: 1.25rem; margin-bottom: 1.5rem; }
+.ml-content li { padding: 0.2rem 0; }
+.ml-content strong { color: inherit; font-weight: 600; }
+.ml-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.ml-meta-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--g, #86868b); }
+.ml-meta-item i { color: var(--c); }
+.ml-card { background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; padding: 2rem; margin-bottom: 1.5rem; }
+[data-bs-theme="dark"] .ml-card { background: rgba(245,166,35,0.04); border-color: rgba(255,255,255,0.08); }
+.ml-card h3, .ml-card h4 { margin-top: 0; border: none; padding-bottom: 0; }
+.ml-related { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+@media (max-width: 767px) { .ml-related { grid-template-columns: 1fr; } }
+</style>
 
 
 <link rel="stylesheet" href="../../../assets/css/main.min.css">
@@ -692,12 +711,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
+<div class="ev-hero" style="min-height:50vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/cybersecurity-monitor.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Microlearning</div>
     <h1>FreeBSD Basics</h1>
     <p>Learn the essentials of this powerful, stable Unix-like operating system in just 2 hours</p>
   </div>
 </div>
+<div class="ml-content">
 <section id="session-overview" class="level1">
 <h1>Session Overview</h1>
 <p>This 2-hour microlearning session introduces FreeBSD, a powerful, stable, and secure Unix-like operating system with a long history of reliability in server environments. Unlike Linux distributions, FreeBSD is developed as a complete operating system with a coherent design philosophy. In this session, you’ll learn the fundamentals of FreeBSD, its unique features, and how to perform essential system administration tasks in a FreeBSD environment.</p>
@@ -819,63 +841,37 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>Troubleshooting guide for common issues</li>
 <li>List of recommended FreeBSD resources and books</li>
 </ul>
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-md-6">
-      <div class="card mb-4">
-        <div class="card-body">
-          <h3>Your Instructor</h3>
-          <div class="d-flex align-items-center mb-3">
-            <img loading="lazy" src="../../../assets/images/stock/terminal-green.webp" alt="Instructor" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;">
-            <div>
-              <h5 class="mb-0">CHENIST Team</h5>
-              <p class="text-muted mb-0">Systems Engineer &amp; BSD Specialist</p>
-            </div>
-          </div>
-          <p>Michael has over 12 years of experience working with FreeBSD in production environments, from high-traffic web servers to specialized networking appliances. He has contributed to FreeBSD documentation and regularly speaks at BSD conferences.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="card mb-4">
-        <div class="card-body">
-          <h3>What Participants Say</h3>
-          <p class="fst-italic">"The coherent design of FreeBSD makes so much more sense now. This session gave me the confidence to start using FreeBSD for some of our infrastructure needs."</p>
-          <p class="mb-0"><strong>— Richard T., Network Administrator</strong></p>
-        </div>
-      </div>
-    </div>
-  </div>
+</section>
 </div>
+<div class="m-s">
+  <div class="ml-content">
+    <div class="ml-card">
+      <h3>Your Instructor</h3>
+      <p><strong>CHENIST Team</strong> — Systems Engineer &amp; BSD Specialist</p>
+      <p>Michael has over 12 years of experience working with FreeBSD in production environments, from high-traffic web servers to specialized networking appliances. He has contributed to FreeBSD documentation and regularly speaks at BSD conferences.</p>
+    </div>
+    <div class="ml-card">
+      <h3>What Participants Say</h3>
+      <p><em>"The coherent design of FreeBSD makes so much more sense now. This session gave me the confidence to start using FreeBSD for some of our infrastructure needs."</em></p>
+      <p><strong>— Richard T., Network Administrator</strong></p>
+    </div>
 
-<div class="container mt-5 mb-5">
-  <h2 class="text-center mb-4" data-anchor-id="materials">Related Offerings</h2>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card h-100">
-        <div class="card-body">
-          <h4>Advanced FreeBSD Administration</h4>
-          <p>A comprehensive course covering advanced FreeBSD topics including performance tuning, security hardening, and enterprise deployment.</p>
-          <a href="../../../academy/courses.html" class="m-bo">Learn More</a>
-        </div>
+    <h3>Related Offerings</h3>
+    <div class="ml-related">
+      <div class="ml-card">
+        <h4>Advanced FreeBSD Administration</h4>
+        <p>A comprehensive course covering advanced FreeBSD topics including performance tuning, security hardening, and enterprise deployment.</p>
+        <a href="../../../academy/courses.html" class="m-bo">Learn More</a>
       </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card h-100">
-        <div class="card-body">
-          <h4>OpenBSD Security</h4>
-          <p>Explore OpenBSD, another member of the BSD family known for its emphasis on security and code correctness.</p>
-          <a href="../../../academy/microlearning/openbsd/" class="m-bo">Learn More</a>
-        </div>
+      <div class="ml-card">
+        <h4>OpenBSD Security</h4>
+        <p>Explore OpenBSD, another member of the BSD family known for its emphasis on security and code correctness.</p>
+        <a href="../../../academy/microlearning/openbsd/" class="m-bo">Learn More</a>
       </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card h-100">
-        <div class="card-body">
-          <h4>ZFS Administration Workshop</h4>
-          <p>A full-day deep dive into the advanced features and administration of the ZFS file system on FreeBSD and other platforms.</p>
-          <a href="../../../academy/trainings.html" class="m-bo">Learn More</a>
-        </div>
+      <div class="ml-card">
+        <h4>ZFS Administration Workshop</h4>
+        <p>A full-day deep dive into the advanced features and administration of the ZFS file system on FreeBSD and other platforms.</p>
+        <a href="../../../academy/trainings.html" class="m-bo">Learn More</a>
       </div>
     </div>
   </div>
@@ -888,8 +884,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-</section></div>
-
+</div>
 
 
 

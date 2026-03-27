@@ -479,7 +479,26 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 }
 </script>
-<style>.m { --c: #F5A623; }</style>
+<style>
+.m { --c: #F5A623; }
+.ml-content { max-width: 800px; margin: 0 auto; padding: 0 1.5rem; }
+.ml-content h1, .ml-content h2 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; margin-top: 3rem; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(0,0,0,0.06); }
+[data-bs-theme="dark"] .ml-content h1, [data-bs-theme="dark"] .ml-content h2 { border-color: rgba(255,255,255,0.06); }
+.ml-content h3 { font-size: 1.15rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; }
+.ml-content h1:first-child, .ml-content h2:first-child { margin-top: 0; }
+.ml-content p { color: var(--g, #86868b); line-height: 1.7; margin-bottom: 1rem; }
+.ml-content ul, .ml-content ol { color: var(--g, #86868b); line-height: 1.8; padding-left: 1.25rem; margin-bottom: 1.5rem; }
+.ml-content li { padding: 0.2rem 0; }
+.ml-content strong { color: inherit; font-weight: 600; }
+.ml-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.ml-meta-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--g, #86868b); }
+.ml-meta-item i { color: var(--c); }
+.ml-card { background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; padding: 2rem; margin-bottom: 1.5rem; }
+[data-bs-theme="dark"] .ml-card { background: rgba(245,166,35,0.04); border-color: rgba(255,255,255,0.08); }
+.ml-card h3, .ml-card h4 { margin-top: 0; border: none; padding-bottom: 0; }
+.ml-related { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+@media (max-width: 767px) { .ml-related { grid-template-columns: 1fr; } }
+</style>
 
 
 <link rel="stylesheet" href="../../../assets/css/main.min.css">
@@ -692,12 +711,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
+<div class="ev-hero" style="min-height:50vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/terminal-green.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Microlearning</div>
     <h1>Unix Command Line Introduction</h1>
     <p>Master essential command line skills in just 2 hours</p>
   </div>
 </div>
+<div class="ml-content">
 <section id="session-overview" class="level2">
 <h2 data-anchor-id="session-overview">Session Overview</h2>
 <p>This focused 2-hour session provides a practical introduction to the Unix command line interface for beginners. You’ll learn essential commands, navigation techniques, and fundamental concepts that will make you productive in the terminal environment. This hands-on session is designed to build confidence and competence with the command line through practical exercises and real-world examples.</p>
@@ -813,50 +835,43 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>30 days of email support for command line questions</li>
 </ul>
 </section>
-<section id="instructor" class="level2">
-<h2 data-anchor-id="instructor">Instructor</h2>
-<div class="row mt-4 mb-5">
-  <div class="col-md-3">
-    <img loading="lazy" src="../../../assets/images/stock/terminal-green.webp" alt="Instructor Photo" class="img-fluid rounded">
-  </div>
-  <div class="col-md-9">
-    <h3>David Williams</h3>
-    <p><strong>CHENIST Team</strong></p>
-    <p>David has been using Unix-based systems for over 15 years and specializes in helping beginners overcome their fear of the command line. He has trained hundreds of students and professionals to become confident terminal users.</p>
-    <p>Known for their clear explanations and patient teaching style, David excels at breaking down complex concepts into approachable steps that build confidence and competence.</p>
-  </div>
 </div>
-</section>
-<section id="testimonials" class="level2">
-<h2 data-anchor-id="testimonials">Testimonials</h2>
-<div class="row mt-5">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-body">
-        <p class="font-italic">"I've always been intimidated by the command line, but this session made it approachable and even enjoyable. In just two hours, I went from complete novice to being able to navigate and perform basic tasks confidently."</p>
-        <p class="text-end mb-0"><strong>— Sarah K., Marketing Professional</strong></p>
+<div class="m-s">
+  <div class="ml-content">
+    <div class="ml-card">
+      <h3>Your Instructor</h3>
+      <p><strong>David Williams</strong> — CHENIST Team</p>
+      <p>David has been using Unix-based systems for over 15 years and specializes in helping beginners overcome their fear of the command line. He has trained hundreds of students and professionals to become confident terminal users. Known for their clear explanations and patient teaching style, David excels at breaking down complex concepts into approachable steps that build confidence and competence.</p>
+    </div>
+    <div class="ml-card">
+      <h3>What Participants Say</h3>
+      <p><em>"I've always been intimidated by the command line, but this session made it approachable and even enjoyable. In just two hours, I went from complete novice to being able to navigate and perform basic tasks confidently."</em></p>
+      <p><strong>— Sarah K., Marketing Professional</strong></p>
+    </div>
+    <div class="ml-card">
+      <p><em>"As a computer science student, I knew I needed to learn the command line but kept putting it off. This session was the perfect introduction - practical, hands-on, and focused on the commands I'll actually use daily. Highly recommend!"</em></p>
+      <p><strong>— Alex T., CS Student</strong></p>
+    </div>
+    <h3>Related Offerings</h3>
+    <div class="ml-related">
+      <div class="ml-card">
+        <h4>Tmux Terminal Multiplexer</h4>
+        <p>Learn to manage multiple terminal sessions efficiently</p>
+        <a href="../../../academy/microlearning/tmux/" class="m-bo">Learn More</a>
+      </div>
+      <div class="ml-card">
+        <h4>Linux Administration Fundamentals Training</h4>
+        <p>A 2-day workshop for more in-depth Linux skills</p>
+        <a href="../../../academy/trainings/linux-admin-fundamentals/" class="m-bo">Learn More</a>
+      </div>
+      <div class="ml-card">
+        <h4>Unix/Linux Systems Course</h4>
+        <p>Our comprehensive course for system administrators</p>
+        <a href="../../../academy/courses/unix-linux-administration/" class="m-bo">Learn More</a>
       </div>
     </div>
   </div>
-
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-body">
-        <p class="font-italic">"As a computer science student, I knew I needed to learn the command line but kept putting it off. This session was the perfect introduction - practical, hands-on, and focused on the commands I'll actually use daily. Highly recommend!"</p>
-        <p class="text-end mb-0"><strong>— Alex T., CS Student</strong></p>
-      </div>
-    </div>
-  </div>
 </div>
-</section>
-<section id="related-offerings" class="level2">
-<h2 data-anchor-id="related-offerings">Related Offerings</h2>
-<p>If you’re interested in this microlearning session, you might also consider:</p>
-<ul>
-<li><a href="../../../academy/microlearning/tmux/">Tmux Terminal Multiplexer</a> - Learn to manage multiple terminal sessions efficiently</li>
-<li><a href="../../../academy/trainings/linux-admin-fundamentals/">Linux Administration Fundamentals Training</a> - A 2-day workshop for more in-depth Linux skills</li>
-<li><a href="../../../academy/courses/unix-linux-administration/">Unix/Linux Systems Course</a> - Our comprehensive course for system administrators</li>
-</ul>
 <div class="m-cta">
   <div class="container">
     <h2>Unix Command Line Introduction</h2>
@@ -865,8 +880,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-</section></div>
-
+</div>
 
 
 
