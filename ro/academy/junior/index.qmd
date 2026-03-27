@@ -1,0 +1,253 @@
+---
+title: "Academia Junior"
+title-block-style: none
+subtitle: "Educatie tehnologica pentru copii si adolescenti"
+description: "chen.ist Academia Junior — cursuri de securitate cibernetica, programare, robotica si alfabetizare digitala pentru copii si adolescenti cu varste intre 8-18 ani, oferite in parteneriat cu scoli, ONG-uri si organizatii comunitare."
+from: markdown+raw_html
+page-layout: custom
+format:
+  html:
+    toc: false
+    include-in-header:
+      text: |
+        <style>
+        .m { --c: #F5A623; }
+        .cc-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; max-width: 1000px; margin: 0 auto; }
+        .cc-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+        .cc-card { background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; padding: 2rem; height: 100%; transition: border-color 0.2s, transform 0.2s; }
+        .cc-card:hover { border-color: var(--c); transform: translateY(-2px); }
+        [data-bs-theme="dark"] .cc-card { background: rgba(245,166,35,0.04); border-color: rgba(255,255,255,0.08); }
+        .cc-icon { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: rgba(245,166,35,0.08); border-radius: 10px; margin-bottom: 1rem; }
+        [data-bs-theme="dark"] .cc-icon { background: rgba(245,166,35,0.12); }
+        .cc-icon i { font-size: 1.1rem; color: var(--c); }
+        .cc-card h4 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .cc-card p { font-size: 0.9rem; color: var(--g); margin: 0; line-height: 1.55; }
+        .cc-up-icon { flex-shrink: 0; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: rgba(245,166,35,0.08); border-radius: 12px; }
+        [data-bs-theme="dark"] .cc-up-icon { background: rgba(245,166,35,0.12); }
+        .cc-up-icon i { font-size: 1.2rem; color: var(--c); }
+        .cc-label-sm { font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--c); margin-bottom: 1rem; }
+        @media (max-width: 767px) { .cc-grid-2 { grid-template-columns: 1fr; } .cc-grid-3 { grid-template-columns: 1fr; } }
+        </style>
+---
+
+```{=html}
+<div class="m">
+
+<!-- HERO -->
+<div class="ev-hero" style="min-height:65vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/hackathon-team.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Varste 8–18</div>
+    <h1>Academia<br>Junior</h1>
+    <p>Securitate cibernetica, programare, robotica si alfabetizare digitala pentru copii si adolescenti. Construit impreuna cu organizatii partenere care se gandesc la generatia urmatoare.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="#courses" class="ev-btn" style="background:#F5A623;">Vezi cursurile</a>
+      <a href="#partners" class="ev-btn-ghost">Devino partener</a>
+    </div>
+  </div>
+</div>
+
+<!-- PHILOSOPHY -->
+<div class="m-bg" style="padding:6rem 0;">
+  <div class="container" style="max-width:800px; text-align:center;">
+    <div class="cc-label-sm">Abordarea</div>
+    <h2 style="font-size:2rem; line-height:1.3; margin-bottom:1.5rem;">Nu predam direct copiilor.<br>Construim programe cu partenerii care o fac.</h2>
+    <p style="color:var(--g); font-size:1.05rem; line-height:1.8; max-width:650px; margin:0 auto;">
+      Scolile, ONG-urile, bibliotecile si centrele comunitare isi cunosc cel mai bine copiii. Noi furnizam curriculum-ul, materialele de formare si suportul pentru instructori — partenerii nostri le livreaza local. Astfel, fiecare program al Academiei Junior este adaptat comunitatii sale, mentinand in acelasi timp aceeasi calitate si standarde.
+    </p>
+  </div>
+</div>
+
+<!-- COURSES FOR KIDS -->
+<div class="m-s" id="courses" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Cursuri pentru copii si adolescenti</h2>
+    <p class="sub">Adaptate varstei, practice si concepute sa starneasca curiozitatea.</p>
+    <div class="cc-grid-3">
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-shield-check"></i></div>
+        <h4>Igiena cibernetica pentru copii</h4>
+        <p>Parole sigure, recunoasterea inselatoriilor, confidentialitate online si utilizarea responsabila a dispozitivelor. Varste 8–12. Activitati distractive, fara lectii plictisitoare.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-lock"></i></div>
+        <h4>Bazele securitatii cibernetice</h4>
+        <p>Cum functioneaza internetul, ce fac hackerii, protejarea conturilor tale si introducere in hacking etic. Varste 13–18.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-code-slash"></i></div>
+        <h4>Primii pasi in programare</h4>
+        <p>Scratch, bazele Python, construirea de jocuri si site-uri web simple. Programare vizuala pentru cei mici, bazata pe text pentru adolescenti.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-robot"></i></div>
+        <h4>Robotica si hardware</h4>
+        <p>Arduino, Raspberry Pi, senzori, motoare si construirea de lucruri care se misca. De la LED-uri care clipesc la roboti autonomi.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-phone"></i></div>
+        <h4>Alfabetizare digitala</h4>
+        <p>Gandire critica online, alfabetizare media, cetatenie digitala si intelegerea modului in care tehnologia ne modeleaza lumea.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-trophy"></i></div>
+        <h4>Pregatire pentru competitii</h4>
+        <p>Pregatirea echipelor pentru provocari CTF, competitii de robotica, NASA SpaceApps Junior si targuri stiintifice.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Cum functioneaza</h2>
+    <p class="sub">Trei pasi simpli de la idee la program functional.</p>
+    <div style="max-width:750px; margin:0 auto;">
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-1-circle"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Partenerul se inscrie</span></h4>
+          <div class="up-meta">Scolile, ONG-urile, bibliotecile sau companiile ne contacteaza. Discutam obiectivele, publicul si formatul. Fara costuri initiale pentru partenerii educationali.</div>
+        </div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-2-circle"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Configuram programul</span></h4>
+          <div class="up-meta">Furnizam curriculum-ul, formarea instructorilor, materialele si accesul la platforma. Pregatim profesorii tai sau trimitem instructorii nostri.</div>
+        </div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-3-circle"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Partenerul livreaza local</span></h4>
+          <div class="up-meta">Organizatia ta desfasoara programul cu copiii tai, dupa programul tau, in spatiul tau. Noi oferim suport cu actualizari de continut si mentorat pentru instructori.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE ROW -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <div class="m-r">
+      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Sesiune Academia Junior"></div>
+      <div class="m-rt">
+        <h2>Abilitati reale.<br>Nu timp pe ecran.</h2>
+        <p>Fiecare curs este 80% practic. Copiii construiesc lucruri — site-uri web, roboti, instrumente de securitate, jocuri. Lucreaza in echipe, isi prezinta proiectele si invata facand. Fara vizionare pasiva de videoclipuri. Fara chestionare cu raspunsuri multiple. Proiecte reale cu rezultate reale pe care le pot arata prietenilor si familiei.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT PARTNERS GET -->
+<div class="m-bg" id="partners" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Ce primesc partenerii</h2>
+    <p class="sub">Tot ce ai nevoie pentru a derula un program al Academiei Junior.</p>
+    <div class="cc-grid-2">
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-book"></i></div>
+        <h4>Curriculum complet</h4>
+        <p>Planuri de lectie, prezentari, exercitii si grile de evaluare pentru fiecare curs. Actualizat in fiecare semestru.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-person-video3"></i></div>
+        <h4>Formarea instructorilor</h4>
+        <p>Pregatim profesorii tai sa livreze materialul cu incredere. Program de certificare inclus. Mentorat continuu.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-laptop"></i></div>
+        <h4>Acces la platforma</h4>
+        <p>Elevii primesc conturi pe platforma noastra de invatare cu exercitii interactive, urmarirea progresului si certificate.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-box-seam"></i></div>
+        <h4>Kituri hardware</h4>
+        <p>Arduino, Raspberry Pi si kituri de senzori disponibile pentru cursurile de robotica. Program de imprumut pentru partenerii care au nevoie.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-trophy"></i></div>
+        <h4>Suport pentru competitii</h4>
+        <p>Ajutor in pregatirea echipelor de elevi pentru CTF-uri, competitii de robotica si hackathoane. Mentori si resurse de practica.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-globe2"></i></div>
+        <h4>Retea</h4>
+        <p>Conecteaza-te cu alti parteneri ai Academiei Junior. Impartaseste experiente, co-organizeaza evenimente si invata unii de la altii.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHO CAN PARTNER -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Cine poate fi partener</h2>
+    <p class="sub">Orice organizatie care lucreaza cu copii si adolescenti.</p>
+    <div style="max-width:750px; margin:0 auto;">
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-mortarboard"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Scoli</span></h4>
+          <div class="up-meta">Cluburi STEM extracurriculare, programe after-school, cursuri optionale. Ne adaptam la programul si grupa ta de varsta.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-heart"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>ONG-uri si nonprofit-uri</span></h4>
+          <div class="up-meta">Programe pentru tineri, initiative de alfabetizare digitala, imputernicirea comunitatii. Subventionat sau gratuit pentru organizatiile eligibile.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-building"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Biblioteci si centre comunitare</span></h4>
+          <div class="up-meta">Ateliere publice, programe de vara, spatii de creatie. Adu educatia tehnologica in comunitatea ta.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-briefcase"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Companii (CSR)</span></h4>
+          <div class="up-meta">Sponsorizeaza programe ale Academiei Junior in scolile locale. Angajatii voluntari pot co-preda. Excelent pentru raportarea CSR.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="m-bg" style="padding:5rem 0;">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn" style="color:#F5A623;">8–18</div><div class="m-nl">Interval de varsta</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">6</div><div class="m-nl">Cursuri</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">80%</div><div class="m-nl">Practic</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">Gratuit</div><div class="m-nl">Pentru organizatiile eligibile</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Adu Academia Junior<br>in organizatia ta</h2>
+    <p>Hai sa discutam cum putem construi impreuna un program pentru copiii si adolescentii tai.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="/ro/academy/partnerships.html" class="m-b" style="background:#F5A623;"><i class="bi bi-handshake me-2"></i>Devino partener</a>
+      <a href="/ro/booking/" class="m-bo" style="border-color:#F5A623; color:#F5A623;">Programeaza un apel</a>
+    </div>
+  </div>
+</div>
+
+</div>
+```

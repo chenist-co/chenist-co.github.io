@@ -1167,68 +1167,24 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
       </div>
 
-      <!-- Right: form -->
-      <div class="m-form">
-        <div class="cc-tier" style="padding:2.5rem;">
-          <h3 style="font-size:1.25rem; font-weight:700; margin-bottom:0.35rem; text-align:center;">Apply now</h3>
-          <p style="font-size:0.85rem; color:#86868b; text-align:center; margin-bottom:1.75rem;">We'll review your application and respond within 48 hours.</p>
-          <form action="https://formspree.io/f/mpwkaqev" method="POST">
-            <div class="fr">
-              <div class="fg">
-                <label>Your Name *</label>
-                <input type="text" name="name" required="" placeholder="Full name">
-              </div>
-              <div class="fg">
-                <label>Email *</label>
-                <input type="email" name="email" required="" placeholder="your@email.com">
-              </div>
-            </div>
-            <div class="fg">
-              <label>I want to *</label>
-              <select name="application_type" required="">
-                <option value="">Select...</option>
-                <option value="individual">Join as individual member</option>
-                <option value="student">Join as student member</option>
-                <option value="sponsor">Sponsor a membership</option>
-                <option value="organization">Start a chapter in my organization</option>
-              </select>
-            </div>
-            <div class="fg">
-              <label>Organization (if applicable)</label>
-              <input type="text" name="organization" placeholder="Company, school, or organization name">
-            </div>
-            <div class="fr">
-              <div class="fg">
-                <label>Organization type</label>
-                <select name="org_type">
-                  <option value="">Select...</option>
-                  <option value="company">Company</option>
-                  <option value="school">School (K-12)</option>
-                  <option value="university">University</option>
-                  <option value="ngo">NGO / Nonprofit</option>
-                  <option value="community">Community org</option>
-                  <option value="personal">Personal / N/A</option>
-                </select>
-              </div>
-              <div class="fg">
-                <label>City / Country *</label>
-                <input type="text" name="location" required="" placeholder="e.g. Craiova, Romania">
-              </div>
-            </div>
-            <div class="fg">
-              <label>Tell us about yourself *</label>
-              <textarea name="message" rows="3" required="" placeholder="What do you build? What are you curious about? Why do you want to join?"></textarea>
-            </div>
-            <input type="hidden" name="_subject" value="Computer Club Application">
-            <input type="hidden" name="_source" value="computerclub-apply">
-            <input type="text" name="_gotcha" style="display:none">
-            <div class="fc">
-              <input type="checkbox" required="">
-              <span>I agree to the <a href="../../../privacy.html" target="_blank">privacy policy</a> *</span>
-            </div>
-            <button type="submit" style="background:#F5A623;"><i class="bi bi-send me-2"></i>Submit application</button>
-          </form>
+      <!-- Right: Bigin web form embed -->
+      <!-- ============================================================
+           HOW TO SET UP:
+           1. In Bigin → Settings → Webforms → Create New
+           2. Add fields: First Name, Last Name, Email, Phone, Company,
+              Description + any custom fields (Application Type, City)
+           3. Set the pipeline to "Academy Members", stage "Applied"
+           4. Publish → copy the iframe URL
+           5. Replace BIGIN_FORM_URL below with your iframe URL
+           ============================================================ -->
+      <div>
+        <div class="cc-tier" style="padding:0; overflow:hidden; min-height:600px;">
+          <iframe src="BIGIN_FORM_URL" style="width:100%; min-height:600px; border:none;" loading="lazy" title="Computer Club Application">
+          </iframe>
         </div>
+        <p style="font-size:0.8rem; color:var(--g); text-align:center; margin-top:1rem;">
+          Having trouble with the form? <a href="mailto:academy@chen.ist" style="color:var(--c);">Email us directly</a>
+        </p>
       </div>
 
     </div>

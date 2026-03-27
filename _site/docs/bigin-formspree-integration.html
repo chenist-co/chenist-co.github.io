@@ -1,0 +1,2225 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>bigin-formspree-integration – chen.ist</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/images/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-eabcd028e0a458e90c00feda8ad1c1c2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a592c5a32ddb2bbfd9fa55d2db6a7c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-29f4aea09a2439b849a9d23a02a83b44.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-a592c5a32ddb2bbfd9fa55d2db6a7c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<meta property="og:title" content="chen.ist">
+<meta property="og:description" content="Innovative technology &amp; education">
+<meta property="og:image" content="https://chen.ist/docs/assets/images/og-image.png">
+<meta property="og:site_name" content="chen.ist">
+<meta name="twitter:title" content="chen.ist">
+<meta name="twitter:description" content="Innovative technology &amp; education">
+<meta name="twitter:image" content="https://chen.ist/docs/assets/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+</head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script><a href="#main-content" class="skip-link">Skip to main content</a>
+<style>
+/* Corporate navbar — inspired by CrowdStrike/SentinelOne */
+.navbar {
+  background: #0a0a0a !important;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 0 !important;
+  font-size: 0.85rem;
+  min-height: 60px;
+}
+.navbar-container { height: 60px; }
+.navbar-brand-container { display: flex; align-items: center; }
+.navbar-brand { display: flex; align-items: center; gap: 0.5rem; }
+.navbar-brand .navbar-title {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-family: 'Source Code Pro', monospace;
+}
+.navbar-brand .brand-dot { color: #81BD4A; }
+
+/* Nav links — normal case like CrowdStrike, not uppercase */
+.navbar .nav-link {
+  color: rgba(255,255,255,0.7) !important;
+  font-size: 0.85rem !important;
+  font-weight: 400;
+  padding: 0.5rem 0.9rem !important;
+  transition: color 0.15s;
+}
+.navbar .nav-link:hover { color: #fff !important; }
+.navbar .nav-link.active { color: #81BD4A !important; }
+
+/* CTA button in navbar — like SentinelOne "Get Started" */
+.navbar .navbar-cta {
+  display: inline-block;
+  padding: 0.4rem 1.25rem;
+  background: #81BD4A;
+  color: #fff !important;
+  border-radius: 980px;
+  font-size: 0.8rem !important;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s;
+  margin-left: 0.5rem;
+}
+.navbar .navbar-cta:hover { background: #6BA33A; color: #fff !important; text-decoration: none; }
+
+/* Dropdowns */
+.navbar .dropdown-menu {
+  background: #0a0a0a;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 0.5rem;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+.navbar .dropdown-item {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.83rem;
+  border-radius: 6px;
+  padding: 0.45rem 0.85rem;
+}
+.navbar .dropdown-item:hover {
+  background: rgba(129,189,74,0.08);
+  color: #81BD4A;
+}
+
+/* Search + theme toggle */
+.navbar .quarto-navigation-tool, .navbar .quarto-color-scheme-toggle { color: rgba(255,255,255,0.4) !important; }
+.navbar .quarto-navigation-tool:hover, .navbar .quarto-color-scheme-toggle:hover { color: #81BD4A !important; }
+
+/* Mobile */
+@media (max-width: 991px) {
+  .navbar .nav-link { font-size: 0.82rem !important; }
+}
+@media (max-width: 767.98px) {
+  .navbar { min-height: 54px !important; }
+  .navbar-brand .navbar-title { font-size: 0.95rem; }
+  .navbar .navbar-collapse {
+    background: #0a0a0a;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 1.25rem;
+    margin-top: 0.75rem;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    max-height: 75vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .navbar .nav-link {
+    font-size: 0.9rem !important;
+    padding: 0.65rem 0.75rem !important;
+    border-radius: 10px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .navbar .nav-link:active { background: rgba(129,189,74,0.08); }
+  .navbar .dropdown-menu {
+    border: none !important;
+    padding: 0 0 0 1rem !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+  .navbar .dropdown-item {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+  }
+  .navbar .navbar-cta {
+    display: block;
+    text-align: center;
+    margin: 0.75rem 0 0;
+    padding: 0.75rem 1.5rem;
+    border-radius: 14px;
+    min-height: 44px;
+  }
+  .navbar-toggler { border: none !important; padding: 0.5rem; }
+  .navbar-toggler:focus { box-shadow: none !important; }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var navbarBrand = document.querySelector('.navbar-brand');
+  if (navbarBrand) {
+    var titleSpan = document.createElement('span');
+    titleSpan.className = 'navbar-title';
+    titleSpan.textContent = 'CHEN';
+    var dot = document.createElement('span');
+    dot.className = 'brand-dot';
+    dot.textContent = '.';
+    var ist = document.createTextNode('IST');
+    titleSpan.appendChild(dot);
+    titleSpan.appendChild(ist);
+    navbarBrand.appendChild(titleSpan);
+  }
+
+  // Add CTA button to navbar (language-aware)
+  var navRight = document.querySelector('.navbar-nav.ms-auto');
+  if (navRight) {
+    var langPrefix = '';
+    var langMatch = window.location.pathname.match(/^\/(ro|sv|de)\//);
+    if (langMatch) langPrefix = '/' + langMatch[1];
+    var ctaLi = document.createElement('li');
+    ctaLi.className = 'nav-item';
+    var ctaLink = document.createElement('a');
+    ctaLink.className = 'nav-link navbar-cta';
+    ctaLink.href = langPrefix + '/booking/';
+    var ctaLabels = { ro: 'Programează', sv: 'Boka Samtal', de: 'Gespräch Buchen' };
+    ctaLink.textContent = langMatch ? (ctaLabels[langMatch[1]] || 'Book a Call') : 'Book a Call';
+    ctaLi.appendChild(ctaLink);
+    navRight.appendChild(ctaLi);
+  }
+});
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<script defer="" data-domain="chen.ist" src="https://plausible.io/js/script.js"></script>
+<script>
+(function() {
+  var path = window.location.pathname;
+  // Only redirect on English pages (no language prefix)
+  if (path.match(/^\/(ro|sv|de)\//)) return;
+  // Don't redirect if user explicitly chose English
+  if (localStorage.getItem('chen-lang-choice') === 'en') return;
+  // Don't redirect if already redirected this session
+  if (sessionStorage.getItem('chen-lang-redirected')) return;
+  // Detect browser language
+  var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  var target = null;
+  if (lang.startsWith('ro')) target = 'ro';
+  else if (lang.startsWith('sv')) target = 'sv';
+  else if (lang.startsWith('de')) target = 'de';
+  if (target) {
+    sessionStorage.setItem('chen-lang-redirected', '1');
+    window.location.href = '/' + target + path;
+  }
+})();
+</script>
+<link rel="preload" href="../assets/images/stock/network-closeup.webp" as="image" type="image/webp">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" as="style">
+<meta name="view-transition" content="same-origin">
+<noscript><style>.m-s,.m-bg,.m-cta,.m-r,.m-n,.hp-sec,.hp-stats,.ev-card,.ev-past,.m-t{opacity:1!important;transform:none!important;}</style></noscript>
+<link rel="dns-prefetch" href="https://cal.com">
+<link rel="dns-prefetch" href="https://app.cal.com">
+<link rel="preconnect" href="https://cal.com" crossorigin="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "chen.ist",
+  "url": "https://chen.ist",
+  "logo": "https://chen.ist/assets/images/logo-light.svg",
+  "description": "Digital infrastructure, cybersecurity, cloud services, and technology education for modern organizations.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Str. Filantropiei, 1-3",
+    "addressLocality": "Craiova",
+    "postalCode": "200143",
+    "addressCountry": "RO"
+  },
+  "email": "office@chen.ist",
+  "sameAs": [
+    "https://github.com/chenist",
+    "https://linkedin.com/in/chenistsec",
+    "https://twitter.com/chenistsec"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Infrastructure", "url": "https://chen.ist/digital/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "NIS2 Compliance", "url": "https://chen.ist/services/nis2/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cybersecurity", "url": "https://chen.ist/services/cybersecurity/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cloud Services", "url": "https://chen.ist/services/cloud/"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digital Resilience", "url": "https://chen.ist/services/digital-resilience/"}}
+    ]
+  }
+}
+</script>
+
+
+<link rel="stylesheet" href="../assets/css/main.min.css">
+
+
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo light-content">
+    <img src="../assets/images/logo-light.svg" alt="chen.ist" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-services" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Services</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-services">    
+        <li>
+    <a class="dropdown-item" href="../services/index.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../security/index.html">
+ <span class="dropdown-text">Security</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../digital/index.html">
+ <span class="dropdown-text">Digital Infrastructure</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../services/nis2/index.html">
+ <span class="dropdown-text">NIS2 Compliance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../services/cybersecurity/index.html">
+ <span class="dropdown-text">Cybersecurity</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../services/cloud/index.html">
+ <span class="dropdown-text">Cloud Services</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../services/digital-resilience/index.html">
+ <span class="dropdown-text">Digital Resilience</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../services/gdpr/index.html">
+ <span class="dropdown-text">GDPR Compliance</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-academy" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Academy</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-academy">    
+        <li>
+    <a class="dropdown-item" href="../academy/overview.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/courses.html">
+ <span class="dropdown-text">Courses</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/trainings.html">
+ <span class="dropdown-text">Trainings</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/microlearning.html">
+ <span class="dropdown-text">Microlearning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/programs/index.html">
+ <span class="dropdown-text">Programs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/events.html">
+ <span class="dropdown-text">Events</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/webinars.html">
+ <span class="dropdown-text">Webinars</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/computerclub.html">
+ <span class="dropdown-text">Computer Club</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../academy/partnerships.html">
+ <span class="dropdown-text">Partnerships</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Resources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
+        <li>
+    <a class="dropdown-item" href="../resources/index.html">
+ <span class="dropdown-text">All Resources</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../resources/tools/index.html">
+ <span class="dropdown-text">Tools</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../compare.html">
+ <span class="dropdown-text">Why Open Source</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../faq.html">
+ <span class="dropdown-text">FAQ</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../about/index.html">
+ <span class="dropdown-text">About</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/team.html">
+ <span class="dropdown-text">Team</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/csr.html">
+ <span class="dropdown-text">CSR</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/community.html">
+ <span class="dropdown-text">Community</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">🌐</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-">    
+        <li>
+    <a class="dropdown-item" href="../index.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ro/index.html">
+ <span class="dropdown-text">Română</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../sv/index.html">
+ <span class="dropdown-text">Svenska</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../de/index.html">
+ <span class="dropdown-text">Deutsch</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#bigin-crm-formspree-integration-for-chen.ist" id="toc-bigin-crm-formspree-integration-for-chen.ist" class="nav-link active" data-scroll-target="#bigin-crm-formspree-integration-for-chen.ist">Bigin CRM + Formspree Integration for chen.ist</a>
+  <ul class="collapse">
+  <li><a href="#architecture" id="toc-architecture" class="nav-link" data-scroll-target="#architecture">Architecture</a></li>
+  <li><a href="#step-1-bigin-crm-setup" id="toc-step-1-bigin-crm-setup" class="nav-link" data-scroll-target="#step-1-bigin-crm-setup">Step 1: Bigin CRM Setup</a>
+  <ul class="collapse">
+  <li><a href="#create-account" id="toc-create-account" class="nav-link" data-scroll-target="#create-account">1.1 Create Account</a></li>
+  <li><a href="#create-pipelines" id="toc-create-pipelines" class="nav-link" data-scroll-target="#create-pipelines">1.2 Create Pipelines</a></li>
+  <li><a href="#add-custom-fields" id="toc-add-custom-fields" class="nav-link" data-scroll-target="#add-custom-fields">1.3 Add Custom Fields</a></li>
+  <li><a href="#register-oauth-application" id="toc-register-oauth-application" class="nav-link" data-scroll-target="#register-oauth-application">1.4 Register OAuth Application</a></li>
+  </ul></li>
+  <li><a href="#step-2-deploy-the-cloudflare-worker" id="toc-step-2-deploy-the-cloudflare-worker" class="nav-link" data-scroll-target="#step-2-deploy-the-cloudflare-worker">Step 2: Deploy the Cloudflare Worker</a>
+  <ul class="collapse">
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">2.1 Prerequisites</a></li>
+  <li><a href="#navigate-to-worker-directory" id="toc-navigate-to-worker-directory" class="nav-link" data-scroll-target="#navigate-to-worker-directory">2.2 Navigate to Worker Directory</a></li>
+  <li><a href="#set-secrets" id="toc-set-secrets" class="nav-link" data-scroll-target="#set-secrets">2.3 Set Secrets</a></li>
+  <li><a href="#configure-region" id="toc-configure-region" class="nav-link" data-scroll-target="#configure-region">2.4 Configure Region</a></li>
+  <li><a href="#deploy" id="toc-deploy" class="nav-link" data-scroll-target="#deploy">2.5 Deploy</a></li>
+  <li><a href="#set-up-custom-domain-optional-but-recommended" id="toc-set-up-custom-domain-optional-but-recommended" class="nav-link" data-scroll-target="#set-up-custom-domain-optional-but-recommended">2.6 Set Up Custom Domain (optional but recommended)</a></li>
+  </ul></li>
+  <li><a href="#step-3-connect-formspree-webhook" id="toc-step-3-connect-formspree-webhook" class="nav-link" data-scroll-target="#step-3-connect-formspree-webhook">Step 3: Connect Formspree Webhook</a>
+  <ul class="collapse">
+  <li><a href="#get-the-webhook-url" id="toc-get-the-webhook-url" class="nav-link" data-scroll-target="#get-the-webhook-url">3.1 Get the Webhook URL</a></li>
+  <li><a href="#configure-in-formspree" id="toc-configure-in-formspree" class="nav-link" data-scroll-target="#configure-in-formspree">3.2 Configure in Formspree</a></li>
+  <li><a href="#webhook-payload-format" id="toc-webhook-payload-format" class="nav-link" data-scroll-target="#webhook-payload-format">3.3 Webhook Payload Format</a></li>
+  </ul></li>
+  <li><a href="#step-4-how-the-routing-works" id="toc-step-4-how-the-routing-works" class="nav-link" data-scroll-target="#step-4-how-the-routing-works">Step 4: How the Routing Works</a>
+  <ul class="collapse">
+  <li><a href="#adding-new-form-sources" id="toc-adding-new-form-sources" class="nav-link" data-scroll-target="#adding-new-form-sources">Adding New Form Sources</a></li>
+  </ul></li>
+  <li><a href="#step-5-field-mapping-reference" id="toc-step-5-field-mapping-reference" class="nav-link" data-scroll-target="#step-5-field-mapping-reference">Step 5: Field Mapping Reference</a>
+  <ul class="collapse">
+  <li><a href="#form-field-bigin-contact-field" id="toc-form-field-bigin-contact-field" class="nav-link" data-scroll-target="#form-field-bigin-contact-field">Form Field → Bigin Contact Field</a></li>
+  <li><a href="#upsert-behavior" id="toc-upsert-behavior" class="nav-link" data-scroll-target="#upsert-behavior">Upsert Behavior</a></li>
+  </ul></li>
+  <li><a href="#step-6-testing" id="toc-step-6-testing" class="nav-link" data-scroll-target="#step-6-testing">Step 6: Testing</a>
+  <ul class="collapse">
+  <li><a href="#test-the-worker-directly" id="toc-test-the-worker-directly" class="nav-link" data-scroll-target="#test-the-worker-directly">6.1 Test the Worker Directly</a></li>
+  <li><a href="#test-pipeline-creation" id="toc-test-pipeline-creation" class="nav-link" data-scroll-target="#test-pipeline-creation">6.2 Test Pipeline Creation</a></li>
+  <li><a href="#verify-in-bigin" id="toc-verify-in-bigin" class="nav-link" data-scroll-target="#verify-in-bigin">6.3 Verify in Bigin</a></li>
+  <li><a href="#end-to-end-test" id="toc-end-to-end-test" class="nav-link" data-scroll-target="#end-to-end-test">6.4 End-to-End Test</a></li>
+  </ul></li>
+  <li><a href="#step-7-monitoring-troubleshooting" id="toc-step-7-monitoring-troubleshooting" class="nav-link" data-scroll-target="#step-7-monitoring-troubleshooting">Step 7: Monitoring &amp; Troubleshooting</a>
+  <ul class="collapse">
+  <li><a href="#worker-logs" id="toc-worker-logs" class="nav-link" data-scroll-target="#worker-logs">Worker Logs</a></li>
+  <li><a href="#common-issues" id="toc-common-issues" class="nav-link" data-scroll-target="#common-issues">Common Issues</a></li>
+  <li><a href="#rate-limits" id="toc-rate-limits" class="nav-link" data-scroll-target="#rate-limits">Rate Limits</a></li>
+  </ul></li>
+  <li><a href="#cost-summary" id="toc-cost-summary" class="nav-link" data-scroll-target="#cost-summary">Cost Summary</a></li>
+  <li><a href="#files-reference" id="toc-files-reference" class="nav-link" data-scroll-target="#files-reference">Files Reference</a></li>
+  <li><a href="#form-_source-values-in-the-website" id="toc-form-_source-values-in-the-website" class="nav-link" data-scroll-target="#form-_source-values-in-the-website">Form <code>_source</code> Values in the Website</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+
+<section id="bigin-crm-formspree-integration-for-chen.ist" class="level1">
+<h1>Bigin CRM + Formspree Integration for chen.ist</h1>
+<p>This document covers the complete setup for connecting Zoho Bigin CRM to the chen.ist website via Formspree webhooks and a Cloudflare Worker bridge.</p>
+<section id="architecture" class="level2">
+<h2 class="anchored" data-anchor-id="architecture">Architecture</h2>
+<pre><code>┌──────────────┐     ┌───────────┐     ┌─────────────────────┐     ┌───────────┐
+│  chen.ist    │     │ Formspree │     │ Cloudflare Worker   │     │ Zoho      │
+│  static site │────▶│ (form     │────▶│ (bigin-bridge)      │────▶│ Bigin CRM │
+│  forms       │POST │  handler) │POST │ api.chen.ist        │API  │           │
+└──────────────┘     └───────────┘     └─────────────────────┘     └───────────┘
+                      keeps working      routes by _source          contacts +
+                      as backup          upserts contacts           pipelines</code></pre>
+<p><strong>Why this architecture:</strong> - Website stays static (no backend, no secrets exposed) - Formspree keeps working as before (form submissions still arrive in your inbox) - Worker handles CRM sync independently (if it fails, forms still work) - Bigin manages the lifecycle (pipelines, stages, follow-ups)</p>
+<hr>
+</section>
+<section id="step-1-bigin-crm-setup" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-bigin-crm-setup">Step 1: Bigin CRM Setup</h2>
+<section id="create-account" class="level3">
+<h3 class="anchored" data-anchor-id="create-account">1.1 Create Account</h3>
+<ol type="1">
+<li>Go to <a href="https://bigin.com">bigin.com</a> and sign up for the <strong>Free plan</strong>
+<ul>
+<li>1 user, 500 records, 5,000 API credits/day</li>
+</ul></li>
+<li>Choose the <strong>EU data center</strong> (accounts.zoho.eu) since chen.ist operates in Europe</li>
+<li>Complete the onboarding wizard</li>
+</ol>
+</section>
+<section id="create-pipelines" class="level3">
+<h3 class="anchored" data-anchor-id="create-pipelines">1.2 Create Pipelines</h3>
+<p>In Bigin, go to <strong>Settings → Pipelines</strong> and create:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 29%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pipeline</th>
+<th>Stages</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Academy Members</td>
+<td>Applied → Reviewed → Accepted → Active → Renewed</td>
+<td>Computer Club membership applications</td>
+</tr>
+<tr class="even">
+<td>Event Registrations</td>
+<td>Registered → Confirmed → Attended</td>
+<td>Hackathons, summer school, workshops</td>
+</tr>
+<tr class="odd">
+<td>Course Inquiries</td>
+<td>Inquiry → Contacted → Enrolled</td>
+<td>Training &amp; course interest</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="add-custom-fields" class="level3">
+<h3 class="anchored" data-anchor-id="add-custom-fields">1.3 Add Custom Fields</h3>
+<p>Go to <strong>Settings → Modules → Contacts → Fields</strong> and add:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 16%">
+<col style="width: 21%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field Name</th>
+<th>Type</th>
+<th>Values</th>
+<th>Maps From</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Source</td>
+<td>Single Line</td>
+<td>—</td>
+<td>Formspree <code>_source</code> field</td>
+</tr>
+<tr class="even">
+<td>Application_Type</td>
+<td>Pick List</td>
+<td>individual, student, sponsor, organization</td>
+<td>Form <code>application_type</code></td>
+</tr>
+<tr class="odd">
+<td>Organization_Type</td>
+<td>Pick List</td>
+<td>company, school, university, ngo, community, personal</td>
+<td>Form <code>org_type</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p><strong>Note:</strong> <code>Company</code>, <code>Email</code>, <code>Phone</code>, <code>Mailing_City</code>, and <code>Description</code> are built-in Bigin fields — no need to create them.</p>
+</blockquote>
+</section>
+<section id="register-oauth-application" class="level3">
+<h3 class="anchored" data-anchor-id="register-oauth-application">1.4 Register OAuth Application</h3>
+<ol type="1">
+<li>Go to <a href="https://api-console.zoho.eu/">Zoho API Console</a> (EU domain)</li>
+<li>Click <strong>Add Client</strong> → choose <strong>Self Client</strong></li>
+<li>Copy your <strong>Client ID</strong> and <strong>Client Secret</strong></li>
+<li>Generate a grant token:
+<ul>
+<li>Scope: <code>ZohoBigin.modules.ALL,ZohoBigin.settings.ALL</code></li>
+<li>Time duration: 10 minutes</li>
+<li>Description: <code>bigin-bridge worker</code></li>
+</ul></li>
+<li>Click <strong>Create</strong> — copy the generated code</li>
+<li>Exchange the code for a refresh token:</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-X</span> POST <span class="st">"https://accounts.zoho.eu/oauth/v2/token"</span> <span class="dt">\</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">-d</span> <span class="st">"grant_type=authorization_code"</span> <span class="dt">\</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">-d</span> <span class="st">"client_id=YOUR_CLIENT_ID"</span> <span class="dt">\</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">-d</span> <span class="st">"client_secret=YOUR_CLIENT_SECRET"</span> <span class="dt">\</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">-d</span> <span class="st">"code=GENERATED_CODE"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Response:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"access_token"</span><span class="fu">:</span> <span class="st">"..."</span><span class="fu">,</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"refresh_token"</span><span class="fu">:</span> <span class="st">"1000.xxxx.xxxx"</span><span class="fu">,</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"expires_in"</span><span class="fu">:</span> <span class="dv">3600</span><span class="fu">,</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"token_type"</span><span class="fu">:</span> <span class="st">"Bearer"</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="7" type="1">
+<li><strong>Save the <code>refresh_token</code></strong> — you’ll need it for the Worker. The refresh token does not expire unless you revoke it.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="step-2-deploy-the-cloudflare-worker" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-deploy-the-cloudflare-worker">Step 2: Deploy the Cloudflare Worker</h2>
+<section id="prerequisites" class="level3">
+<h3 class="anchored" data-anchor-id="prerequisites">2.1 Prerequisites</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-g</span> wrangler</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">wrangler</span> login</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="navigate-to-worker-directory" class="level3">
+<h3 class="anchored" data-anchor-id="navigate-to-worker-directory">2.2 Navigate to Worker Directory</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> workers/bigin-bridge</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="set-secrets" class="level3">
+<h3 class="anchored" data-anchor-id="set-secrets">2.3 Set Secrets</h3>
+<p>These are stored securely in Cloudflare — never in code or git:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">wrangler</span> secret put BIGIN_CLIENT_ID</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># paste your Client ID, press Enter</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ex">wrangler</span> secret put BIGIN_CLIENT_SECRET</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># paste your Client Secret, press Enter</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="ex">wrangler</span> secret put BIGIN_REFRESH_TOKEN</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># paste your refresh token, press Enter</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="configure-region" class="level3">
+<h3 class="anchored" data-anchor-id="configure-region">2.4 Configure Region</h3>
+<p>Edit <code>wrangler.toml</code> if your Bigin account is NOT on the EU data center:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 39%">
+<col style="width: 30%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data Center</th>
+<th>API Base</th>
+<th>Auth URL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>EU</td>
+<td><code>https://www.zohoapis.eu/bigin/v2</code></td>
+<td><code>https://accounts.zoho.eu/oauth/v2/token</code></td>
+</tr>
+<tr class="even">
+<td>US</td>
+<td><code>https://www.zohoapis.com/bigin/v2</code></td>
+<td><code>https://accounts.zoho.com/oauth/v2/token</code></td>
+</tr>
+<tr class="odd">
+<td>IN</td>
+<td><code>https://www.zohoapis.in/bigin/v2</code></td>
+<td><code>https://accounts.zoho.in/oauth/v2/token</code></td>
+</tr>
+<tr class="even">
+<td>AU</td>
+<td><code>https://www.zohoapis.com.au/bigin/v2</code></td>
+<td><code>https://accounts.zoho.com.au/oauth/v2/token</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="deploy" class="level3">
+<h3 class="anchored" data-anchor-id="deploy">2.5 Deploy</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">wrangler</span> deploy</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Output:</p>
+<pre><code>Published bigin-bridge (x.xx sec)
+  https://bigin-bridge.YOUR-SUBDOMAIN.workers.dev</code></pre>
+</section>
+<section id="set-up-custom-domain-optional-but-recommended" class="level3">
+<h3 class="anchored" data-anchor-id="set-up-custom-domain-optional-but-recommended">2.6 Set Up Custom Domain (optional but recommended)</h3>
+<p>In Cloudflare dashboard:</p>
+<ol type="1">
+<li>Go to <strong>Workers &amp; Pages → bigin-bridge → Settings → Triggers</strong></li>
+<li>Add Custom Domain: <code>api.chen.ist</code></li>
+<li>Or add Route: <code>api.chen.ist/webhook/*</code> → <code>bigin-bridge</code></li>
+</ol>
+<p>DNS record (if using custom domain):</p>
+<pre><code>api.chen.ist    CNAME    bigin-bridge.YOUR-SUBDOMAIN.workers.dev    Proxied</code></pre>
+<hr>
+</section>
+</section>
+<section id="step-3-connect-formspree-webhook" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-connect-formspree-webhook">Step 3: Connect Formspree Webhook</h2>
+<section id="get-the-webhook-url" class="level3">
+<h3 class="anchored" data-anchor-id="get-the-webhook-url">3.1 Get the Webhook URL</h3>
+<p>Your Worker endpoint is:</p>
+<pre><code>https://api.chen.ist/webhook/formspree</code></pre>
+<p>Or if not using custom domain:</p>
+<pre><code>https://bigin-bridge.YOUR-SUBDOMAIN.workers.dev/webhook/formspree</code></pre>
+</section>
+<section id="configure-in-formspree" class="level3">
+<h3 class="anchored" data-anchor-id="configure-in-formspree">3.2 Configure in Formspree</h3>
+<ol type="1">
+<li>Log in to <a href="https://formspree.io">formspree.io</a></li>
+<li>Go to your form (<code>mpwkaqev</code>)</li>
+<li>Click <strong>Plugins</strong> → <strong>Webhooks</strong></li>
+<li>Add webhook URL: your Worker URL from above</li>
+<li>Save</li>
+</ol>
+<blockquote class="blockquote">
+<p><strong>Note:</strong> Formspree Webhooks are available on the paid plan. If you’re on the free plan, you can use Zapier as an alternative (Formspree → Zapier Webhook → your Worker URL).</p>
+</blockquote>
+</section>
+<section id="webhook-payload-format" class="level3">
+<h3 class="anchored" data-anchor-id="webhook-payload-format">3.3 Webhook Payload Format</h3>
+<p>When a form is submitted, Formspree sends a POST to your webhook with the form data as JSON:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"John Doe"</span><span class="fu">,</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"email"</span><span class="fu">:</span> <span class="st">"john@example.com"</span><span class="fu">,</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"phone"</span><span class="fu">:</span> <span class="st">"+40123456789"</span><span class="fu">,</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"organization"</span><span class="fu">:</span> <span class="st">"TechCorp"</span><span class="fu">,</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"org_type"</span><span class="fu">:</span> <span class="st">"company"</span><span class="fu">,</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"application_type"</span><span class="fu">:</span> <span class="st">"individual"</span><span class="fu">,</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"location"</span><span class="fu">:</span> <span class="st">"Craiova, Romania"</span><span class="fu">,</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"message"</span><span class="fu">:</span> <span class="st">"I want to join the Computer Club"</span><span class="fu">,</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"_source"</span><span class="fu">:</span> <span class="st">"computerclub-apply"</span><span class="fu">,</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"_subject"</span><span class="fu">:</span> <span class="st">"Computer Club Application"</span><span class="fu">,</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"_replyto"</span><span class="fu">:</span> <span class="st">"john@example.com"</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="step-4-how-the-routing-works" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-how-the-routing-works">Step 4: How the Routing Works</h2>
+<p>The Worker reads the <code>_source</code> hidden field from each form and routes accordingly:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 35%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><code>_source</code> Value</th>
+<th>Bigin Action</th>
+<th>Pipeline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>computerclub-apply</code></td>
+<td>Contact + Deal</td>
+<td>Academy Members → Applied</td>
+</tr>
+<tr class="even">
+<td><code>computerclub-apply-ro</code></td>
+<td>Contact + Deal</td>
+<td>Academy Members → Applied</td>
+</tr>
+<tr class="odd">
+<td><code>contact-page</code></td>
+<td>Contact only</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><code>contact-page-de</code> / <code>ro</code> / <code>sv</code></td>
+<td>Contact only</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td><code>newsletter-signup</code></td>
+<td>Contact only</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><code>nis2-inquiry</code></td>
+<td>Contact + Deal</td>
+<td>Course Inquiries → Inquiry</td>
+</tr>
+<tr class="odd">
+<td><code>nis2-inquiry-de</code> / <code>ro</code> / <code>sv</code></td>
+<td>Contact + Deal</td>
+<td>Course Inquiries → Inquiry</td>
+</tr>
+<tr class="even">
+<td><code>nis2-assessment</code></td>
+<td>Contact + Deal</td>
+<td>Course Inquiries → Inquiry</td>
+</tr>
+<tr class="odd">
+<td><code>event-registration</code></td>
+<td>Contact + Deal</td>
+<td>Event Registrations → Registered</td>
+</tr>
+<tr class="even">
+<td><code>course-inquiry</code></td>
+<td>Contact + Deal</td>
+<td>Course Inquiries → Inquiry</td>
+</tr>
+</tbody>
+</table>
+<section id="adding-new-form-sources" class="level3">
+<h3 class="anchored" data-anchor-id="adding-new-form-sources">Adding New Form Sources</h3>
+<p>To add a new form type:</p>
+<ol type="1">
+<li>Add a <code>&lt;input type="hidden" name="_source" value="my-new-source"&gt;</code> to the form HTML</li>
+<li>Update <code>routeToPipeline()</code> in <code>workers/bigin-bridge/src/index.js</code>:</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (source<span class="op">.</span><span class="fu">startsWith</span>(<span class="st">"my-new-source"</span>)) {</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> { <span class="dt">name</span><span class="op">:</span> <span class="st">"Pipeline Name"</span><span class="op">,</span> <span class="dt">stage</span><span class="op">:</span> <span class="st">"First Stage"</span> }<span class="op">;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="3" type="1">
+<li>Redeploy: <code>cd workers/bigin-bridge &amp;&amp; wrangler deploy</code></li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="step-5-field-mapping-reference" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-field-mapping-reference">Step 5: Field Mapping Reference</h2>
+<section id="form-field-bigin-contact-field" class="level3">
+<h3 class="anchored" data-anchor-id="form-field-bigin-contact-field">Form Field → Bigin Contact Field</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>HTML Form <code>name</code></th>
+<th>Bigin Contact Field</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>name</code></td>
+<td><code>First_Name</code> + <code>Last_Name</code></td>
+<td>Auto-split by Worker</td>
+</tr>
+<tr class="even">
+<td><code>email</code></td>
+<td><code>Email</code></td>
+<td>Used as duplicate check key</td>
+</tr>
+<tr class="odd">
+<td><code>phone</code></td>
+<td><code>Phone</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>message</code></td>
+<td><code>Description</code></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>organization</code></td>
+<td><code>Company</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>location</code></td>
+<td><code>Mailing_City</code></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>_source</code></td>
+<td><code>Lead_Source</code></td>
+<td>Custom field</td>
+</tr>
+<tr class="even">
+<td><code>application_type</code></td>
+<td>Deal <code>Description</code></td>
+<td>Stored on pipeline deal</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="upsert-behavior" class="level3">
+<h3 class="anchored" data-anchor-id="upsert-behavior">Upsert Behavior</h3>
+<p>The Worker uses <strong>upsert</strong> (insert-or-update) with email as the duplicate check field:</p>
+<ul>
+<li><strong>New email</strong> → creates a new Contact</li>
+<li><strong>Existing email</strong> → updates the existing Contact’s fields</li>
+<li><strong>Pipeline deals</strong> are always created as new (one per form submission)</li>
+</ul>
+<p>This means a user can submit multiple forms (e.g., contact + Computer Club application) and they’ll all be linked to the same Contact record.</p>
+<hr>
+</section>
+</section>
+<section id="step-6-testing" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-testing">Step 6: Testing</h2>
+<section id="test-the-worker-directly" class="level3">
+<h3 class="anchored" data-anchor-id="test-the-worker-directly">6.1 Test the Worker Directly</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-X</span> POST https://api.chen.ist/webhook/formspree <span class="dt">\</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">-H</span> <span class="st">"Content-Type: application/json"</span> <span class="dt">\</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">-d</span> <span class="st">'{</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="st">    "name": "Test User",</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="st">    "email": "test@example.com",</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="st">    "message": "Testing integration",</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="st">    "_source": "contact-page"</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="st">  }'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Expected response:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"ok"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"source"</span><span class="fu">:</span> <span class="st">"contact-page"</span><span class="fu">,</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"result"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"contact_id"</span><span class="fu">:</span> <span class="st">"123456789"</span><span class="fu">,</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"pipeline"</span><span class="fu">:</span> <span class="kw">null</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="test-pipeline-creation" class="level3">
+<h3 class="anchored" data-anchor-id="test-pipeline-creation">6.2 Test Pipeline Creation</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-X</span> POST https://api.chen.ist/webhook/formspree <span class="dt">\</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">-H</span> <span class="st">"Content-Type: application/json"</span> <span class="dt">\</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">-d</span> <span class="st">'{</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="st">    "name": "Test Applicant",</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="st">    "email": "applicant@example.com",</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="st">    "application_type": "individual",</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="st">    "location": "Craiova, Romania",</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="st">    "message": "I want to join",</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="st">    "_source": "computerclub-apply"</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="st">  }'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Expected response:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"ok"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"source"</span><span class="fu">:</span> <span class="st">"computerclub-apply"</span><span class="fu">,</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"result"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"contact_id"</span><span class="fu">:</span> <span class="st">"123456790"</span><span class="fu">,</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"pipeline"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"Academy Members"</span><span class="fu">,</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"stage"</span><span class="fu">:</span> <span class="st">"Applied"</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="verify-in-bigin" class="level3">
+<h3 class="anchored" data-anchor-id="verify-in-bigin">6.3 Verify in Bigin</h3>
+<ol type="1">
+<li>Go to Bigin → <strong>Contacts</strong> — verify test contacts appear</li>
+<li>Go to Bigin → <strong>Pipelines → Academy Members</strong> — verify deals appear in “Applied” stage</li>
+<li>Click a contact — verify all fields are populated correctly</li>
+</ol>
+</section>
+<section id="end-to-end-test" class="level3">
+<h3 class="anchored" data-anchor-id="end-to-end-test">6.4 End-to-End Test</h3>
+<ol type="1">
+<li>Go to <code>chen.ist/academy/programs/computerclub/#apply</code></li>
+<li>Fill and submit the form</li>
+<li>Check: Formspree inbox received the submission</li>
+<li>Check: Bigin has a new Contact + Academy Members deal</li>
+<li>Submit the same email again — verify the Contact is updated (not duplicated) but a new deal is created</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="step-7-monitoring-troubleshooting" class="level2">
+<h2 class="anchored" data-anchor-id="step-7-monitoring-troubleshooting">Step 7: Monitoring &amp; Troubleshooting</h2>
+<section id="worker-logs" class="level3">
+<h3 class="anchored" data-anchor-id="worker-logs">Worker Logs</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">wrangler</span> tail</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This streams live logs from the Worker. You’ll see: - Incoming requests - <code>console.error</code> messages for failures - Response status codes</p>
+</section>
+<section id="common-issues" class="level3">
+<h3 class="anchored" data-anchor-id="common-issues">Common Issues</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 42%">
+<col style="width: 33%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symptom</th>
+<th>Cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Auth failed</code></td>
+<td>Refresh token expired or wrong region</td>
+<td>Re-generate refresh token; check <code>BIGIN_AUTH_URL</code> matches your data center</td>
+</tr>
+<tr class="even">
+<td><code>Contact upsert failed: INVALID_DATA</code></td>
+<td>Field name mismatch</td>
+<td>Check custom field API names in Bigin → Settings → Modules → Contacts → Fields</td>
+</tr>
+<tr class="odd">
+<td><code>404 on webhook</code></td>
+<td>Wrong URL path</td>
+<td>Ensure POST goes to <code>/webhook/formspree</code> exactly</td>
+</tr>
+<tr class="even">
+<td>Forms work but no Bigin records</td>
+<td>Webhook not firing</td>
+<td>Check Formspree → Plugins → Webhooks is configured and active</td>
+</tr>
+<tr class="odd">
+<td>Duplicate contacts</td>
+<td>Email field empty</td>
+<td>Ensure form has <code>name="email"</code> and it’s required</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="rate-limits" class="level3">
+<h3 class="anchored" data-anchor-id="rate-limits">Rate Limits</h3>
+<ul>
+<li><strong>Bigin free plan:</strong> 5,000 API credits/day, 5 concurrent calls</li>
+<li><strong>Each form submission uses:</strong> 2-3 credits (token + upsert + optional deal)</li>
+<li><strong>Effective capacity:</strong> ~1,600-2,500 form submissions/day (well beyond needs)</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="cost-summary" class="level2">
+<h2 class="anchored" data-anchor-id="cost-summary">Cost Summary</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Service</th>
+<th>Plan</th>
+<th>Cost</th>
+<th>Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Formspree</td>
+<td>Current plan</td>
+<td>No change</td>
+<td>Current limits</td>
+</tr>
+<tr class="even">
+<td>Zoho Bigin</td>
+<td>Free</td>
+<td>$0/month</td>
+<td>1 user, 500 records, 5K API/day</td>
+</tr>
+<tr class="odd">
+<td>Cloudflare Worker</td>
+<td>Free</td>
+<td>$0/month</td>
+<td>100K requests/day</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total additional cost: $0/month</strong></p>
+<p>Upgrade to Bigin Express (~$7/user/month) when you exceed 500 records or need multiple users.</p>
+<hr>
+</section>
+<section id="files-reference" class="level2">
+<h2 class="anchored" data-anchor-id="files-reference">Files Reference</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 60%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>workers/bigin-bridge/wrangler.toml</code></td>
+<td>Worker configuration, API URLs</td>
+</tr>
+<tr class="even">
+<td><code>workers/bigin-bridge/src/index.js</code></td>
+<td>Worker logic: auth, upsert, routing</td>
+</tr>
+<tr class="odd">
+<td><code>docs/bigin-formspree-integration.md</code></td>
+<td>This document</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="form-_source-values-in-the-website" class="level2">
+<h2 class="anchored" data-anchor-id="form-_source-values-in-the-website">Form <code>_source</code> Values in the Website</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 39%">
+<col style="width: 44%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Form Location</th>
+<th><code>_source</code> Value</th>
+<th>File</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Contact EN</td>
+<td><code>contact-page</code></td>
+<td><code>contact.qmd</code></td>
+</tr>
+<tr class="even">
+<td>Contact DE</td>
+<td><code>contact-page-de</code></td>
+<td><code>de/contact.qmd</code></td>
+</tr>
+<tr class="odd">
+<td>Contact RO</td>
+<td><code>contact-page-ro</code></td>
+<td><code>ro/contact.qmd</code></td>
+</tr>
+<tr class="even">
+<td>Contact SV</td>
+<td><code>contact-page-sv</code></td>
+<td><code>sv/contact.qmd</code></td>
+</tr>
+<tr class="odd">
+<td>Computer Club EN</td>
+<td><code>computerclub-apply</code></td>
+<td><code>academy/programs/computerclub/index.qmd</code></td>
+</tr>
+<tr class="even">
+<td>Computer Club RO</td>
+<td><code>computerclub-apply-ro</code></td>
+<td><code>ro/academy/programs/computerclub/index.qmd</code></td>
+</tr>
+<tr class="odd">
+<td>NIS2 EN</td>
+<td><code>nis2-inquiry</code></td>
+<td><code>services/nis2/index.qmd</code></td>
+</tr>
+<tr class="even">
+<td>NIS2 DE</td>
+<td><code>nis2-inquiry-de</code></td>
+<td><code>de/services/nis2/index.qmd</code></td>
+</tr>
+<tr class="odd">
+<td>NIS2 RO</td>
+<td><code>nis2-inquiry-ro</code></td>
+<td><code>ro/services/nis2/index.qmd</code></td>
+</tr>
+<tr class="even">
+<td>NIS2 SV</td>
+<td><code>nis2-inquiry-sv</code></td>
+<td><code>sv/services/nis2/index.qmd</code></td>
+</tr>
+<tr class="odd">
+<td>NIS2 Assessment</td>
+<td><code>nis2-assessment</code></td>
+<td><code>resources/tools/nis2-assessment.qmd</code></td>
+</tr>
+<tr class="even">
+<td>Newsletter</td>
+<td><code>newsletter-signup</code></td>
+<td><code>blog.qmd</code>, <code>resources/index.qmd</code>, <code>includes/email-capture.html</code></td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/chen\.ist");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<!-- Back to top -->
+<div style="text-align:center; padding:2rem 0; background:#0a0a0a; border-top:1px solid rgba(255,255,255,0.04);">
+  <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" style="color:rgba(255,255,255,0.3); text-decoration:none; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em;">
+    <i class="bi bi-chevron-up" style="display:block; font-size:1rem; margin-bottom:0.25rem;"></i><span class="footer-i18n" data-key="backToTop">Back to top</span>
+  </a>
+</div>
+
+<footer style="background-color:#050505; background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 200 200'%3E%3Crect fill='none' width='200' height='200'/%3E%3Cg fill='none' stroke='%2381BD4A' stroke-width='1' stroke-opacity='0.04'%3E%3Crect x='-40' y='40' width='75' height='75'/%3E%3Crect x='40' width='75' height='75'/%3E%3Crect x='80' y='80' width='75' height='75'/%3E%3Crect x='120' y='-40' width='75' height='75'/%3E%3Crect y='120' width='75' height='75'/%3E%3Crect x='160' y='40' width='75' height='75'/%3E%3C/g%3E%3C/svg%3E&quot;); background-repeat:repeat; background-size:200px 200px; color:rgba(255,255,255,0.5); padding:4rem 0 2rem; font-size:0.82rem; line-height:1.8;">
+  <div style="max-width:1200px; margin:0 auto; padding:0 1.5rem;">
+    <div style="display:grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr; gap:2rem;">
+      <div>
+        <div style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:1rem; font-family:'Source Code Pro',monospace;">chen<span style="color:#81BD4A;">.</span>ist</div>
+        <p style="margin-bottom:1rem; color:rgba(255,255,255,0.4);" class="footer-i18n" data-key="tagline">Digital infrastructure, cybersecurity, and education. Built on open-source.</p>
+        <div style="display:flex; gap:0.75rem; margin-bottom:1rem;">
+          <a href="https://github.com/chenist" target="_blank" class="footer-social"><i class="bi bi-github"></i></a>
+          <a href="https://linkedin.com/in/chenistsec" target="_blank" class="footer-social"><i class="bi bi-linkedin"></i></a>
+          <a href="https://alinmechenici.substack.com" target="_blank" class="footer-social"><i class="bi bi-envelope"></i></a>
+        </div>
+        <p style="color:rgba(255,255,255,0.2); font-size:0.75rem;">© 2026 chen.ist</p>
+      </div>
+      <div>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="services">Services</div>
+        <a href="../digital/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="digitalInfra">Digital Infrastructure</a>
+        <a href="../security/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="security">Security</a>
+        <a href="../services/cloud/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Cloud</a>
+        <a href="../services/nis2/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="nis2">NIS2 Compliance</a>
+        <a href="../services/digital-resilience/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="resilience">Digital Resilience</a>
+        <a href="../services/gdpr/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">GDPR Compliance</a>
+      </div>
+      <div>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="academy">Academy</div>
+        <a href="../academy/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="overview">Overview</a>
+        <a href="../academy/courses.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="courses">Courses</a>
+        <a href="../academy/trainings.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="trainings">Trainings</a>
+        <a href="../academy/events.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="events">Events</a>
+        <a href="../academy/webinars.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="webinars">Webinars</a>
+      </div>
+      <div>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="company">Company</div>
+        <a href="../about/" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="about">About</a>
+        <a href="../blog.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">Blog</a>
+        <a href="../contact.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="contact">Contact</a>
+        <a href="../faq.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">FAQ</a>
+        <a href="../privacy.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="privacy">Privacy</a>
+        <a href="../terms.html" data-footer-link="" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;" class="footer-i18n" data-key="terms">Terms</a>
+      </div>
+      <div>
+        <div style="color:rgba(255,255,255,0.3); font-weight:600; margin-bottom:0.75rem; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em;" class="footer-i18n" data-key="connect">Connect</div>
+        <a href="mailto:office@chen.ist" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; padding:0.1rem 0;">office@chen.ist</a>
+        <a href="../booking/" data-footer-link="" style="display:block; color:#81BD4A; text-decoration:none; padding:0.1rem 0; font-weight:500;" class="footer-i18n" data-key="bookCall">Book a Call</a>
+        <div style="margin-top:1rem; color:rgba(255,255,255,0.2); font-size:0.72rem;">Craiova · Bucharest · Stockholm</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+@media (max-width:991px) { footer > div > div { grid-template-columns: 2fr 1fr 1fr !important; } }
+@media (max-width:767px) {
+  footer { padding: 3rem 0 2rem !important; font-size: 0.8rem !important; }
+  footer > div > div { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
+  footer a { padding: 0.3rem 0 !important; min-height: 36px; display: inline-flex; align-items: center; }
+}
+@media (max-width:480px) {
+  footer > div > div { grid-template-columns: 1fr !important; gap: 1.75rem !important; }
+  footer { padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px)) !important; }
+}
+footer a:hover { color: #81BD4A !important; transition: color 0.15s; }
+footer a { -webkit-tap-highlight-color: transparent; }
+.footer-social { display:flex !important; align-items:center !important; justify-content:center !important; width:40px !important; height:40px !important; min-height:40px !important; border-radius:50% !important; background:rgba(255,255,255,0.06) !important; color:rgba(255,255,255,0.5) !important; text-decoration:none !important; font-size:1rem !important; padding:0 !important; }
+.footer-social:hover { background:rgba(129,189,74,0.15) !important; color:#81BD4A !important; }
+</style>
+
+<script>
+(function() {
+  var langMatch = window.location.pathname.match(/^\/(ro|sv|de)\//);
+  var lang = langMatch ? langMatch[1] : 'en';
+  var prefix = lang === 'en' ? '' : '/' + lang;
+
+  // Rewrite all internal footer links to include language prefix
+  document.querySelectorAll('footer [data-footer-link], div[style*="background:#0a0a0a"] [data-footer-link]').forEach(function(a) {
+    var href = a.getAttribute('href');
+    if (href && href.startsWith('/') && !href.startsWith('//')) {
+
+
+
+        a.setAttribute('href', prefix + href);
+      }
+    }
+  });
+
+  // Translate labels if not English
+  if (lang === 'en') return;
+  var i18n = {
+    ro: {
+      backToTop: 'Înapoi sus', tagline: 'Infrastructură digitală, securitate cibernetică și educație. Construit pe open-source.',
+      services: 'Servicii', digitalInfra: 'Infrastructură Digitală', security: 'Securitate', nis2: 'Conformitate NIS2', resilience: 'Reziliență Digitală',
+      academy: 'Academie', overview: 'Prezentare', courses: 'Cursuri', trainings: 'Training-uri', events: 'Evenimente', webinars: 'Webinarii',
+      company: 'Companie', about: 'Despre noi', contact: 'Contact', privacy: 'Confidențialitate', terms: 'Termeni',
+      connect: 'Conectare', bookCall: 'Programează'
+    },
+    sv: {
+      backToTop: 'Tillbaka upp', tagline: 'Digital infrastruktur, cybersäkerhet och utbildning. Byggt på öppen källkod.',
+      services: 'Tjänster', digitalInfra: 'Digital Infrastruktur', security: 'Säkerhet', nis2: 'NIS2-efterlevnad', resilience: 'Digital Resiliens',
+      academy: 'Akademi', overview: 'Översikt', courses: 'Kurser', trainings: 'Utbildningar', events: 'Evenemang', webinars: 'Webbinarier',
+      company: 'Företag', about: 'Om oss', contact: 'Kontakt', privacy: 'Integritet', terms: 'Villkor',
+      connect: 'Kontakta', bookCall: 'Boka Samtal'
+    },
+    de: {
+      backToTop: 'Nach oben', tagline: 'Digitale Infrastruktur, Cybersicherheit und Bildung. Auf Open-Source aufgebaut.',
+      services: 'Dienstleistungen', digitalInfra: 'Digitale Infrastruktur', security: 'Sicherheit', nis2: 'NIS2-Konformität', resilience: 'Digitale Resilienz',
+      academy: 'Akademie', overview: 'Übersicht', courses: 'Kurse', trainings: 'Schulungen', events: 'Veranstaltungen', webinars: 'Webinare',
+      company: 'Unternehmen', about: 'Über uns', contact: 'Kontakt', privacy: 'Datenschutz', terms: 'AGB',
+      connect: 'Verbinden', bookCall: 'Gespräch Buchen'
+    }
+  };
+  var t = i18n[lang];
+  if (!t) return;
+  document.querySelectorAll('.footer-i18n').forEach(function(el) {
+    var key = el.getAttribute('data-key');
+    if (key && t[key]) el.textContent = t[key];
+  });
+})();
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.m-s, .m-bg, .m-cta, .m-r, .m-n, .hp-sec, .hp-stats, .ev-card, .ev-past, .m-t').forEach(el => observer.observe(el));
+
+  // Breadcrumb + Language bar
+  (function() {
+    var path = window.location.pathname;
+    var currentLang = 'en';
+    var cleanPath = path;
+
+    if (path.match(/^\/(ro|de|sv)\//)) {
+      currentLang = path.split('/')[1];
+      cleanPath = path.replace(/^\/(ro|de|sv)/, '');
+    }
+
+    var parts = cleanPath.split('/').filter(function(p) { return p && p !== 'index.html'; });
+
+    var bar = document.createElement('div');
+    bar.className = 'path-bar';
+    var inner = document.createElement('div');
+    inner.className = 'path-bar-inner';
+
+    // Breadcrumbs
+    var crumbs = document.createElement('div');
+    crumbs.className = 'path-crumbs';
+    var homeLink = document.createElement('a');
+    homeLink.href = currentLang === 'en' ? '/' : '/' + currentLang + '/';
+    homeLink.textContent = 'Home';
+    crumbs.appendChild(homeLink);
+
+    var accumulated = currentLang === 'en' ? '' : '/' + currentLang;
+    for (var i = 0; i < parts.length; i++) {
+      var sep = document.createElement('span');
+      sep.className = 'sep';
+      sep.textContent = ' \u203A ';
+      crumbs.appendChild(sep);
+      var name = parts[i].replace('.html', '').replace(/-/g, ' ');
+      name = name.charAt(0).toUpperCase() + name.slice(1);
+      accumulated += '/' + parts[i];
+      if (i === parts.length - 1) {
+        var cur = document.createElement('span');
+        cur.className = 'current';
+        cur.textContent = name;
+        crumbs.appendChild(cur);
+      } else {
+        var link = document.createElement('a');
+        link.href = accumulated + '/';
+        link.textContent = name;
+        crumbs.appendChild(link);
+      }
+    }
+
+    // Language buttons
+    var langsDiv = document.createElement('div');
+    langsDiv.className = 'path-langs';
+    var langs = [
+      { code: 'en', label: 'EN', prefix: '' },
+      { code: 'ro', label: 'RO', prefix: '/ro' },
+      { code: 'sv', label: 'SV', prefix: '/sv' },
+      { code: 'de', label: 'DE', prefix: '/de' }
+    ];
+    for (var j = 0; j < langs.length; j++) {
+      var l = langs[j];
+      var a = document.createElement('a');
+      a.href = l.prefix + (cleanPath || '/');
+      a.textContent = l.label;
+      if (l.code === currentLang) a.className = 'active';
+      a.addEventListener('click', function(e) { localStorage.setItem('chen-lang-choice', this.textContent.toLowerCase() === 'en' ? 'en' : ''); });
+      langsDiv.appendChild(a);
+    }
+
+    inner.appendChild(crumbs);
+    inner.appendChild(langsDiv);
+    bar.appendChild(inner);
+
+    var header = document.getElementById('quarto-header');
+    if (header) {
+      header.appendChild(bar);
+    }
+  })();
+});
+</script>
+<!-- Cal.com embed (for booking page only, no floating button) -->
+<script>
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  if (window.location.pathname.includes('/booking/')) {
+    Cal("init", {origin:"https://cal.com"});
+  }
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Function to toggle dark/light mode
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-bs-theme') || 'light';
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-bs-theme', newTheme);
+      localStorage.setItem('quarto-color-scheme', newTheme);
+      
+      // Update icon if needed
+      const themeIcon = document.querySelector('.navbar-nav a[href="#"] i');
+      if (themeIcon) {
+        themeIcon.className = newTheme === 'light' ? 'bi bi-moon' : 'bi bi-sun';
+      }
+    }
+    
+    // Apply saved theme on load
+    const savedTheme = localStorage.getItem('quarto-color-scheme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      
+      // Update icon to match saved theme
+      const themeIcon = document.querySelector('.navbar-nav a[href="#"] i');
+      if (themeIcon && savedTheme === 'dark') {
+        themeIcon.className = 'bi bi-sun';
+      }
+    }
+    
+    // Set up toggle button
+    document.querySelectorAll('a[href="#"]').forEach(function(link) {
+      if (link.textContent.includes('Toggle Theme')) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          toggleTheme();
+        });
+      }
+    });
+    
+    // Language switcher — intercept lang dropdown and rewrite to same page
+    document.querySelectorAll('.dropdown-item').forEach(function(link) {
+      var href = link.getAttribute('href') || '';
+      var isLang = false;
+      var targetLang = '';
+
+      if (href.match(/^\/?index\.html$/) || href === '/' || href.match(/^\.\.\/?index\.html$/)) {
+        isLang = true; targetLang = 'en';
+      } else if (href.match(/\/?ro\//) || href.match(/^\.\.\/ro\//)) {
+        isLang = true; targetLang = 'ro';
+      } else if (href.match(/\/?sv\//) || href.match(/^\.\.\/sv\//)) {
+        isLang = true; targetLang = 'sv';
+      } else if (href.match(/\/?de\//) || href.match(/^\.\.\/de\//)) {
+        isLang = true; targetLang = 'de';
+      }
+
+      var text = (link.textContent || '').trim();
+      if (text === 'English' || text === 'Română' || text === 'Svenska' || text === 'Deutsch') {
+        isLang = true;
+        if (text === 'English') targetLang = 'en';
+        if (text === 'Română') targetLang = 'ro';
+        if (text === 'Svenska') targetLang = 'sv';
+        if (text === 'Deutsch') targetLang = 'de';
+      }
+
+      if (!isLang) return;
+
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var path = window.location.pathname;
+        var cleanPath = path.replace(/^\/(ro|de|sv)\//, '/').replace(/^\/(ro|de|sv)$/, '/');
+
+        var newPath;
+        if (targetLang === 'en') {
+          newPath = cleanPath;
+        } else {
+          newPath = '/' + (targetLang === 'sv' ? 'sv' : targetLang) + (cleanPath === '/' ? '/' : cleanPath);
+        }
+
+        window.location.href = newPath;
+      });
+    });
+
+    // Enable Bootstrap tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      if (anchor.getAttribute('href') === '#') return;
+      
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 70,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

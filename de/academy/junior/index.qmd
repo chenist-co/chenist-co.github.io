@@ -1,0 +1,253 @@
+---
+title: "Junior Akademie"
+title-block-style: none
+subtitle: "Technologiebildung fur Kinder und Jugendliche"
+description: "chen.ist Junior Akademie — Kurse fur Cybersicherheit, Programmierung, Robotik und digitale Kompetenz fur Kinder und Jugendliche im Alter von 8-18 Jahren, in Partnerschaft mit Schulen, NGOs und Gemeinschaftsorganisationen."
+from: markdown+raw_html
+page-layout: custom
+format:
+  html:
+    toc: false
+    include-in-header:
+      text: |
+        <style>
+        .m { --c: #F5A623; }
+        .cc-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; max-width: 1000px; margin: 0 auto; }
+        .cc-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+        .cc-card { background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; padding: 2rem; height: 100%; transition: border-color 0.2s, transform 0.2s; }
+        .cc-card:hover { border-color: var(--c); transform: translateY(-2px); }
+        [data-bs-theme="dark"] .cc-card { background: rgba(245,166,35,0.04); border-color: rgba(255,255,255,0.08); }
+        .cc-icon { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: rgba(245,166,35,0.08); border-radius: 10px; margin-bottom: 1rem; }
+        [data-bs-theme="dark"] .cc-icon { background: rgba(245,166,35,0.12); }
+        .cc-icon i { font-size: 1.1rem; color: var(--c); }
+        .cc-card h4 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .cc-card p { font-size: 0.9rem; color: var(--g); margin: 0; line-height: 1.55; }
+        .cc-up-icon { flex-shrink: 0; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: rgba(245,166,35,0.08); border-radius: 12px; }
+        [data-bs-theme="dark"] .cc-up-icon { background: rgba(245,166,35,0.12); }
+        .cc-up-icon i { font-size: 1.2rem; color: var(--c); }
+        .cc-label-sm { font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--c); margin-bottom: 1rem; }
+        @media (max-width: 767px) { .cc-grid-2 { grid-template-columns: 1fr; } .cc-grid-3 { grid-template-columns: 1fr; } }
+        </style>
+---
+
+```{=html}
+<div class="m">
+
+<!-- HERO -->
+<div class="ev-hero" style="min-height:65vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/hackathon-team.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Alter 8–18</div>
+    <h1>Junior<br>Akademie</h1>
+    <p>Cybersicherheit, Programmierung, Robotik und digitale Kompetenz fur Kinder und Jugendliche. Entwickelt mit Partnerorganisationen, denen die nachste Generation am Herzen liegt.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="#courses" class="ev-btn" style="background:#F5A623;">Zu den Kursen</a>
+      <a href="#partners" class="ev-btn-ghost">Partner werden</a>
+    </div>
+  </div>
+</div>
+
+<!-- PHILOSOPHY -->
+<div class="m-bg" style="padding:6rem 0;">
+  <div class="container" style="max-width:800px; text-align:center;">
+    <div class="cc-label-sm">Der Ansatz</div>
+    <h2 style="font-size:2rem; line-height:1.3; margin-bottom:1.5rem;">Wir unterrichten Kinder nicht direkt.<br>Wir entwickeln Programme mit Partnern, die es tun.</h2>
+    <p style="color:var(--g); font-size:1.05rem; line-height:1.8; max-width:650px; margin:0 auto;">
+      Schulen, NGOs, Bibliotheken und Gemeindezentren kennen ihre Kinder am besten. Wir liefern den Lehrplan, Schulungsmaterialien und Unterstutzung fur Dozenten — unsere Partner setzen es vor Ort um. So wird jedes Junior Akademie-Programm an seine Gemeinschaft angepasst und gleichzeitig die gleiche Qualitat und Standards beibehalten.
+    </p>
+  </div>
+</div>
+
+<!-- COURSES FOR KIDS -->
+<div class="m-s" id="courses" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Kurse fur Kinder & Jugendliche</h2>
+    <p class="sub">Altersgerecht, praxisnah und darauf ausgelegt, Neugier zu wecken.</p>
+    <div class="cc-grid-3">
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-shield-check"></i></div>
+        <h4>Cyberhygiene fur Kinder</h4>
+        <p>Sichere Passworter, Betrug erkennen, Privatsphare im Internet und verantwortungsvoller Umgang mit Geraten. Alter 8–12. Spassige Aktivitaten, keine Vorlesungen.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-lock"></i></div>
+        <h4>Grundlagen der Cybersicherheit</h4>
+        <p>Wie das Internet funktioniert, was Hacker tun, Konten schutzen und Einfuhrung in ethisches Hacking. Alter 13–18.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-code-slash"></i></div>
+        <h4>Erste Schritte im Programmieren</h4>
+        <p>Scratch, Python-Grundlagen, einfache Spiele und Websites bauen. Visuelle Programmierung fur jungere Kinder, textbasiert fur Jugendliche.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-robot"></i></div>
+        <h4>Robotik & Hardware</h4>
+        <p>Arduino, Raspberry Pi, Sensoren, Motoren und Dinge bauen, die sich bewegen. Von blinkenden LEDs bis zu autonomen Robotern.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-phone"></i></div>
+        <h4>Digitale Kompetenz</h4>
+        <p>Kritisches Denken im Internet, Medienkompetenz, digitale Burgerschaft und verstehen, wie Technologie unsere Welt formt.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-trophy"></i></div>
+        <h4>Wettbewerbsvorbereitung</h4>
+        <p>Teams auf CTF-Herausforderungen, Robotik-Wettbewerbe, NASA SpaceApps Junior und Wissenschaftsmessen vorbereiten.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
+  <div class="container">
+    <h2>So funktioniert es</h2>
+    <p class="sub">Drei einfache Schritte von der Idee zum laufenden Programm.</p>
+    <div style="max-width:750px; margin:0 auto;">
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-1-circle"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Partner meldet sich an</span></h4>
+          <div class="up-meta">Schulen, NGOs, Bibliotheken oder Unternehmen kontaktieren uns. Wir besprechen Ziele, Zielgruppe und Format. Keine Vorabkosten fur Bildungspartner.</div>
+        </div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-2-circle"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Wir richten das Programm ein</span></h4>
+          <div class="up-meta">Wir stellen Lehrplan, Dozentenschulung, Materialien und Plattformzugang bereit. Wir schulen Ihre Lehrer oder senden unsere Dozenten.</div>
+        </div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-3-circle"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Partner liefert vor Ort</span></h4>
+          <div class="up-meta">Ihre Organisation fuhrt das Programm mit Ihren Kindern, nach Ihrem Zeitplan, in Ihren Raumen durch. Wir unterstutzen mit Inhaltsaktualisierungen und Dozenten-Mentoring.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE ROW -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <div class="m-r">
+      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Junior Akademie Sitzung"></div>
+      <div class="m-rt">
+        <h2>Echte Fahigkeiten.<br>Keine Bildschirmzeit.</h2>
+        <p>Jeder Kurs ist zu 80% praxisorientiert. Kinder bauen Dinge — Websites, Roboter, Sicherheitstools, Spiele. Sie arbeiten in Teams, prasentieren ihre Projekte und lernen durch Handeln. Kein passives Videoschauen. Keine Multiple-Choice-Tests. Echte Projekte mit echten Ergebnissen, die sie Freunden und Familie zeigen konnen.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT PARTNERS GET -->
+<div class="m-bg" id="partners" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Was Partner erhalten</h2>
+    <p class="sub">Alles, was Sie brauchen, um ein Junior Akademie-Programm durchzufuhren.</p>
+    <div class="cc-grid-2">
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-book"></i></div>
+        <h4>Vollstandiger Lehrplan</h4>
+        <p>Unterrichtsplane, Prasentationen, Ubungen und Bewertungsraster fur jeden Kurs. Wird jedes Semester aktualisiert.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-person-video3"></i></div>
+        <h4>Dozentenschulung</h4>
+        <p>Wir schulen Ihre Lehrer, das Material sicher zu vermitteln. Zertifizierungsprogramm inklusive. Laufendes Mentoring.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-laptop"></i></div>
+        <h4>Plattformzugang</h4>
+        <p>Schuler erhalten Konten auf unserer Lernplattform mit interaktiven Ubungen, Fortschrittsverfolgung und Zertifikaten.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-box-seam"></i></div>
+        <h4>Hardware-Kits</h4>
+        <p>Arduino, Raspberry Pi und Sensor-Kits fur Robotik-Kurse verfugbar. Leihprogramm fur Partner, die es benotigen.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-trophy"></i></div>
+        <h4>Wettbewerbsunterstutzung</h4>
+        <p>Hilfe bei der Vorbereitung von Schulerteams auf CTFs, Robotik-Wettbewerbe und Hackathons. Mentoren und Ubungsressourcen.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-globe2"></i></div>
+        <h4>Netzwerk</h4>
+        <p>Vernetzen Sie sich mit anderen Junior Akademie-Partnern. Erfahrungen teilen, gemeinsam Veranstaltungen organisieren und voneinander lernen.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHO CAN PARTNER -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Wer Partner werden kann</h2>
+    <p class="sub">Jede Organisation, die mit Kindern und Jugendlichen arbeitet.</p>
+    <div style="max-width:750px; margin:0 auto;">
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-mortarboard"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Schulen</span></h4>
+          <div class="up-meta">Ausserschulische MINT-Clubs, Nachmittagsprogramme, Wahlkurse. Wir passen uns an Ihren Zeitplan und Ihre Altersgruppe an.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-heart"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>NGOs & Gemeinnuetzige Organisationen</span></h4>
+          <div class="up-meta">Jugendprogramme, Initiativen fur digitale Kompetenz, Gemeinschaftsstarkung. Subventioniert oder kostenlos fur qualifizierte Organisationen.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-building"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Bibliotheken & Gemeindezentren</span></h4>
+          <div class="up-meta">Offentliche Workshops, Sommerprogramme, Makerspaces. Bringen Sie Technologiebildung in Ihre Gemeinschaft.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-briefcase"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Unternehmen (CSR)</span></h4>
+          <div class="up-meta">Sponsern Sie Junior Akademie-Programme an Ihren lokalen Schulen. Mitarbeiter konnen als Freiwillige mitunterrichten. Ideal fur CSR-Berichte.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="m-bg" style="padding:5rem 0;">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn" style="color:#F5A623;">8–18</div><div class="m-nl">Altersbereich</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">6</div><div class="m-nl">Kurse</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">80%</div><div class="m-nl">Praxisorientiert</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">Kostenlos</div><div class="m-nl">Fur qualifizierte Organisationen</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Bringen Sie die Junior Akademie<br>in Ihre Organisation</h2>
+    <p>Lassen Sie uns besprechen, wie wir gemeinsam ein Programm fur Ihre Kinder und Jugendlichen aufbauen konnen.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="/de/academy/partnerships.html" class="m-b" style="background:#F5A623;"><i class="bi bi-handshake me-2"></i>Partner werden</a>
+      <a href="/de/booking/" class="m-bo" style="border-color:#F5A623; color:#F5A623;">Gesprach buchen</a>
+    </div>
+  </div>
+</div>
+
+</div>
+```

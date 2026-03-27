@@ -1,0 +1,253 @@
+---
+title: "Junior Akademin"
+title-block-style: none
+subtitle: "Teknikutbildning for barn och ungdomar"
+description: "chen.ist Junior Akademin — kurser i cybersakerhet, programmering, robotik och digital kompetens for barn och ungdomar i aldrarna 8-18 ar, i samarbete med skolor, ideella organisationer och samhallsorganisationer."
+from: markdown+raw_html
+page-layout: custom
+format:
+  html:
+    toc: false
+    include-in-header:
+      text: |
+        <style>
+        .m { --c: #F5A623; }
+        .cc-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; max-width: 1000px; margin: 0 auto; }
+        .cc-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+        .cc-card { background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; padding: 2rem; height: 100%; transition: border-color 0.2s, transform 0.2s; }
+        .cc-card:hover { border-color: var(--c); transform: translateY(-2px); }
+        [data-bs-theme="dark"] .cc-card { background: rgba(245,166,35,0.04); border-color: rgba(255,255,255,0.08); }
+        .cc-icon { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: rgba(245,166,35,0.08); border-radius: 10px; margin-bottom: 1rem; }
+        [data-bs-theme="dark"] .cc-icon { background: rgba(245,166,35,0.12); }
+        .cc-icon i { font-size: 1.1rem; color: var(--c); }
+        .cc-card h4 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .cc-card p { font-size: 0.9rem; color: var(--g); margin: 0; line-height: 1.55; }
+        .cc-up-icon { flex-shrink: 0; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: rgba(245,166,35,0.08); border-radius: 12px; }
+        [data-bs-theme="dark"] .cc-up-icon { background: rgba(245,166,35,0.12); }
+        .cc-up-icon i { font-size: 1.2rem; color: var(--c); }
+        .cc-label-sm { font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--c); margin-bottom: 1rem; }
+        @media (max-width: 767px) { .cc-grid-2 { grid-template-columns: 1fr; } .cc-grid-3 { grid-template-columns: 1fr; } }
+        </style>
+---
+
+```{=html}
+<div class="m">
+
+<!-- HERO -->
+<div class="ev-hero" style="min-height:65vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/hackathon-team.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Aldrar 8–18</div>
+    <h1>Junior<br>Akademin</h1>
+    <p>Cybersakerhet, programmering, robotik och digital kompetens for barn och ungdomar. Byggt tillsammans med partnerorganisationer som bryr sig om nasta generation.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="#courses" class="ev-btn" style="background:#F5A623;">Se kurserna</a>
+      <a href="#partners" class="ev-btn-ghost">Bli partner</a>
+    </div>
+  </div>
+</div>
+
+<!-- PHILOSOPHY -->
+<div class="m-bg" style="padding:6rem 0;">
+  <div class="container" style="max-width:800px; text-align:center;">
+    <div class="cc-label-sm">Tillvagagangsattet</div>
+    <h2 style="font-size:2rem; line-height:1.3; margin-bottom:1.5rem;">Vi undervisar inte barn direkt.<br>Vi bygger program med partners som gor det.</h2>
+    <p style="color:var(--g); font-size:1.05rem; line-height:1.8; max-width:650px; margin:0 auto;">
+      Skolor, ideella organisationer, bibliotek och samhallscenter kannar sina barn bast. Vi tillhandahaller laroplanen, utbildningsmaterial och instruktorsstod — vara partners levererar det lokalt. Pa sa satt anpassas varje Junior Akademin-program till sin gemenskap samtidigt som samma kvalitet och standarder uppratthalls.
+    </p>
+  </div>
+</div>
+
+<!-- COURSES FOR KIDS -->
+<div class="m-s" id="courses" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Kurser for barn & ungdomar</h2>
+    <p class="sub">Aldersanpassade, praktiska och utformade for att vacka nyfikenhet.</p>
+    <div class="cc-grid-3">
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-shield-check"></i></div>
+        <h4>Cyberhygien for barn</h4>
+        <p>Sakra losenord, kanna igen bedragare, integritet online och ansvarsfull anvandning av enheter. Aldrar 8–12. Roliga aktiviteter, inga forelasningar.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-lock"></i></div>
+        <h4>Grundlaggande cybersakerhet</h4>
+        <p>Hur internet fungerar, vad hackare gor, skydda dina konton och introduktion till etisk hackning. Aldrar 13–18.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-code-slash"></i></div>
+        <h4>Forsta stegen i programmering</h4>
+        <p>Scratch, Python-grunder, bygga enkla spel och webbplatser. Visuell programmering for yngre barn, textbaserad for ungdomar.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-robot"></i></div>
+        <h4>Robotik & Hardvara</h4>
+        <p>Arduino, Raspberry Pi, sensorer, motorer och bygga saker som ror sig. Fran blinkande lysdioder till autonoma robotar.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-phone"></i></div>
+        <h4>Digital kompetens</h4>
+        <p>Kritiskt tankande online, mediekompetens, digitalt medborgarskap och forstaelse for hur teknik formar var varld.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-trophy"></i></div>
+        <h4>Tavlingsforeberedelse</h4>
+        <p>Forberedelse av lag for CTF-utmaningar, robottavlingar, NASA SpaceApps Junior och vetenskapsmassor.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Sa fungerar det</h2>
+    <p class="sub">Tre enkla steg fran ide till igangvarande program.</p>
+    <div style="max-width:750px; margin:0 auto;">
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-1-circle"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Partnern anmaler sig</span></h4>
+          <div class="up-meta">Skolor, ideella organisationer, bibliotek eller foretag kontaktar oss. Vi diskuterar mal, malgrupp och format. Inga forhandskostnader for utbildningspartners.</div>
+        </div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-2-circle"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Vi satter upp programmet</span></h4>
+          <div class="up-meta">Vi tillhandahaller laroplan, instruktorsutbildning, material och plattformsatkomst. Vi utbildar era larare eller skickar vara instruktorer.</div>
+        </div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-3-circle"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Partnern levererar lokalt</span></h4>
+          <div class="up-meta">Er organisation koor programmet med era barn, enligt ert schema, i era lokaler. Vi stodjer med innehallsuppdateringar och instruktorsmentorskap.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE ROW -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <div class="m-r">
+      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Junior Akademin session"></div>
+      <div class="m-rt">
+        <h2>Riktiga fardigheter.<br>Inte skarmtid.</h2>
+        <p>Varje kurs ar 80% praktisk. Barn bygger saker — webbplatser, robotar, sakerhetsverktyg, spel. De arbetar i lag, presenterar sina projekt och lar sig genom att gora. Inget passivt videotittande. Inga flervalstester. Riktiga projekt med riktiga resultat som de kan visa for vanner och familj.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT PARTNERS GET -->
+<div class="m-bg" id="partners" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Vad partners far</h2>
+    <p class="sub">Allt du behover for att driva ett Junior Akademin-program.</p>
+    <div class="cc-grid-2">
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-book"></i></div>
+        <h4>Komplett laroplan</h4>
+        <p>Lektionsplaner, presentationer, ovningar och bedomningsmatriser for varje kurs. Uppdateras varje termin.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-person-video3"></i></div>
+        <h4>Instruktorsutbildning</h4>
+        <p>Vi utbildar era larare att leverera materialet med sjalvfortroende. Certifieringsprogram ingar. Lopande mentorskap.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-laptop"></i></div>
+        <h4>Plattformsatkomst</h4>
+        <p>Elever far konton pa var larplattform med interaktiva ovningar, framstegsuppfoljning och certifikat.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-box-seam"></i></div>
+        <h4>Hardvarukit</h4>
+        <p>Arduino, Raspberry Pi och sensorkit tillgangliga for robotikkurser. Utlaningsprogram for partners som behover det.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-trophy"></i></div>
+        <h4>Tavlingsstod</h4>
+        <p>Hjalp med att forbereda elevlag for CTF:er, robottavlingar och hackathon. Mentorer och ovningsresurser.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-globe2"></i></div>
+        <h4>Natverk</h4>
+        <p>Anslut med andra Junior Akademin-partners. Dela erfarenheter, samarrangera evenemang och lar av varandra.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHO CAN PARTNER -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Vem kan bli partner</h2>
+    <p class="sub">Alla organisationer som arbetar med barn och ungdomar.</p>
+    <div style="max-width:750px; margin:0 auto;">
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-mortarboard"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Skolor</span></h4>
+          <div class="up-meta">STEM-klubbar utanfor lektionstid, fritidsprogram, valbara kurser. Vi anpassar oss till ert schema och er aldersgrupp.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-heart"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Ideella organisationer</span></h4>
+          <div class="up-meta">Ungdomsprogram, initiativ for digital kompetens, samhallsstarkande. Subventionerat eller gratis for kvalificerade organisationer.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-building"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Bibliotek & Samhallscenter</span></h4>
+          <div class="up-meta">Offentliga workshops, sommarprogram, makerspace. For teknikutbildning till din gemenskap.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-briefcase"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Foretag (CSR)</span></h4>
+          <div class="up-meta">Sponsra Junior Akademin-program pa era lokala skolor. Anstallda kan volontarundervisa. Utmarkt for CSR-rapportering.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="m-bg" style="padding:5rem 0;">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn" style="color:#F5A623;">8–18</div><div class="m-nl">Aldersintervall</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">6</div><div class="m-nl">Kurser</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">80%</div><div class="m-nl">Praktiskt</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">Gratis</div><div class="m-nl">For kvalificerade organisationer</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Ta Junior Akademin<br>till din organisation</h2>
+    <p>Lat oss diskutera hur vi kan bygga ett program tillsammans for era barn och ungdomar.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="/sv/academy/partnerships.html" class="m-b" style="background:#F5A623;"><i class="bi bi-handshake me-2"></i>Bli partner</a>
+      <a href="/sv/booking/" class="m-bo" style="border-color:#F5A623; color:#F5A623;">Boka ett samtal</a>
+    </div>
+  </div>
+</div>
+
+</div>
+```

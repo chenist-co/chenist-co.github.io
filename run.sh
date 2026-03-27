@@ -6,7 +6,7 @@ cd "$(dirname "$0")"
 PORT="${1:-3049}"
 
 echo "Starting Quarto preview on port $PORT..."
-quarto preview --port "$PORT" --no-browser &
+quarto preview --port "$PORT" --no-browser 2> >(grep -v "Don't know how to traverse TableBody" >&2) &
 QUARTO_PID=$!
 
 # Wait for the server to be ready

@@ -1,0 +1,253 @@
+---
+title: "Junior Academy"
+title-block-style: none
+subtitle: "Technology education for kids and teens"
+description: "chen.ist Junior Academy — cybersecurity, programming, robotics, and digital literacy courses for kids and teens aged 8-18, delivered in partnership with schools, NGOs, and community organizations."
+from: markdown+raw_html
+page-layout: custom
+format:
+  html:
+    toc: false
+    include-in-header:
+      text: |
+        <style>
+        .m { --c: #F5A623; }
+        .cc-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; max-width: 1000px; margin: 0 auto; }
+        .cc-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+        .cc-card { background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; padding: 2rem; height: 100%; transition: border-color 0.2s, transform 0.2s; }
+        .cc-card:hover { border-color: var(--c); transform: translateY(-2px); }
+        [data-bs-theme="dark"] .cc-card { background: rgba(245,166,35,0.04); border-color: rgba(255,255,255,0.08); }
+        .cc-icon { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: rgba(245,166,35,0.08); border-radius: 10px; margin-bottom: 1rem; }
+        [data-bs-theme="dark"] .cc-icon { background: rgba(245,166,35,0.12); }
+        .cc-icon i { font-size: 1.1rem; color: var(--c); }
+        .cc-card h4 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .cc-card p { font-size: 0.9rem; color: var(--g); margin: 0; line-height: 1.55; }
+        .cc-up-icon { flex-shrink: 0; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: rgba(245,166,35,0.08); border-radius: 12px; }
+        [data-bs-theme="dark"] .cc-up-icon { background: rgba(245,166,35,0.12); }
+        .cc-up-icon i { font-size: 1.2rem; color: var(--c); }
+        .cc-label-sm { font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--c); margin-bottom: 1rem; }
+        @media (max-width: 767px) { .cc-grid-2 { grid-template-columns: 1fr; } .cc-grid-3 { grid-template-columns: 1fr; } }
+        </style>
+---
+
+```{=html}
+<div class="m">
+
+<!-- HERO -->
+<div class="ev-hero" style="min-height:65vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/hackathon-team.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Ages 8–18</div>
+    <h1>Junior<br>Academy</h1>
+    <p>Cybersecurity, programming, robotics, and digital literacy for kids and teens. Built with partner organizations who care about the next generation.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="#courses" class="ev-btn" style="background:#F5A623;">See the courses</a>
+      <a href="#partners" class="ev-btn-ghost">Become a partner</a>
+    </div>
+  </div>
+</div>
+
+<!-- PHILOSOPHY -->
+<div class="m-bg" style="padding:6rem 0;">
+  <div class="container" style="max-width:800px; text-align:center;">
+    <div class="cc-label-sm">The approach</div>
+    <h2 style="font-size:2rem; line-height:1.3; margin-bottom:1.5rem;">We don't teach kids directly.<br>We build programs with partners who do.</h2>
+    <p style="color:var(--g); font-size:1.05rem; line-height:1.8; max-width:650px; margin:0 auto;">
+      Schools, NGOs, libraries, and community centers know their kids best. We provide the curriculum, training materials, and instructor support — our partners deliver it locally. This way, every Junior Academy program is adapted to its community while maintaining the same quality and standards.
+    </p>
+  </div>
+</div>
+
+<!-- COURSES FOR KIDS -->
+<div class="m-s" id="courses" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Courses for kids & teens</h2>
+    <p class="sub">Age-appropriate, hands-on, and designed to spark curiosity.</p>
+    <div class="cc-grid-3">
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-shield-check"></i></div>
+        <h4>Cyberhygiene for Kids</h4>
+        <p>Safe passwords, recognizing scams, privacy online, and responsible device use. Ages 8–12. Fun activities, no lectures.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-lock"></i></div>
+        <h4>Cybersecurity Basics</h4>
+        <p>How the internet works, what hackers do, protecting your accounts, and intro to ethical hacking. Ages 13–18.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-code-slash"></i></div>
+        <h4>First Steps in Programming</h4>
+        <p>Scratch, Python basics, building simple games and websites. Visual programming for younger kids, text-based for teens.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-robot"></i></div>
+        <h4>Robotics & Hardware</h4>
+        <p>Arduino, Raspberry Pi, sensors, motors, and building things that move. From blinking LEDs to autonomous robots.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-phone"></i></div>
+        <h4>Digital Literacy</h4>
+        <p>Critical thinking online, media literacy, digital citizenship, and understanding how technology shapes our world.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-trophy"></i></div>
+        <h4>Competition Prep</h4>
+        <p>Preparing teams for CTF challenges, robotics competitions, NASA SpaceApps Junior, and science fairs.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
+  <div class="container">
+    <h2>How it works</h2>
+    <p class="sub">Three simple steps from idea to running program.</p>
+    <div style="max-width:750px; margin:0 auto;">
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-1-circle"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Partner signs up</span></h4>
+          <div class="up-meta">Schools, NGOs, libraries, or companies contact us. We discuss goals, audience, and format. No upfront cost for educational partners.</div>
+        </div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-2-circle"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>We set up the program</span></h4>
+          <div class="up-meta">We provide curriculum, instructor training, materials, and platform access. We train your teachers or send our instructors.</div>
+        </div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-3-circle"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Partner delivers locally</span></h4>
+          <div class="up-meta">Your organization runs the program with your kids, on your schedule, in your space. We support with content updates and instructor mentoring.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE ROW -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <div class="m-r">
+      <div class="m-ri"><img loading="lazy" src="/assets/images/stock/hackathon-team.webp" alt="Junior Academy session"></div>
+      <div class="m-rt">
+        <h2>Real skills.<br>Not screen time.</h2>
+        <p>Every course is 80% hands-on. Kids build things — websites, robots, security tools, games. They work in teams, present their projects, and learn by doing. No passive video watching. No multiple-choice quizzes. Real projects with real output that they can show their friends and family.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT PARTNERS GET -->
+<div class="m-bg" id="partners" style="padding:7rem 0;">
+  <div class="container">
+    <h2>What partners get</h2>
+    <p class="sub">Everything you need to run a Junior Academy program.</p>
+    <div class="cc-grid-2">
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-book"></i></div>
+        <h4>Full curriculum</h4>
+        <p>Lesson plans, slide decks, exercises, and assessment rubrics for each course. Updated every semester.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-person-video3"></i></div>
+        <h4>Instructor training</h4>
+        <p>We train your teachers to deliver the material confidently. Certification program included. Ongoing mentoring.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-laptop"></i></div>
+        <h4>Platform access</h4>
+        <p>Students get accounts on our learning platform with interactive exercises, progress tracking, and certificates.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-box-seam"></i></div>
+        <h4>Hardware kits</h4>
+        <p>Arduino, Raspberry Pi, and sensor kits available for robotics courses. Lending program for partners who need it.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-trophy"></i></div>
+        <h4>Competition support</h4>
+        <p>Help preparing student teams for CTFs, robotics competitions, and hackathons. Mentors and practice resources.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-globe2"></i></div>
+        <h4>Network</h4>
+        <p>Connect with other Junior Academy partners. Share experiences, co-organize events, and learn from each other.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHO CAN PARTNER -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Who can partner</h2>
+    <p class="sub">Any organization that works with kids and teens.</p>
+    <div style="max-width:750px; margin:0 auto;">
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-mortarboard"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Schools</span></h4>
+          <div class="up-meta">Extracurricular STEM clubs, after-school programs, elective courses. We adapt to your schedule and age group.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-heart"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>NGOs & Nonprofits</span></h4>
+          <div class="up-meta">Youth programs, digital literacy initiatives, community empowerment. Subsidized or free for qualifying organizations.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-building"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Libraries & Community Centers</span></h4>
+          <div class="up-meta">Public workshops, summer programs, maker spaces. Bring tech education to your community.</div>
+        </div>
+      </div>
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-briefcase"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Companies (CSR)</span></h4>
+          <div class="up-meta">Sponsor Junior Academy programs in your local schools. Employee volunteers can co-teach. Great for CSR reporting.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="m-bg" style="padding:5rem 0;">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn" style="color:#F5A623;">8–18</div><div class="m-nl">Age range</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">6</div><div class="m-nl">Courses</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">80%</div><div class="m-nl">Hands-on</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">Free</div><div class="m-nl">For qualifying orgs</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="m-cta">
+  <div class="container">
+    <div class="m-d"></div>
+    <h2>Bring Junior Academy<br>to your organization</h2>
+    <p>Let's discuss how we can build a program together for your kids and teens.</p>
+    <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+      <a href="/academy/partnerships.html" class="m-b" style="background:#F5A623;"><i class="bi bi-handshake me-2"></i>Become a partner</a>
+      <a href="/booking/" class="m-bo" style="border-color:#F5A623; color:#F5A623;">Book a call</a>
+    </div>
+  </div>
+</div>
+
+</div>
+```

@@ -1167,68 +1167,15 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
       </div>
 
-      <!-- Right: form -->
-      <div class="m-form">
-        <div class="cc-tier" style="padding:2.5rem;">
-          <h3 style="font-size:1.25rem; font-weight:700; margin-bottom:0.35rem; text-align:center;">Aplică acum</h3>
-          <p style="font-size:0.85rem; color:#86868b; text-align:center; margin-bottom:1.75rem;">Vom evalua aplicația ta și revenim în maximum 48 de ore.</p>
-          <form action="https://formspree.io/f/mpwkaqev" method="POST">
-            <div class="fr">
-              <div class="fg">
-                <label>Numele tău *</label>
-                <input type="text" name="name" required="" placeholder="Nume complet">
-              </div>
-              <div class="fg">
-                <label>Email *</label>
-                <input type="email" name="email" required="" placeholder="adresa@email.com">
-              </div>
-            </div>
-            <div class="fg">
-              <label>Vreau să *</label>
-              <select name="application_type" required="">
-                <option value="">Selectează...</option>
-                <option value="individual">Mă alătur ca membru individual</option>
-                <option value="student">Mă alătur ca student</option>
-                <option value="sponsor">Sponsorizez un membership</option>
-                <option value="organization">Deschid un capitol în organizația mea</option>
-              </select>
-            </div>
-            <div class="fg">
-              <label>Organizație (dacă este cazul)</label>
-              <input type="text" name="organization" placeholder="Companie, școală sau numele organizației">
-            </div>
-            <div class="fr">
-              <div class="fg">
-                <label>Tipul organizației</label>
-                <select name="org_type">
-                  <option value="">Selectează...</option>
-                  <option value="company">Companie</option>
-                  <option value="school">Școală (K-12)</option>
-                  <option value="university">Universitate</option>
-                  <option value="ngo">ONG / Nonprofit</option>
-                  <option value="community">Org. comunitară</option>
-                  <option value="personal">Personal / N/A</option>
-                </select>
-              </div>
-              <div class="fg">
-                <label>Oraș / Țară *</label>
-                <input type="text" name="location" required="" placeholder="ex. Craiova, România">
-              </div>
-            </div>
-            <div class="fg">
-              <label>Spune-ne despre tine *</label>
-              <textarea name="message" rows="3" required="" placeholder="Ce construiești? Ce te face curios? De ce vrei să te alături?"></textarea>
-            </div>
-            <input type="hidden" name="_subject" value="Computer Club Application (RO)">
-            <input type="hidden" name="_source" value="computerclub-apply-ro">
-            <input type="text" name="_gotcha" style="display:none">
-            <div class="fc">
-              <input type="checkbox" required="">
-              <span>Sunt de acord cu <a href="../../../../ro/privacy.html" target="_blank">politica de confidențialitate</a> *</span>
-            </div>
-            <button type="submit" style="background:#F5A623;"><i class="bi bi-send me-2"></i>Trimite aplicația</button>
-          </form>
+      <!-- Right: Bigin web form embed -->
+      <div>
+        <div class="cc-tier" style="padding:0; overflow:hidden; min-height:600px;">
+          <iframe src="BIGIN_FORM_URL" style="width:100%; min-height:600px; border:none;" loading="lazy" title="Aplicație Computer Club">
+          </iframe>
         </div>
+        <p style="font-size:0.8rem; color:var(--g); text-align:center; margin-top:1rem;">
+          Probleme cu formularul? <a href="mailto:academy@chen.ist" style="color:var(--c);">Scrie-ne direct</a>
+        </p>
       </div>
 
     </div>
