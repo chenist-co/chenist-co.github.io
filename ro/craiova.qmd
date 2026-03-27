@@ -12,6 +12,8 @@ format:
       text: |
         <style>
         .m { --c: #F5A623; }
+        .path-bar { display: none !important; }
+        .quarto-title-block, #title-block-header { display: none !important; }
         .cc-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; max-width: 1000px; margin: 0 auto; }
         .cc-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
         .cc-card { background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; padding: 2rem; height: 100%; transition: border-color 0.2s, transform 0.2s; }
@@ -35,19 +37,6 @@ format:
 
 ```{=html}
 <div class="m">
-
-<!-- BREADCRUMB -->
-<div style="padding:1rem 0 0; background:transparent;">
-  <div class="container">
-    <nav style="font-size:0.82rem; color:var(--g);">
-      <a href="/ro/" style="color:var(--g); text-decoration:none;">Acasă</a>
-      <span style="margin:0 0.4rem; opacity:0.5;">›</span>
-      <a href="/ro/" style="color:var(--g); text-decoration:none;">Ro</a>
-      <span style="margin:0 0.4rem; opacity:0.5;">›</span>
-      <span style="color:var(--c);">Craiova</span>
-    </nav>
-  </div>
-</div>
 
 <!-- HERO -->
 <div class="ev-hero" style="min-height:65vh;">
