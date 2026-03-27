@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Clubul Computer — o comunitate cu membri, evenimente programate, oportunități exclusive și posibilitatea de a deschide un club în organizația ta.">
+<meta name="description" content="Alătură-te Computer Club — o comunitate de tehnologie cu ușile închise, bazată pe membership, cu evenimente programate, oportunități exclusive și o rețea reală de oameni care construiesc lucruri.">
 
-<title>Clubul Computer – chen.ist</title>
+<title>Computer Club – chen.ist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,12 +75,12 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<meta property="og:title" content="Clubul Computer – chen.ist">
-<meta property="og:description" content="Clubul Computer — o comunitate cu membri, evenimente programate, oportunități exclusive și posibilitatea de a deschide un club în organizația ta.">
+<meta property="og:title" content="Computer Club – chen.ist">
+<meta property="og:description" content="Alătură-te Computer Club — o comunitate de tehnologie cu ușile închise, bazată pe membership, cu evenimente programate, oportunități exclusive și o rețea reală de oameni care construiesc lucruri.">
 <meta property="og:image" content="https://chen.ist/ro/academy/programs/computerclub/assets/images/og-image.png">
 <meta property="og:site_name" content="chen.ist">
-<meta name="twitter:title" content="Clubul Computer – chen.ist">
-<meta name="twitter:description" content="Clubul Computer — o comunitate cu membri, evenimente programate, oportunități exclusive și posibilitatea de a deschide un club în organizația ta.">
+<meta name="twitter:title" content="Computer Club – chen.ist">
+<meta name="twitter:description" content="Alătură-te Computer Club — o comunitate de tehnologie cu ușile închise, bazată pe membership, cu evenimente programate, oportunități exclusive și o rețea reală de oameni care construiesc lucruri.">
 <meta name="twitter:image" content="https://chen.ist/ro/academy/programs/computerclub/assets/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 </head><body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -479,7 +479,114 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 }
 </script>
-<style>.m { --c: #F5A623; }</style>
+<style>
+.m { --c: #F5A623; }
+/* Force horizontal grids */
+.cc-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; max-width: 1000px; margin: 0 auto; }
+.cc-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; max-width: 1000px; margin: 0 auto; }
+.cc-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+@media (max-width: 767px) {
+  .cc-grid-2 { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .cc-grid-4 { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .cc-grid-3 { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .cc-grid-2 { gap: 0.75rem; }
+  .cc-grid-4 { gap: 0.75rem; }
+}
+/* Club page — theme-aware card styling */
+.cc-card {
+  background: rgba(0,0,0,0.02);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  padding: 2rem;
+  height: 100%;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.cc-card:hover { border-color: var(--c); transform: translateY(-2px); }
+[data-bs-theme="dark"] .cc-card {
+  background: rgba(245,166,35,0.04);
+  border-color: rgba(255,255,255,0.08);
+}
+[data-bs-theme="dark"] .cc-card:hover { border-color: var(--c); }
+.cc-icon {
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(245,166,35,0.08);
+  border-radius: 10px; margin-bottom: 1rem;
+}
+[data-bs-theme="dark"] .cc-icon { background: rgba(245,166,35,0.12); }
+.cc-icon i { font-size: 1.1rem; color: var(--c); }
+.cc-card h4 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+.cc-card p { font-size: 0.9rem; color: var(--g); margin: 0; line-height: 1.55; }
+/* Rhythm cards */
+.cc-rhythm {
+  text-align: center; padding: 2rem 1rem;
+  background: rgba(0,0,0,0.02);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.cc-rhythm:hover { border-color: var(--c); transform: translateY(-2px); }
+[data-bs-theme="dark"] .cc-rhythm {
+  background: rgba(245,166,35,0.04);
+  border-color: rgba(255,255,255,0.08);
+}
+[data-bs-theme="dark"] .cc-rhythm:hover { border-color: var(--c); }
+.cc-rhythm .cc-num { font-size: 2.5rem; font-weight: 800; color: var(--c); line-height: 1; }
+.cc-rhythm .cc-freq { font-size: 0.8rem; color: var(--g); margin-top: 0.5rem; }
+.cc-rhythm .cc-label { font-weight: 600; font-size: 0.95rem; margin-top: 0.75rem; }
+.cc-rhythm .cc-desc { font-size: 0.8rem; color: var(--g); margin-top: 0.35rem; }
+/* Pricing cards */
+.cc-tier {
+  background: rgba(0,0,0,0.015);
+  border: 1.5px solid rgba(0,0,0,0.08);
+  border-radius: 20px;
+  padding: 3rem 2.25rem;
+  height: 100%; display: flex; flex-direction: column;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.cc-tier:hover { border-color: var(--c); transform: translateY(-2px); }
+[data-bs-theme="dark"] .cc-tier {
+  background: rgba(245,166,35,0.03);
+  border-color: rgba(255,255,255,0.1);
+}
+[data-bs-theme="dark"] .cc-tier:hover { border-color: var(--c); }
+.cc-tier.cc-featured {
+  background: rgba(245,166,35,0.04);
+  border-color: rgba(245,166,35,0.2);
+}
+[data-bs-theme="dark"] .cc-tier.cc-featured {
+  background: rgba(245,166,35,0.06);
+  border-color: rgba(245,166,35,0.25);
+}
+.cc-tier-label { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--c); margin-bottom: 1rem; }
+.cc-price { font-size: 2.5rem; font-weight: 800; line-height: 1; margin-top: 0.5rem; }
+.cc-price span { font-size: 0.9rem; font-weight: 400; color: var(--g); }
+.cc-price-sub { font-size: 0.85rem; color: var(--g); margin-top: 0.75rem; padding-bottom: 2rem; margin-bottom: 2rem; border-bottom: 1px solid rgba(0,0,0,0.06); }
+[data-bs-theme="dark"] .cc-price-sub { border-color: rgba(255,255,255,0.06); }
+.cc-tier ul { list-style: none; padding: 0; margin: 0 0 2.5rem 0; flex-grow: 1; }
+.cc-tier ul li { padding: 0.65rem 0; font-size: 0.9rem; color: var(--g); border-bottom: 1px solid rgba(0,0,0,0.04); }
+.cc-tier ul li:last-child { border-bottom: none; }
+[data-bs-theme="dark"] .cc-tier ul li { border-color: rgba(255,255,255,0.04); }
+.cc-tier ul li i { color: var(--c); margin-right: 0.5rem; }
+.cc-badge { position: absolute; top: -12px; right: 20px; background: var(--c); color: #000; font-size: 0.7rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 6px; letter-spacing: 0.05em; }
+/* Up-item icon box */
+.cc-up-icon {
+  flex-shrink: 0; width: 48px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(245,166,35,0.08);
+  border-radius: 12px;
+}
+[data-bs-theme="dark"] .cc-up-icon { background: rgba(245,166,35,0.12); }
+.cc-up-icon i { font-size: 1.2rem; color: var(--c); }
+/* Section label */
+.cc-label-sm { font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--c); margin-bottom: 1rem; }
+/* Form grid stacking */
+@media (max-width: 767px) {
+  .cc-form-grid { grid-template-columns: 1fr !important; }
+}
+</style>
 
 
 <link rel="stylesheet" href="../../../../assets/css/main.min.css">
@@ -684,7 +791,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <header id="title-block-header">
-<h1 class="title display-7">Clubul Computer</h1>
+<h1 class="title display-7">Computer Club</h1>
+<p class="subtitle lead">Un club de tehnologie doar pentru membri, pentru constructori, gânditori și creatori</p>
 
 </header>
 
@@ -692,27 +800,27 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="m">
 
 <!-- HERO -->
-<div class="ev-hero" style="min-height:65vh;">
+<div class="ev-hero" style="min-height:70vh;">
   <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/hackathon-team.webp');"></div>
   <div class="ev-hero-content">
     <div class="ev-hero-tag" style="background:#F5A623;">Doar pentru membri</div>
-    <h1>Clubul<br>Computer</h1>
-    <p>O comunitate cu ușile închise pentru cei care construiesc cu tehnologia.<br>Nu un meetup. Nu o conferință. Un club.</p>
+    <h1>Computer<br>Club</h1>
+    <p>O comunitate cu ușile închise pentru oamenii care construiesc lucruri cu tehnologia.<br>Nu e un meetup. Nu e o conferință. E un club.</p>
     <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
-      <a href="#apply" class="ev-btn" style="background:#F5A623;">Aplică pentru membership</a>
+      <a href="#membership" class="ev-btn" style="background:#F5A623;">Aplică pentru membership</a>
       <a href="#organizations" class="ev-btn-ghost">Deschide un club în organizația ta</a>
     </div>
   </div>
 </div>
 
 <!-- PHILOSOPHY -->
-<div class="m-bg" style="padding:5rem 0;">
+<div class="m-bg" style="padding:6rem 0;">
   <div class="container" style="max-width:800px; text-align:center;">
-    <div style="font-size:0.8rem; letter-spacing:0.15em; text-transform:uppercase; color:#F5A623; margin-bottom:1rem;">Ideea</div>
-    <h2 style="font-size:2rem; line-height:1.3; margin-bottom:1.5rem;">OpenCoffee ne-a arătat că<br>cele mai bune lucruri se întâmplă informal.</h2>
+    <div class="cc-label-sm">Ideea</div>
+    <h2 style="font-size:2rem; line-height:1.3; margin-bottom:1.5rem;">Cele mai bune lucruri se întâmplă<br>când oamenii curioși se implică.</h2>
     <p style="color:var(--g); font-size:1.05rem; line-height:1.8; max-width:650px; margin:0 auto;">
-      OpenCoffee și GeekMeet au demonstrat că atunci când pui oameni curioși într-o cameră cu cafea și o tablă, se întâmplă lucruri reale — startup-uri se nasc, probleme se rezolvă, prietenii se formează. Dar meetup-urile deschise au un plafon: prezență inconsistentă, conversații superficiale, nicio continuitate între sesiuni.<br><br>
-      Clubul Computer ia ce funcționează — întâlniri informale, zero ierarhie, energie de constructori — și adaugă ce lipsește: <strong>angajament</strong>. Un grup fix de membri care vin, contribuie și cresc împreună. Cu ușile închise, conversațiile merg mai adânc.
+      Meetup-urile deschise au un plafon: participare inconsistentă, conversații superficiale, nicio continuitate între sesiuni. Ideile bune mor între un meetup și următorul pentru că nimeni nu duce lucrurile la capăt.<br><br>
+      Computer Club ia ce funcționează la întâlnirile informale — zero ierarhie, energie de constructor, conversații reale — și adaugă ce lipsește: <strong>implicare</strong>. Un grup fix de membri care vin, contribuie și cresc împreună. Cu ușile închise, conversațiile merg mai adânc.
     </p>
   </div>
 </div>
@@ -721,159 +829,307 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="m-s" style="padding:7rem 0;">
   <div class="container">
     <h2>Cum funcționează clubul</h2>
-    <p class="sub">Reguli simple. Angajament real. Fără vorbe goale.</p>
-    <div class="row g-4" style="max-width:1000px; margin:0 auto;">
-      <div class="col-md-6">
-        <div style="background:rgba(245,166,35,0.04); border:1px solid rgba(245,166,35,0.1); border-radius:16px; padding:2rem; height:100%;">
-          <div style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:10px; margin-bottom:1rem;">
-            <i class="bi bi-door-closed" style="font-size:1.1rem; color:#F5A623;"></i>
-          </div>
-          <h4 style="font-size:1.1rem; margin-bottom:0.5rem;">Ușă închisă</h4>
-          <p style="font-size:0.9rem; color:var(--g); margin:0;">Membership prin aplicație sau invitație. Fiecare capitol e limitat la 30 de membri activi pentru ca relațiile să rămână reale.</p>
-        </div>
+    <p class="sub">Reguli simple. Implicare reală. Fără fleacuri.</p>
+    <div class="cc-grid-2">
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-door-closed"></i></div>
+        <h4>Ușă închisă</h4>
+        <p>Membership prin aplicație sau invitație. Fiecare capitol este limitat la 30 de membri activi pentru a păstra conversațiile autentice și relațiile semnificative.</p>
       </div>
-      <div class="col-md-6">
-        <div style="background:rgba(245,166,35,0.04); border:1px solid rgba(245,166,35,0.1); border-radius:16px; padding:2rem; height:100%;">
-          <div style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:10px; margin-bottom:1rem;">
-            <i class="bi bi-calendar-check" style="font-size:1.1rem; color:#F5A623;"></i>
-          </div>
-          <h4 style="font-size:1.1rem; margin-bottom:0.5rem;">Cadență programată</h4>
-          <p style="font-size:0.9rem; color:var(--g); margin:0;">Sesiuni principale lunare + sesiuni de lucru bisăptămânale + deep-dive-uri trimestriale. Știi ritmul. Te organizezi. Consistența construiește încredere.</p>
-        </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-calendar-check"></i></div>
+        <h4>Cadență programată</h4>
+        <p>Sesiuni principale lunare + sesiuni de lucru bi-săptămânale + deep-dive-uri trimestriale. Cunoști ritmul. Te organizezi în jurul lui. Consistența construiește încredere.</p>
       </div>
-      <div class="col-md-6">
-        <div style="background:rgba(245,166,35,0.04); border:1px solid rgba(245,166,35,0.1); border-radius:16px; padding:2rem; height:100%;">
-          <div style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:10px; margin-bottom:1rem;">
-            <i class="bi bi-person-check" style="font-size:1.1rem; color:#F5A623;"></i>
-          </div>
-          <h4 style="font-size:1.1rem; margin-bottom:0.5rem;">Skin in the game</h4>
-          <p style="font-size:0.9rem; color:var(--g); margin:0;">Taxa anuală de membru menține angajamentul tuturor. Nu-ți permiți? Există membership-uri sponsorizate. Nimeni nu e exclus din cauza banilor.</p>
-        </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-person-check"></i></div>
+        <h4>Skin in the game</h4>
+        <p>Taxa anuală de membership ține pe toată lumea implicată. Nu-ți permiți? Membership-urile sponsorizate există exact pentru asta. Nimeni nu este exclus din cauza banilor.</p>
       </div>
-      <div class="col-md-6">
-        <div style="background:rgba(245,166,35,0.04); border:1px solid rgba(245,166,35,0.1); border-radius:16px; padding:2rem; height:100%;">
-          <div style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:10px; margin-bottom:1rem;">
-            <i class="bi bi-lightning" style="font-size:1.1rem; color:#F5A623;"></i>
-          </div>
-          <h4 style="font-size:1.1rem; margin-bottom:0.5rem;">Cultură de constructori</h4>
-          <p style="font-size:0.9rem; color:var(--g); margin:0;">Fiecare sesiune are un rezultat — un demo, o decizie, o abilitate învățată, un proiect avansat. Nu doar vorbim despre a construi lucruri. Le construim.</p>
-        </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-lightning"></i></div>
+        <h4>Cultură de constructori</h4>
+        <p>Fiecare sesiune are un rezultat — un demo, o decizie, o abilitate învățată, un proiect avansat. Nu doar vorbim despre construirea lucrurilor. Le construim.</p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- MEMBERSHIP -->
-<div class="m-bg" style="padding:7rem 0;">
+<!-- WHAT MEMBERS GET -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Ce primesc membrii</h2>
+    <p class="sub">Nu e un newsletter pe care-l uiți. E un club căruia îi aparții.</p>
+    <div style="max-width:750px; margin:0 auto;">
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-calendar-event"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Evenimente programate</span></h4>
+          <div class="up-meta">Sesiuni principale lunare, sesiuni de lucru bi-săptămânale, deep-dive-uri trimestriale, retragere anuală. Acces complet la calendar.</div>
+        </div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-book"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Bibliotecă de conținut</span></h4>
+          <div class="up-meta">Înregistrări, materiale de workshop, template-uri de proiecte și trasee de învățare curate. Actualizată după fiecare sesiune.</div>
+        </div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-briefcase"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Tablou de oportunități</span></h4>
+          <div class="up-meta">Locuri de muncă, proiecte freelance, cereri de colaborare și apeluri de proiecte partajate exclusiv în cadrul clubului.</div>
+        </div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-trophy"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Acces prioritar</span></h4>
+          <div class="up-meta">Primul la rând pentru hackathon-urile Academy, școlile de vară și evenimentele partenerilor. Membrii primesc înregistrare prioritară + reduceri.</div>
+        </div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-people"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Rețeaua</span></h4>
+          <div class="up-meta">Un director privat de membri, introduceri directe și o cultură în care oamenii chiar se ajută reciproc. Fără DM-uri la rece.</div>
+        </div>
+      </div>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-tools"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Acces la laborator</span></h4>
+          <div class="up-meta">Kituri hardware, credite cloud, licențe software și infrastructură partajată pentru proiectele membrilor.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- EVENT CALENDAR -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Ritmul</h2>
+    <p class="sub">Un calendar structurat ca să știi mereu ce urmează.</p>
+    <div class="cc-grid-4">
+      <div class="cc-rhythm">
+        <div class="cc-num">2×</div>
+        <div class="cc-freq">pe lună</div>
+        <div class="cc-label">Sesiuni de lucru</div>
+        <div class="cc-desc">Co-working, pair programming, timp de proiect</div>
+      </div>
+      <div class="cc-rhythm">
+        <div class="cc-num">1×</div>
+        <div class="cc-freq">pe lună</div>
+        <div class="cc-label">Sesiunea principală</div>
+        <div class="cc-desc">Prezentări, demo-uri, runde rapide, Q&amp;A</div>
+      </div>
+      <div class="cc-rhythm">
+        <div class="cc-num">1×</div>
+        <div class="cc-freq">pe trimestru</div>
+        <div class="cc-label">Deep Dive</div>
+        <div class="cc-desc">Workshop de o zi pe un singur subiect</div>
+      </div>
+      <div class="cc-rhythm">
+        <div class="cc-num">1×</div>
+        <div class="cc-freq">pe an</div>
+        <div class="cc-label">Retragerea anuală</div>
+        <div class="cc-desc">Weekend offsite, toate capitolele</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MEMBERSHIP TIERS -->
+<div class="m-bg" id="membership" style="padding:7rem 0;">
   <div class="container">
     <h2>Membership</h2>
     <p class="sub">Alege cum vrei să faci parte din club.</p>
-    <div class="row g-4" style="max-width:1100px; margin:0 auto;">
-      <div class="col-md-4">
-        <div style="background:rgba(245,166,35,0.03); border:1.5px solid rgba(245,166,35,0.1); border-radius:20px; padding:2.5rem 2rem; height:100%; display:flex; flex-direction:column;">
-          <div style="font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:#F5A623; margin-bottom:0.75rem;">Individual</div>
-          <div style="font-size:2.5rem; font-weight:800; line-height:1;">€120<span style="font-size:0.9rem; font-weight:400; color:var(--g);">/an</span></div>
-          <div style="font-size:0.85rem; color:var(--g); margin-top:0.35rem; margin-bottom:1.5rem;">€10/lună echivalent</div>
-          <ul style="list-style:none; padding:0; margin:0 0 2rem 0; flex-grow:1;">
-            <li style="padding:0.4rem 0; font-size:0.9rem; color:var(--g);"><i class="bi bi-check2 me-2" style="color:#F5A623;"></i>Toate evenimentele programate</li>
-            <li style="padding:0.4rem 0; font-size:0.9rem; color:var(--g);"><i class="bi bi-check2 me-2" style="color:#F5A623;"></i>Acces la biblioteca de conținut</li>
-            <li style="padding:0.4rem 0; font-size:0.9rem; color:var(--g);"><i class="bi bi-check2 me-2" style="color:#F5A623;"></i>Panou de oportunități</li>
-            <li style="padding:0.4rem 0; font-size:0.9rem; color:var(--g);"><i class="bi bi-check2 me-2" style="color:#F5A623;"></i>Director de membri</li>
-            <li style="padding:0.4rem 0; font-size:0.9rem; color:var(--g);"><i class="bi bi-check2 me-2" style="color:#F5A623;"></i>Înregistrare prioritară</li>
-          </ul>
-          <a href="#apply" class="m-b" style="background:#F5A623; text-align:center; width:100%;">Aplică acum</a>
-        </div>
+    <div class="cc-grid-3">
+      <div class="cc-tier">
+        <div class="cc-tier-label">Individual</div>
+        <ul>
+          <li><i class="bi bi-check2"></i>Toate evenimentele programate</li>
+          <li><i class="bi bi-check2"></i>Acces la biblioteca de conținut</li>
+          <li><i class="bi bi-check2"></i>Tablou de oportunități</li>
+          <li><i class="bi bi-check2"></i>Director de membri</li>
+          <li><i class="bi bi-check2"></i>Înregistrare prioritară la evenimente</li>
+        </ul>
+        <a href="#apply" class="m-b" style="background:var(--c); text-align:center; width:100%;">Aplică acum</a>
       </div>
-      <div class="col-md-4">
-        <div style="background:rgba(245,166,35,0.03); border:1.5px solid rgba(245,166,35,0.1); border-radius:20px; padding:2.5rem 2rem; height:100%; display:flex; flex-direction:column;">
-          <div style="font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:#F5A623; margin-bottom:0.75rem;">Student</div>
-          <div style="font-size:2.5rem; font-weight:800; line-height:1;">€48<span style="font-size:0.9rem; font-weight:400; color:var(--g);">/an</span></div>
-          <div style="font-size:0.85rem; color:var(--g); margin-top:0.35rem; margin-bottom:1.5rem;">€4/lună · legitimație de student necesară</div>
-          <ul style="list-style:none; padding:0; margin:0 0 2rem 0; flex-grow:1;">
-            <li style="padding:0.4rem 0; font-size:0.9rem; color:var(--g);"><i class="bi bi-check2 me-2" style="color:#F5A623;"></i>Toate evenimentele programate</li>
-            <li style="padding:0.4rem 0; font-size:0.9rem; color:var(--g);"><i class="bi bi-check2 me-2" style="color:#F5A623;"></i>Acces la biblioteca de conținut</li>
-            <li style="padding:0.4rem 0; font-size:0.9rem; color:var(--g);"><i class="bi bi-check2 me-2" style="color:#F5A623;"></i>Panou de oportunități</li>
-            <li style="padding:0.4rem 0; font-size:0.9rem; color:var(--g);"><i class="bi bi-check2 me-2" style="color:#F5A623;"></i>Director de membri</li>
-            <li style="padding:0.4rem 0; font-size:0.9rem; color:var(--g);"><i class="bi bi-check2 me-2" style="color:#F5A623;"></i>Mentorat personalizat</li>
-          </ul>
-          <a href="#apply" class="m-b" style="background:#F5A623; text-align:center; width:100%;">Aplică ca student</a>
-        </div>
+      <div class="cc-tier">
+        <div class="cc-tier-label">Student</div>
+        <ul>
+          <li><i class="bi bi-check2"></i>Toate evenimentele programate</li>
+          <li><i class="bi bi-check2"></i>Acces la biblioteca de conținut</li>
+          <li><i class="bi bi-check2"></i>Tablou de oportunități</li>
+          <li><i class="bi bi-check2"></i>Director de membri</li>
+          <li><i class="bi bi-check2"></i>Asociere cu un mentor</li>
+        </ul>
+        <a href="#apply" class="m-b" style="background:var(--c); text-align:center; width:100%;">Aplică ca student</a>
       </div>
-      <div class="col-md-4">
-        <div style="background:rgba(245,166,35,0.06); border:1.5px solid rgba(245,166,35,0.25); border-radius:20px; padding:2.5rem 2rem; height:100%; display:flex; flex-direction:column; position:relative;">
-          <div style="position:absolute; top:-12px; right:20px; background:#F5A623; color:#000; font-size:0.7rem; font-weight:700; padding:0.25rem 0.75rem; border-radius:6px;">DĂ ÎNAPOI</div>
-          <div style="font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:#F5A623; margin-bottom:0.75rem;">Sponsorizează un loc</div>
-          <div style="font-size:2.5rem; font-weight:800; line-height:1;">€120<span style="font-size:0.9rem; font-weight:400; color:var(--g);">/loc/an</span></div>
-          <div style="font-size:0.85rem; color:var(--g); margin-top:0.35rem; margin-bottom:1.5rem;">Finanțează pe cineva care nu-și permite</div>
-          <ul style="list-style:none; padding:0; margin:0 0 2rem 0; flex-grow:1;">
-            <li style="padding:0.4rem 0; font-size:0.9rem; color:var(--g);"><i class="bi bi-heart me-2" style="color:#F5A623;"></i>Acoperă un membership complet</li>
-            <li style="padding:0.4rem 0; font-size:0.9rem; color:var(--g);"><i class="bi bi-heart me-2" style="color:#F5A623;"></i>Asociat cuiva care are nevoie</li>
-            <li style="padding:0.4rem 0; font-size:0.9rem; color:var(--g);"><i class="bi bi-heart me-2" style="color:#F5A623;"></i>Sponsorul rămâne anonim</li>
-            <li style="padding:0.4rem 0; font-size:0.9rem; color:var(--g);"><i class="bi bi-heart me-2" style="color:#F5A623;"></i>Chitanță deductibilă fiscal</li>
-            <li style="padding:0.4rem 0; font-size:0.9rem; color:var(--g);"><i class="bi bi-heart me-2" style="color:#F5A623;"></i>Sponsorizează mai multe locuri</li>
-          </ul>
-          <a href="#apply" class="m-bo" style="border-color:#F5A623; color:#F5A623; text-align:center; width:100%;">Sponsorizează un membership</a>
-        </div>
+      <div class="cc-tier cc-featured" style="position:relative;">
+        <div class="cc-badge">DĂ ÎNAPOI</div>
+        <div class="cc-tier-label">Sponsorizează un loc</div>
+        <ul>
+          <li><i class="bi bi-heart"></i>Acoperă un membership complet</li>
+          <li><i class="bi bi-heart"></i>Asociat cu cineva care are nevoie</li>
+          <li><i class="bi bi-heart"></i>Sponsorul rămâne anonim</li>
+          <li><i class="bi bi-heart"></i>Chitanță deductibilă fiscal</li>
+          <li><i class="bi bi-heart"></i>Sponsorizează mai multe locuri</li>
+        </ul>
+        <a href="#apply" class="m-bo" style="border-color:var(--c); color:var(--c); text-align:center; width:100%;">Sponsorizează un membership</a>
       </div>
+
     </div>
     <p style="text-align:center; color:var(--g); font-size:0.85rem; margin-top:2rem;">Nu-ți permiți membership-ul? Aplică oricum — locuri sponsorizate sunt disponibile și nimeni nu va ști diferența.</p>
   </div>
 </div>
 
-<!-- ORGANIZATIONS -->
+<!-- FEATURE ROW: CULTURE -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <div class="m-r">
+      <div class="m-ri"><img loading="lazy" src="../../../../assets/images/stock/hackathon-team.webp" alt="Sesiune de club"></div>
+      <div class="m-rt">
+        <h2>Energie informală.<br>Implicare reală.</h2>
+        <p>Cele mai bune comunități tech au un lucru în comun: atrag oameni care <em>fac</em> lucruri, nu oameni care vorbesc despre a face lucruri. Am luat acea energie și am adăugat structură. Cadență regulată. Membership real. Un spațiu privat unde poți împărtăși lucrări neterminate, pune întrebări „prostești" și găsi colaboratori care chiar duc lucrurile la capăt.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE ROW: OPPORTUNITIES -->
+<div class="m-bg m-bg-stripes" style="padding:7rem 0;">
+  <div class="container">
+    <div class="m-r rv">
+      <div class="m-ri"><img loading="lazy" src="../../../../assets/images/stock/code-screen.webp" alt="Oportunități pentru membri"></div>
+      <div class="m-rt">
+        <h2>Oportunitățile curg<br>prin club.</h2>
+        <p>Membrii partajează locuri de muncă înainte să fie postate public. Proiectele freelance ajung la persoana potrivită. Fondatorii de startup-uri își găsesc co-fondatori. Companiile recrutează din club pentru că au încredere în rețea. Tabloul de oportunități este doar pentru membri, actualizat săptămânal și curatoriat — nu un feed zgomotos de joburi.</p>
+        <div class="lk"><a href="#apply" class="m-lk">Alătură-te pentru a vedea tabloul</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- ORGANIZATIONS SECTION -->
+<!-- ═══════════════════════════════════════════ -->
+
 <div class="m-s" id="organizations" style="padding:7rem 0;">
   <div class="container" style="text-align:center; max-width:800px;">
-    <div style="font-size:0.8rem; letter-spacing:0.15em; text-transform:uppercase; color:#F5A623; margin-bottom:1rem;">Pentru organizații</div>
+    <div class="cc-label-sm">Pentru organizații</div>
     <h2 style="font-size:2.2rem; line-height:1.3;">Deschide un Computer Club<br>în organizația ta</h2>
     <p style="color:var(--g); font-size:1.05rem; max-width:600px; margin:1rem auto 0;">Ajutăm școli, universități, ONG-uri și companii să lanseze și să conducă propriile capitole Computer Club. Tu aduci oamenii — noi aducem tot restul.</p>
   </div>
 </div>
 
+<!-- WHAT ORGS GET -->
 <div class="m-bg" style="padding:5rem 0 7rem;">
   <div class="container">
-    <div class="row g-4" style="max-width:1100px; margin:0 auto;">
-      <div class="col-md-4">
-        <div style="background:rgba(245,166,35,0.04); border:1px solid rgba(245,166,35,0.1); border-radius:16px; padding:2rem; height:100%;">
-          <div style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:10px; margin-bottom:1rem;"><i class="bi bi-person-video3" style="font-size:1.1rem; color:#F5A623;"></i></div>
-          <h4 style="font-size:1.05rem; margin-bottom:0.5rem;">Facilitatori pregătiți</h4>
-          <p style="font-size:0.88rem; color:var(--g); margin:0;">Pregătim echipa ta să conducă sesiunile de club. Sau trimitem pe ai noștri. Program de certificare inclus.</p>
+    <div class="cc-grid-3">
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-person-video3"></i></div>
+        <h4>Facilitatori instruiți</h4>
+        <p>Îți instruim oamenii să conducă sesiunile de club. Sau îi trimitem pe ai noștri. Program de certificare a facilitatorilor inclus pentru echipa ta.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-braces"></i></div>
+        <h4>Acces API la conținut</h4>
+        <p>Acces complet API la biblioteca noastră de conținut — workshop-uri, trasee de învățare, exerciții și instrumente de evaluare. Integrează în propriul LMS sau folosește-l pe al nostru.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-box-seam"></i></div>
+        <h4>Kit de eveniment</h4>
+        <p>Pachete de evenimente gata de rulat: agende, prezentări, ghiduri pentru facilitatori, materiale pentru participanți, formulare de feedback. Adaugă doar oamenii.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-diagram-3"></i></div>
+        <h4>Ajutor la dezvoltarea evenimentelor</h4>
+        <p>Ai nevoie de un hackathon? O serie de workshop-uri? Un demo day? Te ajutăm să proiectezi, planifici și execuți evenimente adaptate publicului și obiectivelor tale.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-graph-up"></i></div>
+        <h4>Panou de analiză</h4>
+        <p>Urmărește implicarea, prezența, progresul competențelor și satisfacția în cadrul capitolului tău. Metrici reale, nu impresii.</p>
+      </div>
+      <div class="cc-card">
+        <div class="cc-icon"><i class="bi bi-globe2"></i></div>
+        <h4>Acces la rețea</h4>
+        <p>Capitolul tău se alătură rețelei mai largi Computer Club. Evenimente inter-capitole, speakeri partajați, hackathon-uri inter-organizaționale și o comunitate care se extinde dincolo de zidurile tale.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHO IT'S FOR -->
+<div class="m-s" style="padding:7rem 0;">
+  <div class="container">
+    <h2>Construit pentru</h2>
+    <p class="sub">Orice organizație care vrea o cultură de învățare tehnologică.</p>
+    <div style="max-width:750px; margin:0 auto;">
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-mortarboard"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Școli (K-12)</span></h4>
+          <div class="up-meta">Cluburi STEM extracurriculare cu conținut adaptat vârstei. Programare, robotică, alfabetizare digitală. Instruire pentru profesori inclusă.</div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div style="background:rgba(245,166,35,0.04); border:1px solid rgba(245,166,35,0.1); border-radius:16px; padding:2rem; height:100%;">
-          <div style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:10px; margin-bottom:1rem;"><i class="bi bi-braces" style="font-size:1.1rem; color:#F5A623;"></i></div>
-          <h4 style="font-size:1.05rem; margin-bottom:0.5rem;">Acces API la conținut</h4>
-          <p style="font-size:0.88rem; color:var(--g); margin:0;">Acces complet la biblioteca noastră — workshop-uri, trasee de învățare, exerciții și instrumente de evaluare. Integrează în LMS-ul tău.</p>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-bank"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Universități</span></h4>
+          <div class="up-meta">Comunități tech conduse de studenți cu suport din partea facultății. Grupuri de cercetare, incubatoare de startup-uri, competiții inter-universitare.</div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div style="background:rgba(245,166,35,0.04); border:1px solid rgba(245,166,35,0.1); border-radius:16px; padding:2rem; height:100%;">
-          <div style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:10px; margin-bottom:1rem;"><i class="bi bi-box-seam" style="font-size:1.1rem; color:#F5A623;"></i></div>
-          <h4 style="font-size:1.05rem; margin-bottom:0.5rem;">Kit de eveniment</h4>
-          <p style="font-size:0.88rem; color:var(--g); margin:0;">Pachete gata de rulat: agende, prezentări, ghiduri pentru facilitatori, materiale pentru participanți. Doar adaugă oameni.</p>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-heart"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>ONG-uri și organizații nonprofit</span></h4>
+          <div class="up-meta">Programe de alfabetizare digitală, împuternicirea comunității, reducerea decalajului digital. Prețuri subvenționate disponibile.</div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div style="background:rgba(245,166,35,0.04); border:1px solid rgba(245,166,35,0.1); border-radius:16px; padding:2rem; height:100%;">
-          <div style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:10px; margin-bottom:1rem;"><i class="bi bi-diagram-3" style="font-size:1.1rem; color:#F5A623;"></i></div>
-          <h4 style="font-size:1.05rem; margin-bottom:0.5rem;">Ajutor dezvoltare evenimente</h4>
-          <p style="font-size:0.88rem; color:var(--g); margin:0;">Ai nevoie de un hackathon? O serie de workshop-uri? Un demo day? Te ajutăm să proiectezi, planifici și execuți.</p>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-building"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Companii</span></h4>
+          <div class="up-meta">Comunități tech interne, perfecționare angajați, cultură a inovației, colaborare inter-echipe. Departamentele R&amp;D adoră asta.</div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div style="background:rgba(245,166,35,0.04); border:1px solid rgba(245,166,35,0.1); border-radius:16px; padding:2rem; height:100%;">
-          <div style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:10px; margin-bottom:1rem;"><i class="bi bi-graph-up" style="font-size:1.1rem; color:#F5A623;"></i></div>
-          <h4 style="font-size:1.05rem; margin-bottom:0.5rem;">Dashboard analytics</h4>
-          <p style="font-size:0.88rem; color:var(--g); margin:0;">Urmărește engagement, prezență, progres și satisfacție în capitolul tău. Metrici reale, nu impresii.</p>
+
+      <div class="up-item">
+        <div class="cc-up-icon"><i class="bi bi-globe"></i></div>
+        <div style="flex-grow:1;">
+          <h4><span>Organizații comunitare</span></h4>
+          <div class="up-meta">Biblioteci, spații de co-working, centre culturale, makerspaces. Oriunde se adună oamenii și vor să învețe.</div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div style="background:rgba(245,166,35,0.04); border:1px solid rgba(245,166,35,0.1); border-radius:16px; padding:2rem; height:100%;">
-          <div style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:10px; margin-bottom:1rem;"><i class="bi bi-globe2" style="font-size:1.1rem; color:#F5A623;"></i></div>
-          <h4 style="font-size:1.05rem; margin-bottom:0.5rem;">Acces la rețea</h4>
-          <p style="font-size:0.88rem; color:var(--g); margin:0;">Capitolul tău se alătură rețelei extinse. Evenimente inter-capitole, speakeri comuni, hackathoane inter-organizații.</p>
-        </div>
-      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="m-bg" style="padding:5rem 0;">
+  <div class="container">
+    <div class="m-n">
+      <div><div class="m-nn" style="color:#F5A623;">150+</div><div class="m-nl">Școli atinse</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">5000+</div><div class="m-nl">Studenți</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">9+</div><div class="m-nl">Ani de activitate</div></div>
+      <div><div class="m-nn" style="color:#F5A623;">30</div><div class="m-nl">Membri per capitol</div></div>
     </div>
   </div>
 </div>
@@ -881,34 +1137,51 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- APPLICATION FORM -->
 <div class="m-s" id="apply" style="padding:7rem 0;">
   <div class="container" style="max-width:950px;">
-    <div style="display:grid; grid-template-columns:1fr 1.2fr; gap:3rem; align-items:start;">
+    <div class="cc-form-grid" style="display:grid; grid-template-columns:1fr 1.2fr; gap:3rem; align-items:start;">
+
+      <!-- Left: info -->
       <div>
         <i class="bi bi-shield-lock" style="font-size:2rem; color:#F5A623; display:block; margin-bottom:1rem;"></i>
-        <h2 style="font-size:1.75rem; text-align:left; margin-bottom:1rem;">Aplică pentru a te alătura sau a deschide un capitol</h2>
-        <p style="color:#86868b; line-height:1.6; margin-bottom:2rem;">Fie că vrei să te alături ca membru individual, să sponsorizezi un loc, sau să deschizi un capitol în organizația ta — totul începe aici.</p>
+        <h2 style="font-size:1.75rem; text-align:left; margin-bottom:1rem;">Aplică să te alături sau<br>să deschizi un capitol</h2>
+        <p style="color:#86868b; line-height:1.6; margin-bottom:2rem;">Fie că vrei să te alături ca membru individual, să sponsorizezi un loc, sau să deschizi un capitol Computer Club în organizația ta — totul începe aici. Evaluăm aplicațiile săptămânal și revenim în maximum 48 de ore.</p>
+
         <div style="display:flex; flex-direction:column; gap:1.25rem;">
           <div style="display:flex; align-items:flex-start; gap:0.75rem;">
-            <div style="flex-shrink:0; width:40px; height:40px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:10px;"><i class="bi bi-person" style="color:#F5A623;"></i></div>
-            <div><div style="font-weight:600; font-size:0.9rem;">Membership individual</div><div style="font-size:0.82rem; color:#86868b;">Alătură-te capitolului din Craiova sau solicită un nou oraș</div></div>
+            <div class="cc-icon" style="width:40px; height:40px;">
+              <i class="bi bi-person" style="color:#F5A623;"></i>
+            </div>
+            <div><div style="font-weight:600; font-size:0.9rem;">Membership individual</div><div style="font-size:0.82rem; color:#86868b;">Alătură-te capitolului Craiova sau solicită un nou oraș</div></div>
           </div>
           <div style="display:flex; align-items:flex-start; gap:0.75rem;">
-            <div style="flex-shrink:0; width:40px; height:40px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:10px;"><i class="bi bi-heart" style="color:#F5A623;"></i></div>
+            <div class="cc-icon" style="width:40px; height:40px;">
+              <i class="bi bi-heart" style="color:#F5A623;"></i>
+            </div>
             <div><div style="font-weight:600; font-size:0.9rem;">Sponsorizează un membership</div><div style="font-size:0.82rem; color:#86868b;">Finanțează un loc pentru cineva care nu-și permite</div></div>
           </div>
           <div style="display:flex; align-items:flex-start; gap:0.75rem;">
-            <div style="flex-shrink:0; width:40px; height:40px; display:flex; align-items:center; justify-content:center; background:rgba(245,166,35,0.1); border-radius:10px;"><i class="bi bi-building" style="color:#F5A623;"></i></div>
+            <div class="cc-icon" style="width:40px; height:40px;">
+              <i class="bi bi-building" style="color:#F5A623;"></i>
+            </div>
             <div><div style="font-weight:600; font-size:0.9rem;">Capitol de organizație</div><div style="font-size:0.82rem; color:#86868b;">Deschide un Computer Club în școala, compania sau ONG-ul tău</div></div>
           </div>
         </div>
       </div>
+
+      <!-- Right: form -->
       <div class="m-form">
-        <div style="background:rgba(245,166,35,0.04); border:1.5px solid rgba(245,166,35,0.12); border-radius:20px; padding:2.5rem;">
+        <div class="cc-tier" style="padding:2.5rem;">
           <h3 style="font-size:1.25rem; font-weight:700; margin-bottom:0.35rem; text-align:center;">Aplică acum</h3>
-          <p style="font-size:0.85rem; color:#86868b; text-align:center; margin-bottom:1.75rem;">Revizuim aplicațiile săptămânal și răspundem în 48 de ore.</p>
+          <p style="font-size:0.85rem; color:#86868b; text-align:center; margin-bottom:1.75rem;">Vom evalua aplicația ta și revenim în maximum 48 de ore.</p>
           <form action="https://formspree.io/f/mpwkaqev" method="POST">
             <div class="fr">
-              <div class="fg"><label>Numele tău *</label><input type="text" name="name" required="" placeholder="Nume complet"></div>
-              <div class="fg"><label>Email *</label><input type="email" name="email" required="" placeholder="email@exemplu.ro"></div>
+              <div class="fg">
+                <label>Numele tău *</label>
+                <input type="text" name="name" required="" placeholder="Nume complet">
+              </div>
+              <div class="fg">
+                <label>Email *</label>
+                <input type="email" name="email" required="" placeholder="adresa@email.com">
+              </div>
             </div>
             <div class="fg">
               <label>Vreau să *</label>
@@ -920,21 +1193,52 @@ document.addEventListener('DOMContentLoaded', function() {
                 <option value="organization">Deschid un capitol în organizația mea</option>
               </select>
             </div>
-            <div class="fg"><label>Organizație (dacă e cazul)</label><input type="text" name="organization" placeholder="Companie, școală sau organizație"></div>
-            <div class="fr">
-              <div class="fg"><label>Tip organizație</label><select name="org_type"><option value="">Selectează...</option><option value="company">Companie</option><option value="school">Școală</option><option value="university">Universitate</option><option value="ngo">ONG</option><option value="community">Org. comunitară</option><option value="personal">Personal / N/A</option></select></div>
-              <div class="fg"><label>Oraș / Țară *</label><input type="text" name="location" required="" placeholder="ex. Craiova, România"></div>
+            <div class="fg">
+              <label>Organizație (dacă este cazul)</label>
+              <input type="text" name="organization" placeholder="Companie, școală sau numele organizației">
             </div>
-            <div class="fg"><label>Spune-ne despre tine *</label><textarea name="message" rows="3" required="" placeholder="Ce construiești? Ce te interesează? De ce vrei să te alături?"></textarea></div>
-            <input type="hidden" name="_subject" value="Aplicație Computer Club">
+            <div class="fr">
+              <div class="fg">
+                <label>Tipul organizației</label>
+                <select name="org_type">
+                  <option value="">Selectează...</option>
+                  <option value="company">Companie</option>
+                  <option value="school">Școală (K-12)</option>
+                  <option value="university">Universitate</option>
+                  <option value="ngo">ONG / Nonprofit</option>
+                  <option value="community">Org. comunitară</option>
+                  <option value="personal">Personal / N/A</option>
+                </select>
+              </div>
+              <div class="fg">
+                <label>Oraș / Țară *</label>
+                <input type="text" name="location" required="" placeholder="ex. Craiova, România">
+              </div>
+            </div>
+            <div class="fg">
+              <label>Spune-ne despre tine *</label>
+              <textarea name="message" rows="3" required="" placeholder="Ce construiești? Ce te face curios? De ce vrei să te alături?"></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="Computer Club Application (RO)">
             <input type="hidden" name="_source" value="computerclub-apply-ro">
             <input type="text" name="_gotcha" style="display:none">
-            <div class="fc"><input type="checkbox" required=""><span>Sunt de acord cu <a href="../../../../ro/privacy.html" target="_blank">politica de confidențialitate</a> *</span></div>
+            <div class="fc">
+              <input type="checkbox" required="">
+              <span>Sunt de acord cu <a href="../../../../ro/privacy.html" target="_blank">politica de confidențialitate</a> *</span>
+            </div>
             <button type="submit" style="background:#F5A623;"><i class="bi bi-send me-2"></i>Trimite aplicația</button>
           </form>
         </div>
       </div>
+
     </div>
+  </div>
+</div>
+
+<!-- HISTORY NOTE -->
+<div class="m-bg" style="padding:3rem 0;">
+  <div class="container" style="max-width:700px; text-align:center;">
+    <p style="color:var(--g); font-size:0.9rem; line-height:1.7; margin:0;">Inspirat de spiritul <strong>OpenCoffee</strong> (Atena, 2007), <strong>GeekMeet</strong> (Stockholm) și <strong>Chaos Computer Club</strong> (Hamburg, 1981) — comunități tech informale care au demonstrat că cele mai bune idei vin de la oameni care se adună regulat în jurul curiozității comune. Am organizat noi înșine capitole OpenCoffee și GeekMeet timp de mai mulți ani înainte de a distila ce a funcționat în formatul Computer Club.</p>
   </div>
 </div>
 

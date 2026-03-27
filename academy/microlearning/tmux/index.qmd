@@ -9,7 +9,26 @@ format:
   html:
     include-in-header:
       text: |
-        <style>.m { --c: #F5A623; }</style>
+        <style>
+        .m { --c: #F5A623; }
+        .ml-content { max-width: 800px; margin: 0 auto; padding: 0 1.5rem; }
+        .ml-content h1, .ml-content h2 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; margin-top: 3rem; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(0,0,0,0.06); }
+        [data-bs-theme="dark"] .ml-content h1, [data-bs-theme="dark"] .ml-content h2 { border-color: rgba(255,255,255,0.06); }
+        .ml-content h3 { font-size: 1.15rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .ml-content h1:first-child, .ml-content h2:first-child { margin-top: 0; }
+        .ml-content p { color: var(--g, #86868b); line-height: 1.7; margin-bottom: 1rem; }
+        .ml-content ul, .ml-content ol { color: var(--g, #86868b); line-height: 1.8; padding-left: 1.25rem; margin-bottom: 1.5rem; }
+        .ml-content li { padding: 0.2rem 0; }
+        .ml-content strong { color: inherit; font-weight: 600; }
+        .ml-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+        .ml-meta-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--g, #86868b); }
+        .ml-meta-item i { color: var(--c); }
+        .ml-card { background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; padding: 2rem; margin-bottom: 1.5rem; }
+        [data-bs-theme="dark"] .ml-card { background: rgba(245,166,35,0.04); border-color: rgba(255,255,255,0.08); }
+        .ml-card h3, .ml-card h4 { margin-top: 0; border: none; padding-bottom: 0; }
+        .ml-related { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+        @media (max-width: 767px) { .ml-related { grid-template-columns: 1fr; } }
+        </style>
 date-modified: last-modified
 categories:
   - terminal
@@ -21,13 +40,17 @@ categories:
 ```{=html}
 <div class="m">
 
-<div class="m-hero">
-  <div class="container">
+<div class="ev-hero" style="min-height:50vh;">
+  <div class="ev-hero-bg" style="background-image:url('/assets/images/stock/terminal-green.webp');"></div>
+  <div class="ev-hero-content">
+    <div class="ev-hero-tag" style="background:#F5A623;">Microlearning</div>
     <h1>Tmux Terminal Multiplexer</h1>
     <p>Enhance your terminal workflow with powerful session management</p>
   </div>
 </div>
 ```
+
+::: {.ml-content}
 
 ## Session Overview
 
@@ -161,53 +184,46 @@ Participants will receive:
 - Plugin recommendations and installation guides
 - 30 days of email support for Tmux questions
 
-## Instructor
+:::
 
 ```{=html}
-<div class="row mt-4 mb-5">
-  <div class="col-md-3">
-    <img loading="lazy" src="/assets/images/stock/terminal-green.webp" alt="Instructor Photo" class="img-fluid rounded">
-  </div>
-  <div class="col-md-9">
-    <h3>CHENIST Team</h3>
-    <p><strong>CHENIST Team</strong></p>
-    <p>The CHENIST team has been using Tmux daily for over 8 years as a core part of his development and server management workflow. He has customized and optimized Tmux configurations for teams across multiple organizations and regularly contributes to open source Tmux plugins.</p>
-    <p>Known for their clear, practical teaching style, The team focuses on helping participants implement Tmux in ways that immediately improve their daily workflow.</p>
-  </div>
-</div>
-```
-
-## Testimonials
-
-```{=html}
-<div class="row mt-5">
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-body">
-        <p class="font-italic">"Tmux has completely transformed my terminal workflow. This session was concise and packed with practical tips - I was able to implement a much more efficient setup immediately. The persistent sessions alone have saved me countless hours of work."</p>
-        <p class="text-end mb-0"><strong>— Andrei K., Backend Developer</strong></p>
+<div class="m-s">
+  <div class="ml-content">
+    <div class="ml-card">
+      <h3>Your Instructor</h3>
+      <p><strong>CHENIST Team</strong> — CHENIST Team</p>
+      <p>The CHENIST team has been using Tmux daily for over 8 years as a core part of his development and server management workflow. He has customized and optimized Tmux configurations for teams across multiple organizations and regularly contributes to open source Tmux plugins. Known for their clear, practical teaching style, The team focuses on helping participants implement Tmux in ways that immediately improve their daily workflow.</p>
+    </div>
+    <div class="ml-card">
+      <h3>What Participants Say</h3>
+      <p><em>"Tmux has completely transformed my terminal workflow. This session was concise and packed with practical tips - I was able to implement a much more efficient setup immediately. The persistent sessions alone have saved me countless hours of work."</em></p>
+      <p><strong>— Andrei K., Backend Developer</strong></p>
+    </div>
+    <div class="ml-card">
+      <p><em>"As someone who manages multiple servers, learning Tmux through this session was a game-changer. The synchronized panes feature alone was worth the price of admission. I'm now much more efficient and organized in my daily work."</em></p>
+      <p><strong>— Sofia L., Systems Administrator</strong></p>
+    </div>
+    <h3>Related Offerings</h3>
+    <div class="ml-related">
+      <div class="ml-card">
+        <h4>Unix Command Line Introduction</h4>
+        <p>Master the fundamentals of command line usage</p>
+        <a href="/academy/microlearning/cli-intro/" class="m-bo">Learn More</a>
+      </div>
+      <div class="ml-card">
+        <h4>SC-IM Spreadsheets in Terminal</h4>
+        <p>Learn spreadsheets for the terminal</p>
+        <a href="/academy/microlearning/sc-im/" class="m-bo">Learn More</a>
+      </div>
+      <div class="ml-card">
+        <h4>Linux Administration Fundamentals Training</h4>
+        <p>A comprehensive 2-day training on Linux systems</p>
+        <a href="/academy/trainings/linux-admin-fundamentals/" class="m-bo">Learn More</a>
       </div>
     </div>
   </div>
-
-  <div class="col-md-6">
-    <div class="card mb-4">
-      <div class="card-body">
-        <p class="font-italic">"As someone who manages multiple servers, learning Tmux through this session was a game-changer. The synchronized panes feature alone was worth the price of admission. I'm now much more efficient and organized in my daily work."</p>
-        <p class="text-end mb-0"><strong>— Sofia L., Systems Administrator</strong></p>
-      </div>
-    </div>
-  </div>
 </div>
 ```
-
-## Related Offerings
-
-If you're interested in this microlearning session, you might also consider:
-
-- [Unix Command Line Introduction](/academy/microlearning/cli-intro/) - Master the fundamentals of command line usage
-- [SC-IM Spreadsheets in Terminal](/academy/microlearning/sc-im/) - Learn spreadsheets for the terminal
-- [Linux Administration Fundamentals Training](/academy/trainings/linux-admin-fundamentals/) - A comprehensive 2-day training on Linux systems
 
 ```{=html}
 <div class="m-cta">
