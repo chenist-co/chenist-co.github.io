@@ -719,11 +719,25 @@ document.addEventListener('DOMContentLoaded', function() {
   .am-event-cta a { font-size:0.85rem; padding: 0.45rem 0.9rem; }
 
   .am-how { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 1rem; margin-top: 2rem; }
-  .am-how-card { padding: 1.5rem; border-radius: 12px; background: rgba(127,127,127,0.05); border: 1px solid rgba(127,127,127,0.15); }
-  .am-how-card code { font-size:0.82rem; word-break:break-all; background: rgba(129,189,74,0.1); padding: 0.35rem 0.55rem; border-radius:6px; display:inline-block; margin-top:0.5rem; }
-  .am-how-card h4 { font-size: 1rem; margin: 0 0 0.35rem 0; }
-  .am-how-card p { margin: 0; font-size: 0.9rem; color: #6b7280; }
+
+  .am-invite { display:grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items:start; }
+  @media (max-width: 991px) { .am-invite { grid-template-columns: 1fr; gap: 3rem; } }
+  .am-invite-text h2 { text-align:left; font-size: clamp(1.75rem, 3.5vw, 2.75rem); margin-bottom: 1rem; }
+  .am-invite-text ul li { margin-bottom: 0.4rem; line-height: 1.55; }
+  .am-invite-card { background: #fff; padding: 2.25rem; border-radius: 16px; box-shadow: 0 4px 28px rgba(0,0,0,0.06); border: 1px solid rgba(127,127,127,0.1); }
+  html[data-bs-theme="dark"] .am-invite-card { background: #1c1c1e; border-color: rgba(255,255,255,0.08); box-shadow: 0 4px 28px rgba(0,0,0,0.35); }
+  .am-invite-card h3 { margin-top: 0; margin-bottom: 1.25rem; font-size: 1.25rem; }
+  .am-how-card { padding: 1.5rem; border-radius: 12px; background: rgba(127,127,127,0.05); border: 1px solid rgba(127,127,127,0.15); text-align:center; }
+  .am-how-card i.hdr { font-size: 1.6rem; color: var(--c); display:block; margin-bottom: 0.5rem; }
+  .am-how-card h4 { font-size: 0.95rem; margin: 0 0 0.4rem 0; }
+  .am-how-card p { margin: 0; font-size: 0.85rem; color: #6b7280; line-height: 1.45; }
   html[data-bs-theme="dark"] .am-how-card p { color: #9ca3af; }
+
+  .am-url { display:flex; align-items:center; gap:0.5rem; max-width: 720px; margin: 1.5rem auto 2rem; padding: 0.75rem 1rem; border-radius: 12px; background: rgba(129,189,74,0.08); border: 1px solid rgba(129,189,74,0.3); }
+  .am-url code { flex:1; min-width:0; font-size: 0.88rem; font-family: 'Source Code Pro', monospace; color: var(--c); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; background:transparent; padding:0; }
+  .am-url button { flex-shrink:0; padding: 0.45rem 0.9rem; font-size: 0.82rem; border-radius: 8px; background: var(--c); color: #fff; border: none; cursor: pointer; font-weight: 500; transition: background .15s; }
+  .am-url button:hover { background: #6aa53a; }
+  .am-url button.copied { background: #4b8b2a; }
 
   @media (max-width: 640px) {
     .am-event { grid-template-columns: 90px 1fr; }
@@ -754,27 +768,15 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="container">
     <h2>Subscribe once, stay in sync</h2>
     <p class="sub">Your calendar auto-refreshes as events are added, updated, or cancelled.</p>
+    <div class="am-url">
+      <code id="am-feed-url">https://chen.ist/assets/files/alin-mechenici.ics</code>
+      <button type="button" onclick="navigator.clipboard.writeText('https://chen.ist/assets/files/alin-mechenici.ics').then(()=>{this.textContent='Copied';this.classList.add('copied');setTimeout(()=>{this.textContent='Copy';this.classList.remove('copied');},1600);})">Copy</button>
+    </div>
     <div class="am-how">
-      <div class="am-how-card">
-        <h4><i class="bi bi-apple" style="color:var(--c);"></i> Apple Calendar</h4>
-        <p>File → New Calendar Subscription, then paste:</p>
-        <code>https://chen.ist/assets/files/alin-mechenici.ics</code>
-      </div>
-      <div class="am-how-card">
-        <h4><i class="bi bi-google" style="color:var(--c);"></i> Google Calendar</h4>
-        <p>Settings → Add calendar → From URL, then paste:</p>
-        <code>https://chen.ist/assets/files/alin-mechenici.ics</code>
-      </div>
-      <div class="am-how-card">
-        <h4><i class="bi bi-microsoft" style="color:var(--c);"></i> Outlook</h4>
-        <p>Add calendar → Subscribe from web, then paste:</p>
-        <code>https://chen.ist/assets/files/alin-mechenici.ics</code>
-      </div>
-      <div class="am-how-card">
-        <h4><i class="bi bi-download" style="color:var(--c);"></i> One-off</h4>
-        <p>Just grab the file and import into any calendar app.</p>
-        <a href="../../assets/files/alin-mechenici.ics" download="" class="m-lk" style="margin-top:0.6rem;display:inline-block;"><i class="bi bi-file-earmark-arrow-down"></i> Download alin-mechenici.ics</a>
-      </div>
+      <div class="am-how-card"><i class="bi bi-apple hdr"></i><h4>Apple Calendar</h4><p>File → New Calendar Subscription, paste the URL.</p></div>
+      <div class="am-how-card"><i class="bi bi-google hdr"></i><h4>Google Calendar</h4><p>Settings → Add calendar → From URL.</p></div>
+      <div class="am-how-card"><i class="bi bi-microsoft hdr"></i><h4>Outlook</h4><p>Add calendar → Subscribe from web.</p></div>
+      <div class="am-how-card"><i class="bi bi-download hdr"></i><h4>One-off</h4><p><a href="../../assets/files/alin-mechenici.ics" download="" class="m-lk">Download .ics</a> and import manually.</p></div>
     </div>
   </div>
 </div>
@@ -837,8 +839,8 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- INVITE ALIN -->
 <div class="m-bg m-bg-stripes" id="invite" style="padding:6rem 0;">
   <div class="container">
-    <div class="m-r">
-      <div class="m-rt">
+    <div class="am-invite">
+      <div class="am-invite-text">
         <h2>Invite me<br>to your event.</h2>
         <p>Keynotes, panels, training sessions, workshops, conference talks, podcast appearances. Topics I gravitate to:</p>
         <ul style="padding-left:1.2rem;">
@@ -850,8 +852,8 @@ document.addEventListener('DOMContentLoaded', function() {
         </ul>
         <p style="margin-top:1.25rem;">I accept invites across the EU, prefer on-site where feasible, and also record remote/virtual sessions. Honoraria and travel handled case-by-case — NGOs, universities and student events receive preferential terms.</p>
       </div>
-      <div class="m-ri m-form" style="background: var(--bg, #fff); padding: 2rem; border-radius: 14px; box-shadow: 0 4px 24px rgba(0,0,0,0.06);">
-        <h3 style="margin-top:0;">Send an invite</h3>
+      <div class="am-invite-card m-form">
+        <h3>Send an invite</h3>
         <form action="https://formspree.io/f/mpwkaqev" method="POST">
           <div class="fr">
             <div class="fg">
