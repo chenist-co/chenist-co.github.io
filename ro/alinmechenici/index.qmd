@@ -1,7 +1,7 @@
 ---
 title: "Alin Mechenici — Fondator & CEO, chen.ist"
 title-block-style: none
-description: "Alin Mechenici — Fondator & CEO al chen.ist. Practician în securitate cibernetică, antreprenor și educator din Göteborg, Suedia. Peste 15 ani în securitate cibernetică, DevOps și digitalizare."
+description: "Alin Mechenici — Fondator & CEO al chen.ist. Firma a început în Göteborg, este acum cu sediul în Craiova și servește piața europeană. Peste 15 ani în securitate cibernetică, DevOps și digitalizare. Disponibil pentru CISO-as-a-Service, keynote-uri și training."
 from: markdown+raw_html
 page-layout: custom
 format:
@@ -9,6 +9,8 @@ format:
     toc: false
     include-in-header:
       text: |
+        <meta name="author" content="Alin Mechenici">
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
         <link rel="canonical" href="https://chen.ist/ro/alinmechenici/">
         <link rel="alternate" hreflang="en" href="https://chen.ist/alinmechenici/">
         <link rel="alternate" hreflang="ro" href="https://chen.ist/ro/alinmechenici/">
@@ -25,21 +27,22 @@ format:
 
 ```{=html}
 <style>
-  .am-hero { min-height: 78vh; }
+  .am-hero { min-height: 72vh; }
   .am-hero-content { max-width: 900px; }
   .am-hero-tag { letter-spacing: 0.12em; }
-  .am-links { display:flex; flex-wrap:wrap; gap:0.6rem; margin-top:1.75rem; }
-  .am-links a {
-    display:inline-flex; align-items:center; gap:0.5rem;
-    padding: 0.55rem 1rem; border-radius: 999px;
-    background: rgba(255,255,255,0.08); color:#fff;
-    text-decoration:none; font-size: 0.9rem; font-weight: 500;
-    border: 1px solid rgba(255,255,255,0.18);
-    backdrop-filter: blur(6px);
-    transition: background .2s ease, transform .2s ease, border-color .2s ease;
-  }
-  .am-links a:hover { background: rgba(255,255,255,0.16); border-color: rgba(255,255,255,0.35); transform: translateY(-1px); }
-  .am-links a i { font-size: 1rem; }
+  .am-cta { display:flex; flex-wrap:wrap; gap:0.75rem; margin-top:1.75rem; justify-content:center; }
+  .am-cta a { display:inline-flex; align-items:center; gap:0.55rem; padding: 0.85rem 1.6rem; border-radius: 999px; font-weight: 600; font-size: 0.95rem; text-decoration:none; transition: transform .15s ease, background .15s ease, box-shadow .15s ease; }
+  .am-cta a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+  .am-cta .pri { background: var(--c, #81BD4A); color:#fff; box-shadow: 0 4px 14px rgba(129,189,74,0.35); }
+  .am-cta .pri:hover { background:#6aa53a; transform: translateY(-1px); }
+  .am-cta .sec { background: rgba(0,0,0,0.55); color:#fff; border: 1px solid rgba(255,255,255,0.4); }
+  .am-cta .sec:hover { background: rgba(0,0,0,0.75); border-color:#fff; transform: translateY(-1px); }
+  .am-cta-sub { margin: 0.8rem auto 0; font-size: 0.82rem; color: rgba(255,255,255,0.82); max-width: 560px; text-align:center; }
+  .am-social { display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:1.25rem; justify-content:center; }
+  .am-social a { display:inline-flex; align-items:center; gap:0.4rem; padding: 0.4rem 0.85rem; border-radius: 999px; background: rgba(0,0,0,0.4); color:rgba(255,255,255,0.92); text-decoration:none; font-size: 0.82rem; border: 1px solid rgba(255,255,255,0.25); transition: background .15s, border-color .15s; }
+  .am-social a:hover { background: rgba(0,0,0,0.65); border-color: rgba(255,255,255,0.55); color:#fff; }
+  .am-social a:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+  .am-social a i { font-size: 0.95rem; }
 
   .am-tl { position:relative; padding-left: 2rem; border-left: 2px solid rgba(127,127,127,0.25); }
   .am-tl-item { position:relative; padding-bottom: 2.25rem; }
@@ -73,7 +76,7 @@ format:
     background: rgba(127,127,127,0.1); border: 1px solid rgba(127,127,127,0.2);
   }
 
-  @media (max-width: 767px) { .am-hero { min-height: 60vh; } }
+  @media (max-width: 767px) { .am-hero { min-height: 62vh; } .am-cta a { padding: 0.75rem 1.25rem; font-size: 0.9rem; } }
 </style>
 
 <div class="m" style="--c:#81BD4A;">
@@ -85,15 +88,18 @@ format:
     <div class="ev-hero-tag am-hero-tag">chen.ist · Fondator & CEO</div>
     <h1>Alin Mechenici</h1>
     <p>Antreprenor și practician în securitate cibernetică, construiește platforme sigure, echipe puternice și culturi sănătoase în toată Europa.</p>
-    <div class="am-links">
+    <div class="am-cta">
+      <a class="pri" href="https://cal.com/alinmechenici/ciso?user=alinmechenici&overlayCalendar=true" target="_blank" rel="noopener"><i class="bi bi-shield-lock"></i> Rezervă consultanță CISO</a>
+      <a class="sec" href="/booking/"><i class="bi bi-calendar-check"></i> Discuție generală</a>
+    </div>
+    <p class="am-cta-sub">Intro de 30 de minute prin Cal.com · gratuit, fără obligații · pentru IMM-uri din UE care evaluează CISO-as-a-Service, conformitate NIS2 sau programe de igienă cibernetică.</p>
+    <div class="am-social">
+      <a href="/ro/alinmechenici/events/"><i class="bi bi-calendar3-event"></i> Evenimente & Speaking</a>
       <a href="https://linkedin.com/in/alinmechenici" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> LinkedIn</a>
       <a href="https://github.com/alinmechenici" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>
       <a href="https://alinmechenici.substack.com/about" target="_blank" rel="noopener"><i class="bi bi-journal-text"></i> Substack</a>
       <a href="https://about.me/alinmechenici" target="_blank" rel="noopener"><i class="bi bi-person-badge"></i> about.me</a>
-      <a href="/ro/alinmechenici/events/"><i class="bi bi-calendar3-event"></i> Evenimente & Speaking</a>
-      <a href="https://cal.com/alinmechenici/ciso?user=alinmechenici&overlayCalendar=true" target="_blank" rel="noopener"><i class="bi bi-shield-lock"></i> Consultanță CISO</a>
-      <a href="/booking/"><i class="bi bi-calendar-check"></i> Programează o discuție</a>
-      <a href="/assets/files/alin-mechenici-cv-ro.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-pdf"></i> CV (RO)</a>
+      <a href="/assets/files/alin-mechenici-cv-ro.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-pdf"></i> CV</a>
     </div>
   </div>
 </div>
@@ -117,10 +123,10 @@ format:
       <div class="m-ri"><img loading="lazy" src="/assets/images/alinmechenici/alinmechenici.jpg" alt="Alin Mechenici — Fondator & CEO al chen.ist"></div>
       <div class="m-rt">
         <p style="color:var(--c); font-weight:600; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.75rem;">
-          <i class="bi bi-geo-alt-fill"></i> Göteborg, Suedia
+          <i class="bi bi-geo-alt-fill"></i> Început în Göteborg · sediu în Craiova · servim UE
         </p>
         <h2>Platforme sigure.<br>Echipe puternice.<br>Culturi sănătoase.</h2>
-        <p>Sunt Alin — fondator al <a href="/ro/">chen.ist</a>, o firmă de consultanță europeană în securitate cibernetică și infrastructură digitală. În ultimii 15+ ani am combinat PR/CSR, IT, securitatea cibernetică și managementul de proiect în România și Suedia — bootstrap-ând pe parcurs două ONG-uri și trei companii.</p>
+        <p>Sunt Alin — fondator al <a href="/ro/">chen.ist</a>, o firmă de consultanță europeană în securitate cibernetică și infrastructură digitală. Compania a început în Göteborg, are acum sediul în Craiova și se concentrează pe piața europeană. În ultimii 15+ ani am combinat PR/CSR, IT, securitatea cibernetică și managementul de proiect în România și Suedia — bootstrap-ând pe parcurs două ONG-uri și trei companii.</p>
         <p>La chen.ist conduc trei diviziuni: <strong>Academy &amp; Club</strong> (training, talente, open-source), <strong>Digital</strong> (software și infrastructură) și <strong>Cybersecurity</strong> (arhitectură, hardening, IAM, DLP, igienă cibernetică). Mă concentrez pe a ajuta afacerile digitale să devină reziliente — prevenție, detecție, răspuns și recuperare pentru continuitatea afacerii.</p>
         <div class="am-quote">„Construiește pentru suveranitate. Alege open-source. Învață-i pe alții ce știi."</div>
         <div class="am-lang">
@@ -243,6 +249,37 @@ format:
           <a href="/assets/files/alin-mechenici-cv-ro.pdf" target="_blank" class="m-lk"><i class="bi bi-file-earmark-pdf"></i> Descarcă CV (RO)</a>
           &nbsp;&nbsp;
           <a href="/assets/files/alin-mechenici-cv-en.pdf" target="_blank" class="m-lk"><i class="bi bi-file-earmark-pdf"></i> CV (EN)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BEYOND CONSULTING -->
+<div class="m-bg" style="padding:6rem 0;">
+  <div class="container" style="max-width: 860px;">
+    <h2>Dincolo de consultanță</h2>
+    <p class="sub">Ce mă ține ancorat în afara muncii cu clienții.</p>
+    <div class="row g-4" style="margin-top: 2rem;">
+      <div class="col-md-4">
+        <div style="padding:1.5rem; text-align:center;">
+          <i class="bi bi-mic-fill" style="font-size:1.75rem; color:var(--c); display:block; margin-bottom:0.75rem;"></i>
+          <h3 style="font-size:1rem; font-weight:700; margin-bottom:0.4rem;">Podcast ON/OFF</h3>
+          <p style="font-size:0.9rem; color:#6b7280; margin:0;">Newsletter și podcast săptămânal fără AI despre business, securitate cibernetică, open-source și cultura motociclismului.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div style="padding:1.5rem; text-align:center;">
+          <i class="bi bi-people-fill" style="font-size:1.75rem; color:var(--c); display:block; margin-bottom:0.75rem;"></i>
+          <h3 style="font-size:1rem; font-weight:700; margin-bottom:0.4rem;">Construire de comunități</h3>
+          <p style="font-size:0.9rem; color:#6b7280; margin:0;">15 startups mentorizate, două ONG-uri fondate, organizator principal NASA Space Apps pe parcursul a cinci ediții.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div style="padding:1.5rem; text-align:center;">
+          <i class="bi bi-bicycle" style="font-size:1.75rem; color:var(--c); display:block; margin-bottom:0.75rem;"></i>
+          <h3 style="font-size:1rem; font-weight:700; margin-bottom:0.4rem;">Motociclete & șoseaua deschisă</h3>
+          <p style="font-size:0.9rem; color:#6b7280; margin:0;">Cele mai bune idei vin la 100 km/h. Tururile lungi păstrează gândirea cinstită și ritmul uman.</p>
         </div>
       </div>
     </div>

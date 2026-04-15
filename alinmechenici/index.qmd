@@ -1,7 +1,8 @@
 ---
 title: "Alin Mechenici — Founder & CEO, chen.ist"
 title-block-style: none
-description: "Alin Mechenici — Founder & CEO of chen.ist. Cybersecurity practitioner, entrepreneur, and educator based in Gothenburg, Sweden. 15+ years across cybersecurity, DevOps, and digitisation."
+author: "Alin Mechenici"
+description: "Alin Mechenici — Founder & CEO of chen.ist. Started in Gothenburg, now HQ in Craiova, serving European SMEs. 15+ years in cybersecurity, DevOps and digitisation. Available for CISO-as-a-Service, keynotes and training."
 from: markdown+raw_html
 page-layout: custom
 format:
@@ -9,6 +10,8 @@ format:
     toc: false
     include-in-header:
       text: |
+        <meta name="author" content="Alin Mechenici">
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
         <link rel="canonical" href="https://chen.ist/alinmechenici/">
         <link rel="alternate" hreflang="en" href="https://chen.ist/alinmechenici/">
         <link rel="alternate" hreflang="ro" href="https://chen.ist/ro/alinmechenici/">
@@ -73,21 +76,26 @@ format:
 
 ```{=html}
 <style>
-  .am-hero { min-height: 78vh; }
+  .am-hero { min-height: 72vh; }
   .am-hero-content { max-width: 900px; }
   .am-hero-tag { letter-spacing: 0.12em; }
-  .am-links { display:flex; flex-wrap:wrap; gap:0.6rem; margin-top:1.75rem; }
-  .am-links a {
-    display:inline-flex; align-items:center; gap:0.5rem;
-    padding: 0.55rem 1rem; border-radius: 999px;
-    background: rgba(255,255,255,0.08); color:#fff;
-    text-decoration:none; font-size: 0.9rem; font-weight: 500;
-    border: 1px solid rgba(255,255,255,0.18);
-    backdrop-filter: blur(6px);
-    transition: background .2s ease, transform .2s ease, border-color .2s ease;
-  }
-  .am-links a:hover { background: rgba(255,255,255,0.16); border-color: rgba(255,255,255,0.35); transform: translateY(-1px); }
-  .am-links a i { font-size: 1rem; }
+
+  /* Primary CTAs — solid buttons, passes WCAG AA */
+  .am-cta { display:flex; flex-wrap:wrap; gap:0.75rem; margin-top:1.75rem; justify-content:center; }
+  .am-cta a { display:inline-flex; align-items:center; gap:0.55rem; padding: 0.85rem 1.6rem; border-radius: 999px; font-weight: 600; font-size: 0.95rem; text-decoration:none; transition: transform .15s ease, background .15s ease, box-shadow .15s ease; }
+  .am-cta a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+  .am-cta .pri { background: var(--c, #81BD4A); color:#fff; box-shadow: 0 4px 14px rgba(129,189,74,0.35); }
+  .am-cta .pri:hover { background:#6aa53a; transform: translateY(-1px); }
+  .am-cta .sec { background: rgba(0,0,0,0.55); color:#fff; border: 1px solid rgba(255,255,255,0.4); }
+  .am-cta .sec:hover { background: rgba(0,0,0,0.75); border-color:#fff; transform: translateY(-1px); }
+  .am-cta-sub { margin: 0.8rem auto 0; font-size: 0.82rem; color: rgba(255,255,255,0.82); max-width: 560px; text-align:center; }
+
+  /* Secondary icon strip — compact, less visual weight */
+  .am-social { display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:1.25rem; justify-content:center; }
+  .am-social a { display:inline-flex; align-items:center; gap:0.4rem; padding: 0.4rem 0.85rem; border-radius: 999px; background: rgba(0,0,0,0.4); color:rgba(255,255,255,0.92); text-decoration:none; font-size: 0.82rem; border: 1px solid rgba(255,255,255,0.25); transition: background .15s, border-color .15s; }
+  .am-social a:hover { background: rgba(0,0,0,0.65); border-color: rgba(255,255,255,0.55); color:#fff; }
+  .am-social a:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+  .am-social a i { font-size: 0.95rem; }
 
   .am-tl { position:relative; padding-left: 2rem; border-left: 2px solid rgba(127,127,127,0.25); }
   .am-tl-item { position:relative; padding-bottom: 2.25rem; }
@@ -122,7 +130,8 @@ format:
   }
 
   @media (max-width: 767px) {
-    .am-hero { min-height: 60vh; }
+    .am-hero { min-height: 62vh; }
+    .am-cta a { padding: 0.75rem 1.25rem; font-size: 0.9rem; }
   }
 </style>
 
@@ -135,15 +144,18 @@ format:
     <div class="ev-hero-tag am-hero-tag">chen.ist · Founder & CEO</div>
     <h1>Alin Mechenici</h1>
     <p>Entrepreneur and cybersecurity practitioner building secure platforms, strong teams, and healthy cultures across Europe.</p>
-    <div class="am-links">
+    <div class="am-cta">
+      <a class="pri" href="https://cal.com/alinmechenici/ciso?user=alinmechenici&overlayCalendar=true" target="_blank" rel="noopener"><i class="bi bi-shield-lock"></i> Book CISO consultancy</a>
+      <a class="sec" href="/booking/"><i class="bi bi-calendar-check"></i> General call</a>
+    </div>
+    <p class="am-cta-sub">30-min intro via Cal.com · free, no obligation · for SMEs across the EU evaluating CISO-as-a-Service, NIS2 compliance or cyber-hygiene programs.</p>
+    <div class="am-social">
+      <a href="/alinmechenici/events/"><i class="bi bi-calendar3-event"></i> Events & Speaking</a>
       <a href="https://linkedin.com/in/alinmechenici" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> LinkedIn</a>
       <a href="https://github.com/alinmechenici" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>
       <a href="https://alinmechenici.substack.com/about" target="_blank" rel="noopener"><i class="bi bi-journal-text"></i> Substack</a>
       <a href="https://about.me/alinmechenici" target="_blank" rel="noopener"><i class="bi bi-person-badge"></i> about.me</a>
-      <a href="/alinmechenici/events/"><i class="bi bi-calendar3-event"></i> Events & Speaking</a>
-      <a href="https://cal.com/alinmechenici/ciso?user=alinmechenici&overlayCalendar=true" target="_blank" rel="noopener"><i class="bi bi-shield-lock"></i> CISO consultancy</a>
-      <a href="/booking/"><i class="bi bi-calendar-check"></i> Book a call</a>
-      <a href="/assets/files/alin-mechenici-cv-en.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-pdf"></i> CV (EN)</a>
+      <a href="/assets/files/alin-mechenici-cv-en.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-pdf"></i> CV</a>
     </div>
   </div>
 </div>
@@ -167,10 +179,10 @@ format:
       <div class="m-ri"><img loading="lazy" src="/assets/images/alinmechenici/alinmechenici.jpg" alt="Alin Mechenici — Founder & CEO of chen.ist"></div>
       <div class="m-rt">
         <p style="color:var(--c); font-weight:600; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.75rem;">
-          <i class="bi bi-geo-alt-fill"></i> Gothenburg, Sweden
+          <i class="bi bi-geo-alt-fill"></i> Started in Gothenburg · HQ in Craiova · serving the EU
         </p>
         <h2>Secure platforms.<br>Strong teams.<br>Healthy cultures.</h2>
-        <p>I'm Alin — founder of <a href="/">chen.ist</a>, a European cybersecurity and digital infrastructure consultancy. Over the last 15+ years I've combined PR/CSR, IT, cybersecurity and project management across Romania and Sweden — bootstrapping two NGOs and three companies along the way.</p>
+        <p>I'm Alin — founder of <a href="/">chen.ist</a>, a European cybersecurity and digital infrastructure consultancy. The company started in Gothenburg, is now headquartered in Craiova, and focuses on the European market. Over 15+ years I've combined PR/CSR, IT, cybersecurity and project management across Romania and Sweden — bootstrapping two NGOs and three companies along the way.</p>
         <p>At chen.ist I lead three divisions: <strong>Academy &amp; Club</strong> (training, talent, open-source), <strong>Digital</strong> (software &amp; infrastructure), and <strong>Cybersecurity</strong> (architecture, hardening, IAM, DLP, cyber-hygiene). My focus is helping digital businesses become resilient — prevention, detection, response, and recovery for business continuity.</p>
         <div class="am-quote">"Build for sovereignty. Choose open. Teach what you know."</div>
         <div class="am-lang">
@@ -293,6 +305,37 @@ format:
           <a href="/assets/files/alin-mechenici-cv-en.pdf" target="_blank" class="m-lk"><i class="bi bi-file-earmark-pdf"></i> Download CV (EN)</a>
           &nbsp;&nbsp;
           <a href="/assets/files/alin-mechenici-cv-se.pdf" target="_blank" class="m-lk"><i class="bi bi-file-earmark-pdf"></i> CV (SV)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BEYOND CONSULTING -->
+<div class="m-bg" style="padding:6rem 0;">
+  <div class="container" style="max-width: 860px;">
+    <h2>Beyond consulting</h2>
+    <p class="sub">What keeps me grounded outside client work.</p>
+    <div class="row g-4" style="margin-top: 2rem;">
+      <div class="col-md-4">
+        <div style="padding:1.5rem; text-align:center;">
+          <i class="bi bi-mic-fill" style="font-size:1.75rem; color:var(--c); display:block; margin-bottom:0.75rem;"></i>
+          <h3 style="font-size:1rem; font-weight:700; margin-bottom:0.4rem;">ON/OFF Podcast</h3>
+          <p style="font-size:0.9rem; color:#6b7280; margin:0;">AI-free weekly newsletter and podcast on business, cybersecurity, open-source and motorcycle culture.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div style="padding:1.5rem; text-align:center;">
+          <i class="bi bi-people-fill" style="font-size:1.75rem; color:var(--c); display:block; margin-bottom:0.75rem;"></i>
+          <h3 style="font-size:1rem; font-weight:700; margin-bottom:0.4rem;">Community building</h3>
+          <p style="font-size:0.9rem; color:#6b7280; margin:0;">15 startups mentored, two NGOs founded, NASA Space Apps lead organiser across five editions.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div style="padding:1.5rem; text-align:center;">
+          <i class="bi bi-bicycle" style="font-size:1.75rem; color:var(--c); display:block; margin-bottom:0.75rem;"></i>
+          <h3 style="font-size:1rem; font-weight:700; margin-bottom:0.4rem;">Motorcycles & open road</h3>
+          <p style="font-size:0.9rem; color:#6b7280; margin:0;">The best ideas arrive at 100 km/h. Long-distance rides keep the thinking honest and the pace human.</p>
         </div>
       </div>
     </div>
