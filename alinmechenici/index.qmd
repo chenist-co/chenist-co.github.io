@@ -10,11 +10,65 @@ format:
     include-in-header:
       text: |
         <link rel="canonical" href="https://chen.ist/alinmechenici/">
+        <link rel="alternate" hreflang="en" href="https://chen.ist/alinmechenici/">
+        <link rel="alternate" hreflang="ro" href="https://chen.ist/ro/alinmechenici/">
+        <link rel="alternate" hreflang="sv" href="https://chen.ist/sv/alinmechenici/">
+        <link rel="alternate" hreflang="de" href="https://chen.ist/de/alinmechenici/">
+        <link rel="alternate" hreflang="x-default" href="https://chen.ist/alinmechenici/">
         <meta property="og:title" content="Alin Mechenici — Founder & CEO, chen.ist">
         <meta property="og:description" content="Cybersecurity practitioner and entrepreneur. 15+ years in cybersecurity, DevOps, and digitisation across Europe.">
         <meta property="og:type" content="profile">
         <meta property="og:url" content="https://chen.ist/alinmechenici/">
+        <meta property="og:image" content="https://chen.ist/assets/images/alinmechenici/alinmechenici.jpg">
+        <meta property="og:image:alt" content="Alin Mechenici — Founder & CEO of chen.ist, speaking at a CHENIST Academy session.">
+        <meta property="profile:first_name" content="Alin">
+        <meta property="profile:last_name" content="Mechenici">
         <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://chen.ist/assets/images/alinmechenici/alinmechenici.jpg">
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Alin Mechenici",
+          "givenName": "Alin",
+          "familyName": "Mechenici",
+          "jobTitle": "Founder & CEO",
+          "description": "Cybersecurity practitioner, entrepreneur and educator. 15+ years combining PR/CSR, IT, cybersecurity and project management across Romania and Sweden.",
+          "url": "https://chen.ist/alinmechenici/",
+          "image": "https://chen.ist/assets/images/alinmechenici/alinmechenici.jpg",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "chen.ist (CHENIST Cybersecurity)",
+            "url": "https://chen.ist/"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Gothenburg",
+            "addressRegion": "Västra Götaland",
+            "addressCountry": "SE"
+          },
+          "knowsLanguage": ["ro", "en", "sv"],
+          "knowsAbout": [
+            "Cybersecurity",
+            "NIS2 compliance",
+            "OS hardening",
+            "Open-source infrastructure",
+            "DevOps",
+            "Digital sovereignty"
+          ],
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "SNSPA — National University of Political Studies and Public Administration",
+            "address": "Bucharest, Romania"
+          },
+          "sameAs": [
+            "https://linkedin.com/in/alinmechenici",
+            "https://github.com/alinmechenici",
+            "https://alinmechenici.substack.com",
+            "https://about.me/alinmechenici"
+          ]
+        }
+        </script>
 ---
 
 ```{=html}
@@ -86,6 +140,7 @@ format:
       <a href="https://github.com/alinmechenici" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>
       <a href="https://alinmechenici.substack.com/about" target="_blank" rel="noopener"><i class="bi bi-journal-text"></i> Substack</a>
       <a href="https://about.me/alinmechenici" target="_blank" rel="noopener"><i class="bi bi-person-badge"></i> about.me</a>
+      <a href="/alinmechenici/events/"><i class="bi bi-calendar3-event"></i> Events & Speaking</a>
       <a href="/booking/"><i class="bi bi-calendar-check"></i> Book a call</a>
       <a href="/assets/files/alin-mechenici-cv-en.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-pdf"></i> CV (EN)</a>
     </div>
