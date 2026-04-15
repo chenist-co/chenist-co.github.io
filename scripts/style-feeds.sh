@@ -3,9 +3,17 @@
 sedi() { if [[ "$OSTYPE" == "darwin"* ]]; then sed -i '' "$@"; else sed -i "$@"; fi; }
 
 # Expose Alin's iCal feed at the short path /alinmechenici.ics (source stays at /assets/files/)
+# Stamp DTSTAMP and LAST-MODIFIED with the current build time so calendar clients
+# can cache correctly and re-fetch when the feed changes.
 if [ -f "_site/assets/files/alin-mechenici.ics" ]; then
+  NOW_UTC="$(date -u +%Y%m%dT%H%M%SZ)"
+  for f in "_site/assets/files/alin-mechenici.ics" "_site/alinmechenici.ics"; do
+    [ -f "$f" ] || cp "_site/assets/files/alin-mechenici.ics" "$f"
+    sedi "s|^DTSTAMP:.*|DTSTAMP:${NOW_UTC}|" "$f"
+    sedi "s|^LAST-MODIFIED:.*|LAST-MODIFIED:${NOW_UTC}|" "$f"
+  done
   cp "_site/assets/files/alin-mechenici.ics" "_site/alinmechenici.ics"
-  echo "Copied: _site/alinmechenici.ics"
+  echo "Stamped iCal feed (DTSTAMP=${NOW_UTC}) → _site/alinmechenici.ics"
 fi
 
 # Inject XSL stylesheet reference into RSS XML feeds
