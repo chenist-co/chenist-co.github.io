@@ -2,6 +2,12 @@
 # Cross-platform sed -i (macOS needs '', Linux doesn't)
 sedi() { if [[ "$OSTYPE" == "darwin"* ]]; then sed -i '' "$@"; else sed -i "$@"; fi; }
 
+# Expose Alin's iCal feed at the short path /alinmechenici.ics (source stays at /assets/files/)
+if [ -f "_site/assets/files/alin-mechenici.ics" ]; then
+  cp "_site/assets/files/alin-mechenici.ics" "_site/alinmechenici.ics"
+  echo "Copied: _site/alinmechenici.ics"
+fi
+
 # Inject XSL stylesheet reference into RSS XML feeds
 for f in _site/blog.xml _site/ro/blog.xml _site/de/blog.xml _site/sv/blog.xml; do
   if [ -f "$f" ]; then
