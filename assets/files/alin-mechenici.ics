@@ -1,0 +1,65 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//chen.ist//Alin Mechenici — Public Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Alin Mechenici — chen.ist
+X-WR-CALDESC:Public speaking\, training and event schedule for Alin Mechenici (Founder & CEO\, chen.ist). Updated regularly.
+X-WR-TIMEZONE:Europe/Bucharest
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+
+BEGIN:VEVENT
+UID:onoff-weekly-training@alin.chen.ist
+SUMMARY:ON/OFF — Weekly Training (CHENIST Academy)
+DTSTART;TZID=Europe/Bucharest:20260420T180000
+DTEND;TZID=Europe/Bucharest:20260420T193000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+LOCATION:Online · CHENIST Academy
+DESCRIPTION:Weekly AI-free training session — business\, cybersecurity\, open-source and motorcycle culture. Hosted by Alin Mechenici.\n\nMore: https://alinmechenici.substack.com
+URL:https://alinmechenici.substack.com
+ORGANIZER;CN=Alin Mechenici:mailto:alin@chen.ist
+STATUS:CONFIRMED
+CATEGORIES:Training,Podcast,Weekly
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spaceapps-craiova-2026@alin.chen.ist
+SUMMARY:NASA Space Apps Challenge — Craiova (Lead Organiser)
+DTSTART:20261003T080000Z
+DTEND:20261004T200000Z
+LOCATION:Craiova\, Romania
+DESCRIPTION:9th edition of NASA's global 48-hour hackathon — led by Alin Mechenici. Open-source solutions for life on Earth and in space.\n\nMore: https://chen.ist/academy/events/pages/space-hackathon.html
+URL:https://chen.ist/academy/events/pages/space-hackathon.html
+ORGANIZER;CN=Alin Mechenici:mailto:alin@chen.ist
+STATUS:TENTATIVE
+CATEGORIES:Hackathon,NASA
+END:VEVENT
+
+BEGIN:VEVENT
+UID:cyberhack-craiova-2026@alin.chen.ist
+SUMMARY:Cybersecurity Hackathon — Craiova (Keynote + Mentor)
+DTSTART:20261106T080000Z
+DTEND:20261108T200000Z
+LOCATION:Craiova\, Romania
+DESCRIPTION:48-hour cybersecurity challenge — CTF\, incident response\, defensive operations. Alin opens with the keynote and mentors teams.\n\nMore: https://chen.ist/academy/events/pages/cybersecurity-hackathon.html
+URL:https://chen.ist/academy/events/pages/cybersecurity-hackathon.html
+ORGANIZER;CN=Alin Mechenici:mailto:alin@chen.ist
+STATUS:TENTATIVE
+CATEGORIES:Hackathon,Cybersecurity,Keynote
+END:VEVENT
+
+BEGIN:VEVENT
+UID:summer-school-2026@alin.chen.ist
+SUMMARY:CHENIST Summer School — Cybersecurity & Cloud
+DTSTART:20260801T080000Z
+DTEND:20260815T160000Z
+LOCATION:Craiova\, Romania
+DESCRIPTION:Two-week intensive summer school on cybersecurity\, cloud\, and AI. Alin leads modules on OS hardening\, privacy\, and open-source infrastructure.\n\nMore: https://chen.ist/academy/events/pages/summer-school-2025.html
+URL:https://chen.ist/academy/events/pages/summer-school-2025.html
+ORGANIZER;CN=Alin Mechenici:mailto:alin@chen.ist
+STATUS:TENTATIVE
+CATEGORIES:Summer School,Training
+END:VEVENT
+
+END:VCALENDAR
